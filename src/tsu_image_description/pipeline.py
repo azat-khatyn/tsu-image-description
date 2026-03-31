@@ -1,5 +1,5 @@
 from .models import CaptionGenerator, Translator
-from .metadata_extractor_clip import CLIPMetadataExtractor
+from .siglip_metadata_extractor import SigLIPMetadataExtractor
 from .theme_inference import ThemeInferencer
 from .description_builder import DescriptionBuilder
 
@@ -8,7 +8,7 @@ class ArchiveDescriptionPipeline:
     def __init__(self):
         self.caption_generator = CaptionGenerator()
         self.translator = Translator()
-        self.metadata_extractor = CLIPMetadataExtractor()
+        self.metadata_extractor = SigLIPMetadataExtractor()
         self.theme_inferencer = ThemeInferencer()
         self.description_builder = DescriptionBuilder()
 

@@ -17,21 +17,27 @@ class DescriptionBuilder:
         image_type_map = {
             "a postcard": "открытка",
             "a poster": "плакат",
-            "a photograph": "фотография",
+            "a greeting card": "поздравительная открытка",
             "an illustration": "иллюстрация",
+            "a photograph": "фотография",
         }
 
         style_map = {
             "vintage illustration": "винтажная иллюстрация",
-            "modern design": "современный дизайн",
+            "retro design": "ретро-дизайн",
+            "decorative illustration": "декоративная иллюстрация",
+            "engraving": "гравюра",
+            "drawing": "рисунок",
+            "painting": "живопись",
             "black and white photo": "черно-белая фотография",
             "color photograph": "цветная фотография",
-            "painting": "живопись",
-            "drawing": "рисунок",
         }
 
         theme_map = {
             "holiday scene": "праздничная сцена",
+            "Easter holiday scene": "пасхальная сцена",
+            "Christmas holiday scene": "рождественская сцена",
+            "New Year celebration": "новогодняя сцена",
             "romantic scene": "романтическая сцена",
             "children scene": "детская сцена",
             "urban scene": "городская сцена",
@@ -44,6 +50,7 @@ class DescriptionBuilder:
             "festive": "праздничное",
             "romantic": "романтическое",
             "nostalgic": "ностальгическое",
+            "calm": "спокойное",
             "serious": "серьёзное",
         }
 
@@ -58,7 +65,7 @@ class DescriptionBuilder:
         parts = []
 
         if image_type_field.get("confident"):
-            if style_ru:
+            if style_field.get("confident") and style_ru:
                 parts.append(f"{image_type_ru.capitalize()} в стиле {style_ru}.")
             else:
                 parts.append(f"{image_type_ru.capitalize()}.")
@@ -75,8 +82,7 @@ class DescriptionBuilder:
         archive_description = " ".join(parts)
 
         search_terms = []
-
-        if image_type_field.get("confident") and image_type_ru:
+        if image_type_field.get("confident"):
             search_terms.append(image_type_ru)
         if style_field.get("confident") and style_ru:
             search_terms.append(style_ru)
@@ -95,4 +101,3 @@ class DescriptionBuilder:
             "archive_description": archive_description,
             "search_text": search_text
         }
-g
