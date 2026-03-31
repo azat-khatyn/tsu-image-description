@@ -57,6 +57,7 @@ pip install -r requirements.txt
 
 ## Структура проекта 
 
+```text
 tsu-image-description/
 ├── data/
 │ ├── postcard.jpg
@@ -72,7 +73,8 @@ tsu-image-description/
 │ ├── theme_inference.py
 │ ├── description_builder.py
 │ └── pipeline.py
-└── requirements.txtп
+└── requirements.txt
+```
 
 ## Использование
 
