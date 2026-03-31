@@ -59,20 +59,20 @@ pip install -r requirements.txt
 
 tsu-image-description/
 ├── data/
-│   ├── postcard.jpg
-│   └── eval/
-│       └── references.jsonl
+│ ├── postcard.jpg
+│ └── eval/
+│ └── references.jsonl
 ├── src/
-│   ├── run_demo.py
-│   ├── evaluate.py
-│   └── tsu_image_description/
-│       ├── __init__.py
-│       ├── models.py
-│       ├── metadata_extractor_clip.py
-│       ├── theme_inference.py
-│       ├── description_builder.py
-│       └── pipeline.py
-└── requirements.txt
+│ ├── run_demo.py
+│ ├── evaluate.py
+│ └── tsu_image_description/
+│ ├── init.py
+│ ├── models.py
+│ ├── metadata_extractor_clip.py
+│ ├── theme_inference.py
+│ ├── description_builder.py
+│ └── pipeline.py
+└── requirements.txtп
 
 ## Использование
 
