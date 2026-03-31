@@ -1,7 +1,11 @@
 torch
+torchvision
 transformers
-pillow
+accelerate
 sentencepiece
+pillow
+numpy
+safetensors
 sacrebleu
 rouge-score
 nltk

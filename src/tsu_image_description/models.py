@@ -8,9 +8,17 @@ from transformers import (
 )
 
 
+def get_device() -> str:
+    if torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
+
+
 class CaptionGenerator:
     def __init__(self, model_name: str = "Salesforce/blip-image-captioning-base"):
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = get_device()
         self.processor = BlipProcessor.from_pretrained(model_name)
         self.model = BlipForConditionalGeneration.from_pretrained(model_name).to(self.device)
 
@@ -24,7 +32,7 @@ class CaptionGenerator:
 
 class Translator:
     def __init__(self, model_name: str = "Helsinki-NLP/opus-mt-en-ru"):
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = get_device()
         self.tokenizer = MarianTokenizer.from_pretrained(model_name)
         self.model = MarianMTModel.from_pretrained(model_name).to(self.device)
 
