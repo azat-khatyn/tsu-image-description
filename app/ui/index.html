@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Archive Description MVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.5;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #111827;
+      color: white;
+      font-size: 14px;
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    input[type="file"],
+    input[type="text"] {
+      margin: 12px 0;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    pre {
+      background: #f6f8fa;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .muted {
+      color: #666;
+      font-size: 14px;
+    }
+    .error {
+      color: #b00020;
+      font-weight: bold;
+    }
+    .success {
+      color: #0a7a28;
+      font-weight: bold;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+    .label {
+      font-weight: bold;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    .value-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+      white-space: pre-wrap;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .tag {
+      background: #eef2ff;
+      color: #1f2937;
+      border: 1px solid #c7d2fe;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    .divider-text {
+      font-size: 13px;
+      color: #666;
+      margin: 10px 0 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Генерация описания изображения</h1>
+  <p class="muted">
+    Можно либо загрузить JPEG/PNG, либо указать путь к изображению на файловой системе сервера.
+  </p>
+  <p class="muted">
+    Для Docker путь должен существовать внутри контейнера или в примонтированной директории.
+  </p>
+
+  <div class="card">
+    <div class="label">Вариант 1: загрузка файла</div>
+    <input id="fileInput" type="file" accept=".jpg,.jpeg,.png" />
+
+    <div class="divider-text">или</div>
+
+    <div class="label">Вариант 2: путь на локальной файловой системе</div>
+    <input
+      id="imagePathInput"
+      type="text"
+      placeholder="/absolute/path/to/image.jpg"
+    />
+
+    <button id="submitBtn">Запустить инференс</button>
+    <p id="status" class="muted"></p>
+    <img id="preview" style="display:none;" alt="preview" />
+  </div>
+
+  <div class="card">
+    <h3>Полученный результат</h3>
+
+    <div class="label">Архивное описание</div>
+    <div id="archiveDescription" class="value-box">Пока пусто.</div>
+
+    <div class="label">Теги</div>
+    <div id="tagsContainer" class="tags">
+      <span class="muted">Пока пусто.</span>
+    </div>
+
+    <div class="label">Caption EN</div>
+    <div id="captionEn" class="value-box">Пока пусто.</div>
+
+    <div class="label">Caption RU</div>
+    <div id="captionRu" class="value-box">Пока пусто.</div>
+
+    <div class="label">Метаданные</div>
+    <div id="metadataReadable" class="value-box">Пока пусто.</div>
+  </div>
+
+  <div class="card">
+    <h3>JSON</h3>
+    <pre id="result">Пока пусто.</pre>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const imagePathInput = document.getElementById("imagePathInput");
+    const submitBtn = document.getElementById("submitBtn");
+    const statusEl = document.getElementById("status");
+    const resultEl = document.getElementById("result");
+    const previewEl = document.getElementById("preview");
+
+    const archiveDescriptionEl = document.getElementById("archiveDescription");
+    const tagsContainerEl = document.getElementById("tagsContainer");
+    const captionEnEl = document.getElementById("captionEn");
+    const captionRuEl = document.getElementById("captionRu");
+    const metadataReadableEl = document.getElementById("metadataReadable");
+
+    function resetReadableResult() {
+      archiveDescriptionEl.textContent = "Пока пусто.";
+      captionEnEl.textContent = "Пока пусто.";
+      captionRuEl.textContent = "Пока пусто.";
+      metadataReadableEl.textContent = "Пока пусто.";
+      tagsContainerEl.innerHTML = '<span class="muted">Пока пусто.</span>';
+    }
+
+    function renderTags(tags) {
+      if (!tags || tags.length === 0) {
+        tagsContainerEl.innerHTML = '<span class="muted">Теги не получены.</span>';
+        return;
+      }
+
+      tagsContainerEl.innerHTML = "";
+      tags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        tagsContainerEl.appendChild(span);
+      });
+    }
+
+    function formatMetadata(metadata) {
+      if (!metadata) {
+        return "Метаданные не получены.";
+      }
+
+      const lines = [];
+
+      if (metadata.image_type) {
+        lines.push(`Тип: ${metadata.image_type.label} (score=${metadata.image_type.score.toFixed(3)}, confident=${metadata.image_type.confident})`);
+      }
+      if (metadata.style) {
+        lines.push(`Стиль: ${metadata.style.label} (score=${metadata.style.score.toFixed(3)}, confident=${metadata.style.confident})`);
+      }
+      if (metadata.theme) {
+        lines.push(`Тема: ${metadata.theme.label} (score=${metadata.theme.score.toFixed(3)}, confident=${metadata.theme.confident})`);
+      }
+      if (metadata.mood) {
+        lines.push(`Настроение: ${metadata.mood.label} (score=${metadata.mood.score.toFixed(3)}, confident=${metadata.mood.confident})`);
+      }
+
+      return lines.length > 0 ? lines.join("\n") : "Метаданные не получены.";
+    }
+
+    function renderReadableResult(data) {
+      archiveDescriptionEl.textContent = data.archive_description || "Нет архивного описания.";
+      captionEnEl.textContent = data.caption?.en || "Нет caption en.";
+      captionRuEl.textContent = data.caption?.ru || "Нет caption ru.";
+      metadataReadableEl.textContent = formatMetadata(data.metadata);
+      renderTags(data.metadata?.tags || []);
+    }
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+
+      if (file) {
+        imagePathInput.value = "";
+        const objectUrl = URL.createObjectURL(file);
+        previewEl.src = objectUrl;
+        previewEl.style.display = "block";
+      } else {
+        previewEl.style.display = "none";
+        previewEl.src = "";
+      }
+    });
+
+    imagePathInput.addEventListener("input", () => {
+      if (imagePathInput.value.trim()) {
+        fileInput.value = "";
+        previewEl.style.display = "none";
+        previewEl.src = "";
+      }
+    });
+
+    submitBtn.addEventListener("click", async () => {
+      const file = fileInput.files[0];
+      const imagePath = imagePathInput.value.trim();
+
+      if (!file && !imagePath) {
+        statusEl.textContent = "Сначала загрузи файл или укажи путь.";
+        statusEl.className = "error";
+        return;
+      }
+
+      if (file && imagePath) {
+        statusEl.textContent = "Нужно использовать только один способ: либо файл, либо путь.";
+        statusEl.className = "error";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      statusEl.textContent = "Идёт обработка. Первый запуск может быть долгим из-за загрузки моделей.";
+      statusEl.className = "muted";
+      resultEl.textContent = "Ожидание ответа...";
+      resetReadableResult();
+
+      const formData = new FormData();
+
+      if (file) {
+        formData.append("file", file);
+      } else {
+        formData.append("image_path", imagePath);
+      }
+
+      try {
+        const response = await fetch("/inference", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          statusEl.textContent = "Ошибка.";
+          statusEl.className = "error";
+          resultEl.textContent = JSON.stringify(data, null, 2);
+          return;
+        }
+
+        statusEl.textContent = "Готово.";
+        statusEl.className = "success";
+        renderReadableResult(data);
+        resultEl.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        statusEl.textContent = "Ошибка запроса к API.";
+        statusEl.className = "error";
+        resultEl.textContent = String(error);
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

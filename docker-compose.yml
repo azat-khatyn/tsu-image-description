@@ -1,0 +1,23 @@
+services:
+  archive-description-mvp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archive-description-mvp
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: Archive Description MVP
+      APP_VERSION: 0.1.0
+      UPLOAD_DIR: /tmp/uploads
+      HF_HOME: /models/huggingface
+      TRANSFORMERS_CACHE: /models/huggingface
+      TOKENIZERS_PARALLELISM: "false"
+      MAX_UPLOAD_SIZE_MB: "10"
+    volumes:
+      - ./mounted_data:/mounted_data
+      - hf_cache:/models/huggingface
+    restart: unless-stopped
+
+volumes:
+  hf_cache:
