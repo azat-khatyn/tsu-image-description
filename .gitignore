@@ -77,14 +77,14 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
+## Sphinx documentation
+#demo/_build/
 
 # PyBuilder
 .pybuilder/
 target/
 
-# Jupyter Notebook
+# Jupyter Notebookg
 .ipynb_checkpoints
 
 # IPython

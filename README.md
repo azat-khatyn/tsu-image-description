@@ -243,14 +243,14 @@ docker compose up --build
 ```bash
 /mounted_data/example.jpg
 ```
-
+g
 ## Демонстрация
 
 ### Интерфейс сервиса
-![Секция с загрузкой изображения](docs/screenshots/main_part.png)
+![Секция с загрузкой изображения](demo/screenshots/main_part.png)
 
 ### Результат инференса
-![Полученное описание и тэги](docs/screenshots/description.png)
+![Полученное описание и тэги](demo/screenshots/description.png)
 
 ### Результат инференса
-![Результат в JSON](docs/screenshots/json_data.png)
+![Результат в JSON](demo/screenshots/json_data.png)
