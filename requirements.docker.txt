@@ -1,5 +1,3 @@
-torch
-torchvision
 transformers
 accelerate
 sentencepiece
@@ -11,6 +9,7 @@ rouge-score
 nltk
 bert-score
 huggingface_hub
+protobuf
 
 fastapi
 uvicorn[standard]
