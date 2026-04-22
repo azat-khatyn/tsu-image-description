@@ -8,6 +8,9 @@ hf_cache/
 .python-version
 
 *.png
+!demo/
+!demo/screenshots/
+!demo/screenshots/*.png
 *.jpg
 
 # C extensions
