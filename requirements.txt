@@ -11,11 +11,10 @@ rouge-score
 nltk
 bert-score
 huggingface_hub
+protobuf
+open_clip_torch
+scikit-learn
 
 fastapi
 uvicorn[standard]
 python-multipart
-
-protobuf
-open_clip_torch
-sentencepiece

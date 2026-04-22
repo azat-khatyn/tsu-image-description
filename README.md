@@ -150,7 +150,7 @@ tsu-image-description/
 │   ├── core/                   # конфигурация и служебные модули
 │   ├── services/               # обвязка инференса и работа с файлами
 │   └── ui/
-│       └── index.html          # минимальный web UI
+│       └── index.html          # web UI
 │
 ├── data/
 │   ├── images/                 # примеры изображений
@@ -169,7 +169,6 @@ tsu-image-description/
 │
 ├── mounted_data/               # примонтированные изображения для Docker
 ├── requirements.txt
-├── requirements.docker.txt
 ├── docker-compose.yml
 ├── Dockerfile
 ├── README.md
