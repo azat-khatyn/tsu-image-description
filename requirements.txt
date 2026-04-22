@@ -15,3 +15,7 @@ huggingface_hub
 fastapi
 uvicorn[standard]
 python-multipart
+
+protobuf
+open_clip_torch
+sentencepiece

@@ -1,0 +1,19 @@
+{
+  "num_examples": 7,
+  "short_text_metrics": {
+    "BLEU": 4.544976729447408,
+    "METEOR_mean": 0.06378820184790333,
+    "ROUGE-1-F1_mean": 0.0,
+    "ROUGE-L-F1_mean": 0.0,
+    "BERTScore_F1_mean": 0.7116863131523132
+  },
+  "type_metrics": {
+    "accuracy": 0.42857142857142855,
+    "precision_macro": 0.5,
+    "recall_macro": 0.21428571428571427,
+    "f1_macro": 0.3
+  },
+  "CLIPScore_mean": 0.2512605199643544,
+  "Latency_mean_sec": 0.7168986456734794,
+  "Images_per_sec": 1.3948973206115705
+}

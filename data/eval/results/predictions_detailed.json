@@ -1,0 +1,86 @@
+[
+  {
+    "image_path": "data/eval/postcard_1.jpg",
+    "caption_ru_prediction": "черно-белое фото деревьев в лесу",
+    "reference_short_ru": "Сосновый лес",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле черно-белая фотография. На изображении: черно-белое фото деревьев в лесу. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.22297249734401703,
+    "latency_sec": 1.3566529750823975
+  },
+  {
+    "image_path": "data/eval/postcard_2.jpg",
+    "caption_ru_prediction": "Картина людей в лесу",
+    "reference_short_ru": " Зима в лесу. Картины деревенской жизни России.",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле живопись. На изображении: Картина людей в лесу. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.23718830943107605,
+    "latency_sec": 0.6183719635009766
+  },
+  {
+    "image_path": "data/eval/postcard_3.jpg",
+    "caption_ru_prediction": "черно-белое фото реки",
+    "reference_short_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле цветная фотография. На изображении: черно-белое фото реки. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.25053977966308594,
+    "latency_sec": 0.5978269577026367
+  },
+  {
+    "image_path": "data/eval/postcard_4.jpg",
+    "caption_ru_prediction": "ребенка с скрипкой",
+    "reference_short_ru": "Девочка с лукошком.",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле живопись. На изображении: ребенка с скрипкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.2127191126346588,
+    "latency_sec": 0.46927905082702637
+  },
+  {
+    "image_path": "data/eval/postcard_5.jpg",
+    "caption_ru_prediction": "Человек на олене",
+    "reference_short_ru": "Эвенки-охотник, с охотничьей собакой .",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле винтажная иллюстрация. На изображении: Человек на олене. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.2145843207836151,
+    "latency_sec": 0.7905349731445312
+  },
+  {
+    "image_path": "data/eval/postcard_6.jpg",
+    "caption_ru_prediction": "рисунок корабля в воде",
+    "reference_short_ru": "Броненосный корабль 'Синоп'",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле гравюра. На изображении: рисунок корабля в воде. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.20160363614559174,
+    "latency_sec": 0.6339178085327148
+  },
+  {
+    "image_path": "data/eval/postcard_7.jpg",
+    "caption_ru_prediction": "Роза с листом на ней",
+    "reference_short_ru": "Розы расцветают...",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: Роза с листом на ней. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+    "clipscore": 0.20921598374843597,
+    "latency_sec": 0.5517067909240723
+  }
+]
