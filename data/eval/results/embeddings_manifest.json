@@ -1,0 +1,13 @@
+{
+  "embedding_model": "open_clip ViT-B-32",
+  "pretrained": "openai",
+  "normalized": true,
+  "alignment_rule": "row i in predictions_detailed.json corresponds to row i in every array in embeddings_clip.npz",
+  "arrays": [
+    "image_embeddings",
+    "reference_short_ru_embeddings",
+    "predicted_caption_ru_embeddings",
+    "predicted_caption_en_embeddings",
+    "archive_prediction_embeddings"
+  ]
+}

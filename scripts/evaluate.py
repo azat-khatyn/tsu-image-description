@@ -11,6 +11,7 @@ from rouge_score import rouge_scorer
 from sacrebleu.metrics import BLEU
 from bert_score import score as bertscore_score
 
+import numpy as np
 import torch
 from PIL import Image
 import open_clip
@@ -67,20 +68,28 @@ def normalize_type_label(text: str) -> str:
     return mapping.get(text, text)
 
 
-def compute_clipscore(image_path: str, text: str, model, preprocess, tokenizer, device: str) -> float:
+def encode_clip_image(image_path: str, model, preprocess, device: str) -> np.ndarray:
     image = preprocess(Image.open(image_path).convert("RGB")).unsqueeze(0).to(device)
-    text_tokens = tokenizer([text]).to(device)
 
     with torch.no_grad():
         image_features = model.encode_image(image)
-        text_features = model.encode_text(text_tokens)
-
         image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+
+    return image_features.squeeze(0).detach().cpu().numpy().astype("float32")
+
+
+def encode_clip_text(text: str, model, tokenizer, device: str) -> np.ndarray:
+    text_tokens = tokenizer([text]).to(device)
+
+    with torch.no_grad():
+        text_features = model.encode_text(text_tokens)
         text_features = text_features / text_features.norm(dim=-1, keepdim=True)
 
-        sim = (image_features @ text_features.T).item()
+    return text_features.squeeze(0).detach().cpu().numpy().astype("float32")
 
-    return float(sim)
+
+def compute_clipscore_from_embeddings(image_emb: np.ndarray, text_emb: np.ndarray) -> float:
+    return float(np.dot(image_emb, text_emb))
 
 
 def mean(values):
@@ -154,6 +163,12 @@ def main():
     total_time = 0.0
     rows = []
 
+    image_embeddings = []
+    reference_short_ru_embeddings = []
+    predicted_caption_ru_embeddings = []
+    predicted_caption_en_embeddings = []
+    archive_prediction_embeddings = []
+
     for item in refs:
         image_path = item["image_path"]
         reference_short_ru = item["reference_short_ru"]
@@ -164,6 +179,7 @@ def main():
         elapsed = time.time() - t0
 
         pred_caption_ru_raw = result["caption"]["ru"]
+        pred_caption_en_raw = result["caption"].get("en", "")
         pred_archive_raw = result["archive_description"]
 
         pred_caption_ru = normalize_text(pred_caption_ru_raw)
@@ -179,20 +195,56 @@ def main():
         type_true.append(ref_type_norm)
         type_pred.append(pred_type_norm)
 
-        clip_val = compute_clipscore(
+        image_emb = encode_clip_image(
             image_path=image_path,
-            text=pred_archive_raw,
             model=clip_model,
             preprocess=clip_preprocess,
+            device=device,
+        )
+
+        reference_short_ru_emb = encode_clip_text(
+            text=reference_short_ru,
+            model=clip_model,
             tokenizer=clip_tokenizer,
             device=device,
         )
+
+        predicted_caption_ru_emb = encode_clip_text(
+            text=pred_caption_ru_raw,
+            model=clip_model,
+            tokenizer=clip_tokenizer,
+            device=device,
+        )
+
+        predicted_caption_en_emb = encode_clip_text(
+            text=pred_caption_en_raw if pred_caption_en_raw else pred_caption_ru_raw,
+            model=clip_model,
+            tokenizer=clip_tokenizer,
+            device=device,
+        )
+
+        archive_prediction_emb = encode_clip_text(
+            text=pred_archive_raw,
+            model=clip_model,
+            tokenizer=clip_tokenizer,
+            device=device,
+        )
+
+        clip_val = compute_clipscore_from_embeddings(image_emb, archive_prediction_emb)
         clip_scores.append(clip_val)
         total_time += elapsed
 
+        image_embeddings.append(image_emb)
+        reference_short_ru_embeddings.append(reference_short_ru_emb)
+        predicted_caption_ru_embeddings.append(predicted_caption_ru_emb)
+        predicted_caption_en_embeddings.append(predicted_caption_en_emb)
+        archive_prediction_embeddings.append(archive_prediction_emb)
+
         rows.append(
             {
+                "embedding_row_idx": len(rows),
                 "image_path": image_path,
+                "caption_en_prediction": pred_caption_en_raw,
                 "caption_ru_prediction": pred_caption_ru_raw,
                 "reference_short_ru": reference_short_ru,
                 "predicted_type_raw": pred_type_raw,
@@ -226,6 +278,38 @@ def main():
     with open(out_dir / "predictions_detailed.json", "w", encoding="utf-8") as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
+    np.savez_compressed(
+        out_dir / "embeddings_clip.npz",
+        image_embeddings=np.stack(image_embeddings),
+        reference_short_ru_embeddings=np.stack(reference_short_ru_embeddings),
+        predicted_caption_ru_embeddings=np.stack(predicted_caption_ru_embeddings),
+        predicted_caption_en_embeddings=np.stack(predicted_caption_en_embeddings),
+        archive_prediction_embeddings=np.stack(archive_prediction_embeddings),
+    )
+
+    with open(out_dir / "embeddings_manifest.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "embedding_model": "open_clip ViT-B-32",
+                "pretrained": "openai",
+                "normalized": True,
+                "alignment_rule": (
+                    "row i in predictions_detailed.json corresponds to row i "
+                    "in every array in embeddings_clip.npz"
+                ),
+                "arrays": [
+                    "image_embeddings",
+                    "reference_short_ru_embeddings",
+                    "predicted_caption_ru_embeddings",
+                    "predicted_caption_en_embeddings",
+                    "archive_prediction_embeddings",
+                ],
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+
     print("\n=== SHORT DESCRIPTION METRICS ===")
     for k, v in short_metrics.items():
         print(f"{k}: {v:.4f}")
@@ -244,6 +328,8 @@ def main():
     print("\nSaved to:")
     print(out_dir / "metrics_summary.json")
     print(out_dir / "predictions_detailed.json")
+    print(out_dir / "embeddings_clip.npz")
+    print(out_dir / "embeddings_manifest.json")
 
 
 if __name__ == "__main__":

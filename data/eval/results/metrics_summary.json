@@ -1,19 +1,19 @@
 {
-  "num_examples": 7,
+  "num_examples": 20,
   "short_text_metrics": {
-    "BLEU": 4.544976729447408,
-    "METEOR_mean": 0.06378820184790333,
+    "BLEU": 3.089827292556117,
+    "METEOR_mean": 0.15253455689839898,
     "ROUGE-1-F1_mean": 0.0,
     "ROUGE-L-F1_mean": 0.0,
-    "BERTScore_F1_mean": 0.7116863131523132
+    "BERTScore_F1_mean": 0.7434654235839844
   },
   "type_metrics": {
-    "accuracy": 0.42857142857142855,
+    "accuracy": 0.6,
     "precision_macro": 0.5,
-    "recall_macro": 0.21428571428571427,
-    "f1_macro": 0.3
+    "recall_macro": 0.3,
+    "f1_macro": 0.375
   },
-  "CLIPScore_mean": 0.2512605199643544,
-  "Latency_mean_sec": 0.7168986456734794,
-  "Images_per_sec": 1.3948973206115705
+  "CLIPScore_mean": 0.20324824526906013,
+  "Latency_mean_sec": 0.6742006778717041,
+  "Images_per_sec": 1.4832379035226857
 }

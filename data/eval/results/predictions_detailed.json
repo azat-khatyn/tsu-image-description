@@ -1,6 +1,8 @@
 [
   {
+    "embedding_row_idx": 0,
     "image_path": "data/eval/postcard_1.jpg",
+    "caption_en_prediction": "a black and white photo of trees in the woods",
     "caption_ru_prediction": "черно-белое фото деревьев в лесу",
     "reference_short_ru": "Сосновый лес",
     "predicted_type_raw": "a photograph",
@@ -8,11 +10,13 @@
     "reference_type": "Открытка",
     "reference_type_normalized": "открытка",
     "archive_prediction": "Фотография в стиле черно-белая фотография. На изображении: черно-белое фото деревьев в лесу. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
-    "clipscore": 0.22297249734401703,
-    "latency_sec": 1.3566529750823975
+    "clipscore": 0.22297252714633942,
+    "latency_sec": 1.2657239437103271
   },
   {
+    "embedding_row_idx": 1,
     "image_path": "data/eval/postcard_2.jpg",
+    "caption_en_prediction": "a painting of people in the woods",
     "caption_ru_prediction": "Картина людей в лесу",
     "reference_short_ru": " Зима в лесу. Картины деревенской жизни России.",
     "predicted_type_raw": "a photograph",
@@ -20,11 +24,13 @@
     "reference_type": "Открытка",
     "reference_type_normalized": "открытка",
     "archive_prediction": "Фотография в стиле живопись. На изображении: Картина людей в лесу. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
-    "clipscore": 0.23718830943107605,
-    "latency_sec": 0.6183719635009766
+    "clipscore": 0.23718829452991486,
+    "latency_sec": 0.636181116104126
   },
   {
+    "embedding_row_idx": 2,
     "image_path": "data/eval/postcard_3.jpg",
+    "caption_en_prediction": "a black and white photo of a river",
     "caption_ru_prediction": "черно-белое фото реки",
     "reference_short_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
     "predicted_type_raw": "a postcard",
@@ -32,11 +38,13 @@
     "reference_type": "Открытка",
     "reference_type_normalized": "открытка",
     "archive_prediction": "Открытка в стиле цветная фотография. На изображении: черно-белое фото реки. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
-    "clipscore": 0.25053977966308594,
-    "latency_sec": 0.5978269577026367
+    "clipscore": 0.2505398392677307,
+    "latency_sec": 0.5940511226654053
   },
   {
+    "embedding_row_idx": 3,
     "image_path": "data/eval/postcard_4.jpg",
+    "caption_en_prediction": "a child with a violin",
     "caption_ru_prediction": "ребенка с скрипкой",
     "reference_short_ru": "Девочка с лукошком.",
     "predicted_type_raw": "a photograph",
@@ -45,10 +53,12 @@
     "reference_type_normalized": "открытка",
     "archive_prediction": "Фотография в стиле живопись. На изображении: ребенка с скрипкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
     "clipscore": 0.2127191126346588,
-    "latency_sec": 0.46927905082702637
+    "latency_sec": 0.47670412063598633
   },
   {
+    "embedding_row_idx": 4,
     "image_path": "data/eval/postcard_5.jpg",
+    "caption_en_prediction": "a man on a reindeer",
     "caption_ru_prediction": "Человек на олене",
     "reference_short_ru": "Эвенки-охотник, с охотничьей собакой .",
     "predicted_type_raw": "a photograph",
@@ -57,10 +67,12 @@
     "reference_type_normalized": "открытка",
     "archive_prediction": "Фотография в стиле винтажная иллюстрация. На изображении: Человек на олене. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
     "clipscore": 0.2145843207836151,
-    "latency_sec": 0.7905349731445312
+    "latency_sec": 0.5432648658752441
   },
   {
+    "embedding_row_idx": 5,
     "image_path": "data/eval/postcard_6.jpg",
+    "caption_en_prediction": "a drawing of a ship in the water",
     "caption_ru_prediction": "рисунок корабля в воде",
     "reference_short_ru": "Броненосный корабль 'Синоп'",
     "predicted_type_raw": "a postcard",
@@ -68,11 +80,13 @@
     "reference_type": "Открытка",
     "reference_type_normalized": "открытка",
     "archive_prediction": "Открытка в стиле гравюра. На изображении: рисунок корабля в воде. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
-    "clipscore": 0.20160363614559174,
-    "latency_sec": 0.6339178085327148
+    "clipscore": 0.20160366594791412,
+    "latency_sec": 0.623950719833374
   },
   {
+    "embedding_row_idx": 6,
     "image_path": "data/eval/postcard_7.jpg",
+    "caption_en_prediction": "a rose with a leaf on it",
     "caption_ru_prediction": "Роза с листом на ней",
     "reference_short_ru": "Розы расцветают...",
     "predicted_type_raw": "a postcard",
@@ -80,7 +94,189 @@
     "reference_type": "Открытка",
     "reference_type_normalized": "открытка",
     "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: Роза с листом на ней. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
-    "clipscore": 0.20921598374843597,
-    "latency_sec": 0.5517067909240723
+    "clipscore": 0.2092159539461136,
+    "latency_sec": 0.5811622142791748
+  },
+  {
+    "embedding_row_idx": 7,
+    "image_path": "data/eval/postcard_8.jpg",
+    "caption_en_prediction": "a card with a picture of a flower",
+    "caption_ru_prediction": "Карта с изображением цветка",
+    "reference_short_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+    "predicted_type_raw": "a greeting card",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Карта с изображением цветка. Предположительно, это пасхальная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.20096342265605927,
+    "latency_sec": 0.534923791885376
+  },
+  {
+    "embedding_row_idx": 8,
+    "image_path": "data/eval/postcard_9.jpg",
+    "caption_en_prediction": "two women in kimono, japan",
+    "caption_ru_prediction": "две женщины в кимоно, японский",
+    "reference_short_ru": "Гейша сидит у зеркала",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле цветная фотография. На изображении: две женщины в кимоно, японский. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.2246478646993637,
+    "latency_sec": 0.6199469566345215
+  },
+  {
+    "embedding_row_idx": 9,
+    "image_path": "data/eval/postcard_10.jpg",
+    "caption_en_prediction": "three engravings of flowers and leaves",
+    "caption_ru_prediction": "три гравировки цветов и листьев",
+    "reference_short_ru": "Изображение цветов и девочки",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле винтажная иллюстрация. На изображении: три гравировки цветов и листьев. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.2142973393201828,
+    "latency_sec": 0.5558798313140869
+  },
+  {
+    "embedding_row_idx": 10,
+    "image_path": "data/eval/postcard_11.jpg",
+    "caption_en_prediction": "a vintage christmas card with a gift box and holly",
+    "caption_ru_prediction": "Винтажная рождественская открытка с подарочной коробкой и Холли",
+    "reference_short_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: Винтажная рождественская открытка с подарочной коробкой и Холли. Предположительно, это рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.19078987836837769,
+    "latency_sec": 0.9182212352752686
+  },
+  {
+    "embedding_row_idx": 11,
+    "image_path": "data/eval/postcard_12.jpg",
+    "caption_en_prediction": "a black and white photograph of a woman",
+    "caption_ru_prediction": "черно-белая фотография женщины",
+    "reference_short_ru": "Девушка держит свечу",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле винтажная иллюстрация. На изображении: черно-белая фотография женщины. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.20485380291938782,
+    "latency_sec": 0.5172929763793945
+  },
+  {
+    "embedding_row_idx": 12,
+    "image_path": "data/eval/postcard_13.jpg",
+    "caption_en_prediction": "a couple of people walking through a snowy scene",
+    "caption_ru_prediction": "пара людей прошли через снежную сцену.",
+    "reference_short_ru": "Дети в лесу зимой",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: пара людей прошли через снежную сцену.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.17340314388275146,
+    "latency_sec": 0.696307897567749
+  },
+  {
+    "embedding_row_idx": 13,
+    "image_path": "data/eval/postcard_14.jpg",
+    "caption_en_prediction": "a painting of a man and woman kissing",
+    "caption_ru_prediction": "рисунок поцелуя мужчину и женщину.",
+    "reference_short_ru": "Мальчик-матрос целует девочку",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: рисунок поцелуя мужчину и женщину.. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+    "clipscore": 0.20158767700195312,
+    "latency_sec": 0.6587338447570801
+  },
+  {
+    "embedding_row_idx": 14,
+    "image_path": "data/eval/postcard_15.jpg",
+    "caption_en_prediction": "a christmas card with a bird and holly",
+    "caption_ru_prediction": "Рождественская открытка с птичкой и Холли",
+    "reference_short_ru": "Птица сидит на ветке омелы.",
+    "predicted_type_raw": "a greeting card",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Рождественская открытка с птичкой и Холли. Предположительно, это рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.1560312807559967,
+    "latency_sec": 0.7183680534362793
+  },
+  {
+    "embedding_row_idx": 15,
+    "image_path": "data/eval/postcard_16.jpg",
+    "caption_en_prediction": "a dog and a dog are standing in the snow",
+    "caption_ru_prediction": "Собака и собака стоят в снегу.",
+    "reference_short_ru": "Взрослая собака и щенок на снегу.",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: Собака и собака стоят в снегу.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.16481617093086243,
+    "latency_sec": 0.6854848861694336
+  },
+  {
+    "embedding_row_idx": 16,
+    "image_path": "data/eval/postcard_17.jpg",
+    "caption_en_prediction": "a black and white photo of a pagoda tower",
+    "caption_ru_prediction": "черно-белое фото пагоды",
+    "reference_short_ru": "Черно-белое изображение пагоды.",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле черно-белая фотография. На изображении: черно-белое фото пагоды. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.2065334916114807,
+    "latency_sec": 0.6262352466583252
+  },
+  {
+    "embedding_row_idx": 17,
+    "image_path": "data/eval/postcard_18.jpg",
+    "caption_en_prediction": "a black and white drawing of a man ' s face",
+    "caption_ru_prediction": "чёрно-белый рисунок лица человека",
+    "reference_short_ru": "Рисунок лица старого мужчины.",
+    "predicted_type_raw": "a photograph",
+    "predicted_type_normalized": "фотография",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Фотография в стиле рисунок. На изображении: чёрно-белый рисунок лица человека. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+    "clipscore": 0.18252402544021606,
+    "latency_sec": 0.6916310787200928
+  },
+  {
+    "embedding_row_idx": 18,
+    "image_path": "data/eval/postcard_19.jpg",
+    "caption_en_prediction": "a couple riding a sled sled down a snowy hill",
+    "caption_ru_prediction": "парочка ездит на сани вниз по снегопаду.",
+    "reference_short_ru": "Пара детей едет на санях в зимнем лесу",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: парочка ездит на сани вниз по снегопаду.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+    "clipscore": 0.20447033643722534,
+    "latency_sec": 0.8654787540435791
+  },
+  {
+    "embedding_row_idx": 19,
+    "image_path": "data/eval/postcard_20.jpg",
+    "caption_en_prediction": "a woman in a colorful dress holding flowers",
+    "caption_ru_prediction": "женщина в цветном платье с цветами",
+    "reference_short_ru": "Девочка в цветном костюме с цветами",
+    "predicted_type_raw": "a postcard",
+    "predicted_type_normalized": "открытка",
+    "reference_type": "Открытка",
+    "reference_type_normalized": "открытка",
+    "archive_prediction": "Открытка в стиле винтажная иллюстрация. На изображении: женщина в цветном платье с цветами. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+    "clipscore": 0.19122275710105896,
+    "latency_sec": 0.6744709014892578
   }
 ]
