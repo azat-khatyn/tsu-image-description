@@ -1,19 +1,23 @@
 {
   "num_examples": 20,
   "short_text_metrics": {
-    "BLEU": 3.089827292556117,
-    "METEOR_mean": 0.15253455689839898,
-    "ROUGE-1-F1_mean": 0.0,
-    "ROUGE-L-F1_mean": 0.0,
-    "BERTScore_F1_mean": 0.7434654235839844
+    "BLEU": 3.4112851981534447,
+    "METEOR_mean": 0.19847559812375717,
+    "ROUGE-1-F1_mean": 0.25626899244546303,
+    "ROUGE-L-F1_mean": 0.24129573041337746,
+    "BERTScore_F1_mean": 0.7281557321548462
   },
-  "type_metrics": {
-    "accuracy": 0.6,
-    "precision_macro": 0.5,
-    "recall_macro": 0.3,
-    "f1_macro": 0.375
-  },
-  "CLIPScore_mean": 0.20324824526906013,
-  "Latency_mean_sec": 0.6742006778717041,
-  "Images_per_sec": 1.4832379035226857
+  "CLIPScore_mean": 0.29830264002084733,
+  "CLIPScore_mean_pred_en": 0.29830264002084733,
+  "CLIPScore_mean_pred_ru": 0.20828836113214494,
+  "CLIPScore_mean_archive": 0.20324824526906013,
+  "CLIPScore_mean_reference_ru": 0.2037496380507946,
+  "Latency_mean_sec": 0.6584046959877015,
+  "Images_per_sec": 1.5188227029575734,
+  "metric_protocol": {
+    "BLEU_METEOR_ROUGE": "normalized russian text + Snowball stemming + custom token-based ROUGE",
+    "BERTScore": "raw russian text",
+    "main_CLIPScore_variant": "image ↔ predicted_caption_en",
+    "type_metrics": "excluded from final summary as methodologically non-interpretable for current dataset"
+  }
 }

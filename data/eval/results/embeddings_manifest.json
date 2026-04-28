@@ -2,6 +2,7 @@
   "embedding_model": "open_clip ViT-B-32",
   "pretrained": "openai",
   "normalized": true,
+  "main_clipscore_variant": "image ↔ predicted_caption_en",
   "alignment_rule": "row i in predictions_detailed.json corresponds to row i in every array in embeddings_clip.npz",
   "arrays": [
     "image_embeddings",

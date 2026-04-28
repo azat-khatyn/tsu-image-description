@@ -4,10 +4,12 @@ import json
 import re
 import time
 from pathlib import Path
+from collections import Counter
 
 import nltk
 from nltk.translate.meteor_score import meteor_score
-from rouge_score import rouge_scorer
+from nltk.stem.snowball import SnowballStemmer
+
 from sacrebleu.metrics import BLEU
 from bert_score import score as bertscore_score
 
@@ -15,8 +17,6 @@ import numpy as np
 import torch
 from PIL import Image
 import open_clip
-
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 import sys
 sys.path.insert(0, "src")
@@ -26,6 +26,8 @@ from tsu_image_description.pipeline import ArchiveDescriptionPipeline
 
 nltk.download("wordnet", quiet=True)
 nltk.download("omw-1.4", quiet=True)
+
+ru_stemmer = SnowballStemmer("russian")
 
 
 def load_references(path: str):
@@ -44,6 +46,17 @@ def normalize_text(text: str) -> str:
     text = re.sub(r"[^\w\s]", " ", text, flags=re.UNICODE)
     text = re.sub(r"\s+", " ", text, flags=re.UNICODE)
     return text.strip()
+
+
+def normalize_for_lexical_metrics(text: str) -> str:
+    text = normalize_text(text)
+    tokens = re.findall(r"\w+", text, flags=re.UNICODE)
+    stems = [ru_stemmer.stem(tok) for tok in tokens]
+    return " ".join(stems)
+
+
+def tokenize_for_lexical_metrics(text: str):
+    return normalize_for_lexical_metrics(text).split()
 
 
 def normalize_type_label(text: str) -> str:
@@ -96,22 +109,88 @@ def mean(values):
     return sum(values) / len(values) if values else 0.0
 
 
-def compute_text_metrics(predictions, references):
+def rouge1_f1_from_tokens(pred_tokens, ref_tokens):
+    pred_counts = Counter(pred_tokens)
+    ref_counts = Counter(ref_tokens)
+    overlap = sum((pred_counts & ref_counts).values())
+
+    if len(pred_tokens) == 0 or len(ref_tokens) == 0 or overlap == 0:
+        return 0.0
+
+    precision = overlap / len(pred_tokens)
+    recall = overlap / len(ref_tokens)
+
+    if precision + recall == 0:
+        return 0.0
+
+    return 2 * precision * recall / (precision + recall)
+
+
+def lcs_length(xs, ys):
+    n = len(xs)
+    m = len(ys)
+
+    dp = [[0] * (m + 1) for _ in range(n + 1)]
+
+    for i in range(1, n + 1):
+        xi = xs[i - 1]
+        for j in range(1, m + 1):
+            if xi == ys[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+
+    return dp[n][m]
+
+
+def rouge_l_f1_from_tokens(pred_tokens, ref_tokens):
+    if len(pred_tokens) == 0 or len(ref_tokens) == 0:
+        return 0.0
+
+    lcs = lcs_length(pred_tokens, ref_tokens)
+    if lcs == 0:
+        return 0.0
+
+    precision = lcs / len(pred_tokens)
+    recall = lcs / len(ref_tokens)
+
+    if precision + recall == 0:
+        return 0.0
+
+    return 2 * precision * recall / (precision + recall)
+
+
+def compute_text_metrics(predictions_raw_ru, references_raw_ru):
+    """
+    Лексические метрики считаем по нормализованным и стеммированным русским токенам.
+    BERTScore считаем по сырым русским строкам.
+    """
     bleu = BLEU(effective_order=True)
-    rouge = rouge_scorer.RougeScorer(["rouge1", "rougeL"], use_stemmer=False)
+
+    pred_lex = [normalize_for_lexical_metrics(p) for p in predictions_raw_ru]
+    ref_lex = [normalize_for_lexical_metrics(r) for r in references_raw_ru]
+
+    pred_tok = [p.split() for p in pred_lex]
+    ref_tok = [r.split() for r in ref_lex]
 
     meteor_scores = []
     rouge1_scores = []
     rougel_scores = []
 
-    for pred, ref in zip(predictions, references):
-        meteor_scores.append(meteor_score([ref.split()], pred.split()))
-        rouge_scores = rouge.score(ref, pred)
-        rouge1_scores.append(rouge_scores["rouge1"].fmeasure)
-        rougel_scores.append(rouge_scores["rougeL"].fmeasure)
+    for pred_tokens, ref_tokens in zip(pred_tok, ref_tok):
+        meteor_scores.append(meteor_score([ref_tokens], pred_tokens))
+        rouge1_scores.append(rouge1_f1_from_tokens(pred_tokens, ref_tokens))
+        rougel_scores.append(rouge_l_f1_from_tokens(pred_tokens, ref_tokens))
 
-    bleu_result = bleu.corpus_score(predictions, [[r for r in references]])
-    _, _, bert_f1 = bertscore_score(predictions, references, lang="ru", verbose=False)
+    bleu_result = bleu.corpus_score(pred_lex, [[r for r in ref_lex]])
+
+    # BERTScore по сырым русским строкам
+    _, _, bert_f1 = bertscore_score(
+        predictions_raw_ru,
+        references_raw_ru,
+        lang="ru",
+        verbose=False,
+    )
 
     return {
         "BLEU": float(bleu_result.score),
@@ -119,23 +198,6 @@ def compute_text_metrics(predictions, references):
         "ROUGE-1-F1_mean": float(mean(rouge1_scores)),
         "ROUGE-L-F1_mean": float(mean(rougel_scores)),
         "BERTScore_F1_mean": float(bert_f1.mean().item()),
-    }
-
-
-def compute_type_metrics(y_true, y_pred):
-    accuracy = accuracy_score(y_true, y_pred)
-    precision, recall, f1, _ = precision_recall_fscore_support(
-        y_true,
-        y_pred,
-        average="macro",
-        zero_division=0,
-    )
-
-    return {
-        "accuracy": float(accuracy),
-        "precision_macro": float(precision),
-        "recall_macro": float(recall),
-        "f1_macro": float(f1),
     }
 
 
@@ -153,13 +215,14 @@ def main():
     clip_model = clip_model.to(device).eval()
     clip_tokenizer = open_clip.get_tokenizer("ViT-B-32")
 
-    short_predictions = []
-    short_references = []
+    short_predictions_raw_ru = []
+    short_references_raw_ru = []
 
-    type_true = []
-    type_pred = []
+    clip_scores_pred_en = []
+    clip_scores_pred_ru = []
+    clip_scores_archive = []
+    clip_scores_reference_ru = []
 
-    clip_scores = []
     total_time = 0.0
     rows = []
 
@@ -172,7 +235,7 @@ def main():
     for item in refs:
         image_path = item["image_path"]
         reference_short_ru = item["reference_short_ru"]
-        reference_type = item["type"]
+        reference_type = item.get("type", "")
 
         t0 = time.time()
         result = pipeline.run(image_path)
@@ -182,18 +245,12 @@ def main():
         pred_caption_en_raw = result["caption"].get("en", "")
         pred_archive_raw = result["archive_description"]
 
-        pred_caption_ru = normalize_text(pred_caption_ru_raw)
-        ref_short_ru = normalize_text(reference_short_ru)
-
-        short_predictions.append(pred_caption_ru)
-        short_references.append(ref_short_ru)
+        short_predictions_raw_ru.append(pred_caption_ru_raw)
+        short_references_raw_ru.append(reference_short_ru)
 
         pred_type_raw = result["metadata"]["image_type"]["label"]
         pred_type_norm = normalize_type_label(pred_type_raw)
-        ref_type_norm = normalize_type_label(reference_type)
-
-        type_true.append(ref_type_norm)
-        type_pred.append(pred_type_norm)
+        ref_type_norm = normalize_type_label(reference_type) if reference_type else ""
 
         image_emb = encode_clip_image(
             image_path=image_path,
@@ -216,8 +273,9 @@ def main():
             device=device,
         )
 
+        predicted_caption_en_text = pred_caption_en_raw if pred_caption_en_raw else pred_caption_ru_raw
         predicted_caption_en_emb = encode_clip_text(
-            text=pred_caption_en_raw if pred_caption_en_raw else pred_caption_ru_raw,
+            text=predicted_caption_en_text,
             model=clip_model,
             tokenizer=clip_tokenizer,
             device=device,
@@ -230,8 +288,17 @@ def main():
             device=device,
         )
 
-        clip_val = compute_clipscore_from_embeddings(image_emb, archive_prediction_emb)
-        clip_scores.append(clip_val)
+        # Основной CLIPScore — по predicted English caption
+        clip_val_pred_en = compute_clipscore_from_embeddings(image_emb, predicted_caption_en_emb)
+        clip_val_pred_ru = compute_clipscore_from_embeddings(image_emb, predicted_caption_ru_emb)
+        clip_val_archive = compute_clipscore_from_embeddings(image_emb, archive_prediction_emb)
+        clip_val_reference_ru = compute_clipscore_from_embeddings(image_emb, reference_short_ru_emb)
+
+        clip_scores_pred_en.append(clip_val_pred_en)
+        clip_scores_pred_ru.append(clip_val_pred_ru)
+        clip_scores_archive.append(clip_val_archive)
+        clip_scores_reference_ru.append(clip_val_reference_ru)
+
         total_time += elapsed
 
         image_embeddings.append(image_emb)
@@ -252,21 +319,36 @@ def main():
                 "reference_type": reference_type,
                 "reference_type_normalized": ref_type_norm,
                 "archive_prediction": pred_archive_raw,
-                "clipscore": clip_val,
+                "clipscore_pred_en": clip_val_pred_en,
+                "clipscore_pred_ru": clip_val_pred_ru,
+                "clipscore_archive": clip_val_archive,
+                "clipscore_reference_ru": clip_val_reference_ru,
+                "clipscore": clip_val_pred_en,
                 "latency_sec": elapsed,
             }
         )
 
-    short_metrics = compute_text_metrics(short_predictions, short_references)
-    type_metrics = compute_type_metrics(type_true, type_pred)
+    short_metrics = compute_text_metrics(
+        short_predictions_raw_ru,
+        short_references_raw_ru,
+    )
 
     summary = {
         "num_examples": len(refs),
         "short_text_metrics": short_metrics,
-        "type_metrics": type_metrics,
-        "CLIPScore_mean": float(mean(clip_scores)),
+        "CLIPScore_mean": float(mean(clip_scores_pred_en)),
+        "CLIPScore_mean_pred_en": float(mean(clip_scores_pred_en)),
+        "CLIPScore_mean_pred_ru": float(mean(clip_scores_pred_ru)),
+        "CLIPScore_mean_archive": float(mean(clip_scores_archive)),
+        "CLIPScore_mean_reference_ru": float(mean(clip_scores_reference_ru)),
         "Latency_mean_sec": float(total_time / len(refs)) if refs else 0.0,
         "Images_per_sec": float(len(refs) / total_time) if total_time > 0 else 0.0,
+        "metric_protocol": {
+            "BLEU_METEOR_ROUGE": "normalized russian text + Snowball stemming + custom token-based ROUGE",
+            "BERTScore": "raw russian text",
+            "main_CLIPScore_variant": "image ↔ predicted_caption_en",
+            "type_metrics": "excluded from final summary as methodologically non-interpretable for current dataset",
+        },
     }
 
     out_dir = Path("data/eval/results")
@@ -293,6 +375,7 @@ def main():
                 "embedding_model": "open_clip ViT-B-32",
                 "pretrained": "openai",
                 "normalized": True,
+                "main_clipscore_variant": "image ↔ predicted_caption_en",
                 "alignment_rule": (
                     "row i in predictions_detailed.json corresponds to row i "
                     "in every array in embeddings_clip.npz"
@@ -314,12 +397,11 @@ def main():
     for k, v in short_metrics.items():
         print(f"{k}: {v:.4f}")
 
-    print("\n=== TYPE CLASSIFICATION METRICS ===")
-    for k, v in type_metrics.items():
-        print(f"{k}: {v:.4f}")
-
-    print("\n=== ARCHIVE DESCRIPTION / MULTIMODAL ===")
-    print(f"CLIPScore_mean: {summary['CLIPScore_mean']:.4f}")
+    print("\n=== MULTIMODAL / CLIPSCORE ===")
+    print(f"CLIPScore_mean (pred_en): {summary['CLIPScore_mean_pred_en']:.4f}")
+    print(f"CLIPScore_mean (pred_ru): {summary['CLIPScore_mean_pred_ru']:.4f}")
+    print(f"CLIPScore_mean (archive): {summary['CLIPScore_mean_archive']:.4f}")
+    print(f"CLIPScore_mean (reference_ru): {summary['CLIPScore_mean_reference_ru']:.4f}")
 
     print("\n=== PERFORMANCE ===")
     print(f"Latency_mean_sec: {summary['Latency_mean_sec']:.4f}")
