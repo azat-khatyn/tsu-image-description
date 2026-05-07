@@ -14,6 +14,25 @@ nltk.download("wordnet", quiet=True)
 nltk.download("omw-1.4", quiet=True)
 nltk.download("punkt", quiet=True)
 
+import torch
+from transformers import BlipProcessor, BlipForConditionalGeneration
+
+DEVICE = (
+    "mps" if torch.backends.mps.is_available()
+    else "cuda" if torch.cuda.is_available()
+    else "cpu"
+)
+
+# MODEL_TYPE = "baseline"  # или "finetuned"
+MODEL_TYPE = "finetuned"
+
+if MODEL_TYPE == "finetuned":
+    model_path = "models/blip_capfilt_v1"
+else:
+    model_path = "Salesforce/blip-image-captioning-base"
+
+model = BlipForConditionalGeneration.from_pretrained(model_path).to(DEVICE)
+processor = BlipProcessor.from_pretrained(model_path)
 
 def load_jsonl(path: str) -> List[Dict]:
     items = []
@@ -80,8 +99,8 @@ def evaluate(dataset_path: str) -> Dict:
 
     for item in data:
         image_path = item["image_path"]
-        reference_ru = item["reference_ru"]
-
+        # reference_ru = item["reference_ru"]
+        reference_ru = item.get("reference_ru", "")
         pred_en = caption_model.generate(image_path)
         pred_ru = translator.translate(pred_en)
 
@@ -101,12 +120,12 @@ def evaluate(dataset_path: str) -> Dict:
         print(f"PRED_EN: {pred_en}")
 
     lexical_metrics = compute_lexical_metrics(predictions_ru, references_ru)
-    semantic_metrics = compute_semantic_metrics(predictions_ru, references_ru)
+    # semantic_metrics = compute_semantic_metrics(predictions_ru, references_ru)
 
     return {
         "num_samples": len(data),
         "lexical_metrics": lexical_metrics,
-        "semantic_metrics": semantic_metrics,
+     #   "semantic_metrics": semantic_metrics,
         "samples": sample_results,
     }
 
@@ -119,5 +138,5 @@ if __name__ == "__main__":
     print(json.dumps({
         "num_samples": results["num_samples"],
         "lexical_metrics": results["lexical_metrics"],
-        "semantic_metrics": results["semantic_metrics"],
+     #   "semantic_metrics": results["semantic_metrics"],
     }, ensure_ascii=False, indent=2))
