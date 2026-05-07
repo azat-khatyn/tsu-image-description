@@ -1,0 +1,648 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": {
+        "$": "3951ff20-e37e-0131-4992-58d385a7b928"
+      },
+      "request": {
+        "uuid": {
+          "$": "3951ff20-e37e-0131-4992-58d385a7b928"
+        },
+        "perPage": {
+          "$": "10"
+        },
+        "page": {
+          "$": "1"
+        },
+        "totalPages": {
+          "$": "315"
+        }
+      }
+    },
+    "response": {
+      "headers": {
+        "status": {
+          "$": "success"
+        },
+        "code": {
+          "$": "200"
+        },
+        "message": {
+          "$": "ok"
+        }
+      },
+      "mods": {
+        "version": "3.4",
+        "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+        "titleInfo": {
+          "type": "",
+          "authority": "",
+          "usage": "primary",
+          "lang": "",
+          "script": "",
+          "title": {
+            "$": "Old cottage residence in 16th St. near 3d Ave.--1861"
+          }
+        },
+        "typeOfResource": {
+          "usage": "primary",
+          "collection": "yes",
+          "$": "still image"
+        },
+        "genre": {
+          "authority": "lctgm",
+          "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm008103",
+          "$": "Postcards"
+        },
+        "originInfo": {
+          "dateCreated": {
+            "encoding": "w3cdtf",
+            "keyDate": "yes",
+            "$": "1862"
+          }
+        },
+        "subject": {
+          "valueURI": "http://id.loc.gov/authorities/names/n79007751",
+          "geographic": {
+            "authority": "naf",
+            "valueURI": "http://id.loc.gov/authorities/names/n79007751",
+            "$": "New York (N.Y.)"
+          }
+        },
+        "identifier": [
+          {
+            "type": "local_bnumber",
+            "displayLabel": "NYPL catalog ID (B-number)",
+            "$": "b21363803"
+          },
+          {
+            "type": "uuid",
+            "$": "37c44ef0-e37e-0131-2b66-58d385a7b928"
+          }
+        ],
+        "location": {
+          "physicalLocation": [
+            {
+              "authority": "marcorg",
+              "type": "repository",
+              "$": "nn"
+            },
+            {
+              "type": "division",
+              "$": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+            },
+            {
+              "type": "division_short_name",
+              "$": "Milstein Division"
+            },
+            {
+              "type": "code",
+              "$": "LHG"
+            }
+          ]
+        },
+        "relatedItem": {
+          "type": "host",
+          "titleInfo": {
+            "title": {
+              "$": "General views, E. & W. 16th St."
+            }
+          },
+          "identifier": {
+            "type": "uuid",
+            "$": "c959d8e0-e37d-0131-0e7c-58d385a7b928"
+          },
+          "relatedItem": {
+            "type": "host",
+            "titleInfo": {
+              "title": {
+                "$": "Scrapbooks of New York City views Volume 11"
+              }
+            },
+            "identifier": {
+              "type": "uuid",
+              "$": "e365f110-dd31-0131-0e15-58d385a7bbd0"
+            },
+            "relatedItem": {
+              "type": "host",
+              "titleInfo": {
+                "title": {
+                  "$": "Scrapbooks of New York City views"
+                }
+              },
+              "identifier": [
+                {
+                  "type": "uuid",
+                  "$": "530a11c0-c8b6-0131-2d6e-58d385a7b928"
+                },
+                {
+                  "type": "local_bnumber",
+                  "$": "b21363803"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "numResults": {
+        "$": "1"
+      },
+      "sibling_captures": {
+        "capture": {
+          "uuid": {
+            "$": "3951ff20-e37e-0131-4992-58d385a7b928"
+          },
+          "imageLinks": {
+            "imageLink": [
+              {
+                "description": "Cropped .jpeg (760 pixels on the long side)",
+                "$": "http://images.nypl.org/index.php?id=5146176&t=w&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+              },
+              {
+                "description": "Cropped .jpeg (300 pixels on the long side)",
+                "$": "http://images.nypl.org/index.php?id=5146176&t=r&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+              },
+              {
+                "description": "Cropped .gif (150 pixels on the long side)",
+                "$": "http://images.nypl.org/index.php?id=5146176&t=t&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+              },
+              {
+                "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                "$": "http://images.nypl.org/index.php?id=5146176&t=b&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+              },
+              {
+                "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                "$": "http://images.nypl.org/index.php?id=5146176&t=f&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+              }
+            ]
+          },
+          "typeOfResource": {
+            "$": "still image"
+          },
+          "imageID": {
+            "$": "5146176"
+          },
+          "sortString": {
+            "$": "0000000001|0000000003|0000000020|0000000004|0000000001"
+          },
+          "itemLink": {
+            "$": "http://digitalcollections.nypl.org/items/3951ff20-e37e-0131-4992-58d385a7b928"
+          },
+          "highResLink": {
+            "$": "https://link.nypl.org/iJ4ddB5rEeShoJWtlX1nUwf"
+          },
+          "orderInSequence": {
+            "$": "1"
+          },
+          "isPartOfSequence": {
+            "$": "true"
+          },
+          "totalInSequence": {
+            "$": "1"
+          },
+          "title": {
+            "$": "Old cottage residence in 16th St. near 3d Ave.--1861"
+          },
+          "rightsStatement": {
+            "$": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future."
+          },
+          "rightsStatementURI": {
+            "$": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+          }
+        }
+      },
+      "root_captures": {
+        "numResults": {
+          "$": "3145"
+        },
+        "capture": [
+          {
+            "uuid": {
+              "$": "1680b850-c8c3-0131-d1ab-58d385a7bbd0"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184541"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/1680b850-c8c3-0131-d1ab-58d385a7bbd0"
+            }
+          },
+          {
+            "uuid": {
+              "$": "2e0e4d60-c8c3-0131-9a52-58d385a7bbd0"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184542"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000002|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/2e0e4d60-c8c3-0131-9a52-58d385a7bbd0"
+            }
+          },
+          {
+            "uuid": {
+              "$": "a81b1690-c8c3-0131-2d8d-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5184543&t=w&download=1&suffix=a81b1690-c8c3-0131-2d8d-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5184543&t=r&download=1&suffix=a81b1690-c8c3-0131-2d8d-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5184543&t=t&download=1&suffix=a81b1690-c8c3-0131-2d8d-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5184543&t=b&download=1&suffix=a81b1690-c8c3-0131-2d8d-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5184543&t=f&download=1&suffix=a81b1690-c8c3-0131-2d8d-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184543"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000003|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/a81b1690-c8c3-0131-2d8d-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/kqJRUQBrSJCgTHukFf0DvwE"
+            }
+          },
+          {
+            "uuid": {
+              "$": "b24f7a70-c8c3-0131-f9a9-58d385a7bbd0"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184544"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000004|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/b24f7a70-c8c3-0131-f9a9-58d385a7bbd0"
+            }
+          },
+          {
+            "uuid": {
+              "$": "54254690-c8c4-0131-2ee8-58d385a7bbd0"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184545"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000002|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/54254690-c8c4-0131-2ee8-58d385a7bbd0"
+            }
+          },
+          {
+            "uuid": {
+              "$": "63e2e1a0-c8c4-0131-f26b-58d385a7bbd0"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184546"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000002|0000000002|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/63e2e1a0-c8c4-0131-f26b-58d385a7bbd0"
+            }
+          },
+          {
+            "uuid": {
+              "$": "6e5de660-c8c4-0131-96ff-58d385a7bbd0"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184547"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000002|0000000003|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/6e5de660-c8c4-0131-96ff-58d385a7bbd0"
+            }
+          },
+          {
+            "uuid": {
+              "$": "ce2f17e0-c8d0-0131-9640-58d385a7b928"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184548"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000003|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/ce2f17e0-c8d0-0131-9640-58d385a7b928"
+            }
+          },
+          {
+            "uuid": {
+              "$": "0f4711a0-c8d1-0131-07a8-58d385a7b928"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5184549&t=w&download=1&suffix=0f4711a0-c8d1-0131-07a8-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5184549&t=r&download=1&suffix=0f4711a0-c8d1-0131-07a8-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5184549&t=t&download=1&suffix=0f4711a0-c8d1-0131-07a8-58d385a7b928.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5184549&t=b&download=1&suffix=0f4711a0-c8d1-0131-07a8-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5184549&t=f&download=1&suffix=0f4711a0-c8d1-0131-07a8-58d385a7b928.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184549"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000003|0000000002|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/0f4711a0-c8d1-0131-07a8-58d385a7b928"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/ux7GTfMeQbmUU1Oo3BVBiwK"
+            }
+          },
+          {
+            "uuid": {
+              "$": "6060ecb0-c8d1-0131-ee53-58d385a7b928"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5184550"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000003|0000000003|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/6060ecb0-c8d1-0131-ee53-58d385a7b928"
+            }
+          }
+        ]
+      },
+      "imm_captures": {
+        "numResults": {
+          "$": "6"
+        },
+        "capture": [
+          {
+            "uuid": {
+              "$": "e4259910-e37d-0131-01da-58d385a7b928"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5146173"
+            },
+            "sortString": {
+              "$": "0000000001|0000000003|0000000020|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/e4259910-e37d-0131-01da-58d385a7b928"
+            }
+          },
+          {
+            "uuid": {
+              "$": "020e0110-e37e-0131-2504-58d385a7b928"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5146174"
+            },
+            "sortString": {
+              "$": "0000000001|0000000003|0000000020|0000000002|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/020e0110-e37e-0131-2504-58d385a7b928"
+            }
+          },
+          {
+            "uuid": {
+              "$": "1a6d1050-e37e-0131-5a5a-58d385a7b928"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146175&t=w&download=1&suffix=1a6d1050-e37e-0131-5a5a-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146175&t=r&download=1&suffix=1a6d1050-e37e-0131-5a5a-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146175&t=t&download=1&suffix=1a6d1050-e37e-0131-5a5a-58d385a7b928.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5146175&t=b&download=1&suffix=1a6d1050-e37e-0131-5a5a-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5146175&t=f&download=1&suffix=1a6d1050-e37e-0131-5a5a-58d385a7b928.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5146175"
+            },
+            "sortString": {
+              "$": "0000000001|0000000003|0000000020|0000000003|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/1a6d1050-e37e-0131-5a5a-58d385a7b928"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/HCc69B5rEeSIRpWtlX1nUwS"
+            }
+          },
+          {
+            "uuid": {
+              "$": "3951ff20-e37e-0131-4992-58d385a7b928"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146176&t=w&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146176&t=r&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146176&t=t&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5146176&t=b&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5146176&t=f&download=1&suffix=3951ff20-e37e-0131-4992-58d385a7b928.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5146176"
+            },
+            "sortString": {
+              "$": "0000000001|0000000003|0000000020|0000000004|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/3951ff20-e37e-0131-4992-58d385a7b928"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/iJ4ddB5rEeShoJWtlX1nUwf"
+            }
+          },
+          {
+            "uuid": {
+              "$": "5e8be8c0-e37e-0131-0f58-58d385a7b928"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146177&t=w&download=1&suffix=5e8be8c0-e37e-0131-0f58-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146177&t=r&download=1&suffix=5e8be8c0-e37e-0131-0f58-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5146177&t=t&download=1&suffix=5e8be8c0-e37e-0131-0f58-58d385a7b928.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5146177&t=b&download=1&suffix=5e8be8c0-e37e-0131-0f58-58d385a7b928.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5146177&t=f&download=1&suffix=5e8be8c0-e37e-0131-0f58-58d385a7b928.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5146177"
+            },
+            "sortString": {
+              "$": "0000000001|0000000003|0000000020|0000000005|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/5e8be8c0-e37e-0131-0f58-58d385a7b928"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/GgvDYh5qEeSnM5WtlX1nUw-"
+            }
+          },
+          {
+            "uuid": {
+              "$": "77987d00-e37e-0131-d70a-58d385a7b928"
+            },
+            "imageLinks": {},
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5146178"
+            },
+            "sortString": {
+              "$": "0000000001|0000000003|0000000020|0000000006|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/77987d00-e37e-0131-d70a-58d385a7b928"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

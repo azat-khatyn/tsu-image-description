@@ -1,0 +1,1021 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "genre",
+      "search_text": "picture postcard",
+      "perPage": "100",
+      "page": "2",
+      "totalPages": "176"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "17509",
+      "result": [
+        {
+          "uuid": "59cfd6c0-c5ee-012f-5467-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/59cfd6c0-c5ee-012f-5467-58d385a7bc34",
+          "title": "Souvenir of Midland Beach. [Branches of holly and pine with cones]",
+          "typeOfResource": "still image",
+          "imageID": "104503",
+          "itemLink": "http://digitalcollections.nypl.org/items/59cfd6c0-c5ee-012f-5467-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "5a2064c0-c5ee-012f-20a5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5a2064c0-c5ee-012f-20a5-58d385a7bc34",
+          "title": "30716 Boardwalk Showing Casino, Midland Beach, Staten Island,  N.Y. [people in front of concession stands and sitting on benches.]",
+          "typeOfResource": "still image",
+          "imageID": "104504",
+          "itemLink": "http://digitalcollections.nypl.org/items/5a2064c0-c5ee-012f-20a5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "58c6a0e0-c5ee-012f-1d25-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/58c6a0e0-c5ee-012f-1d25-58d385a7bc34",
+          "title": "11963- Excursion Steamer 'Wm. Story' Arriving at Pier, Midland Beach, Staten Island, N.Y.  [people sitting on sand watching boat, pier with light poles.]",
+          "typeOfResource": "still image",
+          "imageID": "104500",
+          "itemLink": "http://digitalcollections.nypl.org/items/58c6a0e0-c5ee-012f-1d25-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c049-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c049-a3d9-e040-e00a18064a99",
+          "title": "20145-Bathing Beach, South Beach, Staten Island, N.Y.  [Nunleys Baths & Pool  shore scene and entrance to pool.]",
+          "typeOfResource": "still image",
+          "imageID": "104521",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c049-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c047-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c047-a3d9-e040-e00a18064a99",
+          "title": "755 Bathing at South Beach, Staten Island, cpy 1903 by A. Loeffler, Tompkinsville, N.Y. (people on shoreline, pier and water float in distance)",
+          "typeOfResource": "still image",
+          "imageID": "104519",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c047-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c046-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c046-a3d9-e040-e00a18064a99",
+          "title": "The Happy Land Sanitary Bathing Pool at Happy Land, South Beach, Staten Island. [(pool, diving platform, roller coaster in background.]",
+          "typeOfResource": "still image",
+          "imageID": "104518",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c046-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c048-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c048-a3d9-e040-e00a18064a99",
+          "title": "Bachmann'sSouth Beach, S.I., Souvenir  [buildings, pier, sailboats, cameo-type.]",
+          "typeOfResource": "still image",
+          "imageID": "104520",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c048-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "604059e0-c5ee-012f-1738-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/604059e0-c5ee-012f-1738-58d385a7bc34",
+          "title": "755 Bathing at South Beach, Staten Island, cpy 1903 by A. Loeffler, Tompkinsville, N.Y. (people on shoreline, pier and water float in distance)",
+          "typeOfResource": "still image",
+          "imageID": "104519",
+          "itemLink": "http://digitalcollections.nypl.org/items/604059e0-c5ee-012f-1738-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "60f3fcb0-c5ee-012f-e7c2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/60f3fcb0-c5ee-012f-e7c2-58d385a7bc34",
+          "title": "20145-Bathing Beach, South Beach, Staten Island, N.Y.  [Nunleys Baths & Pool  shore scene and entrance to pool.]",
+          "typeOfResource": "still image",
+          "imageID": "104521",
+          "itemLink": "http://digitalcollections.nypl.org/items/60f3fcb0-c5ee-012f-e7c2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "60a26aa0-c5ee-012f-fab0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/60a26aa0-c5ee-012f-fab0-58d385a7bc34",
+          "title": "Bachmann'sSouth Beach, S.I., Souvenir  [buildings, pier, sailboats, cameo-type.]",
+          "typeOfResource": "still image",
+          "imageID": "104520",
+          "itemLink": "http://digitalcollections.nypl.org/items/60a26aa0-c5ee-012f-fab0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c9d5-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c9d5-a3d9-e040-e00a18064a99",
+          "title": "Staten Island South Beach (people on shore and in water in front of large building)",
+          "typeOfResource": "still image",
+          "imageID": "104539",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c9d5-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc16-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc16-a3d9-e040-e00a18064a99",
+          "title": "Amusement Area, South Beach, Staten Island, N.Y.  [building and children'samusement rides]",
+          "typeOfResource": "still image",
+          "imageID": "104535",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc16-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc17-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc17-a3d9-e040-e00a18064a99",
+          "title": "Bathing Scene and Happy Land Pier, South Beach, Staten Island  [people on beach and float, pier in distance.]",
+          "typeOfResource": "still image",
+          "imageID": "104536",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc17-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc18-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc18-a3d9-e040-e00a18064a99",
+          "title": "Happy Land Park, Theatre and Dancing Pavilion, South Beach, Staten Island [people in old garb in front of building entrances]",
+          "typeOfResource": "still image",
+          "imageID": "104537",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc18-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc1a-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc1a-a3d9-e040-e00a18064a99",
+          "title": "South Beach, Staten Island  [people on beach and on float, pier in background]",
+          "typeOfResource": "still image",
+          "imageID": "104538",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc1a-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "67336e70-c5ee-012f-5089-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/67336e70-c5ee-012f-5089-58d385a7bc34",
+          "title": "South Beach, Staten Island  [people on beach and on float, pier in background]",
+          "typeOfResource": "still image",
+          "imageID": "104538",
+          "itemLink": "http://digitalcollections.nypl.org/items/67336e70-c5ee-012f-5089-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "68bcba00-c5ee-012f-9c02-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/68bcba00-c5ee-012f-9c02-58d385a7bc34",
+          "title": "South Beach, Staten Island (people on beach and on float, pier in background)",
+          "typeOfResource": "still image",
+          "imageID": "104542",
+          "itemLink": "http://digitalcollections.nypl.org/items/68bcba00-c5ee-012f-9c02-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "67877890-c5ee-012f-871b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/67877890-c5ee-012f-871b-58d385a7bc34",
+          "title": "Staten Island South Beach (people on shore and in water in front of large building)",
+          "typeOfResource": "still image",
+          "imageID": "104539",
+          "itemLink": "http://digitalcollections.nypl.org/items/67877890-c5ee-012f-871b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc19-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc19-a3d9-e040-e00a18064a99",
+          "title": "Roller Boller Coaster, South Beach, S.I.  [coaster behind admission building Great Roller Boller Coaster Amusement Co., few people sitting on sand and on boardwalk.]",
+          "typeOfResource": "still image",
+          "imageID": "104541",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc19-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc1e-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc1e-a3d9-e040-e00a18064a99",
+          "title": "Happyland, South Beach, Staten Island.  [turreted entrance building next to electric theatre,  with people at boardwalk railing looking out over water.]",
+          "typeOfResource": "still image",
+          "imageID": "104540",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc1e-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "697485c0-c5ee-012f-c344-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/697485c0-c5ee-012f-c344-58d385a7bc34",
+          "title": "160-Resting on the Beach, at South Beach, S. I. (people on beach in front of a hotel and restaurant and other buildings.",
+          "typeOfResource": "still image",
+          "imageID": "104544",
+          "itemLink": "http://digitalcollections.nypl.org/items/697485c0-c5ee-012f-c344-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c9d6-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c9d6-a3d9-e040-e00a18064a99",
+          "title": "South Beach, Staten Island (people on beach and on float, pier in background)",
+          "typeOfResource": "still image",
+          "imageID": "104542",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c9d6-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "69178720-c5ee-012f-b8da-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/69178720-c5ee-012f-b8da-58d385a7bc34",
+          "title": "Pier Entrance to Happyland, South Beach, S.I.  [view from pier of buildings; one building advertising attractions such as 'free vaudeville']",
+          "typeOfResource": "still image",
+          "imageID": "104543",
+          "itemLink": "http://digitalcollections.nypl.org/items/69178720-c5ee-012f-b8da-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "686cc150-c5ee-012f-59d5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/686cc150-c5ee-012f-59d5-58d385a7bc34",
+          "title": "Roller Boller Coaster, South Beach, S.I.  [coaster behind admission building Great Roller Boller Coaster Amusement Co., few people sitting on sand and on boardwalk.]",
+          "typeOfResource": "still image",
+          "imageID": "104541",
+          "itemLink": "http://digitalcollections.nypl.org/items/686cc150-c5ee-012f-59d5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "680a5be0-c5ee-012f-7fb7-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/680a5be0-c5ee-012f-7fb7-58d385a7bc34",
+          "title": "Happyland, South Beach, Staten Island.  [turreted entrance building next to electric theatre,  with people at boardwalk railing looking out over water.]",
+          "typeOfResource": "still image",
+          "imageID": "104540",
+          "itemLink": "http://digitalcollections.nypl.org/items/680a5be0-c5ee-012f-7fb7-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "69d69530-c5ee-012f-c3e5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/69d69530-c5ee-012f-c3e5-58d385a7bc34",
+          "title": "Road to South Beach, Staten Island  [old cars on road through grassland]",
+          "typeOfResource": "still image",
+          "imageID": "104545",
+          "itemLink": "http://digitalcollections.nypl.org/items/69d69530-c5ee-012f-c3e5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6b4a5b60-c5ee-012f-9eb8-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6b4a5b60-c5ee-012f-9eb8-58d385a7bc34",
+          "title": "Walch's Bathing Pavilion, South Beach, Staten Island. [People strolling on boardwalk in front of Walch's.]",
+          "typeOfResource": "still image",
+          "imageID": "104549",
+          "itemLink": "http://digitalcollections.nypl.org/items/6b4a5b60-c5ee-012f-9eb8-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc20-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc20-a3d9-e040-e00a18064a99",
+          "title": "On the Beach at South Beach, Staten Island, N.Y.  [people on beach with buildings in background and swinging chairs amusement ride.]",
+          "typeOfResource": "still image",
+          "imageID": "104548",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc20-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6cc855e0-c5ee-012f-9a07-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6cc855e0-c5ee-012f-9a07-58d385a7bc34",
+          "title": "Old Bellopp(sic) House, built 1668, As It Appeared May, 1931, Occupied by Lord Howe During Revolutionary War, Tottenville, S.I., N.Y",
+          "typeOfResource": "still image",
+          "imageID": "104552",
+          "itemLink": "http://digitalcollections.nypl.org/items/6cc855e0-c5ee-012f-9a07-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6d23e9b0-c5ee-012f-5159-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6d23e9b0-c5ee-012f-5159-58d385a7bc34",
+          "title": "Billop(sic) House, Conference Room, (1668) Staten ISland, N.Y. by Ottilie Johnson",
+          "typeOfResource": "still image",
+          "imageID": "104553",
+          "itemLink": "http://digitalcollections.nypl.org/items/6d23e9b0-c5ee-012f-5159-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc22-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc22-a3d9-e040-e00a18064a99",
+          "title": "Harris'sBathing Slide South Beach, Staten Island. [people wading at shoreline, people on float and on giant water slide, Hoffman Island military base in background]",
+          "typeOfResource": "still image",
+          "imageID": "104550",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc22-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc21-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc21-a3d9-e040-e00a18064a99",
+          "title": "Walch's Bathing Pavilion, South Beach, Staten Island. [People strolling on boardwalk in front of Walch's.]",
+          "typeOfResource": "still image",
+          "imageID": "104549",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc21-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc23-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc23-a3d9-e040-e00a18064a99",
+          "title": "Old Billopp(sic) House, Built 1668, Tottenville, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104551",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc23-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6aecc070-c5ee-012f-baf8-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6aecc070-c5ee-012f-baf8-58d385a7bc34",
+          "title": "On the Beach at South Beach, Staten Island, N.Y.  [people on beach with buildings in background and swinging chairs amusement ride.]",
+          "typeOfResource": "still image",
+          "imageID": "104548",
+          "itemLink": "http://digitalcollections.nypl.org/items/6aecc070-c5ee-012f-baf8-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc1f-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc1f-a3d9-e040-e00a18064a99",
+          "title": "Boardwalk and Beach, South Beach, Staten Island, N.Y. [people on beach with buildings on boardwalk, --tuts Tavern, Loutpa (Greek letters), Liberty Baths Bathing, umbrellas advertising what appears to be Bloomingdales.]",
+          "typeOfResource": "still image",
+          "imageID": "104547",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc1f-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6bb4a6d0-c5ee-012f-6e6e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6bb4a6d0-c5ee-012f-6e6e-58d385a7bc34",
+          "title": "Harris'sBathing Slide South Beach, Staten Island. [people wading at shoreline, people on float and on giant water slide, Hoffman Island military base in background]",
+          "typeOfResource": "still image",
+          "imageID": "104550",
+          "itemLink": "http://digitalcollections.nypl.org/items/6bb4a6d0-c5ee-012f-6e6e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6c73c8b0-c5ee-012f-f5f3-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6c73c8b0-c5ee-012f-f5f3-58d385a7bc34",
+          "title": "Old Billopp(sic) House, Built 1668, Tottenville, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104551",
+          "itemLink": "http://digitalcollections.nypl.org/items/6c73c8b0-c5ee-012f-f5f3-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc2f-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc2f-a3d9-e040-e00a18064a99",
+          "title": "Britton Cottage CA 1678, New Dorp Lane, New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104563",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc2f-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "712e5460-c5ee-012f-264d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/712e5460-c5ee-012f-264d-58d385a7bc34",
+          "title": "Billopp(sic) House, Tottenville, Staten Island, Issued by the Advance Pub. Co.",
+          "typeOfResource": "still image",
+          "imageID": "104564",
+          "itemLink": "http://digitalcollections.nypl.org/items/712e5460-c5ee-012f-264d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc2e-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc2e-a3d9-e040-e00a18064a99",
+          "title": "Guyon-Lake-Tysen House",
+          "typeOfResource": "still image",
+          "imageID": "104562",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc2e-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc2c-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc2c-a3d9-e040-e00a18064a99",
+          "title": "Conference House",
+          "typeOfResource": "still image",
+          "imageID": "104560",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc2c-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "70763100-c5ee-012f-b8f5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/70763100-c5ee-012f-b8f5-58d385a7bc34",
+          "title": "Guyon-Lake-Tysen House",
+          "typeOfResource": "still image",
+          "imageID": "104562",
+          "itemLink": "http://digitalcollections.nypl.org/items/70763100-c5ee-012f-b8f5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "70ddf2e0-c5ee-012f-6b11-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/70ddf2e0-c5ee-012f-6b11-58d385a7bc34",
+          "title": "Britton Cottage CA 1678, New Dorp Lane, New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104563",
+          "itemLink": "http://digitalcollections.nypl.org/items/70ddf2e0-c5ee-012f-6b11-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc2d-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc2d-a3d9-e040-e00a18064a99",
+          "title": "Morgan House 1810",
+          "typeOfResource": "still image",
+          "imageID": "104561",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc2d-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "71e71110-c5ee-012f-176c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/71e71110-c5ee-012f-176c-58d385a7bc34",
+          "title": "Conference House",
+          "typeOfResource": "still image",
+          "imageID": "104566",
+          "itemLink": "http://digitalcollections.nypl.org/items/71e71110-c5ee-012f-176c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbcb-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbcb-a3d9-e040-e00a18064a99",
+          "title": "St. Mark'sApartments and Hotel Castleton, St. George, Staten Island, N.Y. [two beautiful old gray and white bldgs.,  with old touring car in street]",
+          "typeOfResource": "still image",
+          "imageID": "104577",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbcb-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbc9-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbc9-a3d9-e040-e00a18064a99",
+          "title": "Public Square Building., Port Richmond, Staten Island, N.Y.  [large brick building, with car in street]",
+          "typeOfResource": "still image",
+          "imageID": "104575",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbc9-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc39-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc39-a3d9-e040-e00a18064a99",
+          "title": "Richmond Apartment, New Brighton, Staten Island, N.Y. [5-story apt. bldg., with row homes in back, two men in street and early century car]",
+          "typeOfResource": "still image",
+          "imageID": "104573",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc39-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cc0a-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cc0a-a3d9-e040-e00a18064a99",
+          "title": "Prospect Gables Modern Apartments, Prospect Ave. New Brighton, Staten Island, N.Y.  [Tudor style buildings with old car parked in front  advertising text on back.]",
+          "typeOfResource": "still image",
+          "imageID": "104574",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cc0a-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbca-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbca-a3d9-e040-e00a18064a99",
+          "title": "The Apartment House Surrounded By Gardens, St. George Gardens, Inc. 90 St. Marks(sic) Place, St. George, Staten Island  [advertising text on back.]",
+          "typeOfResource": "still image",
+          "imageID": "104576",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbca-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "76ee3fa0-c5ee-012f-e648-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/76ee3fa0-c5ee-012f-e648-58d385a7bc34",
+          "title": "Convent of St. Christopher",
+          "typeOfResource": "still image",
+          "imageID": "104580",
+          "itemLink": "http://digitalcollections.nypl.org/items/76ee3fa0-c5ee-012f-e648-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "76ac3740-c5ee-012f-2ae1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/76ac3740-c5ee-012f-2ae1-58d385a7bc34",
+          "title": "Sea Land Church House, Oakwood Heights, Staten Island., N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104579",
+          "itemLink": "http://digitalcollections.nypl.org/items/76ac3740-c5ee-012f-2ae1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "76552c40-c5ee-012f-04a5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/76552c40-c5ee-012f-04a5-58d385a7bc34",
+          "title": "Koch Hall, 16-18 New Dorp Lane, cor. Second Street, New Dorp, Staten Island",
+          "typeOfResource": "still image",
+          "imageID": "104578",
+          "itemLink": "http://digitalcollections.nypl.org/items/76552c40-c5ee-012f-04a5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "75ab3040-c5ee-012f-d316-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/75ab3040-c5ee-012f-d316-58d385a7bc34",
+          "title": "The Apartment House Surrounded By Gardens, St. George Gardens, Inc. 90 St. Marks(sic) Place, St. George, Staten Island  [advertising text on back.]",
+          "typeOfResource": "still image",
+          "imageID": "104576",
+          "itemLink": "http://digitalcollections.nypl.org/items/75ab3040-c5ee-012f-d316-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "760a1220-c5ee-012f-f4c2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/760a1220-c5ee-012f-f4c2-58d385a7bc34",
+          "title": "St. Mark'sApartments and Hotel Castleton, St. George, Staten Island, N.Y. [two beautiful old gray and white bldgs.,  with old touring car in street]",
+          "typeOfResource": "still image",
+          "imageID": "104577",
+          "itemLink": "http://digitalcollections.nypl.org/items/760a1220-c5ee-012f-f4c2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe0-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe0-a3d9-e040-e00a18064a99",
+          "title": "Verrazano-Narrows Bridge [stamped on back:  I went over the Verrazano-Narrows Bridge on opening day November 21, 1964]",
+          "typeOfResource": "still image",
+          "imageID": "104598",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe0-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe1-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe1-a3d9-e040-e00a18064a99",
+          "title": "Entrance to New York Harbor showing Verrazano-Narrows Bridge  [beautiful aerial view]",
+          "typeOfResource": "still image",
+          "imageID": "104599",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe1-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbdf-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbdf-a3d9-e040-e00a18064a99",
+          "title": "The Outerbridge, Tottenville, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104597",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbdf-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7e684de0-c5ee-012f-6fd9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7e684de0-c5ee-012f-6fd9-58d385a7bc34",
+          "title": "Entrance to New York Harbor showing Verrazano-Narrows Bridge  [beautiful aerial view]",
+          "typeOfResource": "still image",
+          "imageID": "104599",
+          "itemLink": "http://digitalcollections.nypl.org/items/7e684de0-c5ee-012f-6fd9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7ebe25f0-c5ee-012f-16f0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7ebe25f0-c5ee-012f-16f0-58d385a7bc34",
+          "title": "Vanderbilt Arch  New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104600",
+          "itemLink": "http://digitalcollections.nypl.org/items/7ebe25f0-c5ee-012f-16f0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe5-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe5-a3d9-e040-e00a18064a99",
+          "title": "Vanderbilt Mausoleum, Moravian Cemetery, New Dorp",
+          "typeOfResource": "still image",
+          "imageID": "104603",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe5-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe6-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe6-a3d9-e040-e00a18064a99",
+          "title": "Christ Church, Franklin Ave. and Second St., New Brighton, Staten Island",
+          "typeOfResource": "still image",
+          "imageID": "104604",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe6-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe3-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe3-a3d9-e040-e00a18064a99",
+          "title": "Moravian Cemetery New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104601",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe3-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe4-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe4-a3d9-e040-e00a18064a99",
+          "title": "Moravian Cemetery, Staten sland [sic].",
+          "typeOfResource": "still image",
+          "imageID": "104602",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe4-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "814e0700-c5ee-012f-37ea-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/814e0700-c5ee-012f-37ea-58d385a7bc34",
+          "title": "Community Church Oakwood Heights, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104606",
+          "itemLink": "http://digitalcollections.nypl.org/items/814e0700-c5ee-012f-37ea-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "81019330-c5ee-012f-94f3-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/81019330-c5ee-012f-94f3-58d385a7bc34",
+          "title": "Calvary Presbyterian Church",
+          "typeOfResource": "still image",
+          "imageID": "104605",
+          "itemLink": "http://digitalcollections.nypl.org/items/81019330-c5ee-012f-94f3-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7f2ca260-c5ee-012f-f8e2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7f2ca260-c5ee-012f-f8e2-58d385a7bc34",
+          "title": "Moravian Cemetery New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104601",
+          "itemLink": "http://digitalcollections.nypl.org/items/7f2ca260-c5ee-012f-f8e2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-cbe2-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-cbe2-a3d9-e040-e00a18064a99",
+          "title": "Vanderbilt Arch  New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104600",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-cbe2-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7f9baa90-c5ee-012f-fb79-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7f9baa90-c5ee-012f-fb79-58d385a7bc34",
+          "title": "Moravian Cemetery, Staten sland [sic].",
+          "typeOfResource": "still image",
+          "imageID": "104602",
+          "itemLink": "http://digitalcollections.nypl.org/items/7f9baa90-c5ee-012f-fb79-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "80a1efa0-c5ee-012f-2271-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/80a1efa0-c5ee-012f-2271-58d385a7bc34",
+          "title": "Christ Church, Franklin Ave. and Second St., New Brighton, Staten Island",
+          "typeOfResource": "still image",
+          "imageID": "104604",
+          "itemLink": "http://digitalcollections.nypl.org/items/80a1efa0-c5ee-012f-2271-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7fea8b90-c5ee-012f-1f12-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7fea8b90-c5ee-012f-1f12-58d385a7bc34",
+          "title": "Vanderbilt Mausoleum, Moravian Cemetery, New Dorp",
+          "typeOfResource": "still image",
+          "imageID": "104603",
+          "itemLink": "http://digitalcollections.nypl.org/items/7fea8b90-c5ee-012f-1f12-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "093dd6b0-c632-012f-a8fb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/093dd6b0-c632-012f-a8fb-58d385a7bc34",
+          "title": "'Every pine and fir and hemlock wore ermine too dear for an earl, And the poorest twig on the elm-tree was ridged inch deep with pearl', Lowell.",
+          "typeOfResource": "still image",
+          "imageID": "79309",
+          "itemLink": "http://digitalcollections.nypl.org/items/093dd6b0-c632-012f-a8fb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-6296-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-6296-a3d9-e040-e00a18064a99",
+          "title": "'Every pine and fir and hemlock wore ermine too dear for an earl, And the poorest twig on the elm-tree was ridged inch deep with pearl', Lowell.",
+          "typeOfResource": "still image",
+          "imageID": "79309",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-6296-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3dd33d50-c5ee-012f-c1f6-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3dd33d50-c5ee-012f-c1f6-58d385a7bc34",
+          "title": "Corn Exchange Bank, New Court House and Borough Hall   Staten Island, N.Y. [old cars, horse and wagon.]",
+          "typeOfResource": "still image",
+          "imageID": "104429",
+          "itemLink": "http://digitalcollections.nypl.org/items/3dd33d50-c5ee-012f-c1f6-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c04d-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c04d-a3d9-e040-e00a18064a99",
+          "title": "Staten Island Savings Bank Stapleton, Staten Island, NY   Organized 1867  [people and old cars]",
+          "typeOfResource": "still image",
+          "imageID": "104428",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c04d-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c04c-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c04c-a3d9-e040-e00a18064a99",
+          "title": "Staten Island Savings Bank   Stapleton, S.I. [people & old cars].",
+          "typeOfResource": "still image",
+          "imageID": "104427",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c04c-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c0b0-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c0b0-a3d9-e040-e00a18064a99",
+          "title": "Tottenville National Bank, Banking Room.",
+          "typeOfResource": "still image",
+          "imageID": "104425",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c0b0-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c080-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c080-a3d9-e040-e00a18064a99",
+          "title": "Mariner'sHarbor National Bank.",
+          "typeOfResource": "still image",
+          "imageID": "104426",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c080-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3d717b80-c5ee-012f-ba8d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3d717b80-c5ee-012f-ba8d-58d385a7bc34",
+          "title": "Staten Island Savings Bank Stapleton, Staten Island, NY   Organized 1867  [people and old cars]",
+          "typeOfResource": "still image",
+          "imageID": "104428",
+          "itemLink": "http://digitalcollections.nypl.org/items/3d717b80-c5ee-012f-ba8d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3d1d8670-c5ee-012f-ac05-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3d1d8670-c5ee-012f-ac05-58d385a7bc34",
+          "title": "Staten Island Savings Bank   Stapleton, S.I. [people & old cars].",
+          "typeOfResource": "still image",
+          "imageID": "104427",
+          "itemLink": "http://digitalcollections.nypl.org/items/3d1d8670-c5ee-012f-ac05-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3c56f140-c5ee-012f-8164-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3c56f140-c5ee-012f-8164-58d385a7bc34",
+          "title": "Tottenville National Bank, Banking Room.",
+          "typeOfResource": "still image",
+          "imageID": "104425",
+          "itemLink": "http://digitalcollections.nypl.org/items/3c56f140-c5ee-012f-8164-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3ca2d400-c5ee-012f-061a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3ca2d400-c5ee-012f-061a-58d385a7bc34",
+          "title": "Mariner'sHarbor National Bank.",
+          "typeOfResource": "still image",
+          "imageID": "104426",
+          "itemLink": "http://digitalcollections.nypl.org/items/3ca2d400-c5ee-012f-061a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c054-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c054-a3d9-e040-e00a18064a99",
+          "title": "Board of Trustees Room [Information of bank's goal to attract  \"desirable\" families to move to Staten Island.]",
+          "typeOfResource": "still image",
+          "imageID": "104435",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c054-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c050-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c050-a3d9-e040-e00a18064a99",
+          "title": "New First Class Safe Deposit Vault of the Staten Island Savings Bank -  [Information  of  Staten Island on back.]",
+          "typeOfResource": "still image",
+          "imageID": "104431",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c050-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c055-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c055-a3d9-e040-e00a18064a99",
+          "title": "Richmond Borough National Bank, Stapleton, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104436",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c055-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c053-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c053-a3d9-e040-e00a18064a99",
+          "title": "Interior View of  Staten Island Savings Bank  -  [Information of Staten Island different from #7 on back.]",
+          "typeOfResource": "still image",
+          "imageID": "104434",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c053-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c051-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c051-a3d9-e040-e00a18064a99",
+          "title": "Exterior View of Bank  [i.e., Staten Island Savings Bank] - [Info on back of growth of bank.]",
+          "typeOfResource": "still image",
+          "imageID": "104432",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c051-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3fcda1a0-c5ee-012f-db7a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3fcda1a0-c5ee-012f-db7a-58d385a7bc34",
+          "title": "Interior View of  Staten Island Savings Bank  -  [Information of Staten Island different from #7 on back.]",
+          "typeOfResource": "still image",
+          "imageID": "104434",
+          "itemLink": "http://digitalcollections.nypl.org/items/3fcda1a0-c5ee-012f-db7a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3ef7d370-c5ee-012f-0590-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3ef7d370-c5ee-012f-0590-58d385a7bc34",
+          "title": "Exterior View of Bank  [i.e., Staten Island Savings Bank] - [Info on back of growth of bank.]",
+          "typeOfResource": "still image",
+          "imageID": "104432",
+          "itemLink": "http://digitalcollections.nypl.org/items/3ef7d370-c5ee-012f-0590-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "414acbf0-c5ee-012f-ece7-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/414acbf0-c5ee-012f-ece7-58d385a7bc34",
+          "title": "Entrance, Cedar Grove Beach Club New Dorp, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104437",
+          "itemLink": "http://digitalcollections.nypl.org/items/414acbf0-c5ee-012f-ece7-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4097aa10-c5ee-012f-cc7b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4097aa10-c5ee-012f-cc7b-58d385a7bc34",
+          "title": "Richmond Borough National Bank, Stapleton, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104436",
+          "itemLink": "http://digitalcollections.nypl.org/items/4097aa10-c5ee-012f-cc7b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c061-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c061-a3d9-e040-e00a18064a99",
+          "title": "A Morning Tide, Crescent Beach Great Kills, Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104448",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c061-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c060-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c060-a3d9-e040-e00a18064a99",
+          "title": "Crook'sPoint from Great Kills, Staten Island, N.Y. [wooden pier and rowboats.]",
+          "typeOfResource": "still image",
+          "imageID": "104447",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c060-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47d9-c062-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47d9-c062-a3d9-e040-e00a18064a99",
+          "title": "In the Kills Great Kills, Staten Island, N.Y. [fisherman on shoreline.]",
+          "typeOfResource": "still image",
+          "imageID": "104449",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47d9-c062-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4676a820-c5ee-012f-02bb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4676a820-c5ee-012f-02bb-58d385a7bc34",
+          "title": "General View of Woodland Beach, Staten Island. [bathing pavilion and Woodland Beach Casino advertising Rubsam & Hormann, i.e., R&H Beer.]",
+          "typeOfResource": "still image",
+          "imageID": "104451",
+          "itemLink": "http://digitalcollections.nypl.org/items/4676a820-c5ee-012f-02bb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "45b53520-c5ee-012f-cffa-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/45b53520-c5ee-012f-cffa-58d385a7bc34",
+          "title": "In the Kills Great Kills, Staten Island, N.Y. [fisherman on shoreline.]",
+          "typeOfResource": "still image",
+          "imageID": "104449",
+          "itemLink": "http://digitalcollections.nypl.org/items/45b53520-c5ee-012f-cffa-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "46c92830-c5ee-012f-29d0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/46c92830-c5ee-012f-29d0-58d385a7bc34",
+          "title": "Great Kills Yacht Club Staten Island, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "104452",
+          "itemLink": "http://digitalcollections.nypl.org/items/46c92830-c5ee-012f-29d0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4609ceb0-c5ee-012f-9350-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4609ceb0-c5ee-012f-9350-58d385a7bc34",
+          "title": "Maurice Fitzgerald'sFleet of Boats Great Kills, Staten Island, N.Y. [fishing boats off shore.]",
+          "typeOfResource": "still image",
+          "imageID": "104450",
+          "itemLink": "http://digitalcollections.nypl.org/items/4609ceb0-c5ee-012f-9350-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "472d2780-c5ee-012f-f1ea-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/472d2780-c5ee-012f-f1ea-58d385a7bc34",
+          "title": "Bathing Scene, New Dorp Beach, Staten Island, N.Y.  [people bathing, long pier off beach.]",
+          "typeOfResource": "still image",
+          "imageID": "104453",
+          "itemLink": "http://digitalcollections.nypl.org/items/472d2780-c5ee-012f-f1ea-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "44eecf50-c5ee-012f-c0eb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/44eecf50-c5ee-012f-c0eb-58d385a7bc34",
+          "title": "Crook'sPoint from Great Kills, Staten Island, N.Y. [wooden pier and rowboats.]",
+          "typeOfResource": "still image",
+          "imageID": "104447",
+          "itemLink": "http://digitalcollections.nypl.org/items/44eecf50-c5ee-012f-c0eb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}

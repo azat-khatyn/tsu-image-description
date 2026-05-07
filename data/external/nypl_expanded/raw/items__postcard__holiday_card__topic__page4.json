@@ -1,0 +1,231 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "topic",
+      "search_text": "holiday card",
+      "perPage": "100",
+      "page": "4",
+      "totalPages": "4"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "321",
+      "result": [
+        {
+          "uuid": "04b64510-c5c3-012f-4129-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/04b64510-c5c3-012f-4129-58d385a7bc34",
+          "title": "Dear Santa Claus this is where I live.",
+          "typeOfResource": "still image",
+          "imageID": "1586284",
+          "itemLink": "http://digitalcollections.nypl.org/items/04b64510-c5c3-012f-4129-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c7442f40-c5c2-012f-ca8a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c7442f40-c5c2-012f-ca8a-58d385a7bc34",
+          "title": "A joyful Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585904",
+          "itemLink": "http://digitalcollections.nypl.org/items/c7442f40-c5c2-012f-ca8a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5ff7-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5ff7-a3d9-e040-e00a18064a99",
+          "title": "Wishing you a merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585983",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5ff7-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5ff6-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5ff6-a3d9-e040-e00a18064a99",
+          "title": "Wishing you a merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585982",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5ff6-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5d4a-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5d4a-a3d9-e040-e00a18064a99",
+          "title": "A joyful Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585904",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5d4a-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-6356-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-6356-a3d9-e040-e00a18064a99",
+          "title": "Dear Santa Claus this is where I live.",
+          "typeOfResource": "still image",
+          "imageID": "1586284",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-6356-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-600f-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-600f-a3d9-e040-e00a18064a99",
+          "title": "Xmas greetings.",
+          "typeOfResource": "still image",
+          "imageID": "1586007",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-600f-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-600e-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-600e-a3d9-e040-e00a18064a99",
+          "title": "Xmas greetings.",
+          "typeOfResource": "still image",
+          "imageID": "1586006",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-600e-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d3f76b00-c5c2-012f-0d6e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d3f76b00-c5c2-012f-0d6e-58d385a7bc34",
+          "title": "Wishing you a merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585982",
+          "itemLink": "http://digitalcollections.nypl.org/items/d3f76b00-c5c2-012f-0d6e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5fb8-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5fb8-a3d9-e040-e00a18064a99",
+          "title": "A merry Christmas",
+          "typeOfResource": "still image",
+          "imageID": "1585920",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5fb8-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5fb9-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5fb9-a3d9-e040-e00a18064a99",
+          "title": "A merry Christmas",
+          "typeOfResource": "still image",
+          "imageID": "1585921",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5fb9-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c9d68210-c5c2-012f-5b2d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c9d68210-c5c2-012f-5b2d-58d385a7bc34",
+          "title": "A merry Christmas",
+          "typeOfResource": "still image",
+          "imageID": "1585920",
+          "itemLink": "http://digitalcollections.nypl.org/items/c9d68210-c5c2-012f-5b2d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "980c4fd0-86e8-013c-6339-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/980c4fd0-86e8-013c-6339-0242ac110004",
+          "title": "Miscellaneous caricatures",
+          "typeOfResource": "still image",
+          "imageID": "ps_prn_cd40_586",
+          "itemLink": "http://digitalcollections.nypl.org/items/980c4fd0-86e8-013c-6339-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "96e17ef0-cdc4-0137-a85c-37767f3dc076",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/96e17ef0-cdc4-0137-a85c-37767f3dc076",
+          "title": "The Lorillard story ",
+          "typeOfResource": "text",
+          "imageID": "1800682",
+          "itemLink": "http://digitalcollections.nypl.org/items/96e17ef0-cdc4-0137-a85c-37767f3dc076",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b153b900-c5c2-012f-5b19-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b153b900-c5c2-012f-5b19-58d385a7bc34",
+          "title": "A merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585770",
+          "itemLink": "http://digitalcollections.nypl.org/items/b153b900-c5c2-012f-5b19-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5cc4-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5cc4-a3d9-e040-e00a18064a99",
+          "title": "A merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585770",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5cc4-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5cc5-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5cc5-a3d9-e040-e00a18064a99",
+          "title": "A merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585771",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5cc5-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "10aa0280-c6c0-012f-4e1c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/10aa0280-c6c0-012f-4e1c-58d385a7bc34",
+          "title": "Celebrating the fourth.",
+          "typeOfResource": "still image",
+          "imageID": "1169436",
+          "itemLink": "http://digitalcollections.nypl.org/items/10aa0280-c6c0-012f-4e1c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47de-4d56-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47de-4d56-a3d9-e040-e00a18064a99",
+          "title": "Celebrating the fourth.",
+          "typeOfResource": "still image",
+          "imageID": "1169436",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47de-4d56-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3b722300-c6d1-012f-7aba-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3b722300-c6d1-012f-7aba-58d385a7bc34",
+          "title": "Government hotel for Negro women war workers; A group of young war worker-residents are shown enjoying a game of cards in the fully equipped game room of the Lucy D. Slowe Residence Hall, first government constructed hotels for Negro women war workers in Washington, D.C., between Fall 1942 and April 1943",
+          "typeOfResource": "still image",
+          "imageID": "1213441",
+          "itemLink": "http://digitalcollections.nypl.org/items/3b722300-c6d1-012f-7aba-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47de-842f-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47de-842f-a3d9-e040-e00a18064a99",
+          "title": "Government hotel for Negro women war workers; A group of young war worker-residents are shown enjoying a game of cards in the fully equipped game room of the Lucy D. Slowe Residence Hall, first government constructed hotels for Negro women war workers in Washington, D.C., between Fall 1942 and April 1943",
+          "typeOfResource": "still image",
+          "imageID": "1213441",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47de-842f-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "num_rows": 6711,
+  "num_with_title": 6677,
+  "num_with_abstract": 0,
+  "num_with_best_text": 0,
+  "num_with_image_links": 0,
+  "num_with_item_details_image_links": 0,
+  "num_with_chosen_image_url": 0,
+  "source_type_top": [
+    [
+      "search",
+      6637
+    ],
+    [
+      "collection",
+      74
+    ]
+  ],
+  "query_top": [
+    [
+      "greeting card",
+      1838
+    ],
+    [
+      "picture postcard",
+      1547
+    ],
+    [
+      "postcard",
+      1544
+    ],
+    [
+      "holiday card",
+      1250
+    ],
+    [
+      "postcards",
+      532
+    ]
+  ],
+  "field_top": [
+    [
+      "genre",
+      2959
+    ],
+    [
+      "title",
+      1848
+    ],
+    [
+      "topic",
+      859
+    ]
+  ],
+  "collection_title_top": [
+    [
+      "Postcards",
+      25
+    ],
+    [
+      "Postcards printed for the 1913 Congress",
+      11
+    ],
+    [
+      "Postcards.",
+      11
+    ],
+    [
+      "Detroit Publishing Company postcards",
+      1
+    ],
+    [
+      "Holiday postcards",
+      1
+    ],
+    [
+      "Dorot Jewish Division postcards",
+      1
+    ],
+    [
+      "Donald Angus collection of Carl Van Vechten postcards and photographs, circa 1890s-1959",
+      1
+    ],
+    [
+      "Postcard collection",
+      1
+    ],
+    [
+      "Postcards of the Cuban revolution, including Che Guevera, Fidel Castro, and Ernest Hemingway",
+      1
+    ],
+    [
+      "Letters, notes and postcards, 1871-1932",
+      1
+    ],
+    [
+      "Postcards of the United States",
+      1
+    ],
+    [
+      "Marsh, 128 ALS, 5 postcards to Sir Edward Howard",
+      1
+    ],
+    [
+      "Bell, Vanessa Stephen. 465 ALS, 10 TLS, 20 postcards to",
+      1
+    ],
+    [
+      "Gregory, Lady. 41 ALS, 2 TLS, 1 postcard, 1 telegram to",
+      1
+    ],
+    [
+      "Woolf, Virginia. 203 ALS, 8 AL (2 incomplete), 1 postcard to",
+      1
+    ]
+  ],
+  "type_of_resource_top": [
+    [
+      "still image",
+      4473
+    ],
+    [
+      "text",
+      2192
+    ]
+  ],
+  "genres_mods_top": [],
+  "subjects_mods_top": [],
+  "text_fields": [
+    {
+      "field": "title",
+      "count": 6677,
+      "share": 0.9949,
+      "avg_words": 6.32,
+      "median_words": 4,
+      "avg_chars": 41.83,
+      "median_chars": 28
+    },
+    {
+      "field": "abstract",
+      "count": 0,
+      "share": 0.0,
+      "avg_words": 0.0,
+      "median_words": 0.0,
+      "avg_chars": 0.0,
+      "median_chars": 0.0
+    },
+    {
+      "field": "best_text",
+      "count": 0,
+      "share": 0.0,
+      "avg_words": 0.0,
+      "median_words": 0.0,
+      "avg_chars": 0.0,
+      "median_chars": 0.0
+    }
+  ],
+  "examples": [
+    {
+      "sample_id": "3f388a60-c62c-012f-9462-58d385a7bc34",
+      "source_type": "search",
+      "query": "postcard",
+      "field": "title",
+      "title": "A Happy Family",
+      "text_field": "title",
+      "text": "A Happy Family"
+    },
+    {
+      "sample_id": "0b115180-bd07-013a-725d-0242ac110004",
+      "source_type": "search",
+      "query": "postcard",
+      "field": "genre",
+      "title": "Femme Juive",
+      "text_field": "title",
+      "text": "Femme Juive"
+    },
+    {
+      "sample_id": "96da1df0-d790-0139-8014-0242ac110004",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": "title",
+      "title": "Farmers exchange news and greetings in front of courthouse on Saturday afternoon. Versailles, Kentucky",
+      "text_field": "title",
+      "text": "Farmers exchange news and greetings in front of courthouse on Saturday afternoon. Versailles, Kentucky"
+    },
+    {
+      "sample_id": "510d47d9-a540-a3d9-e040-e00a18064a99",
+      "source_type": "search",
+      "query": "postcard",
+      "field": "genre",
+      "title": "Passaconaway Inn, York Beach, Me.",
+      "text_field": "title",
+      "text": "Passaconaway Inn, York Beach, Me."
+    },
+    {
+      "sample_id": "708b9720-c5d1-012f-b1dc-58d385a7bc34",
+      "source_type": "search",
+      "query": "postcard",
+      "field": "title",
+      "title": "Nantao, Shanghai.",
+      "text_field": "title",
+      "text": "Nantao, Shanghai."
+    },
+    {
+      "sample_id": "28a62990-c5c5-012f-8fba-58d385a7bc34",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": "genre",
+      "title": "Christmas and New Year cards depicting landscapes, sailing ships, and seashells.",
+      "text_field": "title",
+      "text": "Christmas and New Year cards depicting landscapes, sailing ships, and seashells."
+    },
+    {
+      "sample_id": "510d47d9-9c12-a3d9-e040-e00a18064a99",
+      "source_type": "search",
+      "query": "postcard",
+      "field": "genre",
+      "title": "The Indian Sacrifice, Niagara Falls, N. Y.",
+      "text_field": "title",
+      "text": "The Indian Sacrifice, Niagara Falls, N. Y."
+    },
+    {
+      "sample_id": "510d47d9-6072-a3d9-e040-e00a18064a99",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": "title",
+      "title": "The temple of Aboo Simbel, in Nubia. The most wonderful of all the temples of Rameses the Greet, excavated in the solid rock.",
+      "text_field": "title",
+      "text": "The temple of Aboo Simbel, in Nubia. The most wonderful of all the temples of Rameses the Greet, excavated in the solid rock."
+    },
+    {
+      "sample_id": "510d47e1-b4f2-a3d9-e040-e00a18064a99",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": null,
+      "title": "Portrait of Indian man and woman, with playing cards.",
+      "text_field": "title",
+      "text": "Portrait of Indian man and woman, with playing cards."
+    },
+    {
+      "sample_id": "510d47d9-ca18-a3d9-e040-e00a18064a99",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": "title",
+      "title": "Sailors' Snug Harbor [modern card with effigies of old sailors in front of building]",
+      "text_field": "title",
+      "text": "Sailors' Snug Harbor [modern card with effigies of old sailors in front of building]"
+    },
+    {
+      "sample_id": "510d47db-c708-a3d9-e040-e00a18064a99",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": "genre",
+      "title": "Christmas cards depicting flowers and a woman standing in a field.",
+      "text_field": "title",
+      "text": "Christmas cards depicting flowers and a woman standing in a field."
+    },
+    {
+      "sample_id": "eedc5900-791c-0139-f9ab-0242ac110003",
+      "source_type": "search",
+      "query": "greeting card",
+      "field": "title",
+      "title": "Wife of a rehabilitation client greets a physician who cooperates with the FSA (Farm Security Administration) medical health program. Saint Charles County, Missouri",
+      "text_field": "title",
+      "text": "Wife of a rehabilitation client greets a physician who cooperates with the FSA (Farm Security Administration) medical health program. Saint Charles County, Missouri"
+    }
+  ]
+}

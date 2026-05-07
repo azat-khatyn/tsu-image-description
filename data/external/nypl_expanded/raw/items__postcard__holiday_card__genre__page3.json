@@ -1,0 +1,1021 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "genre",
+      "search_text": "holiday card",
+      "perPage": "100",
+      "page": "3",
+      "totalPages": "1744"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "174365",
+      "result": [
+        {
+          "uuid": "9fa61b00-c56b-012f-9f1f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9fa61b00-c56b-012f-9f1f-58d385a7bc34",
+          "title": "Chicago Community Forum Service",
+          "typeOfResource": "text",
+          "imageID": "wf39_027219",
+          "itemLink": "http://digitalcollections.nypl.org/items/9fa61b00-c56b-012f-9f1f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-42f6-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-42f6-e6d9-e040-e00a1806748c",
+          "title": "Code-Sponsoring Trade Associations",
+          "typeOfResource": "text",
+          "imageID": "wf39_029594",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-42f6-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-42e8-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-42e8-e6d9-e040-e00a1806748c",
+          "title": "Chicago Council of Social Agencies",
+          "typeOfResource": "text",
+          "imageID": "wf39_027221",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-42e8-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a1ff2810-c56b-012f-b886-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a1ff2810-c56b-012f-b886-58d385a7bc34",
+          "title": "Chicago Daily Times",
+          "typeOfResource": "text",
+          "imageID": "wf39_027224",
+          "itemLink": "http://digitalcollections.nypl.org/items/a1ff2810-c56b-012f-b886-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-42f0-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-42f0-e6d9-e040-e00a1806748c",
+          "title": "Chicago & Eastern Illinois Flyer",
+          "typeOfResource": "text",
+          "imageID": "wf39_027229",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-42f0-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a0ae66d0-c56b-012f-9c13-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a0ae66d0-c56b-012f-9c13-58d385a7bc34",
+          "title": "Chicago Council of Social Agencies",
+          "typeOfResource": "text",
+          "imageID": "wf39_027221",
+          "itemLink": "http://digitalcollections.nypl.org/items/a0ae66d0-c56b-012f-9c13-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a75a1a20-c56b-012f-e9a2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a75a1a20-c56b-012f-e9a2-58d385a7bc34",
+          "title": "Code-Sponsoring Trade Associations",
+          "typeOfResource": "text",
+          "imageID": "wf39_029594",
+          "itemLink": "http://digitalcollections.nypl.org/items/a75a1a20-c56b-012f-e9a2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43b2-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43b2-e6d9-e040-e00a1806748c",
+          "title": "Codrington, George W. (Pres.) Winton Engine Corp.",
+          "typeOfResource": "text",
+          "imageID": "wf39_029605",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43b2-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43b5-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43b5-e6d9-e040-e00a1806748c",
+          "title": "Cody, F.X.",
+          "typeOfResource": "text",
+          "imageID": "wf39_029608",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43b5-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "aa9d10e0-c56b-012f-b698-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/aa9d10e0-c56b-012f-b698-58d385a7bc34",
+          "title": "Codman, Joseph",
+          "typeOfResource": "text",
+          "imageID": "wf39_029601",
+          "itemLink": "http://digitalcollections.nypl.org/items/aa9d10e0-c56b-012f-b698-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ab9be590-c56b-012f-b30b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ab9be590-c56b-012f-b30b-58d385a7bc34",
+          "title": "Codos, Paul",
+          "typeOfResource": "text",
+          "imageID": "wf39_029603",
+          "itemLink": "http://digitalcollections.nypl.org/items/ab9be590-c56b-012f-b30b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43b3-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43b3-e6d9-e040-e00a1806748c",
+          "title": "Cody, Craig",
+          "typeOfResource": "text",
+          "imageID": "wf39_029606",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43b3-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ada3b340-c56b-012f-d2b6-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ada3b340-c56b-012f-d2b6-58d385a7bc34",
+          "title": "Cody, David",
+          "typeOfResource": "text",
+          "imageID": "wf39_029607",
+          "itemLink": "http://digitalcollections.nypl.org/items/ada3b340-c56b-012f-d2b6-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "aeae6750-c56b-012f-16f4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/aeae6750-c56b-012f-16f4-58d385a7bc34",
+          "title": "Cody, Frank (Supt.) Public Schools",
+          "typeOfResource": "text",
+          "imageID": "wf39_029609",
+          "itemLink": "http://digitalcollections.nypl.org/items/aeae6750-c56b-012f-16f4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ac5972f0-c56b-012f-3730-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ac5972f0-c56b-012f-3730-58d385a7bc34",
+          "title": "Codrington, A.B.",
+          "typeOfResource": "text",
+          "imageID": "wf39_029604",
+          "itemLink": "http://digitalcollections.nypl.org/items/ac5972f0-c56b-012f-3730-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43b8-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43b8-e6d9-e040-e00a1806748c",
+          "title": "Cody, Helen (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_029611",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43b8-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b3eaf4c0-c56b-012f-d662-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b3eaf4c0-c56b-012f-d662-58d385a7bc34",
+          "title": "Coe College Military Band",
+          "typeOfResource": "text",
+          "imageID": "wf39_029619",
+          "itemLink": "http://digitalcollections.nypl.org/items/b3eaf4c0-c56b-012f-d662-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b78a9e00-c56b-012f-69f0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b78a9e00-c56b-012f-69f0-58d385a7bc34",
+          "title": "Coe, John A.",
+          "typeOfResource": "text",
+          "imageID": "wf39_029627",
+          "itemLink": "http://digitalcollections.nypl.org/items/b78a9e00-c56b-012f-69f0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ba716050-c56b-012f-c9fa-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ba716050-c56b-012f-c9fa-58d385a7bc34",
+          "title": "Cook, Arthur M.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032743",
+          "itemLink": "http://digitalcollections.nypl.org/items/ba716050-c56b-012f-c9fa-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b84c9f00-c56b-012f-8765-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b84c9f00-c56b-012f-8765-58d385a7bc34",
+          "title": "Coe, Miriam",
+          "typeOfResource": "text",
+          "imageID": "wf39_029628",
+          "itemLink": "http://digitalcollections.nypl.org/items/b84c9f00-c56b-012f-8765-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43d3-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43d3-e6d9-e040-e00a1806748c",
+          "title": "Cook, C.S.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032749",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43d3-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43ce-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43ce-e6d9-e040-e00a1806748c",
+          "title": "Cook Automatic Equipment Corp.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032744",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43ce-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43cb-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43cb-e6d9-e040-e00a1806748c",
+          "title": "Cook, Alice Rice (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032741",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43cb-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43ca-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43ca-e6d9-e040-e00a1806748c",
+          "title": "Cook, Alexander H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032740",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43ca-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43c9-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43c9-e6d9-e040-e00a1806748c",
+          "title": "Coe, Miriam",
+          "typeOfResource": "text",
+          "imageID": "wf39_029628",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43c9-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43c2-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43c2-e6d9-e040-e00a1806748c",
+          "title": "Coe, E.H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_029621",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43c2-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bbcc4870-c56b-012f-caf4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bbcc4870-c56b-012f-caf4-58d385a7bc34",
+          "title": "Cook Books",
+          "typeOfResource": "text",
+          "imageID": "wf39_032746",
+          "itemLink": "http://digitalcollections.nypl.org/items/bbcc4870-c56b-012f-caf4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43d0-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43d0-e6d9-e040-e00a1806748c",
+          "title": "Cook Books",
+          "typeOfResource": "text",
+          "imageID": "wf39_032746",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43d0-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43d5-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43d5-e6d9-e040-e00a1806748c",
+          "title": "Cook, Charles Z.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032751",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43d5-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bdd4a3e0-c56b-012f-3d16-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bdd4a3e0-c56b-012f-3d16-58d385a7bc34",
+          "title": "Cook, Charles B. (Vice President) Hartford, Conn.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032750",
+          "itemLink": "http://digitalcollections.nypl.org/items/bdd4a3e0-c56b-012f-3d16-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b9ae34b0-c56b-012f-b995-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b9ae34b0-c56b-012f-b995-58d385a7bc34",
+          "title": "Cook, Arthur",
+          "typeOfResource": "text",
+          "imageID": "wf39_032742",
+          "itemLink": "http://digitalcollections.nypl.org/items/b9ae34b0-c56b-012f-b995-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "be202860-c56b-012f-5f88-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/be202860-c56b-012f-5f88-58d385a7bc34",
+          "title": "Cook, Charles Z.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032751",
+          "itemLink": "http://digitalcollections.nypl.org/items/be202860-c56b-012f-5f88-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43d4-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43d4-e6d9-e040-e00a1806748c",
+          "title": "Cook, Charles B. (Vice President) Hartford, Conn.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032750",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43d4-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bb828670-c56b-012f-4e56-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bb828670-c56b-012f-4e56-58d385a7bc34",
+          "title": "Cook, Barbara J. (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032745",
+          "itemLink": "http://digitalcollections.nypl.org/items/bb828670-c56b-012f-4e56-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c23be2d0-c56b-012f-f725-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c23be2d0-c56b-012f-f725-58d385a7bc34",
+          "title": "Cook, E.W.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032759",
+          "itemLink": "http://digitalcollections.nypl.org/items/c23be2d0-c56b-012f-f725-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-43e5-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-43e5-e6d9-e040-e00a1806748c",
+          "title": "Cook, Esta Selma (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032767",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-43e5-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c6ab8ff0-c56b-012f-633b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c6ab8ff0-c56b-012f-633b-58d385a7bc34",
+          "title": "Cook, Ethel M. (Mrs. Wilfred H.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032768",
+          "itemLink": "http://digitalcollections.nypl.org/items/c6ab8ff0-c56b-012f-633b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c55b47a0-c56b-012f-021d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c55b47a0-c56b-012f-021d-58d385a7bc34",
+          "title": "Cook, Ellison Richards (Mrs. M.S.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032765",
+          "itemLink": "http://digitalcollections.nypl.org/items/c55b47a0-c56b-012f-021d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c8928e30-c56b-012f-049b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c8928e30-c56b-012f-049b-58d385a7bc34",
+          "title": "Cook, F.M.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032771",
+          "itemLink": "http://digitalcollections.nypl.org/items/c8928e30-c56b-012f-049b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c3faad90-c56b-012f-99be-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c3faad90-c56b-012f-99be-58d385a7bc34",
+          "title": "Cook, Eleanor B. (Mrs.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032762",
+          "itemLink": "http://digitalcollections.nypl.org/items/c3faad90-c56b-012f-99be-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c4986c00-c56b-012f-7f62-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c4986c00-c56b-012f-7f62-58d385a7bc34",
+          "title": "Cook, Ellis L. (Mrs.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032764",
+          "itemLink": "http://digitalcollections.nypl.org/items/c4986c00-c56b-012f-7f62-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cb232640-c56b-012f-507b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cb232640-c56b-012f-507b-58d385a7bc34",
+          "title": "Cook, George H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032777",
+          "itemLink": "http://digitalcollections.nypl.org/items/cb232640-c56b-012f-507b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44a1-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44a1-e6d9-e040-e00a1806748c",
+          "title": "Cook, Gladys E. (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032778",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44a1-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c9942ca0-c56b-012f-e597-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c9942ca0-c56b-012f-e597-58d385a7bc34",
+          "title": "Cook, Frederic W. (Hon.) (Secy. of State)",
+          "typeOfResource": "text",
+          "imageID": "wf39_032773",
+          "itemLink": "http://digitalcollections.nypl.org/items/c9942ca0-c56b-012f-e597-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c9da6dc0-c56b-012f-6e41-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c9da6dc0-c56b-012f-6e41-58d385a7bc34",
+          "title": "Cook, Frederick J.",
+          "typeOfResource": "text",
+          "imageID": "wf39_032774",
+          "itemLink": "http://digitalcollections.nypl.org/items/c9da6dc0-c56b-012f-6e41-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cc24ede0-c56b-012f-10bb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cc24ede0-c56b-012f-10bb-58d385a7bc34",
+          "title": "Cook, Gordon",
+          "typeOfResource": "text",
+          "imageID": "wf39_032779",
+          "itemLink": "http://digitalcollections.nypl.org/items/cc24ede0-c56b-012f-10bb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cce6b610-c56b-012f-fd3f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cce6b610-c56b-012f-fd3f-58d385a7bc34",
+          "title": "Crossman, Ida Mae",
+          "typeOfResource": "text",
+          "imageID": "wf39_035300",
+          "itemLink": "http://digitalcollections.nypl.org/items/cce6b610-c56b-012f-fd3f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44a8-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44a8-e6d9-e040-e00a1806748c",
+          "title": "Crossroads",
+          "typeOfResource": "text",
+          "imageID": "wf39_035305",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44a8-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44a5-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44a5-e6d9-e040-e00a1806748c",
+          "title": "Crossman, Ruth A. (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_035302",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44a5-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44ab-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44ab-e6d9-e040-e00a1806748c",
+          "title": "Crosstown Highway Linking Brooklyn with Fair",
+          "typeOfResource": "text",
+          "imageID": "wf39_035308",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44ab-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44a7-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44a7-e6d9-e040-e00a1806748c",
+          "title": "Crossman, George H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035304",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44a7-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ce361730-c56b-012f-7721-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ce361730-c56b-012f-7721-58d385a7bc34",
+          "title": "Crossman, William H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035303",
+          "itemLink": "http://digitalcollections.nypl.org/items/ce361730-c56b-012f-7721-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44ae-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44ae-e6d9-e040-e00a1806748c",
+          "title": "Crosta, C.A. Inc.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035311",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44ae-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d19c5520-c56b-012f-1da2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d19c5520-c56b-012f-1da2-58d385a7bc34",
+          "title": "Crosswhite, William",
+          "typeOfResource": "text",
+          "imageID": "wf39_035310",
+          "itemLink": "http://digitalcollections.nypl.org/items/d19c5520-c56b-012f-1da2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d69e6560-c56b-012f-27d8-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d69e6560-c56b-012f-27d8-58d385a7bc34",
+          "title": "Crotta, Victor",
+          "typeOfResource": "text",
+          "imageID": "wf39_035319",
+          "itemLink": "http://digitalcollections.nypl.org/items/d69e6560-c56b-012f-27d8-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d4ca3ff0-c56b-012f-9a0c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d4ca3ff0-c56b-012f-9a0c-58d385a7bc34",
+          "title": "Croton-Harmon Parents-Teachers Association",
+          "typeOfResource": "text",
+          "imageID": "wf39_035316",
+          "itemLink": "http://digitalcollections.nypl.org/items/d4ca3ff0-c56b-012f-9a0c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d593d6b0-c56b-012f-e841-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d593d6b0-c56b-012f-e841-58d385a7bc34",
+          "title": "Crotona Felt Novelty Company, Incorporated",
+          "typeOfResource": "text",
+          "imageID": "wf39_035317",
+          "itemLink": "http://digitalcollections.nypl.org/items/d593d6b0-c56b-012f-e841-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "da60a940-c56b-012f-ff94-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/da60a940-c56b-012f-ff94-58d385a7bc34",
+          "title": "Crouch, Caren (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_035327",
+          "itemLink": "http://digitalcollections.nypl.org/items/da60a940-c56b-012f-ff94-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d8fed130-c56b-012f-4dbf-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d8fed130-c56b-012f-4dbf-58d385a7bc34",
+          "title": "Crotty, Francis A.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035324",
+          "itemLink": "http://digitalcollections.nypl.org/items/d8fed130-c56b-012f-4dbf-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44c0-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44c0-e6d9-e040-e00a1806748c",
+          "title": "Crouch & Fitzgerald Corp.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035329",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44c0-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44bc-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44bc-e6d9-e040-e00a1806748c",
+          "title": "Crotty, Joseph J. (Central Foundry Co.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_035325",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44bc-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44c5-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44c5-e6d9-e040-e00a1806748c",
+          "title": "Crouse, Charles L.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035334",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44c5-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44bf-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44bf-e6d9-e040-e00a1806748c",
+          "title": "Crouch, Charles",
+          "typeOfResource": "text",
+          "imageID": "wf39_035328",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44bf-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44c3-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44c3-e6d9-e040-e00a1806748c",
+          "title": "Crouch, Walter D. (Mayor)",
+          "typeOfResource": "text",
+          "imageID": "wf39_035332",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44c3-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "df9e02c0-c56b-012f-851e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/df9e02c0-c56b-012f-851e-58d385a7bc34",
+          "title": "Crouse, Minnie M.",
+          "typeOfResource": "text",
+          "imageID": "wf39_035337",
+          "itemLink": "http://digitalcollections.nypl.org/items/df9e02c0-c56b-012f-851e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dfe7e750-c56b-012f-b340-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dfe7e750-c56b-012f-b340-58d385a7bc34",
+          "title": "Crouse, Russel",
+          "typeOfResource": "text",
+          "imageID": "wf39_035338",
+          "itemLink": "http://digitalcollections.nypl.org/items/dfe7e750-c56b-012f-b340-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44cc-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44cc-e6d9-e040-e00a1806748c",
+          "title": "Day, F. Archibald",
+          "typeOfResource": "text",
+          "imageID": "wf39_038010",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44cc-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dd36f8f0-c56b-012f-77cb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dd36f8f0-c56b-012f-77cb-58d385a7bc34",
+          "title": "Crouch, Walter D. (Mayor)",
+          "typeOfResource": "text",
+          "imageID": "wf39_035332",
+          "itemLink": "http://digitalcollections.nypl.org/items/dd36f8f0-c56b-012f-77cb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44d2-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44d2-e6d9-e040-e00a1806748c",
+          "title": "Day, George R.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038016",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44d2-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "de8fec90-c56b-012f-8c92-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/de8fec90-c56b-012f-8c92-58d385a7bc34",
+          "title": "Crouse, H.B. (Pres. Crouse-Hinds Co.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_035335",
+          "itemLink": "http://digitalcollections.nypl.org/items/de8fec90-c56b-012f-8c92-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e0f25270-c56b-012f-0c11-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e0f25270-c56b-012f-0c11-58d385a7bc34",
+          "title": "Day, Edward",
+          "typeOfResource": "text",
+          "imageID": "wf39_038009",
+          "itemLink": "http://digitalcollections.nypl.org/items/e0f25270-c56b-012f-0c11-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44d4-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44d4-e6d9-e040-e00a1806748c",
+          "title": "Day, H.H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038018",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44d4-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44ce-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44ce-e6d9-e040-e00a1806748c",
+          "title": "Day, G.H. 2nd",
+          "typeOfResource": "text",
+          "imageID": "wf39_038012",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44ce-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e849ed10-c56b-012f-dd44-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e849ed10-c56b-012f-dd44-58d385a7bc34",
+          "title": "Day, Helen J.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038023",
+          "itemLink": "http://digitalcollections.nypl.org/items/e849ed10-c56b-012f-dd44-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e2c87a70-c56b-012f-df5e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e2c87a70-c56b-012f-df5e-58d385a7bc34",
+          "title": "Day, G.H. 2nd",
+          "typeOfResource": "text",
+          "imageID": "wf39_038012",
+          "itemLink": "http://digitalcollections.nypl.org/items/e2c87a70-c56b-012f-df5e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44d8-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44d8-e6d9-e040-e00a1806748c",
+          "title": "Day, Helen A. (Miss)",
+          "typeOfResource": "text",
+          "imageID": "wf39_038022",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44d8-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "eca5e950-c56b-012f-da00-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/eca5e950-c56b-012f-da00-58d385a7bc34",
+          "title": "Day, John J.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038032",
+          "itemLink": "http://digitalcollections.nypl.org/items/eca5e950-c56b-012f-da00-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e414cbb0-c56b-012f-a448-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e414cbb0-c56b-012f-a448-58d385a7bc34",
+          "title": "Day, George Parmly (Mrs. W.)",
+          "typeOfResource": "text",
+          "imageID": "wf39_038015",
+          "itemLink": "http://digitalcollections.nypl.org/items/e414cbb0-c56b-012f-a448-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e6858710-c56b-012f-ded4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e6858710-c56b-012f-ded4-58d385a7bc34",
+          "title": "Day, Harry A.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038020",
+          "itemLink": "http://digitalcollections.nypl.org/items/e6858710-c56b-012f-ded4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e9515ab0-c56b-012f-ed3f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e9515ab0-c56b-012f-ed3f-58d385a7bc34",
+          "title": "Day, Iris",
+          "typeOfResource": "text",
+          "imageID": "wf39_038025",
+          "itemLink": "http://digitalcollections.nypl.org/items/e9515ab0-c56b-012f-ed3f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e99f6570-c56b-012f-d527-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e99f6570-c56b-012f-d527-58d385a7bc34",
+          "title": "Day, J.C.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038026",
+          "itemLink": "http://digitalcollections.nypl.org/items/e99f6570-c56b-012f-d527-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ebe99f50-c56b-012f-6504-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ebe99f50-c56b-012f-6504-58d385a7bc34",
+          "title": "Day, John Company, Inc.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038031",
+          "itemLink": "http://digitalcollections.nypl.org/items/ebe99f50-c56b-012f-6504-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-44d7-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-44d7-e6d9-e040-e00a1806748c",
+          "title": "Day, Harry L. (Idaho Chairman)",
+          "typeOfResource": "text",
+          "imageID": "wf39_038021",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-44d7-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-4592-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-4592-e6d9-e040-e00a1806748c",
+          "title": "Day, John Company, Inc.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038031",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-4592-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ea5836f0-c56b-012f-4cb3-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ea5836f0-c56b-012f-4cb3-58d385a7bc34",
+          "title": "Day, J.H.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038027",
+          "itemLink": "http://digitalcollections.nypl.org/items/ea5836f0-c56b-012f-4cb3-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e743ef30-c56b-012f-166b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e743ef30-c56b-012f-166b-58d385a7bc34",
+          "title": "Day, Harry L. (Idaho Chairman)",
+          "typeOfResource": "text",
+          "imageID": "wf39_038021",
+          "itemLink": "http://digitalcollections.nypl.org/items/e743ef30-c56b-012f-166b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45a7-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45a7-e6d9-e040-e00a1806748c",
+          "title": "Direct Construction Commitments",
+          "typeOfResource": "text",
+          "imageID": "wf39_040872",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45a7-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f6795160-c56b-012f-c65f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f6795160-c56b-012f-c65f-58d385a7bc34",
+          "title": "Direct Construction Commitments",
+          "typeOfResource": "text",
+          "imageID": "wf39_040872",
+          "itemLink": "http://digitalcollections.nypl.org/items/f6795160-c56b-012f-c65f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45a2-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45a2-e6d9-e040-e00a1806748c",
+          "title": "Day, R.O.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038047",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45a2-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45a6-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45a6-e6d9-e040-e00a1806748c",
+          "title": "Direct Bus Service from Brooklyn to the Fair",
+          "typeOfResource": "text",
+          "imageID": "wf39_040871",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45a6-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f424b1a0-c56b-012f-34e3-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f424b1a0-c56b-012f-34e3-58d385a7bc34",
+          "title": "Day, R.O.",
+          "typeOfResource": "text",
+          "imageID": "wf39_038047",
+          "itemLink": "http://digitalcollections.nypl.org/items/f424b1a0-c56b-012f-34e3-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45a8-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45a8-e6d9-e040-e00a1806748c",
+          "title": "Direct Mail Adv. Sub-Comm.",
+          "typeOfResource": "text",
+          "imageID": "wf39_040873",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45a8-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45a1-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45a1-e6d9-e040-e00a1806748c",
+          "title": "Day of Prayer",
+          "typeOfResource": "text",
+          "imageID": "wf39_038046",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45a1-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45aa-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45aa-e6d9-e040-e00a1806748c",
+          "title": "Direct Mail Associates, Incorporated",
+          "typeOfResource": "text",
+          "imageID": "wf39_040875",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45aa-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45ab-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45ab-e6d9-e040-e00a1806748c",
+          "title": "Direct Mail Inc.",
+          "typeOfResource": "text",
+          "imageID": "wf39_040876",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45ab-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f7351f60-c56b-012f-e9f1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f7351f60-c56b-012f-e9f1-58d385a7bc34",
+          "title": "Direct Mail Adv. Sub-Comm.",
+          "typeOfResource": "text",
+          "imageID": "wf39_040873",
+          "itemLink": "http://digitalcollections.nypl.org/items/f7351f60-c56b-012f-e9f1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f6313300-c56b-012f-e462-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f6313300-c56b-012f-e462-58d385a7bc34",
+          "title": "Direct Bus Service from Brooklyn to the Fair",
+          "typeOfResource": "text",
+          "imageID": "wf39_040871",
+          "itemLink": "http://digitalcollections.nypl.org/items/f6313300-c56b-012f-e462-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f36b0d40-c56b-012f-7286-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f36b0d40-c56b-012f-7286-58d385a7bc34",
+          "title": "Day of Prayer",
+          "typeOfResource": "text",
+          "imageID": "wf39_038046",
+          "itemLink": "http://digitalcollections.nypl.org/items/f36b0d40-c56b-012f-7286-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f8362900-c56b-012f-a015-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f8362900-c56b-012f-a015-58d385a7bc34",
+          "title": "Direct Mail Associates, Incorporated",
+          "typeOfResource": "text",
+          "imageID": "wf39_040875",
+          "itemLink": "http://digitalcollections.nypl.org/items/f8362900-c56b-012f-a015-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b619bd98-45a9-e6d9-e040-e00a1806748c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b619bd98-45a9-e6d9-e040-e00a1806748c",
+          "title": "Direct Mail Association",
+          "typeOfResource": "text",
+          "imageID": "wf39_040874",
+          "itemLink": "http://digitalcollections.nypl.org/items/b619bd98-45a9-e6d9-e040-e00a1806748c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}

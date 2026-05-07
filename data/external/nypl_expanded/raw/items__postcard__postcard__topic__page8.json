@@ -1,0 +1,19 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "topic",
+      "search_text": "postcard",
+      "perPage": "0",
+      "page": "0",
+      "totalPages": "0"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "0"
+    }
+  }
+}

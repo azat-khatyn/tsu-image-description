@@ -1,0 +1,25 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_text": "postcard",
+      "filter_query": [
+        "typeOfResource:(still image)",
+        "use_rtxt_s:(\"PDCDPP\" OR \"PDNCN\" OR \"PDREN\" OR \"PDEXP\" OR \"PDADD\" OR \"PDUSG\" OR \"PPD\" OR \"PPD100\" OR \"CC_0\")"
+      ],
+      "filter_type": "fuzzy",
+      "perPage": "100",
+      "page": "4",
+      "totalPages": "1",
+      "startTime": "Beginning of Time",
+      "endTime": "Till Now"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "56"
+    }
+  }
+}

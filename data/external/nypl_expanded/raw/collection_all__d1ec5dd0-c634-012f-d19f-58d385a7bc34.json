@@ -1,0 +1,148 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": "d1ec5dd0-c634-012f-d19f-58d385a7bc34",
+      "perPage": "10",
+      "page": "1",
+      "totalPages": "27",
+      "startTime": "Beginning of Time",
+      "endTime": "Till Now"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "265",
+      "capture": [
+        {
+          "uuid": "9402c5e0-c634-012f-7403-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9402c5e0-c634-012f-7403-58d385a7bc34",
+          "imageID": "5234819",
+          "sortString": "0000000001|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/9402c5e0-c634-012f-7403-58d385a7bc34",
+          "title": "Personalities",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "8813eca0-7156-0135-1423-0dd3c52d48d7",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8813eca0-7156-0135-1423-0dd3c52d48d7",
+          "typeOfResource": "still image",
+          "imageID": "57281267",
+          "sortString": "0000000001|0000000002|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/8813eca0-7156-0135-1423-0dd3c52d48d7",
+          "title": "Hallie Anderson and her orchestra, NYC",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "93012010-7480-0135-bff5-2fc23542849e",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/93012010-7480-0135-bff5-2fc23542849e",
+          "typeOfResource": "still image",
+          "imageID": "57281267",
+          "sortString": "0000000001|0000000002|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/93012010-7480-0135-bff5-2fc23542849e",
+          "title": "Hallie Anderson and her orchestra, NYC",
+          "dateDigitized": "2018-04-16T15:04:41Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "93fffeb0-7480-0135-3fe1-01985d72dda1",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/93fffeb0-7480-0135-3fe1-01985d72dda1",
+          "typeOfResource": "still image",
+          "imageID": "57281268",
+          "sortString": "0000000001|0000000002|0000000001|0000000001|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/93fffeb0-7480-0135-3fe1-01985d72dda1",
+          "title": "Hallie Anderson and her orchestra, NYC",
+          "dateDigitized": "2018-04-16T15:04:41Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "59c404a0-fe64-0133-0763-00505686a51c",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/59c404a0-fe64-0133-0763-00505686a51c",
+          "imageID": "5808958",
+          "sortString": "0000000001|0000000002|0000000003",
+          "itemLink": "http://digitalcollections.nypl.org/items/59c404a0-fe64-0133-0763-00505686a51c",
+          "title": "Ralph Cooper",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "d1fa64e0-4899-0135-a27e-3dabe12f6a58",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d1fa64e0-4899-0135-a27e-3dabe12f6a58",
+          "imageID": "57260165",
+          "sortString": "0000000001|0000000002|0000000004",
+          "itemLink": "http://digitalcollections.nypl.org/items/d1fa64e0-4899-0135-a27e-3dabe12f6a58",
+          "title": "Minnie Gentry",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "dc6b3420-9c1e-0137-afe8-1d56742e6e5d",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dc6b3420-9c1e-0137-afe8-1d56742e6e5d",
+          "imageID": "58023337",
+          "sortString": "0000000001|0000000002|0000000005",
+          "itemLink": "http://digitalcollections.nypl.org/items/dc6b3420-9c1e-0137-afe8-1d56742e6e5d",
+          "title": "Billie Holiday",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "e21ce940-9c20-0137-61b1-5b8b135110a9",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e21ce940-9c20-0137-61b1-5b8b135110a9",
+          "typeOfResource": "still image",
+          "imageID": "58023337",
+          "sortString": "0000000001|0000000002|0000000005|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/e21ce940-9c20-0137-61b1-5b8b135110a9",
+          "title": "Club Ebony, with banner for Billie Holiday",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "5fb9c030-9c2a-0137-d5e6-23507866be8f",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5fb9c030-9c2a-0137-d5e6-23507866be8f",
+          "typeOfResource": "still image",
+          "imageID": "58023337",
+          "sortString": "0000000001|0000000002|0000000005|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/5fb9c030-9c2a-0137-d5e6-23507866be8f",
+          "title": "Club Ebony, with banner for Billie Holiday",
+          "dateDigitized": "2019-08-16T10:06:17Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "5fe29060-9c2a-0137-fc9f-2f3251b180e5",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5fe29060-9c2a-0137-fc9f-2f3251b180e5",
+          "typeOfResource": "still image",
+          "imageID": "58023338",
+          "sortString": "0000000001|0000000002|0000000005|0000000001|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/5fe29060-9c2a-0137-fc9f-2f3251b180e5",
+          "title": "Club Ebony, with banner for Billie Holiday",
+          "dateDigitized": "2019-08-16T10:06:17Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        }
+      ]
+    }
+  }
+}

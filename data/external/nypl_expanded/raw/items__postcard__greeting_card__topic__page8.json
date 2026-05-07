@@ -1,0 +1,19 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "topic",
+      "search_text": "greeting card",
+      "perPage": "100",
+      "page": "8",
+      "totalPages": "1"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "96"
+    }
+  }
+}

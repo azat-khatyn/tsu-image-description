@@ -1,0 +1,148 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": "dddc4cd0-c5dc-012f-8f8b-58d385a7bc34",
+      "perPage": "10",
+      "page": "1",
+      "totalPages": "221",
+      "startTime": "Beginning of Time",
+      "endTime": "Till Now"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "2206",
+      "capture": [
+        {
+          "uuid": "5f35a1b0-c5dc-012f-e5f1-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5f35a1b0-c5dc-012f-e5f1-58d385a7bc34",
+          "imageID": "1536939",
+          "sortString": "0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/5f35a1b0-c5dc-012f-e5f1-58d385a7bc34",
+          "title": "Photographs",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "5f9fa1a0-c5dc-012f-2ce9-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5f9fa1a0-c5dc-012f-2ce9-58d385a7bc34",
+          "imageID": "1536607",
+          "sortString": "0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/5f9fa1a0-c5dc-012f-2ce9-58d385a7bc34",
+          "title": "Woman Suffrage and Feminism",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "5fe9c8a0-c5dc-012f-2986-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5fe9c8a0-c5dc-012f-2986-58d385a7bc34",
+          "imageID": "1536607",
+          "sortString": "0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/5fe9c8a0-c5dc-012f-2986-58d385a7bc34",
+          "title": "Congresses and Organizations",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "602ff970-c5dc-012f-f3ed-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/602ff970-c5dc-012f-f3ed-58d385a7bc34",
+          "imageID": "1536485",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/602ff970-c5dc-012f-f3ed-58d385a7bc34",
+          "title": "International Woman Suffrage Congress, Denmark, 1906",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "60828d40-c5dc-012f-2dff-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/60828d40-c5dc-012f-2dff-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "1536485",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/60828d40-c5dc-012f-2dff-58d385a7bc34",
+          "title": "Frauenkongress [suffrage cartoon]",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "510d47e2-77fd-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-77fd-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "1536485",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-77fd-a3d9-e040-e00a18064a99",
+          "title": "Frauenkongress [suffrage cartoon]",
+          "dateDigitized": "2013-10-07T16:38:21Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "60d40360-c5dc-012f-8ad1-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/60d40360-c5dc-012f-8ad1-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "1536487",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/60d40360-c5dc-012f-8ad1-58d385a7bc34",
+          "title": "National Association of Women Employees - View of the  formal dining hall, 1906",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "510d47e2-7800-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-7800-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "1536487",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000002|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-7800-a3d9-e040-e00a18064a99",
+          "title": "National Association of Women Employees - View of the  formal dining hall, 1906",
+          "dateDigitized": "2013-10-07T16:38:21Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "510d47e2-7801-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-7801-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "1540999",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000002|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-7801-a3d9-e040-e00a18064a99",
+          "title": "National Association of Women Employees - View of the  formal dining hall, 1906",
+          "dateDigitized": "2013-10-07T16:38:21Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "614534a0-c5dc-012f-8dd7-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/614534a0-c5dc-012f-8dd7-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "1536488",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000003",
+          "itemLink": "http://digitalcollections.nypl.org/items/614534a0-c5dc-012f-8dd7-58d385a7bc34",
+          "title": "Socializing at Regensen College, Denmark",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        }
+      ]
+    }
+  }
+}

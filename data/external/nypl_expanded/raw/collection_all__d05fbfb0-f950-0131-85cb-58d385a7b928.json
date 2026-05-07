@@ -1,0 +1,149 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": "d05fbfb0-f950-0131-85cb-58d385a7b928",
+      "perPage": "10",
+      "page": "1",
+      "totalPages": "4450",
+      "startTime": "Beginning of Time",
+      "endTime": "Till Now"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "44496",
+      "capture": [
+        {
+          "uuid": "1fb1e630-c530-012f-78cc-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1fb1e630-c530-012f-78cc-58d385a7bc34",
+          "imageID": "2011279",
+          "sortString": "0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/1fb1e630-c530-012f-78cc-58d385a7bc34",
+          "title": "I. Central Files",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "20d16020-c530-012f-d6e7-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/20d16020-c530-012f-d6e7-58d385a7bc34",
+          "imageID": "2011035",
+          "sortString": "0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/20d16020-c530-012f-d6e7-58d385a7bc34",
+          "title": "Administration (A)",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "21dfdef0-c530-012f-7a16-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/21dfdef0-c530-012f-7a16-58d385a7bc34",
+          "imageID": "2011035",
+          "sortString": "0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/21dfdef0-c530-012f-7a16-58d385a7bc34",
+          "title": "Functional Organization. (A1)",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "22e7aaf0-c530-012f-3370-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/22e7aaf0-c530-012f-3370-58d385a7bc34",
+          "typeOfResource": "text",
+          "imageID": "2011035",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/22e7aaf0-c530-012f-3370-58d385a7bc34",
+          "title": "Board of Design. (A1.13)",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "23510110-c530-012f-3ce5-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/23510110-c530-012f-3ce5-58d385a7bc34",
+          "typeOfResource": "text",
+          "imageID": "2011035",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/23510110-c530-012f-3ce5-58d385a7bc34",
+          "title": "Committee on Theme",
+          "dateDigitized": null,
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "9c5824f0-0e2f-941b-e040-e00a18063c62",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9c5824f0-0e2f-941b-e040-e00a18063c62",
+          "typeOfResource": "text",
+          "imageID": "2011035",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/9c5824f0-0e2f-941b-e040-e00a18063c62",
+          "title": "Committee on Theme",
+          "dateDigitized": "2015-02-18T10:28:30Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "9c5824f0-0e30-941b-e040-e00a18063c62",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9c5824f0-0e30-941b-e040-e00a18063c62",
+          "typeOfResource": "text",
+          "imageID": "2011036",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/9c5824f0-0e30-941b-e040-e00a18063c62",
+          "title": "Committee on Theme",
+          "dateDigitized": "2015-02-18T10:28:30Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "9c5824f0-0e31-941b-e040-e00a18063c62",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9c5824f0-0e31-941b-e040-e00a18063c62",
+          "typeOfResource": "text",
+          "imageID": "2011037",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001|0000000003",
+          "itemLink": "http://digitalcollections.nypl.org/items/9c5824f0-0e31-941b-e040-e00a18063c62",
+          "title": "Committee on Theme",
+          "dateDigitized": "2015-02-18T10:28:30Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "9c5824f0-0e32-941b-e040-e00a18063c62",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9c5824f0-0e32-941b-e040-e00a18063c62",
+          "typeOfResource": "text",
+          "imageID": "2011038",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001|0000000004",
+          "itemLink": "http://digitalcollections.nypl.org/items/9c5824f0-0e32-941b-e040-e00a18063c62",
+          "title": "Committee on Theme",
+          "dateDigitized": "2015-02-18T10:28:30Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        },
+        {
+          "uuid": "9c5824f0-0e33-941b-e040-e00a18063c62",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9c5824f0-0e33-941b-e040-e00a18063c62",
+          "typeOfResource": "text",
+          "imageID": "2011039",
+          "sortString": "0000000001|0000000001|0000000001|0000000001|0000000001|0000000001|0000000005",
+          "itemLink": "http://digitalcollections.nypl.org/items/9c5824f0-0e33-941b-e040-e00a18063c62",
+          "title": "Committee on Theme",
+          "dateDigitized": "2015-02-18T10:28:30Z",
+          "rightsStatement": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/UND/1.0/"
+        }
+      ]
+    }
+  }
+}

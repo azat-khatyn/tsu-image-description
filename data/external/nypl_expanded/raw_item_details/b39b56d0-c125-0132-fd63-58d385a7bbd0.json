@@ -1,0 +1,487 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": {
+        "$": "b39b56d0-c125-0132-fd63-58d385a7bbd0"
+      },
+      "request": {
+        "uuid": {
+          "$": "b39b56d0-c125-0132-fd63-58d385a7bbd0"
+        },
+        "perPage": {
+          "$": "10"
+        },
+        "page": {
+          "$": "1"
+        },
+        "totalPages": {
+          "$": "1"
+        }
+      }
+    },
+    "response": {
+      "headers": {
+        "status": {
+          "$": "success"
+        },
+        "code": {
+          "$": "200"
+        },
+        "message": {
+          "$": "ok"
+        }
+      },
+      "mods": {
+        "version": "3.4",
+        "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+        "titleInfo": {
+          "type": "",
+          "authority": "",
+          "usage": "primary",
+          "lang": "",
+          "script": "",
+          "title": {
+            "$": "Hotel Belleclaire, Broadway at 77th Street, New York City"
+          }
+        },
+        "typeOfResource": {
+          "$": "still image"
+        },
+        "genre": {
+          "authority": "lctgm",
+          "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm008103",
+          "$": "Postcards"
+        },
+        "originInfo": {
+          "dateCreated": [
+            {
+              "encoding": "w3cdtf",
+              "qualifier": "approximate",
+              "point": "start",
+              "keyDate": "yes",
+              "$": "1930"
+            },
+            {
+              "encoding": "w3cdtf",
+              "qualifier": "approximate",
+              "point": "end",
+              "$": "1939"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "type": "local_photo_order",
+            "displayLabel": "Photo Order",
+            "$": "54421"
+          },
+          {
+            "type": "uuid",
+            "$": "5c012870-bb8f-0132-705f-58d385a7bbd0"
+          }
+        ],
+        "location": {
+          "physicalLocation": [
+            {
+              "authority": "marcorg",
+              "type": "repository",
+              "$": "nn"
+            },
+            {
+              "type": "division",
+              "$": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+            },
+            {
+              "type": "division_short_name",
+              "$": "Milstein Division"
+            },
+            {
+              "type": "code",
+              "$": "LHG"
+            }
+          ]
+        },
+        "name": {
+          "type": "",
+          "authority": "naf",
+          "valueURI": "http://id.loc.gov/authorities/names/n2005053797",
+          "namePart": {
+            "$": "Colourpicture Publishers (Firm)"
+          },
+          "role": {
+            "roleTerm": [
+              {
+                "valueURI": "http://id.loc.gov/vocabulary/relators/pbl",
+                "authority": "marcrelator",
+                "type": "code",
+                "$": "pbl"
+              },
+              {
+                "valueURI": "http://id.loc.gov/vocabulary/relators/pbl",
+                "authority": "marcrelator",
+                "type": "text",
+                "$": "Publisher"
+              }
+            ]
+          }
+        },
+        "physicalDescription": {
+          "extent": {
+            "$": "14 x 8.8. cm. (5 ½  x 3 ½ in)"
+          }
+        },
+        "relatedItem": {
+          "type": "host",
+          "titleInfo": {
+            "title": {
+              "$": "Hotels -- New York (State) -- New York"
+            }
+          },
+          "identifier": {
+            "type": "uuid",
+            "$": "060091a0-bb8f-0132-9393-58d385a7bbd0"
+          },
+          "relatedItem": {
+            "type": "host",
+            "titleInfo": {
+              "title": {
+                "$": "Postcards of the United States"
+              }
+            },
+            "identifier": [
+              {
+                "type": "uuid",
+                "$": "efa02bf0-bb8e-0132-05bb-58d385a7bbd0"
+              },
+              {
+                "type": "local_other",
+                "$": "[uncataloged]"
+              }
+            ]
+          }
+        }
+      },
+      "numResults": {
+        "$": "2"
+      },
+      "sibling_captures": {
+        "capture": [
+          {
+            "uuid": {
+              "$": "304e1680-bb90-0132-5184-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=w&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=r&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=t&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=b&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=f&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5232940"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/304e1680-bb90-0132-5184-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/NA2k4jPGRMi9VCa2CeckDgN"
+            },
+            "orderInSequence": {
+              "$": "1"
+            },
+            "isPartOfSequence": {
+              "$": "true"
+            },
+            "totalInSequence": {
+              "$": "2"
+            },
+            "title": {
+              "$": "Hotel Belleclaire, Broadway at 77th Street, New York City"
+            },
+            "rightsStatement": {
+              "$": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future."
+            },
+            "rightsStatementURI": {
+              "$": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+            }
+          },
+          {
+            "uuid": {
+              "$": "b39b56d0-c125-0132-fd63-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=w&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=r&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=t&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=b&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=f&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5233986"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000002"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/b39b56d0-c125-0132-fd63-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/UzGCwEGgTkC-3b4DccDvywt"
+            },
+            "orderInSequence": {
+              "$": "2"
+            },
+            "isPartOfSequence": {
+              "$": "true"
+            },
+            "totalInSequence": {
+              "$": "2"
+            },
+            "title": {
+              "$": "Hotel Belleclaire, Broadway at 77th Street, New York City"
+            },
+            "rightsStatement": {
+              "$": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future."
+            },
+            "rightsStatementURI": {
+              "$": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+            }
+          }
+        ]
+      },
+      "root_captures": {
+        "numResults": {
+          "$": "2"
+        },
+        "capture": [
+          {
+            "uuid": {
+              "$": "304e1680-bb90-0132-5184-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=w&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=r&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=t&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=b&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=f&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5232940"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/304e1680-bb90-0132-5184-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/NA2k4jPGRMi9VCa2CeckDgN"
+            }
+          },
+          {
+            "uuid": {
+              "$": "b39b56d0-c125-0132-fd63-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=w&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=r&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=t&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=b&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=f&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5233986"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000002"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/b39b56d0-c125-0132-fd63-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/UzGCwEGgTkC-3b4DccDvywt"
+            }
+          }
+        ]
+      },
+      "imm_captures": {
+        "numResults": {
+          "$": "2"
+        },
+        "capture": [
+          {
+            "uuid": {
+              "$": "304e1680-bb90-0132-5184-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=w&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=r&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=t&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=b&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5232940&t=f&download=1&suffix=304e1680-bb90-0132-5184-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5232940"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000001"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/304e1680-bb90-0132-5184-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/NA2k4jPGRMi9VCa2CeckDgN"
+            }
+          },
+          {
+            "uuid": {
+              "$": "b39b56d0-c125-0132-fd63-58d385a7bbd0"
+            },
+            "imageLinks": {
+              "imageLink": [
+                {
+                  "description": "Cropped .jpeg (760 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=w&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (300 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=r&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .gif (150 pixels on the long side)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=t&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Center cropped thumbnail .jpeg (100x100 pixels)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=b&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                },
+                {
+                  "description": "Cropped .jpeg (140 pixels tall with variable width)",
+                  "$": "http://images.nypl.org/index.php?id=5233986&t=f&download=1&suffix=b39b56d0-c125-0132-fd63-58d385a7bbd0.001"
+                }
+              ]
+            },
+            "typeOfResource": {
+              "$": "still image"
+            },
+            "imageID": {
+              "$": "5233986"
+            },
+            "sortString": {
+              "$": "0000000001|0000000001|0000000001|0000000002"
+            },
+            "itemLink": {
+              "$": "http://digitalcollections.nypl.org/items/b39b56d0-c125-0132-fd63-58d385a7bbd0"
+            },
+            "highResLink": {
+              "$": "https://link.nypl.org/UzGCwEGgTkC-3b4DccDvywt"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

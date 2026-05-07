@@ -1,0 +1,19 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "topic",
+      "search_text": "holiday card",
+      "perPage": "100",
+      "page": "7",
+      "totalPages": "4"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "321"
+    }
+  }
+}

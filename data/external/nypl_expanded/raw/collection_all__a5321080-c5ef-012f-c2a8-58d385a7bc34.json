@@ -1,0 +1,151 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": "a5321080-c5ef-012f-c2a8-58d385a7bc34",
+      "perPage": "10",
+      "page": "1",
+      "totalPages": "148",
+      "startTime": "Beginning of Time",
+      "endTime": "Till Now"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "1477",
+      "capture": [
+        {
+          "uuid": "d0a747a0-c5ee-012f-a7a0-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d0a747a0-c5ee-012f-a7a0-58d385a7bc34",
+          "imageID": "98F1744",
+          "sortString": "0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/d0a747a0-c5ee-012f-a7a0-58d385a7bc34",
+          "title": "Arden court",
+          "dateDigitized": null,
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "d0f82910-c5ee-012f-c1a1-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d0f82910-c5ee-012f-c1a1-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "98F1747",
+          "sortString": "0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/d0f82910-c5ee-012f-c1a1-58d385a7bc34",
+          "title": "Arden Court",
+          "dateDigitized": null,
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "510d47da-4a1a-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-4a1a-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "98F1747",
+          "sortString": "0000000001|0000000001|0000000001|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-4a1a-a3d9-e040-e00a18064a99",
+          "title": "Arden Court",
+          "dateDigitized": "2025-03-12T14:26:47Z",
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "d17c7ac0-c5ee-012f-fcae-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d17c7ac0-c5ee-012f-fcae-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "98F1741",
+          "sortString": "0000000001|0000000001|0000000002",
+          "itemLink": "http://digitalcollections.nypl.org/items/d17c7ac0-c5ee-012f-fcae-58d385a7bc34",
+          "title": "Arden Court",
+          "dateDigitized": null,
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "510d47da-4a15-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-4a15-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "98F1741",
+          "sortString": "0000000001|0000000001|0000000002|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-4a15-a3d9-e040-e00a18064a99",
+          "title": "Arden Court",
+          "dateDigitized": "2025-03-12T14:26:47Z",
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "d1d24aa0-c5ee-012f-4153-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d1d24aa0-c5ee-012f-4153-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "98F1742",
+          "sortString": "0000000001|0000000001|0000000003",
+          "itemLink": "http://digitalcollections.nypl.org/items/d1d24aa0-c5ee-012f-4153-58d385a7bc34",
+          "title": "Arden Court",
+          "dateDigitized": null,
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "510d47da-4a16-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-4a16-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "98F1742",
+          "sortString": "0000000001|0000000001|0000000003|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-4a16-a3d9-e040-e00a18064a99",
+          "title": "Arden Court",
+          "dateDigitized": "2025-03-12T14:26:47Z",
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "d235b360-c5ee-012f-6ebe-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d235b360-c5ee-012f-6ebe-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "98F1743",
+          "sortString": "0000000001|0000000001|0000000004",
+          "itemLink": "http://digitalcollections.nypl.org/items/d235b360-c5ee-012f-6ebe-58d385a7bc34",
+          "title": "Arden Court",
+          "dateDigitized": null,
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "510d47da-4a17-a3d9-e040-e00a18064a99",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-4a17-a3d9-e040-e00a18064a99",
+          "typeOfResource": "still image",
+          "imageID": "98F1743",
+          "sortString": "0000000001|0000000001|0000000004|0000000001",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-4a17-a3d9-e040-e00a18064a99",
+          "title": "Arden Court",
+          "dateDigitized": "2025-03-12T14:26:47Z",
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        },
+        {
+          "uuid": "d2a4c6e0-c5ee-012f-ec92-58d385a7bc34",
+          "imageLinks": null,
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d2a4c6e0-c5ee-012f-ec92-58d385a7bc34",
+          "typeOfResource": "still image",
+          "imageID": "98F1744",
+          "sortString": "0000000001|0000000001|0000000005",
+          "itemLink": "http://digitalcollections.nypl.org/items/d2a4c6e0-c5ee-012f-ec92-58d385a7bc34",
+          "title": "Arden Court",
+          "dateDigitized": null,
+          "rightsStatement": "This item is protected by copyright and/or related rights. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. For other uses you need to obtain permission from the rights-holder(s).",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/InC/1.0/"
+        }
+      ]
+    }
+  }
+}

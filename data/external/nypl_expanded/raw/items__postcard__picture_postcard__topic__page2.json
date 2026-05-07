@@ -1,0 +1,1021 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "topic",
+      "search_text": "picture postcard",
+      "perPage": "100",
+      "page": "2",
+      "totalPages": "43"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "4202",
+      "result": [
+        {
+          "uuid": "1484e190-54d6-0137-1ea8-06d659fa389b",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1484e190-54d6-0137-1ea8-06d659fa389b",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956222",
+          "itemLink": "http://digitalcollections.nypl.org/items/1484e190-54d6-0137-1ea8-06d659fa389b",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "85ebdf90-54d6-0137-3411-19b13fd4f066",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/85ebdf90-54d6-0137-3411-19b13fd4f066",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956857",
+          "itemLink": "http://digitalcollections.nypl.org/items/85ebdf90-54d6-0137-3411-19b13fd4f066",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2ef5d990-54d6-0137-373e-61b4217b8396",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2ef5d990-54d6-0137-373e-61b4217b8396",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956437",
+          "itemLink": "http://digitalcollections.nypl.org/items/2ef5d990-54d6-0137-373e-61b4217b8396",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1b1a6e70-54d6-0137-5c45-0fb41ace4558",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1b1a6e70-54d6-0137-5c45-0fb41ace4558",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956275",
+          "itemLink": "http://digitalcollections.nypl.org/items/1b1a6e70-54d6-0137-5c45-0fb41ace4558",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "39670720-54d6-0137-9b4f-0bfe574bff2c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/39670720-54d6-0137-9b4f-0bfe574bff2c",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956523",
+          "itemLink": "http://digitalcollections.nypl.org/items/39670720-54d6-0137-9b4f-0bfe574bff2c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1adbadf0-54d6-0137-0272-3bf7222d57c0",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1adbadf0-54d6-0137-0272-3bf7222d57c0",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956273",
+          "itemLink": "http://digitalcollections.nypl.org/items/1adbadf0-54d6-0137-0272-3bf7222d57c0",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2ed6b1b0-54d6-0137-04cc-0ab5a02950d3",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2ed6b1b0-54d6-0137-04cc-0ab5a02950d3",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956436",
+          "itemLink": "http://digitalcollections.nypl.org/items/2ed6b1b0-54d6-0137-04cc-0ab5a02950d3",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1c74a630-54d6-0137-19cb-7927f83d9681",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1c74a630-54d6-0137-19cb-7927f83d9681",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956286",
+          "itemLink": "http://digitalcollections.nypl.org/items/1c74a630-54d6-0137-19cb-7927f83d9681",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1c15fb00-54d6-0137-e061-1f37dcffea82",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1c15fb00-54d6-0137-e061-1f37dcffea82",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956283",
+          "itemLink": "http://digitalcollections.nypl.org/items/1c15fb00-54d6-0137-e061-1f37dcffea82",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "15de2d10-54d6-0137-42c2-05176d53cbdf",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/15de2d10-54d6-0137-42c2-05176d53cbdf",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956233",
+          "itemLink": "http://digitalcollections.nypl.org/items/15de2d10-54d6-0137-42c2-05176d53cbdf",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "15bf0ae0-54d6-0137-6a31-0b767ccb4be8",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/15bf0ae0-54d6-0137-6a31-0b767ccb4be8",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956232",
+          "itemLink": "http://digitalcollections.nypl.org/items/15bf0ae0-54d6-0137-6a31-0b767ccb4be8",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "144610a0-54d6-0137-5bf8-7760c915ae8a",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/144610a0-54d6-0137-5bf8-7760c915ae8a",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956220",
+          "itemLink": "http://digitalcollections.nypl.org/items/144610a0-54d6-0137-5bf8-7760c915ae8a",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "84c32230-54d6-0137-a396-7d8ee76b2acf",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/84c32230-54d6-0137-a396-7d8ee76b2acf",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956848",
+          "itemLink": "http://digitalcollections.nypl.org/items/84c32230-54d6-0137-a396-7d8ee76b2acf",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "19e41ca0-54d6-0137-a8f8-0fb26bd38f4e",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/19e41ca0-54d6-0137-a8f8-0fb26bd38f4e",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956265",
+          "itemLink": "http://digitalcollections.nypl.org/items/19e41ca0-54d6-0137-a8f8-0fb26bd38f4e",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "39479a00-54d6-0137-8dd6-053ee4484c8e",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/39479a00-54d6-0137-8dd6-053ee4484c8e",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956522",
+          "itemLink": "http://digitalcollections.nypl.org/items/39479a00-54d6-0137-8dd6-053ee4484c8e",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "44674390-54d6-0137-476e-456871af401d",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/44674390-54d6-0137-476e-456871af401d",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956613",
+          "itemLink": "http://digitalcollections.nypl.org/items/44674390-54d6-0137-476e-456871af401d",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1a031ff0-54d6-0137-4328-7fdaf82f5ff4",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1a031ff0-54d6-0137-4328-7fdaf82f5ff4",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956266",
+          "itemLink": "http://digitalcollections.nypl.org/items/1a031ff0-54d6-0137-4328-7fdaf82f5ff4",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "192984b0-54d6-0137-c477-0f48d3f84e4e",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/192984b0-54d6-0137-c477-0f48d3f84e4e",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956259",
+          "itemLink": "http://digitalcollections.nypl.org/items/192984b0-54d6-0137-c477-0f48d3f84e4e",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "14e1e0c0-54d6-0137-6d30-3d3ec157d657",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/14e1e0c0-54d6-0137-6d30-3d3ec157d657",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956225",
+          "itemLink": "http://digitalcollections.nypl.org/items/14e1e0c0-54d6-0137-6d30-3d3ec157d657",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "39e207d0-54d6-0137-5dc4-6b324f50db9a",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/39e207d0-54d6-0137-5dc4-6b324f50db9a",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956527",
+          "itemLink": "http://digitalcollections.nypl.org/items/39e207d0-54d6-0137-5dc4-6b324f50db9a",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2f71f810-54d6-0137-f127-01dc9573db1d",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2f71f810-54d6-0137-f127-01dc9573db1d",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956441",
+          "itemLink": "http://digitalcollections.nypl.org/items/2f71f810-54d6-0137-f127-01dc9573db1d",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8670f350-54d6-0137-1729-2f18c0ee11a4",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8670f350-54d6-0137-1729-2f18c0ee11a4",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956861",
+          "itemLink": "http://digitalcollections.nypl.org/items/8670f350-54d6-0137-1729-2f18c0ee11a4",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1c5540a0-54d6-0137-3442-0d4434a9ae85",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1c5540a0-54d6-0137-3442-0d4434a9ae85",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956285",
+          "itemLink": "http://digitalcollections.nypl.org/items/1c5540a0-54d6-0137-3442-0d4434a9ae85",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "306ba800-54d6-0137-0e0b-1bd2a8879263",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/306ba800-54d6-0137-0e0b-1bd2a8879263",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956449",
+          "itemLink": "http://digitalcollections.nypl.org/items/306ba800-54d6-0137-0e0b-1bd2a8879263",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3b051ba0-54d6-0137-3bbc-4538defe1890",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3b051ba0-54d6-0137-3bbc-4538defe1890",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956536",
+          "itemLink": "http://digitalcollections.nypl.org/items/3b051ba0-54d6-0137-3bbc-4538defe1890",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8f061520-54d6-0137-0f64-671dbf64585e",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8f061520-54d6-0137-0f64-671dbf64585e",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956927",
+          "itemLink": "http://digitalcollections.nypl.org/items/8f061520-54d6-0137-0f64-671dbf64585e",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3b64b280-54d6-0137-fcc8-1952c36ed431",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3b64b280-54d6-0137-fcc8-1952c36ed431",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956539",
+          "itemLink": "http://digitalcollections.nypl.org/items/3b64b280-54d6-0137-fcc8-1952c36ed431",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8ee56d90-54d6-0137-34a2-754b918cc57c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8ee56d90-54d6-0137-34a2-754b918cc57c",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956926",
+          "itemLink": "http://digitalcollections.nypl.org/items/8ee56d90-54d6-0137-34a2-754b918cc57c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3b4386e0-54d6-0137-46fa-0018b944bb6c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3b4386e0-54d6-0137-46fa-0018b944bb6c",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956538",
+          "itemLink": "http://digitalcollections.nypl.org/items/3b4386e0-54d6-0137-46fa-0018b944bb6c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8ec49920-54d6-0137-3805-03d98edbd537",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8ec49920-54d6-0137-3805-03d98edbd537",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956925",
+          "itemLink": "http://digitalcollections.nypl.org/items/8ec49920-54d6-0137-3805-03d98edbd537",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "86b37700-54d6-0137-82db-1b21676d2b60",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/86b37700-54d6-0137-82db-1b21676d2b60",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956863",
+          "itemLink": "http://digitalcollections.nypl.org/items/86b37700-54d6-0137-82db-1b21676d2b60",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "942b2300-54d6-0137-a470-4b6f2bd6bae1",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/942b2300-54d6-0137-a470-4b6f2bd6bae1",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956966",
+          "itemLink": "http://digitalcollections.nypl.org/items/942b2300-54d6-0137-a470-4b6f2bd6bae1",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "940a5260-54d6-0137-d663-35d34eaf35ba",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/940a5260-54d6-0137-d663-35d34eaf35ba",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956965",
+          "itemLink": "http://digitalcollections.nypl.org/items/940a5260-54d6-0137-d663-35d34eaf35ba",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "869283b0-54d6-0137-742c-05e4b789332d",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/869283b0-54d6-0137-742c-05e4b789332d",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956862",
+          "itemLink": "http://digitalcollections.nypl.org/items/869283b0-54d6-0137-742c-05e4b789332d",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2f91e560-54d6-0137-f85f-259740b0c4fd",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2f91e560-54d6-0137-f85f-259740b0c4fd",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956442",
+          "itemLink": "http://digitalcollections.nypl.org/items/2f91e560-54d6-0137-f85f-259740b0c4fd",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2fb19ec0-54d6-0137-a89f-572a9069de23",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2fb19ec0-54d6-0137-a89f-572a9069de23",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956443",
+          "itemLink": "http://digitalcollections.nypl.org/items/2fb19ec0-54d6-0137-a89f-572a9069de23",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1cf2f2f0-54d6-0137-610c-5d21aaf8cd3a",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1cf2f2f0-54d6-0137-610c-5d21aaf8cd3a",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956290",
+          "itemLink": "http://digitalcollections.nypl.org/items/1cf2f2f0-54d6-0137-610c-5d21aaf8cd3a",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "39c2dda0-54d6-0137-dfcd-7f49852ca5bb",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/39c2dda0-54d6-0137-dfcd-7f49852ca5bb",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956526",
+          "itemLink": "http://digitalcollections.nypl.org/items/39c2dda0-54d6-0137-dfcd-7f49852ca5bb",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3a00a8e0-54d6-0137-90e3-3f7f1cc2cd6a",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3a00a8e0-54d6-0137-90e3-3f7f1cc2cd6a",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956528",
+          "itemLink": "http://digitalcollections.nypl.org/items/3a00a8e0-54d6-0137-90e3-3f7f1cc2cd6a",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6e7650b0-2f24-0138-7941-031a32f32ead",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6e7650b0-2f24-0138-7941-031a32f32ead",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956965",
+          "itemLink": "http://digitalcollections.nypl.org/items/6e7650b0-2f24-0138-7941-031a32f32ead",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d29b4ff0-2b57-0138-57ee-02b8d862bbc1",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d29b4ff0-2b57-0138-57ee-02b8d862bbc1",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956917",
+          "itemLink": "http://digitalcollections.nypl.org/items/d29b4ff0-2b57-0138-57ee-02b8d862bbc1",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3a5f8430-54d6-0137-32fc-1b834ed14497",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3a5f8430-54d6-0137-32fc-1b834ed14497",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956531",
+          "itemLink": "http://digitalcollections.nypl.org/items/3a5f8430-54d6-0137-32fc-1b834ed14497",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "304c5030-54d6-0137-2223-637f46504584",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/304c5030-54d6-0137-2223-637f46504584",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956448",
+          "itemLink": "http://digitalcollections.nypl.org/items/304c5030-54d6-0137-2223-637f46504584",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "875805e0-54d6-0137-8096-0b235a3e951c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/875805e0-54d6-0137-8096-0b235a3e951c",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956868",
+          "itemLink": "http://digitalcollections.nypl.org/items/875805e0-54d6-0137-8096-0b235a3e951c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "87374ea0-54d6-0137-c2cf-0ab4414d7828",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/87374ea0-54d6-0137-c2cf-0ab4414d7828",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956867",
+          "itemLink": "http://digitalcollections.nypl.org/items/87374ea0-54d6-0137-c2cf-0ab4414d7828",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8e415810-54d6-0137-2f4e-4b4eec6a5833",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8e415810-54d6-0137-2f4e-4b4eec6a5833",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956921",
+          "itemLink": "http://digitalcollections.nypl.org/items/8e415810-54d6-0137-2f4e-4b4eec6a5833",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3ac78850-54d6-0137-8014-039963576fd5",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3ac78850-54d6-0137-8014-039963576fd5",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956534",
+          "itemLink": "http://digitalcollections.nypl.org/items/3ac78850-54d6-0137-8014-039963576fd5",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "94d7fe20-54d6-0137-522f-092d5fdd8ad8",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/94d7fe20-54d6-0137-522f-092d5fdd8ad8",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956971",
+          "itemLink": "http://digitalcollections.nypl.org/items/94d7fe20-54d6-0137-522f-092d5fdd8ad8",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "94b6a190-54d6-0137-9985-1d82502a9017",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/94b6a190-54d6-0137-9985-1d82502a9017",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956970",
+          "itemLink": "http://digitalcollections.nypl.org/items/94b6a190-54d6-0137-9985-1d82502a9017",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3a3f3e70-54d6-0137-b240-01b45730989c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3a3f3e70-54d6-0137-b240-01b45730989c",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956530",
+          "itemLink": "http://digitalcollections.nypl.org/items/3a3f3e70-54d6-0137-b240-01b45730989c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3a2095f0-54d6-0137-37c8-21abbaf4ab55",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3a2095f0-54d6-0137-37c8-21abbaf4ab55",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956529",
+          "itemLink": "http://digitalcollections.nypl.org/items/3a2095f0-54d6-0137-37c8-21abbaf4ab55",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3a89cd40-54d6-0137-eccb-75a8d6bd7835",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3a89cd40-54d6-0137-eccb-75a8d6bd7835",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956532",
+          "itemLink": "http://digitalcollections.nypl.org/items/3a89cd40-54d6-0137-eccb-75a8d6bd7835",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "300df1e0-54d6-0137-0d02-0e955f79573b",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/300df1e0-54d6-0137-0d02-0e955f79573b",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956446",
+          "itemLink": "http://digitalcollections.nypl.org/items/300df1e0-54d6-0137-0d02-0e955f79573b",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8dff6ed0-54d6-0137-d5d2-4f569d8ccd43",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8dff6ed0-54d6-0137-d5d2-4f569d8ccd43",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956919",
+          "itemLink": "http://digitalcollections.nypl.org/items/8dff6ed0-54d6-0137-d5d2-4f569d8ccd43",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "302d42c0-54d6-0137-cada-0732f97a8f29",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/302d42c0-54d6-0137-cada-0732f97a8f29",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956447",
+          "itemLink": "http://digitalcollections.nypl.org/items/302d42c0-54d6-0137-cada-0732f97a8f29",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8715aff0-54d6-0137-cfd7-6f98877a1fde",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8715aff0-54d6-0137-cfd7-6f98877a1fde",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956866",
+          "itemLink": "http://digitalcollections.nypl.org/items/8715aff0-54d6-0137-cfd7-6f98877a1fde",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "94945180-54d6-0137-2e0c-0376de896480",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/94945180-54d6-0137-2e0c-0376de896480",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956969",
+          "itemLink": "http://digitalcollections.nypl.org/items/94945180-54d6-0137-2e0c-0376de896480",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3aa8f980-54d6-0137-593a-07be17d8fae4",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3aa8f980-54d6-0137-593a-07be17d8fae4",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956533",
+          "itemLink": "http://digitalcollections.nypl.org/items/3aa8f980-54d6-0137-593a-07be17d8fae4",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8e201e40-54d6-0137-5d41-5bf046c9d88a",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8e201e40-54d6-0137-5d41-5bf046c9d88a",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956920",
+          "itemLink": "http://digitalcollections.nypl.org/items/8e201e40-54d6-0137-5d41-5bf046c9d88a",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3ae64420-54d6-0137-c779-132893ef6bff",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3ae64420-54d6-0137-c779-132893ef6bff",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956535",
+          "itemLink": "http://digitalcollections.nypl.org/items/3ae64420-54d6-0137-c779-132893ef6bff",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8db9dec0-54d6-0137-bf92-51e0a13627e9",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8db9dec0-54d6-0137-bf92-51e0a13627e9",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956917",
+          "itemLink": "http://digitalcollections.nypl.org/items/8db9dec0-54d6-0137-bf92-51e0a13627e9",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2f52a340-54d6-0137-5496-4fb5e092a28a",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2f52a340-54d6-0137-5496-4fb5e092a28a",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956440",
+          "itemLink": "http://digitalcollections.nypl.org/items/2f52a340-54d6-0137-5496-4fb5e092a28a",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "308a7a50-54d6-0137-fc14-67d0c47d288d",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/308a7a50-54d6-0137-fc14-67d0c47d288d",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956450",
+          "itemLink": "http://digitalcollections.nypl.org/items/308a7a50-54d6-0137-fc14-67d0c47d288d",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8ea3e5b0-54d6-0137-7816-77416f456969",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8ea3e5b0-54d6-0137-7816-77416f456969",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956924",
+          "itemLink": "http://digitalcollections.nypl.org/items/8ea3e5b0-54d6-0137-7816-77416f456969",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8e621040-54d6-0137-8cca-4db0ea9b8f4d",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8e621040-54d6-0137-8cca-4db0ea9b8f4d",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956922",
+          "itemLink": "http://digitalcollections.nypl.org/items/8e621040-54d6-0137-8cca-4db0ea9b8f4d",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8e82eae0-54d6-0137-9c7d-172d41d8e091",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8e82eae0-54d6-0137-9c7d-172d41d8e091",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956923",
+          "itemLink": "http://digitalcollections.nypl.org/items/8e82eae0-54d6-0137-9c7d-172d41d8e091",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "94fa6f00-54d6-0137-a942-061d758ea34c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/94fa6f00-54d6-0137-a942-061d758ea34c",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956972",
+          "itemLink": "http://digitalcollections.nypl.org/items/94fa6f00-54d6-0137-a942-061d758ea34c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a558dcf0-5af0-0137-6cb5-13a1a51387fa",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a558dcf0-5af0-0137-6cb5-13a1a51387fa",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955180",
+          "itemLink": "http://digitalcollections.nypl.org/items/a558dcf0-5af0-0137-6cb5-13a1a51387fa",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c081c570-5af0-0137-8b9a-55ed439f1572",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c081c570-5af0-0137-8b9a-55ed439f1572",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955387",
+          "itemLink": "http://digitalcollections.nypl.org/items/c081c570-5af0-0137-8b9a-55ed439f1572",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a42c8af0-5af0-0137-8b61-71a83b46b114",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a42c8af0-5af0-0137-8b61-71a83b46b114",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955171",
+          "itemLink": "http://digitalcollections.nypl.org/items/a42c8af0-5af0-0137-8b61-71a83b46b114",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a537ad70-5af0-0137-c287-0390745f9388",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a537ad70-5af0-0137-c287-0390745f9388",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955179",
+          "itemLink": "http://digitalcollections.nypl.org/items/a537ad70-5af0-0137-c287-0390745f9388",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b2ee84d0-5af0-0137-4183-5bcc8cd9d110",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b2ee84d0-5af0-0137-4183-5bcc8cd9d110",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955284",
+          "itemLink": "http://digitalcollections.nypl.org/items/b2ee84d0-5af0-0137-4183-5bcc8cd9d110",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b31043d0-5af0-0137-5d3f-419d31446594",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b31043d0-5af0-0137-5d3f-419d31446594",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955285",
+          "itemLink": "http://digitalcollections.nypl.org/items/b31043d0-5af0-0137-5d3f-419d31446594",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a5bd23c0-5af0-0137-b3a1-5dcbc49b7455",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a5bd23c0-5af0-0137-b3a1-5dcbc49b7455",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955183",
+          "itemLink": "http://digitalcollections.nypl.org/items/a5bd23c0-5af0-0137-b3a1-5dcbc49b7455",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b2cd9950-5af0-0137-1f08-5f7050df72d7",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b2cd9950-5af0-0137-1f08-5f7050df72d7",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955283",
+          "itemLink": "http://digitalcollections.nypl.org/items/b2cd9950-5af0-0137-1f08-5f7050df72d7",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a4f4c210-5af0-0137-df45-2ba1e498c693",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a4f4c210-5af0-0137-df45-2ba1e498c693",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955177",
+          "itemLink": "http://digitalcollections.nypl.org/items/a4f4c210-5af0-0137-df45-2ba1e498c693",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a51602e0-5af0-0137-256c-0136aabf9836",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a51602e0-5af0-0137-256c-0136aabf9836",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955178",
+          "itemLink": "http://digitalcollections.nypl.org/items/a51602e0-5af0-0137-256c-0136aabf9836",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0e070940-9f23-0137-0799-33c09b26ab76",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0e070940-9f23-0137-0799-33c09b26ab76",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955387",
+          "itemLink": "http://digitalcollections.nypl.org/items/0e070940-9f23-0137-0799-33c09b26ab76",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a6c93fc0-5af0-0137-5480-4392901b11a9",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a6c93fc0-5af0-0137-5480-4392901b11a9",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955191",
+          "itemLink": "http://digitalcollections.nypl.org/items/a6c93fc0-5af0-0137-5480-4392901b11a9",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bc15a580-5af0-0137-8eb6-3bddb26a8ee8",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bc15a580-5af0-0137-8eb6-3bddb26a8ee8",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955354",
+          "itemLink": "http://digitalcollections.nypl.org/items/bc15a580-5af0-0137-8eb6-3bddb26a8ee8",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bbf442c0-5af0-0137-bcb7-5579b01ec394",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bbf442c0-5af0-0137-bcb7-5579b01ec394",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955353",
+          "itemLink": "http://digitalcollections.nypl.org/items/bbf442c0-5af0-0137-bcb7-5579b01ec394",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dce17e10-5af0-0137-eb68-6dd24497a1d8",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dce17e10-5af0-0137-eb68-6dd24497a1d8",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955604",
+          "itemLink": "http://digitalcollections.nypl.org/items/dce17e10-5af0-0137-eb68-6dd24497a1d8",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "12bfdfb0-5af1-0137-50e8-6581db46f14f",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/12bfdfb0-5af1-0137-50e8-6581db46f14f",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955655",
+          "itemLink": "http://digitalcollections.nypl.org/items/12bfdfb0-5af1-0137-50e8-6581db46f14f",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c1b08640-5af0-0137-2b67-7b2eb2691b9d",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c1b08640-5af0-0137-2b67-7b2eb2691b9d",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955396",
+          "itemLink": "http://digitalcollections.nypl.org/items/c1b08640-5af0-0137-2b67-7b2eb2691b9d",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a6a77fd0-5af0-0137-214e-41a5ee79e5b3",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a6a77fd0-5af0-0137-214e-41a5ee79e5b3",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955190",
+          "itemLink": "http://digitalcollections.nypl.org/items/a6a77fd0-5af0-0137-214e-41a5ee79e5b3",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "129e8af0-5af1-0137-3f4b-02d64040de75",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/129e8af0-5af1-0137-3f4b-02d64040de75",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955654",
+          "itemLink": "http://digitalcollections.nypl.org/items/129e8af0-5af1-0137-3f4b-02d64040de75",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dd02f6e0-5af0-0137-ca3f-069bec1d5bd7",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dd02f6e0-5af0-0137-ca3f-069bec1d5bd7",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955605",
+          "itemLink": "http://digitalcollections.nypl.org/items/dd02f6e0-5af0-0137-ca3f-069bec1d5bd7",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b41ae4a0-5af0-0137-ecae-15eccaa0a5d6",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b41ae4a0-5af0-0137-ecae-15eccaa0a5d6",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955293",
+          "itemLink": "http://digitalcollections.nypl.org/items/b41ae4a0-5af0-0137-ecae-15eccaa0a5d6",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b43d0190-5af0-0137-82d6-0c7bc9a3c6ee",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b43d0190-5af0-0137-82d6-0c7bc9a3c6ee",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955294",
+          "itemLink": "http://digitalcollections.nypl.org/items/b43d0190-5af0-0137-82d6-0c7bc9a3c6ee",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1aa78ad0-a002-0137-2cac-001152845b43",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1aa78ad0-a002-0137-2cac-001152845b43",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57956019",
+          "itemLink": "http://digitalcollections.nypl.org/items/1aa78ad0-a002-0137-2cac-001152845b43",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1347d5c0-5af1-0137-d2e0-0d5be3f748cb",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1347d5c0-5af1-0137-d2e0-0d5be3f748cb",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955659",
+          "itemLink": "http://digitalcollections.nypl.org/items/1347d5c0-5af1-0137-d2e0-0d5be3f748cb",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a74eba10-5af0-0137-27d0-3b18a1fe9a57",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a74eba10-5af0-0137-27d0-3b18a1fe9a57",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955195",
+          "itemLink": "http://digitalcollections.nypl.org/items/a74eba10-5af0-0137-27d0-3b18a1fe9a57",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bcbc7ef0-5af0-0137-986f-297efc2e5ae0",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bcbc7ef0-5af0-0137-986f-297efc2e5ae0",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955359",
+          "itemLink": "http://digitalcollections.nypl.org/items/bcbc7ef0-5af0-0137-986f-297efc2e5ae0",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bc9b68f0-5af0-0137-481d-79f2523ae2c5",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bc9b68f0-5af0-0137-481d-79f2523ae2c5",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955358",
+          "itemLink": "http://digitalcollections.nypl.org/items/bc9b68f0-5af0-0137-481d-79f2523ae2c5",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dda91c70-5af0-0137-3819-009ce679069b",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dda91c70-5af0-0137-3819-009ce679069b",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955610",
+          "itemLink": "http://digitalcollections.nypl.org/items/dda91c70-5af0-0137-3819-009ce679069b",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b4c49ff0-5af0-0137-51a3-0b5a5af6db5f",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b4c49ff0-5af0-0137-51a3-0b5a5af6db5f",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955298",
+          "itemLink": "http://digitalcollections.nypl.org/items/b4c49ff0-5af0-0137-51a3-0b5a5af6db5f",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b4e61290-5af0-0137-d691-0f3bc26d62c2",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b4e61290-5af0-0137-d691-0f3bc26d62c2",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955299",
+          "itemLink": "http://digitalcollections.nypl.org/items/b4e61290-5af0-0137-d691-0f3bc26d62c2",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4590db60-9f23-0137-a68e-33655e8b2eb2",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4590db60-9f23-0137-a68e-33655e8b2eb2",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955763",
+          "itemLink": "http://digitalcollections.nypl.org/items/4590db60-9f23-0137-a68e-33655e8b2eb2",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c25ed0e0-5af0-0137-be66-27fd1137cd25",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c25ed0e0-5af0-0137-be66-27fd1137cd25",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955401",
+          "itemLink": "http://digitalcollections.nypl.org/items/c25ed0e0-5af0-0137-be66-27fd1137cd25",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "13227dd0-5af1-0137-97af-111685f671b5",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/13227dd0-5af1-0137-97af-111685f671b5",
+          "title": "Motion picture record",
+          "typeOfResource": "text",
+          "imageID": "57955658",
+          "itemLink": "http://digitalcollections.nypl.org/items/13227dd0-5af1-0137-97af-111685f671b5",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}

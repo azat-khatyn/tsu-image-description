@@ -1,0 +1,1021 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "genre",
+      "search_text": "greeting card",
+      "perPage": "100",
+      "page": "5",
+      "totalPages": "1744"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "174365",
+      "result": [
+        {
+          "uuid": "788b8f80-c5c5-012f-46c2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/788b8f80-c5c5-012f-46c2-58d385a7bc34",
+          "title": "[A Christmas card and mince pie with excerpts from Shakespeare; depicting spices, plants, drinking and cooking ware, four girls holding hands, flowers.]",
+          "typeOfResource": "still image",
+          "imageID": "486350",
+          "itemLink": "http://digitalcollections.nypl.org/items/788b8f80-c5c5-012f-46c2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "78e1ff40-c5c5-012f-b7fe-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/78e1ff40-c5c5-012f-b7fe-58d385a7bc34",
+          "title": "Birthday, Christmas, Easter and Valentine cards depicting a child peering through a door and window, flowers, butterflies, river landscapes.",
+          "typeOfResource": "still image",
+          "imageID": "486351",
+          "itemLink": "http://digitalcollections.nypl.org/items/78e1ff40-c5c5-012f-b7fe-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7b5315a0-c5c5-012f-e40f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7b5315a0-c5c5-012f-e40f-58d385a7bc34",
+          "title": "Christmas cards depicting letters, hearts, dolls, flowers and holly.",
+          "typeOfResource": "still image",
+          "imageID": "486359",
+          "itemLink": "http://digitalcollections.nypl.org/items/7b5315a0-c5c5-012f-e40f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7266b4c0-c5c5-012f-6a3d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7266b4c0-c5c5-012f-6a3d-58d385a7bc34",
+          "title": "Christmas cards depicting a brother and sister praying, gathering wood, trimming the tree and sitting at the fireplace",
+          "typeOfResource": "still image",
+          "imageID": "486330",
+          "itemLink": "http://digitalcollections.nypl.org/items/7266b4c0-c5c5-012f-6a3d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7ba79d50-c5c5-012f-7ae9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7ba79d50-c5c5-012f-7ae9-58d385a7bc34",
+          "title": "Birthday and Easter cards depicting flowers, butterflies, girls and lambs.",
+          "typeOfResource": "still image",
+          "imageID": "486360",
+          "itemLink": "http://digitalcollections.nypl.org/items/7ba79d50-c5c5-012f-7ae9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6317a980-c5c5-012f-f9aa-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6317a980-c5c5-012f-f9aa-58d385a7bc34",
+          "title": "Easter cards depicting flowers; Christmas cards depicting snow-covered landscapes with windmills, people, dogs, and cattle.",
+          "typeOfResource": "still image",
+          "imageID": "486213",
+          "itemLink": "http://digitalcollections.nypl.org/items/6317a980-c5c5-012f-f9aa-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "63585080-c5c5-012f-a810-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/63585080-c5c5-012f-a810-58d385a7bc34",
+          "title": "Easter cards depicting flowers and butterflies.",
+          "typeOfResource": "still image",
+          "imageID": "486214",
+          "itemLink": "http://digitalcollections.nypl.org/items/63585080-c5c5-012f-a810-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "63ee2590-c5c5-012f-a907-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/63ee2590-c5c5-012f-a907-58d385a7bc34",
+          "title": "Prang's Valentines : Hearts are Trumps!",
+          "typeOfResource": "still image",
+          "imageID": "486216",
+          "itemLink": "http://digitalcollections.nypl.org/items/63ee2590-c5c5-012f-a907-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6513cf70-c5c5-012f-b269-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6513cf70-c5c5-012f-b269-58d385a7bc34",
+          "title": "Christmas cards depicting the sun, landscapes, and plant forms.",
+          "typeOfResource": "still image",
+          "imageID": "486220",
+          "itemLink": "http://digitalcollections.nypl.org/items/6513cf70-c5c5-012f-b269-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "647e3580-c5c5-012f-1a4b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/647e3580-c5c5-012f-1a4b-58d385a7bc34",
+          "title": "Christmas cards depicting birds and rabbits, singing, dancing, and playing music; cards with flowers.",
+          "typeOfResource": "still image",
+          "imageID": "486218",
+          "itemLink": "http://digitalcollections.nypl.org/items/647e3580-c5c5-012f-1a4b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6441aaa0-c5c5-012f-96f0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6441aaa0-c5c5-012f-96f0-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting birds in trees, young girls, and rabbits acting like humans.",
+          "typeOfResource": "still image",
+          "imageID": "486217",
+          "itemLink": "http://digitalcollections.nypl.org/items/6441aaa0-c5c5-012f-96f0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "664f8730-c5c5-012f-37f1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/664f8730-c5c5-012f-37f1-58d385a7bc34",
+          "title": "Christmas cards depicting owls, foxes, rabbits, and squirrels in the snow, child in bed; Prang's Standard Stationery : German Antique Parchment.",
+          "typeOfResource": "still image",
+          "imageID": "486224",
+          "itemLink": "http://digitalcollections.nypl.org/items/664f8730-c5c5-012f-37f1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "66e86070-c5c5-012f-6c76-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/66e86070-c5c5-012f-6c76-58d385a7bc34",
+          "title": "Christmas cards depicting flowers, leaves, butterflies, paper, and seal with man's profile.",
+          "typeOfResource": "still image",
+          "imageID": "486226",
+          "itemLink": "http://digitalcollections.nypl.org/items/66e86070-c5c5-012f-6c76-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6936beb0-c5c5-012f-8bfa-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6936beb0-c5c5-012f-8bfa-58d385a7bc34",
+          "title": "Christmas cards depicting young girls, dolls, snow, umbrellas, a bed and a fireplace.",
+          "typeOfResource": "still image",
+          "imageID": "486300",
+          "itemLink": "http://digitalcollections.nypl.org/items/6936beb0-c5c5-012f-8bfa-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "68f556f0-c5c5-012f-7c97-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/68f556f0-c5c5-012f-7c97-58d385a7bc34",
+          "title": "Christmas cards depicting plants, landscapes, flowers and trees.",
+          "typeOfResource": "still image",
+          "imageID": "486299",
+          "itemLink": "http://digitalcollections.nypl.org/items/68f556f0-c5c5-012f-7c97-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "601e7db0-c5c5-012f-9508-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/601e7db0-c5c5-012f-9508-58d385a7bc34",
+          "title": "Easter cards depicting children with birds, birdhouse, and flowers.",
+          "typeOfResource": "still image",
+          "imageID": "486203",
+          "itemLink": "http://digitalcollections.nypl.org/items/601e7db0-c5c5-012f-9508-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "88497760-c5c5-012f-6292-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/88497760-c5c5-012f-6292-58d385a7bc34",
+          "title": "Birthday, Christmas, and Valentine cards depicting characters from nursery rhymes : Queen of Hearts, Little Johnny Horner, girl with leaves and shells.",
+          "typeOfResource": "still image",
+          "imageID": "487191",
+          "itemLink": "http://digitalcollections.nypl.org/items/88497760-c5c5-012f-6292-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8f662810-c5c5-012f-3abe-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8f662810-c5c5-012f-3abe-58d385a7bc34",
+          "title": "Flora; Rosa [Valentines and Christmas cards depicting young girls surrounded by flowery bushes.]",
+          "typeOfResource": "still image",
+          "imageID": "487214",
+          "itemLink": "http://digitalcollections.nypl.org/items/8f662810-c5c5-012f-3abe-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8f13d220-c5c5-012f-54a6-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8f13d220-c5c5-012f-54a6-58d385a7bc34",
+          "title": "Christmas cards depicting portraits of babies.",
+          "typeOfResource": "still image",
+          "imageID": "487213",
+          "itemLink": "http://digitalcollections.nypl.org/items/8f13d220-c5c5-012f-54a6-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "90a282c0-c5c5-012f-f7cc-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/90a282c0-c5c5-012f-f7cc-58d385a7bc34",
+          "title": "Kitty; Peachblow; Beryl; and Pet. [Christmas cards depicting young girls with cats, birds, flowers, and hats.]",
+          "typeOfResource": "still image",
+          "imageID": "487218",
+          "itemLink": "http://digitalcollections.nypl.org/items/90a282c0-c5c5-012f-f7cc-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "962ec2f0-c5c5-012f-1e35-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/962ec2f0-c5c5-012f-1e35-58d385a7bc34",
+          "title": "Christmas cards depicting young girls with flower garland, birds, and musical notation.",
+          "typeOfResource": "still image",
+          "imageID": "487236",
+          "itemLink": "http://digitalcollections.nypl.org/items/962ec2f0-c5c5-012f-1e35-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ad55d6b0-c5c5-012f-ee47-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ad55d6b0-c5c5-012f-ee47-58d385a7bc34",
+          "title": "Cherokee Roses, White Roses. [Easter and Christmas cards depicting flowers.]",
+          "typeOfResource": "still image",
+          "imageID": "487312",
+          "itemLink": "http://digitalcollections.nypl.org/items/ad55d6b0-c5c5-012f-ee47-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ae27d5c0-c5c5-012f-25f9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ae27d5c0-c5c5-012f-25f9-58d385a7bc34",
+          "title": "Christmas cards depicting oceanside town, with sailboats, rocky beaches, piers, houses, trees, men, women, and children.",
+          "typeOfResource": "still image",
+          "imageID": "487315",
+          "itemLink": "http://digitalcollections.nypl.org/items/ae27d5c0-c5c5-012f-25f9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "af0f42a0-c5c5-012f-81ea-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/af0f42a0-c5c5-012f-81ea-58d385a7bc34",
+          "title": "Christmas cards depicting girls with holly and mistletoe.",
+          "typeOfResource": "still image",
+          "imageID": "487318",
+          "itemLink": "http://digitalcollections.nypl.org/items/af0f42a0-c5c5-012f-81ea-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a858d5b0-c5c5-012f-6aea-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a858d5b0-c5c5-012f-6aea-58d385a7bc34",
+          "title": "Easter cards depicting Calla Lily and England Violets; Calla Lily and Pansies.",
+          "typeOfResource": "still image",
+          "imageID": "487296",
+          "itemLink": "http://digitalcollections.nypl.org/items/a858d5b0-c5c5-012f-6aea-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a91e7ec0-c5c5-012f-a037-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a91e7ec0-c5c5-012f-a037-58d385a7bc34",
+          "title": "Easter cards depicting flowers with musical notation.",
+          "typeOfResource": "still image",
+          "imageID": "487299",
+          "itemLink": "http://digitalcollections.nypl.org/items/a91e7ec0-c5c5-012f-a037-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "aa58e180-c5c5-012f-e461-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/aa58e180-c5c5-012f-e461-58d385a7bc34",
+          "title": "Easter cards depicting girl decorating her home with flowers, woman on rocking chair, flowers.",
+          "typeOfResource": "still image",
+          "imageID": "487303",
+          "itemLink": "http://digitalcollections.nypl.org/items/aa58e180-c5c5-012f-e461-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b2c6af70-c5c5-012f-9f6f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b2c6af70-c5c5-012f-9f6f-58d385a7bc34",
+          "title": "Christmas cards depicting portraits of two blonde girls.",
+          "typeOfResource": "still image",
+          "imageID": "487753",
+          "itemLink": "http://digitalcollections.nypl.org/items/b2c6af70-c5c5-012f-9f6f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b0a476a0-c5c5-012f-4104-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b0a476a0-c5c5-012f-4104-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting cats, books, mice, bowls of milk, birds, butterflies, fish, pussy willow, catnip, and cattails.",
+          "typeOfResource": "still image",
+          "imageID": "487746",
+          "itemLink": "http://digitalcollections.nypl.org/items/b0a476a0-c5c5-012f-4104-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b5f17520-c5c5-012f-226c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b5f17520-c5c5-012f-226c-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting women, snapdragons, pansies, roses, carnations and violets.",
+          "typeOfResource": "still image",
+          "imageID": "487761",
+          "itemLink": "http://digitalcollections.nypl.org/items/b5f17520-c5c5-012f-226c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b639be90-c5c5-012f-76d0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b639be90-c5c5-012f-76d0-58d385a7bc34",
+          "title": "Two Christmas cards entitled 'carnations #2' and 'jacqueminot roses #3.'",
+          "typeOfResource": "still image",
+          "imageID": "487762",
+          "itemLink": "http://digitalcollections.nypl.org/items/b639be90-c5c5-012f-76d0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a80dc300-c5c5-012f-21d0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a80dc300-c5c5-012f-21d0-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting flowers.",
+          "typeOfResource": "still image",
+          "imageID": "487295",
+          "itemLink": "http://digitalcollections.nypl.org/items/a80dc300-c5c5-012f-21d0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a972f130-c5c5-012f-a53e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a972f130-c5c5-012f-a53e-58d385a7bc34",
+          "title": "Easter cards depicting young girls with flowers in grassy fields; girl reclining on sofa.",
+          "typeOfResource": "still image",
+          "imageID": "487300",
+          "itemLink": "http://digitalcollections.nypl.org/items/a972f130-c5c5-012f-a53e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "9dec3360-c5c5-012f-cf5f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9dec3360-c5c5-012f-cf5f-58d385a7bc34",
+          "title": "Christmas cards depicting rebus puzzle greetings. Easter cards depicting flowers and crosses.",
+          "typeOfResource": "still image",
+          "imageID": "487261",
+          "itemLink": "http://digitalcollections.nypl.org/items/9dec3360-c5c5-012f-cf5f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c02ffd10-c5c4-012f-52f4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c02ffd10-c5c4-012f-52f4-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting birds, fish, trees, and flowers.",
+          "typeOfResource": "still image",
+          "imageID": "482511",
+          "itemLink": "http://digitalcollections.nypl.org/items/c02ffd10-c5c4-012f-52f4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c11478a0-c5c4-012f-920c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c11478a0-c5c4-012f-920c-58d385a7bc34",
+          "title": "Christmas cards depicting winter scenes ; baby Jesus.",
+          "typeOfResource": "still image",
+          "imageID": "482514",
+          "itemLink": "http://digitalcollections.nypl.org/items/c11478a0-c5c4-012f-920c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c3c4e780-c5c4-012f-dbd3-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c3c4e780-c5c4-012f-dbd3-58d385a7bc34",
+          "title": "Christmas cards with decorative flowers and designs, with children, and an angel.",
+          "typeOfResource": "still image",
+          "imageID": "482523",
+          "itemLink": "http://digitalcollections.nypl.org/items/c3c4e780-c5c4-012f-dbd3-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c99a9980-c5c4-012f-7ef7-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c99a9980-c5c4-012f-7ef7-58d385a7bc34",
+          "title": "Birthday cards with decorative ornamentation, depicting flowers and blueberries.",
+          "typeOfResource": "still image",
+          "imageID": "483096",
+          "itemLink": "http://digitalcollections.nypl.org/items/c99a9980-c5c4-012f-7ef7-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cb8128c0-c5c4-012f-1060-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cb8128c0-c5c4-012f-1060-58d385a7bc34",
+          "title": "Easter cards depicting chicks, birds, feathers and an ornamental plant design.",
+          "typeOfResource": "still image",
+          "imageID": "483103",
+          "itemLink": "http://digitalcollections.nypl.org/items/cb8128c0-c5c4-012f-1060-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cb49d680-c5c4-012f-723f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cb49d680-c5c4-012f-723f-58d385a7bc34",
+          "title": "Birthday and Valentine cards depicting flowers, angels and butterflies.",
+          "typeOfResource": "still image",
+          "imageID": "483102",
+          "itemLink": "http://digitalcollections.nypl.org/items/cb49d680-c5c4-012f-723f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c2dfb440-c5c4-012f-8e90-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c2dfb440-c5c4-012f-8e90-58d385a7bc34",
+          "title": "Christmas cards depicting woman ice-skating, and decorative flowers.",
+          "typeOfResource": "still image",
+          "imageID": "482520",
+          "itemLink": "http://digitalcollections.nypl.org/items/c2dfb440-c5c4-012f-8e90-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c9d81940-c5c4-012f-0014-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c9d81940-c5c4-012f-0014-58d385a7bc34",
+          "title": "Easter cards with decorative ornamentation, depicting flowers, butterflies and eggs.",
+          "typeOfResource": "still image",
+          "imageID": "483097",
+          "itemLink": "http://digitalcollections.nypl.org/items/c9d81940-c5c4-012f-0014-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cc124840-c5c4-012f-a5a7-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cc124840-c5c4-012f-a5a7-58d385a7bc34",
+          "title": "Birthday cards with decorative borders, depicting flowers and a bird",
+          "typeOfResource": "still image",
+          "imageID": "483105",
+          "itemLink": "http://digitalcollections.nypl.org/items/cc124840-c5c4-012f-a5a7-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cabcf5b0-c5c4-012f-4e84-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cabcf5b0-c5c4-012f-4e84-58d385a7bc34",
+          "title": "Birthday, Easter, Christmas, and New Year cards with decorative ornamentation, depicting flowers, trees and berries.",
+          "typeOfResource": "still image",
+          "imageID": "483100",
+          "itemLink": "http://digitalcollections.nypl.org/items/cabcf5b0-c5c4-012f-4e84-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "fe5af490-c5c4-012f-2817-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/fe5af490-c5c4-012f-2817-58d385a7bc34",
+          "title": "Christmas cards depicting children with their father; 'Christmas Bells' by Henry Wadsworth Longfellow.",
+          "typeOfResource": "still image",
+          "imageID": "484003",
+          "itemLink": "http://digitalcollections.nypl.org/items/fe5af490-c5c4-012f-2817-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cd6e2da0-c5c4-012f-9d2c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cd6e2da0-c5c4-012f-9d2c-58d385a7bc34",
+          "title": "Easter cards with religious text and depictions of flowers.",
+          "typeOfResource": "still image",
+          "imageID": "483110",
+          "itemLink": "http://digitalcollections.nypl.org/items/cd6e2da0-c5c4-012f-9d2c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cd25de20-c5c4-012f-ca29-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cd25de20-c5c4-012f-ca29-58d385a7bc34",
+          "title": "Easter cards depicting plants, butterflies and flowers.",
+          "typeOfResource": "still image",
+          "imageID": "483109",
+          "itemLink": "http://digitalcollections.nypl.org/items/cd25de20-c5c4-012f-ca29-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cda63e30-c5c4-012f-f0a4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cda63e30-c5c4-012f-f0a4-58d385a7bc34",
+          "title": "Easter cards with ornamental designs and flowers.",
+          "typeOfResource": "still image",
+          "imageID": "483111",
+          "itemLink": "http://digitalcollections.nypl.org/items/cda63e30-c5c4-012f-f0a4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cdee7f30-c5c4-012f-cc83-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cdee7f30-c5c4-012f-cc83-58d385a7bc34",
+          "title": "Easter cards with ornamental decoration, depicting children, eggs, plants and a dove.",
+          "typeOfResource": "still image",
+          "imageID": "483112",
+          "itemLink": "http://digitalcollections.nypl.org/items/cdee7f30-c5c4-012f-cc83-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ce2b26b0-c5c4-012f-9044-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ce2b26b0-c5c4-012f-9044-58d385a7bc34",
+          "title": "Easter cards with ornamental decoration, depicting women, flowers, doves and birds.",
+          "typeOfResource": "still image",
+          "imageID": "483113",
+          "itemLink": "http://digitalcollections.nypl.org/items/ce2b26b0-c5c4-012f-9044-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cec5a400-c5c4-012f-55f0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cec5a400-c5c4-012f-55f0-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting nests, plants, bells, children, carollers and holly.",
+          "typeOfResource": "still image",
+          "imageID": "483115",
+          "itemLink": "http://digitalcollections.nypl.org/items/cec5a400-c5c4-012f-55f0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d0beb230-c5c4-012f-b68e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d0beb230-c5c4-012f-b68e-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting mallard ducks, crosses, a decorative pattern and botanical illustrations.",
+          "typeOfResource": "still image",
+          "imageID": "483121",
+          "itemLink": "http://digitalcollections.nypl.org/items/d0beb230-c5c4-012f-b68e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d27636f0-c5c4-012f-6f5c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d27636f0-c5c4-012f-6f5c-58d385a7bc34",
+          "title": "Birthday, Christmas and New Year cards depicting the Goddess of Fortune, clovers, steering wheels, elves, a bell and decorative ornamentation.",
+          "typeOfResource": "still image",
+          "imageID": "483127",
+          "itemLink": "http://digitalcollections.nypl.org/items/d27636f0-c5c4-012f-6f5c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d35638a0-c5c4-012f-a6c4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d35638a0-c5c4-012f-a6c4-58d385a7bc34",
+          "title": "Christmas and Thanksgiving cards depicting fruit, birds, trees and decorative design.",
+          "typeOfResource": "still image",
+          "imageID": "483130",
+          "itemLink": "http://digitalcollections.nypl.org/items/d35638a0-c5c4-012f-a6c4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d45f54f0-c5c4-012f-1bc4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d45f54f0-c5c4-012f-1bc4-58d385a7bc34",
+          "title": "A prize card with decorative design elements",
+          "typeOfResource": "still image",
+          "imageID": "483134",
+          "itemLink": "http://digitalcollections.nypl.org/items/d45f54f0-c5c4-012f-1bc4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ece76ca0-c5c4-012f-0093-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ece76ca0-c5c4-012f-0093-58d385a7bc34",
+          "title": "Thanksgiving cards depicting fruit on the vine; poems by Whittier.",
+          "typeOfResource": "still image",
+          "imageID": "483592",
+          "itemLink": "http://digitalcollections.nypl.org/items/ece76ca0-c5c4-012f-0093-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ee03a630-c5c4-012f-8796-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ee03a630-c5c4-012f-8796-58d385a7bc34",
+          "title": "Valentines depicting young women and botanical ornamentation.",
+          "typeOfResource": "still image",
+          "imageID": "483596",
+          "itemLink": "http://digitalcollections.nypl.org/items/ee03a630-c5c4-012f-8796-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "d36840f0-c5c5-012f-3e07-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/d36840f0-c5c5-012f-3e07-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting flowers and ribbon.",
+          "typeOfResource": "still image",
+          "imageID": "488434",
+          "itemLink": "http://digitalcollections.nypl.org/items/d36840f0-c5c5-012f-3e07-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f6e60c20-c5c5-012f-9ac1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f6e60c20-c5c5-012f-9ac1-58d385a7bc34",
+          "title": "Christmas cards and 'cities of the U. S.' depicting an angel, a baby in a cradle, mother holding baby, people representing 14 American cities.",
+          "typeOfResource": "still image",
+          "imageID": "489043",
+          "itemLink": "http://digitalcollections.nypl.org/items/f6e60c20-c5c5-012f-9ac1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b29ad520-c5c4-012f-1a2d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b29ad520-c5c4-012f-1a2d-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting angels, children, and toys.",
+          "typeOfResource": "still image",
+          "imageID": "482465",
+          "itemLink": "http://digitalcollections.nypl.org/items/b29ad520-c5c4-012f-1a2d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c2142e60-c5c5-012f-4170-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c2142e60-c5c5-012f-4170-58d385a7bc34",
+          "title": "Christmas cards depicting girls with flowers, a potted plant and a letter, a jack-o'-lantern, horns, turtles, dogs, a brick fence, cats in human situations: sitting on a couch, boating, being frightened.",
+          "typeOfResource": "still image",
+          "imageID": "487801",
+          "itemLink": "http://digitalcollections.nypl.org/items/c2142e60-c5c5-012f-4170-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dc58e9c0-c5c5-012f-1a90-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dc58e9c0-c5c5-012f-1a90-58d385a7bc34",
+          "title": "Valentines, Christmas and text cards depicting girls, flowers, seasons, fruit, landscapes, houses, windmills, birds, rivers, mountains and trees.",
+          "typeOfResource": "still image",
+          "imageID": "488464",
+          "itemLink": "http://digitalcollections.nypl.org/items/dc58e9c0-c5c5-012f-1a90-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "00f86a50-c5c6-012f-0c87-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/00f86a50-c5c6-012f-0c87-58d385a7bc34",
+          "title": "Christmas cards depicting girls, fields, doll and a print entitled 'California Poppies'.",
+          "typeOfResource": "still image",
+          "imageID": "489077",
+          "itemLink": "http://digitalcollections.nypl.org/items/00f86a50-c5c6-012f-0c87-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f348cfa0-c5c5-012f-b487-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f348cfa0-c5c5-012f-b487-58d385a7bc34",
+          "title": "Valentines and Christmas cards depicting pumpkin pies, a pumpkin patch, a jack-o'-lantern, farmers, an orchard, cupids and letters.",
+          "typeOfResource": "still image",
+          "imageID": "488682",
+          "itemLink": "http://digitalcollections.nypl.org/items/f348cfa0-c5c5-012f-b487-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ff7b2020-c5c5-012f-b88f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ff7b2020-c5c5-012f-b88f-58d385a7bc34",
+          "title": "Valentines, Easter and Christmas cards depicting young women and flowers.",
+          "typeOfResource": "still image",
+          "imageID": "489072",
+          "itemLink": "http://digitalcollections.nypl.org/items/ff7b2020-c5c5-012f-b88f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "fee488e0-c5c5-012f-b4dd-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/fee488e0-c5c5-012f-b4dd-58d385a7bc34",
+          "title": "Valentines and Easter cards depicting cats, cupids, flowers, birds, pussy willow and the earth.",
+          "typeOfResource": "still image",
+          "imageID": "489070",
+          "itemLink": "http://digitalcollections.nypl.org/items/fee488e0-c5c5-012f-b4dd-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ff381b40-c5c5-012f-beb0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ff381b40-c5c5-012f-beb0-58d385a7bc34",
+          "title": "Valentines and Easter cards depicting flowers, crosses, girls, baskets, hats and a bird's nest.",
+          "typeOfResource": "still image",
+          "imageID": "489071",
+          "itemLink": "http://digitalcollections.nypl.org/items/ff381b40-c5c5-012f-beb0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "13f0b630-c5c5-012f-220a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/13f0b630-c5c5-012f-220a-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting flowers, fans, landscapes, winter and birds.",
+          "typeOfResource": "still image",
+          "imageID": "484278",
+          "itemLink": "http://digitalcollections.nypl.org/items/13f0b630-c5c5-012f-220a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "19cea800-c5c5-012f-12ca-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/19cea800-c5c5-012f-12ca-58d385a7bc34",
+          "title": "Easter cards depicting birds, flowers, eggs and the moon.",
+          "typeOfResource": "still image",
+          "imageID": "484298",
+          "itemLink": "http://digitalcollections.nypl.org/items/19cea800-c5c5-012f-12ca-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1ae3d0c0-c5c5-012f-2839-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1ae3d0c0-c5c5-012f-2839-58d385a7bc34",
+          "title": "Birthday, Christmas, New Year and Valentine cards depicting flowers and hearts.",
+          "typeOfResource": "still image",
+          "imageID": "484302",
+          "itemLink": "http://digitalcollections.nypl.org/items/1ae3d0c0-c5c5-012f-2839-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1fba8430-c5c5-012f-0b7e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1fba8430-c5c5-012f-0b7e-58d385a7bc34",
+          "title": "Christmas cards depicting birds, entitled \"The First Flight\", \"The Farewell\", \"The Visit\" and \"The Surprise\".",
+          "typeOfResource": "still image",
+          "imageID": "484319",
+          "itemLink": "http://digitalcollections.nypl.org/items/1fba8430-c5c5-012f-0b7e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "23a8a080-c5c5-012f-aa9c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/23a8a080-c5c5-012f-aa9c-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting flowers, plants, children, stars and moons.",
+          "typeOfResource": "still image",
+          "imageID": "484333",
+          "itemLink": "http://digitalcollections.nypl.org/items/23a8a080-c5c5-012f-aa9c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "256b0f10-c5c5-012f-db90-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/256b0f10-c5c5-012f-db90-58d385a7bc34",
+          "title": "Twelve Children', 'Landscapes', 'Back for 12 Children', 'Back for landscapes'. [New Year cards depicting children celebrating, birds, girl reading calendar, the four seasons.]",
+          "typeOfResource": "still image",
+          "imageID": "485189",
+          "itemLink": "http://digitalcollections.nypl.org/items/256b0f10-c5c5-012f-db90-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e3e345e0-c5c5-012f-b706-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e3e345e0-c5c5-012f-b706-58d385a7bc34",
+          "title": "Christmas cards depicting children holding a cat, Christmas stockings and a rooster toy.",
+          "typeOfResource": "still image",
+          "imageID": "488629",
+          "itemLink": "http://digitalcollections.nypl.org/items/e3e345e0-c5c5-012f-b706-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "fe99ed00-c5c5-012f-6c3e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/fe99ed00-c5c5-012f-6c3e-58d385a7bc34",
+          "title": "Valentines depicting flowers, arrows, hearts, courtship, musical notation, and serenading.",
+          "typeOfResource": "still image",
+          "imageID": "489069",
+          "itemLink": "http://digitalcollections.nypl.org/items/fe99ed00-c5c5-012f-6c3e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "24d03390-c5c5-012f-e6be-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/24d03390-c5c5-012f-e6be-58d385a7bc34",
+          "title": "Birthday, Christmas, New Year and Valentine cards depicting flowers and plant forms.",
+          "typeOfResource": "still image",
+          "imageID": "484337",
+          "itemLink": "http://digitalcollections.nypl.org/items/24d03390-c5c5-012f-e6be-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3850fb10-c5c5-012f-935e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3850fb10-c5c5-012f-935e-58d385a7bc34",
+          "title": "Christmas cards depicting cats, and animals playing in the snow with snow man, roller skates, bicycles.",
+          "typeOfResource": "still image",
+          "imageID": "485254",
+          "itemLink": "http://digitalcollections.nypl.org/items/3850fb10-c5c5-012f-935e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "37f30980-c5c5-012f-dbbf-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/37f30980-c5c5-012f-dbbf-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting flowers, and rural winter scenes.",
+          "typeOfResource": "still image",
+          "imageID": "485253",
+          "itemLink": "http://digitalcollections.nypl.org/items/37f30980-c5c5-012f-dbbf-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "47d759e0-c5c5-012f-dd7c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/47d759e0-c5c5-012f-dd7c-58d385a7bc34",
+          "title": "Birthday, calendar, Easter and Valentine cards depicting twin girls, daffodils, pansies and fields.",
+          "typeOfResource": "still image",
+          "imageID": "486113",
+          "itemLink": "http://digitalcollections.nypl.org/items/47d759e0-c5c5-012f-dd7c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4748bc60-c5c5-012f-d5bc-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4748bc60-c5c5-012f-d5bc-58d385a7bc34",
+          "title": "Easter cards depicting angels, a bell tower, flowers, butterflies, clovers, birds and decorative ornamentation.",
+          "typeOfResource": "still image",
+          "imageID": "486111",
+          "itemLink": "http://digitalcollections.nypl.org/items/4748bc60-c5c5-012f-d5bc-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4786d230-c5c5-012f-90c9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4786d230-c5c5-012f-90c9-58d385a7bc34",
+          "title": "Birthday and Easter cards depicting foliage, flowers, landscapes, birds, a squirrel, an owl and decorative ornamentation.",
+          "typeOfResource": "still image",
+          "imageID": "486112",
+          "itemLink": "http://digitalcollections.nypl.org/items/4786d230-c5c5-012f-90c9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4a378250-c5c5-012f-de7f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4a378250-c5c5-012f-de7f-58d385a7bc34",
+          "title": "Christmas, New Year and Valentine cards depicting flowers, holly and profiles of girls",
+          "typeOfResource": "still image",
+          "imageID": "486121",
+          "itemLink": "http://digitalcollections.nypl.org/items/4a378250-c5c5-012f-de7f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "52eeea80-c5c5-012f-f774-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/52eeea80-c5c5-012f-f774-58d385a7bc34",
+          "title": "The Christmas Processional [depictions of holly, berries, branches, leaves and vines].",
+          "typeOfResource": "still image",
+          "imageID": "487141",
+          "itemLink": "http://digitalcollections.nypl.org/items/52eeea80-c5c5-012f-f774-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "52a92690-c5c5-012f-a8ef-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/52a92690-c5c5-012f-a8ef-58d385a7bc34",
+          "title": "Christmas cards depicting the ocean with botanical ornamentation.",
+          "typeOfResource": "still image",
+          "imageID": "486158",
+          "itemLink": "http://digitalcollections.nypl.org/items/52a92690-c5c5-012f-a8ef-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "54204950-c5c5-012f-7d92-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/54204950-c5c5-012f-7d92-58d385a7bc34",
+          "title": "Christmas cards depicting butterflies, birds, flowers, and landscapes.",
+          "typeOfResource": "still image",
+          "imageID": "486162",
+          "itemLink": "http://digitalcollections.nypl.org/items/54204950-c5c5-012f-7d92-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "5c43ae00-c5c5-012f-f7c5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5c43ae00-c5c5-012f-f7c5-58d385a7bc34",
+          "title": "Christmas, Valentine, and Birthday cards depicting children by fireplace with Santa Claus,  flowers.",
+          "typeOfResource": "still image",
+          "imageID": "486190",
+          "itemLink": "http://digitalcollections.nypl.org/items/5c43ae00-c5c5-012f-f7c5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "31f7bfc0-c5c5-012f-0c11-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/31f7bfc0-c5c5-012f-0c11-58d385a7bc34",
+          "title": "Christmas, New Year, and Easter cards depicting leaves, moons, landscapes, flowers, and butterflies.",
+          "typeOfResource": "still image",
+          "imageID": "485232",
+          "itemLink": "http://digitalcollections.nypl.org/items/31f7bfc0-c5c5-012f-0c11-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "32cb4e60-c5c5-012f-2671-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/32cb4e60-c5c5-012f-2671-58d385a7bc34",
+          "title": "Easter and Christmas cards depicting young girls, flowers, holly, and butterflies.",
+          "typeOfResource": "still image",
+          "imageID": "485235",
+          "itemLink": "http://digitalcollections.nypl.org/items/32cb4e60-c5c5-012f-2671-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3705c3e0-c5c5-012f-d3aa-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3705c3e0-c5c5-012f-d3aa-58d385a7bc34",
+          "title": "Easter cards depicting landscapes; Christmas cards depicting elves,  with owl, tree branches, and a pumpkin.",
+          "typeOfResource": "still image",
+          "imageID": "485250",
+          "itemLink": "http://digitalcollections.nypl.org/items/3705c3e0-c5c5-012f-d3aa-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "36c49980-c5c5-012f-aaff-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/36c49980-c5c5-012f-aaff-58d385a7bc34",
+          "title": "Christmas cards depicting young girl with flowers; Easter cards depicting flowers.",
+          "typeOfResource": "still image",
+          "imageID": "485249",
+          "itemLink": "http://digitalcollections.nypl.org/items/36c49980-c5c5-012f-aaff-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "396c87e0-c5c5-012f-0408-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/396c87e0-c5c5-012f-0408-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting flowers, plants, and winter landscapes.",
+          "typeOfResource": "still image",
+          "imageID": "485258",
+          "itemLink": "http://digitalcollections.nypl.org/items/396c87e0-c5c5-012f-0408-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "39ad1b30-c5c5-012f-bc39-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/39ad1b30-c5c5-012f-bc39-58d385a7bc34",
+          "title": "Valentine, Christmas, New Year, and birthday cards depicting flowers and birds.",
+          "typeOfResource": "still image",
+          "imageID": "485259",
+          "itemLink": "http://digitalcollections.nypl.org/items/39ad1b30-c5c5-012f-bc39-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "43ad52d0-c5c5-012f-4ee1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/43ad52d0-c5c5-012f-4ee1-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting flowers, foliage and medallions.",
+          "typeOfResource": "still image",
+          "imageID": "486099",
+          "itemLink": "http://digitalcollections.nypl.org/items/43ad52d0-c5c5-012f-4ee1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "44015420-c5c5-012f-390b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/44015420-c5c5-012f-390b-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting flowers, foliage, decorative ornamentation, stars and crosses.",
+          "typeOfResource": "still image",
+          "imageID": "486100",
+          "itemLink": "http://digitalcollections.nypl.org/items/44015420-c5c5-012f-390b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "482c9e10-c5c5-012f-68b6-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/482c9e10-c5c5-012f-68b6-58d385a7bc34",
+          "title": "Christmas and Easter cards depicting flowers, landscapes and baskets.",
+          "typeOfResource": "still image",
+          "imageID": "486114",
+          "itemLink": "http://digitalcollections.nypl.org/items/482c9e10-c5c5-012f-68b6-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4b557860-c5c5-012f-8e04-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4b557860-c5c5-012f-8e04-58d385a7bc34",
+          "title": "An Easter card depicting a girl floating, lilies and a cross of light.",
+          "typeOfResource": "still image",
+          "imageID": "486125",
+          "itemLink": "http://digitalcollections.nypl.org/items/4b557860-c5c5-012f-8e04-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4c63a0d0-c5c5-012f-3b32-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4c63a0d0-c5c5-012f-3b32-58d385a7bc34",
+          "title": "Birthday, Christmas and Easter cards depicting the ocean, sailboats, bees, decorative design and flowers, including: cherry blossoms and apple blossoms.",
+          "typeOfResource": "still image",
+          "imageID": "486129",
+          "itemLink": "http://digitalcollections.nypl.org/items/4c63a0d0-c5c5-012f-3b32-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "51cbfd10-c5c5-012f-ce69-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/51cbfd10-c5c5-012f-ce69-58d385a7bc34",
+          "title": "Christmas and New Year cards depicting rural landscapes; mothers with daughters, an angel.",
+          "typeOfResource": "still image",
+          "imageID": "486155",
+          "itemLink": "http://digitalcollections.nypl.org/items/51cbfd10-c5c5-012f-ce69-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "51842110-c5c5-012f-69e3-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/51842110-c5c5-012f-69e3-58d385a7bc34",
+          "title": "Christmas cards depicting rural landscapes,  flowers, leaves, and holly.",
+          "typeOfResource": "still image",
+          "imageID": "486154",
+          "itemLink": "http://digitalcollections.nypl.org/items/51842110-c5c5-012f-69e3-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "53cd7980-c5c5-012f-143e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/53cd7980-c5c5-012f-143e-58d385a7bc34",
+          "title": "Christmas cards depicting winter landscapes, with floral decoration.",
+          "typeOfResource": "still image",
+          "imageID": "486161",
+          "itemLink": "http://digitalcollections.nypl.org/items/53cd7980-c5c5-012f-143e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}

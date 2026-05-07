@@ -1,0 +1,1021 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "genre",
+      "search_text": "picture postcard",
+      "perPage": "100",
+      "page": "1",
+      "totalPages": "176"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "17509",
+      "result": [
+        {
+          "uuid": "c06a7190-c536-012f-3392-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c06a7190-c536-012f-3392-58d385a7bc34",
+          "title": "A Cornish litany",
+          "typeOfResource": "still image",
+          "imageID": "834598",
+          "itemLink": "http://digitalcollections.nypl.org/items/c06a7190-c536-012f-3392-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e2-c547-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-c547-a3d9-e040-e00a18064a99",
+          "title": "A Cornish litany",
+          "typeOfResource": "still image",
+          "imageID": "834598",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-c547-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "bdd276c0-c55e-012f-f6db-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/bdd276c0-c55e-012f-f6db-58d385a7bc34",
+          "title": "Seeing New York: Ain't she stylish!",
+          "typeOfResource": "still image",
+          "imageID": "836733",
+          "itemLink": "http://digitalcollections.nypl.org/items/bdd276c0-c55e-012f-f6db-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e2-8d34-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-8d34-a3d9-e040-e00a18064a99",
+          "title": "Seeing New York: Ain't she stylish!",
+          "typeOfResource": "still image",
+          "imageID": "836734",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-8d34-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e2-8d33-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-8d33-a3d9-e040-e00a18064a99",
+          "title": "Seeing New York: Ain't she stylish!",
+          "typeOfResource": "still image",
+          "imageID": "836733",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-8d33-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0ea6df40-0189-0133-911d-58d385a7b928",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0ea6df40-0189-0133-911d-58d385a7b928",
+          "title": "Beauty and the beast",
+          "typeOfResource": "still image",
+          "imageID": "5264839",
+          "itemLink": "http://digitalcollections.nypl.org/items/0ea6df40-0189-0133-911d-58d385a7b928",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8669be00-c5bf-012f-538d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8669be00-c5bf-012f-538d-58d385a7bc34",
+          "title": "Alii famam nomenque dedere",
+          "typeOfResource": "still image",
+          "imageID": "1624821",
+          "itemLink": "http://digitalcollections.nypl.org/items/8669be00-c5bf-012f-538d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e4-5fe2-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e4-5fe2-a3d9-e040-e00a18064a99",
+          "title": "Alii famam nomenque dedere",
+          "typeOfResource": "still image",
+          "imageID": "1624821",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e4-5fe2-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "fa270490-3653-0134-4629-00505686a51c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/fa270490-3653-0134-4629-00505686a51c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_741",
+          "itemLink": "http://digitalcollections.nypl.org/items/fa270490-3653-0134-4629-00505686a51c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a720-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a720-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_765",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a720-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a71f-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a71f-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_764",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a71f-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a71e-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a71e-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_763",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a71e-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a722-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a722-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_767",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a722-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a723-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a723-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_768",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a723-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a724-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a724-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_769",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a724-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a726-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a726-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_771",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a726-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a727-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a727-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_772",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a727-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a728-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a728-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_773",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a728-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a725-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a725-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_770",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a725-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a729-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a729-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_774",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a729-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a721-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a721-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_766",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a721-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a709-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a709-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_742",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a709-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a708-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a708-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_741",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a708-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a70c-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a70c-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_745",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a70c-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a70d-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a70d-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_746",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a70d-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a70e-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a70e-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_747",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a70e-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a70f-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a70f-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_748",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a70f-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a712-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a712-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_751",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a712-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a713-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a713-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_752",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a713-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a714-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a714-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_753",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a714-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a715-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a715-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_754",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a715-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a716-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a716-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_755",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a716-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a717-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a717-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_756",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a717-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a70a-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a70a-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_743",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a70a-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a70b-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a70b-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_744",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a70b-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a71a-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a71a-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_759",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a71a-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a71b-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a71b-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_760",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a71b-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a718-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a718-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_757",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a718-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a719-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a719-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_758",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a719-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a71c-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a71c-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_761",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a71c-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a71d-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a71d-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_762",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a71d-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a710-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a710-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_749",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a710-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "892afe6c-a711-a150-e040-e00a1806202c",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/892afe6c-a711-a150-e040-e00a1806202c",
+          "title": "The very curious and wonderful picture book of Pagan history",
+          "typeOfResource": "still image",
+          "imageID": "psnypl_spn_750",
+          "itemLink": "http://digitalcollections.nypl.org/items/892afe6c-a711-a150-e040-e00a1806202c",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "375406b0-018e-0133-0461-58d385a7b928",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/375406b0-018e-0133-0461-58d385a7b928",
+          "title": "Beauty & The Beast",
+          "typeOfResource": "still image",
+          "imageID": "5264839",
+          "itemLink": "http://digitalcollections.nypl.org/items/375406b0-018e-0133-0461-58d385a7b928",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1c458d80-c5bf-012f-e460-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1c458d80-c5bf-012f-e460-58d385a7bc34",
+          "title": "Quod non noris, non ames [Latin proverb]",
+          "typeOfResource": "still image",
+          "imageID": "1624072",
+          "itemLink": "http://digitalcollections.nypl.org/items/1c458d80-c5bf-012f-e460-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a1707640-0cf1-0131-9d17-58d385a7b928",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a1707640-0cf1-0131-9d17-58d385a7b928",
+          "title": "Edward Wing",
+          "typeOfResource": "still image",
+          "imageID": "5060088",
+          "itemLink": "http://digitalcollections.nypl.org/items/a1707640-0cf1-0131-9d17-58d385a7b928",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1af48940-3944-0138-d085-071559c191e5",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1af48940-3944-0138-d085-071559c191e5",
+          "title": "Mary Engs",
+          "typeOfResource": "still image",
+          "imageID": "5060089",
+          "itemLink": "http://digitalcollections.nypl.org/items/1af48940-3944-0138-d085-071559c191e5",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e95673b0-018a-0133-3fc6-58d385a7bbd0",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e95673b0-018a-0133-3fc6-58d385a7bbd0",
+          "title": "Beauty & The Beast",
+          "typeOfResource": "still image",
+          "imageID": "5264839",
+          "itemLink": "http://digitalcollections.nypl.org/items/e95673b0-018a-0133-3fc6-58d385a7bbd0",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1a0fda90-3944-0138-ae0a-2de23f29d4fc",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1a0fda90-3944-0138-ae0a-2de23f29d4fc",
+          "title": "Edward Wing",
+          "typeOfResource": "still image",
+          "imageID": "5060088",
+          "itemLink": "http://digitalcollections.nypl.org/items/1a0fda90-3944-0138-ae0a-2de23f29d4fc",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e4-0f1b-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e4-0f1b-a3d9-e040-e00a18064a99",
+          "title": "Quod non noris, non ames [Latin proverb]",
+          "typeOfResource": "still image",
+          "imageID": "1624072",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e4-0f1b-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "48c3fd40-0cf1-0131-4d6f-58d385a7b928",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/48c3fd40-0cf1-0131-4d6f-58d385a7b928",
+          "title": "Mary Engs",
+          "typeOfResource": "still image",
+          "imageID": "5060089",
+          "itemLink": "http://digitalcollections.nypl.org/items/48c3fd40-0cf1-0131-4d6f-58d385a7b928",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0f8ccd20-bd07-013a-2115-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0f8ccd20-bd07-013a-2115-0242ac110004",
+          "title": "Femme juive",
+          "typeOfResource": "still image",
+          "imageID": "58481909",
+          "itemLink": "http://digitalcollections.nypl.org/items/0f8ccd20-bd07-013a-2115-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0f1fadb0-bd07-013a-7c2d-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0f1fadb0-bd07-013a-7c2d-0242ac110004",
+          "title": "Femme juive",
+          "typeOfResource": "still image",
+          "imageID": "58481908",
+          "itemLink": "http://digitalcollections.nypl.org/items/0f1fadb0-bd07-013a-7c2d-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "34301050-bd07-013a-fd62-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/34301050-bd07-013a-fd62-0242ac110004",
+          "title": "Danseuse juive",
+          "typeOfResource": "still image",
+          "imageID": "58482006",
+          "itemLink": "http://digitalcollections.nypl.org/items/34301050-bd07-013a-fd62-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "349ef080-bd07-013a-24f7-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/349ef080-bd07-013a-24f7-0242ac110004",
+          "title": "Danseuse juive",
+          "typeOfResource": "still image",
+          "imageID": "58482007",
+          "itemLink": "http://digitalcollections.nypl.org/items/349ef080-bd07-013a-24f7-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3951ff20-e37e-0131-4992-58d385a7b928",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3951ff20-e37e-0131-4992-58d385a7b928",
+          "title": "Old cottage residence in 16th St. near 3d Ave.--1861",
+          "typeOfResource": "still image",
+          "imageID": "5146176",
+          "itemLink": "http://digitalcollections.nypl.org/items/3951ff20-e37e-0131-4992-58d385a7b928",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "184f2250-bd07-013a-d1dd-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/184f2250-bd07-013a-d1dd-0242ac110004",
+          "title": "Vieux rabbin",
+          "typeOfResource": "still image",
+          "imageID": "58481932",
+          "itemLink": "http://digitalcollections.nypl.org/items/184f2250-bd07-013a-d1dd-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "18b72e30-bd07-013a-8d62-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/18b72e30-bd07-013a-8d62-0242ac110004",
+          "title": "Vieux rabbin",
+          "typeOfResource": "still image",
+          "imageID": "58481933",
+          "itemLink": "http://digitalcollections.nypl.org/items/18b72e30-bd07-013a-8d62-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1a384870-bd07-013a-35e8-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1a384870-bd07-013a-35e8-0242ac110004",
+          "title": "Vieux juif",
+          "typeOfResource": "still image",
+          "imageID": "58481937",
+          "itemLink": "http://digitalcollections.nypl.org/items/1a384870-bd07-013a-35e8-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "19cdf4d0-bd07-013a-9054-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/19cdf4d0-bd07-013a-9054-0242ac110004",
+          "title": "Vieux juif",
+          "typeOfResource": "still image",
+          "imageID": "58481936",
+          "itemLink": "http://digitalcollections.nypl.org/items/19cdf4d0-bd07-013a-9054-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2ea31f40-bd07-013a-de08-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2ea31f40-bd07-013a-de08-0242ac110004",
+          "title": "Jewish synagogue, The Avenue, Cape Town",
+          "typeOfResource": "still image",
+          "imageID": "58481991",
+          "itemLink": "http://digitalcollections.nypl.org/items/2ea31f40-bd07-013a-de08-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2e3ee6c0-bd07-013a-090f-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2e3ee6c0-bd07-013a-090f-0242ac110004",
+          "title": "Jewish synagogue, The Avenue, Cape Town",
+          "typeOfResource": "still image",
+          "imageID": "58481990",
+          "itemLink": "http://digitalcollections.nypl.org/items/2e3ee6c0-bd07-013a-090f-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "304e1680-bb90-0132-5184-58d385a7bbd0",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/304e1680-bb90-0132-5184-58d385a7bbd0",
+          "title": "Hotel Belleclaire, Broadway at 77th Street, New York City",
+          "typeOfResource": "still image",
+          "imageID": "5232940",
+          "itemLink": "http://digitalcollections.nypl.org/items/304e1680-bb90-0132-5184-58d385a7bbd0",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b39b56d0-c125-0132-fd63-58d385a7bbd0",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b39b56d0-c125-0132-fd63-58d385a7bbd0",
+          "title": "Hotel Belleclaire, Broadway at 77th Street, New York City",
+          "typeOfResource": "still image",
+          "imageID": "5233986",
+          "itemLink": "http://digitalcollections.nypl.org/items/b39b56d0-c125-0132-fd63-58d385a7bbd0",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0da577a0-bd07-013a-dfda-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0da577a0-bd07-013a-dfda-0242ac110004",
+          "title": "Juives",
+          "typeOfResource": "still image",
+          "imageID": "58481904",
+          "itemLink": "http://digitalcollections.nypl.org/items/0da577a0-bd07-013a-dfda-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6f66e490-c325-0135-3c23-199488d815a9",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6f66e490-c325-0135-3c23-199488d815a9",
+          "title": "We all wish you a merry Christmas",
+          "typeOfResource": "still image",
+          "imageID": "57404552",
+          "itemLink": "http://digitalcollections.nypl.org/items/6f66e490-c325-0135-3c23-199488d815a9",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b26d90e0-c32b-0135-969d-023704fcb4b8",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b26d90e0-c32b-0135-969d-023704fcb4b8",
+          "title": "We all wish you a merry Christmas",
+          "typeOfResource": "still image",
+          "imageID": "57404553",
+          "itemLink": "http://digitalcollections.nypl.org/items/b26d90e0-c32b-0135-969d-023704fcb4b8",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0e083980-bd07-013a-01d7-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0e083980-bd07-013a-01d7-0242ac110004",
+          "title": "Juives",
+          "typeOfResource": "still image",
+          "imageID": "58481905",
+          "itemLink": "http://digitalcollections.nypl.org/items/0e083980-bd07-013a-01d7-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2bbbb9b0-bd07-013a-397e-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2bbbb9b0-bd07-013a-397e-0242ac110004",
+          "title": "Autour d'une Tombe Juive",
+          "typeOfResource": "still image",
+          "imageID": "58481983",
+          "itemLink": "http://digitalcollections.nypl.org/items/2bbbb9b0-bd07-013a-397e-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-5481-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-5481-a3d9-e040-e00a18064a99",
+          "title": "Distillery Offices, Pergola, Walkerville, Ontario, Canada, The Home of Canadian Club Whisky",
+          "typeOfResource": "still image",
+          "imageID": "79581",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-5481-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-5483-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-5483-a3d9-e040-e00a18064a99",
+          "title": "Worry kills more people than work because more people tackle it",
+          "typeOfResource": "still image",
+          "imageID": "79583",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-5483-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-5485-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-5485-a3d9-e040-e00a18064a99",
+          "title": "Manhattan",
+          "typeOfResource": "still image",
+          "imageID": "79585",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-5485-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-5488-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-5488-a3d9-e040-e00a18064a99",
+          "title": "Rubber Gathering, Milwaukee Public Museum Miniature Group",
+          "typeOfResource": "still image",
+          "imageID": "79588",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-5488-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-5484-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-5484-a3d9-e040-e00a18064a99",
+          "title": "Switzerland",
+          "typeOfResource": "still image",
+          "imageID": "79584",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-5484-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-548c-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-548c-a3d9-e040-e00a18064a99",
+          "title": "Action of Hot Water -Minerva Terrace at Mammoth Hot Springs, Yellowstone National Park, Milwaukee Public Museum Group",
+          "typeOfResource": "still image",
+          "imageID": "79592",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-548c-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-547d-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-547d-a3d9-e040-e00a18064a99",
+          "title": "Distillery Offices, South Front, Walkerville, Ontario, Canada, The Home of Canadian Club Whisky",
+          "typeOfResource": "still image",
+          "imageID": "79577",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-547d-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-548d-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-548d-a3d9-e040-e00a18064a99",
+          "title": "Indians of the Northwest coast - Kwakiutl, Milwaukee Public Museum Group",
+          "typeOfResource": "still image",
+          "imageID": "79593",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-548d-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-548b-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-548b-a3d9-e040-e00a18064a99",
+          "title": "Wisconsin Pond Life, Milwaukee Public Museum Group",
+          "typeOfResource": "still image",
+          "imageID": "79591",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-548b-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-548a-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-548a-a3d9-e040-e00a18064a99",
+          "title": "Subterranean Water Action - The Arctic Circle Endless Caverns, New Market, VA., Milwaukee Public Museum Miniature Group",
+          "typeOfResource": "still image",
+          "imageID": "79590",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-548a-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-548f-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-548f-a3d9-e040-e00a18064a99",
+          "title": "Glacial Erosion - Rainier National Park, Milwaukee Public Museum Group",
+          "typeOfResource": "still image",
+          "imageID": "79595",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-548f-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-5490-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-5490-a3d9-e040-e00a18064a99",
+          "title": "Wave Erosion - Devil's Island, Milwaukee Public Museum Group",
+          "typeOfResource": "still image",
+          "imageID": "79596",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-5490-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47da-548e-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47da-548e-a3d9-e040-e00a18064a99",
+          "title": "Subterranean Water Action - St. John's Cathedral, Endless Caverns, New Market,VA., Milwaukee Public Museum Group",
+          "typeOfResource": "still image",
+          "imageID": "79594",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47da-548e-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e2-8e41-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-8e41-a3d9-e040-e00a18064a99",
+          "title": "New York.  Essex- & Hester Streets",
+          "typeOfResource": "still image",
+          "imageID": "837003",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-8e41-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e2-8e42-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-8e42-a3d9-e040-e00a18064a99",
+          "title": "New York.  Essex- & Hester Streets",
+          "typeOfResource": "still image",
+          "imageID": "837004",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-8e42-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ad28b7c0-b762-013a-5e47-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ad28b7c0-b762-013a-5e47-0242ac110004",
+          "title": "Juives",
+          "typeOfResource": "still image",
+          "imageID": "58481904",
+          "itemLink": "http://digitalcollections.nypl.org/items/ad28b7c0-b762-013a-5e47-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "31dea750-bd07-013a-6675-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/31dea750-bd07-013a-6675-0242ac110004",
+          "title": "Bone types Juifs",
+          "typeOfResource": "still image",
+          "imageID": "58482000",
+          "itemLink": "http://digitalcollections.nypl.org/items/31dea750-bd07-013a-6675-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e2-8d1f-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e2-8d1f-a3d9-e040-e00a18064a99",
+          "title": "The wharves from Brooklyn Bridge, New York",
+          "typeOfResource": "still image",
+          "imageID": "836209",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e2-8d1f-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "42cc77f0-bd07-013a-c30c-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/42cc77f0-bd07-013a-c30c-0242ac110004",
+          "title": "Young Jewess in Sfax, Tunis",
+          "typeOfResource": "still image",
+          "imageID": "58482046",
+          "itemLink": "http://digitalcollections.nypl.org/items/42cc77f0-bd07-013a-c30c-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "432f4890-bd07-013a-9436-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/432f4890-bd07-013a-9436-0242ac110004",
+          "title": "Young Jewess in Sfax, Tunis",
+          "typeOfResource": "still image",
+          "imageID": "58482047",
+          "itemLink": "http://digitalcollections.nypl.org/items/432f4890-bd07-013a-9436-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "2211cf60-c55f-012f-e2b0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/2211cf60-c55f-012f-e2b0-58d385a7bc34",
+          "title": "Park Row Building, New York",
+          "typeOfResource": "still image",
+          "imageID": "836871",
+          "itemLink": "http://digitalcollections.nypl.org/items/2211cf60-c55f-012f-e2b0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "446ae0e0-c55f-012f-803b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/446ae0e0-c55f-012f-803b-58d385a7bc34",
+          "title": "The entrance, Botanical Gardens, Bronx Park, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836887",
+          "itemLink": "http://digitalcollections.nypl.org/items/446ae0e0-c55f-012f-803b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "43fa3db0-c55f-012f-8a0f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/43fa3db0-c55f-012f-8a0f-58d385a7bc34",
+          "title": "View in Prospect Park, Brooklyn, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836885",
+          "itemLink": "http://digitalcollections.nypl.org/items/43fa3db0-c55f-012f-8a0f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "84a91a70-c55f-012f-e147-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/84a91a70-c55f-012f-e147-58d385a7bc34",
+          "title": "Post Office, New York",
+          "typeOfResource": "still image",
+          "imageID": "836919",
+          "itemLink": "http://digitalcollections.nypl.org/items/84a91a70-c55f-012f-e147-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ef9993c0-c55f-012f-e0a0-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ef9993c0-c55f-012f-e0a0-58d385a7bc34",
+          "title": "Metropolitan Life Building, New York",
+          "typeOfResource": "still image",
+          "imageID": "836967",
+          "itemLink": "http://digitalcollections.nypl.org/items/ef9993c0-c55f-012f-e0a0-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1b8b7a80-c55f-012f-d108-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1b8b7a80-c55f-012f-d108-58d385a7bc34",
+          "title": "Fifth Avenue Building on the site of old Fifth Avenue Hotel, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836841",
+          "itemLink": "http://digitalcollections.nypl.org/items/1b8b7a80-c55f-012f-d108-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "21a2d7b0-c55f-012f-c21f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/21a2d7b0-c55f-012f-c21f-58d385a7bc34",
+          "title": "City Investing Building, New York",
+          "typeOfResource": "still image",
+          "imageID": "836869",
+          "itemLink": "http://digitalcollections.nypl.org/items/21a2d7b0-c55f-012f-c21f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "44e77550-c55f-012f-669b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/44e77550-c55f-012f-669b-58d385a7bc34",
+          "title": "The Bronx River, Bronx Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836889",
+          "itemLink": "http://digitalcollections.nypl.org/items/44e77550-c55f-012f-669b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "85e1f970-c55f-012f-edf1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/85e1f970-c55f-012f-edf1-58d385a7bc34",
+          "title": "Interior of 59 th Street electric power house, New York",
+          "typeOfResource": "still image",
+          "imageID": "836921",
+          "itemLink": "http://digitalcollections.nypl.org/items/85e1f970-c55f-012f-edf1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "9c9fe440-c55f-012f-1f75-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9c9fe440-c55f-012f-1f75-58d385a7bc34",
+          "title": "Hall of Records, Brooklyn N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836923",
+          "itemLink": "http://digitalcollections.nypl.org/items/9c9fe440-c55f-012f-1f75-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "f015d940-c55f-012f-c6dc-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/f015d940-c55f-012f-c6dc-58d385a7bc34",
+          "title": "City Investing Building",
+          "typeOfResource": "still image",
+          "imageID": "836969",
+          "itemLink": "http://digitalcollections.nypl.org/items/f015d940-c55f-012f-c6dc-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}

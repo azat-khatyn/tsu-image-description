@@ -1,0 +1,19 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": "e0505420-c6cd-012f-e1b1-58d385a7bc34",
+      "perPage": "10",
+      "page": "0",
+      "totalPages": null,
+      "startTime": "Beginning of Time",
+      "endTime": "Till Now"
+    },
+    "response": {
+      "headers": {
+        "status": "not found",
+        "code": "404",
+        "message": "parent not found for e0505420-c6cd-012f-e1b1-58d385a7bc34"
+      }
+    }
+  }
+}

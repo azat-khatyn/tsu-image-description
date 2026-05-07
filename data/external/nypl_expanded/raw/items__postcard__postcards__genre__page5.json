@@ -1,0 +1,1021 @@
+{
+  "nyplAPI": {
+    "request": {
+      "search_type": "genre",
+      "search_text": "postcards",
+      "perPage": "100",
+      "page": "5",
+      "totalPages": "175"
+    },
+    "response": {
+      "headers": {
+        "status": "success",
+        "code": "200",
+        "message": "ok"
+      },
+      "numResults": "17439",
+      "result": [
+        {
+          "uuid": "ee2f2eb0-c55a-012f-e04c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ee2f2eb0-c55a-012f-e04c-58d385a7bc34",
+          "title": "Fraunces' Tavern, Broad & Pearl Sts., New York",
+          "typeOfResource": "still image",
+          "imageID": "836617",
+          "itemLink": "http://digitalcollections.nypl.org/items/ee2f2eb0-c55a-012f-e04c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "eeac7170-c55a-012f-9219-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/eeac7170-c55a-012f-9219-58d385a7bc34",
+          "title": "Fraunce's Tavern, New York",
+          "typeOfResource": "still image",
+          "imageID": "836619",
+          "itemLink": "http://digitalcollections.nypl.org/items/eeac7170-c55a-012f-9219-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "057044f0-c55b-012f-2994-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/057044f0-c55b-012f-2994-58d385a7bc34",
+          "title": "Grant's Tomb",
+          "typeOfResource": "still image",
+          "imageID": "836645",
+          "itemLink": "http://digitalcollections.nypl.org/items/057044f0-c55b-012f-2994-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "05eb4a90-c55b-012f-7925-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/05eb4a90-c55b-012f-7925-58d385a7bc34",
+          "title": "Grant's Tomb, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836647",
+          "itemLink": "http://digitalcollections.nypl.org/items/05eb4a90-c55b-012f-7925-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3d9caea0-c55b-012f-40e2-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3d9caea0-c55b-012f-40e2-58d385a7bc34",
+          "title": "Metropolitan Museum of Art, Central park, New York, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836759",
+          "itemLink": "http://digitalcollections.nypl.org/items/3d9caea0-c55b-012f-40e2-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3e12de50-c55b-012f-f463-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3e12de50-c55b-012f-f463-58d385a7bc34",
+          "title": "Metropolitan Museum of Art.  New York",
+          "typeOfResource": "still image",
+          "imageID": "836761",
+          "itemLink": "http://digitalcollections.nypl.org/items/3e12de50-c55b-012f-f463-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3d2ec580-c55b-012f-0674-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3d2ec580-c55b-012f-0674-58d385a7bc34",
+          "title": "The Metropolitan Museum of Art, New York",
+          "typeOfResource": "still image",
+          "imageID": "836757",
+          "itemLink": "http://digitalcollections.nypl.org/items/3d2ec580-c55b-012f-0674-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6510aca0-c55b-012f-7d62-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6510aca0-c55b-012f-7d62-58d385a7bc34",
+          "title": "Seamen's Church Institute of New York.  25 South Street",
+          "typeOfResource": "still image",
+          "imageID": "836945",
+          "itemLink": "http://digitalcollections.nypl.org/items/6510aca0-c55b-012f-7d62-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "570db550-c55b-012f-9f96-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/570db550-c55b-012f-9f96-58d385a7bc34",
+          "title": "Boulevard at Arverne, Rockaway Beach, L.I.",
+          "typeOfResource": "still image",
+          "imageID": "836927",
+          "itemLink": "http://digitalcollections.nypl.org/items/570db550-c55b-012f-9f96-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a776e350-c559-012f-7d84-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a776e350-c559-012f-7d84-58d385a7bc34",
+          "title": "Battery Park Landing, New York",
+          "typeOfResource": "still image",
+          "imageID": "836077",
+          "itemLink": "http://digitalcollections.nypl.org/items/a776e350-c559-012f-7d84-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1a9af330-c55a-012f-452d-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1a9af330-c55a-012f-452d-58d385a7bc34",
+          "title": "Swan Bridge, Central Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836329",
+          "itemLink": "http://digitalcollections.nypl.org/items/1a9af330-c55a-012f-452d-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1b0e7f60-c55a-012f-6a61-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1b0e7f60-c55a-012f-6a61-58d385a7bc34",
+          "title": "Boat House, Central Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836331",
+          "itemLink": "http://digitalcollections.nypl.org/items/1b0e7f60-c55a-012f-6a61-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1be69bb0-c55a-012f-6f60-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1be69bb0-c55a-012f-6f60-58d385a7bc34",
+          "title": "Promenade in Central Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836335",
+          "itemLink": "http://digitalcollections.nypl.org/items/1be69bb0-c55a-012f-6f60-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1a309d50-c55a-012f-49bb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1a309d50-c55a-012f-49bb-58d385a7bc34",
+          "title": "The Block House, Central Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836317",
+          "itemLink": "http://digitalcollections.nypl.org/items/1a309d50-c55a-012f-49bb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1b6c8230-c55a-012f-eaad-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1b6c8230-c55a-012f-eaad-58d385a7bc34",
+          "title": "Observatory, Central Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836333",
+          "itemLink": "http://digitalcollections.nypl.org/items/1b6c8230-c55a-012f-eaad-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1d2efb60-c55a-012f-652c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1d2efb60-c55a-012f-652c-58d385a7bc34",
+          "title": "The Terrace, Central Park, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836323",
+          "itemLink": "http://digitalcollections.nypl.org/items/1d2efb60-c55a-012f-652c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1da7cc90-c55a-012f-3342-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1da7cc90-c55a-012f-3342-58d385a7bc34",
+          "title": "Scene in Central Park, New York City, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836325",
+          "itemLink": "http://digitalcollections.nypl.org/items/1da7cc90-c55a-012f-3342-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1cd1a2a0-c55a-012f-539f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1cd1a2a0-c55a-012f-539f-58d385a7bc34",
+          "title": "Terraces Central Park, New York",
+          "typeOfResource": "still image",
+          "imageID": "836321",
+          "itemLink": "http://digitalcollections.nypl.org/items/1cd1a2a0-c55a-012f-539f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1cd34200-c55c-012f-c909-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1cd34200-c55c-012f-c909-58d385a7bc34",
+          "title": "The Williamsburg Bridge, East River, New York",
+          "typeOfResource": "still image",
+          "imageID": "836257",
+          "itemLink": "http://digitalcollections.nypl.org/items/1cd34200-c55c-012f-c909-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1c4b2d30-c55c-012f-486b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1c4b2d30-c55c-012f-486b-58d385a7bc34",
+          "title": "Williamsburg Bridge, New-York",
+          "typeOfResource": "still image",
+          "imageID": "836255",
+          "itemLink": "http://digitalcollections.nypl.org/items/1c4b2d30-c55c-012f-486b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1dcc8eb0-c55c-012f-61b1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1dcc8eb0-c55c-012f-61b1-58d385a7bc34",
+          "title": "Williamsburg Bridge, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836261",
+          "itemLink": "http://digitalcollections.nypl.org/items/1dcc8eb0-c55c-012f-61b1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "66e88f50-c55c-012f-ed22-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/66e88f50-c55c-012f-ed22-58d385a7bc34",
+          "title": "First Baptist Church, Broadway & 79th St., N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836367",
+          "itemLink": "http://digitalcollections.nypl.org/items/66e88f50-c55c-012f-ed22-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-6764-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-6764-a3d9-e040-e00a18064a99",
+          "title": "Costumed dancers",
+          "typeOfResource": "still image",
+          "imageID": "1585527",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-6764-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-584b-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-584b-a3d9-e040-e00a18064a99",
+          "title": "With hearty Christmas greetings.",
+          "typeOfResource": "still image",
+          "imageID": "1585560",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-584b-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-584c-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-584c-a3d9-e040-e00a18064a99",
+          "title": "With hearty Christmas greetings.",
+          "typeOfResource": "still image",
+          "imageID": "1585561",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-584c-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a11-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a11-a3d9-e040-e00a18064a99",
+          "title": "The top of the season to you from two \"Chaps\"",
+          "typeOfResource": "still image",
+          "imageID": "1585609",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a11-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a13-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a13-a3d9-e040-e00a18064a99",
+          "title": "Merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585611",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a13-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a0d-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a0d-a3d9-e040-e00a18064a99",
+          "title": "Greetings from California.",
+          "typeOfResource": "still image",
+          "imageID": "1585605",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a0d-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a12-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a12-a3d9-e040-e00a18064a99",
+          "title": "Merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585610",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a12-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a10-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a10-a3d9-e040-e00a18064a99",
+          "title": "The top of the season to you from two \"Chaps\"",
+          "typeOfResource": "still image",
+          "imageID": "1585608",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a10-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a0c-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a0c-a3d9-e040-e00a18064a99",
+          "title": "Greetings from California.",
+          "typeOfResource": "still image",
+          "imageID": "1585604",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a0c-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a6a-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a6a-a3d9-e040-e00a18064a99",
+          "title": "A merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585698",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a6a-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5a6b-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5a6b-a3d9-e040-e00a18064a99",
+          "title": "A merry Christmas.",
+          "typeOfResource": "still image",
+          "imageID": "1585699",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5a6b-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5cb2-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5cb2-a3d9-e040-e00a18064a99",
+          "title": "A merry Xmas and a happy New Year.",
+          "typeOfResource": "still image",
+          "imageID": "1585752",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5cb2-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "510d47e3-5cb3-a3d9-e040-e00a18064a99",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/510d47e3-5cb3-a3d9-e040-e00a18064a99",
+          "title": "A merry Xmas and a happy New Year.",
+          "typeOfResource": "still image",
+          "imageID": "1585753",
+          "itemLink": "http://digitalcollections.nypl.org/items/510d47e3-5cb3-a3d9-e040-e00a18064a99",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "227960b0-c55f-012f-53bb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/227960b0-c55f-012f-53bb-58d385a7bc34",
+          "title": "Broadway and Chambers Building.  New York",
+          "typeOfResource": "still image",
+          "imageID": "836873",
+          "itemLink": "http://digitalcollections.nypl.org/items/227960b0-c55f-012f-53bb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4701d470-c55f-012f-6419-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4701d470-c55f-012f-6419-58d385a7bc34",
+          "title": "Flower beds Prospect Park, Brooklyn, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836897",
+          "itemLink": "http://digitalcollections.nypl.org/items/4701d470-c55f-012f-6419-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "477d35a0-c55f-012f-8a66-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/477d35a0-c55f-012f-8a66-58d385a7bc34",
+          "title": "Fort Tryon Hall, New York",
+          "typeOfResource": "still image",
+          "imageID": "836899",
+          "itemLink": "http://digitalcollections.nypl.org/items/477d35a0-c55f-012f-8a66-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "47ece7d0-c55f-012f-9938-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/47ece7d0-c55f-012f-9938-58d385a7bc34",
+          "title": "East lawn, Mount Morris Park, N.Y. City",
+          "typeOfResource": "still image",
+          "imageID": "836901",
+          "itemLink": "http://digitalcollections.nypl.org/items/47ece7d0-c55f-012f-9938-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "4859f090-c55f-012f-a192-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/4859f090-c55f-012f-a192-58d385a7bc34",
+          "title": "Ocean Parkway, entrance to Prospect Park, Brooklyn, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836903",
+          "itemLink": "http://digitalcollections.nypl.org/items/4859f090-c55f-012f-a192-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "aa630f50-c55f-012f-75ec-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/aa630f50-c55f-012f-75ec-58d385a7bc34",
+          "title": "Pennsylvania Railroad Station, 7th Ave. and 33d St., New York",
+          "typeOfResource": "still image",
+          "imageID": "836929",
+          "itemLink": "http://digitalcollections.nypl.org/items/aa630f50-c55f-012f-75ec-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "aac87890-c55f-012f-c37c-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/aac87890-c55f-012f-c37c-58d385a7bc34",
+          "title": "Waiting room for women Penn. R.R. Station N.Y. City",
+          "typeOfResource": "still image",
+          "imageID": "836931",
+          "itemLink": "http://digitalcollections.nypl.org/items/aac87890-c55f-012f-c37c-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c617b3e0-c62b-012f-cee4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c617b3e0-c62b-012f-cee4-58d385a7bc34",
+          "title": "Tuna caught with rod and reel, Avalon, Santa Catalina, Calif.",
+          "typeOfResource": "still image",
+          "imageID": "62285",
+          "itemLink": "http://digitalcollections.nypl.org/items/c617b3e0-c62b-012f-cee4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c93bbc90-c62b-012f-05af-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c93bbc90-c62b-012f-05af-58d385a7bc34",
+          "title": "Mission San Luis Rey, San Gabriel, Calif.",
+          "typeOfResource": "still image",
+          "imageID": "62294",
+          "itemLink": "http://digitalcollections.nypl.org/items/c93bbc90-c62b-012f-05af-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c99731c0-c62b-012f-ceac-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c99731c0-c62b-012f-ceac-58d385a7bc34",
+          "title": "Los Banos del Mar, Santa Barbara, Calif",
+          "typeOfResource": "still image",
+          "imageID": "62295",
+          "itemLink": "http://digitalcollections.nypl.org/items/c99731c0-c62b-012f-ceac-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cdc60360-c62b-012f-d55f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cdc60360-c62b-012f-d55f-58d385a7bc34",
+          "title": "A Rose Covered Cottage, Pasadena, Calif.",
+          "typeOfResource": "still image",
+          "imageID": "62307",
+          "itemLink": "http://digitalcollections.nypl.org/items/cdc60360-c62b-012f-d55f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "5e0cc620-b843-013a-fb63-0242ac110002",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5e0cc620-b843-013a-fb63-0242ac110002",
+          "title": "Le Maroc pittoresque",
+          "typeOfResource": "still image",
+          "imageID": "58481970",
+          "itemLink": "http://digitalcollections.nypl.org/items/5e0cc620-b843-013a-fb63-0242ac110002",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "88526c00-c55a-012f-34cd-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/88526c00-c55a-012f-34cd-58d385a7bc34",
+          "title": "Helter-skelter, Luna Park, Coney Island, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836493",
+          "itemLink": "http://digitalcollections.nypl.org/items/88526c00-c55a-012f-34cd-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "db2532f0-c55a-012f-4004-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/db2532f0-c55a-012f-4004-58d385a7bc34",
+          "title": "Sunday morning on Fifth Avenue, New York",
+          "typeOfResource": "still image",
+          "imageID": "836589",
+          "itemLink": "http://digitalcollections.nypl.org/items/db2532f0-c55a-012f-4004-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "040512e0-c55b-012f-270a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/040512e0-c55b-012f-270a-58d385a7bc34",
+          "title": "Grant's Tomb, New York",
+          "typeOfResource": "still image",
+          "imageID": "836639",
+          "itemLink": "http://digitalcollections.nypl.org/items/040512e0-c55b-012f-270a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "04ee7910-c55b-012f-e357-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/04ee7910-c55b-012f-e357-58d385a7bc34",
+          "title": "General U. S. Grant Monument and Tomb, New-York",
+          "typeOfResource": "still image",
+          "imageID": "836643",
+          "itemLink": "http://digitalcollections.nypl.org/items/04ee7910-c55b-012f-e357-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "3cc8d7d0-c55b-012f-b2ec-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/3cc8d7d0-c55b-012f-b2ec-58d385a7bc34",
+          "title": "5th Ave. front Metropolitan Museum of Arts [sic], New York",
+          "typeOfResource": "still image",
+          "imageID": "836755",
+          "itemLink": "http://digitalcollections.nypl.org/items/3cc8d7d0-c55b-012f-b2ec-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "33974f80-c55b-012f-58ae-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/33974f80-c55b-012f-58ae-58d385a7bc34",
+          "title": "Madison Square Garden, New York",
+          "typeOfResource": "still image",
+          "imageID": "836751",
+          "itemLink": "http://digitalcollections.nypl.org/items/33974f80-c55b-012f-58ae-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "33288700-c55b-012f-e2d7-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/33288700-c55b-012f-e2d7-58d385a7bc34",
+          "title": "Madison Square Garden, New York",
+          "typeOfResource": "still image",
+          "imageID": "836749",
+          "itemLink": "http://digitalcollections.nypl.org/items/33288700-c55b-012f-e2d7-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "50f6ddb0-c55b-012f-3a67-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/50f6ddb0-c55b-012f-3a67-58d385a7bc34",
+          "title": "Mott Haven Branch--140th Street and Alexander Avenue, The New York Public Library",
+          "typeOfResource": "still image",
+          "imageID": "836821",
+          "itemLink": "http://digitalcollections.nypl.org/items/50f6ddb0-c55b-012f-3a67-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "507aa540-c55b-012f-8b31-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/507aa540-c55b-012f-8b31-58d385a7bc34",
+          "title": "Washington Heights Free Library, New York",
+          "typeOfResource": "still image",
+          "imageID": "836819",
+          "itemLink": "http://digitalcollections.nypl.org/items/507aa540-c55b-012f-8b31-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6cf412b0-c55a-012f-3501-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6cf412b0-c55a-012f-3501-58d385a7bc34",
+          "title": "New York City Hall when occupied by the English",
+          "typeOfResource": "still image",
+          "imageID": "836399",
+          "itemLink": "http://digitalcollections.nypl.org/items/6cf412b0-c55a-012f-3501-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ce73e840-c55c-012f-df89-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ce73e840-c55c-012f-df89-58d385a7bc34",
+          "title": "New Court House.  25th St. & Madison Ave, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836533",
+          "itemLink": "http://digitalcollections.nypl.org/items/ce73e840-c55c-012f-df89-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cd875bb0-c55c-012f-59bf-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cd875bb0-c55c-012f-59bf-58d385a7bc34",
+          "title": "New Court house, New York",
+          "typeOfResource": "still image",
+          "imageID": "836529",
+          "itemLink": "http://digitalcollections.nypl.org/items/cd875bb0-c55c-012f-59bf-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cdf79650-c55c-012f-3753-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cdf79650-c55c-012f-3753-58d385a7bc34",
+          "title": "Appellate Court Building, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836531",
+          "itemLink": "http://digitalcollections.nypl.org/items/cdf79650-c55c-012f-3753-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c1f0e830-c559-012f-bfee-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c1f0e830-c559-012f-bfee-58d385a7bc34",
+          "title": "\"The Great White Way,\" Broadway, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836271",
+          "itemLink": "http://digitalcollections.nypl.org/items/c1f0e830-c559-012f-bfee-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e563b980-c559-012f-8fad-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e563b980-c559-012f-8fad-58d385a7bc34",
+          "title": "City Hall Square, Brooklyn, N.Y.",
+          "typeOfResource": "still image",
+          "imageID": "836275",
+          "itemLink": "http://digitalcollections.nypl.org/items/e563b980-c559-012f-8fad-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "deefe030-c559-012f-2f16-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/deefe030-c559-012f-2f16-58d385a7bc34",
+          "title": "Forest Ave., Bronx, New York",
+          "typeOfResource": "still image",
+          "imageID": "836273",
+          "itemLink": "http://digitalcollections.nypl.org/items/deefe030-c559-012f-2f16-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "517ecf60-c55b-012f-f905-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/517ecf60-c55b-012f-f905-58d385a7bc34",
+          "title": "St. George Branch--Staten Island--The New York Public Library",
+          "typeOfResource": "still image",
+          "imageID": "836823",
+          "itemLink": "http://digitalcollections.nypl.org/items/517ecf60-c55b-012f-f905-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "9276ea70-c55b-012f-290f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/9276ea70-c55b-012f-290f-58d385a7bc34",
+          "title": "Union Square, north from 14th Street, New-York",
+          "typeOfResource": "still image",
+          "imageID": "836187",
+          "itemLink": "http://digitalcollections.nypl.org/items/9276ea70-c55b-012f-290f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "91f11880-c55b-012f-f7d5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/91f11880-c55b-012f-f7d5-58d385a7bc34",
+          "title": "Union Square.  New York",
+          "typeOfResource": "still image",
+          "imageID": "836185",
+          "itemLink": "http://digitalcollections.nypl.org/items/91f11880-c55b-012f-f7d5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "cf388770-c55b-012f-e8c6-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/cf388770-c55b-012f-e8c6-58d385a7bc34",
+          "title": "9th Regiment Armory.  14th Street.  New York",
+          "typeOfResource": "still image",
+          "imageID": "836057",
+          "itemLink": "http://digitalcollections.nypl.org/items/cf388770-c55b-012f-e8c6-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "faff4d70-c55c-012f-c9ba-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/faff4d70-c55c-012f-c9ba-58d385a7bc34",
+          "title": "Bayridge Park Drive & rail-road station, Bayridge, Brooklyn, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836547",
+          "itemLink": "http://digitalcollections.nypl.org/items/faff4d70-c55c-012f-c9ba-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "fa86f960-c55c-012f-e050-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/fa86f960-c55c-012f-e050-58d385a7bc34",
+          "title": "The elevated railroad at 110th Street",
+          "typeOfResource": "still image",
+          "imageID": "836545",
+          "itemLink": "http://digitalcollections.nypl.org/items/fa86f960-c55c-012f-e050-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "b3f5fbb0-c559-012f-4130-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/b3f5fbb0-c559-012f-4130-58d385a7bc34",
+          "title": "Washington and Bowling Green Buildings, New York",
+          "typeOfResource": "still image",
+          "imageID": "836089",
+          "itemLink": "http://digitalcollections.nypl.org/items/b3f5fbb0-c559-012f-4130-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c05f8810-c559-012f-8b48-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c05f8810-c559-012f-8b48-58d385a7bc34",
+          "title": "Grace Church and the Wanamaker Stores, Broadway, New York",
+          "typeOfResource": "still image",
+          "imageID": "836265",
+          "itemLink": "http://digitalcollections.nypl.org/items/c05f8810-c559-012f-8b48-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "5d913440-c55a-012f-aa6b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/5d913440-c55a-012f-aa6b-58d385a7bc34",
+          "title": "Street scene, Chinatown",
+          "typeOfResource": "still image",
+          "imageID": "836339",
+          "itemLink": "http://digitalcollections.nypl.org/items/5d913440-c55a-012f-aa6b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "725c1ad0-c55a-012f-1c93-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/725c1ad0-c55a-012f-1c93-58d385a7bc34",
+          "title": "Columbus Circle, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836491",
+          "itemLink": "http://digitalcollections.nypl.org/items/725c1ad0-c55a-012f-1c93-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "88dfc7d0-c55a-012f-3acf-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/88dfc7d0-c55a-012f-3acf-58d385a7bc34",
+          "title": "Dreamland, Coney Island",
+          "typeOfResource": "still image",
+          "imageID": "836495",
+          "itemLink": "http://digitalcollections.nypl.org/items/88dfc7d0-c55a-012f-3acf-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "96ae5940-c55a-012f-0eeb-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/96ae5940-c55a-012f-0eeb-58d385a7bc34",
+          "title": "Cooper Square, New York",
+          "typeOfResource": "still image",
+          "imageID": "836575",
+          "itemLink": "http://digitalcollections.nypl.org/items/96ae5940-c55a-012f-0eeb-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dc91fb30-c55a-012f-d3c9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dc91fb30-c55a-012f-d3c9-58d385a7bc34",
+          "title": "5th Avenue, north from 49th St., New York",
+          "typeOfResource": "still image",
+          "imageID": "836595",
+          "itemLink": "http://digitalcollections.nypl.org/items/dc91fb30-c55a-012f-d3c9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dba6d970-c55a-012f-2e91-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dba6d970-c55a-012f-2e91-58d385a7bc34",
+          "title": "Fifth Avenue, New York",
+          "typeOfResource": "still image",
+          "imageID": "836591",
+          "itemLink": "http://digitalcollections.nypl.org/items/dba6d970-c55a-012f-2e91-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "dc111c20-c55a-012f-e4d9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/dc111c20-c55a-012f-e4d9-58d385a7bc34",
+          "title": "Plaza, 5th Ave. and 59th St., New York",
+          "typeOfResource": "still image",
+          "imageID": "836593",
+          "itemLink": "http://digitalcollections.nypl.org/items/dc111c20-c55a-012f-e4d9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "03836500-c55b-012f-3a9b-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/03836500-c55b-012f-3a9b-58d385a7bc34",
+          "title": "Grant's Tomb and Palisades, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836637",
+          "itemLink": "http://digitalcollections.nypl.org/items/03836500-c55b-012f-3a9b-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "0483be30-c55b-012f-f5a8-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/0483be30-c55b-012f-f5a8-58d385a7bc34",
+          "title": "Grant's Tomb, N. Y. City",
+          "typeOfResource": "still image",
+          "imageID": "836641",
+          "itemLink": "http://digitalcollections.nypl.org/items/0483be30-c55b-012f-f5a8-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "e629ed10-c55a-012f-832f-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/e629ed10-c55a-012f-832f-58d385a7bc34",
+          "title": "Flatiron Building, New York",
+          "typeOfResource": "still image",
+          "imageID": "836609",
+          "itemLink": "http://digitalcollections.nypl.org/items/e629ed10-c55a-012f-832f-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "eeb2c210-b9d6-013a-8a15-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/eeb2c210-b9d6-013a-8a15-0242ac110004",
+          "title": "Ecole Juive",
+          "typeOfResource": "still image",
+          "imageID": "58482042",
+          "itemLink": "http://digitalcollections.nypl.org/items/eeb2c210-b9d6-013a-8a15-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "49639bd0-b780-013a-172c-0242ac110004",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/49639bd0-b780-013a-172c-0242ac110004",
+          "title": "Fillette Juive",
+          "typeOfResource": "still image",
+          "imageID": "58481928",
+          "itemLink": "http://digitalcollections.nypl.org/items/49639bd0-b780-013a-172c-0242ac110004",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "64a1a8a0-c55c-012f-9c75-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/64a1a8a0-c55c-012f-9c75-58d385a7bc34",
+          "title": "St. Mark's Church. Built in 1826.  Tenth Street and 2nd Avenue",
+          "typeOfResource": "still image",
+          "imageID": "836357",
+          "itemLink": "http://digitalcollections.nypl.org/items/64a1a8a0-c55c-012f-9c75-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6443ebc0-c55c-012f-ebd4-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6443ebc0-c55c-012f-ebd4-58d385a7bc34",
+          "title": "St Francis Xavier Church, N. Y City",
+          "typeOfResource": "still image",
+          "imageID": "836355",
+          "itemLink": "http://digitalcollections.nypl.org/items/6443ebc0-c55c-012f-ebd4-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "6524f060-c55c-012f-9d42-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/6524f060-c55c-012f-9d42-58d385a7bc34",
+          "title": "St. Finbar's Roman Catholic Church, Bath Beach, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836359",
+          "itemLink": "http://digitalcollections.nypl.org/items/6524f060-c55c-012f-9d42-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a1adfcb0-c55c-012f-84f1-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a1adfcb0-c55c-012f-84f1-58d385a7bc34",
+          "title": "Barnard College",
+          "typeOfResource": "still image",
+          "imageID": "836429",
+          "itemLink": "http://digitalcollections.nypl.org/items/a1adfcb0-c55c-012f-84f1-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "88561fa0-c55c-012f-6a91-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/88561fa0-c55c-012f-6a91-58d385a7bc34",
+          "title": "Riverside Drive and Columbia Yacht Club, New York",
+          "typeOfResource": "still image",
+          "imageID": "836413",
+          "itemLink": "http://digitalcollections.nypl.org/items/88561fa0-c55c-012f-6a91-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "7cd748a0-c55c-012f-16d8-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/7cd748a0-c55c-012f-16d8-58d385a7bc34",
+          "title": "Trinity Church, N. Y. City",
+          "typeOfResource": "still image",
+          "imageID": "836389",
+          "itemLink": "http://digitalcollections.nypl.org/items/7cd748a0-c55c-012f-16d8-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "adb09ee0-c55c-012f-7421-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/adb09ee0-c55c-012f-7421-58d385a7bc34",
+          "title": "Main Building, City College, New York",
+          "typeOfResource": "still image",
+          "imageID": "836451",
+          "itemLink": "http://digitalcollections.nypl.org/items/adb09ee0-c55c-012f-7421-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "accc70f0-c55c-012f-031e-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/accc70f0-c55c-012f-031e-58d385a7bc34",
+          "title": "College of the City of New York",
+          "typeOfResource": "still image",
+          "imageID": "836447",
+          "itemLink": "http://digitalcollections.nypl.org/items/accc70f0-c55c-012f-031e-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ad30f510-c55c-012f-819a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ad30f510-c55c-012f-819a-58d385a7bc34",
+          "title": "College of the City of New York",
+          "typeOfResource": "still image",
+          "imageID": "836449",
+          "itemLink": "http://digitalcollections.nypl.org/items/ad30f510-c55c-012f-819a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "ae2747a0-c55c-012f-b749-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/ae2747a0-c55c-012f-b749-58d385a7bc34",
+          "title": "Gate, College of the City of New York",
+          "typeOfResource": "still image",
+          "imageID": "836453",
+          "itemLink": "http://digitalcollections.nypl.org/items/ae2747a0-c55c-012f-b749-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c5827c60-c55c-012f-7bd9-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c5827c60-c55c-012f-7bd9-58d385a7bc34",
+          "title": "Teachers College Columbia University",
+          "typeOfResource": "still image",
+          "imageID": "836487",
+          "itemLink": "http://digitalcollections.nypl.org/items/c5827c60-c55c-012f-7bd9-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c5162830-c55c-012f-15ba-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c5162830-c55c-012f-15ba-58d385a7bc34",
+          "title": "Whittier Hall Columbia University",
+          "typeOfResource": "still image",
+          "imageID": "836485",
+          "itemLink": "http://digitalcollections.nypl.org/items/c5162830-c55c-012f-15ba-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "c494b3e0-c55c-012f-d829-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/c494b3e0-c55c-012f-d829-58d385a7bc34",
+          "title": "Library Columbia University, New York City",
+          "typeOfResource": "still image",
+          "imageID": "836483",
+          "itemLink": "http://digitalcollections.nypl.org/items/c494b3e0-c55c-012f-d829-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "a7ea1cd0-c559-012f-d051-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/a7ea1cd0-c559-012f-d051-58d385a7bc34",
+          "title": "Battery Park White Hall Building New York",
+          "typeOfResource": "still image",
+          "imageID": "836079",
+          "itemLink": "http://digitalcollections.nypl.org/items/a7ea1cd0-c559-012f-d051-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "1c5cc690-c55a-012f-bfd5-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/1c5cc690-c55a-012f-bfd5-58d385a7bc34",
+          "title": "The Observatory, Central Park, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836319",
+          "itemLink": "http://digitalcollections.nypl.org/items/1c5cc690-c55a-012f-bfd5-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "90ed9360-c55a-012f-60a7-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/90ed9360-c55a-012f-60a7-58d385a7bc34",
+          "title": "Half Moon Hotel, Boardwalk, Coney Island, N. Y.",
+          "typeOfResource": "still image",
+          "imageID": "836527",
+          "itemLink": "http://digitalcollections.nypl.org/items/90ed9360-c55a-012f-60a7-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        },
+        {
+          "uuid": "8ff0b150-c55a-012f-171a-58d385a7bc34",
+          "apiUri": "https://api.repo.nypl.org/api/v2/items/mods/8ff0b150-c55a-012f-171a-58d385a7bc34",
+          "title": "Promenade showing entrance to Luna Park, Coney Island",
+          "typeOfResource": "still image",
+          "imageID": "836523",
+          "itemLink": "http://digitalcollections.nypl.org/items/8ff0b150-c55a-012f-171a-58d385a7bc34",
+          "rightsStatement": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future.",
+          "rightsStatementURI": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+        }
+      ]
+    }
+  }
+}
