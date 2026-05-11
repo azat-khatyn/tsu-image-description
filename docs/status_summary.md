@@ -59,9 +59,9 @@ NYPL картинки используются как retrieval-пул (толь
 | BLIP-base | minimal (E-16b) | 0.266 | 0.14 | 0.43 | 0.58 |
 | BLIP-base | caption_only (E-16c) | 0.254 | 0.15 | 0.42 | 0.57 |
 | BLIP-large | full (E-1) | 0.288 | 0.21 | 0.42 | 0.49 |
-| BLIP-large | full −theme −mood (E-1+E-16) | **0.298 ←** | 0.24 | 0.48 | 0.61 |
+| BLIP-large | full −theme −mood (E-1+E-16) | **0.298** | 0.24 | 0.48 | 0.61 |
 | BLIP-large | minimal (E-1+E-16b) | 0.285 | 0.26 | 0.50 | 0.60 |
-| BLIP-large | caption_only (E-1+E-16c) | 0.274 | **0.27 ←** | **0.51 ←** | **0.63 ←** |
+| BLIP-large | caption_only (E-1+E-16c) | 0.274 | **0.27** | **0.51 ** | **0.63** |
 
 Все эксперименты значимы vs baseline по CLIPScore (p < 0.001, paired bootstrap).
 
