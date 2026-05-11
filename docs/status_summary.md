@@ -9,8 +9,9 @@
 ## 1. Baseline (исходный пайплайн)
 
 ```
-Image ─► BLIP-base ─► caption_en ─► MarianMT ─► caption_ru ──┐
-        SigLIP zero-shot ─► {image_type, style, theme, mood} ─┴► DescriptionBuilder (template) ─► archive_description_ru
+Image --> BLIP-base -->  caption_en --> MarianMT --> caption_ru ──┐
+        
+          SigLIP zero-shot --> {image_type, style, theme, mood} -->  DescriptionBuilder (template) ─► archive_description_ru
 ```
 
 
