@@ -2,10 +2,10 @@ import json
 import random
 import os
 
-INPUT_PATH = "data/nypl/capfilt_filtered_v2.jsonl"
+INPUT_PATH = "data/nypl/splits/capfilt_filtered_v2.jsonl"
 
-TRAIN_OUT = "data/nypl/train_v2.json"
-VAL_OUT = "data/nypl/val_v2.json"
+TRAIN_OUT = "data/nypl/splits/train_v2.json"
+VAL_OUT = "data/nypl/splits/val_v2.json"
 
 VAL_SIZE = 0.1
 

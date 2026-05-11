@@ -9,8 +9,8 @@ import os
 
 DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
 
-TRAIN_PATH = "data/nypl/train_v1.json"
-VAL_PATH = "data/nypl/val_v1.json"
+TRAIN_PATH = "data/nypl/splits/train_v1.json"
+VAL_PATH = "data/nypl/splits/val_v1.json"
 
 OUTPUT_DIR = "models"
 EXPERIMENT_NAME = "blip_caplift_v5_lora"

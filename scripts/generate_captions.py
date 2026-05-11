@@ -10,8 +10,8 @@ model = BlipForConditionalGeneration.from_pretrained(
     "Salesforce/blip-image-captioning-base"
 ).to(DEVICE)
 
-INPUT = "data/nypl/nypl_train_ready.jsonl"
-OUTPUT = "data/nypl/capfilt_raw.jsonl"
+INPUT = "data/nypl/splits/nypl_train_ready.jsonl"
+OUTPUT = "data/nypl/splits/capfilt_raw.jsonl"
 
 
 def generate_caption(image_path):

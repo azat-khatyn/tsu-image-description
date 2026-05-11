@@ -14,8 +14,8 @@ model = model.to(DEVICE).eval()
 
 tokenizer = open_clip.get_tokenizer("ViT-B-32")
 
-INPUT = "data/nypl/capfilt_raw.jsonl"
-OUTPUT = "data/nypl/capfilt_filtered_v2.jsonl"
+INPUT = "data/nypl/splits/capfilt_raw.jsonl"
+OUTPUT = "data/nypl/splits/capfilt_filtered_v2.jsonl"
 
 THRESHOLD = 0.3  # можно варьировать
 

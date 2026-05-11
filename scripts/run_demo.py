@@ -1,5 +1,8 @@
 import argparse
 import json
+import sys
+
+sys.path.insert(0, "src")
 
 from tsu_image_description.pipeline import ArchiveDescriptionPipeline
 

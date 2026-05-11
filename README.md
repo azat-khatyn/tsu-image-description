@@ -143,31 +143,58 @@ JSON-результат
 
 ```text
 tsu-image-description/
-├── app/
-│   ├── api/                    # FastAPI endpoints и схемы
-│   │   ├── main.py
-│   │   └── schemas.py
-│   ├── core/                   # конфигурация и служебные модули
-│   ├── services/               # обвязка инференса и работа с файлами
-│   └── ui/
-│       └── index.html          # web UI
+├── app/                            # FastAPI приложение (API + UI)
+│   ├── api/                        # endpoints, схемы
+│   ├── core/                       # конфигурация
+│   ├── services/                   # обвязка инференса
+│   └── ui/index.html               # web UI
+│
+├── src/tsu_image_description/      # библиотека (pipeline и компоненты)
+│   ├── __init__.py
+│   ├── pipeline.py
+│   ├── models.py                   # BLIP CaptionGenerator + MarianMT Translator
+│   ├── siglip_metadata_extractor.py
+│   ├── theme_inference.py
+│   └── description_builder.py
+│
+├── scripts/                        # entry-point скрипты
+│   ├── evaluate.py                 # triad-метрики (CLIPScore_RU + R@k + ...)
+│   ├── eval_stats.py               # bootstrap CI + paired test
+│   ├── llm_judge.py                # LLM-as-judge оценка
+│   ├── run_demo.py                 # инференс на одной картинке
+│   ├── train_blip.py               # full fine-tune BLIP на NYPL
+│   ├── train_blip_lora.py          # LoRA fine-tune BLIP
+│   ├── prepare_splits.py           # train/val split из CapFilt-данных
+│   ├── generate_captions.py        # BLIP self-caption для CapFilt
+│   ├── filter_captions.py          # CLIP-фильтр для CapFilt
+│   └── preload_models.py
 │
 ├── data/
-│   ├── images/                 # примеры изображений
-│   └── eval/                   # контрольный набор и references
+│   ├── eval/                       # eval set (20 открыток + references)
+│   │   ├── images/                 # postcard_1.jpg … postcard_20.jpg (в git)
+│   │   ├── references.jsonl
+│   │   └── results/
+│   │       ├── final/              # baseline + per-experiment финалы (в git)
+│   │       └── *                   # промежуточные результаты (gitignored)
+│   └── nypl/                       # NYPL training data (gitignored)
+│       ├── images/                 # 6 655 изображений NYPL
+│       └── splits/                 # train_v*.json / val_v*.json / capfilt_*
 │
-├── src/
-│   ├── run_demo.py             # локальный запуск пайплайна
-│   ├── evaluate.py             # расчет метрик
-│   └── tsu_image_description/
-│       ├── __init__.py
-│       ├── models.py
-│       ├── pipeline.py
-│       ├── siglip_metadata_extractor.py
-│       ├── theme_inference.py
-│       └── description_builder.py
+├── notebooks/                      # анализ embedding'ов и сравнений
+│   ├── pca_tsne_image_caption.ipynb
+│   ├── embeddings_exploration.ipynb
+│   └── pairwise_comparison.ipynb
 │
-├── mounted_data/               # примонтированные изображения для Docker
+├── docs/                           # план + лог экспериментов
+│   ├── experiments.md              # план тезисных экспериментов (E-1 … E-9)
+│   ├── experiments_log.md          # текущий статус I-x и E-x
+│   └── llm_judge_rubric.md         # рубрика для LLM-as-judge
+│
+├── demo/screenshots/               # скриншоты для README
+├── mounted_data/                   # примонтированные изображения для Docker
+├── models/                         # сохранённые модели (gitignored)
+├── hf_cache/                       # HuggingFace кеш (gitignored)
+│
 ├── requirements.txt
 ├── docker-compose.yml
 ├── Dockerfile

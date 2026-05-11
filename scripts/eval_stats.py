@@ -10,8 +10,8 @@
 Использование как CLI на готовых per-item метриках:
 
     python scripts/eval_stats.py \
-        --baseline data/eval/results/metrics_triad_v1.json \
-        --candidate data/eval/results/metrics_triad_v2.json \
+        --baseline data/eval/results/final/metrics_triad_baseline.json \
+        --candidate data/eval/results/final/metrics_triad_E-16_drop_theme.json \
         --metric CLIPScore_RU_archive_ru
 """
 

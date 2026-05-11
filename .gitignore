@@ -7,11 +7,31 @@ hf_cache/
 .idea/
 .python-version
 models/
+
+# Images: ignore by default, but keep the 20-image eval reference set
+# and demo screenshots
 *.png
+*.jpg
 !demo/
 !demo/screenshots/
 !demo/screenshots/*.png
-*.jpg
+!data/eval/images/
+!data/eval/images/*.jpg
+
+# Generated training data (regenerable via scripts/prepare_splits.py,
+# generate_captions.py, filter_captions.py)
+data/nypl/splits/
+data/nypl/images/
+
+# Eval outputs in data/eval/results/: ignore loose JSON / PNG / NPZ at the
+# top level; only data/eval/results/final/ is tracked (baseline + per-experiment finals).
+data/eval/results/*.json
+data/eval/results/*.png
+data/eval/results/*.npz
+
+# Runtime / docker mounts
+mounted_data/
+tmp/
 
 # C extensions
 *.so

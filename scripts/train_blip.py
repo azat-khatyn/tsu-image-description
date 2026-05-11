@@ -46,8 +46,8 @@ def train():
     processor = BlipProcessor.from_pretrained(model_name)
     model = BlipForConditionalGeneration.from_pretrained(model_name).to(DEVICE)
 
-    train_ds = PostcardDataset("data/nypl/train_v2.json", processor)
-    val_ds = PostcardDataset("data/nypl/val_v2.json", processor)
+    train_ds = PostcardDataset("data/nypl/splits/train_v2.json", processor)
+    val_ds = PostcardDataset("data/nypl/splits/val_v2.json", processor)
 
     train_loader = DataLoader(train_ds, batch_size=4, shuffle=True)
     val_loader = DataLoader(val_ds, batch_size=4)

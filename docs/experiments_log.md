@@ -14,7 +14,7 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 - **Статус:** DONE (2026-05-10)
 - **Цель:** интегрировать multilingual CLIP scorer (`M-CLIP/XLM-Roberta-Large-Vit-B-32`) в `scripts/evaluate.py`. Image encoder — open_clip ViT-B-32 OpenAI (общий с M-CLIP).
 - **Реализация:** прямая загрузка весов через `huggingface_hub` (минуя пакет `multilingual-clip`, который не работает с новыми transformers — конфликт meta-device init и nested `from_pretrained`). Custom encoder в `scripts/evaluate.py:MCLIPTextEncoder`.
-- **Артефакт:** `scripts/evaluate.py`, `data/eval/results/metrics_triad_v1.json`.
+- **Артефакт:** `scripts/evaluate.py`, `data/eval/results/final/metrics_triad_baseline.json`.
 
 ### I-2: Switch canonical metric to archive_description_ru
 
@@ -88,7 +88,7 @@ CLIPScore_RU_reference_ru     : 0.309
 Latency mean                  : 0.70 s
 ```
 
-Результат: см. `data/eval/results/metrics_triad_v1.json`.
+Результат: см. `data/eval/results/final/metrics_triad_baseline.json`.
 
 **Главное наблюдение:** под M-CLIP archive_description (0.325) выше reference (0.309) и выше caption_ru (0.301). Под старым EN-CLIP archive был ≈ 0.20 и казался ниже всех. Метрика была неправильной.
 

@@ -55,8 +55,8 @@ def parse_args():
     parser.add_argument(
         "--output",
         type=str,
-        default="data/eval/results/metrics_triad_v1.json",
-        help="Path to output metrics JSON",
+        default="data/eval/results/metrics_triad_run.json",
+        help="Path to output metrics JSON. For tracked artifacts use data/eval/results/final/.",
     )
     parser.add_argument(
         "--drop-theme",
