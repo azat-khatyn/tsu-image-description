@@ -2,6 +2,10 @@ from typing import Dict
 
 
 class DescriptionBuilder:
+    def __init__(self, *, include_theme: bool = True, include_mood: bool = True):
+        self.include_theme = include_theme
+        self.include_mood = include_mood
+
     def build(self, result: Dict) -> Dict:
         caption_ru = result["caption"]["ru"]
         metadata = result["metadata"]
@@ -74,13 +78,15 @@ class DescriptionBuilder:
 
         parts.append(f"На изображении: {caption_ru}.")
 
-        if theme_ru:
+        if self.include_theme and theme_ru:
             parts.append(f"Предположительно, это {theme_ru}.")
-        if mood_ru:
+        if self.include_mood and mood_ru:
             parts.append(f"Общее настроение изображения можно охарактеризовать как {mood_ru}.")
 
         archive_description = " ".join(parts)
 
+        # search_text всегда содержит все доступные теги — это поисковый поток,
+        # не пользовательское описание; галлюцинации в нём вредят меньше.
         search_terms = []
         if image_type_field.get("confident"):
             search_terms.append(image_type_ru)

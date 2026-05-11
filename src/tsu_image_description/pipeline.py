@@ -43,12 +43,12 @@ from .description_builder import DescriptionBuilder
 
 
 class ArchiveDescriptionPipeline:
-    def __init__(self, model_path=None):
+    def __init__(self, model_path=None, *, builder_kwargs=None):
         self.caption_generator = CaptionGenerator(model_path=model_path)
         self.translator = Translator()
         self.metadata_extractor = SigLIPMetadataExtractor()
         self.theme_inferencer = ThemeInferencer()
-        self.description_builder = DescriptionBuilder()
+        self.description_builder = DescriptionBuilder(**(builder_kwargs or {}))
 
     def run(self, image_path: str) -> dict:
         caption_en = self.caption_generator.generate(image_path)
