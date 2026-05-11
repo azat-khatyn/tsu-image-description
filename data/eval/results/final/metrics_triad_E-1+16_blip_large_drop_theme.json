@@ -1,0 +1,410 @@
+{
+  "summary": {
+    "num_examples": 20,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "Salesforce/blip-image-captioning-large",
+      "builder_kwargs": {
+        "include_theme": false,
+        "include_mood": false
+      }
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.29407461658120154,
+      "CLIPScore_RU_caption_ru": 0.3076712921261787,
+      "CLIPScore_RU_archive_ru": 0.3341047167778015,
+      "CLIPScore_RU_reference_ru": 0.30870684757828715
+    },
+    "retrieval": {
+      "n_pool": 20,
+      "i2t": {
+        "R@1": 0.9,
+        "R@5": 0.95,
+        "R@10": 1.0
+      },
+      "t2i": {
+        "R@1": 0.9,
+        "R@5": 0.95,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.35,
+      "mean_rank_t2i": 1.5
+    },
+    "latency": {
+      "mean_sec": 0.9841895818710327,
+      "images_per_sec": 1.0160644030583115
+    },
+    "notes": {
+      "I-1": "M-CLIP integrated; primary metric switched to CLIPScore_RU(archive).",
+      "I-2": "archive_description_ru declared as primary; old metric kept as back-compat.",
+      "I-4": "bootstrap CI implemented in scripts/eval_stats.py (not invoked here)",
+      "I-5": "retrieval R@1 / R@5 over eval pool computed below"
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "caption_en": "there is a black and white photo of a forest with trees",
+      "caption_ru": "Есть черно-белая фотография леса с деревьями.",
+      "archive_ru": "Фотография в стиле черно-белая фотография. На изображении: Есть черно-белая фотография леса с деревьями..",
+      "reference_ru": "Сосновый лес",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3177242875099182,
+        "CLIPScore_RU_caption_ru": 0.32939356565475464,
+        "CLIPScore_RU_archive_ru": 0.32204166054725647,
+        "CLIPScore_RU_reference_ru": 0.30132925510406494
+      },
+      "latency_sec": 1.4579310417175293,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "caption_en": "painting of a group of people in a snowy forest with horses",
+      "caption_ru": "Картина группы людей в снежном лесу с лошадьми",
+      "archive_ru": "Фотография в стиле живопись. На изображении: Картина группы людей в снежном лесу с лошадьми.",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3375818133354187,
+        "CLIPScore_RU_caption_ru": 0.3310060501098633,
+        "CLIPScore_RU_archive_ru": 0.34356313943862915,
+        "CLIPScore_RU_reference_ru": 0.3090788722038269
+      },
+      "latency_sec": 1.1002180576324463,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "caption_en": "arafed view of a river with a bridge and buildings in the background",
+      "caption_ru": "Вид на реку с мостом и зданиями на заднем плане",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Вид на реку с мостом и зданиями на заднем плане.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2672896385192871,
+        "CLIPScore_RU_caption_ru": 0.310038298368454,
+        "CLIPScore_RU_archive_ru": 0.30666667222976685,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 1.0286049842834473,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "caption_en": "a painting of a young girl holding a cat in her arms",
+      "caption_ru": "рисунок молодой девушки, держащей кошку на руках.",
+      "archive_ru": "Фотография в стиле живопись. На изображении: рисунок молодой девушки, держащей кошку на руках..",
+      "reference_ru": "Девочка с лукошком.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30439287424087524,
+        "CLIPScore_RU_caption_ru": 0.31861719489097595,
+        "CLIPScore_RU_archive_ru": 0.32661697268486023,
+        "CLIPScore_RU_reference_ru": 0.28499191999435425
+      },
+      "latency_sec": 0.8707170486450195,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "caption_en": "there is a man riding a reindeer with a dog on his back",
+      "caption_ru": "Есть человек, который катается на оленях с собакой на спине.",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Есть человек, который катается на оленях с собакой на спине..",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.313271701335907,
+        "CLIPScore_RU_caption_ru": 0.31358084082603455,
+        "CLIPScore_RU_archive_ru": 0.3600192666053772,
+        "CLIPScore_RU_reference_ru": 0.340998113155365
+      },
+      "latency_sec": 1.018467664718628,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "caption_en": "arafed ship in the water with a lot of smoke coming out of it",
+      "caption_ru": "Арабы в воде, и из нее выпадает много дыма.",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Арабы в воде, и из нее выпадает много дыма..",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27343958616256714,
+        "CLIPScore_RU_caption_ru": 0.24172654747962952,
+        "CLIPScore_RU_archive_ru": 0.2908230125904083,
+        "CLIPScore_RU_reference_ru": 0.30421382188796997
+      },
+      "latency_sec": 1.164024829864502,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "caption_en": "there is a painting of a rose on a postcard with a lady bug",
+      "caption_ru": "Есть картина розы на открытке с дамским жучком.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Есть картина розы на открытке с дамским жучком..",
+      "reference_ru": "Розы расцветают...",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3114601969718933,
+        "CLIPScore_RU_caption_ru": 0.3092252314090729,
+        "CLIPScore_RU_archive_ru": 0.30664175748825073,
+        "CLIPScore_RU_reference_ru": 0.29505568742752075
+      },
+      "latency_sec": 1.0860090255737305,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "caption_en": "an old postcard with a picture of a branch of a tree and a flower",
+      "caption_ru": "старая открытка с картинкой ветки дерева и цветка",
+      "archive_ru": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: старая открытка с картинкой ветки дерева и цветка.",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33735185861587524,
+        "CLIPScore_RU_caption_ru": 0.37115609645843506,
+        "CLIPScore_RU_archive_ru": 0.34001296758651733,
+        "CLIPScore_RU_reference_ru": 0.3077434301376343
+      },
+      "latency_sec": 0.9790089130401611,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "caption_en": "arafed woman in kimono sitting in front of a mirror",
+      "caption_ru": "Женщина в кимоно, сидящая перед зеркалом",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Женщина в кимоно, сидящая перед зеркалом.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3427559733390808,
+        "CLIPScore_RU_caption_ru": 0.36818408966064453,
+        "CLIPScore_RU_archive_ru": 0.38497400283813477,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 0.9063401222229004,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "caption_en": "three different colored prints of a woman with flowers and fruit",
+      "caption_ru": "три различных цветных отпечатка женщины с цветами и фруктами",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: три различных цветных отпечатка женщины с цветами и фруктами.",
+      "reference_ru": "Изображение цветов и девочки",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25081467628479004,
+        "CLIPScore_RU_caption_ru": 0.24226783215999603,
+        "CLIPScore_RU_archive_ru": 0.2374226152896881,
+        "CLIPScore_RU_reference_ru": 0.23262850940227509
+      },
+      "latency_sec": 0.9106988906860352,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 10
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "caption_en": "there is a christmas card with a box and holly leaves",
+      "caption_ru": "Есть рождественская открытка с коробкой и листьями Холли.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Есть рождественская открытка с коробкой и листьями Холли..",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2946935296058655,
+        "CLIPScore_RU_caption_ru": 0.3231106400489807,
+        "CLIPScore_RU_archive_ru": 0.3641490936279297,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 0.9392859935760498,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "caption_en": "a close up of a woman holding a candle in a picture frame",
+      "caption_ru": "Закрытая женщиной, держащей свечу в фоторамке",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Закрытая женщиной, держащей свечу в фоторамке.",
+      "reference_ru": "Девушка держит свечу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3025990128517151,
+        "CLIPScore_RU_caption_ru": 0.3059651255607605,
+        "CLIPScore_RU_archive_ru": 0.3281812369823456,
+        "CLIPScore_RU_reference_ru": 0.29088130593299866
+      },
+      "latency_sec": 0.9726431369781494,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "caption_en": "there are three children standing in the snow with a christmas tree",
+      "caption_ru": "Трое детей стоят в снегу с рождественским деревом.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Трое детей стоят в снегу с рождественским деревом..",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2943120002746582,
+        "CLIPScore_RU_caption_ru": 0.32262909412384033,
+        "CLIPScore_RU_archive_ru": 0.3804771900177002,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 0.9330849647521973,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "caption_en": "there is a picture of a couple kissing under a christmas tree",
+      "caption_ru": "Есть фотография пары поцелуев под рождественским деревом.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Есть фотография пары поцелуев под рождественским деревом..",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2681783437728882,
+        "CLIPScore_RU_caption_ru": 0.2627750039100647,
+        "CLIPScore_RU_archive_ru": 0.3310154676437378,
+        "CLIPScore_RU_reference_ru": 0.3731614649295807
+      },
+      "latency_sec": 0.8707277774810791,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "caption_en": "there is a bird sitting on a branch with holly leaves",
+      "caption_ru": "Там птица сидит на ветке с листьями Холли.",
+      "archive_ru": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Там птица сидит на ветке с листьями Холли..",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2766094207763672,
+        "CLIPScore_RU_caption_ru": 0.2954641580581665,
+        "CLIPScore_RU_archive_ru": 0.3615630269050598,
+        "CLIPScore_RU_reference_ru": 0.2770371735095978
+      },
+      "latency_sec": 0.9253897666931152,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "caption_en": "arafed dog standing in the snow with other dogs",
+      "caption_ru": "Арафированная собака, стоящая в снегу с другими собаками",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Арафированная собака, стоящая в снегу с другими собаками.",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2621583342552185,
+        "CLIPScore_RU_caption_ru": 0.293454110622406,
+        "CLIPScore_RU_archive_ru": 0.3552512228488922,
+        "CLIPScore_RU_reference_ru": 0.29683560132980347
+      },
+      "latency_sec": 0.9020202159881592,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "caption_en": "arafed pagoda in the middle of a city with a lot of people",
+      "caption_ru": "Пагода в центре города с множеством людей",
+      "archive_ru": "Открытка в стиле черно-белая фотография. На изображении: Пагода в центре города с множеством людей.",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25729504227638245,
+        "CLIPScore_RU_caption_ru": 0.29002392292022705,
+        "CLIPScore_RU_archive_ru": 0.3548617959022522,
+        "CLIPScore_RU_reference_ru": 0.3548523187637329
+      },
+      "latency_sec": 0.8956131935119629,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "caption_en": "a black and white drawing of a man with a mustache",
+      "caption_ru": "черно-белый рисунок человека с усами",
+      "archive_ru": "Фотография в стиле рисунок. На изображении: черно-белый рисунок человека с усами.",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24517686665058136,
+        "CLIPScore_RU_caption_ru": 0.2449156492948532,
+        "CLIPScore_RU_archive_ru": 0.2532372772693634,
+        "CLIPScore_RU_reference_ru": 0.3040972352027893
+      },
+      "latency_sec": 0.8633532524108887,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "caption_en": "there are two children riding a sled down a snowy hill",
+      "caption_ru": "Двое детей ездят на санях вниз по снегопаду.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Двое детей ездят на санях вниз по снегопаду..",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3137909471988678,
+        "CLIPScore_RU_caption_ru": 0.3128162920475006,
+        "CLIPScore_RU_archive_ru": 0.36083370447158813,
+        "CLIPScore_RU_reference_ru": 0.34150415658950806
+      },
+      "latency_sec": 0.919238805770874,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "caption_en": "arafed picture of a child in a colorful outfit holding flowers",
+      "caption_ru": "арафированная фотография ребенка в цветном наряде с цветами",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: арафированная фотография ребенка в цветном наряде с цветами.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.310596227645874,
+        "CLIPScore_RU_caption_ru": 0.3670760989189148,
+        "CLIPScore_RU_archive_ru": 0.3737422525882721,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 0.9404139518737793,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

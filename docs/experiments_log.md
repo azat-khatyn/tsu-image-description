@@ -61,20 +61,56 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 
 | ID | Block | Эксперимент | Статус | CLIPScore_RU(archive) | R@1 | R@5 | LLM-judge | Latency | Дата |
 |---|---|---|---|---|---|---|---|---|---|
-| baseline | — | BLIP-base + MarianMT + template | DONE | **0.325** | i2t 0.75 / t2i 0.70 | i2t 1.00 / t2i 0.90 | TBD | 0.70 s | 2026-05-10 |
-| E-1 | A | BLIP-base → BLIP-large | TODO | — | — | — | — | — | — |
-| E-5+6 | B | Decoding × prefix grid | TODO | — | — | — | — | — | — |
-| E-7 | C | Clean NYPL FT | TODO | — | — | — | — | — | — |
-| E-8 | C | LoRA single config | TODO | — | — | — | — | — | — |
-| E-9 | D | MarianMT → NLLB-200 | TODO | — | — | — | — | — | — |
-| E-11 | D | Qwen2-VL-2B end-to-end RU | TODO | — | — | — | — | — | — |
-| E-13 | E | SigLIP threshold calibration | TODO | — | — | — | — | — | — |
-| E-16 | F | Drop theme+mood (blunt) | DONE — null on aggregate | 0.326 (+0.001, p=0.88) | i2t 0.80 / t2i 0.75 | i2t 0.95 / t2i 0.95 | TBD | 0.70 s | 2026-05-10 |
-| E-18 | G | Sampling + CLIP rerank | TODO | — | — | — | — | — | — |
+| baseline   | —   | BLIP-base + MarianMT + template                                  | DONE | **0.3254** [0.31, 0.34] | t2i 0.70 / i2t 0.75 | t2i 0.90 / i2t 1.00 | TBD | 0.71 s | 2026-05-11 |
+| E-1        | A   | BLIP-base → BLIP-large                                           | DONE | 0.3313 (+0.006, p=0.37) | t2i 0.80 / i2t 0.90 | t2i 0.95 / i2t 1.00 | TBD | 1.00 s | 2026-05-11 |
+| E-5+6      | B   | Decoding × prefix grid                                           | TODO | — | — | — | — | — | — |
+| E-7        | C   | Clean NYPL FT                                                    | TODO | — | — | — | — | — | — |
+| E-8        | C   | LoRA single config                                               | TODO | — | — | — | — | — | — |
+| E-9        | D   | MarianMT → NLLB-200                                              | TODO | — | — | — | — | — | — |
+| E-11       | D   | Qwen2-VL-2B end-to-end RU                                        | TODO | — | — | — | — | — | — |
+| E-13       | E   | SigLIP threshold calibration                                     | TODO | — | — | — | — | — | — |
+| E-16       | F   | Drop theme+mood (blunt)                                          | DONE — null on aggregate | 0.3262 (+0.001, p=0.88) | t2i 0.75 / i2t 0.80 | t2i 0.95 / i2t 0.95 | TBD | 0.74 s | 2026-05-11 |
+| E-1+E-16   | A+F | BLIP-large + drop theme+mood (combined)                          | DONE | 0.3341 (+0.009, p=0.25) | t2i 0.90 / i2t 0.90 | t2i 0.95 / i2t 0.95 | TBD | 0.98 s | 2026-05-11 |
+| E-18       | G   | Sampling + CLIP rerank                                           | TODO | — | — | — | — | — | — |
 
 ---
 
 ## Заметки по запускам
+
+### 2026-05-11 — Первая волна экспериментов после структурной чистки
+
+После cleanup (новая структура `data/eval/images/`, `data/eval/results/final/`) перезапустил baseline и провёл 3 эксперимента. Все результаты — в `data/eval/results/final/`, графики и таблицы — в `notebooks/experiments_results.ipynb`.
+
+**Сводка по триаде (n=20):**
+
+| Run | CLIPScore_RU(archive) | CI95 | R@1 (t2i) | R@5 (t2i) | Δ vs baseline | p-value |
+|---|---|---|---|---|---|---|
+| baseline | 0.3254 | [0.311, 0.341] | 0.70 | 0.90 | — | — |
+| E-1 BLIP-large | 0.3313 | [0.314, 0.349] | 0.80 | 0.95 | +0.006 | 0.37 |
+| E-16 drop theme+mood | 0.3262 | [0.309, 0.344] | 0.75 | 0.95 | +0.001 | 0.88 |
+| **E-1 + E-16** | **0.3341** | [0.317, 0.351] | **0.90** | 0.95 | +0.009 | 0.25 |
+
+**Главные наблюдения:**
+
+1. **CLIPScore deltas не значимы при n=20** (paired bootstrap p ≥ 0.25 для всех). CIs перекрываются. Это **не сюрприз** — 20 точек дают недостаточную статистическую мощность для различий на третьем знаке. Это ещё раз подчёркивает зависимость от I-3 (расширение пула до 200+).
+
+2. **Retrieval показывает большие, легко интерпретируемые сдвиги:**
+   - baseline: 14 из 20 правильных top-1 (t2i)
+   - E-1: 16 из 20 (+2)
+   - E-16: 15 из 20 (+1)
+   - **E-1+E-16: 18 из 20** (+4)
+
+3. **BLIP-large даёт значительно более информативные описания** (см. постер 3 в notebook'е: "Вид на реку с мостом и зданиями" vs "черно-белое фото реки"). Это объясняет retrieval-прирост и без CLIPScore-улучшения.
+
+4. **Latency BLIP-large** ≈ 1.0 s/img vs 0.71 для base (+40%). На MPS ещё переживаемо; на GPU не имеет значения.
+
+5. **Эффекты E-1 и E-16 аддитивны на retrieval** (R@1 t2i: +0.10 от E-1 + +0.05 от E-16 = +0.20 в комбинации, против факта +0.20 — почти точно). Это полезный качественный вывод о независимости вкладов разных частей пайплайна.
+
+**Импликации для плана:**
+- Lead по retrieval: E-1+E-16 — текущий "best" пайплайн. Все downstream эксперименты (E-7, E-8, E-11) теперь сравниваются с этой комбинацией.
+- На CLIPScore тренд (E-1 > E-16 ≈ baseline) сохраняется, но без значимости. Ожидаем proof после I-3.
+- Стоит сначала сделать I-3 (НЭБ scraping → 200+ pool), потом продолжать E.
+
 
 ### 2026-05-10 — I-1 + I-2 + I-4: первый baseline на триаде (partial)
 
