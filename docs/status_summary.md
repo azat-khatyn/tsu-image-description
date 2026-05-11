@@ -26,7 +26,7 @@ Image --> BLIP-base -->  caption_en --> MarianMT --> caption_ru ──┐
 | **Поисковость** (searchability) | `Recall@1, @5, @10` text→image по пулу n=220                                          | Реализовано, используется                       |
 | **Стиль / полнота** (style / completeness) | LLM-as-judge по фиксированной рубрике (например, Claude Sonnet)                       | Реализовано, не запускалось (настроить API key) |
 
-**Дополнительно:** bootstrap CI95, paired bootstrap p-value, BLIP-ITM (cross-check), BLEU/METEOR (стилевая близость, не точность), mean_rank, latency.
+**Дополнительно:** bootstrap CI95, paired bootstrap p-value, latency.
 
 ## 3. Пул изображений для evaluation
 
@@ -38,17 +38,19 @@ NYPL картинки используются как retrieval-пул (толь
 
 ## 4. План экспериментов (8 центральных)
 
-| Block | ID | Эксперимент | Статус            |
-|---|---|---|-------------------|
-| A | E-1 | BLIP-base → BLIP-large | Есть              |
-| B | E-5+6 | Beam grid × prefix prompt | Нет               |
+| Block | ID | Эксперимент | Статус           |
+|---|---|---|------------------|
+| A | E-1 | BLIP-base → BLIP-large | Есть             |
+| B | E-5+6 | Beam grid × prefix prompt | Нет              |
 | C | E-7 | Clean NYPL FT | Есть/Перепрогнать |
 | C | E-8 | LoRA single config | Есть/Перепрогнать |
-| D | E-9 | MarianMT → NLLB-200 | В процессе        |
-| D | E-11 | Qwen2-VL-2B end-to-end RU | Нет               |
+| D | E-9 | MarianMT → NLLB-200 | Есть             |
+| D | E-11 | Qwen2-VL-2B end-to-end RU | Нет              |
 | E | E-13 | SigLIP threshold calibration | Есть/Перепрогнать |
-| F | E-16 | Drop low-conf sentences (+ template-mode варианты) | Есть              |
-| G | E-18 | Sampling + CLIP rerank | Нет               |
+| F | E-16 | Drop low-conf sentences (+ template-mode варианты) | Есть             |
+| G | E-18 | Sampling + CLIP rerank | Нет              |
+
+* Beam search: в каждый момент имеется k параллельных гипотез (beams) и выбирается последовательность с лучшей суммарной вероятностью.
 
 ## 5.  Так же экспериментально прогнала пайплан для 8 вариантов конфигов (2 backbone × 4 template_mode) на n=220
 
