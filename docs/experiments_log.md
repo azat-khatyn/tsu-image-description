@@ -63,19 +63,29 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 |---|---|---|---|---|---|---|---|---|---|
 **Все запуски на n=220 пуле (20 РГБ + 200 NYPL).** Pool: `data/eval/pool_nypl.jsonl`. CLIPScore_RU(archive) через `M-CLIP/XLM-Roberta-Large-Vit-B-32`. Retrieval = text→image; случайный baseline R@1 = 1/220 ≈ 0.0045.
 
-| ID | Block | Эксперимент | Статус | CLIPScore_RU(archive) | R@1 (t2i) | R@5 (t2i) | Δ vs base | p | Latency |
-|---|---|---|---|---|---|---|---|---|---|
-| baseline   | —   | BLIP-base + MarianMT + template            | DONE  | **0.2804** [0.276, 0.284] | 0.159 | 0.377 | — | — | 0.72 s |
-| E-1        | A   | BLIP-base → BLIP-large                     | DONE  | 0.2883 [0.283, 0.294]     | 0.214 | 0.418 | +0.008 | **< 0.001** | 0.89 s |
-| E-16       | F   | Drop theme+mood (blunt)                    | DONE  | 0.2865 [0.282, 0.291]     | **0.141** ↓ | 0.405 | +0.006 | **< 0.001** | 0.71 s |
-| **E-1+E-16** | A+F | **BLIP-large + drop theme+mood (combined)** | DONE  | **0.2977** [0.293, 0.303] | **0.241** | **0.477** | **+0.017** | **< 0.001** | 0.89 s |
-| E-5+6      | B   | Decoding × prefix grid                     | TODO  | — | — | — | — | — | — |
-| E-7        | C   | Clean NYPL FT                              | TODO  | — | — | — | — | — | — |
-| E-8        | C   | LoRA single config                         | TODO  | — | — | — | — | — | — |
-| E-9        | D   | MarianMT → NLLB-200                        | TODO  | — | — | — | — | — | — |
-| E-11       | D   | Qwen2-VL-2B end-to-end RU                  | TODO  | — | — | — | — | — | — |
-| E-13       | E   | SigLIP threshold calibration               | TODO  | — | — | — | — | — | — |
-| E-18       | G   | Sampling + CLIP rerank                     | TODO  | — | — | — | — | — | — |
+**Factorial 2 backbone × 4 template_mode = 8 конфигов:**
+
+| Backbone | template_mode | CLIPScore_RU(archive) | R@1 | R@5 | R@10 | p vs base |
+|---|---|---|---|---|---|---|
+| BLIP-base  | full                  | **0.2804** [0.276, 0.284] | 0.159 | 0.377 | 0.464 | — |
+| BLIP-base  | full -theme -mood (E-16) | 0.2865 [0.282, 0.291] | 0.141 | 0.405 | 0.536 | <0.001 |
+| BLIP-base  | minimal (E-16b)       | 0.2663 [0.262, 0.270]     | 0.141 | 0.427 | 0.577 | <0.001 |
+| BLIP-base  | caption_only (E-16c)  | 0.2540 [0.250, 0.258]     | 0.145 | 0.423 | 0.573 | <0.001 |
+| BLIP-large | full (E-1)            | 0.2883 [0.283, 0.294]     | 0.214 | 0.418 | 0.491 | <0.001 |
+| BLIP-large | full -theme -mood (E-1+E-16) | **0.2977** [0.293, 0.303] | 0.241 | 0.477 | 0.605 | <0.001 |
+| BLIP-large | minimal (E-1+E-16b)   | 0.2848 [0.280, 0.290]     | 0.264 | 0.500 | 0.600 | <0.001 |
+| BLIP-large | caption_only (E-1+E-16c) | 0.2735 [0.268, 0.279]  | **0.268** | **0.505** | **0.632** | <0.001 |
+
+| Эксперимент по плану | Статус |
+|---|---|
+| baseline / E-1 / E-16 / E-1+E-16 (full template) | DONE |
+| E-16b / E-16c / E-1+E-16b / E-1+E-16c (template_mode варианты) | DONE |
+| E-5+6 (decoding × prefix grid) | TODO |
+| E-7 (clean NYPL FT), E-8 (LoRA) | TODO (нужен GPU) |
+| E-9 (MarianMT → NLLB-200) | TODO |
+| E-11 (Qwen2-VL-2B end-to-end RU) | TODO |
+| E-13 (SigLIP threshold calibration) | TODO |
+| E-18 (sampling + CLIP rerank) | TODO |
 
 **Подмножества внутри n=220 (CLIPScore_RU archive):**
 
@@ -89,6 +99,47 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 ---
 
 ## Заметки по запускам
+
+### 2026-05-11 (v3) — Template-mode factorial: главная находка о trade-off между faithfulness и searchability
+
+После того как первая n=220 волна показала, что **E-16 (drop theme+mood) вредит retrieval** при n=220 (хотя CLIPScore рос), решил проверить более радикальные варианты упрощения шаблона. Добавил параметр `template_mode` в `DescriptionBuilder`:
+
+- **full** (исходный): `<тип> в стиле <стиль>. На изображении: <caption>. Предположительно, это <тема>. Общее настроение <настроение>.`
+- **full -theme -mood** (E-16, уже было): `<тип> в стиле <стиль>. На изображении: <caption>.`
+- **minimal** (E-16b, новый): `На изображении: <caption>.`
+- **caption_only** (E-16c, новый): `<caption>` — без шаблона вообще
+
+Прогнал все 4 варианта на обоих backbone'ах (BLIP-base, BLIP-large). **Главная находка** — обратная корреляция между CLIPScore и retrieval при упрощении шаблона.
+
+**Числа на BLIP-large (best backbone), n=220:**
+
+| Template | CLIPScore | R@1 | R@5 | R@10 |
+|---|---|---|---|---|
+| full | 0.288 | 0.214 | 0.418 | 0.491 |
+| full -t -m | **0.298** ← max | 0.241 | 0.477 | 0.605 |
+| minimal | 0.285 | 0.264 | 0.500 | 0.600 |
+| caption_only | 0.274 | **0.268** | **0.505** | **0.632** ← max |
+
+**Объяснение trade-off'а.** Метрики оптимизируют разные вещи:
+
+- **CLIPScore_RU(archive)** — это **средняя alignment** между текстом и картинкой. Шаблонные фразы вроде "архивная открытка", "винтажная иллюстрация" дают альтернативный сигнал, который "тянет" CLIPScore вверх, даже если конкретно captioning неточный.
+- **Retrieval R@k** — это **relative ranking**. Шаблон делает все описания похожими в эмбеддинг-пространстве (одна и та же словесная "оправка" перед каждым caption'ом → сильный общий компонент в text-embedding'е) → разные открытки становятся хуже различимыми → ниже R@k.
+
+То есть **шаблон одновременно помогает faithfulness и вредит searchability**. Для use case архивного поиска searchability — главная цель. **Для тезиса это означает: оптимальный final-пайплайн — `caption_only`, а не "richest" шаблон.**
+
+**Доменное consistency:** trade-off одинаков на rgb anchor (n=20) и nypl pool (n=200) — это не артефакт NYPL-домена, это структурное свойство нашей шаблонной обвязки.
+
+**Что в итоге включает best-pipeline:**
+- BLIP-large для captioning
+- `caption_only` для DescriptionBuilder (только перевод caption на русский)
+- search_text-tags сохраняем отдельно (они не влияют на archive_description, но дают доп. сигнал для full-text-search в каталоге)
+
+**Импликации для плана:**
+- E-16 (наш изначальный "drop low-confidence sentences" эксперимент) **переосмыслен**: проблема не в "wrong sentences", а в **самом шаблоне как репрезентации**. Лучший fix — убрать шаблон, не калибровать его.
+- E-12 (LLM-based DescriptionBuilder) теперь смотрится **по-другому**: он может ввести **разнообразие фразирования** между описаниями, что разрешает trade-off (фразы разные → embedding'и разные → retrieval не страдает; одновременно текст содержательный → CLIPScore не падает). Это сильный кандидат **на следующий приоритет**.
+- E-13 (SigLIP calibration) становится **менее критичным** в свете caption_only winning — если template убираем, то и пороги калибровать незачем (только для search_text-tags).
+
+**Best system for thesis: BLIP-large + caption_only template** на retrieval; **BLIP-large + full-theme-mood** на CLIPScore. Имеет смысл показать ОБА в работе как "two different optimization targets" с явным обсуждением trade-off'а.
 
 ### 2026-05-11 (v2) — Расширение пула до n=220 (20 РГБ + 200 NYPL), все эксперименты значимы
 

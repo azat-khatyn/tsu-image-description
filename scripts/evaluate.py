@@ -68,12 +68,24 @@ def parse_args():
     parser.add_argument(
         "--drop-theme",
         action="store_true",
-        help="E-16: drop the 'Предположительно, это X' template sentence",
+        help="E-16: drop the 'Предположительно, это X' template sentence (full mode only)",
     )
     parser.add_argument(
         "--drop-mood",
         action="store_true",
-        help="E-16: drop the 'Общее настроение …' template sentence",
+        help="E-16: drop the 'Общее настроение …' template sentence (full mode only)",
+    )
+    parser.add_argument(
+        "--template-mode",
+        type=str,
+        choices=["full", "minimal", "caption_only"],
+        default="full",
+        help=(
+            "Template for archive_description: "
+            "'full' = current template, "
+            "'minimal' = 'На изображении: <caption>.', "
+            "'caption_only' = raw caption_ru only (E-16c)"
+        ),
     )
     return parser.parse_args()
 
@@ -310,11 +322,13 @@ def main():
 
     # Pipeline
     builder_kwargs = {
+        "template_mode": args.template_mode,
         "include_theme": not args.drop_theme,
         "include_mood": not args.drop_mood,
     }
     print(
         f"\n[INFO] Loading pipeline (finetuned={args.finetuned}, "
+        f"template_mode={builder_kwargs['template_mode']}, "
         f"include_theme={builder_kwargs['include_theme']}, "
         f"include_mood={builder_kwargs['include_mood']})..."
     )
