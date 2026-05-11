@@ -61,23 +61,71 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 
 | ID | Block | Эксперимент | Статус | CLIPScore_RU(archive) | R@1 | R@5 | LLM-judge | Latency | Дата |
 |---|---|---|---|---|---|---|---|---|---|
-| baseline   | —   | BLIP-base + MarianMT + template                                  | DONE | **0.3254** [0.31, 0.34] | t2i 0.70 / i2t 0.75 | t2i 0.90 / i2t 1.00 | TBD | 0.71 s | 2026-05-11 |
-| E-1        | A   | BLIP-base → BLIP-large                                           | DONE | 0.3313 (+0.006, p=0.37) | t2i 0.80 / i2t 0.90 | t2i 0.95 / i2t 1.00 | TBD | 1.00 s | 2026-05-11 |
-| E-5+6      | B   | Decoding × prefix grid                                           | TODO | — | — | — | — | — | — |
-| E-7        | C   | Clean NYPL FT                                                    | TODO | — | — | — | — | — | — |
-| E-8        | C   | LoRA single config                                               | TODO | — | — | — | — | — | — |
-| E-9        | D   | MarianMT → NLLB-200                                              | TODO | — | — | — | — | — | — |
-| E-11       | D   | Qwen2-VL-2B end-to-end RU                                        | TODO | — | — | — | — | — | — |
-| E-13       | E   | SigLIP threshold calibration                                     | TODO | — | — | — | — | — | — |
-| E-16       | F   | Drop theme+mood (blunt)                                          | DONE — null on aggregate | 0.3262 (+0.001, p=0.88) | t2i 0.75 / i2t 0.80 | t2i 0.95 / i2t 0.95 | TBD | 0.74 s | 2026-05-11 |
-| E-1+E-16   | A+F | BLIP-large + drop theme+mood (combined)                          | DONE | 0.3341 (+0.009, p=0.25) | t2i 0.90 / i2t 0.90 | t2i 0.95 / i2t 0.95 | TBD | 0.98 s | 2026-05-11 |
-| E-18       | G   | Sampling + CLIP rerank                                           | TODO | — | — | — | — | — | — |
+**Все запуски на n=220 пуле (20 РГБ + 200 NYPL).** Pool: `data/eval/pool_nypl.jsonl`. CLIPScore_RU(archive) через `M-CLIP/XLM-Roberta-Large-Vit-B-32`. Retrieval = text→image; случайный baseline R@1 = 1/220 ≈ 0.0045.
+
+| ID | Block | Эксперимент | Статус | CLIPScore_RU(archive) | R@1 (t2i) | R@5 (t2i) | Δ vs base | p | Latency |
+|---|---|---|---|---|---|---|---|---|---|
+| baseline   | —   | BLIP-base + MarianMT + template            | DONE  | **0.2804** [0.276, 0.284] | 0.159 | 0.377 | — | — | 0.72 s |
+| E-1        | A   | BLIP-base → BLIP-large                     | DONE  | 0.2883 [0.283, 0.294]     | 0.214 | 0.418 | +0.008 | **< 0.001** | 0.89 s |
+| E-16       | F   | Drop theme+mood (blunt)                    | DONE  | 0.2865 [0.282, 0.291]     | **0.141** ↓ | 0.405 | +0.006 | **< 0.001** | 0.71 s |
+| **E-1+E-16** | A+F | **BLIP-large + drop theme+mood (combined)** | DONE  | **0.2977** [0.293, 0.303] | **0.241** | **0.477** | **+0.017** | **< 0.001** | 0.89 s |
+| E-5+6      | B   | Decoding × prefix grid                     | TODO  | — | — | — | — | — | — |
+| E-7        | C   | Clean NYPL FT                              | TODO  | — | — | — | — | — | — |
+| E-8        | C   | LoRA single config                         | TODO  | — | — | — | — | — | — |
+| E-9        | D   | MarianMT → NLLB-200                        | TODO  | — | — | — | — | — | — |
+| E-11       | D   | Qwen2-VL-2B end-to-end RU                  | TODO  | — | — | — | — | — | — |
+| E-13       | E   | SigLIP threshold calibration               | TODO  | — | — | — | — | — | — |
+| E-18       | G   | Sampling + CLIP rerank                     | TODO  | — | — | — | — | — | — |
+
+**Подмножества внутри n=220 (CLIPScore_RU archive):**
+
+| Run | rgb (n=20, anchor) | nypl (n=200, pool) | all (n=220) |
+|---|---|---|---|
+| baseline | 0.3254 | 0.2759 | 0.2804 |
+| E-1 | 0.3313 | 0.2840 | 0.2883 |
+| E-16 | 0.3262 | 0.2825 | 0.2865 |
+| **E-1+E-16** | **0.3341** | **0.2940** | **0.2977** |
 
 ---
 
 ## Заметки по запускам
 
-### 2026-05-11 — Первая волна экспериментов после структурной чистки
+### 2026-05-11 (v2) — Расширение пула до n=220 (20 РГБ + 200 NYPL), все эксперименты значимы
+
+После того как первая волна (n=20) показала, что все Δ статистически неразличимы (p ≥ 0.25), расширил retrieval pool через семплирование 200 NYPL-открыток. Скрипт `scripts/sample_eval_pool.py` исключает изображения, присутствующие в `data/nypl/splits/*.json` (data leakage prevention для будущих E-7 / E-8). Сид = 42, файл — `data/eval/pool_nypl.jsonl`. Все 4 эксперимента перезапущены через `--pool` флаг.
+
+**Главные результаты на n=220 (вся таблица выше):**
+
+1. **Все три эксперимента значимы (p < 0.001)** по CLIPScore_RU(archive), в отличие от n=20. Это полностью оправдывает расширение пула.
+
+2. **E-1+E-16 (combined) — явный winner** по всем метрикам:
+   - CLIPScore_RU(archive): 0.2977 (vs baseline 0.2804, +0.017)
+   - Retrieval t2i R@1: 0.241 (vs 0.159, +0.082) — **на 51% выше относительно baseline**
+   - Latency: 0.89 s/img (vs 0.72) — приемлемо.
+
+3. **E-16 (drop theme+mood) сам по себе ВРЕДИТ retrieval на большом пуле** (R@1: 0.141 < 0.159 baseline), хотя CLIPScore aggregate растёт.
+   - Это **обратная картина** от n=20, где E-16 показывал R@1 = 0.75 (выше baseline 0.70).
+   - Объяснение: на n=20 пул мал, удаление theme/mood ещё не лишает описание discriminative power. На n=220 короткое описание ("Открытка в стиле X. На изображении: Y.") уже не различимо среди 219 дистракторов.
+   - **Методологический вывод:** retrieval на маленьком пуле обманывает. Без n ≥ 100 R@k нельзя серьёзно интерпретировать.
+
+4. **Эффекты E-1 и E-16 аддитивны на CLIPScore (+0.008 + +0.006 ≈ +0.017)**, но **не аддитивны на retrieval**: E-16 alone -0.018, E-1 alone +0.055, combined +0.082 → combined даже лучше суммы. Интерпретация:
+   - С BLIP-base короткими captions theme/mood часто несёт хоть какой-то discriminative сигнал даже когда категория неправильная — "праздничная сцена" привязывает текст к чему-то, что баланс рассрочка не выдерживает на больших пулах.
+   - С BLIP-large detailed captions theme/mood становится redundant noise, и его удаление чистит alignment.
+   - **Это качественный thesis-tier результат** о взаимодействии компонентов пайплайна, который без n=220 + полного A/B-факториала был бы скрыт.
+
+5. **Per-source consistency:** тренд rgb (n=20 anchor) vs nypl (n=200) идёт в одну сторону на каждом эксперименте, что подтверждает переносимость улучшений между доменами. Абсолютные числа на nypl ниже (~0.276–0.294 vs rgb ~0.325–0.334) — NYPL содержит более разнородный материал (trade cards, advertisements), не только открытки.
+
+**Qualitative example (biggest win, Δ = +0.136):**
+
+- Baseline: "Книгу с красной обложкой и черным титулом..." (BLIP-base hallucinated wrong content)
+- E-1+E-16: "На ней есть книга с постером турнира для гольфа." (BLIP-large saw the actual content correctly)
+
+**Импликации для плана:**
+- Прежний "drop low-confidence sentences" вывод (E-16 как простой fix) требует пересмотра. **E-13 (калибровка порогов) и E-1 как фундаментальный upgrade — теперь центральные**.
+- Lead-пайплайн для всех downstream экспериментов: **E-1+E-16 (BLIP-large + simple template)**, не baseline.
+- Следующие приоритеты: E-13 (калибровка), E-9 (NLLB-200 для перевода), E-11 (Qwen2-VL для архитектурного сравнения).
+
+### 2026-05-11 (v1) — Первая волна экспериментов после структурной чистки
 
 После cleanup (новая структура `data/eval/images/`, `data/eval/results/final/`) перезапустил baseline и провёл 3 эксперимента. Все результаты — в `data/eval/results/final/`, графики и таблицы — в `notebooks/experiments_results.ipynb`.
 

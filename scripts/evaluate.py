@@ -50,7 +50,14 @@ def parse_args():
         "--references",
         type=str,
         default="data/eval/references.jsonl",
-        help="Path to references JSONL (one item per line)",
+        help="Path to annotated references JSONL (one item per line, with reference_short_ru)",
+    )
+    parser.add_argument(
+        "--pool",
+        type=str,
+        default=None,
+        help="Optional path to additional retrieval pool JSONL (no reference_short_ru required). "
+             "Items are appended to --references for triad/retrieval evaluation.",
     )
     parser.add_argument(
         "--output",
@@ -288,6 +295,16 @@ def main():
     device = get_device()
 
     refs = load_references(args.references)
+    n_annotated = len(refs)
+
+    if args.pool:
+        pool_items = load_references(args.pool)
+        refs = refs + pool_items
+        print(f"[INFO] Loaded {n_annotated} annotated + {len(pool_items)} pool items "
+              f"= {len(refs)} total")
+    else:
+        print(f"[INFO] Loaded {n_annotated} annotated items")
+
     print(f"[INFO] Device: {device}")
     print(f"[INFO] Eval items: {len(refs)}")
 
@@ -375,6 +392,7 @@ def main():
         per_item.append(
             {
                 "image_path": image_path,
+                "source": item.get("source", "rgb"),
                 "caption_en": caption_en,
                 "caption_ru": caption_ru,
                 "archive_ru": archive_ru,
@@ -385,8 +403,13 @@ def main():
         )
 
     # Aggregate
-    def mean_of(key):
-        vals = [it["scores"][key] for it in per_item if it["scores"].get(key) is not None]
+    def mean_of(key, source_filter=None):
+        vals = [
+            it["scores"][key]
+            for it in per_item
+            if it["scores"].get(key) is not None
+            and (source_filter is None or it.get("source") == source_filter)
+        ]
         return mean(vals)
 
     # Retrieval R@k (I-5) — image ↔ archive_description_ru over the eval pool.
@@ -394,12 +417,26 @@ def main():
     for it, ranks in zip(per_item, retrieval["ranks"]):
         it["retrieval"] = ranks
 
+    # Per-source subset summaries (if mixed pool was used)
+    sources = sorted(set(it.get("source", "rgb") for it in per_item))
+    by_source = {}
+    for src in sources:
+        n_src = sum(1 for it in per_item if it.get("source") == src)
+        by_source[src] = {
+            "n": n_src,
+            "CLIPScore_RU_archive_ru": mean_of("CLIPScore_RU_archive_ru", src),
+            "CLIPScore_RU_caption_ru": mean_of("CLIPScore_RU_caption_ru", src),
+            "CLIPScore_EN_caption_en": mean_of("CLIPScore_EN_caption_en", src),
+        }
+
     summary = {
         "num_examples": len(refs),
         "primary_metric": "CLIPScore_RU_archive_ru",
         "config": {
             "finetuned": args.finetuned,
             "builder_kwargs": builder_kwargs,
+            "references_path": args.references,
+            "pool_path": args.pool,
         },
         "scorers": {
             "EN": "open_clip ViT-B-32 (openai)",
@@ -411,6 +448,7 @@ def main():
             "CLIPScore_RU_archive_ru": mean_of("CLIPScore_RU_archive_ru"),
             "CLIPScore_RU_reference_ru": mean_of("CLIPScore_RU_reference_ru"),
         },
+        "by_source": by_source,
         "retrieval": retrieval["aggregates"],
         "latency": {
             "mean_sec": total_time / len(refs) if refs else None,
