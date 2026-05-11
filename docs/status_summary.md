@@ -38,17 +38,16 @@ NYPL картинки используются как retrieval-пул (толь
 
 ## 4. План экспериментов (8 центральных)
 
-| Block | ID | Эксперимент | Статус           |
-|---|---|---|------------------|
-| A | E-1 | BLIP-base → BLIP-large | Есть             |
-| B | E-5+6 | Beam grid × prefix prompt | Нет              |
+| Block | ID | Эксперимент | Статус            |
+|---|---|---|-------------------|
+| A | E-1 | BLIP-base → BLIP-large | Есть              |
+| B | E-5+6 | Beam grid × prefix prompt | В процессе        |
 | C | E-7 | Clean NYPL FT | Есть/Перепрогнать |
 | C | E-8 | LoRA single config | Есть/Перепрогнать |
-| D | E-9 | MarianMT → NLLB-200 | Есть             |
-| D | E-11 | Qwen2-VL-2B end-to-end RU | Нет              |
+| D | E-9 | MarianMT → NLLB-200 | Есть              |
+| D | E-11 | Qwen2-VL-2B end-to-end RU | Нет               |
 | E | E-13 | SigLIP threshold calibration | Есть/Перепрогнать |
-| F | E-16 | Drop low-conf sentences (+ template-mode варианты) | Есть             |
-| G | E-18 | Sampling + CLIP rerank | Нет              |
+| F | E-16 | Drop low-conf sentences (+ template-mode варианты) | Есть              |
 
 * Beam search: в каждый момент имеется k параллельных гипотез (beams) и выбирается последовательность с лучшей суммарной вероятностью.
 
