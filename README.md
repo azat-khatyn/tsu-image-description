@@ -5,13 +5,12 @@
 
 ## Обзор
 
-Цифровые архивы и библиотеки (НЭБ, NYPL, РГБ и др.) содержат значительные объёмы художественных изображений — открыток, плакатов, гравюр, иллюстраций — для которых текстовое описание либо отсутствует, либо составлено вручную и непоследовательно. Это снижает полноту поиска, ухудшает качество индексации и затрудняет повторное использование материалов.
+Цифровые архивы и библиотеки содержат значительные объёмы художественных изображений — открыток, плакатов, гравюр, иллюстраций — для которых текстовое описание либо отсутствует, либо составлено вручную. Это снижает полноту поиска, ухудшает качество индексации и затрудняет повторное использование материалов.
 
-Цель работы — разработать программное обеспечение, которое по одному изображению автоматически генерирует:
-- содержательное caption-описание (на английском и русском языках),
-- структурированные семантические метаданные (тип материала, техника, сюжет, эпоха),
-- агрегированное архивное описание на русском языке,
-- поисковый текст с архивно-релевантными тегами.
+Цель работы – разработать программное обеспечение, которое по одному изображению автоматически генерирует:
+- содержательное описание (caption) (на английском и русском языках),
+- структурированные семантические метаданные (тип материала, техника, сюжет, и пр.),
+- агрегированное архивное описание на русском языке.
 
 ## Предложенный метод и архитектура
 
@@ -28,12 +27,10 @@
 |---|---|---|---|
 | 1 | `CaptionGenerator` | BLIP (`Salesforce/blip-image-captioning-large`) | Краткое английское caption-описание изображения |
 | 2 | `EnglishCaptionPostprocessor` | rule-based | Очистка артефактов BLIP (повторы, обрывы) |
-| 3 | `Translator` | MarianMT (`Helsinki-NLP/opus-mt-en-ru`) | Перевод caption EN → RU |
-| 4 | `TextPostprocessor` | rule-based | Нормализация русского caption (пунктуация, регистр, типичные ошибки перевода) |
-| 5 | `SigLIPMetadataExtractor` | SigLIP (`google/siglip-base-patch16-224`) | Zero-shot классификация по 4 осям: тип материала / техника / сюжет / настроение. Поддерживает версионируемые таксономии (`legacy_v1`, `archival_v2`) |
-| 6 | `ThemeInferencer` | rule-based | Семантическая агрегация и нормализация признаков с margin-confidence фильтрацией |
-| 7 | `DescriptionBuilder` | template-based | Сборка финального архивного описания и search_text по архивной грамматике |
-| 8 | `LLMRewriter` *(опционально)* | Vikhr-Nemo-12B-Instruct-R | Литературная переработка template-описания с сохранением фактологии |
+| 3 | `SigLIPMetadataExtractor` | SigLIP (`google/siglip-base-patch16-224`) | Zero-shot классификация по 4 осям: тип материала / техника / сюжет / настроение. Поддерживает версионируемые таксономии (`legacy_v1`, `archival_v2`) |
+| 4 | `ThemeInferencer` | rule-based | Семантическая агрегация и нормализация признаков с margin-confidence фильтрацией |
+| 5 | `DescriptionBuilder` | template-based | Сборка `search_text` (закрытая таксономия для retrieval-индексации) и опорного template-описания |
+| 6 | `LLMRewriter` | Vikhr-Nemo-12B-Instruct-R | Генерация финального русского архивного описания напрямую из английского caption и semantic-метаданных (заменил MarianMT-перевод, использовавшийся в ранних экспериментах E00–E08) |
 
 ### Схема архитектуры
 
@@ -46,29 +43,28 @@ flowchart TD
         SigLIP[SigLIPMetadataExtractor<br/>zero-shot 4 axes]
     end
 
-    subgraph NLP [Language processing]
+    subgraph CLEAN [Caption cleanup]пш
         ENPP[EnglishCaptionPostprocessor]
-        TRANS[Translator<br/>MarianMT en→ru]
-        RUPP[TextPostprocessor]
     end
 
     subgraph SEM [Semantic aggregation]
         THEME[ThemeInferencer]
-        BUILD[DescriptionBuilder<br/>template + archival grammar]
-        LLM[LLMRewriter<br/>Vikhr-Nemo 12B<br/>опционально]
+        BUILD[DescriptionBuilder<br/>search_text + template]
+        LLM[LLMRewriter<br/>Vikhr-Nemo 12B<br/>EN caption + metadata → RU archive description]
     end
 
-    OUT[JSON-результат:<br/>caption_en, caption_ru,<br/>metadata, archive_description,<br/>search_text]
+    OUT[JSON-результат:<br/>caption_en,<br/>metadata,<br/>archive_description RU,<br/>search_text]
 
     IMG --> BLIP
     IMG --> SigLIP
-    BLIP --> ENPP --> TRANS --> RUPP
+    BLIP --> ENPP
     SigLIP --> THEME
-    RUPP --> BUILD
+    ENPP --> BUILD
     THEME --> BUILD
-    BUILD --> LLM
+    ENPP --> LLM
+    THEME --> LLM
+    BUILD --> OUT
     LLM --> OUT
-    BUILD -. без LLM .-> OUT
 ```
 
 ### Версионирование таксономии
@@ -122,13 +118,13 @@ tsu-image-description/
 │
 ├── src/tsu_image_description/        # библиотека (pipeline и компоненты)
 │   ├── pipeline.py                   # ArchiveDescriptionPipeline
-│   ├── models.py                     # BLIP CaptionGenerator + MarianMT Translator
+│   ├── models.py                     # BLIP CaptionGenerator (Translator — legacy, для E00–E08)
+│   ├── english_caption_postprocessor.py
 │   ├── siglip_metadata_extractor.py  # zero-shot taxonomy classifier (versioned)
 │   ├── theme_inference.py            # semantic aggregator
-│   ├── description_builder.py        # template builder + archival grammar
-│   ├── text_postprocessor.py         # RU caption cleanup
-│   ├── english_caption_postprocessor.py
-│   └── llm_rewriter.py               # Vikhr-Nemo LLM rewriter (E12)
+│   ├── description_builder.py        # search_text + опорное template-описание
+│   ├── llm_rewriter.py               # Vikhr-Nemo: финальное русское архивное описание
+│   └── text_postprocessor.py         # legacy: нормализатор RU caption для E00–E08
 │
 ├── scripts/                          # entry-point скрипты
 │   ├── evaluate.py                   # триадные метрики (CLIPScore_RU + R@k + SDS)
