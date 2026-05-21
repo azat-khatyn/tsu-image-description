@@ -82,7 +82,7 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 | E-16b / E-16c / E-1+E-16b / E-1+E-16c (template_mode варианты) | DONE |
 | E-5+6 (decoding × prefix grid) | TODO |
 | E-7 (clean NYPL FT), E-8 (LoRA) | TODO (нужен GPU) |
-| E-9 (MarianMT → NLLB-200) | TODO |
+| E-9 (MarianMT → NLLB-200, factorial 4 cells) | **DONE — null on CLIPScore (p ∈ [0.45, 0.98])** |
 | E-11 (Qwen2-VL-2B end-to-end RU) | TODO |
 | E-13 (SigLIP threshold calibration) | TODO |
 | E-18 (sampling + CLIP rerank) | TODO |
@@ -99,6 +99,40 @@ Tracker для всех Implementation tasks (I-x) и Experiments (E-x) из [do
 ---
 
 ## Заметки по запускам
+
+### 2026-05-11 (v4) — E-9 (MarianMT → NLLB-200): null result, перевод не bottleneck
+
+Прогнал 4 cell'а факториала **{BLIP-base, BLIP-large} × {full, caption_only} × {MarianMT, NLLB-200-distilled-600M}**, чтобы проверить гипотезу: может ли смена translator'а улучшить CLIPScore.
+
+**Результат — чистый null:**
+
+| Cell | MarianMT | NLLB-200 | Δ | paired bootstrap p |
+|---|---|---|---|---|
+| BLIP-base / full | 0.2804 | 0.2804 | -0.0000 | 0.98 |
+| BLIP-base / caption_only | 0.2540 | 0.2545 | +0.0005 | 0.45 |
+| BLIP-large / full | 0.2883 | 0.2886 | +0.0003 | 0.67 |
+| BLIP-large / caption_only | 0.2735 | 0.2732 | -0.0003 | 0.75 |
+
+**Latency:** NLLB +10% (0.95 s vs 0.86 s на BLIP-large) без выигрыша.
+
+**На retrieval смешанная картина в best-cell** (BLIP-large + caption_only): R@1 0.250 < 0.268 (Marian), но R@5 0.527 > 0.505, R@10 0.659 > 0.632. То есть NLLB чуть **менее точен в top-1**, но даёт чуть **больше lexical diversity** для R@5/R@10.
+
+**Интерпретация для тезиса:**
+
+- **Bottleneck не в переводе.** До этого было неочевидно — теоретически MarianMT мог быть «слабым звеном». Теперь зафиксировано: главные оси улучшения — captioning (E-1) и шаблон сборки (E-16), не translation.
+- На образах открыток BLIP-captions короткие и простые (≤ 15 слов). И MarianMT, и NLLB справляются с ними сопоставимо. Разница ("Винтажная" vs "Вентежная", "Холли" vs "голли") теряется в шуме M-CLIP scorer'а.
+- **Adoption recommendation: оставить MarianMT в production** — латенси ниже, качество эквивалентное.
+
+**Это содержательный negative result для тезиса:**
+- Опровергает популярный narrative "просто возьмите лучшую модель и всё улучшится".
+- Показывает, что **methodology работает** — мы можем отличить значимое улучшение (E-1, E-16) от незначимого (E-9). Это валидирует наш eval framework.
+
+**Конфиги сохранены:** `data/eval/results/final/metrics_triad_E-9*_n220.json` и `metrics_triad_E-1+9*_n220.json` для воспроизводимости.
+
+**Следующие приоритеты, скорректированные с учётом E-9:**
+- E-12 (LLM-based DescriptionBuilder) — теперь смотрится **сильнее**, потому что мы знаем: bottleneck в сборке, не в переводе. Нужен API key.
+- E-7 / E-8 (FT) — основной thesis material для Раздела 3. Нужен GPU.
+- E-11 (Qwen2-VL E2E RU) — архитектурное сравнение. Большой refactor.
 
 ### 2026-05-11 (v3) — Template-mode factorial: главная находка о trade-off между faithfulness и searchability
 

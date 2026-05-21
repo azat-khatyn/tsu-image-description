@@ -5,13 +5,23 @@ class DescriptionBuilder:
     """Builds the Russian archive description from caption + metadata.
 
     template_mode:
-      - "full"         : <type> в стиле <style>. На изображении: <caption>. + theme + mood
-                          (theme/mood are gated by include_theme/include_mood)
+      - "full"         : intro sentence + "На изображении: <caption>." + optional theme/mood
       - "minimal"      : "На изображении: <caption>."
-      - "caption_only" : raw caption_ru only — no template wrapping at all
+      - "caption_only" : cleaned raw caption_ru only
     """
 
     VALID_MODES = {"full", "minimal", "caption_only"}
+
+    # Style labels that don't carry archive-relevant discriminative info.
+    # Each of them applies to roughly any decorated postcard, so the phrase
+    # "Открытка в стиле винтажной иллюстрации" repeats across most items and
+    # adds no semantic value. When `drop_generic_style=True`, intro phrase
+    # is built without "в стиле X" for these.
+    _GENERIC_STYLE_LABELS = {
+        "vintage illustration",
+        "decorative illustration",
+        "retro design",
+    }
 
     def __init__(
         self,
@@ -19,6 +29,7 @@ class DescriptionBuilder:
         template_mode: str = "full",
         include_theme: bool = True,
         include_mood: bool = True,
+        drop_generic_style: bool = False,
     ):
         if template_mode not in self.VALID_MODES:
             raise ValueError(
@@ -27,156 +38,264 @@ class DescriptionBuilder:
         self.template_mode = template_mode
         self.include_theme = include_theme
         self.include_mood = include_mood
+        self.drop_generic_style = drop_generic_style
 
     def build(self, result: Dict) -> Dict:
-        caption_ru = result["caption"]["ru"]
+        caption_ru = self._normalize_caption(result["caption"]["ru"])
         metadata = result["metadata"]
         inference = result["inference"]
 
-        # === template_mode shortcuts ===
         if self.template_mode == "caption_only":
-            search_text = self._search_text(metadata, inference)
-            return {"archive_description": caption_ru, "search_text": search_text}
-
-        if self.template_mode == "minimal":
-            archive = f"На изображении: {caption_ru}."
-            search_text = self._search_text(metadata, inference)
+            archive = self._sentence(caption_ru, capitalize=True)
+            search_text = self._search_text(metadata, inference, caption_ru)
             return {"archive_description": archive, "search_text": search_text}
 
-        # === Full template (default) ===
+        if self.template_mode == "minimal":
+            archive = f"На изображении: {self._inline(caption_ru)}."
+            search_text = self._search_text(metadata, inference, caption_ru)
+            return {"archive_description": archive, "search_text": search_text}
 
         image_type_field = metadata.get("image_type", {})
         style_field = metadata.get("style", {})
-        tags = metadata.get("tags", [])
 
         theme = inference.get("theme")
         mood = inference.get("mood")
 
-        image_type_map = {
-            "a postcard": "открытка",
-            "a poster": "плакат",
-            "a greeting card": "поздравительная открытка",
-            "an illustration": "иллюстрация",
-            "a photograph": "фотография",
-        }
-
-        style_map = {
-            "vintage illustration": "винтажная иллюстрация",
-            "retro design": "ретро-дизайн",
-            "decorative illustration": "декоративная иллюстрация",
-            "engraving": "гравюра",
-            "drawing": "рисунок",
-            "painting": "живопись",
-            "black and white photo": "черно-белая фотография",
-            "color photograph": "цветная фотография",
-        }
-
-        theme_map = {
-            "holiday scene": "праздничная сцена",
-            "Easter holiday scene": "пасхальная сцена",
-            "Christmas holiday scene": "рождественская сцена",
-            "New Year celebration": "новогодняя сцена",
-            "romantic scene": "романтическая сцена",
-            "children scene": "детская сцена",
-            "urban scene": "городская сцена",
-            "nature scene": "сцена природы",
-            "religious scene": "религиозная сцена",
-        }
-
-        mood_map = {
-            "happy": "радостное",
-            "festive": "праздничное",
-            "romantic": "романтическое",
-            "nostalgic": "ностальгическое",
-            "calm": "спокойное",
-            "serious": "серьёзное",
-        }
+        # Versioned RU mappings — keyed by taxonomy_version stored in metadata.
+        taxonomy_version = metadata.get("taxonomy_version", "legacy_v1")
+        image_type_map = self._image_type_map_for(taxonomy_version)
+        style_map_gen = self._style_map_gen_for(taxonomy_version)
+        theme_map = self._theme_map_for(taxonomy_version)
+        mood_map = self._mood_map_for(taxonomy_version)
 
         image_type_label = image_type_field.get("label")
         style_label = style_field.get("label")
 
-        image_type_ru = image_type_map.get(image_type_label, "изображение")
-        style_ru = style_map.get(style_label, style_label) if style_label else None
+        image_type_ru = image_type_map.get(image_type_label)
+        style_ru_gen = style_map_gen.get(style_label)
         theme_ru = theme_map.get(theme, theme) if theme else None
         mood_ru = mood_map.get(mood, mood) if mood else None
 
         parts = []
 
-        if image_type_field.get("confident"):
-            if style_field.get("confident") and style_ru:
-                parts.append(f"{image_type_ru.capitalize()} в стиле {style_ru}.")
-            else:
-                parts.append(f"{image_type_ru.capitalize()}.")
-        else:
-            parts.append("Иллюстративное изображение.")
+        intro = self._intro_phrase(
+            image_type_field=image_type_field,
+            style_field=style_field,
+            image_type_ru=image_type_ru,
+            style_ru_gen=style_ru_gen,
+            image_type_label=image_type_label,
+            style_label=style_label,
+        )
+        if intro:
+            parts.append(intro)
 
-        parts.append(f"На изображении: {caption_ru}.")
+        parts.append(f"На изображении: {self._inline(caption_ru)}.")
 
         if self.include_theme and theme_ru:
-            parts.append(f"Предположительно, это {theme_ru}.")
+            parts.append(f"Тематика изображения: {theme_ru}.")
         if self.include_mood and mood_ru:
             parts.append(f"Общее настроение изображения можно охарактеризовать как {mood_ru}.")
 
         archive_description = " ".join(parts)
-        search_text = self._search_text(metadata, inference)
+        search_text = self._search_text(metadata, inference, caption_ru)
 
         return {
             "archive_description": archive_description,
             "search_text": search_text,
         }
 
+    def _intro_phrase(
+        self,
+        *,
+        image_type_field: Dict,
+        style_field: Dict,
+        image_type_ru: str | None,
+        style_ru_gen: str | None,
+        image_type_label: str | None,
+        style_label: str | None,
+    ) -> str:
+        image_conf = image_type_field.get("confident", False)
+        style_conf = style_field.get("confident", False)
+
+        # Drop generic-style label from intro phrase entirely — the words
+        # "vintage / decorative / retro" don't help disambiguate postcards
+        # and produce repeating, non-informative intros across the corpus.
+        # Type stays; style stays in `search_text` regardless.
+        if self.drop_generic_style and style_label in self._GENERIC_STYLE_LABELS:
+            style_conf = False
+            style_ru_gen = None
+
+        # Special safe cases for photographs
+        if image_conf and image_type_label == "a photograph":
+            if style_label == "black and white photo":
+                return "Черно-белая фотография."
+            if style_label == "color photograph":
+                return "Цветная фотография."
+            return "Фотография."
+
+        if image_conf and image_type_ru and style_conf and style_ru_gen:
+            return f"{image_type_ru.capitalize()} в стиле {style_ru_gen}."
+
+        if image_conf and image_type_ru:
+            return f"{image_type_ru.capitalize()}."
+
+        if style_conf and style_ru_gen:
+            return f"Изображение в стиле {style_ru_gen}."
+
+        return "Изображение."
+
     @staticmethod
-    def _search_text(metadata: Dict, inference: Dict) -> str:
-        """Поисковый поток тегов — собирается одинаково для всех template_mode."""
+    def _normalize_caption(text: str) -> str:
+        text = (text or "").strip()
+        text = text.rstrip(" .,:;!-")
+        return text or "изображение"
+
+    @staticmethod
+    def _inline(text: str) -> str:
+        text = text.strip()
+        if not text:
+            return "изображение"
+        return text[0].lower() + text[1:] if len(text) > 1 else text.lower()
+
+    @staticmethod
+    def _sentence(text: str, capitalize: bool = True) -> str:
+        text = (text or "").strip().rstrip(" .,:;!-")
+        if not text:
+            text = "изображение"
+        if capitalize:
+            text = text[0].upper() + text[1:] if len(text) > 1 else text.upper()
+        return f"{text}."
+
+    # ====================================================================
+    # Versioned RU mappings — selected based on metadata["taxonomy_version"].
+    # See src/tsu_image_description/siglip_metadata_extractor.py for full
+    # taxonomy definitions and source citations.
+    # ====================================================================
+
+    # Common мапы типа материала — pattern одинаковый между versions.
+    _IMAGE_TYPE_MAP_COMMON = {
+        "a postcard": "открытка",
+        "a poster": "плакат",
+        "a greeting card": "поздравительная карточка",
+        "an illustration": "иллюстрация",
+        "a photograph": "фотография",
+    }
+
+    # ---- legacy_v1 ----
+    _STYLE_MAP_LEGACY = {
+        "vintage illustration": "винтажная иллюстрация",
+        "retro design": "ретро-дизайн",
+        "decorative illustration": "декоративная иллюстрация",
+        "engraving": "гравюра",
+        "drawing": "рисунок",
+        "painting": "живопись",
+        "black and white photo": "черно-белая фотография",
+        "color photograph": "цветная фотография",
+    }
+    _STYLE_MAP_GEN_LEGACY = {
+        "vintage illustration": "винтажной иллюстрации",
+        "retro design": "ретро-дизайна",
+        "decorative illustration": "декоративной иллюстрации",
+        "engraving": "гравюры",
+        "drawing": "рисунка",
+        "painting": "живописи",
+        "black and white photo": "черно-белой фотографии",
+        "color photograph": "цветной фотографии",
+    }
+    _THEME_MAP_LEGACY = {
+        "holiday scene": "праздничная сцена",
+        "Easter holiday scene": "пасхальная сцена",
+        "Christmas holiday scene": "рождественская сцена",
+        "New Year celebration": "новогодняя сцена",
+        "romantic scene": "романтическая сцена",
+        "children scene": "детская сцена",
+        "urban scene": "городская сцена",
+        "nature scene": "сцена природы",
+        "religious scene": "религиозная сцена",
+    }
+    _MOOD_MAP_LEGACY = {
+        "happy": "радостное",
+        "festive": "праздничное",
+        "romantic": "романтическое",
+        "nostalgic": "ностальгическое",
+        "calm": "спокойное",
+        "serious": "серьёзное",
+    }
+
+    # ---- archival_v2 ----
+    _STYLE_MAP_ARCHIVAL = {
+        "a chromolithograph": "хромолитография",
+        "an engraving": "гравюра",
+        "an etching": "офорт",
+        "a watercolor painting": "акварель",
+        "an oil painting": "масляная живопись",
+        "a pencil drawing": "карандашный рисунок",
+        "a black and white photograph": "черно-белая фотография",
+        "a color photograph": "цветная фотография",
+    }
+    _STYLE_MAP_GEN_ARCHIVAL = {
+        "a chromolithograph": "хромолитографии",
+        "an engraving": "гравюры",
+        "an etching": "офорта",
+        "a watercolor painting": "акварели",
+        "an oil painting": "масляной живописи",
+        "a pencil drawing": "карандашного рисунка",
+        "a black and white photograph": "черно-белой фотографии",
+        "a color photograph": "цветной фотографии",
+    }
+    _THEME_MAP_ARCHIVAL = {
+        "a landscape": "пейзаж",
+        "an urban view": "городской вид",
+        "a portrait": "портрет",
+        "a genre scene": "жанровая сцена",
+        "a still life": "натюрморт",
+        "a religious subject": "религиозный сюжет",
+        "a military subject": "военный сюжет",
+        "a holiday scene": "праздничный сюжет",
+    }
+    _MOOD_MAP_ARCHIVAL: Dict = {}  # mood удалён в archival_v2
+
+    @classmethod
+    def _image_type_map_for(cls, version: str) -> Dict:
+        # type mapping одинаковый для обеих versions
+        return cls._IMAGE_TYPE_MAP_COMMON
+
+    @classmethod
+    def _style_map_for(cls, version: str) -> Dict:
+        return cls._STYLE_MAP_ARCHIVAL if version == "archival_v2" else cls._STYLE_MAP_LEGACY
+
+    @classmethod
+    def _style_map_gen_for(cls, version: str) -> Dict:
+        return cls._STYLE_MAP_GEN_ARCHIVAL if version == "archival_v2" else cls._STYLE_MAP_GEN_LEGACY
+
+    @classmethod
+    def _theme_map_for(cls, version: str) -> Dict:
+        return cls._THEME_MAP_ARCHIVAL if version == "archival_v2" else cls._THEME_MAP_LEGACY
+
+    @classmethod
+    def _mood_map_for(cls, version: str) -> Dict:
+        return cls._MOOD_MAP_ARCHIVAL if version == "archival_v2" else cls._MOOD_MAP_LEGACY
+
+    @classmethod
+    def _search_text(cls, metadata: Dict, inference: Dict, caption_ru: str | None = None) -> str:
         image_type_field = metadata.get("image_type", {})
         style_field = metadata.get("style", {})
         tags = metadata.get("tags", [])
+        version = metadata.get("taxonomy_version", "legacy_v1")
 
-        image_type_map = {
-            "a postcard": "открытка",
-            "a poster": "плакат",
-            "a greeting card": "поздравительная открытка",
-            "an illustration": "иллюстрация",
-            "a photograph": "фотография",
-        }
-        style_map = {
-            "vintage illustration": "винтажная иллюстрация",
-            "retro design": "ретро-дизайн",
-            "decorative illustration": "декоративная иллюстрация",
-            "engraving": "гравюра",
-            "drawing": "рисунок",
-            "painting": "живопись",
-            "black and white photo": "черно-белая фотография",
-            "color photograph": "цветная фотография",
-        }
-        theme_map = {
-            "holiday scene": "праздничная сцена",
-            "Easter holiday scene": "пасхальная сцена",
-            "Christmas holiday scene": "рождественская сцена",
-            "New Year celebration": "новогодняя сцена",
-            "romantic scene": "романтическая сцена",
-            "children scene": "детская сцена",
-            "urban scene": "городская сцена",
-            "nature scene": "сцена природы",
-            "religious scene": "религиозная сцена",
-        }
-        mood_map = {
-            "happy": "радостное",
-            "festive": "праздничное",
-            "romantic": "романтическое",
-            "nostalgic": "ностальгическое",
-            "calm": "спокойное",
-            "serious": "серьёзное",
-        }
+        image_type_map = cls._image_type_map_for(version)
+        style_map = cls._style_map_for(version)
+        theme_map = cls._theme_map_for(version)
+        mood_map = cls._mood_map_for(version)
 
-        image_type_ru = image_type_map.get(image_type_field.get("label"), "изображение")
-        style_label = style_field.get("label")
-        style_ru = style_map.get(style_label, style_label) if style_label else None
+        search_terms = []
+
+        image_type_ru = image_type_map.get(image_type_field.get("label"))
+        style_ru = style_map.get(style_field.get("label"))
         theme_ru = theme_map.get(inference.get("theme"), inference.get("theme")) if inference.get("theme") else None
         mood_ru = mood_map.get(inference.get("mood"), inference.get("mood")) if inference.get("mood") else None
 
-        search_terms = []
-        if image_type_field.get("confident"):
+        if image_type_field.get("confident") and image_type_ru:
             search_terms.append(image_type_ru)
         if style_field.get("confident") and style_ru:
             search_terms.append(style_ru)
@@ -184,7 +303,14 @@ class DescriptionBuilder:
             search_terms.append(theme_ru)
         if mood_ru:
             search_terms.append(mood_ru)
+
         for tag in tags:
             if tag not in search_terms:
                 search_terms.append(tag)
+
+        if caption_ru:
+            caption_norm = caption_ru.strip().rstrip(" .,:;!-")
+            if caption_norm:
+                search_terms.append(caption_norm.lower())
+
         return " ".join(search_terms)

@@ -25,9 +25,7 @@ data/nypl/images/
 
 # Eval outputs in data/eval/results/: ignore loose JSON / PNG / NPZ at the
 # top level; only data/eval/results/final/ is tracked (baseline + per-experiment finals).
-data/eval/results/*.json
-data/eval/results/*.png
-data/eval/results/*.npz
+data/*
 
 # Runtime / docker mounts
 mounted_data/

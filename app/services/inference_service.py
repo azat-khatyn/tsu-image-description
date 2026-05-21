@@ -21,7 +21,23 @@ class InferenceService:
         if self._pipeline is None:
             with self._lock:
                 if self._pipeline is None:
-                    self._pipeline = ArchiveDescriptionPipeline()
+                    # Safe default config.
+                    # If BLIP-2 is too heavy on your M1, switch backend to "blip1"
+                    # and optionally point model_path to your best BLIP-1 checkpoint.
+                    self._pipeline = ArchiveDescriptionPipeline(
+                        model_path="Salesforce/blip-image-captioning-large",
+                        caption_kwargs={
+                            "backend": "blip1",
+                            "num_beams": 1,
+                            "length_penalty": 1.0,
+                            "max_new_tokens": 50,
+                        },
+                        builder_kwargs={
+                            "template_mode": "full",
+                            "include_theme": False,
+                            "include_mood": False,
+                        },
+                    )
 
     def infer(self, image_path: str) -> dict:
         logging.info("Running inference on %s", image_path)

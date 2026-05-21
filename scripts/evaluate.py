@@ -1,16 +1,20 @@
-"""evaluate.py — triad evaluation (I-1 + I-2 from docs/experiments.md).
+"""evaluate.py — reference-free evaluation for archive captioning.
 
-Computes CLIPScore variants per image:
-  - CLIPScore_EN(image, caption_en)        — back-compat with baseline reports
-  - CLIPScore_RU(image, caption_ru)        — translation isolation
-  - CLIPScore_RU(image, archive_description_ru)  — PRIMARY (after I-2)
-  - CLIPScore_RU(image, reference_short_ru)      — ceiling indicator (when ref present)
+Supports:
+  - BLIP-1 / BLIP-2 caption backends
+  - RGB-20 references
+  - NYPL-200 pool
+  - combined ALL-220 retrieval / robustness runs
+  - CLIPScore variants
+  - retrieval R@k (image <-> archive description)
 
-Image encoder: open_clip ViT-B-32 OpenAI (shared with M-CLIP image side).
-RU text encoder: M-CLIP/XLM-Roberta-Large-Vit-B-32 by default.
-EN text encoder: open_clip ViT-B-32 (existing).
+Primary metric:
+  - CLIPScore_RU(image, archive_description_ru)
 
-Retrieval R@k (I-5) and bootstrap CI (I-4) are not yet wired in — placeholders.
+Recommended usage:
+  - RGB-20 display quality
+  - NYPL-200 robustness
+  - ALL-220 retrieval
 """
 
 import argparse
@@ -34,59 +38,117 @@ from tsu_image_description.pipeline import ArchiveDescriptionPipeline
 # ---------------------------------------------------------------------
 def parse_args():
     parser = argparse.ArgumentParser()
+
     parser.add_argument(
         "--finetuned",
         type=str,
         default=None,
-        help="Path to finetuned BLIP model (substitutes pipeline.caption_generator)",
+        help="Path to a full finetuned BLIP checkpoint (BLIP-1 only).",
+    )
+    parser.add_argument(
+        "--caption-backend",
+        type=str,
+        choices=["blip1", "blip2"],
+        default="blip1",
+        help="Captioning backend.",
     )
     parser.add_argument(
         "--mclip-model",
         type=str,
         default="M-CLIP/XLM-Roberta-Large-Vit-B-32",
-        help="HuggingFace model name for M-CLIP RU text encoder",
+        help="HuggingFace model name for M-CLIP RU text encoder.",
     )
     parser.add_argument(
         "--references",
         type=str,
         default="data/eval/references.jsonl",
-        help="Path to annotated references JSONL (one item per line, with reference_short_ru)",
+        help="Path to annotated references JSONL.",
     )
     parser.add_argument(
         "--pool",
         type=str,
         default=None,
-        help="Optional path to additional retrieval pool JSONL (no reference_short_ru required). "
-             "Items are appended to --references for triad/retrieval evaluation.",
+        help="Optional retrieval pool JSONL appended to --references.",
     )
     parser.add_argument(
         "--output",
         type=str,
         default="data/eval/results/metrics_triad_run.json",
-        help="Path to output metrics JSON. For tracked artifacts use data/eval/results/final/.",
+        help="Path to output metrics JSON.",
     )
     parser.add_argument(
         "--drop-theme",
         action="store_true",
-        help="E-16: drop the 'Предположительно, это X' template sentence (full mode only)",
+        help="Drop theme sentence from archive_description.",
     )
     parser.add_argument(
         "--drop-mood",
         action="store_true",
-        help="E-16: drop the 'Общее настроение …' template sentence (full mode only)",
+        help="Drop mood sentence from archive_description.",
     )
     parser.add_argument(
         "--template-mode",
         type=str,
         choices=["full", "minimal", "caption_only"],
         default="full",
-        help=(
-            "Template for archive_description: "
-            "'full' = current template, "
-            "'minimal' = 'На изображении: <caption>.', "
-            "'caption_only' = raw caption_ru only (E-16c)"
-        ),
+        help="Template for archive_description.",
     )
+    parser.add_argument(
+        "--drop-generic-style",
+        action="store_true",
+        help="E05d: drop generic style labels (vintage/decorative/retro) from intro phrase. "
+             "No-op when taxonomy_version=archival_v2 (no generic labels exist).",
+    )
+    parser.add_argument(
+        "--taxonomy-version",
+        type=str,
+        default="archival_v2",
+        choices=["legacy_v1", "archival_v2"],
+        help="SigLIP taxonomy version. legacy_v1 reproduces pre-E06b experiments; "
+             "archival_v2 uses Файнштейн / MARC 21 / Getty AAT archival vocabulary.",
+    )
+    parser.add_argument(
+        "--use-llm-rewriter",
+        action="store_true",
+        help="E12: route archive description through a local LLM rewriter.",
+    )
+    parser.add_argument(
+        "--llm-model",
+        type=str,
+        default="Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24",
+        help="LLM rewriter model path (only used with --use-llm-rewriter).",
+    )
+    parser.add_argument(
+        "--translator-model",
+        type=str,
+        default=None,
+        help="Override EN→RU translator model.",
+    )
+    parser.add_argument(
+        "--num-beams",
+        type=int,
+        default=1,
+        help="Caption decoding beam count.",
+    )
+    parser.add_argument(
+        "--length-penalty",
+        type=float,
+        default=1.0,
+        help="Caption decoding length penalty.",
+    )
+    parser.add_argument(
+        "--prompt-prefix",
+        type=str,
+        default=None,
+        help="Optional English prompt prefix for captioning.",
+    )
+    parser.add_argument(
+        "--max-new-tokens",
+        type=int,
+        default=50,
+        help="Max new tokens for caption generation.",
+    )
+
     return parser.parse_args()
 
 
@@ -120,7 +182,8 @@ def mean(values):
 # ---------------------------------------------------------------------
 def load_clip_en(device):
     model, _, preprocess = open_clip.create_model_and_transforms(
-        "ViT-B-32", pretrained="openai"
+        "ViT-B-32",
+        pretrained="openai",
     )
     model = model.to(device).eval()
     tokenizer = open_clip.get_tokenizer("ViT-B-32")
@@ -128,12 +191,7 @@ def load_clip_en(device):
 
 
 class MCLIPTextEncoder(torch.nn.Module):
-    """Custom M-CLIP text encoder: XLM-R + linear projection to CLIP space.
-
-    We avoid the `multilingual_clip` package because v1.0.10 conflicts with
-    newer transformers (nested from_pretrained inside meta-device init).
-    Replicating its tiny architecture (mean-pooled XLM-R + Linear) directly.
-    """
+    """Custom M-CLIP text encoder: XLM-R + linear projection."""
 
     def __init__(self, transformer, linear):
         super().__init__()
@@ -142,20 +200,13 @@ class MCLIPTextEncoder(torch.nn.Module):
 
 
 def load_mclip(model_name, device):
-    """Load M-CLIP text encoder via direct weight loading.
-
-    Image side is OpenAI ViT-B-32 (already loaded for EN), so we load only
-    the multilingual text encoder here. M-CLIP repos contain a single
-    state_dict with both `transformer.*` and `LinearTransformation.*` weights.
-    """
     from huggingface_hub import hf_hub_download
     from transformers import AutoConfig, AutoModel, AutoTokenizer
 
-    # M-CLIP config has `model_type: "M-CLIP"` which AutoConfig can't resolve,
-    # so read the raw JSON ourselves. Defaults match the XLM-R-Large variant.
     config_path = hf_hub_download(repo_id=model_name, filename="config.json")
-    with open(config_path) as cf:
+    with open(config_path, "r", encoding="utf-8") as cf:
         cfg = json.load(cf)
+
     base_model_name = cfg.get("modelBase", "xlm-roberta-large")
     transformer_dim = cfg.get("transformerDimensions", 1024)
     num_dims = cfg.get("numDims", 512)
@@ -163,6 +214,7 @@ def load_mclip(model_name, device):
     try:
         weights_path = hf_hub_download(repo_id=model_name, filename="model.safetensors")
         from safetensors.torch import load_file
+
         state = load_file(weights_path)
     except Exception:
         weights_path = hf_hub_download(repo_id=model_name, filename="pytorch_model.bin")
@@ -178,8 +230,10 @@ def load_mclip(model_name, device):
     }
     missing, unexpected = transformer.load_state_dict(transformer_state, strict=False)
     if missing or unexpected:
-        # Some XLM-R variants have small differences in head naming; warn but don't fail.
-        print(f"[INFO] M-CLIP transformer load: {len(missing)} missing, {len(unexpected)} unexpected keys")
+        print(
+            f"[INFO] M-CLIP transformer load: "
+            f"{len(missing)} missing, {len(unexpected)} unexpected keys"
+        )
 
     linear = torch.nn.Linear(transformer_dim, num_dims)
     linear.load_state_dict(
@@ -189,9 +243,7 @@ def load_mclip(model_name, device):
         }
     )
 
-    text_model = MCLIPTextEncoder(transformer, linear)
-    text_model = text_model.to(device).eval()
-
+    text_model = MCLIPTextEncoder(transformer, linear).to(device).eval()
     tokenizer = AutoTokenizer.from_pretrained(base_model_name)
     return text_model, tokenizer
 
@@ -217,12 +269,6 @@ def encode_text_en(text, clip_model, tokenizer, device):
 
 @torch.no_grad()
 def encode_text_ru(text, mclip_model, mclip_tokenizer, device):
-    """M-CLIP forward replicated with explicit device handling.
-
-    The library's `MultilingualCLIP.forward(text, tokenizer)` doesn't move
-    tokenized inputs to the model's device, which breaks on MPS/CUDA.
-    We replicate the logic here with explicit `.to(device)`.
-    """
     tok = mclip_tokenizer([text], padding=True, return_tensors="pt")
     tok = {k: v.to(device) for k, v in tok.items()}
 
@@ -240,25 +286,20 @@ def cosine(a, b):
 
 
 # ---------------------------------------------------------------------
-# Retrieval (I-5)
+# Retrieval
 # ---------------------------------------------------------------------
 def compute_retrieval(img_matrix, txt_matrix, ks=(1, 5, 10)):
-    """R@k for image ↔ archive_description retrieval over the eval pool.
-
-    Reports both directions:
-      - i2t: given image, rank correct description.
-      - t2i: given description (search query), rank correct image.
-
-    The latter is the closer proxy for the library archive use case.
-    """
+    """R@k for image <-> archive_description retrieval."""
     n = img_matrix.shape[0]
     sim = img_matrix @ txt_matrix.T
 
     ranks_i2t = []
     ranks_t2i = []
+
     for i in range(n):
         order_i2t = np.argsort(-sim[i])
         ranks_i2t.append(int(np.where(order_i2t == i)[0][0]) + 1)
+
         order_t2i = np.argsort(-sim[:, i])
         ranks_t2i.append(int(np.where(order_t2i == i)[0][0]) + 1)
 
@@ -272,30 +313,37 @@ def compute_retrieval(img_matrix, txt_matrix, ks=(1, 5, 10)):
         "mean_rank_i2t": float(np.mean(ranks_i2t)),
         "mean_rank_t2i": float(np.mean(ranks_t2i)),
     }
+
     per_item_ranks = [
-        {"rank_i2t": ri, "rank_t2i": rt} for ri, rt in zip(ranks_i2t, ranks_t2i)
+        {"rank_i2t": ri, "rank_t2i": rt}
+        for ri, rt in zip(ranks_i2t, ranks_t2i)
     ]
+
     return {"aggregates": aggregates, "ranks": per_item_ranks}
 
 
 # ---------------------------------------------------------------------
 # Pipeline setup
 # ---------------------------------------------------------------------
-def build_pipeline(finetuned_path, device, builder_kwargs=None):
+def build_pipeline(
+    *,
+    finetuned_path=None,
+    builder_kwargs=None,
+    translator_model=None,
+    caption_kwargs=None,
+    use_llm_rewriter=False,
+    llm_rewriter_kwargs=None,
+    taxonomy_version: str = "archival_v2",
+):
     pipeline = ArchiveDescriptionPipeline(
         model_path=finetuned_path,
+        caption_kwargs=caption_kwargs,
+        translator_model=translator_model,
+        use_llm_rewriter=use_llm_rewriter,
+        llm_rewriter_kwargs=llm_rewriter_kwargs,
         builder_kwargs=builder_kwargs,
+        taxonomy_version=taxonomy_version,
     )
-
-    if finetuned_path:
-        from transformers import BlipProcessor, BlipForConditionalGeneration
-
-        print(f"[INFO] Substituting caption_generator with {finetuned_path}")
-        processor = BlipProcessor.from_pretrained(finetuned_path)
-        model = BlipForConditionalGeneration.from_pretrained(finetuned_path).to(device)
-        pipeline.caption_generator.model = model
-        pipeline.caption_generator.processor = processor
-
     return pipeline
 
 
@@ -312,38 +360,56 @@ def main():
     if args.pool:
         pool_items = load_references(args.pool)
         refs = refs + pool_items
-        print(f"[INFO] Loaded {n_annotated} annotated + {len(pool_items)} pool items "
-              f"= {len(refs)} total")
+        print(
+            f"[INFO] Loaded {n_annotated} annotated + {len(pool_items)} pool items "
+            f"= {len(refs)} total"
+        )
     else:
         print(f"[INFO] Loaded {n_annotated} annotated items")
 
     print(f"[INFO] Device: {device}")
     print(f"[INFO] Eval items: {len(refs)}")
 
-    # Pipeline
     builder_kwargs = {
         "template_mode": args.template_mode,
         "include_theme": not args.drop_theme,
         "include_mood": not args.drop_mood,
+        "drop_generic_style": args.drop_generic_style,
     }
-    print(
-        f"\n[INFO] Loading pipeline (finetuned={args.finetuned}, "
-        f"template_mode={builder_kwargs['template_mode']}, "
-        f"include_theme={builder_kwargs['include_theme']}, "
-        f"include_mood={builder_kwargs['include_mood']})..."
-    )
-    pipeline = build_pipeline(args.finetuned, device, builder_kwargs=builder_kwargs)
 
-    # Scorers
+    caption_kwargs = {
+        "backend": args.caption_backend,
+        "num_beams": args.num_beams,
+        "length_penalty": args.length_penalty,
+        "prompt_prefix": args.prompt_prefix,
+        "max_new_tokens": args.max_new_tokens,
+    }
+
+    finetuned_path = getattr(args, "finetuned", None)
+
+    print(
+        f"\n[INFO] Loading pipeline (finetuned={finetuned_path}, "
+        f"template_mode={builder_kwargs['template_mode']}, "
+        f"caption_kwargs={caption_kwargs})..."
+    )
+
+    pipeline = build_pipeline(
+        finetuned_path=finetuned_path,
+        builder_kwargs=builder_kwargs,
+        translator_model=args.translator_model,
+        caption_kwargs=caption_kwargs,
+        use_llm_rewriter=args.use_llm_rewriter,
+        llm_rewriter_kwargs={"model_path": args.llm_model} if args.use_llm_rewriter else None,
+        taxonomy_version=args.taxonomy_version,
+    )
+
     print("[INFO] Loading EN CLIP (open_clip ViT-B-32 openai)...")
     clip_en, preprocess, tokenizer_en = load_clip_en(device)
 
     print(f"[INFO] Loading RU CLIP ({args.mclip_model})...")
     mclip_text, mclip_tokenizer = load_mclip(args.mclip_model, device)
 
-    # Loop
     per_item = []
-    # Parallel arrays for retrieval R@k (I-5). Excluded from JSON output.
     img_embs = []
     archive_embs = []
     total_time = 0.0
@@ -361,33 +427,35 @@ def main():
 
         caption_en = result["caption"].get("en", "") or ""
         caption_ru = result["caption"].get("ru", "") or ""
+        caption_ru_raw = result["caption"].get("ru_raw", "") or ""
         archive_ru = result.get("archive_description", "") or ""
 
-        # Image embedding (shared between EN and RU CLIP, since image side is same)
         img_emb = encode_image(image_path, clip_en, preprocess, device)
 
-        # Pre-compute the archive RU embedding once: used both for CLIPScore_RU(archive)
-        # and for retrieval R@k below.
         archive_emb = (
             encode_text_ru(archive_ru, mclip_text, mclip_tokenizer, device)
-            if archive_ru else None
+            if archive_ru
+            else None
         )
 
         scores = {
             "CLIPScore_EN_caption_en": (
                 cosine(img_emb, encode_text_en(caption_en, clip_en, tokenizer_en, device))
-                if caption_en else None
+                if caption_en
+                else None
             ),
             "CLIPScore_RU_caption_ru": (
                 cosine(img_emb, encode_text_ru(caption_ru, mclip_text, mclip_tokenizer, device))
-                if caption_ru else None
+                if caption_ru
+                else None
             ),
             "CLIPScore_RU_archive_ru": (
                 cosine(img_emb, archive_emb) if archive_emb is not None else None
             ),
             "CLIPScore_RU_reference_ru": (
                 cosine(img_emb, encode_text_ru(ref_ru, mclip_text, mclip_tokenizer, device))
-                if ref_ru else None
+                if ref_ru
+                else None
             ),
         }
 
@@ -395,9 +463,11 @@ def main():
         archive_embs.append(archive_emb if archive_emb is not None else np.zeros_like(img_emb))
 
         print(f"[{i + 1}/{len(refs)}] {Path(image_path).name}")
-        print(f"  caption_en: {caption_en}")
-        print(f"  caption_ru: {caption_ru}")
-        print(f"  archive:    {archive_ru[:140]}{'…' if len(archive_ru) > 140 else ''}")
+        print(f"  caption_en:    {caption_en}")
+        print(f"  caption_ru:    {caption_ru}")
+        if caption_ru_raw and caption_ru_raw != caption_ru:
+            print(f"  caption_ru_raw:{caption_ru_raw}")
+        print(f"  archive:       {archive_ru[:140]}{'…' if len(archive_ru) > 140 else ''}")
         for k, v in scores.items():
             if v is not None:
                 print(f"  {k:32s}: {v:.4f}")
@@ -409,6 +479,7 @@ def main():
                 "source": item.get("source", "rgb"),
                 "caption_en": caption_en,
                 "caption_ru": caption_ru,
+                "caption_ru_raw": caption_ru_raw,
                 "archive_ru": archive_ru,
                 "reference_ru": ref_ru,
                 "scores": scores,
@@ -416,7 +487,6 @@ def main():
             }
         )
 
-    # Aggregate
     def mean_of(key, source_filter=None):
         vals = [
             it["scores"][key]
@@ -426,12 +496,10 @@ def main():
         ]
         return mean(vals)
 
-    # Retrieval R@k (I-5) — image ↔ archive_description_ru over the eval pool.
     retrieval = compute_retrieval(np.stack(img_embs), np.stack(archive_embs))
     for it, ranks in zip(per_item, retrieval["ranks"]):
         it["retrieval"] = ranks
 
-    # Per-source subset summaries (if mixed pool was used)
     sources = sorted(set(it.get("source", "rgb") for it in per_item))
     by_source = {}
     for src in sources:
@@ -447,8 +515,14 @@ def main():
         "num_examples": len(refs),
         "primary_metric": "CLIPScore_RU_archive_ru",
         "config": {
-            "finetuned": args.finetuned,
+            "finetuned": finetuned_path,
+            "caption_backend": args.caption_backend,
+            "translator_model": args.translator_model or "Helsinki-NLP/opus-mt-en-ru",
             "builder_kwargs": builder_kwargs,
+            "caption_kwargs": caption_kwargs,
+            "taxonomy_version": args.taxonomy_version,
+            "use_llm_rewriter": args.use_llm_rewriter,
+            "llm_model": args.llm_model if args.use_llm_rewriter else None,
             "references_path": args.references,
             "pool_path": args.pool,
         },
@@ -468,15 +542,9 @@ def main():
             "mean_sec": total_time / len(refs) if refs else None,
             "images_per_sec": len(refs) / total_time if total_time > 0 else None,
         },
-        "notes": {
-            "I-1": "M-CLIP integrated; primary metric switched to CLIPScore_RU(archive).",
-            "I-2": "archive_description_ru declared as primary; old metric kept as back-compat.",
-            "I-4": "bootstrap CI implemented in scripts/eval_stats.py (not invoked here)",
-            "I-5": "retrieval R@1 / R@5 over eval pool computed below",
-        },
     }
 
-    print("\n=== FINAL RESULTS (triad partial; I-1 + I-2) ===")
+    print("\n=== FINAL RESULTS ===")
     print(json.dumps(summary, indent=2, ensure_ascii=False))
 
     out_path = Path(args.output)
