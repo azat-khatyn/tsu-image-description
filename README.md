@@ -43,7 +43,7 @@ flowchart TD
         SigLIP[SigLIPMetadataExtractor<br/>zero-shot 4 axes]
     end
 
-    subgraph CLEAN [Caption cleanup]пш
+    subgraph CLEAN [Caption cleanup]gi
         ENPP[EnglishCaptionPostprocessor]
     end
 
