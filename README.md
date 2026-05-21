@@ -75,8 +75,6 @@ flowchart TD
 
 Ключевая проблема прикладной оценки — **на момент проектирования метрик отсутствовали общедоступные русскоязычные корпуса открыток / художественных изображений с архивной разметкой**, пригодной как gold reference. Это сделало невозможной классическую supervised-оценку через BLEU/METEOR/BERTScore против эталонных описаний.
 
-> Замечание: в мае 2026 г. в НЭБ появились новые поля «Вариант заглавия» и «Примечание содержания» с curator-grade визуальными описаниями (например, коллекция №529 «Ленинград в Великой Отечественной войне»). Этот источник может быть использован как gold reference для расширенной supervised-оценки в дальнейших экспериментах — но на этапе проектирования метрик такой разметки не существовало.
-
 Поэтому в работе предложен **набор reference-free сигналов**, измеряющих качество описания без эталонных текстов:
 
 | Метрика | Что измеряет |
@@ -85,7 +83,6 @@ flowchart TD
 | **CLIPScore_RU** (`caption_ru`) | То же для русского caption-перевода |
 | **CLIPScore_RU** (`archive_ru`) | Согласованность финального архивного описания с изображением |
 | **t2i_R@k** (k=1, 5, 10) | Cross-modal retrieval: насколько надёжно описание возвращает соответствующее изображение в коллекции (proxy на «полезность для поиска») |
-| **SDS** (Semantic Density Score) | Доля из 6 архивно-релевантных семантических осей, покрытых описанием (тип материала / визуальный сюжет / стиль / эпоха / культурный контекст / тон). Замеряется двумя независимыми способами: keyword-detector и LLM-судья (Claude Sonnet) |
 | **Latency** | Среднее время инференса одного изображения |
 
 Дополнительно: малый curated test-set (n=14 semantic testset, n=60 RGB+NYPL mixed) с ручными референсами используется для sanity-check и paired-сравнений конфигураций.
@@ -99,7 +96,7 @@ flowchart TD
 | **E00** | Baseline: BLIP + MarianMT + zero-shot SigLIP (legacy_v1) + template | Воспроизводимая база |
 | **E01** | BLIP-base vs BLIP-large | Влияние backbone-объёма на CLIPScore |
 | **E05a–d** | Варианты `DescriptionBuilder` (caption-only, theme+mood, smart template) | Вклад template-логики и таксономии |
-| **E06b** | Переход с `legacy_v1` на `archival_v2` | Влияние каталожной таксономии на retrieval и SDS |
+| **E06b** | Переход с `legacy_v1` на `archival_v2` | Влияние каталожной таксономии на CLIPScore и retrieval |
 | **E08** | LoRA fine-tune на ArtCap (мягкие гиперпараметры) | Польза доменного дообучения BLIP; диагностика catastrophic forgetting |
 | **E12** | LLM-rewriter (Vikhr-Nemo-12B) поверх template-описания | Прирост качества от литературной обработки на сохранённой фактологии |
 | **+** | SigLIP probe на SemArt (19K paintings, 5 классов) | Диагностика zero-shot: 57% → 89% при supervised linear probe — показывает потенциал features при правильной таксономии |
@@ -127,9 +124,8 @@ tsu-image-description/
 │   └── text_postprocessor.py         # legacy: нормализатор RU caption для E00–E08
 │
 ├── scripts/                          # entry-point скрипты
-│   ├── evaluate.py                   # триадные метрики (CLIPScore_RU + R@k + SDS)
+│   ├── evaluate.py                   # метрики evaluation (CLIPScore + t2i R@k + latency)
 │   ├── eval_stats.py                 # bootstrap CI + paired test
-│   ├── compute_sds.py                # Semantic Density Score (keyword / LLM mode)
 │   ├── llm_judge.py                  # LLM-as-judge оценка
 │   ├── run_demo.py                   # инференс на одной картинке
 │   ├── train_blip_lora_v2.py         # LoRA fine-tune BLIP
