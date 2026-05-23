@@ -1,0 +1,23 @@
+# Зависимости Docker-образа.
+# torch / torchvision устанавливаются отдельно в Dockerfile через CPU-индекс
+# PyTorch (https://download.pytorch.org/whl/cpu) и здесь не дублируются,
+# чтобы не утянуть GPU-сборку.
+
+transformers
+accelerate
+sentencepiece
+pillow
+numpy
+safetensors
+huggingface_hub
+protobuf
+open_clip_torch
+scikit-learn
+
+# Reference-free метрики (используются в evaluate.py при онлайн-оценке)
+sacrebleu
+
+# FastAPI runtime
+fastapi
+uvicorn[standard]
+python-multipart

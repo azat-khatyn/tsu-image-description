@@ -119,6 +119,15 @@ def parse_args():
         help="LLM rewriter model path (only used with --use-llm-rewriter).",
     )
     parser.add_argument(
+        "--llm-prompt-style",
+        type=str,
+        choices=["v1_archival", "v2_curator"],
+        default="v1_archival",
+        help="LLM rewriter prompt style (only used with --use-llm-rewriter). "
+             "v1_archival = E12 baseline (preamble: 'Открытка-хромолитография. ...'). "
+             "v2_curator = E13, calibrated to НЭБ field 327 (no material-type preamble).",
+    )
+    parser.add_argument(
         "--translator-model",
         type=str,
         default=None,
@@ -399,7 +408,10 @@ def main():
         translator_model=args.translator_model,
         caption_kwargs=caption_kwargs,
         use_llm_rewriter=args.use_llm_rewriter,
-        llm_rewriter_kwargs={"model_path": args.llm_model} if args.use_llm_rewriter else None,
+        llm_rewriter_kwargs={
+            "model_path": args.llm_model,
+            "prompt_style": args.llm_prompt_style,
+        } if args.use_llm_rewriter else None,
         taxonomy_version=args.taxonomy_version,
     )
 
@@ -523,6 +535,7 @@ def main():
             "taxonomy_version": args.taxonomy_version,
             "use_llm_rewriter": args.use_llm_rewriter,
             "llm_model": args.llm_model if args.use_llm_rewriter else None,
+            "llm_prompt_style": args.llm_prompt_style if args.use_llm_rewriter else None,
             "references_path": args.references,
             "pool_path": args.pool,
         },
