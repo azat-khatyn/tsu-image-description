@@ -1,11 +1,12 @@
-"""llm_judge.py — LLM-as-judge evaluator (I-6).
+"""llm_judge.py — LLM-as-judge evaluator.
 
 Берёт результаты пайплайна (`per_item` из metrics_triad_*.json) и для каждой
-открытки запрашивает у LLM оценку по фиксированной рубрике из
-`docs/llm_judge_rubric.md`.
+открытки запрашивает у LLM оценку по фиксированной рубрике, заданной
+константой `SYSTEM_PROMPT` ниже в этом файле.
 
-ВАЖНО: рубрика и system prompt замораживаются ДО запуска экспериментов E-x.
-После freeze правки запрещены — иначе LLM-judge становится circular metric.
+ВАЖНО: рубрика и system prompt замораживаются ДО запуска основной серии
+экспериментов. После freeze правки запрещены — иначе LLM-judge становится
+circular metric.
 
 Зависимости:
     pip install anthropic
@@ -27,8 +28,8 @@ from pathlib import Path
 DEFAULT_MODEL = "claude-sonnet-4-6"
 
 
-# Rubric is duplicated here to make the protocol self-contained;
-# canonical source is docs/llm_judge_rubric.md. After freeze these must match.
+# Рубрика заморожена и хранится здесь как единственный источник истины.
+# Любые правки требуют новой серии прогонов для согласованности с прошлыми результатами.
 SYSTEM_PROMPT = """Ты — библиотечный каталогизатор. Тебе показывают изображение открытки из архива и сгенерированное описание.
 Твоя задача — оценить описание по 5 критериям, каждый по шкале 1–5.
 
