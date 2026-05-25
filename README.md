@@ -316,9 +316,3 @@ PYTHONPATH=src python scripts/data/build_review_set.py --output demo/review_set_
 
 ### JSON-ответ
 ![Результат в JSON](demo/screenshots/service_full_json_output_demo.png)
-
-## Лицензия
-
-Проект распространяется под лицензией **MIT**.
-
-Лицензия репозитория распространяется на исходный код. Используемые предобученные модели и внешние данные регулируются их собственными лицензиями и условиями использования.
