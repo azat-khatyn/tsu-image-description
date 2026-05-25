@@ -2,249 +2,579 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Archive Description MVP</title>
+  <title>Генерация архивного описания изображения</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.5;
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --border: #e5e7eb;
+      --border-soft: #f1f5f9;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #1f2937;
+      --primary-hover: #111827;
+      --accent: #3b82f6;
+      --accent-soft: #eff6ff;
+      --success: #047857;
+      --error: #b91c1c;
+      --tag-bg: #f3f4f6;
+      --tag-fg: #374151;
     }
-    h1 {
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+        sans-serif;
+      max-width: 1180px;
+      margin: 32px auto;
+      padding: 0 24px;
+      line-height: 1.55;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 22px;
+      margin: 0 0 4px;
+      font-weight: 600;
+    }
+    header .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .arch-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      min-width: 280px;
+      font-size: 13px;
+    }
+    .arch-card .arch-title {
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
       margin-bottom: 8px;
     }
-    .card {
-      border: 1px solid #ddd;
+    .arch-line { margin: 3px 0; color: var(--text); }
+    .arch-line code {
+      background: var(--tag-bg);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .arch-metrics {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-soft);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .arch-metrics span { margin-right: 12px; }
+
+    .input-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 16px;
+      align-items: end;
+    }
+    .input-card .input-field { display: flex; flex-direction: column; }
+    .input-card label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .input-card input[type="file"],
+    .input-card input[type="text"] {
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      background: var(--bg);
+    }
+    .input-card .or-divider {
+      align-self: center;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding-bottom: 9px;
     }
     button {
-      padding: 10px 16px;
+      padding: 10px 18px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      background: #111827;
+      background: var(--primary);
       color: white;
       font-size: 14px;
+      font-weight: 500;
+      transition: background 0.15s;
     }
-    button:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
+    button:hover:not(:disabled) { background: var(--primary-hover); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    #status {
+      margin: 14px 0 0;
+      font-size: 13px;
+      min-height: 18px;
     }
-    input[type="file"],
-    input[type="text"] {
-      margin: 12px 0;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 10px 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
+    .muted { color: var(--muted); }
+    .error { color: var(--error); font-weight: 500; }
+    .success { color: var(--success); font-weight: 500; }
+
+    /* === Двухколоночная раскладка результата === */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 24px;
+      margin-top: 22px;
     }
-    pre {
-      background: #f6f8fa;
+    @media (max-width: 800px) {
+      .input-card { grid-template-columns: 1fr; }
+      .input-card .or-divider { padding-bottom: 0; }
+      .results-grid { grid-template-columns: 1fr; }
+    }
+
+    .preview-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 16px;
+      align-self: start;
+      position: sticky;
+      top: 24px;
+    }
+    .preview-card img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+    .preview-card .placeholder {
+      aspect-ratio: 4 / 5;
+      background: var(--border-soft);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .preview-card .filename {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    .content-stack { display: flex; flex-direction: column; gap: 18px; }
+
+    .result-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .result-card .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .result-card.primary {
+      background: var(--accent-soft);
+      border-color: #bfdbfe;
+    }
+    .result-card.primary .card-label { color: var(--accent); }
+    .result-card .archive-text {
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .search-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      color: var(--text);
+      background: var(--tag-bg);
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-fg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-size: 12px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .meta-item {
+      background: var(--bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .meta-item .meta-axis {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 3px;
+    }
+    .meta-item .meta-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .meta-item .meta-score {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .meta-item.not-confident .meta-label { color: var(--muted); font-style: italic; }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0;
+    }
+    details summary {
+      cursor: pointer;
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+    details[open] summary {
+      border-bottom: 1px solid var(--border-soft);
+    }
+    details .details-body { padding: 16px 20px; }
+    .raw-pair { display: flex; flex-direction: column; gap: 10px; }
+    .raw-pair .raw-row { display: flex; gap: 10px; align-items: baseline; }
+    .raw-pair .raw-row .raw-tag {
+      flex-shrink: 0;
+      width: 80px;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    .raw-pair .raw-row .raw-val {
+      flex: 1;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    pre {
+      background: var(--bg);
+      padding: 14px 16px;
       border-radius: 8px;
       overflow-x: auto;
       white-space: pre-wrap;
       word-break: break-word;
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0;
     }
-    .muted {
-      color: #666;
-      font-size: 14px;
-    }
-    .error {
-      color: #b00020;
-      font-weight: bold;
-    }
-    .success {
-      color: #0a7a28;
-      font-weight: bold;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 16px;
-    }
-    .label {
-      font-weight: bold;
-      margin-top: 14px;
-      margin-bottom: 6px;
-    }
-    .value-box {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 12px;
-      white-space: pre-wrap;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .tag {
-      background: #eef2ff;
-      color: #1f2937;
-      border: 1px solid #c7d2fe;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 13px;
-    }
-    .divider-text {
-      font-size: 13px;
-      color: #666;
-      margin: 10px 0 4px;
-    }
+
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
-  <h1>Генерация описания изображения</h1>
-  <p class="muted">
-    Можно либо загрузить JPEG/PNG, либо указать путь к изображению на файловой системе сервера.
-  </p>
-  <p class="muted">
-    Для Docker путь должен существовать внутри контейнера или в примонтированной директории.
-  </p>
-
-  <div class="card">
-    <div class="label">Вариант 1: загрузка файла</div>
-    <input id="fileInput" type="file" accept=".jpg,.jpeg,.png" />
-
-    <div class="divider-text">или</div>
-
-    <div class="label">Вариант 2: путь на локальной файловой системе</div>
-    <input
-      id="imagePathInput"
-      type="text"
-      placeholder="/absolute/path/to/image.jpg"
-    />
-
-    <button id="submitBtn">Запустить инференс</button>
-    <p id="status" class="muted"></p>
-    <img id="preview" style="display:none;" alt="preview" />
-  </div>
-
-  <div class="card">
-    <h3>Полученный результат</h3>
-
-    <div class="label">Архивное описание</div>
-    <div id="archiveDescription" class="value-box">Пока пусто.</div>
-
-    <div class="label">Теги</div>
-    <div id="tagsContainer" class="tags">
-      <span class="muted">Пока пусто.</span>
+  <header>
+    <div>
+      <h1>Генерация архивного описания изображения</h1>
+      <p class="subtitle">
+        Модульный пайплайн для автоматической генерации структурированных описаний
+        художественных изображений (открытки, плакаты) на русском языке.
+      </p>
     </div>
 
-    <div class="label">Caption EN</div>
-    <div id="captionEn" class="value-box">Пока пусто.</div>
+    <div class="arch-card" id="archCard">
+      <div class="arch-title">Текущая архитектура</div>
+      <div id="archLines"><div class="muted">Загрузка конфигурации…</div></div>
+      <div class="arch-metrics" id="archMetrics" style="display:none;">
+        <div style="margin-bottom: 4px; font-weight: 600; color: var(--text);">
+          Ожидаемые метрики
+        </div>
+        <span>CLIPScore ≈ <strong id="metricClip">0.331</strong></span>
+        <span>R@1 ≈ <strong id="metricR1">1.00</strong></span>
+        <span>Latency ≈ <strong id="metricLat">12 с</strong></span>
+      </div>
+    </div>
+  </header>
 
-    <div class="label">Caption RU</div>
-    <div id="captionRu" class="value-box">Пока пусто.</div>
+  <section class="input-card">
+    <div class="input-field">
+      <label for="fileInput">Загрузка файла (JPEG/PNG)</label>
+      <input id="fileInput" type="file" accept=".jpg,.jpeg,.png" />
+    </div>
 
-    <div class="label">Метаданные</div>
-    <div id="metadataReadable" class="value-box">Пока пусто.</div>
-  </div>
+    <div class="or-divider">или</div>
 
-  <div class="card">
-    <h3>JSON</h3>
-    <pre id="result">Пока пусто.</pre>
-  </div>
+    <div class="input-field">
+      <label for="imagePathInput">Путь на сервере</label>
+      <input
+        id="imagePathInput"
+        type="text"
+        placeholder="/absolute/path/to/image.jpg"
+      />
+    </div>
+
+    <button id="submitBtn">Запустить инференс</button>
+  </section>
+  <p id="status" class="muted"></p>
+
+  <section class="results-grid">
+    <aside class="preview-card">
+      <div id="previewWrap">
+        <div class="placeholder" id="previewPlaceholder">Превью изображения</div>
+        <img id="preview" class="hidden" alt="preview" />
+      </div>
+      <div id="filename" class="filename"></div>
+    </aside>
+
+    <div class="content-stack">
+      <div class="result-card primary">
+        <div class="card-label">Архивное описание</div>
+        <div id="archiveDescription" class="archive-text muted">
+          Здесь появится финальное описание, сгенерированное предложенным пайплайном.
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="card-label">Поисковый текст (search text)</div>
+        <div id="searchText" class="search-text muted">Появится после инференса.</div>
+      </div>
+
+      <div class="result-card">
+        <div class="card-label">Теги</div>
+        <div id="tagsContainer" class="tags">
+          <span class="muted">Появятся после инференса.</span>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="card-label">Метаданные (SigLIP, каталожная таксономия)</div>
+        <div id="metadataGrid" class="meta-grid">
+          <span class="muted">Появятся после инференса.</span>
+        </div>
+      </div>
+
+      <details>
+        <summary>Промежуточные результаты пайплайна</summary>
+        <div class="details-body">
+          <div class="raw-pair">
+            <div class="raw-row">
+              <div class="raw-tag">EN caption</div>
+              <div class="raw-val muted" id="captionEn">—</div>
+            </div>
+            <div class="raw-row">
+              <div class="raw-tag">RU перевод</div>
+              <div class="raw-val muted" id="captionRu">—</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Полный JSON-ответ</summary>
+        <div class="details-body">
+          <pre id="rawJson">Здесь появится сырой ответ API.</pre>
+        </div>
+      </details>
+    </div>
+  </section>
 
   <script>
     const fileInput = document.getElementById("fileInput");
     const imagePathInput = document.getElementById("imagePathInput");
     const submitBtn = document.getElementById("submitBtn");
     const statusEl = document.getElementById("status");
-    const resultEl = document.getElementById("result");
     const previewEl = document.getElementById("preview");
+    const previewPlaceholderEl = document.getElementById("previewPlaceholder");
+    const filenameEl = document.getElementById("filename");
 
     const archiveDescriptionEl = document.getElementById("archiveDescription");
+    const searchTextEl = document.getElementById("searchText");
     const tagsContainerEl = document.getElementById("tagsContainer");
+    const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
     const captionRuEl = document.getElementById("captionRu");
-    const metadataReadableEl = document.getElementById("metadataReadable");
+    const rawJsonEl = document.getElementById("rawJson");
 
-    function resetReadableResult() {
-      archiveDescriptionEl.textContent = "Пока пусто.";
-      captionEnEl.textContent = "Пока пусто.";
-      captionRuEl.textContent = "Пока пусто.";
-      metadataReadableEl.textContent = "Пока пусто.";
-      tagsContainerEl.innerHTML = '<span class="muted">Пока пусто.</span>';
+    const archLinesEl = document.getElementById("archLines");
+    const archMetricsEl = document.getElementById("archMetrics");
+
+    // === Подгружаем конфигурацию пайплайна для шапки ===
+    async function loadArchInfo() {
+      try {
+        const resp = await fetch("/health");
+        const data = await resp.json();
+        const cfg = data.pipeline_config;
+        if (!cfg) {
+          archLinesEl.innerHTML = '<div class="muted">Конфигурация недоступна.</div>';
+          return;
+        }
+        const lines = [];
+        const captionName = cfg.caption_model.split("/").pop();
+        lines.push(`Подпись: <code>${captionName}</code>`);
+        lines.push(`Классификатор: SigLIP, таксономия <code>${cfg.taxonomy_version}</code>`);
+        if (cfg.use_llm_rewriter) {
+          const llmName = cfg.llm_model
+            ? cfg.llm_model.split("/").pop()
+            : "—";
+          lines.push(
+            `Языковой редактор: <code>${llmName}</code>, prompt <code>${cfg.llm_prompt_style}</code>`
+          );
+        } else {
+          lines.push("Языковой редактор: отключён (template-режим)");
+        }
+        lines.push(`Устройство: <code>${data.device}</code>`);
+        archLinesEl.innerHTML = lines.map(l => `<div class="arch-line">${l}</div>`).join("");
+        archMetricsEl.style.display = "block";
+      } catch (e) {
+        archLinesEl.innerHTML = '<div class="error">Сервис недоступен.</div>';
+      }
     }
+    loadArchInfo();
 
-    function renderTags(tags) {
-      if (!tags || tags.length === 0) {
-        tagsContainerEl.innerHTML = '<span class="muted">Теги не получены.</span>';
-        return;
-      }
-
-      tagsContainerEl.innerHTML = "";
-      tags.forEach(tag => {
-        const span = document.createElement("span");
-        span.className = "tag";
-        span.textContent = tag;
-        tagsContainerEl.appendChild(span);
-      });
-    }
-
-    function formatMetadata(metadata) {
-      if (!metadata) {
-        return "Метаданные не получены.";
-      }
-
-      const lines = [];
-
-      if (metadata.image_type) {
-        lines.push(`Тип: ${metadata.image_type.label} (score=${metadata.image_type.score.toFixed(3)}, confident=${metadata.image_type.confident})`);
-      }
-      if (metadata.style) {
-        lines.push(`Стиль: ${metadata.style.label} (score=${metadata.style.score.toFixed(3)}, confident=${metadata.style.confident})`);
-      }
-      if (metadata.theme) {
-        lines.push(`Тема: ${metadata.theme.label} (score=${metadata.theme.score.toFixed(3)}, confident=${metadata.theme.confident})`);
-      }
-      if (metadata.mood) {
-        lines.push(`Настроение: ${metadata.mood.label} (score=${metadata.mood.score.toFixed(3)}, confident=${metadata.mood.confident})`);
-      }
-
-      return lines.length > 0 ? lines.join("\n") : "Метаданные не получены.";
-    }
-
-    function renderReadableResult(data) {
-      archiveDescriptionEl.textContent = data.archive_description || "Нет архивного описания.";
-      captionEnEl.textContent = data.caption?.en || "Нет caption en.";
-      captionRuEl.textContent = data.caption?.ru || "Нет caption ru.";
-      metadataReadableEl.textContent = formatMetadata(data.metadata);
-      renderTags(data.metadata?.tags || []);
-    }
-
+    // === Превью ===
     fileInput.addEventListener("change", () => {
       const file = fileInput.files[0];
-
       if (file) {
         imagePathInput.value = "";
-        const objectUrl = URL.createObjectURL(file);
-        previewEl.src = objectUrl;
-        previewEl.style.display = "block";
+        previewEl.src = URL.createObjectURL(file);
+        previewEl.classList.remove("hidden");
+        previewPlaceholderEl.classList.add("hidden");
+        filenameEl.textContent = file.name;
       } else {
-        previewEl.style.display = "none";
-        previewEl.src = "";
+        previewEl.classList.add("hidden");
+        previewPlaceholderEl.classList.remove("hidden");
+        filenameEl.textContent = "";
       }
     });
 
     imagePathInput.addEventListener("input", () => {
       if (imagePathInput.value.trim()) {
         fileInput.value = "";
-        previewEl.style.display = "none";
-        previewEl.src = "";
+        previewEl.classList.add("hidden");
+        previewPlaceholderEl.classList.remove("hidden");
+        filenameEl.textContent = imagePathInput.value.trim();
       }
     });
 
+    // === Сброс результата ===
+    function resetResult() {
+      archiveDescriptionEl.textContent =
+        "Здесь появится финальное описание, сгенерированное предложенным пайплайном.";
+      archiveDescriptionEl.classList.add("muted");
+      searchTextEl.textContent = "Появится после инференса.";
+      searchTextEl.classList.add("muted");
+      tagsContainerEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
+      metadataGridEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
+      captionEnEl.textContent = "—";
+      captionEnEl.classList.add("muted");
+      captionRuEl.textContent = "—";
+      captionRuEl.classList.add("muted");
+      rawJsonEl.textContent = "Здесь появится сырой ответ API.";
+    }
+
+    // === Отрисовка результата ===
+    function renderResult(data) {
+      archiveDescriptionEl.textContent = data.archive_description || "—";
+      archiveDescriptionEl.classList.remove("muted");
+
+      searchTextEl.textContent = data.search_text || "—";
+      searchTextEl.classList.remove("muted");
+
+      // Теги
+      const tags = data.metadata?.tags || [];
+      if (tags.length === 0) {
+        tagsContainerEl.innerHTML = '<span class="muted">Теги не получены.</span>';
+      } else {
+        tagsContainerEl.innerHTML = "";
+        tags.forEach(t => {
+          const span = document.createElement("span");
+          span.className = "tag";
+          span.textContent = t;
+          tagsContainerEl.appendChild(span);
+        });
+      }
+
+      // Метаданные
+      const meta = data.metadata || {};
+      const axisLabels = {
+        image_type: "Тип материала",
+        style: "Техника",
+        theme: "Сюжет",
+        mood: "Настроение",
+      };
+      const items = [];
+      for (const axis of ["image_type", "style", "theme", "mood"]) {
+        const field = meta[axis];
+        if (!field) continue;
+        const isConfident = field.confident;
+        const label = field.label || "—";
+        const score =
+          field.score !== undefined && field.score !== null
+            ? field.score.toFixed(3)
+            : "—";
+        items.push(`
+          <div class="meta-item ${isConfident ? "" : "not-confident"}">
+            <div class="meta-axis">${axisLabels[axis]}</div>
+            <div class="meta-label">${label}</div>
+            <div class="meta-score">score = ${score} · ${isConfident ? "уверенно" : "не уверенно"}</div>
+          </div>
+        `);
+      }
+      metadataGridEl.innerHTML = items.join("") ||
+        '<span class="muted">Метаданные не получены.</span>';
+
+      // Промежуточные подписи
+      captionEnEl.textContent = data.caption?.en || "—";
+      captionEnEl.classList.remove("muted");
+      captionRuEl.textContent = data.caption?.ru || "—";
+      captionRuEl.classList.remove("muted");
+
+      rawJsonEl.textContent = JSON.stringify(data, null, 2);
+    }
+
+    // === Submit ===
     submitBtn.addEventListener("click", async () => {
       const file = fileInput.files[0];
       const imagePath = imagePathInput.value.trim();
@@ -254,50 +584,41 @@
         statusEl.className = "error";
         return;
       }
-
       if (file && imagePath) {
-        statusEl.textContent = "Нужно использовать только один способ: либо файл, либо путь.";
+        statusEl.textContent =
+          "Нужно использовать только один способ: либо файл, либо путь.";
         statusEl.className = "error";
         return;
       }
 
       submitBtn.disabled = true;
-      statusEl.textContent = "Идёт обработка. Первый запуск может быть долгим из-за загрузки моделей.";
+      statusEl.textContent =
+        "Идёт обработка. Первый запуск может занять до минуты — загружаются модели.";
       statusEl.className = "muted";
-      resultEl.textContent = "Ожидание ответа...";
-      resetReadableResult();
+      resetResult();
 
       const formData = new FormData();
-
-      if (file) {
-        formData.append("file", file);
-      } else {
-        formData.append("image_path", imagePath);
-      }
+      if (file) formData.append("file", file);
+      else formData.append("image_path", imagePath);
 
       try {
         const response = await fetch("/inference", {
           method: "POST",
           body: formData,
         });
-
         const data = await response.json();
-
         if (!response.ok) {
-          statusEl.textContent = "Ошибка.";
+          statusEl.textContent = "Ошибка инференса.";
           statusEl.className = "error";
-          resultEl.textContent = JSON.stringify(data, null, 2);
+          rawJsonEl.textContent = JSON.stringify(data, null, 2);
           return;
         }
-
         statusEl.textContent = "Готово.";
         statusEl.className = "success";
-        renderReadableResult(data);
-        resultEl.textContent = JSON.stringify(data, null, 2);
-      } catch (error) {
-        statusEl.textContent = "Ошибка запроса к API.";
+        renderResult(data);
+      } catch (e) {
+        statusEl.textContent = "Ошибка запроса к API: " + e;
         statusEl.className = "error";
-        resultEl.textContent = String(error);
       } finally {
         submitBtn.disabled = false;
       }
