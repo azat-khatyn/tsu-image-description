@@ -1,0 +1,4248 @@
+{
+  "summary": {
+    "num_examples": 220,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": null,
+      "translator_model": "facebook/nllb-200-distilled-600M",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": true,
+        "include_mood": true
+      },
+      "references_path": "data/eval/references.jsonl",
+      "pool_path": "data/eval/pool_nypl.jsonl"
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.2510762968523936,
+      "CLIPScore_RU_caption_ru": 0.2544599108397961,
+      "CLIPScore_RU_archive_ru": 0.2804230280220509,
+      "CLIPScore_RU_reference_ru": 0.30870684757828715
+    },
+    "by_source": {
+      "nypl": {
+        "n": 200,
+        "CLIPScore_RU_archive_ru": 0.2759297405928373,
+        "CLIPScore_RU_caption_ru": 0.24980823047459125,
+        "CLIPScore_EN_caption_en": 0.24635367460548876
+      },
+      "rgb": {
+        "n": 20,
+        "CLIPScore_RU_archive_ru": 0.3253559023141861,
+        "CLIPScore_RU_caption_ru": 0.30097671449184416,
+        "CLIPScore_EN_caption_en": 0.29830251932144164
+      }
+    },
+    "retrieval": {
+      "n_pool": 220,
+      "i2t": {
+        "R@1": 0.20454545454545456,
+        "R@5": 0.43636363636363634,
+        "R@10": 0.5545454545454546
+      },
+      "t2i": {
+        "R@1": 0.16818181818181818,
+        "R@5": 0.37272727272727274,
+        "R@10": 0.4590909090909091
+      },
+      "mean_rank_i2t": 17.04090909090909,
+      "mean_rank_t2i": 36.777272727272724
+    },
+    "latency": {
+      "mean_sec": 0.8094383293932135,
+      "images_per_sec": 1.235424569960307
+    },
+    "notes": {
+      "I-1": "M-CLIP integrated; primary metric switched to CLIPScore_RU(archive).",
+      "I-2": "archive_description_ru declared as primary; old metric kept as back-compat.",
+      "I-4": "bootstrap CI implemented in scripts/eval_stats.py (not invoked here)",
+      "I-5": "retrieval R@1 / R@5 over eval pool computed below"
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white photo of trees in the woods",
+      "caption_ru": "Черно-белая фотография деревьев в лесу.",
+      "archive_ru": "Фотография в стиле черно-белая фотография. На изображении: Черно-белая фотография деревьев в лесу.. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Сосновый лес",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3069766163825989,
+        "CLIPScore_RU_caption_ru": 0.32805871963500977,
+        "CLIPScore_RU_archive_ru": 0.32513442635536194,
+        "CLIPScore_RU_reference_ru": 0.30132925510406494
+      },
+      "latency_sec": 1.7377650737762451,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "caption_en": "a painting of people in the woods",
+      "caption_ru": "Картина людей в лесу",
+      "archive_ru": "Фотография в стиле живопись. На изображении: Картина людей в лесу. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3098889887332916,
+        "CLIPScore_RU_caption_ru": 0.32231906056404114,
+        "CLIPScore_RU_archive_ru": 0.3315809965133667,
+        "CLIPScore_RU_reference_ru": 0.3090788722038269
+      },
+      "latency_sec": 0.7759349346160889,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white photo of a river",
+      "caption_ru": "Черно-белая фотография реки",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Черно-белая фотография реки. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25383883714675903,
+        "CLIPScore_RU_caption_ru": 0.26381364464759827,
+        "CLIPScore_RU_archive_ru": 0.290230393409729,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 0.7645821571350098,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "caption_en": "a child with a violin",
+      "caption_ru": "Ребенок с скрипкой ",
+      "archive_ru": "Фотография в стиле живопись. На изображении: Ребенок с скрипкой . Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Девочка с лукошком.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3150967061519623,
+        "CLIPScore_RU_caption_ru": 0.32693105936050415,
+        "CLIPScore_RU_archive_ru": 0.36044278740882874,
+        "CLIPScore_RU_reference_ru": 0.28499191999435425
+      },
+      "latency_sec": 0.586439847946167,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "caption_en": "a man on a reindeer",
+      "caption_ru": "Человек на олене",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Человек на олене. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3349955677986145,
+        "CLIPScore_RU_caption_ru": 0.25950542092323303,
+        "CLIPScore_RU_archive_ru": 0.27155178785324097,
+        "CLIPScore_RU_reference_ru": 0.340998113155365
+      },
+      "latency_sec": 0.6561589241027832,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 46
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "caption_en": "a drawing of a ship in the water",
+      "caption_ru": "Рисунок корабля в воде",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Рисунок корабля в воде. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3059057593345642,
+        "CLIPScore_RU_caption_ru": 0.3025670051574707,
+        "CLIPScore_RU_archive_ru": 0.3198983073234558,
+        "CLIPScore_RU_reference_ru": 0.30421382188796997
+      },
+      "latency_sec": 0.7239539623260498,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "caption_en": "a rose with a leaf on it",
+      "caption_ru": "Роза с листом на ней",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Роза с листом на ней. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+      "reference_ru": "Розы расцветают...",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3003430962562561,
+        "CLIPScore_RU_caption_ru": 0.29274114966392517,
+        "CLIPScore_RU_archive_ru": 0.34567785263061523,
+        "CLIPScore_RU_reference_ru": 0.29505568742752075
+      },
+      "latency_sec": 0.6788489818572998,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "caption_en": "a card with a picture of a flower",
+      "caption_ru": "Карту с фотографией цветка",
+      "archive_ru": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Карту с фотографией цветка. Предположительно, это пасхальная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2898688316345215,
+        "CLIPScore_RU_caption_ru": 0.29133182764053345,
+        "CLIPScore_RU_archive_ru": 0.2895204424858093,
+        "CLIPScore_RU_reference_ru": 0.3077434301376343
+      },
+      "latency_sec": 0.6425411701202393,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "two women in kimono, japan",
+      "caption_ru": "Две женщины в кимоно, Япония",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Две женщины в кимоно, Япония. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30204033851623535,
+        "CLIPScore_RU_caption_ru": 0.30594882369041443,
+        "CLIPScore_RU_archive_ru": 0.3453429937362671,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 0.6861858367919922,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "caption_en": "three engravings of flowers and leaves",
+      "caption_ru": "Три гравюры цветов и листьев",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Три гравюры цветов и листьев. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Изображение цветов и девочки",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22087129950523376,
+        "CLIPScore_RU_caption_ru": 0.20777221024036407,
+        "CLIPScore_RU_archive_ru": 0.2554701566696167,
+        "CLIPScore_RU_reference_ru": 0.23262850940227509
+      },
+      "latency_sec": 0.6272411346435547,
+      "retrieval": {
+        "rank_i2t": 67,
+        "rank_t2i": 39
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "a vintage christmas card with a gift box and holly",
+      "caption_ru": "Вентажный рождественский открыток с подарочным ящиком и голли",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Вентажный рождественский открыток с подарочным ящиком и голли. Предположительно, это рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3361111283302307,
+        "CLIPScore_RU_caption_ru": 0.3478655219078064,
+        "CLIPScore_RU_archive_ru": 0.33510154485702515,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 0.9343171119689941,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white photograph of a woman",
+      "caption_ru": "Черно-белая фотография женщины.",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Черно-белая фотография женщины.. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Девушка держит свечу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30335938930511475,
+        "CLIPScore_RU_caption_ru": 0.3058074712753296,
+        "CLIPScore_RU_archive_ru": 0.29322174191474915,
+        "CLIPScore_RU_reference_ru": 0.29088130593299866
+      },
+      "latency_sec": 0.7661628723144531,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "a couple of people walking through a snowy scene",
+      "caption_ru": "Пару людей, проходящих через снежную сцену",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Пару людей, проходящих через снежную сцену. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24159803986549377,
+        "CLIPScore_RU_caption_ru": 0.23257367312908173,
+        "CLIPScore_RU_archive_ru": 0.3298000693321228,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 0.911113977432251,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "caption_en": "a painting of a man and woman kissing",
+      "caption_ru": "Картина мужчины и женщины, целующихся",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Картина мужчины и женщины, целующихся. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29726359248161316,
+        "CLIPScore_RU_caption_ru": 0.3106529712677002,
+        "CLIPScore_RU_archive_ru": 0.33185523748397827,
+        "CLIPScore_RU_reference_ru": 0.3731614649295807
+      },
+      "latency_sec": 0.7770349979400635,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "caption_en": "a christmas card with a bird and holly",
+      "caption_ru": "Рождественская открытка с птицей и голли",
+      "archive_ru": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Рождественская открытка с птицей и голли. Предположительно, это рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3432283401489258,
+        "CLIPScore_RU_caption_ru": 0.36317503452301025,
+        "CLIPScore_RU_archive_ru": 0.37089601159095764,
+        "CLIPScore_RU_reference_ru": 0.2770371735095978
+      },
+      "latency_sec": 0.7705481052398682,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "caption_en": "a dog and a dog are standing in the snow",
+      "caption_ru": "Собака и собака стоят в снегу.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Собака и собака стоят в снегу.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2683779299259186,
+        "CLIPScore_RU_caption_ru": 0.276172399520874,
+        "CLIPScore_RU_archive_ru": 0.353498637676239,
+        "CLIPScore_RU_reference_ru": 0.29683560132980347
+      },
+      "latency_sec": 0.8305709362030029,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white photo of a pagoda tower",
+      "caption_ru": "Черно-белая фотография башни пагоды",
+      "archive_ru": "Открытка в стиле черно-белая фотография. На изображении: Черно-белая фотография башни пагоды. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34951192140579224,
+        "CLIPScore_RU_caption_ru": 0.35123342275619507,
+        "CLIPScore_RU_archive_ru": 0.33466836810112,
+        "CLIPScore_RU_reference_ru": 0.3548523187637329
+      },
+      "latency_sec": 0.8056788444519043,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white drawing of a man ' s face",
+      "caption_ru": "Черно-белая чертежка мужского лица.",
+      "archive_ru": "Фотография в стиле рисунок. На изображении: Черно-белая чертежка мужского лица.. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25665003061294556,
+        "CLIPScore_RU_caption_ru": 0.2933117747306824,
+        "CLIPScore_RU_archive_ru": 0.2809031903743744,
+        "CLIPScore_RU_reference_ru": 0.3040972352027893
+      },
+      "latency_sec": 0.8647091388702393,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "caption_en": "a couple riding a sled sled down a snowy hill",
+      "caption_ru": "Пара едет на лыжке на лыжах вниз по снежному холму",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Пара едет на лыжке на лыжах вниз по снежному холму. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30760765075683594,
+        "CLIPScore_RU_caption_ru": 0.30291593074798584,
+        "CLIPScore_RU_archive_ru": 0.38919371366500854,
+        "CLIPScore_RU_reference_ru": 0.34150415658950806
+      },
+      "latency_sec": 1.1288230419158936,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "a woman in a colorful dress holding flowers",
+      "caption_ru": "Женщина в красочном платье, держащая цветы",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Женщина в красочном платье, держащая цветы. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3225163221359253,
+        "CLIPScore_RU_caption_ru": 0.3348371684551239,
+        "CLIPScore_RU_archive_ru": 0.35312938690185547,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 0.8302938938140869,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/005aeab0-5fce-0137-881b-0710f6dfc445.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2323596179485321,
+        "CLIPScore_RU_caption_ru": 0.24757982790470123,
+        "CLIPScore_RU_archive_ru": 0.26029038429260254,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7559773921966553,
+      "retrieval": {
+        "rank_i2t": 66,
+        "rank_t2i": 62
+      }
+    },
+    {
+      "image_path": "data/nypl/images/017c4780-5fce-0137-ce31-5be392b29c69.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2323596179485321,
+        "CLIPScore_RU_caption_ru": 0.24757982790470123,
+        "CLIPScore_RU_archive_ru": 0.26029038429260254,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.713435173034668,
+      "retrieval": {
+        "rank_i2t": 65,
+        "rank_t2i": 63
+      }
+    },
+    {
+      "image_path": "data/nypl/images/028fd910-4f1d-0137-4f08-41eb8aaaf8dc.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23229631781578064,
+        "CLIPScore_RU_caption_ru": 0.2350689321756363,
+        "CLIPScore_RU_archive_ru": 0.241459921002388,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.789827823638916,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 150
+      }
+    },
+    {
+      "image_path": "data/nypl/images/02c4d6d0-5fce-0137-8a76-02d7c9fe3a2f.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black and white image",
+      "caption_ru": "Книга с красной обложкой и черно-белым изображением",
+      "archive_ru": "Фотография в стиле ретро-дизайн. На изображении: Книга с красной обложкой и черно-белым изображением. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24143081903457642,
+        "CLIPScore_RU_caption_ru": 0.25052961707115173,
+        "CLIPScore_RU_archive_ru": 0.26050394773483276,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8912410736083984,
+      "retrieval": {
+        "rank_i2t": 38,
+        "rank_t2i": 37
+      }
+    },
+    {
+      "image_path": "data/nypl/images/051f4b80-82a1-0130-37bb-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people posing for a picture",
+      "caption_ru": "Группа людей, позирующих для фотографии",
+      "archive_ru": "Фотография в стиле черно-белая фотография. На изображении: Группа людей, позирующих для фотографии. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2754119336605072,
+        "CLIPScore_RU_caption_ru": 0.26944947242736816,
+        "CLIPScore_RU_archive_ru": 0.2997066378593445,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6854138374328613,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/08275cc0-4f1d-0137-2950-49fededf6132.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and black lettering",
+      "caption_ru": "Книга с красной обложкой и черной буквой",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черной буквой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24457073211669922,
+        "CLIPScore_RU_caption_ru": 0.24341708421707153,
+        "CLIPScore_RU_archive_ru": 0.24351106584072113,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7776179313659668,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 159
+      }
+    },
+    {
+      "image_path": "data/nypl/images/08db6da0-5fce-0137-8379-038cdfa421c9.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25932878255844116,
+        "CLIPScore_RU_caption_ru": 0.2704084813594818,
+        "CLIPScore_RU_archive_ru": 0.26722782850265503,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.802685022354126,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 26
+      }
+    },
+    {
+      "image_path": "data/nypl/images/09d2f3d0-4f1d-0137-0e6e-11fac4f49b10.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a bunch of pictures on it",
+      "caption_ru": "Книга с кучей фотографий на ней",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с кучей фотографий на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20643381774425507,
+        "CLIPScore_RU_caption_ru": 0.20162788033485413,
+        "CLIPScore_RU_archive_ru": 0.2374563068151474,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6935150623321533,
+      "retrieval": {
+        "rank_i2t": 63,
+        "rank_t2i": 156
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0a134590-4f1d-0137-c6b5-0f9b63e756c6.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a bunch of pictures on it",
+      "caption_ru": "Книга с кучей фотографий на ней",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с кучей фотографий на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20643381774425507,
+        "CLIPScore_RU_caption_ru": 0.20162788033485413,
+        "CLIPScore_RU_archive_ru": 0.2374563068151474,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7037351131439209,
+      "retrieval": {
+        "rank_i2t": 62,
+        "rank_t2i": 157
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0b021ce0-c5c3-012f-4add-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of two birds sitting on a sign",
+      "caption_ru": "Рисунок двух птиц, сидящих на знаке.",
+      "archive_ru": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Рисунок двух птиц, сидящих на знаке.. Предположительно, это новогодняя сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22420407831668854,
+        "CLIPScore_RU_caption_ru": 0.22063452005386353,
+        "CLIPScore_RU_archive_ru": 0.3357025980949402,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7374427318572998,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0b883610-5fce-0137-ff87-176fd0c98087.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and black lettering",
+      "caption_ru": "Книга с красной обложкой и черной буквой",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черной буквой. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2447536438703537,
+        "CLIPScore_RU_caption_ru": 0.25471585988998413,
+        "CLIPScore_RU_archive_ru": 0.27238214015960693,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8496279716491699,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 48
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0bc8b730-5fce-0137-e053-2dbe10d11a50.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24501176178455353,
+        "CLIPScore_RU_caption_ru": 0.2396400272846222,
+        "CLIPScore_RU_archive_ru": 0.25643080472946167,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8869669437408447,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 92
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0be98850-5fce-0137-624f-79c558cc7e20.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24501176178455353,
+        "CLIPScore_RU_caption_ru": 0.2396400272846222,
+        "CLIPScore_RU_archive_ru": 0.25643080472946167,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8215689659118652,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 94
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0eda2e20-5fce-0137-b89d-02d64ec962a9.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24501176178455353,
+        "CLIPScore_RU_caption_ru": 0.2396400272846222,
+        "CLIPScore_RU_archive_ru": 0.25643080472946167,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8703639507293701,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 93
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0fcecc40-4f1d-0137-05cf-005d1f7854e6.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red and black cover",
+      "caption_ru": "Книга с красно-черным обложком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красно-черным обложком. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2552284598350525,
+        "CLIPScore_RU_caption_ru": 0.2622336149215698,
+        "CLIPScore_RU_archive_ru": 0.2586958706378937,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7126269340515137,
+      "retrieval": {
+        "rank_i2t": 33,
+        "rank_t2i": 61
+      }
+    },
+    {
+      "image_path": "data/nypl/images/101bfba0-c560-012f-ce19-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a crowd of people in a city street",
+      "caption_ru": "толпа людей на улице города",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: толпа людей на улице города. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26625099778175354,
+        "CLIPScore_RU_caption_ru": 0.2800191640853882,
+        "CLIPScore_RU_archive_ru": 0.30505427718162537,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5944840908050537,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/12b25b00-54d6-0137-9482-65cbc98e59ef.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией человека на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2061794400215149,
+        "CLIPScore_RU_caption_ru": 0.19619809091091156,
+        "CLIPScore_RU_archive_ru": 0.24864275753498077,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.691321849822998,
+      "retrieval": {
+        "rank_i2t": 32,
+        "rank_t2i": 122
+      }
+    },
+    {
+      "image_path": "data/nypl/images/13227dd0-5af1-0137-97af-111685f671b5.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a cover of a man in a suit",
+      "caption_ru": "Книга с обложкой мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с обложкой мужчины в костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2468729317188263,
+        "CLIPScore_RU_caption_ru": 0.2505568265914917,
+        "CLIPScore_RU_archive_ru": 0.2686167061328888,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.738537073135376,
+      "retrieval": {
+        "rank_i2t": 22,
+        "rank_t2i": 46
+      }
+    },
+    {
+      "image_path": "data/nypl/images/137580b0-5fce-0137-7fc3-2575cd677097.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24645011126995087,
+        "CLIPScore_RU_caption_ru": 0.2600104808807373,
+        "CLIPScore_RU_archive_ru": 0.26884138584136963,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7249946594238281,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 35
+      }
+    },
+    {
+      "image_path": "data/nypl/images/14539ed0-5af1-0137-fa5f-7dacbbe64b78.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a cover of a man in a suit",
+      "caption_ru": "Книга с обложкой мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с обложкой мужчины в костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2468729317188263,
+        "CLIPScore_RU_caption_ru": 0.2505568265914917,
+        "CLIPScore_RU_archive_ru": 0.2686167061328888,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7082109451293945,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 47
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1465de20-54d6-0137-1fd2-01d4ded44b75.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией человека на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2061794400215149,
+        "CLIPScore_RU_caption_ru": 0.19619809091091156,
+        "CLIPScore_RU_archive_ru": 0.24864275753498077,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6593809127807617,
+      "retrieval": {
+        "rank_i2t": 30,
+        "rank_t2i": 123
+      }
+    },
+    {
+      "image_path": "data/nypl/images/14f9e840-5fce-0137-9f57-71ab303bb37b.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26444387435913086,
+        "CLIPScore_RU_caption_ru": 0.2642028331756592,
+        "CLIPScore_RU_archive_ru": 0.2579125165939331,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7709641456604004,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 64
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15424f10-54d6-0137-704f-7dd65db13afa.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией человека на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2061794400215149,
+        "CLIPScore_RU_caption_ru": 0.19619809091091156,
+        "CLIPScore_RU_archive_ru": 0.24864275753498077,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.695328950881958,
+      "retrieval": {
+        "rank_i2t": 31,
+        "rank_t2i": 124
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15bd8790-4f1d-0137-baa2-02761820a540.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24829287827014923,
+        "CLIPScore_RU_caption_ru": 0.23710250854492188,
+        "CLIPScore_RU_archive_ru": 0.24353410303592682,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7753429412841797,
+      "retrieval": {
+        "rank_i2t": 19,
+        "rank_t2i": 147
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15bf0ae0-54d6-0137-6a31-0b767ccb4be8.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией человека на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2061794400215149,
+        "CLIPScore_RU_caption_ru": 0.19619809091091156,
+        "CLIPScore_RU_archive_ru": 0.24864275753498077,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6689112186431885,
+      "retrieval": {
+        "rank_i2t": 33,
+        "rank_t2i": 125
+      }
+    },
+    {
+      "image_path": "data/nypl/images/16208a70-5fce-0137-2b6b-1bcf211791f0.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.262785404920578,
+        "CLIPScore_RU_caption_ru": 0.26105788350105286,
+        "CLIPScore_RU_archive_ru": 0.25995194911956787,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7910139560699463,
+      "retrieval": {
+        "rank_i2t": 18,
+        "rank_t2i": 50
+      }
+    },
+    {
+      "image_path": "data/nypl/images/16410a70-5fce-0137-3748-31984762c3e2.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.262785404920578,
+        "CLIPScore_RU_caption_ru": 0.26105788350105286,
+        "CLIPScore_RU_archive_ru": 0.25995194911956787,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7985191345214844,
+      "retrieval": {
+        "rank_i2t": 20,
+        "rank_t2i": 51
+      }
+    },
+    {
+      "image_path": "data/nypl/images/17ccd060-4f1d-0137-0d46-2dbbd1b594bf.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Плакат в стиле ретро-дизайн. На изображении: Книга с фотографией человека на ней. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20461557805538177,
+        "CLIPScore_RU_caption_ru": 0.20131263136863708,
+        "CLIPScore_RU_archive_ru": 0.2545728385448456,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6501877307891846,
+      "retrieval": {
+        "rank_i2t": 18,
+        "rank_t2i": 52
+      }
+    },
+    {
+      "image_path": "data/nypl/images/18050fb0-54d6-0137-0408-0b1bd74e514f.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25946804881095886,
+        "CLIPScore_RU_caption_ru": 0.2501751184463501,
+        "CLIPScore_RU_archive_ru": 0.27352699637413025,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8025002479553223,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 50
+      }
+    },
+    {
+      "image_path": "data/nypl/images/19c542b0-54d6-0137-ecf4-29c49ae26489.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a gun",
+      "caption_ru": "Книга с фотографией пистолета",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией пистолета. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2583874762058258,
+        "CLIPScore_RU_caption_ru": 0.26529574394226074,
+        "CLIPScore_RU_archive_ru": 0.2971740961074829,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6074390411376953,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1a0fda90-3944-0138-ae0a-2de23f29d4fc.jpg",
+      "source": "nypl",
+      "caption_en": "a red box with a picture of a man in it",
+      "caption_ru": "Красная коробка с фотографией мужчины в ней",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Красная коробка с фотографией мужчины в ней. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2670291066169739,
+        "CLIPScore_RU_caption_ru": 0.26870104670524597,
+        "CLIPScore_RU_archive_ru": 0.27882689237594604,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.811913013458252,
+      "retrieval": {
+        "rank_i2t": 19,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1b185540-2b59-0138-d8b7-1367f0d61643.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a bunch of pictures on it",
+      "caption_ru": "Книга с кучей фотографий на ней",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с кучей фотографий на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21845576167106628,
+        "CLIPScore_RU_caption_ru": 0.2057984173297882,
+        "CLIPScore_RU_archive_ru": 0.24992090463638306,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6663410663604736,
+      "retrieval": {
+        "rank_i2t": 54,
+        "rank_t2i": 92
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1bb89160-54d6-0137-933f-1f10e469ec5c.jpg",
+      "source": "nypl",
+      "caption_en": "a magazine with a picture of a man on it",
+      "caption_ru": "Журнал с фотографией мужчины на нем",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Журнал с фотографией мужчины на нем. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2525920867919922,
+        "CLIPScore_RU_caption_ru": 0.2574976682662964,
+        "CLIPScore_RU_archive_ru": 0.251953125,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6717700958251953,
+      "retrieval": {
+        "rank_i2t": 34,
+        "rank_t2i": 89
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1bf6f140-54d6-0137-1b0c-0a78619dfd5f.jpg",
+      "source": "nypl",
+      "caption_en": "a magazine with a picture of a man on it",
+      "caption_ru": "Журнал с фотографией мужчины на нем",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Журнал с фотографией мужчины на нем. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2525920867919922,
+        "CLIPScore_RU_caption_ru": 0.2574976682662964,
+        "CLIPScore_RU_archive_ru": 0.251953125,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7286410331726074,
+      "retrieval": {
+        "rank_i2t": 35,
+        "rank_t2i": 90
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1c1d91d0-c530-012f-9371-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: документ с перечнем имен людей. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.269870787858963,
+        "CLIPScore_RU_caption_ru": 0.2795138955116272,
+        "CLIPScore_RU_archive_ru": 0.25971662998199463,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6815211772918701,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 55
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1cee40a0-4f1d-0137-8a47-0d3749456c93.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21702122688293457,
+        "CLIPScore_RU_caption_ru": 0.22789233922958374,
+        "CLIPScore_RU_archive_ru": 0.25349143147468567,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.754936695098877,
+      "retrieval": {
+        "rank_i2t": 26,
+        "rank_t2i": 105
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1ea29040-a002-0137-cea5-0bc4aa8f3a9a.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24501176178455353,
+        "CLIPScore_RU_caption_ru": 0.2396400272846222,
+        "CLIPScore_RU_archive_ru": 0.25643080472946167,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.833888053894043,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 95
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1f5b4010-bd07-013a-463b-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a building",
+      "caption_ru": "Черно-белая фотография здания",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Черно-белая фотография здания. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25922685861587524,
+        "CLIPScore_RU_caption_ru": 0.27282553911209106,
+        "CLIPScore_RU_archive_ru": 0.2892337739467621,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6836647987365723,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1fe5b8a0-54d6-0137-5e16-0b8350bed3c7.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a book cover",
+      "caption_ru": "Книга с фотографией обложки книги",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией обложки книги. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24594473838806152,
+        "CLIPScore_RU_caption_ru": 0.2459106743335724,
+        "CLIPScore_RU_archive_ru": 0.2555038332939148,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6272411346435547,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 83
+      }
+    },
+    {
+      "image_path": "data/nypl/images/22d98420-54d6-0137-3b28-5dc5c47c3140.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a clock on it",
+      "caption_ru": "Книга с часом на ней",
+      "archive_ru": "Плакат в стиле ретро-дизайн. На изображении: Книга с часом на ней. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.235398069024086,
+        "CLIPScore_RU_caption_ru": 0.23648056387901306,
+        "CLIPScore_RU_archive_ru": 0.2732086777687073,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5896928310394287,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 19
+      }
+    },
+    {
+      "image_path": "data/nypl/images/24f1d430-2721-0132-e268-58d385a7bbd0.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people riding on a boat",
+      "caption_ru": "Группа людей, едящих на лодке",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Группа людей, едящих на лодке. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30788901448249817,
+        "CLIPScore_RU_caption_ru": 0.2954787015914917,
+        "CLIPScore_RU_archive_ru": 0.31893190741539,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.69561767578125,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/25d98910-4f1d-0137-dd88-173a66b91735.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.18943259119987488,
+        "CLIPScore_RU_caption_ru": 0.1946435570716858,
+        "CLIPScore_RU_archive_ru": 0.24420978128910065,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7097508907318115,
+      "retrieval": {
+        "rank_i2t": 74,
+        "rank_t2i": 107
+      }
+    },
+    {
+      "image_path": "data/nypl/images/25edd4f0-7759-013c-8413-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a horse and a man",
+      "caption_ru": "Черно-белая фотография лошади и человека.",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография лошади и человека.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25624755024909973,
+        "CLIPScore_RU_caption_ru": 0.2687923312187195,
+        "CLIPScore_RU_archive_ru": 0.2902102470397949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7080848217010498,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/26fcb120-4f1d-0137-9aa6-000dda42a5ae.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a cartoon character on it",
+      "caption_ru": "Книга с мультфильмом на ней",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с мультфильмом на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21171800792217255,
+        "CLIPScore_RU_caption_ru": 0.20610156655311584,
+        "CLIPScore_RU_archive_ru": 0.260952353477478,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6433758735656738,
+      "retrieval": {
+        "rank_i2t": 62,
+        "rank_t2i": 30
+      }
+    },
+    {
+      "image_path": "data/nypl/images/29380870-54d6-0137-ed8c-083850e15911.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a drawing of a man and two women",
+      "caption_ru": "Книга с рисунком мужчины и двух женщин",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с рисунком мужчины и двух женщин. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21721750497817993,
+        "CLIPScore_RU_caption_ru": 0.2193109095096588,
+        "CLIPScore_RU_archive_ru": 0.2502027153968811,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7866871356964111,
+      "retrieval": {
+        "rank_i2t": 46,
+        "rank_t2i": 82
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2acff8e0-54d6-0137-7c4d-73ce9872fb5a.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman in a hat",
+      "caption_ru": "Книга с фотографией женщины в шляпе",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией женщины в шляпе. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2181660234928131,
+        "CLIPScore_RU_caption_ru": 0.2177397459745407,
+        "CLIPScore_RU_archive_ru": 0.2611735463142395,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7503159046173096,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 72
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2b0ee550-54d6-0137-177c-2d73dbe691c3.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman in a hat",
+      "caption_ru": "Книга с фотографией женщины в шляпе",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией женщины в шляпе. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2181660234928131,
+        "CLIPScore_RU_caption_ru": 0.2177397459745407,
+        "CLIPScore_RU_archive_ru": 0.2611735463142395,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6893560886383057,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 73
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2be9d970-54d6-0137-516d-2df384e56b4e.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией человека на ней. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.250666081905365,
+        "CLIPScore_RU_caption_ru": 0.2395276129245758,
+        "CLIPScore_RU_archive_ru": 0.2861264944076538,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6447360515594482,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 12
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2df1ef10-ffc2-0131-42a5-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2618006467819214,
+        "CLIPScore_RU_caption_ru": 0.27510690689086914,
+        "CLIPScore_RU_archive_ru": 0.2924085855484009,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7261059284210205,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/30c7f030-54d6-0137-c335-796733c091de.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black and white cover",
+      "caption_ru": "Книга с красной обложкой и черно-белой обложкой",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черно-белой обложкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24566400051116943,
+        "CLIPScore_RU_caption_ru": 0.2265406996011734,
+        "CLIPScore_RU_archive_ru": 0.28730517625808716,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8410131931304932,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 13
+      }
+    },
+    {
+      "image_path": "data/nypl/images/310e5050-4f1d-0137-39a7-39c5ab556270.jpg",
+      "source": "nypl",
+      "caption_en": "a magazine with a picture of a man in a suit",
+      "caption_ru": "Журнал с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Журнал с фотографией мужчины в костюме. Предположительно, это новогодняя сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2146003246307373,
+        "CLIPScore_RU_caption_ru": 0.22710931301116943,
+        "CLIPScore_RU_archive_ru": 0.23451784253120422,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7505900859832764,
+      "retrieval": {
+        "rank_i2t": 73,
+        "rank_t2i": 138
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3238c5a0-c5d2-012f-fa26-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a street scene with a woman walking",
+      "caption_ru": "Фото с уличной сценой с женщиной, идущей по улице.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Фото с уличной сценой с женщиной, идущей по улице.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2675834894180298,
+        "CLIPScore_RU_caption_ru": 0.2871740460395813,
+        "CLIPScore_RU_archive_ru": 0.3140326738357544,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7788410186767578,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/39c2f540-bd07-013a-f730-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a man sitting in a chair with a canel",
+      "caption_ru": "Человек, сидящий в кресле с каналом",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: Человек, сидящий в кресле с каналом. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2677070200443268,
+        "CLIPScore_RU_caption_ru": 0.2750564217567444,
+        "CLIPScore_RU_archive_ru": 0.2947782278060913,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8000791072845459,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3ac78850-54d6-0137-8014-039963576fd5.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2584787905216217,
+        "CLIPScore_RU_caption_ru": 0.26764777302742004,
+        "CLIPScore_RU_archive_ru": 0.2681683599948883,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7268977165222168,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 23
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3be77dd0-54d6-0137-5155-79bcf8ac3134.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2158416360616684,
+        "CLIPScore_RU_caption_ru": 0.21207642555236816,
+        "CLIPScore_RU_archive_ru": 0.22077029943466187,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8077218532562256,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 185
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3e1531c0-0bec-0134-5861-00505686a51c.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man on a skateboard",
+      "caption_ru": "рисунок мужчины на скейтбордах",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: рисунок мужчины на скейтбордах. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21063759922981262,
+        "CLIPScore_RU_caption_ru": 0.22118470072746277,
+        "CLIPScore_RU_archive_ru": 0.2911817729473114,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7672178745269775,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3f8eced0-c62c-012f-d76e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man in a red hat and a white shirt",
+      "caption_ru": "Мужчина в красной шляпе и белой рубашке",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Мужчина в красной шляпе и белой рубашке. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24913455545902252,
+        "CLIPScore_RU_caption_ru": 0.24068394303321838,
+        "CLIPScore_RU_archive_ru": 0.2889465093612671,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.758774995803833,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/41c35ab0-a002-0137-81f3-5ff093cbf530.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and black lettering",
+      "caption_ru": "Книга с красной обложкой и черной буквой",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черной буквой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2524105906486511,
+        "CLIPScore_RU_caption_ru": 0.24786001443862915,
+        "CLIPScore_RU_archive_ru": 0.28842249512672424,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7815890312194824,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 26
+      }
+    },
+    {
+      "image_path": "data/nypl/images/431976d0-c55f-012f-0530-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a building",
+      "caption_ru": "Черно-белая фотография здания",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Черно-белая фотография здания. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25278228521347046,
+        "CLIPScore_RU_caption_ru": 0.26136016845703125,
+        "CLIPScore_RU_archive_ru": 0.27242207527160645,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6712138652801514,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 22
+      }
+    },
+    {
+      "image_path": "data/nypl/images/4434cfb0-c5ee-012f-2c98-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of people on a dock",
+      "caption_ru": "Черно-белая фотография людей на пристанке",
+      "archive_ru": "Открытка в стиле черно-белая фотография. На изображении: Черно-белая фотография людей на пристанке. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2688535153865814,
+        "CLIPScore_RU_caption_ru": 0.28124362230300903,
+        "CLIPScore_RU_archive_ru": 0.29617708921432495,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7210719585418701,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/459df520-54d6-0137-4af9-49169630bf81.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a page of text on it",
+      "caption_ru": "Книга с страницей текста на ней",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с страницей текста на ней. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2543199360370636,
+        "CLIPScore_RU_caption_ru": 0.24366873502731323,
+        "CLIPScore_RU_archive_ru": 0.26938751339912415,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.67529296875,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 32
+      }
+    },
+    {
+      "image_path": "data/nypl/images/49b47c80-b849-013a-2de5-0242ac110002.jpg",
+      "source": "nypl",
+      "caption_en": "a man with a turba",
+      "caption_ru": "Мужчина с турбаной рукой",
+      "archive_ru": "Фотография в стиле живопись. На изображении: Мужчина с турбаной рукой. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2518017292022705,
+        "CLIPScore_RU_caption_ru": 0.31677401065826416,
+        "CLIPScore_RU_archive_ru": 0.3221144676208496,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5915687084197998,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/4f3c9c20-0339-0138-c8fe-231b22998eaa.jpg",
+      "source": "nypl",
+      "caption_en": "a woman in a white dress and a man in a gray suit",
+      "caption_ru": "Женщина в белом платье и мужчина в сером костюме",
+      "archive_ru": "Фотография в стиле рисунок. На изображении: Женщина в белом платье и мужчина в сером костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23285400867462158,
+        "CLIPScore_RU_caption_ru": 0.2155604362487793,
+        "CLIPScore_RU_archive_ru": 0.2573869526386261,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8336429595947266,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 33
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a2e2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a house with a lot of windows",
+      "caption_ru": "Дом с множеством окон",
+      "archive_ru": "Открытка в стиле декоративная иллюстрация. На изображении: Дом с множеством окон. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2568415403366089,
+        "CLIPScore_RU_caption_ru": 0.2660381495952606,
+        "CLIPScore_RU_archive_ru": 0.30503615736961365,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6454908847808838,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a304-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a very old picture of a very old building",
+      "caption_ru": "Очень старая фотография очень старого здания.",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: Очень старая фотография очень старого здания.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2540467083454132,
+        "CLIPScore_RU_caption_ru": 0.2554287016391754,
+        "CLIPScore_RU_archive_ru": 0.28222715854644775,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6934518814086914,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a464-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people walking down a street",
+      "caption_ru": "группа людей, идущих по улице",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: группа людей, идущих по улице. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2650006115436554,
+        "CLIPScore_RU_caption_ru": 0.2609759569168091,
+        "CLIPScore_RU_archive_ru": 0.3079015612602234,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6580040454864502,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a4d2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a train station",
+      "caption_ru": "старый снимок вокзала",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: старый снимок вокзала. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2673490047454834,
+        "CLIPScore_RU_caption_ru": 0.2768785357475281,
+        "CLIPScore_RU_archive_ru": 0.2726920545101166,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5474538803100586,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 14
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-c061-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of people on the beach",
+      "caption_ru": "Черно-белая фотография людей на пляже",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Черно-белая фотография людей на пляже. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25982901453971863,
+        "CLIPScore_RU_caption_ru": 0.25629788637161255,
+        "CLIPScore_RU_archive_ru": 0.3080023229122162,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7019870281219482,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbca-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "an aerial view of the old buildings in the town of st george, minnesota",
+      "caption_ru": "Взгляд с воздуха на старые здания в городе Сент-Джордж, Миннесота.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Взгляд с воздуха на старые здания в городе Сент-Джордж, Миннесота.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25735896825790405,
+        "CLIPScore_RU_caption_ru": 0.26356756687164307,
+        "CLIPScore_RU_archive_ru": 0.3302971422672272,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0978279113769531,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbd0-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a large brick building with a clock on the front",
+      "caption_ru": "Большое кирпичное здание с частью передней",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Большое кирпичное здание с частью передней. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2564328610897064,
+        "CLIPScore_RU_caption_ru": 0.26264142990112305,
+        "CLIPScore_RU_archive_ru": 0.3038313388824463,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9030141830444336,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbe3-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a bridge over a river with a boat in the water",
+      "caption_ru": "Мост над рекой с лодкой в воде",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Мост над рекой с лодкой в воде. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2478639930486679,
+        "CLIPScore_RU_caption_ru": 0.2576349377632141,
+        "CLIPScore_RU_archive_ru": 0.327732652425766,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7695817947387695,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbf2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a small town",
+      "caption_ru": "Черно-белая фотография небольшого города.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Черно-белая фотография небольшого города.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24128840863704681,
+        "CLIPScore_RU_caption_ru": 0.24695231020450592,
+        "CLIPScore_RU_archive_ru": 0.24441862106323242,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6818890571594238,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 63
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cc04-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a small house in the snow",
+      "caption_ru": "Маленький дом в снеге",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Маленький дом в снеге. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24478119611740112,
+        "CLIPScore_RU_caption_ru": 0.25172746181488037,
+        "CLIPScore_RU_archive_ru": 0.32072579860687256,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5399730205535889,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cc33-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a house with a tree in front of it",
+      "caption_ru": "Дом с деревом перед ним",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Дом с деревом перед ним. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25472649931907654,
+        "CLIPScore_RU_caption_ru": 0.26088008284568787,
+        "CLIPScore_RU_archive_ru": 0.32364314794540405,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6517701148986816,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-3746-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people sitting around a table",
+      "caption_ru": "группа людей, сидящих вокруг стола",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: группа людей, сидящих вокруг стола. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26356929540634155,
+        "CLIPScore_RU_caption_ru": 0.2654542028903961,
+        "CLIPScore_RU_archive_ru": 0.31080782413482666,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6937739849090576,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-5484-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a woman in a white dress and hat with a red cross",
+      "caption_ru": "Женщина в белом платье и шляпе с красным крестом",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Женщина в белом платье и шляпе с красным крестом. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2616499662399292,
+        "CLIPScore_RU_caption_ru": 0.27291297912597656,
+        "CLIPScore_RU_archive_ru": 0.34338897466659546,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8208308219909668,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-88b9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a gaze in the park",
+      "caption_ru": "взгляд в парке",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: взгляд в парке. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24068135023117065,
+        "CLIPScore_RU_caption_ru": 0.24761804938316345,
+        "CLIPScore_RU_archive_ru": 0.291273832321167,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5360920429229736,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bad2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a bunch of flowers on it",
+      "caption_ru": "Книга с кучей цветов на ней",
+      "archive_ru": "Поздравительная открытка в стиле гравюра. На изображении: Книга с кучей цветов на ней. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25842708349227905,
+        "CLIPScore_RU_caption_ru": 0.2581317722797394,
+        "CLIPScore_RU_archive_ru": 0.286368191242218,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6867051124572754,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bc92-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "four cards with dai dai dai dai dai dai dai dai dai dai dai dai dai dai dai dai dai dai",
+      "caption_ru": "Четыре карты с да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да",
+      "archive_ru": "Поздравительная открытка в стиле декоративная иллюстрация. На изображении: Четыре карты с да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да-да. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25886183977127075,
+        "CLIPScore_RU_caption_ru": 0.20479810237884521,
+        "CLIPScore_RU_archive_ru": 0.24928279221057892,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 7.038099050521851,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 23
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bf0e-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a collection of drawings and paintings by person",
+      "caption_ru": "Коллекция рисунков и картин, сделанных лично",
+      "archive_ru": "Фотография в стиле декоративная иллюстрация. На изображении: Коллекция рисунков и картин, сделанных лично. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2640005350112915,
+        "CLIPScore_RU_caption_ru": 0.25854697823524475,
+        "CLIPScore_RU_archive_ru": 0.27951177954673767,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8118829727172852,
+      "retrieval": {
+        "rank_i2t": 38,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bf9d-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a collection of vintage christmas cards",
+      "caption_ru": "коллекция старинных рождественских открыток",
+      "archive_ru": "Поздравительная открытка в стиле декоративная иллюстрация. На изображении: коллекция старинных рождественских открыток. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2697577476501465,
+        "CLIPScore_RU_caption_ru": 0.2757909297943115,
+        "CLIPScore_RU_archive_ru": 0.26637113094329834,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6362910270690918,
+      "retrieval": {
+        "rank_i2t": 24,
+        "rank_t2i": 22
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bfa6-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a set of four watercolor paintings of flowers and birds",
+      "caption_ru": "Набор четырех акварельных картин цветов и птиц",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Набор четырех акварельных картин цветов и птиц. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26038092374801636,
+        "CLIPScore_RU_caption_ru": 0.2798260450363159,
+        "CLIPScore_RU_archive_ru": 0.27554675936698914,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7977721691131592,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c0bc-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "six birds and a bird nest",
+      "caption_ru": "Шесть птиц и гнездо птиц",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Шесть птиц и гнездо птиц. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24282975494861603,
+        "CLIPScore_RU_caption_ru": 0.2597803473472595,
+        "CLIPScore_RU_archive_ru": 0.31869247555732727,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6229679584503174,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c4aa-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a poster for the exhibition of the paris art exhibition",
+      "caption_ru": "Плакат на выставку парижской художественной выставки",
+      "archive_ru": "Плакат в стиле декоративная иллюстрация. На изображении: Плакат на выставку парижской художественной выставки. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2538836598396301,
+        "CLIPScore_RU_caption_ru": 0.2596302032470703,
+        "CLIPScore_RU_archive_ru": 0.30507928133010864,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7855706214904785,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c4b9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a white board with drawings and sketches of various objects",
+      "caption_ru": "Белая доска с рисунками и эскизами различных объектов",
+      "archive_ru": "Фотография в стиле рисунок. На изображении: Белая доска с рисунками и эскизами различных объектов. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2442779690027237,
+        "CLIPScore_RU_caption_ru": 0.23169778287410736,
+        "CLIPScore_RU_archive_ru": 0.23720428347587585,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8377830982208252,
+      "retrieval": {
+        "rank_i2t": 31,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47dd-ce05-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white illustration of a man in a suit, with a sun above him",
+      "caption_ru": "Черно-белая иллюстрация мужчины в костюме с солнцем над ним",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Черно-белая иллюстрация мужчины в костюме с солнцем над ним. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26190900802612305,
+        "CLIPScore_RU_caption_ru": 0.25017377734184265,
+        "CLIPScore_RU_archive_ru": 0.3149944543838501,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0209908485412598,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47df-e3da-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of two men standing in front of a building",
+      "caption_ru": "Черно-белая фотография двух мужчин, стоящих перед зданием",
+      "archive_ru": "Поздравительная открытка в стиле черно-белая фотография. На изображении: Черно-белая фотография двух мужчин, стоящих перед зданием. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23627862334251404,
+        "CLIPScore_RU_caption_ru": 0.2330733835697174,
+        "CLIPScore_RU_archive_ru": 0.3342885375022888,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.942176103591919,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b80-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24250222742557526,
+        "CLIPScore_RU_caption_ru": 0.2581191956996918,
+        "CLIPScore_RU_archive_ru": 0.28898972272872925,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7306649684906006,
+      "retrieval": {
+        "rank_i2t": 20,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b94-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24731987714767456,
+        "CLIPScore_RU_caption_ru": 0.25708743929862976,
+        "CLIPScore_RU_archive_ru": 0.27402544021606445,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6616818904876709,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b9b-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a large crowd of people gathered in a city",
+      "caption_ru": "Большая толпа людей собралась в городе",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Большая толпа людей собралась в городе. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26749661564826965,
+        "CLIPScore_RU_caption_ru": 0.2746189832687378,
+        "CLIPScore_RU_archive_ru": 0.3079800009727478,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.649385929107666,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b9c-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a large crowd of people gathered in a city",
+      "caption_ru": "Большая толпа людей собралась в городе",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Большая толпа людей собралась в городе. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26749661564826965,
+        "CLIPScore_RU_caption_ru": 0.2746189832687378,
+        "CLIPScore_RU_archive_ru": 0.3079800009727478,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6477031707763672,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1ba9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23553480207920074,
+        "CLIPScore_RU_caption_ru": 0.2424839287996292,
+        "CLIPScore_RU_archive_ru": 0.28648707270622253,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6690590381622314,
+      "retrieval": {
+        "rank_i2t": 20,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1bb0-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people standing in a street",
+      "caption_ru": "группа людей, стоящих на улице",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: группа людей, стоящих на улице. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24259978532791138,
+        "CLIPScore_RU_caption_ru": 0.23942157626152039,
+        "CLIPScore_RU_archive_ru": 0.2809472978115082,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6072149276733398,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 19
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1bc8-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people standing in front of a building",
+      "caption_ru": "группа людей, стоящих перед зданием",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: группа людей, стоящих перед зданием. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2316671907901764,
+        "CLIPScore_RU_caption_ru": 0.22863656282424927,
+        "CLIPScore_RU_archive_ru": 0.2632049322128296,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6894268989562988,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 32
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c12-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a crowd of people",
+      "caption_ru": "Черно-белая фотография толпы людей",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Черно-белая фотография толпы людей. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2633567750453949,
+        "CLIPScore_RU_caption_ru": 0.275960773229599,
+        "CLIPScore_RU_archive_ru": 0.29816633462905884,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.688281774520874,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 13
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c14-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a group of men in uniform marching down a street",
+      "caption_ru": "Группа мужчин в форме маршируют по улице.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Группа мужчин в форме маршируют по улице.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26781541109085083,
+        "CLIPScore_RU_caption_ru": 0.27555611729621887,
+        "CLIPScore_RU_archive_ru": 0.3031773567199707,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7506349086761475,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c21-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2374616116285324,
+        "CLIPScore_RU_caption_ru": 0.25105908513069153,
+        "CLIPScore_RU_archive_ru": 0.3008543848991394,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.682981014251709,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c22-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2374616116285324,
+        "CLIPScore_RU_caption_ru": 0.25105908513069153,
+        "CLIPScore_RU_archive_ru": 0.3008543848991394,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.651390790939331,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c23-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people are gathered around a building",
+      "caption_ru": "Группа людей собралась вокруг здания.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Группа людей собралась вокруг здания.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26723361015319824,
+        "CLIPScore_RU_caption_ru": 0.25102174282073975,
+        "CLIPScore_RU_archive_ru": 0.2868373990058899,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6610193252563477,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 15
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4309-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2580074071884155,
+        "CLIPScore_RU_caption_ru": 0.2693139910697937,
+        "CLIPScore_RU_archive_ru": 0.30949410796165466,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6844048500061035,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4e50-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a house",
+      "caption_ru": "Черно-белая фотография дома",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография дома. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26993420720100403,
+        "CLIPScore_RU_caption_ru": 0.28022655844688416,
+        "CLIPScore_RU_archive_ru": 0.294014573097229,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6341359615325928,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4e55-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a house",
+      "caption_ru": "Черно-белая фотография дома",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография дома. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26611071825027466,
+        "CLIPScore_RU_caption_ru": 0.27860864996910095,
+        "CLIPScore_RU_archive_ru": 0.2981947660446167,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6416230201721191,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e1-bf79-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "two old photos of a man and woman",
+      "caption_ru": "Две старые фотографии мужчины и женщины.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Две старые фотографии мужчины и женщины.. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2669118344783783,
+        "CLIPScore_RU_caption_ru": 0.26631975173950195,
+        "CLIPScore_RU_archive_ru": 0.28020361065864563,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6713500022888184,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 11
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-59f7-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a dog and a dog are standing in the snow",
+      "caption_ru": "Собака и собака стоят в снегу.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Собака и собака стоят в снегу.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2644566595554352,
+        "CLIPScore_RU_caption_ru": 0.2759559750556946,
+        "CLIPScore_RU_archive_ru": 0.3569983243942261,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6982121467590332,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5a8b-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a painting of a horse drawn by a man",
+      "caption_ru": "Картина лошади, нарисованная человеком.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Картина лошади, нарисованная человеком.. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.264922559261322,
+        "CLIPScore_RU_caption_ru": 0.25836697220802307,
+        "CLIPScore_RU_archive_ru": 0.30378636717796326,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6760907173156738,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5d2e-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a child is standing in front of a brick wall",
+      "caption_ru": "Ребенок стоит перед кирпичной стеной",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Ребенок стоит перед кирпичной стеной. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23931565880775452,
+        "CLIPScore_RU_caption_ru": 0.24898084998130798,
+        "CLIPScore_RU_archive_ru": 0.31783610582351685,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6639738082885742,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5d2f-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a child is standing in front of a brick wall",
+      "caption_ru": "Ребенок стоит перед кирпичной стеной",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Ребенок стоит перед кирпичной стеной. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23931565880775452,
+        "CLIPScore_RU_caption_ru": 0.24898084998130798,
+        "CLIPScore_RU_archive_ru": 0.31783610582351685,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7172589302062988,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/56d6ec70-2290-0132-0aa3-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2618006467819214,
+        "CLIPScore_RU_caption_ru": 0.27510690689086914,
+        "CLIPScore_RU_archive_ru": 0.2924085855484009,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7250449657440186,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/58245f10-1f95-0134-abe9-00505686a51c.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man on a skateboard",
+      "caption_ru": "рисунок мужчины на скейтбордах",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: рисунок мужчины на скейтбордах. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21063759922981262,
+        "CLIPScore_RU_caption_ru": 0.22118470072746277,
+        "CLIPScore_RU_archive_ru": 0.2911817729473114,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7163219451904297,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/583f0100-2290-0132-7f31-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2618006467819214,
+        "CLIPScore_RU_caption_ru": 0.27510690689086914,
+        "CLIPScore_RU_archive_ru": 0.2924085855484009,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7276170253753662,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/59878270-2290-0132-6502-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2618006467819214,
+        "CLIPScore_RU_caption_ru": 0.27510690689086914,
+        "CLIPScore_RU_archive_ru": 0.2924085855484009,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7221672534942627,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/60e11ab0-c6e8-012f-95df-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a poster for the movie",
+      "caption_ru": "Плакат на фильм",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Плакат на фильм. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2587483525276184,
+        "CLIPScore_RU_caption_ru": 0.2692362368106842,
+        "CLIPScore_RU_archive_ru": 0.27166303992271423,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5042111873626709,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 15
+      }
+    },
+    {
+      "image_path": "data/nypl/images/65336510-2b57-0138-5aec-04723c3f1c68.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man in a suit",
+      "caption_ru": "Книга с фотографией мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины в костюме. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2584787905216217,
+        "CLIPScore_RU_caption_ru": 0.26764777302742004,
+        "CLIPScore_RU_archive_ru": 0.2681683599948883,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7054929733276367,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 24
+      }
+    },
+    {
+      "image_path": "data/nypl/images/680a5be0-c5ee-012f-7fb7-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a street scene",
+      "caption_ru": "Черно-белая фотография уличной сцены",
+      "archive_ru": "Открытка. На изображении: Черно-белая фотография уличной сцены. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25892189145088196,
+        "CLIPScore_RU_caption_ru": 0.25969791412353516,
+        "CLIPScore_RU_archive_ru": 0.2782036364078522,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6769731044769287,
+      "retrieval": {
+        "rank_i2t": 27,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/688ca6d0-5e8e-013e-fca2-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a horse and a man",
+      "caption_ru": "Черно-белая фотография лошади и человека.",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография лошади и человека.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25624755024909973,
+        "CLIPScore_RU_caption_ru": 0.2687923312187195,
+        "CLIPScore_RU_archive_ru": 0.2902102470397949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6944019794464111,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/6fa553c0-c5c3-012f-fdb0-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a little boy playing with a dog in the snow",
+      "caption_ru": "Маленький мальчик играет с собакой в снегу",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Маленький мальчик играет с собакой в снегу. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25643765926361084,
+        "CLIPScore_RU_caption_ru": 0.2552265226840973,
+        "CLIPScore_RU_archive_ru": 0.33454182744026184,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7706220149993896,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/708b9720-c5d1-012f-b1dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a painting of a busy street with people walking around",
+      "caption_ru": "Картина оживленной улицы с людьми, ходящими по ней.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Картина оживленной улицы с людьми, ходящими по ней.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2674347758293152,
+        "CLIPScore_RU_caption_ru": 0.2685261368751526,
+        "CLIPScore_RU_archive_ru": 0.31103214621543884,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8865063190460205,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/750c34c0-c56b-012f-69fa-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: документ с перечнем имен людей. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2652214467525482,
+        "CLIPScore_RU_caption_ru": 0.2764235734939575,
+        "CLIPScore_RU_archive_ru": 0.23969870805740356,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6620519161224365,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 105
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7a7bf640-c5c6-012f-3478-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photograph of a man in a suit",
+      "caption_ru": "Черно-белая фотография мужчины в костюме",
+      "archive_ru": "Фотография в стиле рисунок. На изображении: Черно-белая фотография мужчины в костюме. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.251289427280426,
+        "CLIPScore_RU_caption_ru": 0.25085246562957764,
+        "CLIPScore_RU_archive_ru": 0.30108964443206787,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7656688690185547,
+      "retrieval": {
+        "rank_i2t": 24,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7bd5bda0-c559-012f-16ae-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a table with numbers",
+      "caption_ru": "Черно-белый образ таблицы с цифрами",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: Черно-белый образ таблицы с цифрами. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23984494805335999,
+        "CLIPScore_RU_caption_ru": 0.23946554958820343,
+        "CLIPScore_RU_archive_ru": 0.2373712658882141,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6992120742797852,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 43
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7d8af6d0-54d6-0137-8432-6367cc465540.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black and white cover",
+      "caption_ru": "Книга с красной обложкой и черно-белой обложкой",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черно-белой обложкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21445655822753906,
+        "CLIPScore_RU_caption_ru": 0.20109593868255615,
+        "CLIPScore_RU_archive_ru": 0.24819830060005188,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.845134973526001,
+      "retrieval": {
+        "rank_i2t": 48,
+        "rank_t2i": 117
+      }
+    },
+    {
+      "image_path": "data/nypl/images/812ff580-c56b-012f-a0c7-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with numbers and a line of text",
+      "caption_ru": "лист с цифрами и строкой текста",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: лист с цифрами и строкой текста. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2692258358001709,
+        "CLIPScore_RU_caption_ru": 0.27078527212142944,
+        "CLIPScore_RU_archive_ru": 0.25157812237739563,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6381661891937256,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 74
+      }
+    },
+    {
+      "image_path": "data/nypl/images/85bb13b0-2bfc-0138-7b75-0fa38eefb123.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a horse and a man",
+      "caption_ru": "Черно-белая фотография лошади и человека.",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография лошади и человека.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25624755024909973,
+        "CLIPScore_RU_caption_ru": 0.2687923312187195,
+        "CLIPScore_RU_archive_ru": 0.2902102470397949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7020916938781738,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/872c3a30-c56b-012f-e507-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a document with the date of the date of the date of the date of the date of the date of",
+      "caption_ru": "Документ с датой регистрации, датой регистрации, датой регистрации, датой регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, да",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: Документ с датой регистрации, датой регистрации, датой регистрации, датой регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты регистрации, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, даты, да. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2651495933532715,
+        "CLIPScore_RU_caption_ru": 0.25589698553085327,
+        "CLIPScore_RU_archive_ru": 0.25338247418403625,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 5.624953985214233,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8947b270-c5c4-012f-60fd-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a boy with a shirt on",
+      "caption_ru": "Рисунок мальчика с рубахой на рубашке",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Рисунок мальчика с рубахой на рубашке. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23588237166404724,
+        "CLIPScore_RU_caption_ru": 0.24715544283390045,
+        "CLIPScore_RU_archive_ru": 0.28001224994659424,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7972230911254883,
+      "retrieval": {
+        "rank_i2t": 41,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/89512430-8d18-677c-e040-e00a18064a45.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people standing around a street",
+      "caption_ru": "группа людей, стоящих вокруг улицы",
+      "archive_ru": "Фотография в стиле гравюра. На изображении: группа людей, стоящих вокруг улицы. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23254770040512085,
+        "CLIPScore_RU_caption_ru": 0.22957496345043182,
+        "CLIPScore_RU_archive_ru": 0.2622189223766327,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6789758205413818,
+      "retrieval": {
+        "rank_i2t": 44,
+        "rank_t2i": 33
+      }
+    },
+    {
+      "image_path": "data/nypl/images/89e3b450-c559-012f-5da5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with the names of the three different types of the text",
+      "caption_ru": "лист с названиями трех различных типов текста",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: лист с названиями трех различных типов текста. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26182296872138977,
+        "CLIPScore_RU_caption_ru": 0.2740599513053894,
+        "CLIPScore_RU_archive_ru": 0.2396843284368515,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7633771896362305,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 88
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8bdbc4f0-8883-0136-f89f-7559ce27bf8c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a card with a man in a suit",
+      "caption_ru": "Ближайшее видео карты с мужчиной в костюме",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Ближайшее видео карты с мужчиной в костюме. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26869845390319824,
+        "CLIPScore_RU_caption_ru": 0.2570505738258362,
+        "CLIPScore_RU_archive_ru": 0.26175928115844727,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7982110977172852,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 56
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8ef6b180-c560-012f-14e4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a river with people and trees",
+      "caption_ru": "Рисунок реки с людьми и деревьями.",
+      "archive_ru": "Открытка в стиле декоративная иллюстрация. На изображении: Рисунок реки с людьми и деревьями.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2498292326927185,
+        "CLIPScore_RU_caption_ru": 0.24442657828330994,
+        "CLIPScore_RU_archive_ru": 0.27348262071609497,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7150590419769287,
+      "retrieval": {
+        "rank_i2t": 27,
+        "rank_t2i": 11
+      }
+    },
+    {
+      "image_path": "data/nypl/images/90197b40-c556-012f-c481-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a couple of people are walking down a street",
+      "caption_ru": "Пару людей ходят по улице.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Пару людей ходят по улице.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23753070831298828,
+        "CLIPScore_RU_caption_ru": 0.21743150055408478,
+        "CLIPScore_RU_archive_ru": 0.2801196873188019,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6285018920898438,
+      "retrieval": {
+        "rank_i2t": 29,
+        "rank_t2i": 11
+      }
+    },
+    {
+      "image_path": "data/nypl/images/903addc0-791e-0139-9ad8-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a horse and a man",
+      "caption_ru": "Черно-белая фотография лошади и человека.",
+      "archive_ru": "Фотография в стиле цветная фотография. На изображении: Черно-белая фотография лошади и человека.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25624755024909973,
+        "CLIPScore_RU_caption_ru": 0.2687923312187195,
+        "CLIPScore_RU_archive_ru": 0.2902102470397949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.715644121170044,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9199c120-c5d1-012f-3fa9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people standing around a statue",
+      "caption_ru": "группа людей, стоящих вокруг статуи",
+      "archive_ru": "Открытка в стиле живопись. На изображении: группа людей, стоящих вокруг статуи. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2549884021282196,
+        "CLIPScore_RU_caption_ru": 0.25434955954551697,
+        "CLIPScore_RU_archive_ru": 0.2957416772842407,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6786329746246338,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/91d2b2a0-c5d1-012f-caf0-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a small village with a small building",
+      "caption_ru": "Фото маленькой деревни с небольшим зданием",
+      "archive_ru": "Открытка в стиле декоративная иллюстрация. На изображении: Фото маленькой деревни с небольшим зданием. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2653491497039795,
+        "CLIPScore_RU_caption_ru": 0.2688346207141876,
+        "CLIPScore_RU_archive_ru": 0.27709054946899414,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6973719596862793,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9253ff90-54d6-0137-4e50-6ddabcf1f9ff.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman",
+      "caption_ru": "Книга с фотографией женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией женщины. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23530623316764832,
+        "CLIPScore_RU_caption_ru": 0.24120447039604187,
+        "CLIPScore_RU_archive_ru": 0.2508930563926697,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6272151470184326,
+      "retrieval": {
+        "rank_i2t": 64,
+        "rank_t2i": 74
+      }
+    },
+    {
+      "image_path": "data/nypl/images/93012010-7480-0135-bff5-2fc23542849e.jpg",
+      "source": "nypl",
+      "caption_en": "two men in suits",
+      "caption_ru": "Два мужчины в костюмах",
+      "archive_ru": "Фотография в стиле черно-белая фотография. На изображении: Два мужчины в костюмах. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2665629982948303,
+        "CLIPScore_RU_caption_ru": 0.29094332456588745,
+        "CLIPScore_RU_archive_ru": 0.3016514778137207,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5445477962493896,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/942b2300-54d6-0137-a470-4b6f2bd6bae1.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black cover",
+      "caption_ru": "Книга с красной и черной обложкой",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной и черной обложкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21997667849063873,
+        "CLIPScore_RU_caption_ru": 0.22637104988098145,
+        "CLIPScore_RU_archive_ru": 0.2520453631877899,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6849339008331299,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 122
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9dda17c0-c556-012f-028a-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a crowd of people",
+      "caption_ru": "Черно-белая фотография толпы людей",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Черно-белая фотография толпы людей. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24683226644992828,
+        "CLIPScore_RU_caption_ru": 0.26330676674842834,
+        "CLIPScore_RU_archive_ru": 0.29179108142852783,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.668910026550293,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a0850770-c556-012f-3b35-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a city street",
+      "caption_ru": "Черно-белая фотография городской улицы.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Черно-белая фотография городской улицы.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22821639478206635,
+        "CLIPScore_RU_caption_ru": 0.2413119524717331,
+        "CLIPScore_RU_archive_ru": 0.27468162775039673,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.668668270111084,
+      "retrieval": {
+        "rank_i2t": 35,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a0a3f1f0-5af0-0137-bdea-47d4397f339e.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on it",
+      "caption_ru": "Книга с фотографией человека на ней",
+      "archive_ru": "Фотография в стиле ретро-дизайн. На изображении: Книга с фотографией человека на ней. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2265370935201645,
+        "CLIPScore_RU_caption_ru": 0.21447792649269104,
+        "CLIPScore_RU_archive_ru": 0.2539213299751282,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6629171371459961,
+      "retrieval": {
+        "rank_i2t": 63,
+        "rank_t2i": 58
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a15f7c20-c556-012f-51f4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a large crowd of people gathered in a city",
+      "caption_ru": "Большая толпа людей собралась в городе",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Большая толпа людей собралась в городе. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2675859332084656,
+        "CLIPScore_RU_caption_ru": 0.2756732702255249,
+        "CLIPScore_RU_archive_ru": 0.29212042689323425,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.628798246383667,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a31c2880-c55c-012f-cc11-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a painting of a building with people walking around it",
+      "caption_ru": "Картина здания с людьми, ходящими вокруг него.",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Картина здания с людьми, ходящими вокруг него.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25465255975723267,
+        "CLIPScore_RU_caption_ru": 0.24784189462661743,
+        "CLIPScore_RU_archive_ru": 0.297627329826355,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7343392372131348,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a9a87a90-5fce-0137-3a79-71f727785bc6.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and black lettering",
+      "caption_ru": "Книга с красной обложкой и черной буквой",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черной буквой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2524105906486511,
+        "CLIPScore_RU_caption_ru": 0.24786001443862915,
+        "CLIPScore_RU_archive_ru": 0.28842249512672424,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7874529361724854,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 25
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa2a4f90-5fce-0137-2c1a-03be08b55f45.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and black lettering",
+      "caption_ru": "Книга с красной обложкой и черной буквой",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черной буквой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2524105906486511,
+        "CLIPScore_RU_caption_ru": 0.24786001443862915,
+        "CLIPScore_RU_archive_ru": 0.28842249512672424,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7815151214599609,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 24
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa2ca8c0-5af0-0137-1957-19f6ba3a2641.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman and a man",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2088385671377182,
+        "CLIPScore_RU_caption_ru": 0.2031889259815216,
+        "CLIPScore_RU_archive_ru": 0.23937082290649414,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7310130596160889,
+      "retrieval": {
+        "rank_i2t": 69,
+        "rank_t2i": 149
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa4dd950-5af0-0137-4a2b-007bef5aab4f.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman and a man",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2088385671377182,
+        "CLIPScore_RU_caption_ru": 0.2031889259815216,
+        "CLIPScore_RU_archive_ru": 0.23937082290649414,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.690885066986084,
+      "retrieval": {
+        "rank_i2t": 71,
+        "rank_t2i": 147
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa910700-5af0-0137-a6ac-0f34d98c395a.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman and a man",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2088385671377182,
+        "CLIPScore_RU_caption_ru": 0.2031889259815216,
+        "CLIPScore_RU_archive_ru": 0.23937082290649414,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7379450798034668,
+      "retrieval": {
+        "rank_i2t": 64,
+        "rank_t2i": 148
+      }
+    },
+    {
+      "image_path": "data/nypl/images/abff29c0-5af0-0137-f7b0-63e0db87ed3c.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a drawing of a man in a suit",
+      "caption_ru": "Книга с рисунком мужчины в костюме",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с рисунком мужчины в костюме. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20435000956058502,
+        "CLIPScore_RU_caption_ru": 0.21462637186050415,
+        "CLIPScore_RU_archive_ru": 0.2623385787010193,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7421917915344238,
+      "retrieval": {
+        "rank_i2t": 61,
+        "rank_t2i": 35
+      }
+    },
+    {
+      "image_path": "data/nypl/images/adb66d40-c5c4-012f-b785-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a series of six framed prints of the person ' s work",
+      "caption_ru": "серия из шести рамочных отпечатков работы человека",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: серия из шести рамочных отпечатков работы человека. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26060253381729126,
+        "CLIPScore_RU_caption_ru": 0.2945777177810669,
+        "CLIPScore_RU_archive_ru": 0.2963147759437561,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.756511926651001,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b23f3b90-c532-012f-8f65-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: документ с перечнем имен людей. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2640470266342163,
+        "CLIPScore_RU_caption_ru": 0.27574801445007324,
+        "CLIPScore_RU_archive_ru": 0.25651469826698303,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6589949131011963,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 45
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-c80d-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the various people",
+      "caption_ru": "Документ с перечнем имен различных людей",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: Документ с перечнем имен различных людей. Предположительно, это сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.266421377658844,
+        "CLIPScore_RU_caption_ru": 0.2745932936668396,
+        "CLIPScore_RU_archive_ru": 0.2481117844581604,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7479138374328613,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 66
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-cc46-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with a line of text on it",
+      "caption_ru": "лист с строкой текста на нем",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: лист с строкой текста на нем. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25066137313842773,
+        "CLIPScore_RU_caption_ru": 0.22564655542373657,
+        "CLIPScore_RU_archive_ru": 0.24497267603874207,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6188437938690186,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 67
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-ce1a-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a line of text that reads, ' ' ' '",
+      "caption_ru": "Документ с строкой текста, которая гласит: \" \" \"",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Документ с строкой текста, которая гласит: \" \" \". Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26032596826553345,
+        "CLIPScore_RU_caption_ru": 0.28014427423477173,
+        "CLIPScore_RU_archive_ru": 0.24924561381340027,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9076206684112549,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 57
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-ce23-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: документ с перечнем имен людей. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26113805174827576,
+        "CLIPScore_RU_caption_ru": 0.26824042201042175,
+        "CLIPScore_RU_archive_ru": 0.2524468004703522,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7103009223937988,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 31
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-d40c-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: документ с перечнем имен людей. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25811055302619934,
+        "CLIPScore_RU_caption_ru": 0.26676446199417114,
+        "CLIPScore_RU_archive_ru": 0.24370910227298737,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6592600345611572,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 65
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-d4fc-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a diagram of the location of the location of the location of the location of the location",
+      "caption_ru": "Диаграмма расположения места расположения места расположения",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: Диаграмма расположения места расположения места расположения. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2316661775112152,
+        "CLIPScore_RU_caption_ru": 0.2187195122241974,
+        "CLIPScore_RU_archive_ru": 0.24128714203834534,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.883491039276123,
+      "retrieval": {
+        "rank_i2t": 21,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-136f-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: документ с перечнем имен людей. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2636018991470337,
+        "CLIPScore_RU_caption_ru": 0.2765456438064575,
+        "CLIPScore_RU_archive_ru": 0.2654683589935303,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7299280166625977,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 35
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-2ccb-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a document with a list of the names of the people",
+      "caption_ru": "документ с перечнем имен людей",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: документ с перечнем имен людей. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2689899802207947,
+        "CLIPScore_RU_caption_ru": 0.28344428539276123,
+        "CLIPScore_RU_archive_ru": 0.2675463557243347,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.67034912109375,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 48
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-44ab-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with a line of text on it",
+      "caption_ru": "лист с строкой текста на нем",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: лист с строкой текста на нем. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22796276211738586,
+        "CLIPScore_RU_caption_ru": 0.20770521461963654,
+        "CLIPScore_RU_archive_ru": 0.24210868775844574,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6661989688873291,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 70
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-44c0-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with a list of the names of the various buildings",
+      "caption_ru": "Лист с перечнем названий различных зданий",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Лист с перечнем названий различных зданий. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2250821590423584,
+        "CLIPScore_RU_caption_ru": 0.23113439977169037,
+        "CLIPScore_RU_archive_ru": 0.22369390726089478,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7899289131164551,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 161
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd99-a473-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with a line of text that reads, ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '",
+      "caption_ru": "лист с строкой текста, которая гласит: \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \"",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: лист с строкой текста, которая гласит: \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \". Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23605620861053467,
+        "CLIPScore_RU_caption_ru": 0.23633071780204773,
+        "CLIPScore_RU_archive_ru": 0.24444153904914856,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 6.1681809425354,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 89
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b9bd99e0-5af0-0137-504d-33f71272a690.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2608303427696228,
+        "CLIPScore_RU_caption_ru": 0.2606582045555115,
+        "CLIPScore_RU_archive_ru": 0.26224464178085327,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8919367790222168,
+      "retrieval": {
+        "rank_i2t": 26,
+        "rank_t2i": 48
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b9ffd5c0-5af0-0137-b24b-001c893f66c8.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2608303427696228,
+        "CLIPScore_RU_caption_ru": 0.2606582045555115,
+        "CLIPScore_RU_archive_ru": 0.26224464178085327,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.795496940612793,
+      "retrieval": {
+        "rank_i2t": 25,
+        "rank_t2i": 49
+      }
+    },
+    {
+      "image_path": "data/nypl/images/bb095ce0-5af0-0137-1272-0d50344e33f6.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2608303427696228,
+        "CLIPScore_RU_caption_ru": 0.2606582045555115,
+        "CLIPScore_RU_archive_ru": 0.26224464178085327,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8165121078491211,
+      "retrieval": {
+        "rank_i2t": 27,
+        "rank_t2i": 50
+      }
+    },
+    {
+      "image_path": "data/nypl/images/be7bfb80-5af0-0137-e341-23286e2b6410.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man holding a sign",
+      "caption_ru": "Книга с фотографией мужчины, держащего знак",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины, держащего знак. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23490306735038757,
+        "CLIPScore_RU_caption_ru": 0.2355048954486847,
+        "CLIPScore_RU_archive_ru": 0.2693631649017334,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8033771514892578,
+      "retrieval": {
+        "rank_i2t": 34,
+        "rank_t2i": 52
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c261ef12-e4a2-3577-e040-e00a18067776.jpg",
+      "source": "nypl",
+      "caption_en": "a group of women walking down a dirt road",
+      "caption_ru": "Группа женщин, идущих по грушевой дороге",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Группа женщин, идущих по грушевой дороге. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2682737708091736,
+        "CLIPScore_RU_caption_ru": 0.29810070991516113,
+        "CLIPScore_RU_archive_ru": 0.3339688181877136,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7197611331939697,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c2624937-b3a6-2318-e040-e00a18067b59.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a church",
+      "caption_ru": "Черно-белая фотография церкви",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Черно-белая фотография церкви. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2573951184749603,
+        "CLIPScore_RU_caption_ru": 0.2611895799636841,
+        "CLIPScore_RU_archive_ru": 0.28817734122276306,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.636544942855835,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c26322c6-3b52-69f1-e040-e00a18061651.jpg",
+      "source": "nypl",
+      "caption_en": "a man in a boat in the water",
+      "caption_ru": "Человек в лодке в воде",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Человек в лодке в воде. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25875136256217957,
+        "CLIPScore_RU_caption_ru": 0.26094573736190796,
+        "CLIPScore_RU_archive_ru": 0.3104945421218872,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.613135814666748,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c2b94680-c5c2-012f-dc92-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a child is standing in front of a brick wall",
+      "caption_ru": "Ребенок стоит перед кирпичной стеной",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Ребенок стоит перед кирпичной стеной. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23931565880775452,
+        "CLIPScore_RU_caption_ru": 0.24898084998130798,
+        "CLIPScore_RU_archive_ru": 0.31783610582351685,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7162091732025146,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c494b3e0-c55c-012f-d829-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a building",
+      "caption_ru": "Черно-белая фотография здания",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Черно-белая фотография здания. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2558346092700958,
+        "CLIPScore_RU_caption_ru": 0.26676011085510254,
+        "CLIPScore_RU_archive_ru": 0.29538118839263916,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6146938800811768,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c72ec7b0-5af0-0137-edbd-7f48bff61e15.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a woman in a dress",
+      "caption_ru": "Книга с фотографией женщины в платье",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией женщины в платье. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22350449860095978,
+        "CLIPScore_RU_caption_ru": 0.22722938656806946,
+        "CLIPScore_RU_archive_ru": 0.2491312026977539,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7289650440216064,
+      "retrieval": {
+        "rank_i2t": 81,
+        "rank_t2i": 69
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c86e2b10-2a66-0138-057a-5da2aea97820.jpg",
+      "source": "nypl",
+      "caption_en": "a newspaper with a picture of a man in a bed",
+      "caption_ru": "Газета с фотографией мужчины в постели",
+      "archive_ru": "Плакат в стиле декоративная иллюстрация. На изображении: Газета с фотографией мужчины в постели. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2659057080745697,
+        "CLIPScore_RU_caption_ru": 0.25976109504699707,
+        "CLIPScore_RU_archive_ru": 0.3005502223968506,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.756591796875,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cca51a90-18b3-013e-f4c3-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a man in a suit and tie is holding a tennis rad",
+      "caption_ru": "Мужчина в костюме и галстуке держит теннисную ручку.",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Мужчина в костюме и галстуке держит теннисную ручку.. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2525481879711151,
+        "CLIPScore_RU_caption_ru": 0.2682676911354065,
+        "CLIPScore_RU_archive_ru": 0.29141953587532043,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8421540260314941,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cd564530-c5c5-012f-d6e2-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a poster for the exhibition of the paris art exhibition",
+      "caption_ru": "Плакат на выставку парижской художественной выставки",
+      "archive_ru": "Плакат в стиле декоративная иллюстрация. На изображении: Плакат на выставку парижской художественной выставки. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2538836598396301,
+        "CLIPScore_RU_caption_ru": 0.2596302032470703,
+        "CLIPScore_RU_archive_ru": 0.30507928133010864,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8151707649230957,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ce1236b0-5af0-0137-f14b-4d9e46d24793.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a bunch of old comics",
+      "caption_ru": "Книга с кучей старых комиксов",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с кучей старых комиксов. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2561012804508209,
+        "CLIPScore_RU_caption_ru": 0.25630658864974976,
+        "CLIPScore_RU_archive_ru": 0.2770836651325226,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6545369625091553,
+      "retrieval": {
+        "rank_i2t": 47,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cf5bdd90-c5bf-012f-e8c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the old city of lux, egypt",
+      "caption_ru": "Старый город Люкс, Египет",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Старый город Люкс, Египет. Предположительно, это праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24134224653244019,
+        "CLIPScore_RU_caption_ru": 0.23572123050689697,
+        "CLIPScore_RU_archive_ru": 0.2507155239582062,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5720500946044922,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 38
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d2990540-c564-012f-0845-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people are gathered around a building",
+      "caption_ru": "Группа людей собралась вокруг здания.",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Группа людей собралась вокруг здания.. Предположительно, это городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26723361015319824,
+        "CLIPScore_RU_caption_ru": 0.25102174282073975,
+        "CLIPScore_RU_archive_ru": 0.2868373990058899,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.678469181060791,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d6b54a30-5af0-0137-b38b-08f34cc2abfc.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a bunch of old comics",
+      "caption_ru": "Книга с кучей старых комиксов",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с кучей старых комиксов. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2561012804508209,
+        "CLIPScore_RU_caption_ru": 0.25630658864974976,
+        "CLIPScore_RU_archive_ru": 0.2770836651325226,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6408019065856934,
+      "retrieval": {
+        "rank_i2t": 46,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d7b9c6d0-c6f7-012f-adc4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man in a suit with a sword",
+      "caption_ru": "Рисунок мужчины в костюме с мечом",
+      "archive_ru": "Поздравительная открытка в стиле винтажная иллюстрация. На изображении: Рисунок мужчины в костюме с мечом. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2325512170791626,
+        "CLIPScore_RU_caption_ru": 0.23041820526123047,
+        "CLIPScore_RU_archive_ru": 0.25309914350509644,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7360661029815674,
+      "retrieval": {
+        "rank_i2t": 43,
+        "rank_t2i": 48
+      }
+    },
+    {
+      "image_path": "data/nypl/images/db728010-b3f3-0134-054f-00505686a51c.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a chandel with gears and gears",
+      "caption_ru": "Рисунок свечи с приспособлениями и приспособлениями",
+      "archive_ru": "Поздравительная открытка в стиле декоративная иллюстрация. На изображении: Рисунок свечи с приспособлениями и приспособлениями. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2644268274307251,
+        "CLIPScore_RU_caption_ru": 0.29706189036369324,
+        "CLIPScore_RU_archive_ru": 0.2849280834197998,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7893490791320801,
+      "retrieval": {
+        "rank_i2t": 27,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/dc58e9c0-c5c5-012f-1a90-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a group of people in a park",
+      "caption_ru": "Рисунок группы людей в парке.",
+      "archive_ru": "Иллюстрация в стиле декоративная иллюстрация. На изображении: Рисунок группы людей в парке.. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20871196687221527,
+        "CLIPScore_RU_caption_ru": 0.2163921594619751,
+        "CLIPScore_RU_archive_ru": 0.23616808652877808,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7270631790161133,
+      "retrieval": {
+        "rank_i2t": 107,
+        "rank_t2i": 42
+      }
+    },
+    {
+      "image_path": "data/nypl/images/dc6b3420-9c1e-0137-afe8-1d56742e6e5d.jpg",
+      "source": "nypl",
+      "caption_en": "two men in suits",
+      "caption_ru": "Два мужчины в костюмах",
+      "archive_ru": "Фотография в стиле черно-белая фотография. На изображении: Два мужчины в костюмах. Предположительно, это романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2665629982948303,
+        "CLIPScore_RU_caption_ru": 0.29094332456588745,
+        "CLIPScore_RU_archive_ru": 0.3016514778137207,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.5139138698577881,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e2cb1880-c6f7-012f-c077-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man and woman in a kitchen",
+      "caption_ru": "Рисунок мужчины и женщины на кухне.",
+      "archive_ru": "Открытка в стиле гравюра. На изображении: Рисунок мужчины и женщины на кухне.. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2681601643562317,
+        "CLIPScore_RU_caption_ru": 0.2840539813041687,
+        "CLIPScore_RU_archive_ru": 0.31408214569091797,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7223799228668213,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e35d0020-c6f7-012f-c36c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man in a suit and hat, with a banner above his head",
+      "caption_ru": "Рисунок мужчины в костюме и шляпе с баннером над головой",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Рисунок мужчины в костюме и шляпе с баннером над головой. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2697620987892151,
+        "CLIPScore_RU_caption_ru": 0.23450139164924622,
+        "CLIPScore_RU_archive_ru": 0.2665443420410156,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9864218235015869,
+      "retrieval": {
+        "rank_i2t": 31,
+        "rank_t2i": 39
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e9515ab0-c56b-012f-ed3f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a sheet with the names of the names of the names of the names",
+      "caption_ru": "лист с названиями имен имен имен имен имен имен имен",
+      "archive_ru": "Открытка в стиле рисунок. На изображении: лист с названиями имен имен имен имен имен имен имен. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.217251718044281,
+        "CLIPScore_RU_caption_ru": 0.22905568778514862,
+        "CLIPScore_RU_archive_ru": 0.2327558398246765,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8637068271636963,
+      "retrieval": {
+        "rank_i2t": 18,
+        "rank_t2i": 80
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eacb14d0-5fcd-0137-fb7f-043655789ed3.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black and white image",
+      "caption_ru": "Книга с красной обложкой и черно-белым изображением",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черно-белым изображением. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23040342330932617,
+        "CLIPScore_RU_caption_ru": 0.2407745122909546,
+        "CLIPScore_RU_archive_ru": 0.24799425899982452,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.925929069519043,
+      "retrieval": {
+        "rank_i2t": 41,
+        "rank_t2i": 126
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eb8ea370-5fcd-0137-690d-01ba0d5fa1b7.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black and white image",
+      "caption_ru": "Книга с красной обложкой и черно-белым изображением",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черно-белым изображением. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23040342330932617,
+        "CLIPScore_RU_caption_ru": 0.2407745122909546,
+        "CLIPScore_RU_archive_ru": 0.24799425899982452,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8924558162689209,
+      "retrieval": {
+        "rank_i2t": 42,
+        "rank_t2i": 124
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ebbf0f70-c5d1-012f-6e5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people walking across a bridge",
+      "caption_ru": "Группа людей, идущих через мост",
+      "archive_ru": "Открытка в стиле цветная фотография. На изображении: Группа людей, идущих через мост. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23335331678390503,
+        "CLIPScore_RU_caption_ru": 0.23502883315086365,
+        "CLIPScore_RU_archive_ru": 0.32012343406677246,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6658680438995361,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ecd6d120-5fcd-0137-6ea9-4d546e4cf931.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black and white image",
+      "caption_ru": "Книга с красной обложкой и черно-белым изображением",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и черно-белым изображением. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23040342330932617,
+        "CLIPScore_RU_caption_ru": 0.2407745122909546,
+        "CLIPScore_RU_archive_ru": 0.24799425899982452,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8657951354980469,
+      "retrieval": {
+        "rank_i2t": 43,
+        "rank_t2i": 125
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ee80c2b0-5fcd-0137-4148-519765192285.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man and a woman",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23493200540542603,
+        "CLIPScore_RU_caption_ru": 0.24797365069389343,
+        "CLIPScore_RU_archive_ru": 0.26868936419487,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7028188705444336,
+      "retrieval": {
+        "rank_i2t": 53,
+        "rank_t2i": 29
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eea2e7d0-5fcd-0137-ae63-7b6a533f5a3e.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man and a woman",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23493200540542603,
+        "CLIPScore_RU_caption_ru": 0.24797365069389343,
+        "CLIPScore_RU_archive_ru": 0.26868936419487,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6972079277038574,
+      "retrieval": {
+        "rank_i2t": 50,
+        "rank_t2i": 30
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f5791520-4f1c-0137-dc9f-0d6e6a48755c.jpg",
+      "source": "nypl",
+      "caption_en": "a magazine with a picture of a woman",
+      "caption_ru": "Журнал с фотографией женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Журнал с фотографией женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23981991410255432,
+        "CLIPScore_RU_caption_ru": 0.2478991448879242,
+        "CLIPScore_RU_archive_ru": 0.26003164052963257,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6099362373352051,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 56
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f686d090-5fcd-0137-3e0e-0debf84afeb2.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man on a motorcycle",
+      "caption_ru": "Книга с фотографией мужчины на мотоцикле",
+      "archive_ru": "Плакат в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины на мотоцикле. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21426206827163696,
+        "CLIPScore_RU_caption_ru": 0.21719613671302795,
+        "CLIPScore_RU_archive_ru": 0.2492053210735321,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7617161273956299,
+      "retrieval": {
+        "rank_i2t": 29,
+        "rank_t2i": 86
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f8b5c9c0-5fcd-0137-6b2f-37fa627dc973.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black cover",
+      "caption_ru": "Книга с красной и черной обложкой",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной и черной обложкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22892600297927856,
+        "CLIPScore_RU_caption_ru": 0.23889634013175964,
+        "CLIPScore_RU_archive_ru": 0.27685850858688354,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7031002044677734,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 18
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f938a380-5fcd-0137-38ee-77b8b4844277.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black cover",
+      "caption_ru": "Книга с красной и черной обложкой",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной и черной обложкой. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22892600297927856,
+        "CLIPScore_RU_caption_ru": 0.23889634013175964,
+        "CLIPScore_RU_archive_ru": 0.27685850858688354,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7590599060058594,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 19
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fb87bd90-5fcd-0137-6979-0baa316db2ca.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man and woman",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21115460991859436,
+        "CLIPScore_RU_caption_ru": 0.2138437032699585,
+        "CLIPScore_RU_archive_ru": 0.24409529566764832,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.692288875579834,
+      "retrieval": {
+        "rank_i2t": 64,
+        "rank_t2i": 122
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fbeb4f20-5fcd-0137-d35a-6556226e44d2.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man and woman",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21115460991859436,
+        "CLIPScore_RU_caption_ru": 0.2138437032699585,
+        "CLIPScore_RU_archive_ru": 0.24409529566764832,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.682941198348999,
+      "retrieval": {
+        "rank_i2t": 65,
+        "rank_t2i": 121
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fd37d040-4f1c-0137-b2d5-0f211d2a9198.jpg",
+      "source": "nypl",
+      "caption_en": "the cover of the book, the poetry of the poet",
+      "caption_ru": "Обложка книги, поэзия поэта",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Обложка книги, поэзия поэта. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.233639657497406,
+        "CLIPScore_RU_caption_ru": 0.22962838411331177,
+        "CLIPScore_RU_archive_ru": 0.2555209994316101,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6971309185028076,
+      "retrieval": {
+        "rank_i2t": 42,
+        "rank_t2i": 63
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fd4e8210-5fcd-0137-7417-08556917d794.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a picture of a man and woman",
+      "caption_ru": "Книга с фотографией мужчины и женщины",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с фотографией мужчины и женщины. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21115460991859436,
+        "CLIPScore_RU_caption_ru": 0.2138437032699585,
+        "CLIPScore_RU_archive_ru": 0.24409529566764832,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7111661434173584,
+      "retrieval": {
+        "rank_i2t": 66,
+        "rank_t2i": 120
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fdb014d0-5fcd-0137-3105-07bc3b8b766f.jpg",
+      "source": "nypl",
+      "caption_en": "a book with a red cover and a black title",
+      "caption_ru": "Книга с красной обложкой и чёрным заголовком",
+      "archive_ru": "Фотография в стиле винтажная иллюстрация. На изображении: Книга с красной обложкой и чёрным заголовком. Предположительно, это детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24221938848495483,
+        "CLIPScore_RU_caption_ru": 0.2499479055404663,
+        "CLIPScore_RU_archive_ru": 0.27290114760398865,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.805793046951294,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 29
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fe2fd0c0-c5bf-012f-d3da-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a building with a tower",
+      "caption_ru": "Старый снимок здания с башней",
+      "archive_ru": "Открытка в стиле винтажная иллюстрация. На изображении: Старый снимок здания с башней. Предположительно, это религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.263521671295166,
+        "CLIPScore_RU_caption_ru": 0.27003785967826843,
+        "CLIPScore_RU_archive_ru": 0.2750254273414612,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.694307804107666,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 38
+      }
+    }
+  ]
+}

@@ -1,0 +1,869 @@
+{
+  "mode": "keyword",
+  "model": null,
+  "description_key": "archive_ru",
+  "aggregates": {
+    "n": 60,
+    "mean_sds": 0.4694444444444444,
+    "per_axis_coverage": {
+      "type_of_material": 0.9833333333333333,
+      "visual_subject": 1.0,
+      "artistic_style": 0.7166666666666667,
+      "epoch": 0.0,
+      "cultural_context": 0.11666666666666667,
+      "mood": 0.0
+    },
+    "by_source": {
+      "rgb": {
+        "n": 20,
+        "mean_sds": 0.5083333333333333
+      },
+      "nypl": {
+        "n": 40,
+        "mean_sds": 0.45
+      }
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "description": "Фотография. Чёрно-белое изображение леса с деревьями.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Группа людей в заснеженном лесу с лошадьми.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "description": "Открытка. Черно-белая фотография городского вида с рекой, мостом и зданиями на заднем плане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "description": "Открытка-гравюра с изображением молодой девушки, держащей кошку на руках.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "description": "Фотография. Мужчина на олене с собакой на спине.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "description": "Открытка-гравюра с изображением корабля в воде, из которого идёт дым.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. На ней изображена роза на открытке с жуком.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "description": "Открытка. Изображение ветки дерева и цветка.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "description": "Фотография. Женщина в кимоно сидит перед зеркалом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "description": "Фотография. Три цветные литографии изображения женщины с цветами и фруктами.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография с изображением рождественской открытки с коробкой и ветвями остролиста.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "description": "Открытка-гравюра. Женщина держит свечу в рамке для картины.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Три ребенка стоят в снегу с рождественской елкой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Пара целуется под рождественской ёлкой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Птица на ветке с падубными листьями.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Стоящая собака в снегу с другими собаками.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "description": "Открытка. Чёрно-белая фотография пагоды в центре города с множеством людей.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "description": "Фотография. Черно-белое карандашное изображение мужчины с усами.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Двое детей катаются на санях с горы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "description": "Открытка-хромолитография. Ребёнок в яркой одежде держит цветы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Вид на гавань с лодками.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Группа из четырёх цветов разного цвета на белой поверхности.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Волна разбивается о камни на берегу.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография с изображением тыквы и ведьмы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Хромолитография. Статичная композиция с изображением вазы с цветами и миски с фруктами на столе.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Вид на город с рекой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Городская сцена с пешеходами и конными повозками на середине улицы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Вид моста с людьми, переходящими его.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Вид моста через водоём.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Фотография. Мужчина вспахивает поле с помощью лошадей.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Фотография. Старик с длинной бородой и тюрбаном.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Чёрно-белая фотография ландшафта с камнями, ведущими к небольшой пещере.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Фотография. Мужчина в смокинге.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Вид моста с городом на заднем плане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Фотография. Женщина в ярком платье и головном платке.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "source": "nypl",
+      "description": "Хромолитография. Женщина и мужчина стоят в парке.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация. Человек держит флаг и молот.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография с изображением собаки, сидящей на земле с рождественской открыткой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Путь в лесу с деревьями.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография полной луны над океаном с виднеющимся вдали кораблём.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Ангел держит в руке букет цветов.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация. Штриховая печать. Статичная композиция. На изображении изображен головной убор с этикеткой, на которой написано \"fake and lame brims\".",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография с изображением растения.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация. Женщина в шляпе.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Две разные картины птиц, сидящих на ветке с ягодами.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Люди отдыхают на пляже возле воды.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Арафф на лошади в поле с другими животными.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография военной тематики с изображением здания с флагом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Мужчина на осле, который тащит телегу с ослом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Вид города с мостом и рекой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-гравюра. Осел в седле стоит на грунтовой дороге в лесной местности.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Чёрно-белая фотография арафов и мужчины на лошади возле пирамид.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Арафф с седлом стоит в поле травы рядом с кустом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Санта-Клаус на санях.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Санта-Клаус взбирается по лестнице с корзиной подарков за спиной.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография. Ребёнок прижимает руку ко рту.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-хромолитография с изображением букета ромашек на карточке.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография дерева, растущего на скалистом выступлении в воде.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Портрет мужчины с усами и рубашкой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография реки с деревьями и кустарниками на переднем плане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    }
+  ]
+}

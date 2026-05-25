@@ -1,0 +1,351 @@
+{
+  "summary": {
+    "num_examples": 14,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "models/blip_artcap_lora/v1_epoch_2",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": false,
+        "include_mood": false,
+        "drop_generic_style": true
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "references_path": "data/eval/semantic_testset.jsonl",
+      "pool_path": null
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.30145663022994995,
+      "CLIPScore_RU_caption_ru": 0.3146464888538633,
+      "CLIPScore_RU_archive_ru": 0.3240222249712263,
+      "CLIPScore_RU_reference_ru": 0.3119456171989441
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "CLIPScore_RU_archive_ru": 0.3247836165957981,
+        "CLIPScore_RU_caption_ru": 0.313271250989702,
+        "CLIPScore_EN_caption_en": 0.2997702293925815
+      },
+      "rgb": {
+        "n": 5,
+        "CLIPScore_RU_archive_ru": 0.32265172004699705,
+        "CLIPScore_RU_caption_ru": 0.31712191700935366,
+        "CLIPScore_EN_caption_en": 0.3044921517372131
+      }
+    },
+    "retrieval": {
+      "n_pool": 14,
+      "i2t": {
+        "R@1": 1.0,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "t2i": {
+        "R@1": 0.9285714285714286,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.0,
+      "mean_rank_t2i": 1.0714285714285714
+    },
+    "latency": {
+      "mean_sec": 11.23279481274741,
+      "images_per_sec": 0.08902503933083165
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a large wave breaks on the rocks at the beach",
+      "caption_ru": "Большая волна ломается на скалах на пляже",
+      "caption_ru_raw": "Большая волна ломается на скалах на пляже",
+      "archive_ru": "Открытка. Цветная фотография большой волны, разбивающейся о скалы на пляже.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28339463472366333,
+        "CLIPScore_RU_caption_ru": 0.2783030867576599,
+        "CLIPScore_RU_archive_ru": 0.30302339792251587,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.255509376525879,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vase of roses and other flowers in a vase",
+      "caption_ru": "ваза роз и других цветов в вазе",
+      "caption_ru_raw": "ваза роз и других цветов в вазе",
+      "archive_ru": "Открытка-гравюра с изображением вазы роз и других цветов.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33706748485565186,
+        "CLIPScore_RU_caption_ru": 0.36046120524406433,
+        "CLIPScore_RU_archive_ru": 0.3497128486633301,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.385543823242188,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a bearded man with a long beard and a turban",
+      "caption_ru": "бородатый мужчина с долгой бородой и тюрбаном",
+      "caption_ru_raw": "бородатый мужчина с долгой бородой и тюрбаном",
+      "archive_ru": "Фотография бородатого мужчины в тюрбане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28547051548957825,
+        "CLIPScore_RU_caption_ru": 0.3266458809375763,
+        "CLIPScore_RU_archive_ru": 0.3426703214645386,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.515742063522339,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man is climbing up a ladder in the mountains",
+      "caption_ru": "Человек поднимается по лестнице в горах",
+      "caption_ru_raw": "Человек поднимается по лестнице в горах",
+      "archive_ru": "Открытка. Цветная фотография мужчины, взбирающегося по лестнице в горах.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29797613620758057,
+        "CLIPScore_RU_caption_ru": 0.32749229669570923,
+        "CLIPScore_RU_archive_ru": 0.35859882831573486,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.756783962249756,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a man in a tuxedo and a moustache",
+      "caption_ru": "Человек в смокинге и усах",
+      "caption_ru_raw": "Человек в смокинге и усах",
+      "archive_ru": "Фотография. Мужчина в смокинге и усы.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31719034910202026,
+        "CLIPScore_RU_caption_ru": 0.3263249695301056,
+        "CLIPScore_RU_archive_ru": 0.34454345703125,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.158742904663086,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a bridge is over the water with a sunset in the background",
+      "caption_ru": "Мост над водой с закатом на заднем плане",
+      "caption_ru_raw": "Мост над водой с закатом на заднем плане.",
+      "archive_ru": "Открытка. Мост перекинут через воду с закатом на заднем плане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27673354744911194,
+        "CLIPScore_RU_caption_ru": 0.28049764037132263,
+        "CLIPScore_RU_archive_ru": 0.2890733480453491,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.61043095588684,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a woman is wearing a blue head scarf",
+      "caption_ru": "Женщина носит шарф с синей головой",
+      "caption_ru_raw": "Женщина носит шарф с синей головой",
+      "archive_ru": "Фотография. Женщина в голубом головном платке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2689450681209564,
+        "CLIPScore_RU_caption_ru": 0.2868862748146057,
+        "CLIPScore_RU_archive_ru": 0.2868333160877228,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.438479900360107,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a path in the woods with trees and leaves",
+      "caption_ru": "Путь в лесу с деревьями и листьями",
+      "caption_ru_raw": "Путь в лесу с деревьями и листьями",
+      "archive_ru": "Фотография. Путь в лесу с деревьями и листьями.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2971670627593994,
+        "CLIPScore_RU_caption_ru": 0.3001294732093811,
+        "CLIPScore_RU_archive_ru": 0.31252509355545044,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.688989162445068,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a donkey with a saddle is standing on a dirt road",
+      "caption_ru": "Осла с седлом стоит на грунтовой дороге",
+      "caption_ru_raw": "Осла с седлом стоит на грунтовой дороге.",
+      "archive_ru": "Открытка. Осел с седлом стоит на грунтовой дороге.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3339872658252716,
+        "CLIPScore_RU_caption_ru": 0.3327004313468933,
+        "CLIPScore_RU_archive_ru": 0.3360719382762909,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.970878839492798,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "a box of gifts with holly leaves and red berries",
+      "caption_ru": "коробка с подарками с листьями и красными ягодами",
+      "caption_ru_raw": "коробка с подарками с листьями и красными ягодами.",
+      "archive_ru": "Открытка. Коробка с ветвями остролиста и красными ягодами.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30287104845046997,
+        "CLIPScore_RU_caption_ru": 0.31072068214416504,
+        "CLIPScore_RU_archive_ru": 0.3120560348033905,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 11.6281099319458,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "a family is walking in the snow with a christmas tree",
+      "caption_ru": "Семья гуляет по снегу с рождественским деревом",
+      "caption_ru_raw": "Семья гуляет по снегу с рождественским деревом.",
+      "archive_ru": "Открытка. Семья идёт по снегу с рождественской ёлкой.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27162420749664307,
+        "CLIPScore_RU_caption_ru": 0.2774078845977783,
+        "CLIPScore_RU_archive_ru": 0.29504168033599854,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 11.779374122619629,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "a child in a green and pink outfit is holding flowers",
+      "caption_ru": "ребёнок в зеленом и розовом наряде держит цветы",
+      "caption_ru_raw": "ребёнок в зеленом и розовом наряде держит цветы.",
+      "archive_ru": "Открытка. Ребёнок в зелёно-розовом наряде держит цветы.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3437121510505676,
+        "CLIPScore_RU_caption_ru": 0.3717186748981476,
+        "CLIPScore_RU_archive_ru": 0.3818863332271576,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 11.761993169784546,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "a river runs through a town with a bridge over it",
+      "caption_ru": "река протекает через город с мостом через него",
+      "caption_ru_raw": "река протекает через город с мостом через него.",
+      "archive_ru": "Открытка. Цветная фотография реки, протекающей через город с мостом.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28245463967323303,
+        "CLIPScore_RU_caption_ru": 0.2749156057834625,
+        "CLIPScore_RU_archive_ru": 0.2639135420322418,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 11.142001867294312,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "a woman is sitting in front of a mirror",
+      "caption_ru": "Женщина сидит перед зеркалом",
+      "caption_ru_raw": "Женщина сидит перед зеркалом.",
+      "archive_ru": "Фотография. Женщина сидит перед зеркалом.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.321798712015152,
+        "CLIPScore_RU_caption_ru": 0.3508467376232147,
+        "CLIPScore_RU_archive_ru": 0.3603610098361969,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 10.166547298431396,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

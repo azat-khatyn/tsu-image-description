@@ -1,0 +1,469 @@
+{
+  "summary": {
+    "num_examples": 20,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "models/blip_semart_lora/v1_soft_epoch_0",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": true,
+        "include_mood": true,
+        "drop_generic_style": false
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "taxonomy_version": "archival_v2",
+      "use_llm_rewriter": false,
+      "llm_model": null,
+      "llm_prompt_style": null,
+      "references_path": "data/eval/references.jsonl",
+      "pool_path": null
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.32128117233514786,
+      "CLIPScore_RU_caption_ru": 0.32509193420410154,
+      "CLIPScore_RU_archive_ru": 0.3349159643054008,
+      "CLIPScore_RU_reference_ru": 0.30870684757828715
+    },
+    "by_source": {
+      "rgb": {
+        "n": 20,
+        "CLIPScore_RU_archive_ru": 0.3349159643054008,
+        "CLIPScore_RU_caption_ru": 0.32509193420410154,
+        "CLIPScore_EN_caption_en": 0.32128117233514786
+      }
+    },
+    "retrieval": {
+      "n_pool": 20,
+      "i2t": {
+        "R@1": 0.75,
+        "R@5": 0.95,
+        "R@10": 1.0
+      },
+      "t2i": {
+        "R@1": 0.85,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.5,
+      "mean_rank_t2i": 1.3
+    },
+    "latency": {
+      "mean_sec": 1.0515974164009094,
+      "images_per_sec": 0.9509342495557839
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a wooded scene with a path in the foreground",
+      "caption_ru": "на картинке показана деревянная сцена с дорогой на переднем плане",
+      "caption_ru_raw": "на картинке показана деревянная сцена с дорогой на переднем плане.",
+      "archive_ru": "Фотография. На изображении: на картинке показана деревянная сцена с дорогой на переднем плане. Тематика изображения: пейзаж.",
+      "reference_ru": "Сосновый лес",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30829599499702454,
+        "CLIPScore_RU_caption_ru": 0.3141247034072876,
+        "CLIPScore_RU_archive_ru": 0.31346964836120605,
+        "CLIPScore_RU_reference_ru": 0.30132925510406494
+      },
+      "latency_sec": 1.6423537731170654,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "caption_en": "the painting depicts a winter scene in a pine forest",
+      "caption_ru": "на картине изображена сцена зимы в сосновом лесу",
+      "caption_ru_raw": "на картине изображена сцена зимы в сосновом лесу.",
+      "archive_ru": "Фотография. На изображении: на картине изображена сцена зимы в сосновом лесу. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3485342562198639,
+        "CLIPScore_RU_caption_ru": 0.3565517067909241,
+        "CLIPScore_RU_archive_ru": 0.3504405617713928,
+        "CLIPScore_RU_reference_ru": 0.3090788722038269
+      },
+      "latency_sec": 1.030339002609253,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "this is a postcard of the town of tavara, in the region of the north - eastern ukraine",
+      "caption_ru": "Это открытка города Тавара, в районе северо - восточной украины",
+      "caption_ru_raw": "Это открытка города Тавара, в районе северо - восточной украины.",
+      "archive_ru": "Открытка в стиле черно-белой фотографии. На изображении: это открытка города Тавара, в районе северо - восточной украины. Тематика изображения: городской вид.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31085193157196045,
+        "CLIPScore_RU_caption_ru": 0.32874611020088196,
+        "CLIPScore_RU_archive_ru": 0.34459584951400757,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 1.1983380317687988,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "caption_en": "this drawing is a study of a young girl with a bouquet of flowers",
+      "caption_ru": "Этот рисунок - исследование молодой девушки с букетом цветов",
+      "caption_ru_raw": "Этот рисунок - исследование молодой девушки с букетом цветов.",
+      "archive_ru": "Фотография. На изображении: этот рисунок - исследование молодой девушки с букетом цветов. Тематика изображения: натюрморт.",
+      "reference_ru": "Девочка с лукошком.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2687094807624817,
+        "CLIPScore_RU_caption_ru": 0.2847122550010681,
+        "CLIPScore_RU_archive_ru": 0.28929629921913147,
+        "CLIPScore_RU_reference_ru": 0.28499191999435425
+      },
+      "latency_sec": 1.0325219631195068,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a man on a reindeer with a dog",
+      "caption_ru": "картинка показывает мужчину на олене с собакой",
+      "caption_ru_raw": "картинка показывает мужчину на олене с собакой.",
+      "archive_ru": "Фотография. На изображении: картинка показывает мужчину на олене с собакой. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3476932644844055,
+        "CLIPScore_RU_caption_ru": 0.29991036653518677,
+        "CLIPScore_RU_archive_ru": 0.29452812671661377,
+        "CLIPScore_RU_reference_ru": 0.340998113155365
+      },
+      "latency_sec": 0.9000899791717529,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "caption_en": "the ship is a replica of the german battleship ' s first class cruiser",
+      "caption_ru": "Корабль является копией немецкого крейсера первого класса",
+      "caption_ru_raw": "Корабль является копией немецкого крейсера первого класса",
+      "archive_ru": "Открытка в стиле гравюры. На изображении: корабль является копией немецкого крейсера первого класса. Тематика изображения: военный сюжет.",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29756584763526917,
+        "CLIPScore_RU_caption_ru": 0.2965705096721649,
+        "CLIPScore_RU_archive_ru": 0.35404714941978455,
+        "CLIPScore_RU_reference_ru": 0.30421382188796997
+      },
+      "latency_sec": 0.982029914855957,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "caption_en": "this postcard shows a rose with a bee on a white background",
+      "caption_ru": "Эта открытка показывает розу с пчелой на белом фоне",
+      "caption_ru_raw": "Эта открытка показывает розу с пчелой на белом фоне.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: эта открытка показывает розу с пчелой на белом фоне. Тематика изображения: натюрморт.",
+      "reference_ru": "Розы расцветают...",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.347149133682251,
+        "CLIPScore_RU_caption_ru": 0.31787562370300293,
+        "CLIPScore_RU_archive_ru": 0.348567396402359,
+        "CLIPScore_RU_reference_ru": 0.29505568742752075
+      },
+      "latency_sec": 0.9612369537353516,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "caption_en": "this is a postcard with a picture of a flowering branch",
+      "caption_ru": "Это открытка с изображением цветущей ветки",
+      "caption_ru_raw": "Это открытка с изображением цветущей ветки.",
+      "archive_ru": "Поздравительная карточка в стиле офорта. На изображении: это открытка с изображением цветущей ветки. Тематика изображения: натюрморт.",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31373298168182373,
+        "CLIPScore_RU_caption_ru": 0.3349212110042572,
+        "CLIPScore_RU_archive_ru": 0.34281057119369507,
+        "CLIPScore_RU_reference_ru": 0.3077434301376343
+      },
+      "latency_sec": 0.8499910831451416,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a young woman in a kimono kimono, a japanese geisha",
+      "caption_ru": "на картинке показана молодая женщина в кимоно кимоно, японская гейша",
+      "caption_ru_raw": "на картинке показана молодая женщина в кимоно кимоно, японская гейша",
+      "archive_ru": "Фотография. На изображении: на картинке показана молодая женщина в кимоно кимоно, японская гейша. Тематика изображения: портрет.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32327771186828613,
+        "CLIPScore_RU_caption_ru": 0.34011781215667725,
+        "CLIPScore_RU_archive_ru": 0.3276086449623108,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 1.2517709732055664,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "caption_en": "the two portraits of the young girls are in the same frame",
+      "caption_ru": "два портрета девушек в одной и той же рамке",
+      "caption_ru_raw": "два портрета девушек в одной и той же рамке",
+      "archive_ru": "Фотография. На изображении: два портрета девушек в одной и той же рамке. Тематика изображения: портрет.",
+      "reference_ru": "Изображение цветов и девочки",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2753806710243225,
+        "CLIPScore_RU_caption_ru": 0.256788045167923,
+        "CLIPScore_RU_archive_ru": 0.2570095658302307,
+        "CLIPScore_RU_reference_ru": 0.23262850940227509
+      },
+      "latency_sec": 1.0082781314849854,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "this is a very old christmas card with a box of holly berries",
+      "caption_ru": "Это очень старая рождественская открытка с коробкой ягод Холли",
+      "caption_ru_raw": "Это очень старая рождественская открытка с коробкой ягод Холли.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: это очень старая рождественская открытка с коробкой ягод Холли. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3435831665992737,
+        "CLIPScore_RU_caption_ru": 0.3605635166168213,
+        "CLIPScore_RU_archive_ru": 0.35924503207206726,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 0.9756762981414795,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "caption_en": "this portrait of a woman is in the background of a portrait of a woman holding a candle",
+      "caption_ru": "Этот портрет женщины находится на фоне портрета женщины, держащей свечу",
+      "caption_ru_raw": "Этот портрет женщины находится на фоне портрета женщины, держащей свечу",
+      "archive_ru": "Фотография. На изображении: этот портрет женщины находится на фоне портрета женщины, держащей свечу. Тематика изображения: портрет.",
+      "reference_ru": "Девушка держит свечу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32119160890579224,
+        "CLIPScore_RU_caption_ru": 0.31218817830085754,
+        "CLIPScore_RU_archive_ru": 0.2925575375556946,
+        "CLIPScore_RU_reference_ru": 0.29088130593299866
+      },
+      "latency_sec": 1.1684300899505615,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "the image shows a christmas card with a christmas tree and a couple of children",
+      "caption_ru": "на картинке есть рождественская открытка с рождественским деревом и парой детей",
+      "caption_ru_raw": "на картинке есть рождественская открытка с рождественским деревом и парой детей.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: на картинке есть рождественская открытка с рождественским деревом и парой детей. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.35867857933044434,
+        "CLIPScore_RU_caption_ru": 0.33877286314964294,
+        "CLIPScore_RU_archive_ru": 0.35950154066085815,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 1.1120131015777588,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "caption_en": "this postcard depicts a kiss between a sailor and a little girl",
+      "caption_ru": "Эта открытка показывает поцелуй между моряком и маленькой девочкой",
+      "caption_ru_raw": "Эта открытка показывает поцелуй между моряком и маленькой девочкой.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: эта открытка показывает поцелуй между моряком и маленькой девочкой. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3581324815750122,
+        "CLIPScore_RU_caption_ru": 0.38308727741241455,
+        "CLIPScore_RU_archive_ru": 0.39412957429885864,
+        "CLIPScore_RU_reference_ru": 0.3731614649295807
+      },
+      "latency_sec": 1.0314726829528809,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "caption_en": "this is a very old christmas card with a robin on a branch",
+      "caption_ru": "Это очень старая рождественская открытка с робином на ветке",
+      "caption_ru_raw": "Это очень старая рождественская открытка с робином на ветке.",
+      "archive_ru": "Поздравительная карточка в стиле хромолитографии. На изображении: это очень старая рождественская открытка с робином на ветке. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3550844192504883,
+        "CLIPScore_RU_caption_ru": 0.3645886778831482,
+        "CLIPScore_RU_archive_ru": 0.36502590775489807,
+        "CLIPScore_RU_reference_ru": 0.2770371735095978
+      },
+      "latency_sec": 0.997873067855835,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a dog and its pup in the snow",
+      "caption_ru": "на фотографии показана собака и ее щенок в снегу",
+      "caption_ru_raw": "на фотографии показана собака и ее щенок в снегу.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: на фотографии показана собака и ее щенок в снегу. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.275618314743042,
+        "CLIPScore_RU_caption_ru": 0.2974797189235687,
+        "CLIPScore_RU_archive_ru": 0.3567596673965454,
+        "CLIPScore_RU_reference_ru": 0.29683560132980347
+      },
+      "latency_sec": 0.9506850242614746,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a view of the north temple in the background",
+      "caption_ru": "картинка показывает вид северного храма на заднем плане",
+      "caption_ru_raw": "картинка показывает вид северного храма на заднем плане",
+      "archive_ru": "Открытка в стиле черно-белой фотографии. На изображении: картинка показывает вид северного храма на заднем плане. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2909238040447235,
+        "CLIPScore_RU_caption_ru": 0.3129337430000305,
+        "CLIPScore_RU_archive_ru": 0.33382293581962585,
+        "CLIPScore_RU_reference_ru": 0.3548523187637329
+      },
+      "latency_sec": 0.7971017360687256,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "caption_en": "this drawing is a self - portrait of a man, who is a self - portraitist",
+      "caption_ru": "Этот рисунок — портрет человека, который является портретистом",
+      "caption_ru_raw": "Этот рисунок — портрет человека, который является портретистом.",
+      "archive_ru": "Фотография. На изображении: этот рисунок — портрет человека, который является портретистом. Тематика изображения: портрет.",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29130637645721436,
+        "CLIPScore_RU_caption_ru": 0.285148561000824,
+        "CLIPScore_RU_archive_ru": 0.27846598625183105,
+        "CLIPScore_RU_reference_ru": 0.3040972352027893
+      },
+      "latency_sec": 0.9477362632751465,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a scene of a winter scene with a boy and a girl on a sled",
+      "caption_ru": "картинка показывает сцену зимней сцены с мальчиком и девушкой на сани",
+      "caption_ru_raw": "картинка показывает сцену зимней сцены с мальчиком и девушкой на сани",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: картинка показывает сцену зимней сцены с мальчиком и девушкой на сани. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3561665415763855,
+        "CLIPScore_RU_caption_ru": 0.37464985251426697,
+        "CLIPScore_RU_archive_ru": 0.3937678635120392,
+        "CLIPScore_RU_reference_ru": 0.34150415658950806
+      },
+      "latency_sec": 1.1873281002044678,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "this postcard depicts a young girl in a traditional costume",
+      "caption_ru": "Эта открытка показывает молодую девушку в традиционном костюме",
+      "caption_ru_raw": "Эта открытка показывает молодую девушку в традиционном костюме.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: эта открытка показывает молодую девушку в традиционном костюме. Тематика изображения: портрет.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33374688029289246,
+        "CLIPScore_RU_caption_ru": 0.34210795164108276,
+        "CLIPScore_RU_archive_ru": 0.34266942739486694,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 1.0066821575164795,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

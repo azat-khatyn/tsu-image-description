@@ -1,0 +1,245 @@
+[
+  {
+    "image_path": "data/eval/images/postcard_21.jpg",
+    "caption_en": "arafed picture of a man and woman sitting in a room",
+    "caption_ru": "Арафированная фотография мужчины и женщины, сидящей в комнате",
+    "metadata": {
+      "image_type": {
+        "label": "a postcard",
+        "score": 0.6097,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "a greeting card",
+            "score": 0.3716
+          },
+          {
+            "label": "an illustration",
+            "score": 0.0109
+          }
+        ]
+      },
+      "style": {
+        "label": "vintage illustration",
+        "score": 0.7484,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "decorative illustration",
+            "score": 0.1301
+          },
+          {
+            "label": "engraving",
+            "score": 0.0755
+          }
+        ]
+      },
+      "theme": {
+        "label": "religious scene",
+        "score": 0.504,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "romantic scene",
+            "score": 0.3954
+          },
+          {
+            "label": "children scene",
+            "score": 0.0708
+          }
+        ]
+      },
+      "mood": {
+        "label": "festive",
+        "score": 0.9699,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "romantic",
+            "score": 0.0199
+          },
+          {
+            "label": "nostalgic",
+            "score": 0.0094
+          }
+        ]
+      },
+      "tags": [
+        "a postcard",
+        "vintage illustration",
+        "religious scene",
+        "festive"
+      ]
+    },
+    "inference": {
+      "theme": "religious scene",
+      "mood": "festive",
+      "theme_confidence": 0.504,
+      "mood_confidence": 0.9699
+    },
+    "retrieval_description": "Арафированная фотография мужчины и женщины, сидящей в комнате",
+    "display_description": "Открытка в стиле винтажная иллюстрация. На изображении: Арафированная фотография мужчины и женщины, сидящей в комнате."
+  },
+  {
+    "image_path": "data/eval/images/postcard_22.jpg",
+    "caption_en": "a drawing of a city scene with a horse drawn carriage",
+    "caption_ru": "рисунок городской сцены с лошадиной каретой",
+    "metadata": {
+      "image_type": {
+        "label": "a postcard",
+        "score": 0.8143,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "an illustration",
+            "score": 0.0792
+          },
+          {
+            "label": "a photograph",
+            "score": 0.0592
+          }
+        ]
+      },
+      "style": {
+        "label": "engraving",
+        "score": 0.2831,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "drawing",
+            "score": 0.2767
+          },
+          {
+            "label": "decorative illustration",
+            "score": 0.2718
+          }
+        ]
+      },
+      "theme": {
+        "label": "urban scene",
+        "score": 0.8134,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "children scene",
+            "score": 0.1263
+          },
+          {
+            "label": "holiday scene",
+            "score": 0.0359
+          }
+        ]
+      },
+      "mood": {
+        "label": "nostalgic",
+        "score": 0.6398,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "festive",
+            "score": 0.3525
+          },
+          {
+            "label": "romantic",
+            "score": 0.0068
+          }
+        ]
+      },
+      "tags": [
+        "a postcard",
+        "engraving",
+        "urban scene",
+        "nostalgic"
+      ]
+    },
+    "inference": {
+      "theme": "urban scene",
+      "mood": "nostalgic",
+      "theme_confidence": 0.8134,
+      "mood_confidence": 0.6398
+    },
+    "retrieval_description": "рисунок городской сцены с лошадиной каретой",
+    "display_description": "Открытка в стиле гравюра. На изображении: рисунок городской сцены с лошадиной каретой."
+  },
+  {
+    "image_path": "data/eval/images/postcard_23.jpg",
+    "caption_en": "painting of a room with a large clock and a table",
+    "caption_ru": "покраска комнаты с большими часами и столом",
+    "metadata": {
+      "image_type": {
+        "label": "a greeting card",
+        "score": 0.6053,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "a postcard",
+            "score": 0.2882
+          },
+          {
+            "label": "a photograph",
+            "score": 0.0919
+          }
+        ]
+      },
+      "style": {
+        "label": "painting",
+        "score": 0.9338,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "engraving",
+            "score": 0.0267
+          },
+          {
+            "label": "decorative illustration",
+            "score": 0.0204
+          }
+        ]
+      },
+      "theme": {
+        "label": "religious scene",
+        "score": 0.9817,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "romantic scene",
+            "score": 0.0128
+          },
+          {
+            "label": "holiday scene",
+            "score": 0.0025
+          }
+        ]
+      },
+      "mood": {
+        "label": "festive",
+        "score": 0.6345,
+        "confident": true,
+        "alternatives": [
+          {
+            "label": "romantic",
+            "score": 0.263
+          },
+          {
+            "label": "nostalgic",
+            "score": 0.102
+          }
+        ]
+      },
+      "tags": [
+        "a greeting card",
+        "painting",
+        "religious scene",
+        "festive"
+      ]
+    },
+    "inference": {
+      "theme": "religious scene",
+      "mood": "festive",
+      "theme_confidence": 0.9817,
+      "mood_confidence": 0.6345
+    },
+    "retrieval_description": "покраска комнаты с большими часами и столом",
+    "display_description": "Поздравительная открытка в стиле живопись. На изображении: покраска комнаты с большими часами и столом."
+  }
+]

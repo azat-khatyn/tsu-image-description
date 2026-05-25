@@ -8,24 +8,47 @@ hf_cache/
 .python-version
 models/*
 
-# Images: ignore by default, but keep the 20-image eval reference set
-# and demo screenshots
+# Images: глобально игнорируем; в data/ изображения не трекаются вовсе
+# (тексто-структурные артефакты передают всю необходимую для воспроизведения
+# информацию через пути на локальной ФС). Разрешены только демо-скриншоты
+# в demo/screenshots/ — они подгружаются в README на GitHub.
 *.png
 *.jpg
 !demo/
 !demo/screenshots/
 !demo/screenshots/*.png
-!data/eval/images/
-!data/eval/images/*.jpg
 
-# Generated training data (regenerable via scripts/prepare_splits.py,
-# generate_captions.py, filter_captions.py)
-data/nypl/splits/
+# ========================================================================
+# data/: что трекается, что нет
+# ========================================================================
+# Принцип: текстовые артефакты (jsonl-эталоны, manifest, JSON-результаты
+# экспериментов, подготовленные обучающие пары) трекаются.
+# Сырые изображения корпусов и регенерируемые кэши — игнорируются.
+# ========================================================================
+
+# Большие сырые корпуса (целиком игнорируем)
 data/nypl/images/
+data/nypl/splits/
+data/artcap/_raw/
+data/semart/SemArt/
 
-# Eval outputs in data/eval/results/: ignore loose JSON / PNG / NPZ at the
-# top level; only data/eval/results/final/ is tracked (baseline + per-experiment finals).
-data/*
+# Кэш визуальных признаков SigLIP — регенерируется через scripts/probes/
+data/semart/siglip_features_*.npz
+
+# Скачанные thumbnail-изображения НЭБ — регенерируются
+# через scripts/data/scrape_neb_collection.py
+data/neb_leningrad_wwii/images/
+
+# Локальная отладка скрапинга
+data/neb_test/
+
+# Локальная SQLite-БД с историей запусков (создаётся scripts/exp_db.py)
+data/eval/experiments.db
+
+# Регенерируемые визуализации и кэши embedding'ов в results/
+data/eval/results/*.png
+data/eval/results/*.npz
+data/eval/results/embeddings_*
 
 # Runtime / docker mounts
 mounted_data/

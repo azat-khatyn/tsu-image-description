@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "num_examples": 14,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "models/blip_semart_lora/v1_soft_epoch_0",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": true,
+        "include_mood": true,
+        "drop_generic_style": false
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "taxonomy_version": "archival_v2",
+      "use_llm_rewriter": true,
+      "llm_model": "Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24",
+      "llm_prompt_style": "v1_archival",
+      "references_path": "data/eval/semantic_testset.jsonl",
+      "pool_path": null
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.32254884924207416,
+      "CLIPScore_RU_caption_ru": 0.3314957043954304,
+      "CLIPScore_RU_archive_ru": 0.3115982285567692,
+      "CLIPScore_RU_reference_ru": 0.3119456171989441
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "CLIPScore_RU_archive_ru": 0.30730191204282975,
+        "CLIPScore_RU_caption_ru": 0.32809939318233067,
+        "CLIPScore_EN_caption_en": 0.3234047459231483
+      },
+      "rgb": {
+        "n": 5,
+        "CLIPScore_RU_archive_ru": 0.31933159828186036,
+        "CLIPScore_RU_caption_ru": 0.33760906457901,
+        "CLIPScore_EN_caption_en": 0.32100823521614075
+      }
+    },
+    "retrieval": {
+      "n_pool": 14,
+      "i2t": {
+        "R@1": 0.8571428571428571,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "t2i": {
+        "R@1": 0.9285714285714286,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.3571428571428572,
+      "mean_rank_t2i": 1.1428571428571428
+    },
+    "latency": {
+      "mean_sec": 11.980538776942662,
+      "images_per_sec": 0.08346870024948845
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the postcard shows the ocean breaking on the rocks at the mouth of the ocean",
+      "caption_ru": "открытка показывает, как океан разрывается на скалах в устье океана",
+      "caption_ru_raw": "открытка показывает, как океан разрывается на скалах в устье океана",
+      "archive_ru": "Открытка-хромолитография. Море, разбивающееся о скалы у входа в бухту.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3590857982635498,
+        "CLIPScore_RU_caption_ru": 0.37642502784729004,
+        "CLIPScore_RU_archive_ru": 0.32365351915359497,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.514616966247559,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "this painting is a still - life of roses in a silver bowl",
+      "caption_ru": "Эта картина - все еще жизнь роз в серебряной миске",
+      "caption_ru_raw": "Эта картина - все еще жизнь роз в серебряной миске.",
+      "archive_ru": "Открытка-хромолитография. Статичная жизнь: розы в серебряном кувшине.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3491479158401489,
+        "CLIPScore_RU_caption_ru": 0.37157291173934937,
+        "CLIPScore_RU_archive_ru": 0.35384663939476013,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.535674810409546,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "this photograph is a portrait of a bearded man with a turban",
+      "caption_ru": "Эта фотография - портрет бородатого мужчины с тюрбаном",
+      "caption_ru_raw": "Эта фотография - портрет бородатого мужчины с тюрбаном.",
+      "archive_ru": "Фотография бородатого мужчины в тюрбане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30601489543914795,
+        "CLIPScore_RU_caption_ru": 0.32618582248687744,
+        "CLIPScore_RU_archive_ru": 0.3426703214645386,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.123395919799805,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "this postcard shows a view of the entrance to the cave",
+      "caption_ru": "Эта открытка показывает вид на вход в пещеру",
+      "caption_ru_raw": "Эта открытка показывает вид на вход в пещеру.",
+      "archive_ru": "Открытка. Черно-белая фотография входа в пещеру.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3379285931587219,
+        "CLIPScore_RU_caption_ru": 0.33595871925354004,
+        "CLIPScore_RU_archive_ru": 0.23897141218185425,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.574929237365723,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "this photograph is a portrait of a man in a tuxedo",
+      "caption_ru": "Эта фотография - портрет человека в смокинге",
+      "caption_ru_raw": "Эта фотография - портрет человека в смокинге.",
+      "archive_ru": "Фотография. Портрет мужчины в смокинге.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2864972651004791,
+        "CLIPScore_RU_caption_ru": 0.2983887195587158,
+        "CLIPScore_RU_archive_ru": 0.31754571199417114,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 9.972784996032715,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the bridge is a major landmark of the city of williamsburg, and is one of the most known bridges in the united states",
+      "caption_ru": "Мост является главной достопримечательностью города Вильямсбург и одним из наиболее известных мостов в объединенных государствах",
+      "caption_ru_raw": "Мост является главной достопримечательностью города Вильямсбург и одним из наиболее известных мостов в объединенных государствах.",
+      "archive_ru": "Открытка-хромолитография. Мост является значимым ориентиром города Уильямсбурга и одним из самых известных мостов в Соединенных Штатах.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31244033575057983,
+        "CLIPScore_RU_caption_ru": 0.29361438751220703,
+        "CLIPScore_RU_archive_ru": 0.3085227608680725,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.385586977005005,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "this postcard shows a young woman in a traditional dress",
+      "caption_ru": "Эта открытка показывает молодую женщину в традиционном платье",
+      "caption_ru_raw": "Эта открытка показывает молодую женщину в традиционном платье",
+      "archive_ru": "Фотография. Молодая женщина в традиционном одеянии.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2940550446510315,
+        "CLIPScore_RU_caption_ru": 0.3118788003921509,
+        "CLIPScore_RU_archive_ru": 0.25506383180618286,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.374322891235352,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the trees are in the foreground and the path is in the background",
+      "caption_ru": "Деревья находятся на переднем плане, а путь - на заднем плане",
+      "caption_ru_raw": "Деревья находятся на переднем плане, а путь - на заднем плане.",
+      "archive_ru": "Фотография. На переднем плане деревья, на заднем плане тропа.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28230953216552734,
+        "CLIPScore_RU_caption_ru": 0.2926863729953766,
+        "CLIPScore_RU_archive_ru": 0.30325162410736084,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.743086814880371,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "this postcard shows a donkey with a saddle on its back",
+      "caption_ru": "Эта открытка показывает осла с седлом на спине",
+      "caption_ru_raw": "Эта открытка показывает осла с седлом на спине.",
+      "archive_ru": "Открытка-гравюра. Осел с седлом на спине.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.38316333293914795,
+        "CLIPScore_RU_caption_ru": 0.34618377685546875,
+        "CLIPScore_RU_archive_ru": 0.32219138741493225,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.15987491607666,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "this is a very old christmas card with a box of holly berries",
+      "caption_ru": "Это очень старая рождественская открытка с коробкой ягод Холли",
+      "caption_ru_raw": "Это очень старая рождественская открытка с коробкой ягод Холли.",
+      "archive_ru": "Открытка-хромолитография. Старая рождественская открытка с коробкой ягод остролиста.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3435831665992737,
+        "CLIPScore_RU_caption_ru": 0.3605635166168213,
+        "CLIPScore_RU_archive_ru": 0.36443522572517395,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 12.675863981246948,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "this postcard depicts a christmas card with a family of three holding a christmas tree",
+      "caption_ru": "Эта открытка показывает рождественскую открытку с семьёй из трёх, держащей рождественское дерево",
+      "caption_ru_raw": "Эта открытка показывает рождественскую открытку с семьёй из трёх, держащей рождественское дерево.",
+      "archive_ru": "Открытка-хромолитография. Рождественская сцена с изображением семьи из трех человек, держащих рождественскую елку.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3725115954875946,
+        "CLIPScore_RU_caption_ru": 0.3679908812046051,
+        "CLIPScore_RU_archive_ru": 0.3594285845756531,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 13.751115083694458,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "this postcard shows a young girl in a traditional costume",
+      "caption_ru": "Эта открытка показывает молодую девушку в традиционном костюме",
+      "caption_ru_raw": "Эта открытка показывает молодую девушку в традиционном костюме",
+      "archive_ru": "Открытка-хромолитография. Портрет молодой девушки в традиционном костюме.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33003345131874084,
+        "CLIPScore_RU_caption_ru": 0.34210795164108276,
+        "CLIPScore_RU_archive_ru": 0.30703336000442505,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 12.020190954208374,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "this photo shows the view of the town of tauern - am - rhein, in the background, the church of st peter ' s, and the monastery of the monastery of the holy mother",
+      "caption_ru": "Это фото показывает вид города Тауэрн - ам - рейн на заднем плане, церкви Святого Петра и монастыря монастыря святой матери",
+      "caption_ru_raw": "Это фото показывает вид города Тауэрн - ам - рейн на заднем плане, церкви Святого Петра и монастыря монастыря святой матери.",
+      "archive_ru": "Открытка. Черно-белая фотография города Тауэрн-ам-Рейн с видом на церковь Святого Петра и монастырь Святой Матери.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20842021703720093,
+        "CLIPScore_RU_caption_ru": 0.2598172724246979,
+        "CLIPScore_RU_archive_ru": 0.26680299639701843,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 15.341666221618652,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "this postcard shows a young geisha in a kimono - style kimono",
+      "caption_ru": "Эта открытка показывает молодую гейшу в кимоно - стиле кимоно",
+      "caption_ru_raw": "Эта открытка показывает молодую гейшу в кимоно - стиле кимоно.",
+      "archive_ru": "Фотография. Молодая гейша в кимоно.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3504927456378937,
+        "CLIPScore_RU_caption_ru": 0.357565701007843,
+        "CLIPScore_RU_archive_ru": 0.29895782470703125,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 10.554433107376099,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}
