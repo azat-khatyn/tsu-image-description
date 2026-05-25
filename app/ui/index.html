@@ -6,20 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg: #fafafa;
+      --bg: #f4f6fa;
       --surface: #ffffff;
-      --border: #e5e7eb;
-      --border-soft: #f1f5f9;
+      --border: #d6dde7;
+      --border-soft: #e6ebf2;
       --text: #111827;
-      --muted: #6b7280;
+      --muted: #5b6473;
       --primary: #1f2937;
       --primary-hover: #111827;
       --accent: #3b82f6;
       --accent-soft: #eff6ff;
       --success: #047857;
       --error: #b91c1c;
-      --tag-bg: #f3f4f6;
+      --tag-bg: #eef2f7;
       --tag-fg: #374151;
+      --card-shadow: 0 1px 3px rgba(15, 23, 42, 0.06),
+                     0 1px 2px rgba(15, 23, 42, 0.04);
     }
 
     * { box-sizing: border-box; }
@@ -36,32 +38,30 @@
     }
 
     header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 24px;
     }
     header h1 {
-      font-size: 22px;
-      margin: 0 0 4px;
-      font-weight: 600;
+      font-size: 28px;
+      margin: 0 0 10px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
     header .subtitle {
       color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-      max-width: 620px;
+      font-size: 15px;
+      margin: 0 auto;
+      max-width: 720px;
     }
 
     .arch-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 14px 18px;
-      min-width: 280px;
+      padding: 16px 20px;
+      margin-bottom: 22px;
       font-size: 13px;
+      box-shadow: var(--card-shadow);
     }
     .arch-card .arch-title {
       font-weight: 600;
@@ -96,6 +96,7 @@
       grid-template-columns: 1fr 1fr auto;
       gap: 16px;
       align-items: end;
+      box-shadow: var(--card-shadow);
     }
     .input-card .input-field { display: flex; flex-direction: column; }
     .input-card label {
@@ -165,6 +166,7 @@
       align-self: start;
       position: sticky;
       top: 24px;
+      box-shadow: var(--card-shadow);
     }
     .preview-card img {
       width: 100%;
@@ -195,6 +197,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 18px 20px;
+      box-shadow: var(--card-shadow);
     }
     .result-card .card-label {
       font-size: 11px;
@@ -270,6 +273,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 0;
+      box-shadow: var(--card-shadow);
     }
     details summary {
       cursor: pointer;
@@ -316,27 +320,25 @@
 </head>
 <body>
   <header>
-    <div>
-      <h1>Генерация архивного описания изображения</h1>
-      <p class="subtitle">
-        Модульный пайплайн для автоматической генерации структурированных описаний
-        художественных изображений (открытки, плакаты) на русском языке.
-      </p>
-    </div>
-
-    <div class="arch-card" id="archCard">
-      <div class="arch-title">Текущая архитектура</div>
-      <div id="archLines"><div class="muted">Загрузка конфигурации…</div></div>
-      <div class="arch-metrics" id="archMetrics" style="display:none;">
-        <div style="margin-bottom: 4px; font-weight: 600; color: var(--text);">
-          Ожидаемые метрики
-        </div>
-        <span>CLIPScore ≈ <strong id="metricClip">0.331</strong></span>
-        <span>R@1 ≈ <strong id="metricR1">1.00</strong></span>
-        <span>Latency ≈ <strong id="metricLat">12 с</strong></span>
-      </div>
-    </div>
+    <h1>Генерация архивного описания изображения</h1>
+    <p class="subtitle">
+      Модульный пайплайн для автоматической генерации структурированных описаний
+      художественных изображений (открытки, плакаты) на русском языке.
+    </p>
   </header>
+
+  <div class="arch-card" id="archCard">
+    <div class="arch-title">Текущая архитектура</div>
+    <div id="archLines"><div class="muted">Загрузка конфигурации…</div></div>
+    <div class="arch-metrics" id="archMetrics" style="display:none;">
+      <div style="margin-bottom: 4px; font-weight: 600; color: var(--text);">
+        Ожидаемые метрики
+      </div>
+      <span>CLIPScore ≈ <strong id="metricClip">0.331</strong></span>
+      <span>R@1 ≈ <strong id="metricR1">1.00</strong></span>
+      <span>Latency ≈ <strong id="metricLat">12 с</strong></span>
+    </div>
+  </div>
 
   <section class="input-card">
     <div class="input-field">
@@ -377,11 +379,6 @@
       </div>
 
       <div class="result-card">
-        <div class="card-label">Поисковый текст (search text)</div>
-        <div id="searchText" class="search-text muted">Появится после инференса.</div>
-      </div>
-
-      <div class="result-card">
         <div class="card-label">Теги</div>
         <div id="tagsContainer" class="tags">
           <span class="muted">Появятся после инференса.</span>
@@ -407,6 +404,10 @@
               <div class="raw-tag">RU перевод</div>
               <div class="raw-val muted" id="captionRu">—</div>
             </div>
+            <div class="raw-row">
+              <div class="raw-tag">Search text</div>
+              <div class="raw-val muted" id="searchText">—</div>
+            </div>
           </div>
         </div>
       </details>
@@ -430,11 +431,11 @@
     const filenameEl = document.getElementById("filename");
 
     const archiveDescriptionEl = document.getElementById("archiveDescription");
-    const searchTextEl = document.getElementById("searchText");
     const tagsContainerEl = document.getElementById("tagsContainer");
     const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
     const captionRuEl = document.getElementById("captionRu");
+    const searchTextEl = document.getElementById("searchText");
     const rawJsonEl = document.getElementById("rawJson");
 
     const archLinesEl = document.getElementById("archLines");
@@ -503,14 +504,14 @@
       archiveDescriptionEl.textContent =
         "Здесь появится финальное описание, сгенерированное предложенным пайплайном.";
       archiveDescriptionEl.classList.add("muted");
-      searchTextEl.textContent = "Появится после инференса.";
-      searchTextEl.classList.add("muted");
       tagsContainerEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
       metadataGridEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
       captionEnEl.textContent = "—";
       captionEnEl.classList.add("muted");
       captionRuEl.textContent = "—";
       captionRuEl.classList.add("muted");
+      searchTextEl.textContent = "—";
+      searchTextEl.classList.add("muted");
       rawJsonEl.textContent = "Здесь появится сырой ответ API.";
     }
 
@@ -519,11 +520,11 @@
       archiveDescriptionEl.textContent = data.archive_description || "—";
       archiveDescriptionEl.classList.remove("muted");
 
-      searchTextEl.textContent = data.search_text || "—";
-      searchTextEl.classList.remove("muted");
-
-      // Теги
-      const tags = data.metadata?.tags || [];
+      // Теги: предпочитаем русифицированные tags_ru от DescriptionBuilder;
+      // если их нет (backward-compat), показываем сырые metadata.tags.
+      const tags = (data.tags_ru && data.tags_ru.length > 0)
+        ? data.tags_ru
+        : (data.metadata?.tags || []);
       if (tags.length === 0) {
         tagsContainerEl.innerHTML = '<span class="muted">Теги не получены.</span>';
       } else {
@@ -565,11 +566,13 @@
       metadataGridEl.innerHTML = items.join("") ||
         '<span class="muted">Метаданные не получены.</span>';
 
-      // Промежуточные подписи
+      // Промежуточные результаты пайплайна
       captionEnEl.textContent = data.caption?.en || "—";
       captionEnEl.classList.remove("muted");
       captionRuEl.textContent = data.caption?.ru || "—";
       captionRuEl.classList.remove("muted");
+      searchTextEl.textContent = data.search_text || "—";
+      searchTextEl.classList.remove("muted");
 
       rawJsonEl.textContent = JSON.stringify(data, null, 2);
     }

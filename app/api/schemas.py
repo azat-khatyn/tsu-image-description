@@ -43,6 +43,10 @@ class InferenceResponse(BaseModel):
     inference: InferenceBlock
     archive_description: str
     search_text: str
+    # Русифицированные теги уверенно предсказанных полей классификатора.
+    # В отличие от metadata.tags (сырые англоязычные метки SigLIP),
+    # эти теги пригодны для отображения в UI / архивной системе без перевода.
+    tags_ru: list[str] = Field(default_factory=list)
 
 
 class PipelineConfig(BaseModel):

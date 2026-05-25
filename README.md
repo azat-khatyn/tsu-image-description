@@ -1,7 +1,7 @@
 # Разработка интеллектуального программного обеспечения для генерации содержательного и семантического описания художественных изображений
 
 ВКР, магистратура ТГУ, 2026
-**Направление:** компьютерное зрение, vision-language модели, информационный поиск
+**Направление:** компьютерное зрение, vision-language модели
 
 ## Аннотация
 
@@ -307,13 +307,13 @@ PYTHONPATH=src python scripts/data/build_review_set.py --output demo/review_set_
 ## Демонстрация
 
 ### Интерфейс сервиса
-![Секция с загрузкой изображения](demo/screenshots/main_part.png)
+![Секция с загрузкой изображения](demo/screenshots/service_interface_demo.png)
 
 ### Результат инференса
-![Полученное описание и тэги](demo/screenshots/description.png)
+![Полученное описание и тэги](demo/screenshots/service_interface_output_demo.png)
 
 ### JSON-ответ
-![Результат в JSON](demo/screenshots/json_data.png)
+![Результат в JSON](demo/screenshots/service_full_json_output_demo.png)
 
 ## Лицензия
 
