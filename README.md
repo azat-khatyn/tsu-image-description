@@ -30,17 +30,17 @@
 flowchart TD
     IMG[Изображение]
 
-    subgraph CV [Визуальное восприятие]
-        BLIP[CaptionGenerator<br/>BLIP-large]
-        SigLIP[SigLIPMetadataExtractor<br/>каталожная таксономия]
+    subgraph CV [Извлечение визуальных признаков]
+        BLIP[ГенераторПодписи<br/>BLIP-large]
+        SigLIP[ЭкстракторМетаанныхSigLIP<br/>каталожная таксономия]
     end
 
-    ENPP[EnglishCaptionPostprocessor]
+    ENPP[ПостпроцессорАнглийскойПодписи]
 
-    subgraph SEM [Семантика и сборка]
-        THEME[ThemeInferencer]
-        BUILD[DescriptionBuilder<br/>search_text + опорный шаблон]
-        LLM[LLMRewriter<br/>Vikhr-Nemo-12B]
+    subgraph SEM [Обогазщение семантики и сборка]
+        THEME[ОпределительТемы]
+        BUILD[КонструкторОписания<br/>]
+        LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B]
     end
 
     OUT[JSON-результат:<br/>caption_en, metadata,<br/>archive_description RU,<br/>search_text]

@@ -48,12 +48,14 @@ class DescriptionBuilder:
         if self.template_mode == "caption_only":
             archive = self._sentence(caption_ru, capitalize=True)
             search_text = self._search_text(metadata, inference, caption_ru)
-            return {"archive_description": archive, "search_text": search_text}
+            tags_ru = self._tags_ru(metadata, inference)
+            return {"archive_description": archive, "search_text": search_text, "tags_ru": tags_ru}
 
         if self.template_mode == "minimal":
             archive = f"На изображении: {self._inline(caption_ru)}."
             search_text = self._search_text(metadata, inference, caption_ru)
-            return {"archive_description": archive, "search_text": search_text}
+            tags_ru = self._tags_ru(metadata, inference)
+            return {"archive_description": archive, "search_text": search_text, "tags_ru": tags_ru}
 
         image_type_field = metadata.get("image_type", {})
         style_field = metadata.get("style", {})
@@ -98,10 +100,12 @@ class DescriptionBuilder:
 
         archive_description = " ".join(parts)
         search_text = self._search_text(metadata, inference, caption_ru)
+        tags_ru = self._tags_ru(metadata, inference)
 
         return {
             "archive_description": archive_description,
             "search_text": search_text,
+            "tags_ru": tags_ru,
         }
 
     def _intro_phrase(
@@ -277,6 +281,40 @@ class DescriptionBuilder:
         return cls._MOOD_MAP_ARCHIVAL if version == "archival_v2" else cls._MOOD_MAP_LEGACY
 
     @classmethod
+    def _tags_ru(cls, metadata: Dict, inference: Dict) -> list[str]:
+        """Возвращает русские теги по уверенным предсказаниям классификатора.
+
+        В отличие от сырого metadata.tags (англоязычные исходные метки SigLIP),
+        этот список содержит локализованные термины из каталожной таксономии
+        и пригоден для отображения в UI без дополнительной обработки.
+        """
+        version = metadata.get("taxonomy_version", "legacy_v1")
+        image_type_map = cls._image_type_map_for(version)
+        style_map = cls._style_map_for(version)
+        theme_map = cls._theme_map_for(version)
+        mood_map = cls._mood_map_for(version)
+
+        image_type_field = metadata.get("image_type", {})
+        style_field = metadata.get("style", {})
+
+        out: list[str] = []
+        if image_type_field.get("confident"):
+            ru = image_type_map.get(image_type_field.get("label"))
+            if ru:
+                out.append(ru)
+        if style_field.get("confident"):
+            ru = style_map.get(style_field.get("label"))
+            if ru:
+                out.append(ru)
+        theme = inference.get("theme")
+        if theme:
+            out.append(theme_map.get(theme, theme))
+        mood = inference.get("mood")
+        if mood:
+            out.append(mood_map.get(mood, mood))
+        return out
+
+    @classmethod
     def _search_text(cls, metadata: Dict, inference: Dict, caption_ru: str | None = None) -> str:
         image_type_field = metadata.get("image_type", {})
         style_field = metadata.get("style", {})
@@ -304,9 +342,11 @@ class DescriptionBuilder:
         if mood_ru:
             search_terms.append(mood_ru)
 
-        for tag in tags:
-            if tag not in search_terms:
-                search_terms.append(tag)
+        # NB: metadata["tags"] хранит сырые англоязычные метки SigLIP
+        # ("a postcard", "a chromolithograph", ...). Они УЖЕ покрыты
+        # русскими переводами выше через image_type_ru / style_ru / theme_ru.
+        # Повторно дублировать их в search_text вредно — это вносит шум
+        # в поисковую строку и ухудшает токенизацию ("a postcard" → "a", "postcard").
 
         if caption_ru:
             caption_norm = caption_ru.strip().rstrip(" .,:;!-")
