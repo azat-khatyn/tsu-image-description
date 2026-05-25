@@ -1,0 +1,225 @@
+{
+  "mode": "keyword",
+  "model": null,
+  "description_key": "archive_ru",
+  "aggregates": {
+    "n": 14,
+    "mean_sds": 0.4523809523809524,
+    "per_axis_coverage": {
+      "type_of_material": 1.0,
+      "visual_subject": 1.0,
+      "artistic_style": 0.35714285714285715,
+      "epoch": 0.0,
+      "cultural_context": 0.2857142857142857,
+      "mood": 0.07142857142857142
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "mean_sds": 0.48148148148148145
+      },
+      "rgb": {
+        "n": 5,
+        "mean_sds": 0.4
+      }
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография волны, разбивающейся о скалы на пляже.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-гравюра с изображением вазы с цветами и фруктов в миске на столе.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Открытка. Старинное цветное фото мужчины с длинной бородой и тюрбаном в религиозной сцене.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография природной сцены с камнями, ведущими к маленькой пещере.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Открытка. Черно-белое фото мужчины в смокинге.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Вид моста с городом на заднем плане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Открытка. Женщина в ярком платье и головном платке на религиозной сцене в праздничном настроении.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография тропы в лесу с деревьями.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Осел в седле стоит на грунтовой дороге в лесной местности.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "description": "Открытка. Рождественская сцена с изображением коробки и ветвей остролиста.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "description": "Открытка. Три ребенка стоят в снегу с рождественской елкой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "description": "Открытка. Ребенок в яркой одежде держит цветы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "description": "Открытка. Вид на реку с мостом и зданиями на заднем плане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "description": "Фотография. Женщина в кимоно сидит перед зеркалом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    }
+  ]
+}

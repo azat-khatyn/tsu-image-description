@@ -1,0 +1,869 @@
+{
+  "mode": "keyword",
+  "model": null,
+  "description_key": "archive_ru",
+  "aggregates": {
+    "n": 60,
+    "mean_sds": 0.75,
+    "per_axis_coverage": {
+      "type_of_material": 1.0,
+      "visual_subject": 1.0,
+      "artistic_style": 0.8666666666666667,
+      "epoch": 0.0,
+      "cultural_context": 0.6333333333333333,
+      "mood": 1.0
+    },
+    "by_source": {
+      "rgb": {
+        "n": 20,
+        "mean_sds": 0.7416666666666667
+      },
+      "nypl": {
+        "n": 40,
+        "mean_sds": 0.7541666666666667
+      }
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "description": "Черно-белая фотография. На изображении: черно-белое фото леса с деревьями. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "description": "Фотография. На изображении: картина группы людей в снежном лесу с лошадьми. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле цветной фотографии. На изображении: вид на реку с мостом и зданиями на заднем плане. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "description": "Фотография. На изображении: рисунок молодой девушки, держащей кошку на руках. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "description": "Фотография. На изображении: человек, катающийся на олене с собакой на спине. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле гравюры. На изображении: корабль в воде, и из него выпадает много дыма. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: рисунок розы на открытке с дамским жучком. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "description": "Поздравительная открытка в стиле винтажной иллюстрации. На изображении: старая открытка с картинкой ветки дерева и цветка. Тематика изображения: пасхальная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "description": "Цветная фотография. На изображении: женщина в кимоно, сидящая перед зеркалом. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "description": "Фотография. На изображении: три различных цветных отпечатка женщины с цветами и фруктами. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: рождественская открытка с коробкой и листьями падуба. Тематика изображения: рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "description": "Фотография. На изображении: женщина, держащая свечу в фоторамке. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: трое детей стоят в снегу с рождественским деревом. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: фотографию пары, целующейся под рождественским деревом. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "description": "Поздравительная открытка в стиле винтажной иллюстрации. На изображении: птица, сидящая на ветке с листьями падуба. Тематика изображения: рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: собака стояла в снегу с другими собаками. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле черно-белой фотографии. На изображении: пагода в центре города с множеством людей. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "description": "Фотография. На изображении: черно-белый рисунок человека с усами. Тематика изображения: религиозная сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: двое детей ездят на санях вниз по снегу. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: рисунок ребенка в ярком наряде с цветами. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: фотографию открытки гавани с лодками. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. На изображении: группа из четырех цветных цветов на белой поверхности. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле цветной фотографии. На изображении: винтажная открытка с волной, взламывающей камни на пляже. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: винтажная карта на Хэллоуин с тыквой и ведьмой. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. На изображении: рисунок вазы цветов и чаши фруктов на столе. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как романтическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: фотографию города с рекой. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: уличная сцена с пешеходами и лошадиными каретами посреди улицы. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле цветной фотографии. На изображении: вид на мост с людьми, проходящими через него. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как спокойное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле цветной фотографии. На изображении: вид моста над водоемом. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография. На изображении: черно-белое фото человека, пахающего поле лошадьми. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография. На изображении: старое фото человека с длинной бородой и тюрбаном. Тематика изображения: религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле цветной фотографии. На изображении: камень с ступеньками, ведущими в маленькую пещеру. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Черно-белая фотография. На изображении: черно-белое фото мужчины в смокинге. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: вид моста с городом на заднем плане. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография. На изображении: женщина в цветном платье и головном шарфе. Тематика изображения: религиозная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация в стиле живописи. На изображении: рисунок женщины и мужчины, стоящих в парке. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация в стиле винтажной иллюстрации. На изображении: плакат человека с флагом и молотком. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: собака, сидящая на земле с рождественской открыткой. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография. На изображении: винтажная открытка пути в лесу с деревьями. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография. На изображении: фотография полнолуния над океаном с лодкой на расстоянии. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. На изображении: ангел с букетом цветов в руке. Тематика изображения: религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация в стиле винтажной иллюстрации. На изображении: шляпа с лейблом, на которой написано фальшивое и отстойное дерьмо. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле декоративной иллюстрации. На изображении: рисунок карточки с изображением растения. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Иллюстрация в стиле винтажной иллюстрации. На изображении: рисунок женщины с шляпой и трубой. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: две разные фотографии птиц, сидящих на ветке с ягодами. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: много людей сидят на пляже рядом с водой. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. На изображении: арафф сидит на лошади в поле с другими животными. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: фотографию открытки здания с флагом на ней. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: человек, который катается на осле, тянет повозку с оселом. Тематика изображения: детская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография. На изображении: вид на город с мостом и рекой. Тематика изображения: городская сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: осел с седлом, стоящим на грунтовой дороге в лесу. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле черно-белой фотографии. На изображении: арафы и человек на лошади рядом с пирамидами. Тематика изображения: религиозная сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. На изображении: araffe с седлом, стоящим в поле травы рядом с кустом. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: винтажная рождественская открытка с санта-клаусом, катающимся в санях. Тематика изображения: рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Поздравительная открытка в стиле винтажной иллюстрации. На изображении: санта Клаус лазит по лестнице с корзиной подарков на спине. Тематика изображения: рождественская сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: винтажная валентиновая карточка с ребёнком, прижимающим руку к рту. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации. На изображении: кучка маргариток, которые есть на открытке. Тематика изображения: праздничная сцена. Общее настроение изображения можно охарактеризовать как праздничное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле цветной фотографии. На изображении: винтажная открытка с деревом, выращиваемым на скале, раздирающей воду. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. На изображении: рисунок человека с усами и рубашкой. Тематика изображения: романтическая сцена. Общее настроение изображения можно охарактеризовать как серьёзное.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле цветной фотографии. На изображении: вид на реку с деревьями и кустами на переднем плане. Тематика изображения: сцена природы. Общее настроение изображения можно охарактеризовать как ностальгическое.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    }
+  ]
+}

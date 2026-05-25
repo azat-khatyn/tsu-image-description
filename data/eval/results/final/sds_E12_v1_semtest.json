@@ -1,0 +1,225 @@
+{
+  "mode": "keyword",
+  "model": null,
+  "description_key": "archive_ru",
+  "aggregates": {
+    "n": 14,
+    "mean_sds": 0.7142857142857143,
+    "per_axis_coverage": {
+      "type_of_material": 1.0,
+      "visual_subject": 1.0,
+      "artistic_style": 0.9285714285714286,
+      "epoch": 0.0,
+      "cultural_context": 0.5,
+      "mood": 0.8571428571428571
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "mean_sds": 0.6851851851851852
+      },
+      "rgb": {
+        "n": 5,
+        "mean_sds": 0.7666666666666667
+      }
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка: старинная цветная фотография сцены отдыха на берегу моря, где волна разбивается о скалы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка: гравюра, изображающая романтическую сцену с вазой цветов и миской фруктов на столе.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Черно-белая фотография старого мужчины с длинной бородой и тюрбаном на голове, цветная репродукция, религиозная сцена, ностальгический тон.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка с цветной фотографией природной сцены, изображающей скалистый ландшафт с каменной лестницей, ведущей к небольшой пещере, выполнена в ностальгическом эмоциональном тоне.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Черно-белая фотография мужчины в смокинге, тематическая категория — романтическая сцена, эмоциональный тон серьезный.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации изображает вид моста с городским пейзажем на заднем плане, создавая ностальгическое настроение.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Цветная фотография женщины в ярком платье и головном платке на религиозной сцене, эмоциональный тон — праздничный.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка: старинная фотография тропы в лесу с деревьями, выполненная в цвете. Тематическая категория: природная сцена, эмоциональный тон ностальгический.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка в стиле винтажной иллюстрации изображает осла в седле на грунтовой дороге в лесной местности, создавая ностальгическое настроение.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "description": "Открытка с рождественской сценой в стиле винтажной иллюстрации, изображающая коробку и листья остролиста.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации изображает трех детей, стоящих в снегу с рождественской елкой, отражает праздничную сцену.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "description": "Открытка в стиле винтажной иллюстрации изображает ребенка в яркой одежде, держащего цветы, и относится к тематической категории детских сцен с праздничным эмоциональным тоном.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "description": "Открытка с цветной фотографией городской сцены, изображающая вид на реку с мостом и зданиями на фоне, выполнена в ностальгическом стиле.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 1,
+        "sds": 0.8333333333333334
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "description": "Открытка: женщина в кимоно, сидящая перед зеркалом, цветная фотография, романтическая сцена, ностальгический тон.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 1,
+        "sds": 0.6666666666666666
+      }
+    }
+  ]
+}

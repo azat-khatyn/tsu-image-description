@@ -1,0 +1,4248 @@
+{
+  "summary": {
+    "num_examples": 220,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "Salesforce/blip-image-captioning-large",
+      "translator_model": "facebook/nllb-200-distilled-600M",
+      "builder_kwargs": {
+        "template_mode": "caption_only",
+        "include_theme": true,
+        "include_mood": true
+      },
+      "references_path": "data/eval/references.jsonl",
+      "pool_path": "data/eval/pool_nypl.jsonl"
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.26431250856681304,
+      "CLIPScore_RU_caption_ru": 0.2731891267678954,
+      "CLIPScore_RU_archive_ru": 0.2731891267678954,
+      "CLIPScore_RU_reference_ru": 0.30870684757828715
+    },
+    "by_source": {
+      "nypl": {
+        "n": 200,
+        "CLIPScore_RU_archive_ru": 0.27010057352483274,
+        "CLIPScore_RU_caption_ru": 0.27010057352483274,
+        "CLIPScore_EN_caption_en": 0.2613362977653742
+      },
+      "rgb": {
+        "n": 20,
+        "CLIPScore_RU_archive_ru": 0.30407465919852256,
+        "CLIPScore_RU_caption_ru": 0.30407465919852256,
+        "CLIPScore_EN_caption_en": 0.29407461658120154
+      }
+    },
+    "retrieval": {
+      "n_pool": 220,
+      "i2t": {
+        "R@1": 0.21363636363636362,
+        "R@5": 0.4636363636363636,
+        "R@10": 0.5727272727272728
+      },
+      "t2i": {
+        "R@1": 0.25,
+        "R@5": 0.5272727272727272,
+        "R@10": 0.6590909090909091
+      },
+      "mean_rank_i2t": 17.39090909090909,
+      "mean_rank_t2i": 17.12727272727273
+    },
+    "latency": {
+      "mean_sec": 0.9112579887563532,
+      "images_per_sec": 1.0973840694277568
+    },
+    "notes": {
+      "I-1": "M-CLIP integrated; primary metric switched to CLIPScore_RU(archive).",
+      "I-2": "archive_description_ru declared as primary; old metric kept as back-compat.",
+      "I-4": "bootstrap CI implemented in scripts/eval_stats.py (not invoked here)",
+      "I-5": "retrieval R@1 / R@5 over eval pool computed below"
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "caption_en": "there is a black and white photo of a forest with trees",
+      "caption_ru": "Здесь есть черно-белая фотография леса с деревьями.",
+      "archive_ru": "Здесь есть черно-белая фотография леса с деревьями.",
+      "reference_ru": "Сосновый лес",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3177242875099182,
+        "CLIPScore_RU_caption_ru": 0.32571765780448914,
+        "CLIPScore_RU_archive_ru": 0.32571765780448914,
+        "CLIPScore_RU_reference_ru": 0.30132925510406494
+      },
+      "latency_sec": 1.4732677936553955,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "caption_en": "painting of a group of people in a snowy forest with horses",
+      "caption_ru": "Картина группы людей в снежном лесу с лошадьми",
+      "archive_ru": "Картина группы людей в снежном лесу с лошадьми",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3375818133354187,
+        "CLIPScore_RU_caption_ru": 0.3310060501098633,
+        "CLIPScore_RU_archive_ru": 0.3310060501098633,
+        "CLIPScore_RU_reference_ru": 0.3090788722038269
+      },
+      "latency_sec": 1.0042800903320312,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "arafed view of a river with a bridge and buildings in the background",
+      "caption_ru": "На фоне есть мостик и здания, которые представляют собой реку.",
+      "archive_ru": "На фоне есть мостик и здания, которые представляют собой реку.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2672896385192871,
+        "CLIPScore_RU_caption_ru": 0.2972160577774048,
+        "CLIPScore_RU_archive_ru": 0.2972160577774048,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 1.0803680419921875,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "caption_en": "a painting of a young girl holding a cat in her arms",
+      "caption_ru": "Картина молодой девушки, держащей кота в руках.",
+      "archive_ru": "Картина молодой девушки, держащей кота в руках.",
+      "reference_ru": "Девочка с лукошком.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30439287424087524,
+        "CLIPScore_RU_caption_ru": 0.32346850633621216,
+        "CLIPScore_RU_archive_ru": 0.32346850633621216,
+        "CLIPScore_RU_reference_ru": 0.28499191999435425
+      },
+      "latency_sec": 0.9048240184783936,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "caption_en": "there is a man riding a reindeer with a dog on his back",
+      "caption_ru": "На олене едет мужчина с собакой на спине.",
+      "archive_ru": "На олене едет мужчина с собакой на спине.",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.313271701335907,
+        "CLIPScore_RU_caption_ru": 0.28691068291664124,
+        "CLIPScore_RU_archive_ru": 0.28691068291664124,
+        "CLIPScore_RU_reference_ru": 0.340998113155365
+      },
+      "latency_sec": 0.9908359050750732,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "caption_en": "arafed ship in the water with a lot of smoke coming out of it",
+      "caption_ru": "Корабль, который был подвошен в воду, с большим количеством дыма, выходящего из него",
+      "archive_ru": "Корабль, который был подвошен в воду, с большим количеством дыма, выходящего из него",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27343958616256714,
+        "CLIPScore_RU_caption_ru": 0.2930147051811218,
+        "CLIPScore_RU_archive_ru": 0.2930147051811218,
+        "CLIPScore_RU_reference_ru": 0.30421382188796997
+      },
+      "latency_sec": 1.3765997886657715,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "caption_en": "there is a painting of a rose on a postcard with a lady bug",
+      "caption_ru": "На открытке есть картина розы с леди-богом",
+      "archive_ru": "На открытке есть картина розы с леди-богом",
+      "reference_ru": "Розы расцветают...",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3114601969718933,
+        "CLIPScore_RU_caption_ru": 0.3246443271636963,
+        "CLIPScore_RU_archive_ru": 0.3246443271636963,
+        "CLIPScore_RU_reference_ru": 0.29505568742752075
+      },
+      "latency_sec": 1.043773889541626,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "caption_en": "an old postcard with a picture of a branch of a tree and a flower",
+      "caption_ru": "Старый открыток с фотографией ветви дерева и цветка",
+      "archive_ru": "Старый открыток с фотографией ветви дерева и цветка",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33735185861587524,
+        "CLIPScore_RU_caption_ru": 0.3627505302429199,
+        "CLIPScore_RU_archive_ru": 0.3627505302429199,
+        "CLIPScore_RU_reference_ru": 0.3077434301376343
+      },
+      "latency_sec": 1.0663843154907227,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "arafed woman in kimono sitting in front of a mirror",
+      "caption_ru": "Арафедная женщина в кимоно сидит перед зеркалом",
+      "archive_ru": "Арафедная женщина в кимоно сидит перед зеркалом",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3427559733390808,
+        "CLIPScore_RU_caption_ru": 0.3500327467918396,
+        "CLIPScore_RU_archive_ru": 0.3500327467918396,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 0.954340934753418,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "caption_en": "three different colored prints of a woman with flowers and fruit",
+      "caption_ru": "Три разных цветных отпечатка женщины с цветами и фруктами",
+      "archive_ru": "Три разных цветных отпечатка женщины с цветами и фруктами",
+      "reference_ru": "Изображение цветов и девочки",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25081467628479004,
+        "CLIPScore_RU_caption_ru": 0.2408519983291626,
+        "CLIPScore_RU_archive_ru": 0.2408519983291626,
+        "CLIPScore_RU_reference_ru": 0.23262850940227509
+      },
+      "latency_sec": 1.0253548622131348,
+      "retrieval": {
+        "rank_i2t": 46,
+        "rank_t2i": 24
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "there is a christmas card with a box and holly leaves",
+      "caption_ru": "Там есть рождественская открытка с коробкой и листьями.",
+      "archive_ru": "Там есть рождественская открытка с коробкой и листьями.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2946935296058655,
+        "CLIPScore_RU_caption_ru": 0.2907390594482422,
+        "CLIPScore_RU_archive_ru": 0.2907390594482422,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 0.9355483055114746,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "caption_en": "a close up of a woman holding a candle in a picture frame",
+      "caption_ru": "Ближайшее изображение женщины, держащей свечу в картинной раме",
+      "archive_ru": "Ближайшее изображение женщины, держащей свечу в картинной раме",
+      "reference_ru": "Девушка держит свечу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3025990128517151,
+        "CLIPScore_RU_caption_ru": 0.3135106563568115,
+        "CLIPScore_RU_archive_ru": 0.3135106563568115,
+        "CLIPScore_RU_reference_ru": 0.29088130593299866
+      },
+      "latency_sec": 0.9828150272369385,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "there are three children standing in the snow with a christmas tree",
+      "caption_ru": "Три ребенка стоят в снеге с рождественским деревом",
+      "archive_ru": "Три ребенка стоят в снеге с рождественским деревом",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2943120002746582,
+        "CLIPScore_RU_caption_ru": 0.32329949736595154,
+        "CLIPScore_RU_archive_ru": 0.32329949736595154,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 0.9356489181518555,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "caption_en": "there is a picture of a couple kissing under a christmas tree",
+      "caption_ru": "Есть фотография пары, целующихся под рождественским деревом",
+      "archive_ru": "Есть фотография пары, целующихся под рождественским деревом",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2681783437728882,
+        "CLIPScore_RU_caption_ru": 0.2587457299232483,
+        "CLIPScore_RU_archive_ru": 0.2587457299232483,
+        "CLIPScore_RU_reference_ru": 0.3731614649295807
+      },
+      "latency_sec": 0.899683952331543,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "caption_en": "there is a bird sitting on a branch with holly leaves",
+      "caption_ru": "На ветке с листьями голли сидит птица.",
+      "archive_ru": "На ветке с листьями голли сидит птица.",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2766094207763672,
+        "CLIPScore_RU_caption_ru": 0.2902052104473114,
+        "CLIPScore_RU_archive_ru": 0.2902052104473114,
+        "CLIPScore_RU_reference_ru": 0.2770371735095978
+      },
+      "latency_sec": 0.86952805519104,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "caption_en": "arafed dog standing in the snow with other dogs",
+      "caption_ru": "Арафед-собака, стоящая в снеге вместе с другими собаками",
+      "archive_ru": "Арафед-собака, стоящая в снеге вместе с другими собаками",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2621583342552185,
+        "CLIPScore_RU_caption_ru": 0.2859754264354706,
+        "CLIPScore_RU_archive_ru": 0.2859754264354706,
+        "CLIPScore_RU_reference_ru": 0.29683560132980347
+      },
+      "latency_sec": 0.9706821441650391,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "caption_en": "arafed pagoda in the middle of a city with a lot of people",
+      "caption_ru": "Арафедская пагода находится в центре города с большим количеством людей",
+      "archive_ru": "Арафедская пагода находится в центре города с большим количеством людей",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25729504227638245,
+        "CLIPScore_RU_caption_ru": 0.2790287435054779,
+        "CLIPScore_RU_archive_ru": 0.2790287435054779,
+        "CLIPScore_RU_reference_ru": 0.3548523187637329
+      },
+      "latency_sec": 1.0576801300048828,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white drawing of a man with a mustache",
+      "caption_ru": "Черно-белая рисование мужчины с усами.",
+      "archive_ru": "Черно-белая рисование мужчины с усами.",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24517686665058136,
+        "CLIPScore_RU_caption_ru": 0.24654434621334076,
+        "CLIPScore_RU_archive_ru": 0.24654434621334076,
+        "CLIPScore_RU_reference_ru": 0.3040972352027893
+      },
+      "latency_sec": 0.9522080421447754,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "caption_en": "there are two children riding a sled down a snowy hill",
+      "caption_ru": "Два ребенка едут на лыжах вниз по снежному холму.",
+      "archive_ru": "Два ребенка едут на лыжах вниз по снежному холму.",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3137909471988678,
+        "CLIPScore_RU_caption_ru": 0.31248414516448975,
+        "CLIPScore_RU_archive_ru": 0.31248414516448975,
+        "CLIPScore_RU_reference_ru": 0.34150415658950806
+      },
+      "latency_sec": 0.9358057975769043,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "arafed picture of a child in a colorful outfit holding flowers",
+      "caption_ru": "Накрытая фотография ребенка в красочном костюме, держащего цветы",
+      "archive_ru": "Накрытая фотография ребенка в красочном костюме, держащего цветы",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.310596227645874,
+        "CLIPScore_RU_caption_ru": 0.3453471064567566,
+        "CLIPScore_RU_archive_ru": 0.3453471064567566,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 0.9708821773529053,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/005aeab0-5fce-0137-881b-0710f6dfc445.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and a woman on it",
+      "caption_ru": "Книга с фотографией мужчины и женщины на ней",
+      "archive_ru": "Книга с фотографией мужчины и женщины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24453841149806976,
+        "CLIPScore_RU_caption_ru": 0.2796960175037384,
+        "CLIPScore_RU_archive_ru": 0.2796960175037384,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9544298648834229,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/017c4780-5fce-0137-ce31-5be392b29c69.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and a woman on it",
+      "caption_ru": "Книга с фотографией мужчины и женщины на ней",
+      "archive_ru": "Книга с фотографией мужчины и женщины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24453841149806976,
+        "CLIPScore_RU_caption_ru": 0.2796960175037384,
+        "CLIPScore_RU_archive_ru": 0.2796960175037384,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9422500133514404,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/028fd910-4f1d-0137-4f08-41eb8aaaf8dc.jpg",
+      "source": "nypl",
+      "caption_en": "newspapers are stacked on top of each other with a title",
+      "caption_ru": "Газеты накладываются друг на друга с заголовком",
+      "archive_ru": "Газеты накладываются друг на друга с заголовком",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2045084536075592,
+        "CLIPScore_RU_caption_ru": 0.2294081151485443,
+        "CLIPScore_RU_archive_ru": 0.2294081151485443,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9331009387969971,
+      "retrieval": {
+        "rank_i2t": 37,
+        "rank_t2i": 21
+      }
+    },
+    {
+      "image_path": "data/nypl/images/02c4d6d0-5fce-0137-8a76-02d7c9fe3a2f.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a picture of a plane",
+      "caption_ru": "Заключение книги с фотографией самолета",
+      "archive_ru": "Заключение книги с фотографией самолета",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2595332860946655,
+        "CLIPScore_RU_caption_ru": 0.2655521333217621,
+        "CLIPScore_RU_archive_ru": 0.2655521333217621,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7718081474304199,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/051f4b80-82a1-0130-37bb-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "there are many men standing together in a group posing for a picture",
+      "caption_ru": "В группе стоят многие мужчины, позирующие на фотографию.",
+      "archive_ru": "В группе стоят многие мужчины, позирующие на фотографию.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28392770886421204,
+        "CLIPScore_RU_caption_ru": 0.29719293117523193,
+        "CLIPScore_RU_archive_ru": 0.29719293117523193,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.893035888671875,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/08275cc0-4f1d-0137-2950-49fededf6132.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a picture of a record",
+      "caption_ru": "Заключение книги с фотографией записи",
+      "archive_ru": "Заключение книги с фотографией записи",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2744653522968292,
+        "CLIPScore_RU_caption_ru": 0.2400323897600174,
+        "CLIPScore_RU_archive_ru": 0.2400323897600174,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7740859985351562,
+      "retrieval": {
+        "rank_i2t": 28,
+        "rank_t2i": 86
+      }
+    },
+    {
+      "image_path": "data/nypl/images/08db6da0-5fce-0137-8379-038cdfa421c9.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man on it",
+      "caption_ru": "Есть книга с фотографией человека на ней.",
+      "archive_ru": "Есть книга с фотографией человека на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2481870949268341,
+        "CLIPScore_RU_caption_ru": 0.23785653710365295,
+        "CLIPScore_RU_archive_ru": 0.23785653710365295,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7529351711273193,
+      "retrieval": {
+        "rank_i2t": 59,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/09d2f3d0-4f1d-0137-0e6e-11fac4f49b10.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a bunch of people on it",
+      "caption_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "archive_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24520546197891235,
+        "CLIPScore_RU_caption_ru": 0.2526467442512512,
+        "CLIPScore_RU_archive_ru": 0.2526467442512512,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8227918148040771,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 56
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0a134590-4f1d-0137-c6b5-0f9b63e756c6.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a bunch of people on it",
+      "caption_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "archive_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24520546197891235,
+        "CLIPScore_RU_caption_ru": 0.2526467442512512,
+        "CLIPScore_RU_archive_ru": 0.2526467442512512,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9039218425750732,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 57
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0b021ce0-c5c3-012f-4add-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a drawing of a woman and a child with a sign",
+      "caption_ru": "Здесь есть рисунок женщины и ребенка с надписью",
+      "archive_ru": "Здесь есть рисунок женщины и ребенка с надписью",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2338915467262268,
+        "CLIPScore_RU_caption_ru": 0.23268581926822662,
+        "CLIPScore_RU_archive_ru": 0.23268581926822662,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8932449817657471,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 25
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0b883610-5fce-0137-ff87-176fd0c98087.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man on it",
+      "caption_ru": "Есть книга с фотографией человека на ней.",
+      "archive_ru": "Есть книга с фотографией человека на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23672983050346375,
+        "CLIPScore_RU_caption_ru": 0.23583292961120605,
+        "CLIPScore_RU_archive_ru": 0.23583292961120605,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8121628761291504,
+      "retrieval": {
+        "rank_i2t": 37,
+        "rank_t2i": 22
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0bc8b730-5fce-0137-e053-2dbe10d11a50.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man riding a horse",
+      "caption_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "archive_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.1973031759262085,
+        "CLIPScore_RU_caption_ru": 0.19811899960041046,
+        "CLIPScore_RU_archive_ru": 0.19811899960041046,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8219730854034424,
+      "retrieval": {
+        "rank_i2t": 110,
+        "rank_t2i": 134
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0be98850-5fce-0137-624f-79c558cc7e20.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man riding a horse",
+      "caption_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "archive_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.1973031759262085,
+        "CLIPScore_RU_caption_ru": 0.19811899960041046,
+        "CLIPScore_RU_archive_ru": 0.19811899960041046,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8585000038146973,
+      "retrieval": {
+        "rank_i2t": 112,
+        "rank_t2i": 133
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0eda2e20-5fce-0137-b89d-02d64ec962a9.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man riding a horse",
+      "caption_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "archive_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.1973031759262085,
+        "CLIPScore_RU_caption_ru": 0.19811899960041046,
+        "CLIPScore_RU_archive_ru": 0.19811899960041046,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8797492980957031,
+      "retrieval": {
+        "rank_i2t": 113,
+        "rank_t2i": 131
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0fcecc40-4f1d-0137-05cf-005d1f7854e6.jpg",
+      "source": "nypl",
+      "caption_en": "there is a newspaper with a picture of a man on it",
+      "caption_ru": "Есть газета с фотографией мужчины на ней",
+      "archive_ru": "Есть газета с фотографией мужчины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22963911294937134,
+        "CLIPScore_RU_caption_ru": 0.2343246191740036,
+        "CLIPScore_RU_archive_ru": 0.2343246191740036,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8180580139160156,
+      "retrieval": {
+        "rank_i2t": 44,
+        "rank_t2i": 31
+      }
+    },
+    {
+      "image_path": "data/nypl/images/101bfba0-c560-012f-ce19-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "araffled photograph of a crowd of people in a city",
+      "caption_ru": "Нанесенная на свет фотография толпы людей в городе",
+      "archive_ru": "Нанесенная на свет фотография толпы людей в городе",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2530222535133362,
+        "CLIPScore_RU_caption_ru": 0.24581441283226013,
+        "CLIPScore_RU_archive_ru": 0.24581441283226013,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.844419002532959,
+      "retrieval": {
+        "rank_i2t": 24,
+        "rank_t2i": 13
+      }
+    },
+    {
+      "image_path": "data/nypl/images/12b25b00-54d6-0137-9482-65cbc98e59ef.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a movie with a number of pictures",
+      "caption_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "archive_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21187444031238556,
+        "CLIPScore_RU_caption_ru": 0.24345280230045319,
+        "CLIPScore_RU_archive_ru": 0.24345280230045319,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.999126672744751,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 46
+      }
+    },
+    {
+      "image_path": "data/nypl/images/13227dd0-5af1-0137-97af-111685f671b5.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a cover of a man on a horse",
+      "caption_ru": "Заключение книги с обложкой человека на лошади",
+      "archive_ru": "Заключение книги с обложкой человека на лошади",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23962844908237457,
+        "CLIPScore_RU_caption_ru": 0.23336172103881836,
+        "CLIPScore_RU_archive_ru": 0.23336172103881836,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.926447868347168,
+      "retrieval": {
+        "rank_i2t": 60,
+        "rank_t2i": 38
+      }
+    },
+    {
+      "image_path": "data/nypl/images/137580b0-5fce-0137-7fc3-2575cd677097.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man in a suit",
+      "caption_ru": "Есть книга с фотографией мужчины в костюме",
+      "archive_ru": "Есть книга с фотографией мужчины в костюме",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2411888986825943,
+        "CLIPScore_RU_caption_ru": 0.24383710324764252,
+        "CLIPScore_RU_archive_ru": 0.24383710324764252,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8588130474090576,
+      "retrieval": {
+        "rank_i2t": 44,
+        "rank_t2i": 14
+      }
+    },
+    {
+      "image_path": "data/nypl/images/14539ed0-5af1-0137-fa5f-7dacbbe64b78.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a cover of a man on a horse",
+      "caption_ru": "Заключение книги с обложкой человека на лошади",
+      "archive_ru": "Заключение книги с обложкой человека на лошади",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23962844908237457,
+        "CLIPScore_RU_caption_ru": 0.23336172103881836,
+        "CLIPScore_RU_archive_ru": 0.23336172103881836,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.907167911529541,
+      "retrieval": {
+        "rank_i2t": 61,
+        "rank_t2i": 39
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1465de20-54d6-0137-1fd2-01d4ded44b75.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a movie with a number of pictures",
+      "caption_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "archive_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21187444031238556,
+        "CLIPScore_RU_caption_ru": 0.24345280230045319,
+        "CLIPScore_RU_archive_ru": 0.24345280230045319,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9917340278625488,
+      "retrieval": {
+        "rank_i2t": 18,
+        "rank_t2i": 47
+      }
+    },
+    {
+      "image_path": "data/nypl/images/14f9e840-5fce-0137-9f57-71ab303bb37b.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a record on it",
+      "caption_ru": "Есть книга с фотографией записи на ней",
+      "archive_ru": "Есть книга с фотографией записи на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3196781277656555,
+        "CLIPScore_RU_caption_ru": 0.24720627069473267,
+        "CLIPScore_RU_archive_ru": 0.24720627069473267,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.817965030670166,
+      "retrieval": {
+        "rank_i2t": 40,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15424f10-54d6-0137-704f-7dd65db13afa.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a movie with a number of pictures",
+      "caption_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "archive_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21187444031238556,
+        "CLIPScore_RU_caption_ru": 0.24345280230045319,
+        "CLIPScore_RU_archive_ru": 0.24345280230045319,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9274280071258545,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 48
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15bd8790-4f1d-0137-baa2-02761820a540.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a bunch of information on it",
+      "caption_ru": "Ближайшее описание журнала с кучей информации о нем",
+      "archive_ru": "Ближайшее описание журнала с кучей информации о нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27638646960258484,
+        "CLIPScore_RU_caption_ru": 0.27961021661758423,
+        "CLIPScore_RU_archive_ru": 0.27961021661758423,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9116489887237549,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15bf0ae0-54d6-0137-6a31-0b767ccb4be8.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a movie with a number of pictures",
+      "caption_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "archive_ru": "Журнал Arafed обнажил обложку фильма с рядом фотографий",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21187444031238556,
+        "CLIPScore_RU_caption_ru": 0.24345280230045319,
+        "CLIPScore_RU_archive_ru": 0.24345280230045319,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0124342441558838,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 45
+      }
+    },
+    {
+      "image_path": "data/nypl/images/16208a70-5fce-0137-2b6b-1bcf211791f0.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a white elephant on it",
+      "caption_ru": "На ней есть книга с фотографией белого слона.",
+      "archive_ru": "На ней есть книга с фотографией белого слона.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22239159047603607,
+        "CLIPScore_RU_caption_ru": 0.22119814157485962,
+        "CLIPScore_RU_archive_ru": 0.22119814157485962,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8465778827667236,
+      "retrieval": {
+        "rank_i2t": 86,
+        "rank_t2i": 46
+      }
+    },
+    {
+      "image_path": "data/nypl/images/16410a70-5fce-0137-3748-31984762c3e2.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a white elephant on it",
+      "caption_ru": "На ней есть книга с фотографией белого слона.",
+      "archive_ru": "На ней есть книга с фотографией белого слона.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22239159047603607,
+        "CLIPScore_RU_caption_ru": 0.22119814157485962,
+        "CLIPScore_RU_archive_ru": 0.22119814157485962,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8191337585449219,
+      "retrieval": {
+        "rank_i2t": 85,
+        "rank_t2i": 47
+      }
+    },
+    {
+      "image_path": "data/nypl/images/17ccd060-4f1d-0137-0d46-2dbbd1b594bf.jpg",
+      "source": "nypl",
+      "caption_en": "arafed image of a record with a number of titles",
+      "caption_ru": "Арафедованное изображение записи с рядом названий",
+      "archive_ru": "Арафедованное изображение записи с рядом названий",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2633356750011444,
+        "CLIPScore_RU_caption_ru": 0.25275731086730957,
+        "CLIPScore_RU_archive_ru": 0.25275731086730957,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8568830490112305,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 49
+      }
+    },
+    {
+      "image_path": "data/nypl/images/18050fb0-54d6-0137-0408-0b1bd74e514f.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a cover of a record",
+      "caption_ru": "Заключение книги с обложкой записи",
+      "archive_ru": "Заключение книги с обложкой записи",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3052718937397003,
+        "CLIPScore_RU_caption_ru": 0.272924542427063,
+        "CLIPScore_RU_archive_ru": 0.272924542427063,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7965807914733887,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/19c542b0-54d6-0137-ecf4-29c49ae26489.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a baseball bat on it",
+      "caption_ru": "Ближайшее изображение книги с бейсбольной битой на ней",
+      "archive_ru": "Ближайшее изображение книги с бейсбольной битой на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24772387742996216,
+        "CLIPScore_RU_caption_ru": 0.25223684310913086,
+        "CLIPScore_RU_archive_ru": 0.25223684310913086,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8597300052642822,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1a0fda90-3944-0138-ae0a-2de23f29d4fc.jpg",
+      "source": "nypl",
+      "caption_en": "arafed picture of a man in a suit and bow tie in a red case",
+      "caption_ru": "Араферованная фотография мужчины в костюме и галстук в красном ящике",
+      "archive_ru": "Араферованная фотография мужчины в костюме и галстук в красном ящике",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25089457631111145,
+        "CLIPScore_RU_caption_ru": 0.3017132580280304,
+        "CLIPScore_RU_archive_ru": 0.3017132580280304,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.1020090579986572,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1b185540-2b59-0138-d8b7-1367f0d61643.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a bunch of people on it",
+      "caption_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "archive_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26225146651268005,
+        "CLIPScore_RU_caption_ru": 0.26184606552124023,
+        "CLIPScore_RU_archive_ru": 0.26184606552124023,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9237761497497559,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 24
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1bb89160-54d6-0137-933f-1f10e469ec5c.jpg",
+      "source": "nypl",
+      "caption_en": "there is a newspaper with a picture of a man on it",
+      "caption_ru": "Есть газета с фотографией мужчины на ней",
+      "archive_ru": "Есть газета с фотографией мужчины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24044381082057953,
+        "CLIPScore_RU_caption_ru": 0.24532735347747803,
+        "CLIPScore_RU_archive_ru": 0.24532735347747803,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8711180686950684,
+      "retrieval": {
+        "rank_i2t": 28,
+        "rank_t2i": 14
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1bf6f140-54d6-0137-1b0c-0a78619dfd5f.jpg",
+      "source": "nypl",
+      "caption_en": "there is a newspaper with a picture of a man on it",
+      "caption_ru": "Есть газета с фотографией мужчины на ней",
+      "archive_ru": "Есть газета с фотографией мужчины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24044381082057953,
+        "CLIPScore_RU_caption_ru": 0.24532735347747803,
+        "CLIPScore_RU_archive_ru": 0.24532735347747803,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.821678876876831,
+      "retrieval": {
+        "rank_i2t": 29,
+        "rank_t2i": 15
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1c1d91d0-c530-012f-9371-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a picture of a person on it",
+      "caption_ru": "Заключение документа с фотографией человека на нем",
+      "archive_ru": "Заключение документа с фотографией человека на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2807909846305847,
+        "CLIPScore_RU_caption_ru": 0.27652329206466675,
+        "CLIPScore_RU_archive_ru": 0.27652329206466675,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8033750057220459,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1cee40a0-4f1d-0137-8a47-0d3749456c93.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a woman on it",
+      "caption_ru": "Есть книга с фотографией женщины на ней.",
+      "archive_ru": "Есть книга с фотографией женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21262414753437042,
+        "CLIPScore_RU_caption_ru": 0.21395739912986755,
+        "CLIPScore_RU_archive_ru": 0.21395739912986755,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7982239723205566,
+      "retrieval": {
+        "rank_i2t": 93,
+        "rank_t2i": 69
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1ea29040-a002-0137-cea5-0bc4aa8f3a9a.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man riding a horse",
+      "caption_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "archive_ru": "Есть книга с фотографией человека, едящего на лошади.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.1973031759262085,
+        "CLIPScore_RU_caption_ru": 0.19811899960041046,
+        "CLIPScore_RU_archive_ru": 0.19811899960041046,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.821026086807251,
+      "retrieval": {
+        "rank_i2t": 111,
+        "rank_t2i": 132
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1f5b4010-bd07-013a-463b-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "there is a old photo of a building with a clock on it",
+      "caption_ru": "Есть старый снимок здания с частью на нем",
+      "archive_ru": "Есть старый снимок здания с частью на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29447850584983826,
+        "CLIPScore_RU_caption_ru": 0.2879030108451843,
+        "CLIPScore_RU_archive_ru": 0.2879030108451843,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8586597442626953,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1fe5b8a0-54d6-0137-5e16-0b8350bed3c7.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man holding a book",
+      "caption_ru": "Там есть книга с фотографией мужчины, держащего книгу",
+      "archive_ru": "Там есть книга с фотографией мужчины, держащего книгу",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22094127535820007,
+        "CLIPScore_RU_caption_ru": 0.21341192722320557,
+        "CLIPScore_RU_archive_ru": 0.21341192722320557,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8663129806518555,
+      "retrieval": {
+        "rank_i2t": 57,
+        "rank_t2i": 72
+      }
+    },
+    {
+      "image_path": "data/nypl/images/22d98420-54d6-0137-3b28-5dc5c47c3140.jpg",
+      "source": "nypl",
+      "caption_en": "arafed chicago and midnight flash it, flosst it, pop it, and runce",
+      "caption_ru": "Арафед Чикаго и полуночь вспыхнуть, выбросить, выбросить, и бежать",
+      "archive_ru": "Арафед Чикаго и полуночь вспыхнуть, выбросить, выбросить, и бежать",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26861435174942017,
+        "CLIPScore_RU_caption_ru": 0.3086310923099518,
+        "CLIPScore_RU_archive_ru": 0.3086310923099518,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.3825228214263916,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/24f1d430-2721-0132-e268-58d385a7bbd0.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people riding on a crocodile in the water",
+      "caption_ru": "Есть много людей, едящих на крокодиле в воде.",
+      "archive_ru": "Есть много людей, едящих на крокодиле в воде.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29810401797294617,
+        "CLIPScore_RU_caption_ru": 0.3042861521244049,
+        "CLIPScore_RU_archive_ru": 0.3042861521244049,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8967039585113525,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/25d98910-4f1d-0137-dd88-173a66b91735.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a couple kissing in front of a camera",
+      "caption_ru": "На обложке журнала высказывается пара, целующаяся перед камерой.",
+      "archive_ru": "На обложке журнала высказывается пара, целующаяся перед камерой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2019372284412384,
+        "CLIPScore_RU_caption_ru": 0.26432377099990845,
+        "CLIPScore_RU_archive_ru": 0.26432377099990845,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9834921360015869,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 36
+      }
+    },
+    {
+      "image_path": "data/nypl/images/25edd4f0-7759-013c-8413-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "there is a black and white photo of a man plowing a field with horses",
+      "caption_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "archive_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34062010049819946,
+        "CLIPScore_RU_caption_ru": 0.3582074046134949,
+        "CLIPScore_RU_archive_ru": 0.3582074046134949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.2342379093170166,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/26fcb120-4f1d-0137-9aa6-000dda42a5ae.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a cartoon picture on it",
+      "caption_ru": "Ближайшее изображение книги с карикатурной картинкой на ней",
+      "archive_ru": "Ближайшее изображение книги с карикатурной картинкой на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2180187702178955,
+        "CLIPScore_RU_caption_ru": 0.2151511013507843,
+        "CLIPScore_RU_archive_ru": 0.2151511013507843,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9926979541778564,
+      "retrieval": {
+        "rank_i2t": 62,
+        "rank_t2i": 90
+      }
+    },
+    {
+      "image_path": "data/nypl/images/29380870-54d6-0137-ed8c-083850e15911.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man with many faces",
+      "caption_ru": "Есть книга с фотографией человека с множеством лиц.",
+      "archive_ru": "Есть книга с фотографией человека с множеством лиц.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23988676071166992,
+        "CLIPScore_RU_caption_ru": 0.25204911828041077,
+        "CLIPScore_RU_archive_ru": 0.25204911828041077,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8021268844604492,
+      "retrieval": {
+        "rank_i2t": 19,
+        "rank_t2i": 10
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2acff8e0-54d6-0137-7c4d-73ce9872fb5a.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a woman on it",
+      "caption_ru": "Есть книга с фотографией женщины на ней.",
+      "archive_ru": "Есть книга с фотографией женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21458780765533447,
+        "CLIPScore_RU_caption_ru": 0.21019858121871948,
+        "CLIPScore_RU_archive_ru": 0.21019858121871948,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8029129505157471,
+      "retrieval": {
+        "rank_i2t": 66,
+        "rank_t2i": 83
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2b0ee550-54d6-0137-177c-2d73dbe691c3.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a woman on it",
+      "caption_ru": "Есть книга с фотографией женщины на ней.",
+      "archive_ru": "Есть книга с фотографией женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21458780765533447,
+        "CLIPScore_RU_caption_ru": 0.21019858121871948,
+        "CLIPScore_RU_archive_ru": 0.21019858121871948,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7577459812164307,
+      "retrieval": {
+        "rank_i2t": 67,
+        "rank_t2i": 84
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2be9d970-54d6-0137-516d-2df384e56b4e.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a cover of a cartoon of a man and a woman",
+      "caption_ru": "Книга с обложкой мультфильма о мужчине и женщине",
+      "archive_ru": "Книга с обложкой мультфильма о мужчине и женщине",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22877062857151031,
+        "CLIPScore_RU_caption_ru": 0.2657470703125,
+        "CLIPScore_RU_archive_ru": 0.2657470703125,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9873130321502686,
+      "retrieval": {
+        "rank_i2t": 19,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2df1ef10-ffc2-0131-42a5-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photo of a man in a hat and dress clothes",
+      "caption_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "archive_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.251109778881073,
+        "CLIPScore_RU_caption_ru": 0.27936944365501404,
+        "CLIPScore_RU_archive_ru": 0.27936944365501404,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9787766933441162,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/30c7f030-54d6-0137-c335-796733c091de.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and a woman on it",
+      "caption_ru": "Книга с фотографией мужчины и женщины на ней",
+      "archive_ru": "Книга с фотографией мужчины и женщины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21249601244926453,
+        "CLIPScore_RU_caption_ru": 0.22881469130516052,
+        "CLIPScore_RU_archive_ru": 0.22881469130516052,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9322772026062012,
+      "retrieval": {
+        "rank_i2t": 55,
+        "rank_t2i": 51
+      }
+    },
+    {
+      "image_path": "data/nypl/images/310e5050-4f1d-0137-39a7-39c5ab556270.jpg",
+      "source": "nypl",
+      "caption_en": "arafed newspaper advertises the birth of garbo",
+      "caption_ru": "Газета Arafed объявляет о рождении гарбо",
+      "archive_ru": "Газета Arafed объявляет о рождении гарбо",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32855838537216187,
+        "CLIPScore_RU_caption_ru": 0.3315013349056244,
+        "CLIPScore_RU_archive_ru": 0.3315013349056244,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.917536735534668,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3238c5a0-c5d2-012f-fa26-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a vintage photo of a street scene with people walking",
+      "caption_ru": "Есть винтажная фотография уличной сцены с людьми, ходящими по улицам.",
+      "archive_ru": "Есть винтажная фотография уличной сцены с людьми, ходящими по улицам.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2785781919956207,
+        "CLIPScore_RU_caption_ru": 0.28864431381225586,
+        "CLIPScore_RU_archive_ru": 0.28864431381225586,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9754171371459961,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 12
+      }
+    },
+    {
+      "image_path": "data/nypl/images/39c2f540-bd07-013a-f730-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "arafed woman sitting at a table writing on a pen",
+      "caption_ru": "Арафедная женщина, сидящая за столом, пишет на ручке.",
+      "archive_ru": "Арафедная женщина, сидящая за столом, пишет на ручке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2823391556739807,
+        "CLIPScore_RU_caption_ru": 0.2903633117675781,
+        "CLIPScore_RU_archive_ru": 0.2903633117675781,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9043328762054443,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3ac78850-54d6-0137-8014-039963576fd5.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man in a suit and tie",
+      "caption_ru": "Книга с фотографией мужчины в костюме и галстуке",
+      "archive_ru": "Книга с фотографией мужчины в костюме и галстуке",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25155380368232727,
+        "CLIPScore_RU_caption_ru": 0.2616671323776245,
+        "CLIPScore_RU_archive_ru": 0.2616671323776245,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9378437995910645,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3be77dd0-54d6-0137-5155-79bcf8ac3134.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a golf tournament poster on it",
+      "caption_ru": "Есть книга с плакатом турнира по гольфу на ней",
+      "archive_ru": "Есть книга с плакатом турнира по гольфу на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3188397288322449,
+        "CLIPScore_RU_caption_ru": 0.3145553469657898,
+        "CLIPScore_RU_archive_ru": 0.3145553469657898,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9030132293701172,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3e1531c0-0bec-0134-5861-00505686a51c.jpg",
+      "source": "nypl",
+      "caption_en": "there is a drawing of a woman and a cat on a page",
+      "caption_ru": "На странице есть рисунок женщины и кота.",
+      "archive_ru": "На странице есть рисунок женщины и кота.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.235924631357193,
+        "CLIPScore_RU_caption_ru": 0.24746455252170563,
+        "CLIPScore_RU_archive_ru": 0.24746455252170563,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8698182106018066,
+      "retrieval": {
+        "rank_i2t": 18,
+        "rank_t2i": 17
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3f8eced0-c62c-012f-d76e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a man sitting on a ledge with a hat on",
+      "caption_ru": "Старый снимок мужчины, сидящего на режке с шляпой",
+      "archive_ru": "Старый снимок мужчины, сидящего на режке с шляпой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30007830262184143,
+        "CLIPScore_RU_caption_ru": 0.33987367153167725,
+        "CLIPScore_RU_archive_ru": 0.33987367153167725,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.953416109085083,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/41c35ab0-a002-0137-81f3-5ff093cbf530.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a big 3 on it",
+      "caption_ru": "Есть книга с фотографией большого 3-го на ней",
+      "archive_ru": "Есть книга с фотографией большого 3-го на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2790827751159668,
+        "CLIPScore_RU_caption_ru": 0.24596509337425232,
+        "CLIPScore_RU_archive_ru": 0.24596509337425232,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8565759658813477,
+      "retrieval": {
+        "rank_i2t": 20,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/431976d0-c55f-012f-0530-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a postcard of a building with columns and a tree",
+      "caption_ru": "Там есть открытка с зданием с колоннами и деревом",
+      "archive_ru": "Там есть открытка с зданием с колоннами и деревом",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32676583528518677,
+        "CLIPScore_RU_caption_ru": 0.32797688245773315,
+        "CLIPScore_RU_archive_ru": 0.32797688245773315,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8647758960723877,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/4434cfb0-c5ee-012f-2c98-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "arafed pier with people walking on it and boats in the water",
+      "caption_ru": "Арафный пристань с людьми, ходящими по нему и лодками в воде",
+      "archive_ru": "Арафный пристань с людьми, ходящими по нему и лодками в воде",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24300982058048248,
+        "CLIPScore_RU_caption_ru": 0.22295048832893372,
+        "CLIPScore_RU_archive_ru": 0.22295048832893372,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0467782020568848,
+      "retrieval": {
+        "rank_i2t": 69,
+        "rank_t2i": 10
+      }
+    },
+    {
+      "image_path": "data/nypl/images/459df520-54d6-0137-4af9-49169630bf81.jpg",
+      "source": "nypl",
+      "caption_en": "arafed page of a newspaper with a picture of a man",
+      "caption_ru": "Напечатанная страница газеты с фотографией мужчины",
+      "archive_ru": "Напечатанная страница газеты с фотографией мужчины",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25264543294906616,
+        "CLIPScore_RU_caption_ru": 0.2708633542060852,
+        "CLIPScore_RU_archive_ru": 0.2708633542060852,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9417557716369629,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/49b47c80-b849-013a-2de5-0242ac110002.jpg",
+      "source": "nypl",
+      "caption_en": "painting of a man with a white beard and a red hat",
+      "caption_ru": "Картина мужчины с белой бородой и красной шляпой",
+      "archive_ru": "Картина мужчины с белой бородой и красной шляпой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2832128703594208,
+        "CLIPScore_RU_caption_ru": 0.27573302388191223,
+        "CLIPScore_RU_archive_ru": 0.27573302388191223,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9224958419799805,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/4f3c9c20-0339-0138-c8fe-231b22998eaa.jpg",
+      "source": "nypl",
+      "caption_en": "there is a man standing in front of a group of people",
+      "caption_ru": "Там стоит мужчина перед группой людей.",
+      "archive_ru": "Там стоит мужчина перед группой людей.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23991644382476807,
+        "CLIPScore_RU_caption_ru": 0.2520590126514435,
+        "CLIPScore_RU_archive_ru": 0.2520590126514435,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7338380813598633,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a2e2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a postcard of a house with a tree in front of it",
+      "caption_ru": "Напротив есть открытка дома с деревом",
+      "archive_ru": "Напротив есть открытка дома с деревом",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2786049544811249,
+        "CLIPScore_RU_caption_ru": 0.27699774503707886,
+        "CLIPScore_RU_archive_ru": 0.27699774503707886,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7925891876220703,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a304-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a large building with a staircase",
+      "caption_ru": "Здесь есть картина большого здания с лестницей",
+      "archive_ru": "Здесь есть картина большого здания с лестницей",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27285638451576233,
+        "CLIPScore_RU_caption_ru": 0.2815321981906891,
+        "CLIPScore_RU_archive_ru": 0.2815321981906891,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8089780807495117,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a464-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people walking down the boardwalk with a cart",
+      "caption_ru": "Многие люди ходят по тротуару с тележкой.",
+      "archive_ru": "Многие люди ходят по тротуару с тележкой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28348004817962646,
+        "CLIPScore_RU_caption_ru": 0.26532161235809326,
+        "CLIPScore_RU_archive_ru": 0.26532161235809326,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7611527442932129,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a4d2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a train station with a train on the tracks",
+      "caption_ru": "Здесь есть фотография железнодорожного вокзала с поездом на рельсах",
+      "archive_ru": "Здесь есть фотография железнодорожного вокзала с поездом на рельсах",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2419939935207367,
+        "CLIPScore_RU_caption_ru": 0.24570271372795105,
+        "CLIPScore_RU_archive_ru": 0.24570271372795105,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9510049819946289,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-c061-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are many boats on the water near a beach",
+      "caption_ru": "На воде рядом с пляжем много лодок.",
+      "archive_ru": "На воде рядом с пляжем много лодок.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2686304450035095,
+        "CLIPScore_RU_caption_ru": 0.2603793740272522,
+        "CLIPScore_RU_archive_ru": 0.2603793740272522,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7929081916809082,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbca-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a large building with a river in the foreground",
+      "caption_ru": "Например, на большом здании с рекой в первом плане.",
+      "archive_ru": "Например, на большом здании с рекой в первом плане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24396708607673645,
+        "CLIPScore_RU_caption_ru": 0.2969963848590851,
+        "CLIPScore_RU_archive_ru": 0.2969963848590851,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9188399314880371,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbd0-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a postcard of a building in the middle of the day",
+      "caption_ru": "На фото есть открытка здания в середине дня",
+      "archive_ru": "На фото есть открытка здания в середине дня",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2793736457824707,
+        "CLIPScore_RU_caption_ru": 0.2808971405029297,
+        "CLIPScore_RU_archive_ru": 0.2808971405029297,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9517900943756104,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 12
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbe3-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a vintage photo of a bridge over a river",
+      "caption_ru": "Есть старое фото моста над рекой",
+      "archive_ru": "Есть старое фото моста над рекой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28556984663009644,
+        "CLIPScore_RU_caption_ru": 0.28777045011520386,
+        "CLIPScore_RU_archive_ru": 0.28777045011520386,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7907319068908691,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbf2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a black and white photo of a farm with a dirt road",
+      "caption_ru": "Здесь есть черно-белая фотография фермы с грунтовой дорогой",
+      "archive_ru": "Здесь есть черно-белая фотография фермы с грунтовой дорогой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2511514723300934,
+        "CLIPScore_RU_caption_ru": 0.25096359848976135,
+        "CLIPScore_RU_archive_ru": 0.25096359848976135,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9820451736450195,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cc04-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a small cabin in the snow with a bridge in the background",
+      "caption_ru": "В снеге есть маленькая хижина с мостом на фоне",
+      "archive_ru": "В снеге есть маленькая хижина с мостом на фоне",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28026479482650757,
+        "CLIPScore_RU_caption_ru": 0.30049237608909607,
+        "CLIPScore_RU_archive_ru": 0.30049237608909607,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9769952297210693,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cc33-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a brown house with white shutters on the windows",
+      "caption_ru": "Там есть коричневый дом с белыми окнами на окнах",
+      "archive_ru": "Там есть коричневый дом с белыми окнами на окнах",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26150810718536377,
+        "CLIPScore_RU_caption_ru": 0.2670736014842987,
+        "CLIPScore_RU_archive_ru": 0.2670736014842987,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8863861560821533,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-3746-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a group of people sitting on a boat",
+      "caption_ru": "Арафед фотографию группы людей, сидящих на лодке.",
+      "archive_ru": "Арафед фотографию группы людей, сидящих на лодке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3123970031738281,
+        "CLIPScore_RU_caption_ru": 0.3604491651058197,
+        "CLIPScore_RU_archive_ru": 0.3604491651058197,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9175407886505127,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-5484-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed image of a woman in a dress with a sword and a shield",
+      "caption_ru": "Награбленный изображением женщины в платье с мечом и щитом",
+      "archive_ru": "Награбленный изображением женщины в платье с мечом и щитом",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29673832654953003,
+        "CLIPScore_RU_caption_ru": 0.30867287516593933,
+        "CLIPScore_RU_archive_ru": 0.30867287516593933,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0578367710113525,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-88b9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a drawing of a gazebo in a park",
+      "caption_ru": "Есть рисунок газебо в парке",
+      "archive_ru": "Есть рисунок газебо в парке",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28533947467803955,
+        "CLIPScore_RU_caption_ru": 0.2962164580821991,
+        "CLIPScore_RU_archive_ru": 0.2962164580821991,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8527240753173828,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bad2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a bunch of different flowers with ribbons",
+      "caption_ru": "Фотографию куска разных цветов с лентами",
+      "archive_ru": "Фотографию куска разных цветов с лентами",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2652784585952759,
+        "CLIPScore_RU_caption_ru": 0.25466614961624146,
+        "CLIPScore_RU_archive_ru": 0.25466614961624146,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7657458782196045,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bc92-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "four cards with daisies and a bird on them",
+      "caption_ru": "Четыре карты с даisies и птицей на них",
+      "archive_ru": "Четыре карты с даisies и птицей на них",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3253869116306305,
+        "CLIPScore_RU_caption_ru": 0.3478230834007263,
+        "CLIPScore_RU_archive_ru": 0.3478230834007263,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.778667688369751,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bf0e-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a bunch of drawings of people with christmas trees",
+      "caption_ru": "Ближайшее изображение группы рисунков людей с рождественскими деревьями",
+      "archive_ru": "Ближайшее изображение группы рисунков людей с рождественскими деревьями",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2569396197795868,
+        "CLIPScore_RU_caption_ru": 0.27021557092666626,
+        "CLIPScore_RU_archive_ru": 0.27021557092666626,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9943020343780518,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bf9d-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a bunch of drawings of birds and flowers",
+      "caption_ru": "Ближайшее описание группы рисунков птиц и цветов",
+      "archive_ru": "Ближайшее описание группы рисунков птиц и цветов",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2748508155345917,
+        "CLIPScore_RU_caption_ru": 0.3049355149269104,
+        "CLIPScore_RU_archive_ru": 0.3049355149269104,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9150190353393555,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bfa6-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a picture of a bunch of different pictures",
+      "caption_ru": "Ближайшее изображение сборки разных фотографий",
+      "archive_ru": "Ближайшее изображение сборки разных фотографий",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2510201334953308,
+        "CLIPScore_RU_caption_ru": 0.2542792558670044,
+        "CLIPScore_RU_archive_ru": 0.2542792558670044,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.835676908493042,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 23
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c0bc-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a bunch of different types of birds nest",
+      "caption_ru": "Ближайшее описание группы разных видов гнезда птиц",
+      "archive_ru": "Ближайшее описание группы разных видов гнезда птиц",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24643412232398987,
+        "CLIPScore_RU_caption_ru": 0.25274285674095154,
+        "CLIPScore_RU_archive_ru": 0.25274285674095154,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8553750514984131,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c4aa-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a poster with a key on it",
+      "caption_ru": "Ближайшее изображение плаката с ключевым вкладкой",
+      "archive_ru": "Ближайшее изображение плаката с ключевым вкладкой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2564290761947632,
+        "CLIPScore_RU_caption_ru": 0.24950703978538513,
+        "CLIPScore_RU_archive_ru": 0.24950703978538513,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8364531993865967,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 37
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c4b9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a sheet of paper with drawings of people",
+      "caption_ru": "Заключение листа бумаги с рисунками людей",
+      "archive_ru": "Заключение листа бумаги с рисунками людей",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2384079098701477,
+        "CLIPScore_RU_caption_ru": 0.23750965297222137,
+        "CLIPScore_RU_archive_ru": 0.23750965297222137,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7978429794311523,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 14
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47dd-ce05-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "an old engraving of a man in a hospital bed with a sun above him",
+      "caption_ru": "Старая гравюра мужчины в больничном постели с солнцем над ним",
+      "archive_ru": "Старая гравюра мужчины в больничном постели с солнцем над ним",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34140387177467346,
+        "CLIPScore_RU_caption_ru": 0.33847999572753906,
+        "CLIPScore_RU_archive_ru": 0.33847999572753906,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9966058731079102,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47df-e3da-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photo of a group of people standing outside of a library",
+      "caption_ru": "Фотографии группы людей, стоящих за библиотекой",
+      "archive_ru": "Фотографии группы людей, стоящих за библиотекой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22392092645168304,
+        "CLIPScore_RU_caption_ru": 0.25087252259254456,
+        "CLIPScore_RU_archive_ru": 0.25087252259254456,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8962910175323486,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b80-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people walking down the street in this old photo",
+      "caption_ru": "На этом старом фото много людей, идущих по улице.",
+      "archive_ru": "На этом старом фото много людей, идущих по улице.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2943388819694519,
+        "CLIPScore_RU_caption_ru": 0.3006862699985504,
+        "CLIPScore_RU_archive_ru": 0.3006862699985504,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.873694896697998,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b94-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a city street with a horse drawn carriage",
+      "caption_ru": "Старая фотография городской улицы с лошадиным колесницей",
+      "archive_ru": "Старая фотография городской улицы с лошадиным колесницей",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2710462212562561,
+        "CLIPScore_RU_caption_ru": 0.28583234548568726,
+        "CLIPScore_RU_archive_ru": 0.28583234548568726,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8985068798065186,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b9b-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a parade with a large crowd of people",
+      "caption_ru": "Арафедный вид на парад с большим толпой людей",
+      "archive_ru": "Арафедный вид на парад с большим толпой людей",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26097896695137024,
+        "CLIPScore_RU_caption_ru": 0.3179800808429718,
+        "CLIPScore_RU_archive_ru": 0.3179800808429718,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8731441497802734,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b9c-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a parade with a large crowd of people",
+      "caption_ru": "Арафедный вид на парад с большим толпой людей",
+      "archive_ru": "Арафедный вид на парад с большим толпой людей",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26097896695137024,
+        "CLIPScore_RU_caption_ru": 0.3179800808429718,
+        "CLIPScore_RU_archive_ru": 0.3179800808429718,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8976409435272217,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1ba9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a city street with a clock tower",
+      "caption_ru": "Здесь есть фотография городской улицы с часовой башней",
+      "archive_ru": "Здесь есть фотография городской улицы с часовой башней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24066805839538574,
+        "CLIPScore_RU_caption_ru": 0.23484140634536743,
+        "CLIPScore_RU_archive_ru": 0.23484140634536743,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8565068244934082,
+      "retrieval": {
+        "rank_i2t": 32,
+        "rank_t2i": 19
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1bb0-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a parade with a crowd of people",
+      "caption_ru": "Фотография парада с толпой людей",
+      "archive_ru": "Фотография парада с толпой людей",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2762247323989868,
+        "CLIPScore_RU_caption_ru": 0.3031959533691406,
+        "CLIPScore_RU_archive_ru": 0.3031959533691406,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7501192092895508,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1bc8-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a crowd of people gathered around a building",
+      "caption_ru": "Фотография толпы людей, собравшихся вокруг здания.",
+      "archive_ru": "Фотография толпы людей, собравшихся вокруг здания.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25428441166877747,
+        "CLIPScore_RU_caption_ru": 0.26646387577056885,
+        "CLIPScore_RU_archive_ru": 0.26646387577056885,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.834831953048706,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 10
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c12-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a crowd of people on a city street",
+      "caption_ru": "Арафедный вид толпы людей на городской улице",
+      "archive_ru": "Арафедный вид толпы людей на городской улице",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2476702183485031,
+        "CLIPScore_RU_caption_ru": 0.28000304102897644,
+        "CLIPScore_RU_archive_ru": 0.28000304102897644,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8938021659851074,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c14-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a group of soldiers marching in formation",
+      "caption_ru": "Арафедный вид группы солдат, марширующих в формировании",
+      "archive_ru": "Арафедный вид группы солдат, марширующих в формировании",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2506110668182373,
+        "CLIPScore_RU_caption_ru": 0.2751163840293884,
+        "CLIPScore_RU_archive_ru": 0.2751163840293884,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9759771823883057,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c21-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a city street with a parade going down it",
+      "caption_ru": "Арафедный вид на городскую улицу с парадным ходом вниз по ней",
+      "archive_ru": "Арафедный вид на городскую улицу с парадным ходом вниз по ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22526444494724274,
+        "CLIPScore_RU_caption_ru": 0.2898656129837036,
+        "CLIPScore_RU_archive_ru": 0.2898656129837036,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9981851577758789,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c22-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed view of a city street with a parade going down it",
+      "caption_ru": "Арафедный вид на городскую улицу с парадным ходом вниз по ней",
+      "archive_ru": "Арафедный вид на городскую улицу с парадным ходом вниз по ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22526444494724274,
+        "CLIPScore_RU_caption_ru": 0.2898656129837036,
+        "CLIPScore_RU_archive_ru": 0.2898656129837036,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0969581604003906,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c23-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people standing around a large boat with many stuffed animals",
+      "caption_ru": "Вокруг большой лодки с многочисленными stuffed животными стоят много людей.",
+      "archive_ru": "Вокруг большой лодки с многочисленными stuffed животными стоят много людей.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24862715601921082,
+        "CLIPScore_RU_caption_ru": 0.24606315791606903,
+        "CLIPScore_RU_archive_ru": 0.24606315791606903,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.993135929107666,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4309-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people walking down the street in this old photo",
+      "caption_ru": "На этом старом фото много людей, идущих по улице.",
+      "archive_ru": "На этом старом фото много людей, идущих по улице.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2917044460773468,
+        "CLIPScore_RU_caption_ru": 0.2928287982940674,
+        "CLIPScore_RU_archive_ru": 0.2928287982940674,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8565807342529297,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4e50-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a couple of people sitting on the porch of a house",
+      "caption_ru": "Фотография пары людей, сидящих на крыше дома",
+      "archive_ru": "Фотография пары людей, сидящих на крыше дома",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.291959285736084,
+        "CLIPScore_RU_caption_ru": 0.29612937569618225,
+        "CLIPScore_RU_archive_ru": 0.29612937569618225,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9019460678100586,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4e55-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are two old time photos of people sitting on the porch of a house",
+      "caption_ru": "Есть две старые фотографии людей, сидящих на крыше дома.",
+      "archive_ru": "Есть две старые фотографии людей, сидящих на крыше дома.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3258718252182007,
+        "CLIPScore_RU_caption_ru": 0.30967748165130615,
+        "CLIPScore_RU_archive_ru": 0.30967748165130615,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9641473293304443,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e1-bf79-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there are two old photos of a man and a woman in the woods",
+      "caption_ru": "Есть две старые фотографии мужчины и женщины в лесу.",
+      "archive_ru": "Есть две старые фотографии мужчины и женщины в лесу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2942734360694885,
+        "CLIPScore_RU_caption_ru": 0.3066987693309784,
+        "CLIPScore_RU_archive_ru": 0.3066987693309784,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9744632244110107,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-59f7-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a vintage christmas card with a dog and other animals",
+      "caption_ru": "Есть и старой рождественской карты с собакой и другими животными",
+      "archive_ru": "Есть и старой рождественской карты с собакой и другими животными",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.36468639969825745,
+        "CLIPScore_RU_caption_ru": 0.3680616021156311,
+        "CLIPScore_RU_archive_ru": 0.3680616021156311,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.974128007888794,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5a8b-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "painting of a horse drawn carriage on a dirt road near a river",
+      "caption_ru": "Картина лошадиного колесница на грунтовой дороге возле реки",
+      "archive_ru": "Картина лошадиного колесница на грунтовой дороге возле реки",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30371275544166565,
+        "CLIPScore_RU_caption_ru": 0.34786927700042725,
+        "CLIPScore_RU_archive_ru": 0.34786927700042725,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9669628143310547,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5d2e-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a boy kneeling down to a christmas card",
+      "caption_ru": "Там есть фотография мальчика, коленопреклоненного перед рождественским открытием",
+      "archive_ru": "Там есть фотография мальчика, коленопреклоненного перед рождественским открытием",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3088708221912384,
+        "CLIPScore_RU_caption_ru": 0.3105470538139343,
+        "CLIPScore_RU_archive_ru": 0.3105470538139343,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0214903354644775,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5d2f-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a boy kneeling down to a christmas card",
+      "caption_ru": "Там есть фотография мальчика, коленопреклоненного перед рождественским открытием",
+      "archive_ru": "Там есть фотография мальчика, коленопреклоненного перед рождественским открытием",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3088708221912384,
+        "CLIPScore_RU_caption_ru": 0.3105470538139343,
+        "CLIPScore_RU_archive_ru": 0.3105470538139343,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.045154094696045,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/56d6ec70-2290-0132-0aa3-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photo of a man in a hat and dress clothes",
+      "caption_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "archive_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.251109778881073,
+        "CLIPScore_RU_caption_ru": 0.27936944365501404,
+        "CLIPScore_RU_archive_ru": 0.27936944365501404,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9446160793304443,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/58245f10-1f95-0134-abe9-00505686a51c.jpg",
+      "source": "nypl",
+      "caption_en": "there is a drawing of a woman and a cat on a page",
+      "caption_ru": "На странице есть рисунок женщины и кота.",
+      "archive_ru": "На странице есть рисунок женщины и кота.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.235924631357193,
+        "CLIPScore_RU_caption_ru": 0.24746455252170563,
+        "CLIPScore_RU_archive_ru": 0.24746455252170563,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8699169158935547,
+      "retrieval": {
+        "rank_i2t": 19,
+        "rank_t2i": 18
+      }
+    },
+    {
+      "image_path": "data/nypl/images/583f0100-2290-0132-7f31-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photo of a man in a hat and dress clothes",
+      "caption_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "archive_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.251109778881073,
+        "CLIPScore_RU_caption_ru": 0.27936944365501404,
+        "CLIPScore_RU_archive_ru": 0.27936944365501404,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9314379692077637,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/59878270-2290-0132-6502-58d385a7b928.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photo of a man in a hat and dress clothes",
+      "caption_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "archive_ru": "Арафед фотография мужчины в шляпе и одежде в одежду",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.251109778881073,
+        "CLIPScore_RU_caption_ru": 0.27936944365501404,
+        "CLIPScore_RU_archive_ru": 0.27936944365501404,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9927480220794678,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/60e11ab0-c6e8-012f-95df-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a poster for the musical ' flower drum song '",
+      "caption_ru": "плакат для музыкальной песни \"Цветочная барабанная песня\"",
+      "archive_ru": "плакат для музыкальной песни \"Цветочная барабанная песня\"",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34587663412094116,
+        "CLIPScore_RU_caption_ru": 0.33922892808914185,
+        "CLIPScore_RU_archive_ru": 0.33922892808914185,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8914620876312256,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/65336510-2b57-0138-5aec-04723c3f1c68.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man in a suit and tie",
+      "caption_ru": "Книга с фотографией мужчины в костюме и галстуке",
+      "archive_ru": "Книга с фотографией мужчины в костюме и галстуке",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25155380368232727,
+        "CLIPScore_RU_caption_ru": 0.2616671323776245,
+        "CLIPScore_RU_archive_ru": 0.2616671323776245,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.957172155380249,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 10
+      }
+    },
+    {
+      "image_path": "data/nypl/images/680a5be0-c5ee-012f-7fb7-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a street with people walking around it",
+      "caption_ru": "Арафедная фотография улицы с людьми, ходящими по ней",
+      "archive_ru": "Арафедная фотография улицы с людьми, ходящими по ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23720884323120117,
+        "CLIPScore_RU_caption_ru": 0.26600122451782227,
+        "CLIPScore_RU_archive_ru": 0.26600122451782227,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9327170848846436,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/688ca6d0-5e8e-013e-fca2-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "there is a black and white photo of a man plowing a field with horses",
+      "caption_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "archive_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34062010049819946,
+        "CLIPScore_RU_caption_ru": 0.3582074046134949,
+        "CLIPScore_RU_archive_ru": 0.3582074046134949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0962262153625488,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/6fa553c0-c5c3-012f-fdb0-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a boy feeding rabbits in the snow",
+      "caption_ru": "Там есть фотография мальчика, который кормит кроликов в снегу",
+      "archive_ru": "Там есть фотография мальчика, который кормит кроликов в снегу",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34520795941352844,
+        "CLIPScore_RU_caption_ru": 0.3311622142791748,
+        "CLIPScore_RU_archive_ru": 0.3311622142791748,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9265620708465576,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/708b9720-c5d1-012f-b1dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people walking on the street in this old picture",
+      "caption_ru": "На этой старой картинке много людей ходят по улице.",
+      "archive_ru": "На этой старой картинке много людей ходят по улице.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2810361981391907,
+        "CLIPScore_RU_caption_ru": 0.28601956367492676,
+        "CLIPScore_RU_archive_ru": 0.28601956367492676,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8813989162445068,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/750c34c0-c56b-012f-69fa-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a document with a date of communication",
+      "caption_ru": "Черно-белый изображение документа с датой сообщения",
+      "archive_ru": "Черно-белый изображение документа с датой сообщения",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3370800018310547,
+        "CLIPScore_RU_caption_ru": 0.3109614849090576,
+        "CLIPScore_RU_archive_ru": 0.3109614849090576,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8753950595855713,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7a7bf640-c5c6-012f-3478-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a man with a pipe in his mouth",
+      "caption_ru": "Черно-белая фотография мужчины с трубой в рот",
+      "archive_ru": "Черно-белая фотография мужчины с трубой в рот",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2690446376800537,
+        "CLIPScore_RU_caption_ru": 0.2679023742675781,
+        "CLIPScore_RU_archive_ru": 0.2679023742675781,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9237990379333496,
+      "retrieval": {
+        "rank_i2t": 70,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7bd5bda0-c559-012f-16ae-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a picture of a plane",
+      "caption_ru": "Закройное описание документа с фотографией самолета",
+      "archive_ru": "Закройное описание документа с фотографией самолета",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2708866000175476,
+        "CLIPScore_RU_caption_ru": 0.2784269452095032,
+        "CLIPScore_RU_archive_ru": 0.2784269452095032,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8457729816436768,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 15
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7d8af6d0-54d6-0137-8432-6367cc465540.jpg",
+      "source": "nypl",
+      "caption_en": "there is a newspaper with a picture of a man on it",
+      "caption_ru": "Есть газета с фотографией мужчины на ней",
+      "archive_ru": "Есть газета с фотографией мужчины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23377546668052673,
+        "CLIPScore_RU_caption_ru": 0.23703274130821228,
+        "CLIPScore_RU_archive_ru": 0.23703274130821228,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7778580188751221,
+      "retrieval": {
+        "rank_i2t": 24,
+        "rank_t2i": 26
+      }
+    },
+    {
+      "image_path": "data/nypl/images/812ff580-c56b-012f-a0c7-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a table with numbers and a list",
+      "caption_ru": "Черно-белый образ таблицы с цифрами и списком",
+      "archive_ru": "Черно-белый образ таблицы с цифрами и списком",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2519686222076416,
+        "CLIPScore_RU_caption_ru": 0.2659762501716614,
+        "CLIPScore_RU_archive_ru": 0.2659762501716614,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8670060634613037,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/85bb13b0-2bfc-0138-7b75-0fa38eefb123.jpg",
+      "source": "nypl",
+      "caption_en": "there is a black and white photo of a man plowing a field with horses",
+      "caption_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "archive_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34062010049819946,
+        "CLIPScore_RU_caption_ru": 0.3582074046134949,
+        "CLIPScore_RU_archive_ru": 0.3582074046134949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.12760591506958,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/872c3a30-c56b-012f-e507-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a picture of a person on it",
+      "caption_ru": "Заключение документа с фотографией человека на нем",
+      "archive_ru": "Заключение документа с фотографией человека на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27594712376594543,
+        "CLIPScore_RU_caption_ru": 0.2827325165271759,
+        "CLIPScore_RU_archive_ru": 0.2827325165271759,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8670940399169922,
+      "retrieval": {
+        "rank_i2t": 14,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8947b270-c5c4-012f-60fd-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a drawing of a boy with a cat and a sign",
+      "caption_ru": "Здесь есть рисунок мальчика с котом и знаком",
+      "archive_ru": "Здесь есть рисунок мальчика с котом и знаком",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28711041808128357,
+        "CLIPScore_RU_caption_ru": 0.2847931981086731,
+        "CLIPScore_RU_archive_ru": 0.2847931981086731,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8792080879211426,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/89512430-8d18-677c-e040-e00a18064a45.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people standing around in a park with a clock tower in the background",
+      "caption_ru": "В парке стоят много людей с часовой башней на фоне.",
+      "archive_ru": "В парке стоят много людей с часовой башней на фоне.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28686270117759705,
+        "CLIPScore_RU_caption_ru": 0.28911495208740234,
+        "CLIPScore_RU_archive_ru": 0.28911495208740234,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.953819990158081,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/89e3b450-c559-012f-5da5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a table with a number of items",
+      "caption_ru": "Черно-белый образ стола с рядом предметов",
+      "archive_ru": "Черно-белый образ стола с рядом предметов",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23067979514598846,
+        "CLIPScore_RU_caption_ru": 0.21647679805755615,
+        "CLIPScore_RU_archive_ru": 0.21647679805755615,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9005699157714844,
+      "retrieval": {
+        "rank_i2t": 45,
+        "rank_t2i": 25
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8bdbc4f0-8883-0136-f89f-7559ce27bf8c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a stamp with a picture of a man with a mustache",
+      "caption_ru": "Ближайшее изображение печати с фотографией мужчины с усами",
+      "archive_ru": "Ближайшее изображение печати с фотографией мужчины с усами",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2700520157814026,
+        "CLIPScore_RU_caption_ru": 0.25970423221588135,
+        "CLIPScore_RU_archive_ru": 0.25970423221588135,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9390342235565186,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8ef6b180-c560-012f-14e4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a river with a bridge and a few people",
+      "caption_ru": "Рисунок реки с мостом и несколькими людьми.",
+      "archive_ru": "Рисунок реки с мостом и несколькими людьми.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2409801483154297,
+        "CLIPScore_RU_caption_ru": 0.25396180152893066,
+        "CLIPScore_RU_archive_ru": 0.25396180152893066,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8863580226898193,
+      "retrieval": {
+        "rank_i2t": 26,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/90197b40-c556-012f-c481-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a parade going down a city street",
+      "caption_ru": "Арафедная фотография парада, идущего по улице города",
+      "archive_ru": "Арафедная фотография парада, идущего по улице города",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2727031111717224,
+        "CLIPScore_RU_caption_ru": 0.3282795548439026,
+        "CLIPScore_RU_archive_ru": 0.3282795548439026,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8539416790008545,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/903addc0-791e-0139-9ad8-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "there is a black and white photo of a man plowing a field with horses",
+      "caption_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "archive_ru": "На фото есть черно-белая фотография мужчины, который сажает полю с лошадьми.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34062010049819946,
+        "CLIPScore_RU_caption_ru": 0.3582074046134949,
+        "CLIPScore_RU_archive_ru": 0.3582074046134949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0722579956054688,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9199c120-c5d1-012f-3fa9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people standing around a horse drawn carriage",
+      "caption_ru": "Вокруг коня, притянутого коня, стоят многие люди.",
+      "archive_ru": "Вокруг коня, притянутого коня, стоят многие люди.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25444817543029785,
+        "CLIPScore_RU_caption_ru": 0.2719823122024536,
+        "CLIPScore_RU_archive_ru": 0.2719823122024536,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9047410488128662,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/91d2b2a0-c5d1-012f-caf0-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a man standing in a yard",
+      "caption_ru": "На ней есть фотография мужчины, стоящего на дворе.",
+      "archive_ru": "На ней есть фотография мужчины, стоящего на дворе.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2583814263343811,
+        "CLIPScore_RU_caption_ru": 0.25823888182640076,
+        "CLIPScore_RU_archive_ru": 0.25823888182640076,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8233170509338379,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9253ff90-54d6-0137-4e50-6ddabcf1f9ff.jpg",
+      "source": "nypl",
+      "caption_en": "arafed cover of a book with a picture of a man and woman",
+      "caption_ru": "Накрытие книги с фотографией мужчины и женщины",
+      "archive_ru": "Накрытие книги с фотографией мужчины и женщины",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22833150625228882,
+        "CLIPScore_RU_caption_ru": 0.27007684111595154,
+        "CLIPScore_RU_archive_ru": 0.27007684111595154,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8806071281433105,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/93012010-7480-0135-bff5-2fc23542849e.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of two men in suits and ties posing for a picture",
+      "caption_ru": "Фотография двух мужчин в костюмах и галстуках, позирующих для фотографии",
+      "archive_ru": "Фотография двух мужчин в костюмах и галстуках, позирующих для фотографии",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3082417845726013,
+        "CLIPScore_RU_caption_ru": 0.3170391917228699,
+        "CLIPScore_RU_archive_ru": 0.3170391917228699,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0404009819030762,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/942b2300-54d6-0137-a470-4b6f2bd6bae1.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a bunch of people on it",
+      "caption_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "archive_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25328898429870605,
+        "CLIPScore_RU_caption_ru": 0.2536258101463318,
+        "CLIPScore_RU_archive_ru": 0.2536258101463318,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8913857936859131,
+      "retrieval": {
+        "rank_i2t": 13,
+        "rank_t2i": 52
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9dda17c0-c556-012f-028a-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people standing in a city street with flags",
+      "caption_ru": "На улице города стоят много людей с флагами.",
+      "archive_ru": "На улице города стоят много людей с флагами.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25442415475845337,
+        "CLIPScore_RU_caption_ru": 0.25395333766937256,
+        "CLIPScore_RU_archive_ru": 0.25395333766937256,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.817302942276001,
+      "retrieval": {
+        "rank_i2t": 28,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a0850770-c556-012f-3b35-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "araful view of a street with a lot of people and a horse drawn carriage",
+      "caption_ru": "Удивительный вид на улицу с большим количеством людей и лошадиную колесницу",
+      "archive_ru": "Удивительный вид на улицу с большим количеством людей и лошадиную колесницу",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.268486887216568,
+        "CLIPScore_RU_caption_ru": 0.2875348925590515,
+        "CLIPScore_RU_archive_ru": 0.2875348925590515,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0345590114593506,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a0a3f1f0-5af0-0137-bdea-47d4397f339e.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a picture of a woman on it",
+      "caption_ru": "Ближайшее изображение журнала с фотографией женщины на нем",
+      "archive_ru": "Ближайшее изображение журнала с фотографией женщины на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2692563533782959,
+        "CLIPScore_RU_caption_ru": 0.2689255475997925,
+        "CLIPScore_RU_archive_ru": 0.2689255475997925,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9549529552459717,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 15
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a15f7c20-c556-012f-51f4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "arafian photograph of a large crowd of people gathered in a city",
+      "caption_ru": "Арафийская фотография большого толпа людей, собравшихся в городе",
+      "archive_ru": "Арафийская фотография большого толпа людей, собравшихся в городе",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2850256860256195,
+        "CLIPScore_RU_caption_ru": 0.3256712257862091,
+        "CLIPScore_RU_archive_ru": 0.3256712257862091,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9729030132293701,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a31c2880-c55c-012f-cc11-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a painting of a horse drawn carriage passing a building with a clock tower",
+      "caption_ru": "Картина лошадиного колесница, проходящего мимо здания с часовой башней",
+      "archive_ru": "Картина лошадиного колесница, проходящего мимо здания с часовой башней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27160876989364624,
+        "CLIPScore_RU_caption_ru": 0.27805083990097046,
+        "CLIPScore_RU_archive_ru": 0.27805083990097046,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0376560688018799,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a9a87a90-5fce-0137-3a79-71f727785bc6.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a big 3 on it",
+      "caption_ru": "Есть книга с фотографией большого 3-го на ней",
+      "archive_ru": "Есть книга с фотографией большого 3-го на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2790827751159668,
+        "CLIPScore_RU_caption_ru": 0.24596509337425232,
+        "CLIPScore_RU_archive_ru": 0.24596509337425232,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8697991371154785,
+      "retrieval": {
+        "rank_i2t": 21,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa2a4f90-5fce-0137-2c1a-03be08b55f45.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a big 3 on it",
+      "caption_ru": "Есть книга с фотографией большого 3-го на ней",
+      "archive_ru": "Есть книга с фотографией большого 3-го на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2790827751159668,
+        "CLIPScore_RU_caption_ru": 0.24596509337425232,
+        "CLIPScore_RU_archive_ru": 0.24596509337425232,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8210461139678955,
+      "retrieval": {
+        "rank_i2t": 19,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa2ca8c0-5af0-0137-1957-19f6ba3a2641.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a man and a woman reading a book",
+      "caption_ru": "На обложке журнала выставка мужчины и женщины, читающих книгу.",
+      "archive_ru": "На обложке журнала выставка мужчины и женщины, читающих книгу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22541795670986176,
+        "CLIPScore_RU_caption_ru": 0.2815432548522949,
+        "CLIPScore_RU_archive_ru": 0.2815432548522949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9824120998382568,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 24
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa4dd950-5af0-0137-4a2b-007bef5aab4f.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a man and a woman reading a book",
+      "caption_ru": "На обложке журнала выставка мужчины и женщины, читающих книгу.",
+      "archive_ru": "На обложке журнала выставка мужчины и женщины, читающих книгу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22541795670986176,
+        "CLIPScore_RU_caption_ru": 0.2815432548522949,
+        "CLIPScore_RU_archive_ru": 0.2815432548522949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.057507038116455,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 26
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa910700-5af0-0137-a6ac-0f34d98c395a.jpg",
+      "source": "nypl",
+      "caption_en": "arafed magazine cover of a man and a woman reading a book",
+      "caption_ru": "На обложке журнала выставка мужчины и женщины, читающих книгу.",
+      "archive_ru": "На обложке журнала выставка мужчины и женщины, читающих книгу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22541795670986176,
+        "CLIPScore_RU_caption_ru": 0.2815432548522949,
+        "CLIPScore_RU_archive_ru": 0.2815432548522949,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0548181533813477,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 25
+      }
+    },
+    {
+      "image_path": "data/nypl/images/abff29c0-5af0-0137-f7b0-63e0db87ed3c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a picture of a man",
+      "caption_ru": "Ближайшее описание журнала с фотографией мужчины",
+      "archive_ru": "Ближайшее описание журнала с фотографией мужчины",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2770555913448334,
+        "CLIPScore_RU_caption_ru": 0.2986440658569336,
+        "CLIPScore_RU_archive_ru": 0.2986440658569336,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8607730865478516,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/adb66d40-c5c4-012f-b785-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a drawing of a group of people on a hill",
+      "caption_ru": "Ближайшее изображение рисунка группы людей на холме",
+      "archive_ru": "Ближайшее изображение рисунка группы людей на холме",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2244555503129959,
+        "CLIPScore_RU_caption_ru": 0.21010011434555054,
+        "CLIPScore_RU_archive_ru": 0.21010011434555054,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8548297882080078,
+      "retrieval": {
+        "rank_i2t": 120,
+        "rank_t2i": 28
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b23f3b90-c532-012f-8f65-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a paper with a list of items",
+      "caption_ru": "Черно-белый образ бумаги с перечнем предметов",
+      "archive_ru": "Черно-белый образ бумаги с перечнем предметов",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27627095580101013,
+        "CLIPScore_RU_caption_ru": 0.2908303737640381,
+        "CLIPScore_RU_archive_ru": 0.2908303737640381,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9306869506835938,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-c80d-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a table with a list of items",
+      "caption_ru": "Черно-белый образ стола с перечнем элементов",
+      "archive_ru": "Черно-белый образ стола с перечнем элементов",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25171858072280884,
+        "CLIPScore_RU_caption_ru": 0.27651017904281616,
+        "CLIPScore_RU_archive_ru": 0.27651017904281616,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9059431552886963,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-cc46-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a document with a date of communication",
+      "caption_ru": "Черно-белый изображение документа с датой сообщения",
+      "archive_ru": "Черно-белый изображение документа с датой сообщения",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.35003113746643066,
+        "CLIPScore_RU_caption_ru": 0.3225296139717102,
+        "CLIPScore_RU_archive_ru": 0.3225296139717102,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9181280136108398,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-ce1a-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a document with a picture of a man",
+      "caption_ru": "Черно-белый образ документа с фотографией человека",
+      "archive_ru": "Черно-белый образ документа с фотографией человека",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2730758786201477,
+        "CLIPScore_RU_caption_ru": 0.25466597080230713,
+        "CLIPScore_RU_archive_ru": 0.25466597080230713,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8563070297241211,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 31
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-ce23-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a picture of a person on it",
+      "caption_ru": "Заключение документа с фотографией человека на нем",
+      "archive_ru": "Заключение документа с фотографией человека на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2582552433013916,
+        "CLIPScore_RU_caption_ru": 0.2629653811454773,
+        "CLIPScore_RU_archive_ru": 0.2629653811454773,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8218250274658203,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 35
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-d40c-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a document with a date of publication",
+      "caption_ru": "Черно-белый изображение документа с датой публикации",
+      "archive_ru": "Черно-белый изображение документа с датой публикации",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29771727323532104,
+        "CLIPScore_RU_caption_ru": 0.3043938875198364,
+        "CLIPScore_RU_archive_ru": 0.3043938875198364,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9172873497009277,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-d4fc-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a line of text on it",
+      "caption_ru": "Заключение документа с строкой текста на нем",
+      "archive_ru": "Заключение документа с строкой текста на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25911739468574524,
+        "CLIPScore_RU_caption_ru": 0.28573909401893616,
+        "CLIPScore_RU_archive_ru": 0.28573909401893616,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8378050327301025,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-136f-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a document with a picture of a plane",
+      "caption_ru": "Черно-белый образ документа с изображением самолета",
+      "archive_ru": "Черно-белый образ документа с изображением самолета",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2790520191192627,
+        "CLIPScore_RU_caption_ru": 0.2723526656627655,
+        "CLIPScore_RU_archive_ru": 0.2723526656627655,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8882529735565186,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 17
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-2ccb-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a picture of a person on it",
+      "caption_ru": "Заключение документа с фотографией человека на нем",
+      "archive_ru": "Заключение документа с фотографией человека на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26667723059654236,
+        "CLIPScore_RU_caption_ru": 0.2692308723926544,
+        "CLIPScore_RU_archive_ru": 0.2692308723926544,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8776712417602539,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 22
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-44ab-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a picture of a person on it",
+      "caption_ru": "Заключение документа с фотографией человека на нем",
+      "archive_ru": "Заключение документа с фотографией человека на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2560786008834839,
+        "CLIPScore_RU_caption_ru": 0.256868451833725,
+        "CLIPScore_RU_archive_ru": 0.256868451833725,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8552021980285645,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 49
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-44c0-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a table with a list of items",
+      "caption_ru": "Черно-белый образ стола с перечнем элементов",
+      "archive_ru": "Черно-белый образ стола с перечнем элементов",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2333906888961792,
+        "CLIPScore_RU_caption_ru": 0.24619245529174805,
+        "CLIPScore_RU_archive_ru": 0.24619245529174805,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8962109088897705,
+      "retrieval": {
+        "rank_i2t": 17,
+        "rank_t2i": 25
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd99-a473-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white image of a receipt with a date and time",
+      "caption_ru": "Черно-белый образ квитанции с датой и часом",
+      "archive_ru": "Черно-белый образ квитанции с датой и часом",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28657180070877075,
+        "CLIPScore_RU_caption_ru": 0.2986021637916565,
+        "CLIPScore_RU_archive_ru": 0.2986021637916565,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9195349216461182,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b9bd99e0-5af0-0137-504d-33f71272a690.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a woman on it",
+      "caption_ru": "Есть книга с фотографией женщины на ней.",
+      "archive_ru": "Есть книга с фотографией женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.248501718044281,
+        "CLIPScore_RU_caption_ru": 0.2466718852519989,
+        "CLIPScore_RU_archive_ru": 0.2466718852519989,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7848248481750488,
+      "retrieval": {
+        "rank_i2t": 23,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b9ffd5c0-5af0-0137-b24b-001c893f66c8.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a woman on it",
+      "caption_ru": "Есть книга с фотографией женщины на ней.",
+      "archive_ru": "Есть книга с фотографией женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.248501718044281,
+        "CLIPScore_RU_caption_ru": 0.2466718852519989,
+        "CLIPScore_RU_archive_ru": 0.2466718852519989,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7681012153625488,
+      "retrieval": {
+        "rank_i2t": 22,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/bb095ce0-5af0-0137-1272-0d50344e33f6.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a woman on it",
+      "caption_ru": "Есть книга с фотографией женщины на ней.",
+      "archive_ru": "Есть книга с фотографией женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.248501718044281,
+        "CLIPScore_RU_caption_ru": 0.2466718852519989,
+        "CLIPScore_RU_archive_ru": 0.2466718852519989,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7445080280303955,
+      "retrieval": {
+        "rank_i2t": 26,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/nypl/images/be7bfb80-5af0-0137-e341-23286e2b6410.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and woman on it",
+      "caption_ru": "Книга с фотографией мужчины и женщины на ней.",
+      "archive_ru": "Книга с фотографией мужчины и женщины на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22594225406646729,
+        "CLIPScore_RU_caption_ru": 0.24926504492759705,
+        "CLIPScore_RU_archive_ru": 0.24926504492759705,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8710436820983887,
+      "retrieval": {
+        "rank_i2t": 39,
+        "rank_t2i": 11
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c261ef12-e4a2-3577-e040-e00a18067776.jpg",
+      "source": "nypl",
+      "caption_en": "there are two women in kimono walking down a path",
+      "caption_ru": "Две женщины в кимоно ходят по тропинке.",
+      "archive_ru": "Две женщины в кимоно ходят по тропинке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3272824287414551,
+        "CLIPScore_RU_caption_ru": 0.35340580344200134,
+        "CLIPScore_RU_archive_ru": 0.35340580344200134,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8851180076599121,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c2624937-b3a6-2318-e040-e00a18067b59.jpg",
+      "source": "nypl",
+      "caption_en": "there is a black and white photo of a church in the middle of the woods",
+      "caption_ru": "На фото в черно-белом цвете находится церковь, расположенная посреди леса.",
+      "archive_ru": "На фото в черно-белом цвете находится церковь, расположенная посреди леса.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2617993950843811,
+        "CLIPScore_RU_caption_ru": 0.2851303517818451,
+        "CLIPScore_RU_archive_ru": 0.2851303517818451,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.105212926864624,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c26322c6-3b52-69f1-e040-e00a18061651.jpg",
+      "source": "nypl",
+      "caption_en": "there is a boat that is floating in the water near a village",
+      "caption_ru": "Вблизи деревни плавает лодка.",
+      "archive_ru": "Вблизи деревни плавает лодка.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2514222264289856,
+        "CLIPScore_RU_caption_ru": 0.25980204343795776,
+        "CLIPScore_RU_archive_ru": 0.25980204343795776,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8276429176330566,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c2b94680-c5c2-012f-dc92-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there is a picture of a boy kneeling down to a christmas card",
+      "caption_ru": "Там есть фотография мальчика, коленопреклоненного перед рождественским открытием",
+      "archive_ru": "Там есть фотография мальчика, коленопреклоненного перед рождественским открытием",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3088708221912384,
+        "CLIPScore_RU_caption_ru": 0.3105470538139343,
+        "CLIPScore_RU_archive_ru": 0.3105470538139343,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0402202606201172,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c494b3e0-c55c-012f-d829-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photo of a building with a fountain in front of it",
+      "caption_ru": "Арафедная фотография здания с фонтаном перед ним",
+      "archive_ru": "Арафедная фотография здания с фонтаном перед ним",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23022772371768951,
+        "CLIPScore_RU_caption_ru": 0.2942184507846832,
+        "CLIPScore_RU_archive_ru": 0.2942184507846832,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8941943645477295,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c72ec7b0-5af0-0137-edbd-7f48bff61e15.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a woman in a tub",
+      "caption_ru": "Книга с фотографией женщины в ванной",
+      "archive_ru": "Книга с фотографией женщины в ванной",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20899644494056702,
+        "CLIPScore_RU_caption_ru": 0.24356050789356232,
+        "CLIPScore_RU_archive_ru": 0.24356050789356232,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8307068347930908,
+      "retrieval": {
+        "rank_i2t": 24,
+        "rank_t2i": 17
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c86e2b10-2a66-0138-057a-5da2aea97820.jpg",
+      "source": "nypl",
+      "caption_en": "there is a newspaper with a picture of a man and a woman",
+      "caption_ru": "Там есть газета с фотографией мужчины и женщины.",
+      "archive_ru": "Там есть газета с фотографией мужчины и женщины.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24276135861873627,
+        "CLIPScore_RU_caption_ru": 0.2473515272140503,
+        "CLIPScore_RU_archive_ru": 0.2473515272140503,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8340668678283691,
+      "retrieval": {
+        "rank_i2t": 38,
+        "rank_t2i": 9
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cca51a90-18b3-013e-f4c3-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of a man in a tuxedo holding a paper",
+      "caption_ru": "Арафедная фотография мужчины в смокере, держащего бумагу",
+      "archive_ru": "Арафедная фотография мужчины в смокере, держащего бумагу",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3014487028121948,
+        "CLIPScore_RU_caption_ru": 0.3330671787261963,
+        "CLIPScore_RU_archive_ru": 0.3330671787261963,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0013139247894287,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cd564530-c5c5-012f-d6e2-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a poster with a key on it",
+      "caption_ru": "Ближайшее изображение плаката с ключевым вкладкой",
+      "archive_ru": "Ближайшее изображение плаката с ключевым вкладкой",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2564290761947632,
+        "CLIPScore_RU_caption_ru": 0.24950703978538513,
+        "CLIPScore_RU_archive_ru": 0.24950703978538513,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9139540195465088,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 38
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ce1236b0-5af0-0137-f14b-4d9e46d24793.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a bunch of advertisements on it",
+      "caption_ru": "Есть книга с кучей рекламных объявлений на ней.",
+      "archive_ru": "Есть книга с кучей рекламных объявлений на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25720083713531494,
+        "CLIPScore_RU_caption_ru": 0.25335806608200073,
+        "CLIPScore_RU_archive_ru": 0.25335806608200073,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8235518932342529,
+      "retrieval": {
+        "rank_i2t": 26,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cf5bdd90-c5bf-012f-e8c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "arafed building on the shore of a body of water",
+      "caption_ru": "Арафед построен на берегу водоема",
+      "archive_ru": "Арафед построен на берегу водоема",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.275208979845047,
+        "CLIPScore_RU_caption_ru": 0.28824907541275024,
+        "CLIPScore_RU_archive_ru": 0.28824907541275024,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7860429286956787,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d2990540-c564-012f-0845-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people standing around a large boat with many stuffed animals",
+      "caption_ru": "Вокруг большой лодки с многочисленными stuffed животными стоят много людей.",
+      "archive_ru": "Вокруг большой лодки с многочисленными stuffed животными стоят много людей.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24862715601921082,
+        "CLIPScore_RU_caption_ru": 0.24606315791606903,
+        "CLIPScore_RU_archive_ru": 0.24606315791606903,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9121682643890381,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d6b54a30-5af0-0137-b38b-08f34cc2abfc.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a bunch of advertisements on it",
+      "caption_ru": "Есть книга с кучей рекламных объявлений на ней.",
+      "archive_ru": "Есть книга с кучей рекламных объявлений на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25720083713531494,
+        "CLIPScore_RU_caption_ru": 0.25335806608200073,
+        "CLIPScore_RU_archive_ru": 0.25335806608200073,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8910729885101318,
+      "retrieval": {
+        "rank_i2t": 25,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d7b9c6d0-c6f7-012f-adc4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man holding a globe with a child on it",
+      "caption_ru": "Рисунок мужчины, держащего в руках шар с ребенком на нем",
+      "archive_ru": "Рисунок мужчины, держащего в руках шар с ребенком на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33090919256210327,
+        "CLIPScore_RU_caption_ru": 0.28716468811035156,
+        "CLIPScore_RU_archive_ru": 0.28716468811035156,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9490330219268799,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/db728010-b3f3-0134-054f-00505686a51c.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a drawing of a crown with a cross on top",
+      "caption_ru": "Ближайшее изображение рисунка короны с крестом на вершине",
+      "archive_ru": "Ближайшее изображение рисунка короны с крестом на вершине",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28117620944976807,
+        "CLIPScore_RU_caption_ru": 0.2812749445438385,
+        "CLIPScore_RU_archive_ru": 0.2812749445438385,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9588310718536377,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/dc58e9c0-c5c5-012f-1a90-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a group of people in various outfits",
+      "caption_ru": "Рисунок группы людей в различных костюмах.",
+      "archive_ru": "Рисунок группы людей в различных костюмах.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22860822081565857,
+        "CLIPScore_RU_caption_ru": 0.23424533009529114,
+        "CLIPScore_RU_archive_ru": 0.23424533009529114,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8255312442779541,
+      "retrieval": {
+        "rank_i2t": 27,
+        "rank_t2i": 12
+      }
+    },
+    {
+      "image_path": "data/nypl/images/dc6b3420-9c1e-0137-afe8-1d56742e6e5d.jpg",
+      "source": "nypl",
+      "caption_en": "arafed photograph of two men in suits and ties posing for a picture",
+      "caption_ru": "Фотография двух мужчин в костюмах и галстуках, позирующих для фотографии",
+      "archive_ru": "Фотография двух мужчин в костюмах и галстуках, позирующих для фотографии",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3082417845726013,
+        "CLIPScore_RU_caption_ru": 0.3170391917228699,
+        "CLIPScore_RU_archive_ru": 0.3170391917228699,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9890060424804688,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e2cb1880-c6f7-012f-c077-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "an old engraving of a man in a bricklayer ' s uniform",
+      "caption_ru": "Старая гравюра мужчины в униформе кирпичанина",
+      "archive_ru": "Старая гравюра мужчины в униформе кирпичанина",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3267859220504761,
+        "CLIPScore_RU_caption_ru": 0.30777597427368164,
+        "CLIPScore_RU_archive_ru": 0.30777597427368164,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9922580718994141,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e35d0020-c6f7-012f-c36c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "an old book with a picture of a man in a boat",
+      "caption_ru": "Старый книжный сфотографированный мужчина в лодке.",
+      "archive_ru": "Старый книжный сфотографированный мужчина в лодке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2854991555213928,
+        "CLIPScore_RU_caption_ru": 0.2931939959526062,
+        "CLIPScore_RU_archive_ru": 0.2931939959526062,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9547572135925293,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e9515ab0-c56b-012f-ed3f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a document with a number of items on it",
+      "caption_ru": "Заключение документа с рядом пунктов на нем",
+      "archive_ru": "Заключение документа с рядом пунктов на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26700666546821594,
+        "CLIPScore_RU_caption_ru": 0.2815837264060974,
+        "CLIPScore_RU_archive_ru": 0.2815837264060974,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8130021095275879,
+      "retrieval": {
+        "rank_i2t": 6,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eacb14d0-5fcd-0137-fb7f-043655789ed3.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a train on it",
+      "caption_ru": "На ней есть книга с фотографией поезда.",
+      "archive_ru": "На ней есть книга с фотографией поезда.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22516337037086487,
+        "CLIPScore_RU_caption_ru": 0.21407556533813477,
+        "CLIPScore_RU_archive_ru": 0.21407556533813477,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7904489040374756,
+      "retrieval": {
+        "rank_i2t": 60,
+        "rank_t2i": 40
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eb8ea370-5fcd-0137-690d-01ba0d5fa1b7.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a train on it",
+      "caption_ru": "На ней есть книга с фотографией поезда.",
+      "archive_ru": "На ней есть книга с фотографией поезда.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22516337037086487,
+        "CLIPScore_RU_caption_ru": 0.21407556533813477,
+        "CLIPScore_RU_archive_ru": 0.21407556533813477,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7988908290863037,
+      "retrieval": {
+        "rank_i2t": 61,
+        "rank_t2i": 38
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ebbf0f70-c5d1-012f-6e5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "there are many people walking on a bridge in a park",
+      "caption_ru": "Многие люди ходят по мосту в парке.",
+      "archive_ru": "Многие люди ходят по мосту в парке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23083361983299255,
+        "CLIPScore_RU_caption_ru": 0.2219187170267105,
+        "CLIPScore_RU_archive_ru": 0.2219187170267105,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7606430053710938,
+      "retrieval": {
+        "rank_i2t": 37,
+        "rank_t2i": 13
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ecd6d120-5fcd-0137-6ea9-4d546e4cf931.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a train on it",
+      "caption_ru": "На ней есть книга с фотографией поезда.",
+      "archive_ru": "На ней есть книга с фотографией поезда.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22516337037086487,
+        "CLIPScore_RU_caption_ru": 0.21407556533813477,
+        "CLIPScore_RU_archive_ru": 0.21407556533813477,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7650938034057617,
+      "retrieval": {
+        "rank_i2t": 59,
+        "rank_t2i": 39
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ee80c2b0-5fcd-0137-4148-519765192285.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of two men on it",
+      "caption_ru": "Есть книга с фотографией двух мужчин на ней",
+      "archive_ru": "Есть книга с фотографией двух мужчин на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25639498233795166,
+        "CLIPScore_RU_caption_ru": 0.25202232599258423,
+        "CLIPScore_RU_archive_ru": 0.25202232599258423,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7587993144989014,
+      "retrieval": {
+        "rank_i2t": 32,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eea2e7d0-5fcd-0137-ae63-7b6a533f5a3e.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of two men on it",
+      "caption_ru": "Есть книга с фотографией двух мужчин на ней",
+      "archive_ru": "Есть книга с фотографией двух мужчин на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25639498233795166,
+        "CLIPScore_RU_caption_ru": 0.25202232599258423,
+        "CLIPScore_RU_archive_ru": 0.25202232599258423,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7961452007293701,
+      "retrieval": {
+        "rank_i2t": 31,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f5791520-4f1c-0137-dc9f-0d6e6a48755c.jpg",
+      "source": "nypl",
+      "caption_en": "there is a newspaper with a picture of a man and woman",
+      "caption_ru": "В газете есть фотография мужчины и женщины.",
+      "archive_ru": "В газете есть фотография мужчины и женщины.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24323363602161407,
+        "CLIPScore_RU_caption_ru": 0.25689730048179626,
+        "CLIPScore_RU_archive_ru": 0.25689730048179626,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7919082641601562,
+      "retrieval": {
+        "rank_i2t": 9,
+        "rank_t2i": 10
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f686d090-5fcd-0137-3e0e-0debf84afeb2.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man riding a motorcycle",
+      "caption_ru": "Там есть книга с фотографией мужчины на мотоцикле",
+      "archive_ru": "Там есть книга с фотографией мужчины на мотоцикле",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20754963159561157,
+        "CLIPScore_RU_caption_ru": 0.20784029364585876,
+        "CLIPScore_RU_archive_ru": 0.20784029364585876,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8203108310699463,
+      "retrieval": {
+        "rank_i2t": 77,
+        "rank_t2i": 70
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f8b5c9c0-5fcd-0137-6b2f-37fa627dc973.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a cover of a movie",
+      "caption_ru": "Заключение книги с обложкой фильма",
+      "archive_ru": "Заключение книги с обложкой фильма",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2370801568031311,
+        "CLIPScore_RU_caption_ru": 0.2503688633441925,
+        "CLIPScore_RU_archive_ru": 0.2503688633441925,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8128738403320312,
+      "retrieval": {
+        "rank_i2t": 16,
+        "rank_t2i": 61
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f938a380-5fcd-0137-38ee-77b8b4844277.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a book with a cover of a movie",
+      "caption_ru": "Заключение книги с обложкой фильма",
+      "archive_ru": "Заключение книги с обложкой фильма",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2370801568031311,
+        "CLIPScore_RU_caption_ru": 0.2503688633441925,
+        "CLIPScore_RU_archive_ru": 0.2503688633441925,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7933399677276611,
+      "retrieval": {
+        "rank_i2t": 15,
+        "rank_t2i": 62
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fb87bd90-5fcd-0137-6979-0baa316db2ca.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and woman in a suit",
+      "caption_ru": "Книга с фотографией мужчины и женщины в костюме",
+      "archive_ru": "Книга с фотографией мужчины и женщины в костюме",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.18377113342285156,
+        "CLIPScore_RU_caption_ru": 0.21234674751758575,
+        "CLIPScore_RU_archive_ru": 0.21234674751758575,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.875560998916626,
+      "retrieval": {
+        "rank_i2t": 55,
+        "rank_t2i": 128
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fbeb4f20-5fcd-0137-d35a-6556226e44d2.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and woman in a suit",
+      "caption_ru": "Книга с фотографией мужчины и женщины в костюме",
+      "archive_ru": "Книга с фотографией мужчины и женщины в костюме",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.18377113342285156,
+        "CLIPScore_RU_caption_ru": 0.21234674751758575,
+        "CLIPScore_RU_archive_ru": 0.21234674751758575,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9824538230895996,
+      "retrieval": {
+        "rank_i2t": 56,
+        "rank_t2i": 126
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fd37d040-4f1c-0137-b2d5-0f211d2a9198.jpg",
+      "source": "nypl",
+      "caption_en": "a close up of a magazine with a bunch of people on it",
+      "caption_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "archive_ru": "Ближайшее описание журнала с толпой людей на нем",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2727770209312439,
+        "CLIPScore_RU_caption_ru": 0.2712317109107971,
+        "CLIPScore_RU_archive_ru": 0.2712317109107971,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8902297019958496,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fd4e8210-5fcd-0137-7417-08556917d794.jpg",
+      "source": "nypl",
+      "caption_en": "arafed book with a picture of a man and woman in a suit",
+      "caption_ru": "Книга с фотографией мужчины и женщины в костюме",
+      "archive_ru": "Книга с фотографией мужчины и женщины в костюме",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.18377113342285156,
+        "CLIPScore_RU_caption_ru": 0.21234674751758575,
+        "CLIPScore_RU_archive_ru": 0.21234674751758575,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9729020595550537,
+      "retrieval": {
+        "rank_i2t": 54,
+        "rank_t2i": 127
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fdb014d0-5fcd-0137-3105-07bc3b8b766f.jpg",
+      "source": "nypl",
+      "caption_en": "there is a book with a picture of a man and woman on it",
+      "caption_ru": "Есть книга с фотографией мужчины и женщины на ней",
+      "archive_ru": "Есть книга с фотографией мужчины и женщины на ней",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22331742942333221,
+        "CLIPScore_RU_caption_ru": 0.22005578875541687,
+        "CLIPScore_RU_archive_ru": 0.22005578875541687,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9176609516143799,
+      "retrieval": {
+        "rank_i2t": 68,
+        "rank_t2i": 49
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fe2fd0c0-c5bf-012f-d3da-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a roman ampule with a clock tower in the background",
+      "caption_ru": "Старая фотография римской лампы с часовой башней на фоне",
+      "archive_ru": "Старая фотография римской лампы с часовой башней на фоне",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27648454904556274,
+        "CLIPScore_RU_caption_ru": 0.24730418622493744,
+        "CLIPScore_RU_archive_ru": 0.24730418622493744,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0313737392425537,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 21
+      }
+    }
+  ]
+}

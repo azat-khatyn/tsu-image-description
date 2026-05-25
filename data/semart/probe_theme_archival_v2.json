@@ -1,0 +1,5356 @@
+{
+  "model_name": "google/siglip-base-patch16-224",
+  "n_train": 15819,
+  "n_val": 877,
+  "C": 1.0,
+  "class_weight": "balanced",
+  "train_accuracy": 0.9495,
+  "val_metrics": {
+    "n": 877,
+    "accuracy": 0.8951,
+    "macro_precision": 0.8567,
+    "macro_recall": 0.8942,
+    "macro_f1": 0.8739,
+    "per_class": {
+      "religious": {
+        "support": 426,
+        "precision": 0.9673,
+        "recall": 0.9014,
+        "f1": 0.9332
+      },
+      "portrait": {
+        "support": 180,
+        "precision": 0.871,
+        "recall": 0.9,
+        "f1": 0.8852
+      },
+      "landscape": {
+        "support": 127,
+        "precision": 0.916,
+        "recall": 0.9449,
+        "f1": 0.9302
+      },
+      "genre": {
+        "support": 94,
+        "precision": 0.6542,
+        "recall": 0.7447,
+        "f1": 0.6965
+      },
+      "still-life": {
+        "support": 50,
+        "precision": 0.875,
+        "recall": 0.98,
+        "f1": 0.9245
+      }
+    },
+    "confusion": {
+      "religious": {
+        "religious": 384,
+        "portrait": 12,
+        "landscape": 6,
+        "genre": 20,
+        "still-life": 4
+      },
+      "portrait": {
+        "religious": 4,
+        "portrait": 162,
+        "landscape": 1,
+        "genre": 13,
+        "still-life": 0
+      },
+      "landscape": {
+        "religious": 3,
+        "portrait": 0,
+        "landscape": 120,
+        "genre": 3,
+        "still-life": 1
+      },
+      "genre": {
+        "religious": 6,
+        "portrait": 12,
+        "landscape": 4,
+        "genre": 70,
+        "still-life": 2
+      },
+      "still-life": {
+        "religious": 0,
+        "portrait": 0,
+        "landscape": 0,
+        "genre": 1,
+        "still-life": 49
+      }
+    }
+  },
+  "comparison_to_zero_shot": {
+    "zero_shot_accuracy": 0.5713,
+    "probe_accuracy": 0.8951,
+    "delta_pp": 32.4,
+    "zero_shot_macro_f1": 0.6074,
+    "probe_macro_f1": 0.8739,
+    "macro_f1_delta_pp": 26.6
+  },
+  "per_item": [
+    {
+      "image_file": "07635-89d_stil.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "07847-051cruci.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17237-5portra5.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "35952-4amster1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "10998-307david.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "14473-404fried.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "23833-2manet12.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "17285-selfpo12.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "05288-2lastjud.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35579-24spinol.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "12961-cardinal.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20876-woman.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "32074-piacenza.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09550-corot06.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "06147-selfport.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "09182-cristop.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21780-viewflor.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "44708-adormagi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43121-circumci.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "12539-07docto.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40049-cabare15.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "15246-reading.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "17950-windmill.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "40270-srgeorge.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41099-021pieta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "02961-johnbapt.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42223-0209vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "05888-villasea.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "36867-pentapt3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08837-isaac.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20154-marriage.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "18383-1710grec.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "11604-langmat2.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "30646-martyrdo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34151-colonel.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "11679-6west.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20406-virgin_c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "44304-christop.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14347-descent.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14937-6pould07.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "26220-1altar4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14245-3nativit.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38171-parkland.jpg",
+      "gt": "landscape",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "04016-psforza2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "03239-spaniels.jpg",
+      "gt": "portrait",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "20086-12hoock.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "02896-preachin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06651-birdtrax.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "24537-08olona.jpg",
+      "gt": "religious",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "22585-4jpieta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15510-6resurr.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "44173-ships.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41649-triptyc1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23165-04monaco.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41696-08visita.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29948-port_fam.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "33904-19noremb.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "41290-06martin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20077-12orange.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20968-riverlan.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "29861-portmarg.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07330-immacula.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03746-miracl3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10944-doria2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22256-c_couple.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "14453-216fried.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "39944-1deesis3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "25284-07stpaul.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39999-1misc01.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "36100-lazarus.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "15832-altar2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36885-sebastia.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42205-0104vela.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22778-1market.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "38230-augustin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40893-04virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16952-4portina.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14512-lazar.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10321-09elect2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "13363-l2soldi.jpg",
+      "gt": "religious",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "30993-christ_c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "44024-0braque.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34258-anthony.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "26569-04_3ce4b.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42289-0707vela.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17189-3enviro4.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "00581-05pazzi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "12989-pepijn.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "32103-brazlany.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "10824-stvaast2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03554-agony_g.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03600-4view.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "37502-stillife.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "23251-old_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "42477-rhinela1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "12969-charllou.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "42233-0302vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "36770-lochorst.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "27055-anatomy.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "41990-davidgol.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42428-cavalier.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "12966-charles2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "34013-1renoi14.jpg",
+      "gt": "portrait",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "24073-3sposi04.jpg",
+      "gt": "religious",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "24370-franklin.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "00640-port_lad.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07248-canal617.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "22819-triptych.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "37331-6orsini.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29919-musician.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "38104-stillify.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "07128-3chicken.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "08196-carrying.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21098-river_la.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "17497-06virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18797-landscap.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "17722-209goya.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "40817-kingdrin.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "10698-miniatur.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20513-2l1_main.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20509-1c2_up1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "00217-apocaly.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14028-ceiling1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "25096-crucifix.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38773-viewdres.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "25344-adoratio.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "37499-stillif.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "23846-3manet05.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "17260-auvers20.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "26351-poultry.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "38390-selfport.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "33442-06oldtet.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07286-canal813.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "31301-polyptic.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38589-smokers3.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "03898-187madon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "32954-08isaiah.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07237-canal606.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "05757-nicolas.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07719-5altar4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23989-3adorat2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "00516-lifeboat.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "33617-06sp1629.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "05860-pearl.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36086-2david4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18582-04mock.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06177-01right.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14122-heidelbe.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "23867-4manet05.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "04178-still_li.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "19412-stillif7.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "25914-redeemer.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "00418-4saints2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40899-10sorrow.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41901-castello.jpg",
+      "gt": "landscape",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "04793-port_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "33534-45portra.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "11164-1870s_64.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "44374-scene.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "31066-2august3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28670-2venice4.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "37467-woodland.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "37552-scene33.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18080-3vault1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38704-matthew1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14001-notary.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "16990-nuenen05.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "08312-saints1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40132-virgin_c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34213-holyfami.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08415-eccehomo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42387-battle_t.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "33380-03newtes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09528-port_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "04506-madonna.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04567-family.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "29201-11munkac.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "43000-3finding.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "14089-ursins.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "38025-family.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "03204-gatto.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07463-06concer.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "30112-jerome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41386-10colom1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04685-portgent.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "37794-3east.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "12498-12krel.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "39348-04fall.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03777-057ferr1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "30040-stillif3.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "07251-canal701.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "42460-virgin_c.jpg",
+      "gt": "religious",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "03753-012madon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14246-4madonna.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "25971-04notri.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04013-madonna.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "19198-69coyman.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "43583-5birth.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "23605-boyflute.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07992-bargelli.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39376-29lazar.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40044-cabare10.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "10778-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "37714-stillif3.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "00606-4esther.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "35136-centurio.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22614-01annun.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "12346-kessel2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "13210-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "30356-polypti0.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13948-seacoast.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "11138-1870s_03.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "28565-other7.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "29165-lot_daug.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "22162-chateau.jpg",
+      "gt": "genre",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "05281-8lastjud.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "44560-05monza.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16511-0baronce.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14242-madonna.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40259-m_garden.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29192-02munkac.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "08659-09h_card.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "12486-01father.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "35741-waterfax.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41361-07sancta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16068-00view1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39669-08thief.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36396-6humilit.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35438-70religi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43912-banks.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20820-runningb.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "13165-christ_t.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23967-2chris04.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18201-0207grec.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "37663-still_li.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "09141-gouffier.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "33346-musician.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "35451-79religi.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "19480-lovesick.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "43924-selfport.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "40174-portgent.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20987-landscap.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "19355-selfport.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "31977-141salvi.jpg",
+      "gt": "portrait",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "40774-15icon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "19444-stillboo.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "05057-stillife.jpg",
+      "gt": "still-life",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "13902-stil_oys.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "03767-034madon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35916-romuald.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "25255-innocent.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36406-sleep.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "11534-presenta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "33357-meeting.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17508-17virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15987-51border.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14591-monkey.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "16509-21stefan.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06880-scharnho.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "43209-martyrdo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13379-l5pilgr.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36036-storm.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41327-03crucif.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29458-liberati.jpg",
+      "gt": "religious",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "22424-hunters.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "39251-06adult.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42902-2loggia3.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "12470-soldiers.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "42241-0309vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "15653-med_port.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "15601-12sasset.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "00656-lastsup.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23499-vanitas3.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "03483-jerome1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24098-6victory.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15191-judith_m.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "34073-3renoi201.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "41351-08virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08586-5portra3.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "28765-5goldsmi.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "41166-x_portra.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "44042-3john.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08736-cascade1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "26756-03_61ms.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42724-view1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "12185-cro_f_8.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22606-9medici.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16469-3crucifi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06760-vanitas.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "35817-after_ra.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "33595-137portr.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "12442-dutchbar.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "24897-coronat.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13306-10goldsm.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20910-forest.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "02770-tobias.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "03374-praying.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16056-legend.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13772-mary_mag.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05464-40pomegr.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "02911-gar_eden.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04873-toilet.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "39704-06bravo.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "00642-portband.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "35147-lastsup.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08614-louis13v.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42817-4cather1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41336-04dipti2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "33574-103portr.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "21934-8jerome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43796-201peace.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "41183-zhairy2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "10263-02cuspi1.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "14696-01conver.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "19593-weighing.jpg",
+      "gt": "genre",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "04171-2matteo1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18791-guard414.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "43204-peaches.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "14460-306fried.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "07183-canal227.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "31274-mad_chil.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13630-07ferenc.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "34722-port_nob.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "23942-miracl6.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10706-cloud_sx.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "37306-foglian1.jpg",
+      "gt": "portrait",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "16337-vice_2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03455-little_g.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "08618-moses.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "08437-paderne2.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "18249-0610grec.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35374-10religi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24760-virgin_d.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38724-woman.jpg",
+      "gt": "genre",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "20814-christi7.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "04533-madchild.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23740-andorfe2.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "33423-66newtes.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "34907-05catala.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24172-adoratig.jpg",
+      "gt": "religious",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "40766-09icon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "12526-02salvat.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10951-trompe.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10132-12religi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41476-sacrati.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "32825-37entom4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10833-riverban.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "35851-riverfis.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "36456-adorshep.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06337-01games.jpg",
+      "gt": "genre",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "27144-ploos2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "17564-22portra.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "31985-1deposi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29636-adormag.jpg",
+      "gt": "religious",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "39612-38gregor.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "39123-minuet.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "08202-trissino.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "20076-12freder.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "19106-15singin.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "07735-swimming.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "07160-canal201.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "29539-neudorfe.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "26634-01_1pr2c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23996-8cardina.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "21427-camargo1.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "26163-0546nati.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15516-shepher.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03389-stilmus2.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "05118-st_peter.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42322-1011vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "09985-p_family.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "04471-martha.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "00965-05humili.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18330-1304grec.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "17955-zestuary.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "24208-oarsmen.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "17098-1arles10.jpg",
+      "gt": "landscape",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "42273-0608vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "03686-ludwig10.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "33589-131portr.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "08017-dukepast.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "08578-3victor4.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "21520-st_john.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17079-orchar00.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "10292-04elect2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "00973-0fiesol1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17094-1arles06.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "43872-riding.jpg",
+      "gt": "genre",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "17985-08scene.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38631-witches.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "17705-woodland.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "22537-2assump0.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06825-v_girdle.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23017-archbish.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "15588-06tondo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22199-04chess.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "40009-2mouli05.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "18524-2summer.jpg",
+      "gt": "landscape",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "06606-singerie.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "38197-portrai2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "00003-rudolf2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07400-holy_fam.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10475-sacrame6.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "16403-mary02.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20524-3r2_up2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "27163-mildorf3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23342-07ponte1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16829-baptist.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16710-hortense.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "26738-02_1sp1f.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "11198-1880s_18.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "18264-0803grec.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41635-3scenes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23536-virginc.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03689-porteck1.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "19086-04nooff.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "36407-sleep1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08745-italian2.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "30406-madchild.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29282-214muril.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "39630-2rabbit.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "04836-vanitas.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "30322-viewforo.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "10001-lastjudg.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "37530-5domeni.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39795-18barbar.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "11016-410david.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "39752-01schiav.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07231-canal601.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "05948-musician.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "42809-3baptist.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35576-22sp1623.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "28640-1vario15.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "19027-caserta.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "05165-2borsos.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "43381-triptych.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35708-jewish_c.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "18386-1713grec.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "15828-venusapp.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03500-countess.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "00124-marketst.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "00515-mother.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "25351-mad_chil.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07597-57salome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "33433-01oldtes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35048-woodedla.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "00849-35_eucha.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05367-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "36344-luxembou.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "00361-flight_e.jpg",
+      "gt": "religious",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "16054-franc24.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28696-bouquet2.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "04577-pendant1.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "11590-holyfami.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38442-10szinye.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "21431-company.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "03673-the_duet.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "17224-copies16.jpg",
+      "gt": "genre",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "39951-4oldtest.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16355-07scenes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "01103-manportr.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "38872-10udine.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20117-49hooch.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "29410-bonnier.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "35807-flowers1.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "06226-martelli.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "28829-iconocla.jpg",
+      "gt": "genre",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "12493-08lotdau.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "18370-1605grec.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "41641-martyrjo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10482-tolomeo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "32687-youngboy.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "14327-scene04.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "44366-landpeas.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "34219-s_onufri.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20797-virgin_c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23130-2chapte6.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "31940-03josep3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43591-9marymag.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36584-port_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "38938-02gesuat.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17271-auvers31.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "21312-03sebast.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "24924-metropo1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04499-holyfami.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17141-arles63.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "06024-6joseph.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05488-4predell.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20864-nautiluz.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "19452-eucharis.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "03610-72rebel1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "00945-00humil2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "19311-material.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "34021-2renoi02.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "29596-virgin_e.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13335-1open.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35002-07spanis.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05690-shepdrea.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "17300-selfpo27.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "21490-s_ursula.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "32783-23connes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28922-port_sol.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "24309-0markok.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "16367-wall.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "27171-i_landsc.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "15485-1donor.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "39646-4vendra.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "14636-coronati.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07283-canal810.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "21402-woodedla.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "35877-virgin_c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06159-02brocky.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "07461-05franc.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "25111-4portrai.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "26169-08notri4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17258-auvers18.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "10397-03adamev.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07921-margaret.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08805-autumn.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "19047-selfport.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "25050-altarpie.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10654-10csont.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05673-adoratio.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41328-040madon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28916-contarin.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "42753-2castel1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18766-guard3071.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "38190-holy_fam.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42412-the_gust.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "15654-dead_chr.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43793-18actors.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "05308-31right.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04486-river_la.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "39239-7helenba.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42128-09casafl.jpg",
+      "gt": "genre",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "34263-gregory.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18179-p_woman.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "32533-7crucifi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "06310-murray.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "13279-winter.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "12047-nocturn3.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "04540-coronati.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21551-rousseau.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "23270-01recan4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "11303-405delac.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15780-stillife.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "44528-federi06.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "43679-viewdel1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "04468-market_s.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "15892-certosa3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28851-pieta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09537-lastjudg.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35423-43religi.jpg",
+      "gt": "religious",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "19440-stil_lig.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "43179-self_por.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "08065-strawbo1.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "31749-12figure.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "40447-calvary.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "25210-0_virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "33312-kitchen1.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "43001-4finding.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "32334-02ignazi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16869-3north2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34931-11berze.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14348-jesusdoc.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14913-1ponta01.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "21882-stillife.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "12061-young_gr.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "34689-grif_05.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39772-01bluesl.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "11411-oysters.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "40883-05portra.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "16393-chris21.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35439-71religi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04493-still_li.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "34641-roman1.jpg",
+      "gt": "landscape",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "05947-magus.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "40732-13icon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "02773-apple.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "15279-108geric.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "15524-1expuls.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20940-sewing.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "42271-0606vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "22355-old_man4.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "44513-landsc_r.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "37293-32madonn.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18467-dubarry.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "40232-s_luca_2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17246-auvers06.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "14050-port_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "29493-drawingl.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "04069-vastato.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26236-3_tkon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "00221-oratory.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04490-stil_gra.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "42647-34guita.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "38185-oyster.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "18044-61angels.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "37144-leith.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41369-04tripty.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "32272-01euchar.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28695-bouquet1.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "02625-10arella.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "04474-v_market.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "23184-21monaco.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08476-madchild.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24560-maggiore.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "30981-catherin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41398-14deposi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26100-26vani11.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "40897-08portra.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "38834-holyfami.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18765-guard307.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "10127-18jerome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05907-tavern2.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "29418-leczinsk.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "08490-05early.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "37534-scene03.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05761-beethov.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "34277-2bathshe.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "41356-02sancta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26621-07_5nw.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28873-10moriso.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "25047-altar1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29852-calvary.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "07263-canal713.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "35743-wheat_f.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "07717-5altar2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "38645-officer.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "42764-4transfi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43582-4lastsup.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "18574-landsca1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "08491-06early.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "21328-nicole.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "28530-2trouvi2.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "14908-early10.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "10866-08drama.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "44154-winter_l.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "06975-martha.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36557-circumci.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39147-11zianig3.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "40773-14icon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "04527-arezzo2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26023-13john.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26290-boy_draw.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "34281-5repudia.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35580-25titia1.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "11324-512delac.jpg",
+      "gt": "genre",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "08631-4children.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "20127-anaemic.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "11211-1890s_06.jpg",
+      "gt": "genre",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "20250-lowther.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "17184-2enclos7.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "22458-stillife.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "20694-family.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "32518-martyrdo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42335-milking.jpg",
+      "gt": "genre",
+      "pred": "landscape",
+      "correct": false
+    },
+    {
+      "image_file": "13389-u3water.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "30980-adoratio.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20539-crucifi.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34936-15isere1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13254-forest_s.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "35614-16landsc.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41173-z_1548.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "16678-arezzo5.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23907-ecstasy.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22806-banksein.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "00571-polyptyx.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42292-0710vela.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "09645-battle_s.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "16713-lange1ve.jpg",
+      "gt": "portrait",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "43477-mancini2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "41542-y_boleyn.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "27067-port_ywo.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "34137-stjerome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20342-landscap.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "42298-0802vela.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "29770-winter.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "36286-baptist.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09781-bentivo.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "10950-rest_fli.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14207-cosimo3.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "18242-0603grec.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10952-trompes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29335-interior.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "23288-01barto3.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "32878-0ceiling.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16461-chapels.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36870-neythart.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "26692-lu02jac.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16658-st_clare.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03271-trustgod.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "03400-presenta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15570-3annunci.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21863-amorous.jpg",
+      "gt": "landscape",
+      "pred": "religious",
+      "correct": false
+    },
+    {
+      "image_file": "41095-04elizab.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21441-mouline1.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "26292-portcoup.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "19658-campovac.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "35015-pieta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09907-courb411.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "12322-8windsor.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "00948-01grapes.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23175-13monaco.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17207-olive09.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "17288-selfpo15.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "17983-07scene.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "31288-landscap.jpg",
+      "gt": "landscape",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "30681-flowers2.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "16041-franc16.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08664-13nurse.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "31065-2august2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21001-portlady.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "15851-study1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05471-47virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "11390-kitchen.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "02791-stillif5.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "41375-06madonn.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08992-07italia.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "02826-landscap.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "14341-portra_m.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "23570-lacemake.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "24911-zcruci1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09602-day.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43586-5youngma.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "26005-02last4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "05756-jephta.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09263-virgin_c.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "19127-28boyflu.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "43143-ruthnaom.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "05419-landruin.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "31000-ecstasy.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17191-cypres02.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "14397-st_bruno.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22761-ecstasy.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24726-embrace.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23142-3pomegra.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29435-baptism.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28921-port_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "32304-02assump.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "08007-st_peter.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "21543-landscap.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "31973-11nolime.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15203-cecilia.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "30741-tassin.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "14989-2ponta04.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "11595-salome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03041-07lamen.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "31314-altar_1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26700-lu04azo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34037-2renoi18.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "21548-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "33959-sebasti2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03615-7moses.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "11120-early11.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "34847-struyska.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "34710-avogadr2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09371-helmingt.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "09741-grif_02.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23588-portrai2.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "14817-certosa2.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "34449-05rippl.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "07580-49franci.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "36765-daffodil.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "28445-hillylan.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "08913-madonnc.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03494-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "38312-christ.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23851-3manet10.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "19393-garland.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "24867-st_victor.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "27193-levantin.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "05890-standrew.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16392-chris20.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42967-01view.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23737-gypsy.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "09514-massacr.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "44047-2abegg.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "19546-imagport.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "17284-selfpo11.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "23820-7marine1.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "30133-brothel.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "34223-st_paul.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09543-nicolo1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03729-lastjudg.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "16929-death_v0.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "29732-stil_lif.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "04806-cremona4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41145-adoratio.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41407-16polypt.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03030-02altar1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43488-desvoisi.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "42495-talinn.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "16886-glasgow.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "44236-woodland.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "18342-1408gred.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "41100-022pieta.jpg",
+      "gt": "religious",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "01109-salvator.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03516-roberts.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07815-4dragon.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13020-porziaim.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "06215-garcia1.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "32444-concert2.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "09896-courb401.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "08976-vanitas2.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "10109-14virgin.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26068-18portra.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "10989-213david.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "07498-22barber.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "42079-jacob.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13660-adorati.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26601-2ceil_ve.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "26107-29jerome.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "15126-port_man.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "36864-magdalen.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24227-fishma.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41963-eccehomo.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17029-flower02.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "05275-2mankind.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "15167-13quarat.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "22909-pellegri.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "05813-moses.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20956-holyfami.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "43479-mancini4.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "34039-2renoi20.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "42426-amorous.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "18269-0808grec.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "19418-stiloliv.jpg",
+      "gt": "still-life",
+      "pred": "still-life",
+      "correct": true
+    },
+    {
+      "image_file": "27061-maurits1.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "18790-guard413.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "16472-4crucif2.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "13340-u2cain.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "24779-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "14480-410fried.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "05786-portrait.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "23120-12enthro.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "42849-12deadch.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14173-05young.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "12988-lorraine.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "12060-young_gi.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "29136-portr_ab.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "30092-ztriptic.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "34159-masterha.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "32549-panel1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "10289-03young3.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "03933-saints_1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09807-virgchil.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "20475-sacrific.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03532-prodigal.jpg",
+      "gt": "religious",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "38248-the_cook.jpg",
+      "gt": "genre",
+      "pred": "still-life",
+      "correct": false
+    },
+    {
+      "image_file": "37099-predell4.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35682-benthei.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "30507-versaill.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "33600-05group.jpg",
+      "gt": "portrait",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "08122-susan.jpg",
+      "gt": "genre",
+      "pred": "portrait",
+      "correct": false
+    },
+    {
+      "image_file": "42755-3mystic.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "03180-landscap.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "41121-00antepe.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "14842-klosters.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "03936-triptic1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23428-031port.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "08281-sacrifici.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "43620-attack.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "10539-land_oak.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "36850-st_peter.jpg",
+      "gt": "religious",
+      "pred": "genre",
+      "correct": false
+    },
+    {
+      "image_file": "38284-theannun.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "39897-granduke.jpg",
+      "gt": "portrait",
+      "pred": "portrait",
+      "correct": true
+    },
+    {
+      "image_file": "18658-3carry.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "23374-11holyfa.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "17219-copies11.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "38258-healing.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "09339-kitchen.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "28424-winter.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    },
+    {
+      "image_file": "14184-08bolt.jpg",
+      "gt": "genre",
+      "pred": "genre",
+      "correct": true
+    },
+    {
+      "image_file": "19609-nordlin1.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "35406-08assum.jpg",
+      "gt": "religious",
+      "pred": "religious",
+      "correct": true
+    },
+    {
+      "image_file": "28428-winterl2.jpg",
+      "gt": "landscape",
+      "pred": "landscape",
+      "correct": true
+    }
+  ]
+}

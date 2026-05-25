@@ -1,20 +1,30 @@
-torch
-torchvision
-transformers
-accelerate
-sentencepiece
-pillow
-numpy
-safetensors
-sacrebleu
-rouge-score
-nltk
-bert-score
-huggingface_hub
-protobuf
-open_clip_torch
-scikit-learn
+# Зависимости для локальной разработки.
+# Версии явно зафиксированы для воспроизводимости рабочей среды.
 
-fastapi
-uvicorn[standard]
-python-multipart
+# ─── Vision / language модели ──────────────────────────────────────────
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.5.4
+accelerate==1.13.0
+sentencepiece==0.2.1
+safetensors==0.7.0
+huggingface_hub==1.15.0
+protobuf==7.34.1
+open_clip_torch==3.3.0
+peft==0.19.1
+
+# ─── Базовые научные библиотеки ────────────────────────────────────────
+pillow==12.2.0
+numpy==2.4.4
+scikit-learn==1.8.0
+
+# ─── Reference-based метрики (eval_reference_based.py, evaluate.py) ────
+sacrebleu==2.6.0
+rouge-score==0.1.2
+nltk==3.9.4
+bert-score==0.3.13
+
+# ─── FastAPI runtime ───────────────────────────────────────────────────
+fastapi==0.136.0
+uvicorn[standard]==0.45.0
+python-multipart==0.0.26

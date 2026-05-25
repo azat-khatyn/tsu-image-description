@@ -1,0 +1,351 @@
+{
+  "summary": {
+    "num_examples": 14,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "Salesforce/blip-image-captioning-large",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": false,
+        "include_mood": false,
+        "drop_generic_style": true
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "references_path": "data/eval/semantic_testset.jsonl",
+      "pool_path": null
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.3193392774888447,
+      "CLIPScore_RU_caption_ru": 0.33462785823004587,
+      "CLIPScore_RU_archive_ru": 0.3495935606104987,
+      "CLIPScore_RU_reference_ru": 0.3119456171989441
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "CLIPScore_RU_archive_ru": 0.34363508886761135,
+        "CLIPScore_RU_caption_ru": 0.3316943314340379,
+        "CLIPScore_EN_caption_en": 0.31795357995563084
+      },
+      "rgb": {
+        "n": 5,
+        "CLIPScore_RU_archive_ru": 0.3603188097476959,
+        "CLIPScore_RU_caption_ru": 0.33990820646286013,
+        "CLIPScore_EN_caption_en": 0.32183353304862977
+      }
+    },
+    "retrieval": {
+      "n_pool": 14,
+      "i2t": {
+        "R@1": 0.9285714285714286,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "t2i": {
+        "R@1": 0.9285714285714286,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.0714285714285714,
+      "mean_rank_t2i": 1.0714285714285714
+    },
+    "latency": {
+      "mean_sec": 7.059724143573216,
+      "images_per_sec": 0.14164859414660627
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage postcard of a wave breaking on the rocks at the beach",
+      "caption_ru": "Винтажная открытка с волной, взламывающей камни на пляже",
+      "caption_ru_raw": "Винтажная открытка с волной, взламывающей камни на пляже",
+      "archive_ru": "Открытка: старинная цветная фотография сцены отдыха на берегу моря, где волна разбивается о скалы.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3644314408302307,
+        "CLIPScore_RU_caption_ru": 0.371226966381073,
+        "CLIPScore_RU_archive_ru": 0.36541780829429626,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 8.288711786270142,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "painting of a vase of flowers and a bowl of fruit on a table",
+      "caption_ru": "рисунок вазы цветов и чаши фруктов на столе",
+      "caption_ru_raw": "рисунок вазы цветов и чаши фруктов на столе",
+      "archive_ru": "Открытка: гравюра, изображающая романтическую сцену с вазой цветов и миской фруктов на столе.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3313082456588745,
+        "CLIPScore_RU_caption_ru": 0.3665362000465393,
+        "CLIPScore_RU_archive_ru": 0.33432793617248535,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 5.739850997924805,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a man with a long beard and a turban",
+      "caption_ru": "старое фото человека с длинной бородой и тюрбаном",
+      "caption_ru_raw": "старое фото человека с длинной бородой и тюрбаном",
+      "archive_ru": "Черно-белая фотография старого мужчины с длинной бородой и тюрбаном на голове, цветная репродукция, религиозная сцена, ностальгический тон.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.307334303855896,
+        "CLIPScore_RU_caption_ru": 0.3489864468574524,
+        "CLIPScore_RU_archive_ru": 0.38513097167015076,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 7.0202250480651855,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "rock with steps leading to a small cave",
+      "caption_ru": "Камень с ступеньками, ведущими в маленькую пещеру",
+      "caption_ru_raw": "Камень с ступеньками, ведущими в маленькую пещеру",
+      "archive_ru": "Открытка с цветной фотографией природной сцены, изображающей скалистый ландшафт с каменной лестницей, ведущей к небольшой пещере, выполнена в ностальгическом эмоциональном тоне.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29694461822509766,
+        "CLIPScore_RU_caption_ru": 0.31429392099380493,
+        "CLIPScore_RU_archive_ru": 0.3511061668395996,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 8.084512948989868,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a man in a tuxedo",
+      "caption_ru": "черно-белое фото мужчины в смокинге",
+      "caption_ru_raw": "черно-белое фото мужчины в смокинге",
+      "archive_ru": "Черно-белая фотография мужчины в смокинге, тематическая категория — романтическая сцена, эмоциональный тон серьезный.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30444806814193726,
+        "CLIPScore_RU_caption_ru": 0.3077350854873657,
+        "CLIPScore_RU_archive_ru": 0.2997109889984131,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 6.114469766616821,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "view of a bridge with a city in the background",
+      "caption_ru": "Вид моста с городом на заднем плане",
+      "caption_ru_raw": "Вид моста с городом на заднем плане",
+      "archive_ru": "Открытка в стиле винтажной иллюстрации изображает вид моста с городским пейзажем на заднем плане, создавая ностальгическое настроение.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28173819184303284,
+        "CLIPScore_RU_caption_ru": 0.2803976535797119,
+        "CLIPScore_RU_archive_ru": 0.3302837610244751,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 6.513887166976929,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "woman in a colorful dress and head scarf",
+      "caption_ru": "женщина в цветном платье и головном шарфе",
+      "caption_ru_raw": "женщина в цветном платье и головном шарфе",
+      "archive_ru": "Цветная фотография женщины в ярком платье и головном платке на религиозной сцене, эмоциональный тон — праздничный.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29699188470840454,
+        "CLIPScore_RU_caption_ru": 0.2968222200870514,
+        "CLIPScore_RU_archive_ru": 0.32360705733299255,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 5.687407732009888,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage postcard of a path in a forest with trees",
+      "caption_ru": "Винтажная открытка пути в лесу с деревьями",
+      "caption_ru_raw": "Винтажная открытка пути в лесу с деревьями",
+      "archive_ru": "Открытка: старинная фотография тропы в лесу с деревьями, выполненная в цвете. Тематическая категория: природная сцена, эмоциональный тон ностальгический.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.37272509932518005,
+        "CLIPScore_RU_caption_ru": 0.36235594749450684,
+        "CLIPScore_RU_archive_ru": 0.36439764499664307,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 7.368189334869385,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "donkey with saddle standing on dirt road in wooded area",
+      "caption_ru": "осел с седлом, стоящим на грунтовой дороге в лесу",
+      "caption_ru_raw": "осел с седлом, стоящим на грунтовой дороге в лесу",
+      "archive_ru": "Открытка в стиле винтажной иллюстрации изображает осла в седле на грунтовой дороге в лесной местности, создавая ностальгическое настроение.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3056603670120239,
+        "CLIPScore_RU_caption_ru": 0.33689454197883606,
+        "CLIPScore_RU_archive_ru": 0.3387334644794464,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 7.168484210968018,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "a christmas card with a box and holly leaves",
+      "caption_ru": "Рождественская открытка с коробкой и листьями Холли",
+      "caption_ru_raw": "Рождественская открытка с коробкой и листьями Холли",
+      "archive_ru": "Открытка с рождественской сценой в стиле винтажной иллюстрации, изображающая коробку и листья остролиста.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3142978549003601,
+        "CLIPScore_RU_caption_ru": 0.34633296728134155,
+        "CLIPScore_RU_archive_ru": 0.36546337604522705,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 6.420077085494995,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "three children standing in the snow with a christmas tree",
+      "caption_ru": "Трое детей стоят в снегу с рождественским деревом",
+      "caption_ru_raw": "Трое детей стоят в снегу с рождественским деревом.",
+      "archive_ru": "Открытка в стиле винтажной иллюстрации изображает трех детей, стоящих в снегу с рождественской елкой, отражает праздничную сцену.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30943769216537476,
+        "CLIPScore_RU_caption_ru": 0.3221498429775238,
+        "CLIPScore_RU_archive_ru": 0.3849167823791504,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 7.50642204284668,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "picture of a child in a colorful outfit holding flowers",
+      "caption_ru": "рисунок ребенка в ярком наряде с цветами",
+      "caption_ru_raw": "рисунок ребенка в ярком наряде с цветами",
+      "archive_ru": "Открытка в стиле винтажной иллюстрации изображает ребенка в яркой одежде, держащего цветы, и относится к тематической категории детских сцен с праздничным эмоциональным тоном.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32491499185562134,
+        "CLIPScore_RU_caption_ru": 0.35425040125846863,
+        "CLIPScore_RU_archive_ru": 0.3715277314186096,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 8.746421098709106,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "view of a river with a bridge and buildings in the background",
+      "caption_ru": "вид на реку с мостом и зданиями на заднем плане",
+      "caption_ru_raw": "вид на реку с мостом и зданиями на заднем плане",
+      "archive_ru": "Открытка с цветной фотографией городской сцены, изображающая вид на реку с мостом и зданиями на фоне, выполнена в ностальгическом стиле.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3046626150608063,
+        "CLIPScore_RU_caption_ru": 0.3100810647010803,
+        "CLIPScore_RU_archive_ru": 0.3241332173347473,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 7.60915994644165,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "woman in kimono sitting in front of a mirror",
+      "caption_ru": "женщина в кимоно, сидящая перед зеркалом",
+      "caption_ru_raw": "женщина в кимоно, сидящая перед зеркалом",
+      "archive_ru": "Открытка: женщина в кимоно, сидящая перед зеркалом, цветная фотография, романтическая сцена, ностальгический тон.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.35585451126098633,
+        "CLIPScore_RU_caption_ru": 0.36672675609588623,
+        "CLIPScore_RU_archive_ru": 0.35555294156074524,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 6.568318843841553,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

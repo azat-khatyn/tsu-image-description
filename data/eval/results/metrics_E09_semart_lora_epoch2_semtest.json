@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "num_examples": 14,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "models/blip_semart_lora/v1_soft_epoch_2",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": true,
+        "include_mood": true,
+        "drop_generic_style": false
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "taxonomy_version": "archival_v2",
+      "use_llm_rewriter": false,
+      "llm_model": null,
+      "llm_prompt_style": null,
+      "references_path": "data/eval/semantic_testset.jsonl",
+      "pool_path": null
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.30519376908029827,
+      "CLIPScore_RU_caption_ru": 0.3221508413553238,
+      "CLIPScore_RU_archive_ru": 0.32499552198818754,
+      "CLIPScore_RU_reference_ru": 0.3119456171989441
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "CLIPScore_RU_archive_ru": 0.32429799768659806,
+        "CLIPScore_RU_caption_ru": 0.3201275302304162,
+        "CLIPScore_EN_caption_en": 0.3081236514780257
+      },
+      "rgb": {
+        "n": 5,
+        "CLIPScore_RU_archive_ru": 0.32625106573104856,
+        "CLIPScore_RU_caption_ru": 0.3257928013801575,
+        "CLIPScore_EN_caption_en": 0.299919980764389
+      }
+    },
+    "retrieval": {
+      "n_pool": 14,
+      "i2t": {
+        "R@1": 0.7142857142857143,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "t2i": {
+        "R@1": 0.8571428571428571,
+        "R@5": 1.0,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.2857142857142858,
+      "mean_rank_t2i": 1.1428571428571428
+    },
+    "latency": {
+      "mean_sec": 1.0175883940288,
+      "images_per_sec": 0.9827156106221254
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the postcard shows the scene of the sea breaking on the rocks at the mouth of the ocean",
+      "caption_ru": "открытка показывает сцену разлома моря на скалах в устье океана",
+      "caption_ru_raw": "открытка показывает сцену разлома моря на скалах в устье океана",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: открытка показывает сцену разлома моря на скалах в устье океана. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3564741015434265,
+        "CLIPScore_RU_caption_ru": 0.40327101945877075,
+        "CLIPScore_RU_archive_ru": 0.38198310136795044,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.5865600109100342,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "this painting is a signed and dated, and dated, still - life",
+      "caption_ru": "Эта картина - подписанная, датированная и старая, все еще жизнь",
+      "caption_ru_raw": "Эта картина - подписанная, датированная и старая, все еще жизнь.",
+      "archive_ru": "Фотография. На изображении: эта картина - подписанная, датированная и старая, все еще жизнь. Тематика изображения: натюрморт.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28742507100105286,
+        "CLIPScore_RU_caption_ru": 0.2845759093761444,
+        "CLIPScore_RU_archive_ru": 0.2935313582420349,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9137868881225586,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "the photograph shows the profile of a bearded man with a turban",
+      "caption_ru": "на фотографии показан профиль бородатого мужчины с тюрбаном",
+      "caption_ru_raw": "на фотографии показан профиль бородатого мужчины с тюрбаном",
+      "archive_ru": "Фотография. На изображении: на фотографии показан профиль бородатого мужчины с тюрбаном. Тематика изображения: религиозный сюжет.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31267109513282776,
+        "CLIPScore_RU_caption_ru": 0.3437688946723938,
+        "CLIPScore_RU_archive_ru": 0.35637331008911133,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.895806074142456,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the picture shows a postcard of a rock formation in the background",
+      "caption_ru": "картинка показывает открытку скалистой породы на заднем фоне",
+      "caption_ru_raw": "картинка показывает открытку скалистой породы на заднем фоне",
+      "archive_ru": "Открытка в стиле черно-белой фотографии. На изображении: картинка показывает открытку скалистой породы на заднем фоне. Тематика изображения: пейзаж.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.330926775932312,
+        "CLIPScore_RU_caption_ru": 0.3335351347923279,
+        "CLIPScore_RU_archive_ru": 0.30373793840408325,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8795979022979736,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "the photograph shows a portrait of the young man in a tuxedo",
+      "caption_ru": "на фотографии изображен портрет молодого человека в смокинге",
+      "caption_ru_raw": "на фотографии изображен портрет молодого человека в смокинге.",
+      "archive_ru": "Фотография. На изображении: на фотографии изображен портрет молодого человека в смокинге. Тематика изображения: военный сюжет.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3113846778869629,
+        "CLIPScore_RU_caption_ru": 0.31905266642570496,
+        "CLIPScore_RU_archive_ru": 0.29835253953933716,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.911689043045044,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the bridge is the first of the two bridges that were completed in the early 20th century",
+      "caption_ru": "мост является первым из двух мостов, которые были завершены в начале XX века",
+      "caption_ru_raw": "мост является первым из двух мостов, которые были завершены в начале XX века.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: мост является первым из двух мостов, которые были завершены в начале XX века. Тематика изображения: городской вид.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2871039807796478,
+        "CLIPScore_RU_caption_ru": 0.27954214811325073,
+        "CLIPScore_RU_archive_ru": 0.32315731048583984,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0108642578125,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "the picture shows a young woman in traditional costume",
+      "caption_ru": "картинка показывает молодую женщину в традиционном костюме",
+      "caption_ru_raw": "картинка показывает молодую женщину в традиционном костюме",
+      "archive_ru": "Фотография. На изображении: картинка показывает молодую женщину в традиционном костюме. Тематика изображения: портрет.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2660504877567291,
+        "CLIPScore_RU_caption_ru": 0.2717090845108032,
+        "CLIPScore_RU_archive_ru": 0.2797279953956604,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8501741886138916,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the picture shows a postcard of a path in the woods",
+      "caption_ru": "картинка показывает открытку пути в лесу",
+      "caption_ru_raw": "картинка показывает открытку пути в лесу.",
+      "archive_ru": "Фотография. На изображении: картинка показывает открытку пути в лесу. Тематика изображения: пейзаж.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.34060928225517273,
+        "CLIPScore_RU_caption_ru": 0.35394033789634705,
+        "CLIPScore_RU_archive_ru": 0.34873783588409424,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7471051216125488,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "the donkey is standing on a dirt road in the woods",
+      "caption_ru": "Осла стоит на грунтовой дороге в лесу",
+      "caption_ru_raw": "Осла стоит на грунтовой дороге в лесу.",
+      "archive_ru": "Открытка в стиле офорта. На изображении: осла стоит на грунтовой дороге в лесу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2804673910140991,
+        "CLIPScore_RU_caption_ru": 0.29175257682800293,
+        "CLIPScore_RU_archive_ru": 0.33308058977127075,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7251839637756348,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "the present is a christmas card with holly and red berries",
+      "caption_ru": "Это рождественская открытка с колыбельными и красными ягодами",
+      "caption_ru_raw": "Это рождественская открытка с колыбельными и красными ягодами.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: это рождественская открытка с колыбельными и красными ягодами. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30999064445495605,
+        "CLIPScore_RU_caption_ru": 0.3118019700050354,
+        "CLIPScore_RU_archive_ru": 0.3318624794483185,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 0.855891227722168,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a christmas card from the early 20th century",
+      "caption_ru": "картинка показывает рождественскую открытку начала XX века",
+      "caption_ru_raw": "картинка показывает рождественскую открытку начала XX века.",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: картинка показывает рождественскую открытку начала XX века. Тематика изображения: праздничный сюжет.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3554290235042572,
+        "CLIPScore_RU_caption_ru": 0.3766910433769226,
+        "CLIPScore_RU_archive_ru": 0.3744765520095825,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 0.7935371398925781,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a postcard from the early 20th century of the san francisco chiaqua",
+      "caption_ru": "на картинке показана открытка начала 20-го века сан-Франциско чиакуа",
+      "caption_ru_raw": "на картинке показана открытка начала 20-го века сан-Франциско чиакуа",
+      "archive_ru": "Открытка в стиле хромолитографии. На изображении: на картинке показана открытка начала 20-го века сан-Франциско чиакуа. Тематика изображения: портрет.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2703913152217865,
+        "CLIPScore_RU_caption_ru": 0.33028852939605713,
+        "CLIPScore_RU_archive_ru": 0.3364625871181488,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 1.1861236095428467,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows the view of the town of tauern",
+      "caption_ru": "картинка показывает вид города Тауерн",
+      "caption_ru_raw": "картинка показывает вид города Тауерн.",
+      "archive_ru": "Открытка в стиле черно-белой фотографии. На изображении: картинка показывает вид города Тауерн. Тематика изображения: городской вид.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22994542121887207,
+        "CLIPScore_RU_caption_ru": 0.2763805389404297,
+        "CLIPScore_RU_archive_ru": 0.2629243731498718,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 1.7894489765167236,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "the picture shows a young geisha in a kimono - style kimono",
+      "caption_ru": "На картинке показана молодая гейша в кимоно - стиле кимоно",
+      "caption_ru_raw": "На картинке показана молодая гейша в кимоно - стиле кимоно.",
+      "archive_ru": "Фотография. На изображении: на картинке показана молодая гейша в кимоно - стиле кимоно. Тематика изображения: портрет.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33384349942207336,
+        "CLIPScore_RU_caption_ru": 0.33380192518234253,
+        "CLIPScore_RU_archive_ru": 0.3255293369293213,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 1.1004691123962402,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1270 @@
+{
+  "summary": {
+    "num_examples": 60,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "Salesforce/blip-image-captioning-large",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "caption_only",
+        "include_theme": true,
+        "include_mood": true
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "references_path": "data/eval/references.jsonl",
+      "pool_path": "data/eval/pool_nypl_curated.jsonl"
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.3014114531377951,
+      "CLIPScore_RU_caption_ru": 0.31176656211415926,
+      "CLIPScore_RU_archive_ru": 0.3123440975944201,
+      "CLIPScore_RU_reference_ru": 0.30870684757828715
+    },
+    "by_source": {
+      "nypl": {
+        "n": 40,
+        "CLIPScore_RU_archive_ru": 0.3156765758991241,
+        "CLIPScore_RU_caption_ru": 0.3146697573363781,
+        "CLIPScore_EN_caption_en": 0.3007321052253246
+      },
+      "rgb": {
+        "n": 20,
+        "CLIPScore_RU_archive_ru": 0.30567914098501203,
+        "CLIPScore_RU_caption_ru": 0.3059601716697216,
+        "CLIPScore_EN_caption_en": 0.30277014896273613
+      }
+    },
+    "retrieval": {
+      "n_pool": 60,
+      "i2t": {
+        "R@1": 0.6166666666666667,
+        "R@5": 0.95,
+        "R@10": 0.9833333333333333
+      },
+      "t2i": {
+        "R@1": 0.7,
+        "R@5": 0.9666666666666667,
+        "R@10": 0.9833333333333333
+      },
+      "mean_rank_i2t": 1.95,
+      "mean_rank_t2i": 1.8833333333333333
+    },
+    "latency": {
+      "mean_sec": 0.9204203446706136,
+      "images_per_sec": 1.0864601220411585
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white photo of a forest with trees",
+      "caption_ru": "черно-белое фото леса с деревьями",
+      "caption_ru_raw": "черно-белое фото леса с деревьями",
+      "archive_ru": "Черно-белое фото леса с деревьями.",
+      "reference_ru": "Сосновый лес",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31334713101387024,
+        "CLIPScore_RU_caption_ru": 0.32475030422210693,
+        "CLIPScore_RU_archive_ru": 0.3247448205947876,
+        "CLIPScore_RU_reference_ru": 0.30132925510406494
+      },
+      "latency_sec": 1.4406301975250244,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "caption_en": "painting of a group of people in a snowy forest with horses",
+      "caption_ru": "Картина группы людей в снежном лесу с лошадьми",
+      "caption_ru_raw": "Картина группы людей в снежном лесу с лошадьми",
+      "archive_ru": "Картина группы людей в снежном лесу с лошадьми.",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3375818133354187,
+        "CLIPScore_RU_caption_ru": 0.3310060501098633,
+        "CLIPScore_RU_archive_ru": 0.3310297131538391,
+        "CLIPScore_RU_reference_ru": 0.3090788722038269
+      },
+      "latency_sec": 1.0837950706481934,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "view of a river with a bridge and buildings in the background",
+      "caption_ru": "вид на реку с мостом и зданиями на заднем плане",
+      "caption_ru_raw": "вид на реку с мостом и зданиями на заднем плане",
+      "archive_ru": "Вид на реку с мостом и зданиями на заднем плане.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3046626150608063,
+        "CLIPScore_RU_caption_ru": 0.3100810647010803,
+        "CLIPScore_RU_archive_ru": 0.30996081233024597,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 1.0609540939331055,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "caption_en": "a painting of a young girl holding a cat in her arms",
+      "caption_ru": "рисунок молодой девушки, держащей кошку на руках",
+      "caption_ru_raw": "рисунок молодой девушки, держащей кошку на руках.",
+      "archive_ru": "Рисунок молодой девушки, держащей кошку на руках.",
+      "reference_ru": "Девочка с лукошком.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30439287424087524,
+        "CLIPScore_RU_caption_ru": 0.3184688091278076,
+        "CLIPScore_RU_archive_ru": 0.3181205093860626,
+        "CLIPScore_RU_reference_ru": 0.28499191999435425
+      },
+      "latency_sec": 0.855004072189331,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "caption_en": "a man riding a reindeer with a dog on his back",
+      "caption_ru": "Человек, катающийся на олене с собакой на спине",
+      "caption_ru_raw": "Человек, катающийся на олене с собакой на спине",
+      "archive_ru": "Человек, катающийся на олене с собакой на спине.",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33967143297195435,
+        "CLIPScore_RU_caption_ru": 0.2882288694381714,
+        "CLIPScore_RU_archive_ru": 0.28812241554260254,
+        "CLIPScore_RU_reference_ru": 0.340998113155365
+      },
+      "latency_sec": 1.0127170085906982,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "caption_en": "ship in the water with a lot of smoke coming out of it",
+      "caption_ru": "Корабль в воде, и из него выпадает много дыма",
+      "caption_ru_raw": "Корабль в воде, и из него выпадает много дыма",
+      "archive_ru": "Корабль в воде, и из него выпадает много дыма.",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27589550614356995,
+        "CLIPScore_RU_caption_ru": 0.2730531394481659,
+        "CLIPScore_RU_archive_ru": 0.27064064145088196,
+        "CLIPScore_RU_reference_ru": 0.30421382188796997
+      },
+      "latency_sec": 1.2623069286346436,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "caption_en": "a painting of a rose on a postcard with a lady bug",
+      "caption_ru": "рисунок розы на открытке с дамским жучком",
+      "caption_ru_raw": "рисунок розы на открытке с дамским жучком",
+      "archive_ru": "Рисунок розы на открытке с дамским жучком.",
+      "reference_ru": "Розы расцветают...",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33021068572998047,
+        "CLIPScore_RU_caption_ru": 0.33202114701271057,
+        "CLIPScore_RU_archive_ru": 0.32890748977661133,
+        "CLIPScore_RU_reference_ru": 0.29505568742752075
+      },
+      "latency_sec": 1.0786411762237549,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "caption_en": "an old postcard with a picture of a branch of a tree and a flower",
+      "caption_ru": "старая открытка с картинкой ветки дерева и цветка",
+      "caption_ru_raw": "старая открытка с картинкой ветки дерева и цветка",
+      "archive_ru": "Старая открытка с картинкой ветки дерева и цветка.",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33735185861587524,
+        "CLIPScore_RU_caption_ru": 0.37115609645843506,
+        "CLIPScore_RU_archive_ru": 0.3693561553955078,
+        "CLIPScore_RU_reference_ru": 0.3077434301376343
+      },
+      "latency_sec": 0.9962637424468994,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "woman in kimono sitting in front of a mirror",
+      "caption_ru": "женщина в кимоно, сидящая перед зеркалом",
+      "caption_ru_raw": "женщина в кимоно, сидящая перед зеркалом",
+      "archive_ru": "Женщина в кимоно, сидящая перед зеркалом.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.35585451126098633,
+        "CLIPScore_RU_caption_ru": 0.36672675609588623,
+        "CLIPScore_RU_archive_ru": 0.3683886229991913,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 0.8779361248016357,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "caption_en": "three different colored prints of a woman with flowers and fruit",
+      "caption_ru": "три различных цветных отпечатка женщины с цветами и фруктами",
+      "caption_ru_raw": "три различных цветных отпечатка женщины с цветами и фруктами",
+      "archive_ru": "Три различных цветных отпечатка женщины с цветами и фруктами.",
+      "reference_ru": "Изображение цветов и девочки",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25081467628479004,
+        "CLIPScore_RU_caption_ru": 0.24226783215999603,
+        "CLIPScore_RU_archive_ru": 0.2403309941291809,
+        "CLIPScore_RU_reference_ru": 0.23262850940227509
+      },
+      "latency_sec": 0.9084429740905762,
+      "retrieval": {
+        "rank_i2t": 11,
+        "rank_t2i": 16
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "a christmas card with a box and holly leaves",
+      "caption_ru": "Рождественская открытка с коробкой и листьями падуба",
+      "caption_ru_raw": "Рождественская открытка с коробкой и листьями Холли",
+      "archive_ru": "Рождественская открытка с коробкой и листьями падуба.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3142978549003601,
+        "CLIPScore_RU_caption_ru": 0.3468574285507202,
+        "CLIPScore_RU_archive_ru": 0.3468922972679138,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 0.9271581172943115,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "caption_en": "a woman holding a candle in a picture frame",
+      "caption_ru": "женщина, держащая свечу в фоторамке",
+      "caption_ru_raw": "женщина, держащая свечу в фоторамке",
+      "archive_ru": "Женщина, держащая свечу в фоторамке.",
+      "reference_ru": "Девушка держит свечу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30858781933784485,
+        "CLIPScore_RU_caption_ru": 0.32214415073394775,
+        "CLIPScore_RU_archive_ru": 0.32413557171821594,
+        "CLIPScore_RU_reference_ru": 0.29088130593299866
+      },
+      "latency_sec": 0.8561718463897705,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "three children standing in the snow with a christmas tree",
+      "caption_ru": "Трое детей стоят в снегу с рождественским деревом",
+      "caption_ru_raw": "Трое детей стоят в снегу с рождественским деревом.",
+      "archive_ru": "Трое детей стоят в снегу с рождественским деревом.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30943769216537476,
+        "CLIPScore_RU_caption_ru": 0.3221498429775238,
+        "CLIPScore_RU_archive_ru": 0.32262909412384033,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 0.8871018886566162,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "caption_en": "a picture of a couple kissing under a christmas tree",
+      "caption_ru": "фотографию пары, целующейся под рождественским деревом",
+      "caption_ru_raw": "фотографию пары, целующейся под рождественским деревом.",
+      "archive_ru": "Фотографию пары, целующейся под рождественским деревом.",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26217615604400635,
+        "CLIPScore_RU_caption_ru": 0.2537204623222351,
+        "CLIPScore_RU_archive_ru": 0.25466275215148926,
+        "CLIPScore_RU_reference_ru": 0.3731614649295807
+      },
+      "latency_sec": 0.9024868011474609,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "caption_en": "a bird sitting on a branch with holly leaves",
+      "caption_ru": "Птица, сидящая на ветке с листьями падуба",
+      "caption_ru_raw": "Птица, сидящая на ветке с листьями Холли",
+      "archive_ru": "Птица, сидящая на ветке с листьями падуба.",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2772881090641022,
+        "CLIPScore_RU_caption_ru": 0.2428797036409378,
+        "CLIPScore_RU_archive_ru": 0.24294722080230713,
+        "CLIPScore_RU_reference_ru": 0.2770371735095978
+      },
+      "latency_sec": 0.9350070953369141,
+      "retrieval": {
+        "rank_i2t": 7,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "caption_en": "dog standing in the snow with other dogs",
+      "caption_ru": "Собака стояла в снегу с другими собаками",
+      "caption_ru_raw": "Собака стояла в снегу с другими собаками.",
+      "archive_ru": "Собака стояла в снегу с другими собаками.",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26800453662872314,
+        "CLIPScore_RU_caption_ru": 0.2707531452178955,
+        "CLIPScore_RU_archive_ru": 0.2708528935909271,
+        "CLIPScore_RU_reference_ru": 0.29683560132980347
+      },
+      "latency_sec": 0.864814281463623,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "caption_en": "pagoda in the middle of a city with a lot of people",
+      "caption_ru": "Пагода в центре города с множеством людей",
+      "caption_ru_raw": "Пагода в центре города с множеством людей",
+      "archive_ru": "Пагода в центре города с множеством людей.",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2814539074897766,
+        "CLIPScore_RU_caption_ru": 0.29002392292022705,
+        "CLIPScore_RU_archive_ru": 0.2889694571495056,
+        "CLIPScore_RU_reference_ru": 0.3548523187637329
+      },
+      "latency_sec": 0.870337724685669,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white drawing of a man with a mustache",
+      "caption_ru": "черно-белый рисунок человека с усами",
+      "caption_ru_raw": "черно-белый рисунок человека с усами",
+      "archive_ru": "Черно-белый рисунок человека с усами.",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24517686665058136,
+        "CLIPScore_RU_caption_ru": 0.2449156492948532,
+        "CLIPScore_RU_archive_ru": 0.24390989542007446,
+        "CLIPScore_RU_reference_ru": 0.3040972352027893
+      },
+      "latency_sec": 0.833223819732666,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "caption_en": "two children riding a sled down a snowy hill",
+      "caption_ru": "Двое детей ездят на санях вниз по снегу",
+      "caption_ru_raw": "Двое детей ездят на санях вниз по снегу",
+      "archive_ru": "Двое детей ездят на санях вниз по снегу.",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3142819404602051,
+        "CLIPScore_RU_caption_ru": 0.31374865770339966,
+        "CLIPScore_RU_archive_ru": 0.31163400411605835,
+        "CLIPScore_RU_reference_ru": 0.34150415658950806
+      },
+      "latency_sec": 0.8564338684082031,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "picture of a child in a colorful outfit holding flowers",
+      "caption_ru": "рисунок ребенка в ярком наряде с цветами",
+      "caption_ru_raw": "рисунок ребенка в ярком наряде с цветами",
+      "archive_ru": "Рисунок ребенка в ярком наряде с цветами.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32491499185562134,
+        "CLIPScore_RU_caption_ru": 0.35425040125846863,
+        "CLIPScore_RU_archive_ru": 0.3573474586009979,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 0.9167759418487549,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a postcard of a harbor with boats",
+      "caption_ru": "фотографию открытки гавани с лодками",
+      "caption_ru_raw": "фотографию открытки гавани с лодками",
+      "archive_ru": "Фотографию открытки гавани с лодками.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28724586963653564,
+        "CLIPScore_RU_caption_ru": 0.3048745393753052,
+        "CLIPScore_RU_archive_ru": 0.3054076135158539,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8493170738220215,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a group of four different colored flowers on a white surface",
+      "caption_ru": "группа из четырех цветных цветов на белой поверхности",
+      "caption_ru_raw": "группа из четырех цветных цветов на белой поверхности",
+      "archive_ru": "Группа из четырех цветных цветов на белой поверхности.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30818331241607666,
+        "CLIPScore_RU_caption_ru": 0.30216577649116516,
+        "CLIPScore_RU_archive_ru": 0.30632030963897705,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7314250469207764,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage postcard of a wave breaking on the rocks at the beach",
+      "caption_ru": "Винтажная открытка с волной, взламывающей камни на пляже",
+      "caption_ru_raw": "Винтажная открытка с волной, взламывающей камни на пляже",
+      "archive_ru": "Винтажная открытка с волной, взламывающей камни на пляже.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3644314408302307,
+        "CLIPScore_RU_caption_ru": 0.371226966381073,
+        "CLIPScore_RU_archive_ru": 0.37152501940727234,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9943573474884033,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage halloween card with a pumpkin and a witch",
+      "caption_ru": "Винтажная карта на Хэллоуин с тыквой и ведьмой",
+      "caption_ru_raw": "Винтажная карта на Хэллоуин с тыквой и ведьмой",
+      "archive_ru": "Винтажная карта на Хэллоуин с тыквой и ведьмой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3481398820877075,
+        "CLIPScore_RU_caption_ru": 0.362474262714386,
+        "CLIPScore_RU_archive_ru": 0.3632693886756897,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.018887996673584,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "painting of a vase of flowers and a bowl of fruit on a table",
+      "caption_ru": "рисунок вазы цветов и чаши фруктов на столе",
+      "caption_ru_raw": "рисунок вазы цветов и чаши фруктов на столе",
+      "archive_ru": "Рисунок вазы цветов и чаши фруктов на столе.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3313082456588745,
+        "CLIPScore_RU_caption_ru": 0.3665362000465393,
+        "CLIPScore_RU_archive_ru": 0.36665281653404236,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8980748653411865,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a picture of a town with a river",
+      "caption_ru": "фотографию города с рекой",
+      "caption_ru_raw": "фотографию города с рекой",
+      "archive_ru": "Фотографию города с рекой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25545597076416016,
+        "CLIPScore_RU_caption_ru": 0.254828542470932,
+        "CLIPScore_RU_archive_ru": 0.2551409900188446,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7740640640258789,
+      "retrieval": {
+        "rank_i2t": 8,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "street scene with pedestrians and horse drawn carriages in the middle of the street",
+      "caption_ru": "Уличная сцена с пешеходами и лошадиными каретами посреди улицы",
+      "caption_ru_raw": "Уличная сцена с пешеходами и лошадиными каретами посреди улицы",
+      "archive_ru": "Уличная сцена с пешеходами и лошадиными каретами посреди улицы.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2690327763557434,
+        "CLIPScore_RU_caption_ru": 0.25902628898620605,
+        "CLIPScore_RU_archive_ru": 0.2594195008277893,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.1630079746246338,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "view of a bridge with people walking across it",
+      "caption_ru": "Вид на мост с людьми, проходящими через него",
+      "caption_ru_raw": "Вид на мост с людьми, проходящими через него",
+      "archive_ru": "Вид на мост с людьми, проходящими через него.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29899412393569946,
+        "CLIPScore_RU_caption_ru": 0.2916303873062134,
+        "CLIPScore_RU_archive_ru": 0.29249900579452515,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8227708339691162,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "view of a bridge over a body of water",
+      "caption_ru": "вид моста над водоемом",
+      "caption_ru_raw": "вид моста над водоемом",
+      "archive_ru": "Вид моста над водоемом.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27403008937835693,
+        "CLIPScore_RU_caption_ru": 0.27643826603889465,
+        "CLIPScore_RU_archive_ru": 0.2769189774990082,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.6509213447570801,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a man plowing a field with horses",
+      "caption_ru": "черно-белое фото человека, пахающего поле лошадьми",
+      "caption_ru_raw": "черно-белое фото человека, пахающего поле лошадьми",
+      "archive_ru": "Черно-белое фото человека, пахающего поле лошадьми.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33037543296813965,
+        "CLIPScore_RU_caption_ru": 0.34472671151161194,
+        "CLIPScore_RU_archive_ru": 0.34428662061691284,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9349110126495361,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "an old photo of a man with a long beard and a turban",
+      "caption_ru": "старое фото человека с длинной бородой и тюрбаном",
+      "caption_ru_raw": "старое фото человека с длинной бородой и тюрбаном",
+      "archive_ru": "Старое фото человека с длинной бородой и тюрбаном.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.307334303855896,
+        "CLIPScore_RU_caption_ru": 0.3489864468574524,
+        "CLIPScore_RU_archive_ru": 0.3501964807510376,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.935784101486206,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "rock with steps leading to a small cave",
+      "caption_ru": "Камень с ступеньками, ведущими в маленькую пещеру",
+      "caption_ru_raw": "Камень с ступеньками, ведущими в маленькую пещеру",
+      "archive_ru": "Камень с ступеньками, ведущими в маленькую пещеру.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29694461822509766,
+        "CLIPScore_RU_caption_ru": 0.31429392099380493,
+        "CLIPScore_RU_archive_ru": 0.3148266673088074,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9194891452789307,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a black and white photo of a man in a tuxedo",
+      "caption_ru": "черно-белое фото мужчины в смокинге",
+      "caption_ru_raw": "черно-белое фото мужчины в смокинге",
+      "archive_ru": "Черно-белое фото мужчины в смокинге.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30444806814193726,
+        "CLIPScore_RU_caption_ru": 0.3077350854873657,
+        "CLIPScore_RU_archive_ru": 0.30748823285102844,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8669428825378418,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "view of a bridge with a city in the background",
+      "caption_ru": "Вид моста с городом на заднем плане",
+      "caption_ru_raw": "Вид моста с городом на заднем плане",
+      "archive_ru": "Вид моста с городом на заднем плане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28173819184303284,
+        "CLIPScore_RU_caption_ru": 0.2803976535797119,
+        "CLIPScore_RU_archive_ru": 0.2813325524330139,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7841219902038574,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "woman in a colorful dress and head scarf",
+      "caption_ru": "женщина в цветном платье и головном шарфе",
+      "caption_ru_raw": "женщина в цветном платье и головном шарфе",
+      "archive_ru": "Женщина в цветном платье и головном шарфе.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29699188470840454,
+        "CLIPScore_RU_caption_ru": 0.2968222200870514,
+        "CLIPScore_RU_archive_ru": 0.2927231192588806,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7399420738220215,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "source": "nypl",
+      "caption_en": "a painting of a woman and a man standing in a park",
+      "caption_ru": "рисунок женщины и мужчины, стоящих в парке",
+      "caption_ru_raw": "рисунок женщины и мужчины, стоящих в парке",
+      "archive_ru": "Рисунок женщины и мужчины, стоящих в парке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28447961807250977,
+        "CLIPScore_RU_caption_ru": 0.29611045122146606,
+        "CLIPScore_RU_archive_ru": 0.2973180413246155,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7955682277679443,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a poster of a man holding a flag and a hammer",
+      "caption_ru": "плакат человека с флагом и молотком",
+      "caption_ru_raw": "плакат человека с флагом и молотком",
+      "archive_ru": "Плакат человека с флагом и молотком.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28371384739875793,
+        "CLIPScore_RU_caption_ru": 0.29630202054977417,
+        "CLIPScore_RU_archive_ru": 0.30175554752349854,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7844259738922119,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a dog sitting on the ground with a christmas card",
+      "caption_ru": "Собака, сидящая на земле с рождественской открыткой",
+      "caption_ru_raw": "Собака, сидящая на земле с рождественской открыткой",
+      "archive_ru": "Собака, сидящая на земле с рождественской открыткой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.31829285621643066,
+        "CLIPScore_RU_caption_ru": 0.3334592580795288,
+        "CLIPScore_RU_archive_ru": 0.33222997188568115,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8369221687316895,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage postcard of a path in a forest with trees",
+      "caption_ru": "Винтажная открытка пути в лесу с деревьями",
+      "caption_ru_raw": "Винтажная открытка пути в лесу с деревьями",
+      "archive_ru": "Винтажная открытка пути в лесу с деревьями.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.37272509932518005,
+        "CLIPScore_RU_caption_ru": 0.36235594749450684,
+        "CLIPScore_RU_archive_ru": 0.3630073070526123,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8290400505065918,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "photograph of a full moon over the ocean with a boat in the distance",
+      "caption_ru": "Фотография полнолуния над океаном с лодкой на расстоянии",
+      "caption_ru_raw": "Фотография полнолуния над океаном с лодкой на расстоянии",
+      "archive_ru": "Фотография полнолуния над океаном с лодкой на расстоянии.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32671597599983215,
+        "CLIPScore_RU_caption_ru": 0.3297022581100464,
+        "CLIPScore_RU_archive_ru": 0.33093881607055664,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9406111240386963,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "an angel with a bouquet of flowers in her hand",
+      "caption_ru": "Ангел с букетом цветов в руке",
+      "caption_ru_raw": "Ангел с букетом цветов в руке",
+      "archive_ru": "Ангел с букетом цветов в руке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28474026918411255,
+        "CLIPScore_RU_caption_ru": 0.31593266129493713,
+        "CLIPScore_RU_archive_ru": 0.31655365228652954,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7504041194915771,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a hat with a label on it that says fake and lame brims",
+      "caption_ru": "Шляпа с лейблом, на которой написано фальшивое и отстойное дерьмо",
+      "caption_ru_raw": "Шляпа с лейблом, на которой написано фальшивое и отстойное дерьмо.",
+      "archive_ru": "Шляпа с лейблом, на которой написано фальшивое и отстойное дерьмо.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27396267652511597,
+        "CLIPScore_RU_caption_ru": 0.30106574296951294,
+        "CLIPScore_RU_archive_ru": 0.3010140359401703,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.072336196899414,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a card with a picture of a plant",
+      "caption_ru": "рисунок карточки с изображением растения",
+      "caption_ru_raw": "рисунок карточки с изображением растения",
+      "archive_ru": "Рисунок карточки с изображением растения.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2751712501049042,
+        "CLIPScore_RU_caption_ru": 0.32646942138671875,
+        "CLIPScore_RU_archive_ru": 0.32369011640548706,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8176560401916504,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "drawing of a woman with a hat and a pipe",
+      "caption_ru": "рисунок женщины с шляпой и трубой",
+      "caption_ru_raw": "рисунок женщины с шляпой и трубой",
+      "archive_ru": "Рисунок женщины с шляпой и трубой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2994704246520996,
+        "CLIPScore_RU_caption_ru": 0.31871315836906433,
+        "CLIPScore_RU_archive_ru": 0.32005876302719116,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7996358871459961,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "two different pictures of birds sitting on a branch with berries",
+      "caption_ru": "две разные фотографии птиц, сидящих на ветке с ягодами",
+      "caption_ru_raw": "две разные фотографии птиц, сидящих на ветке с ягодами",
+      "archive_ru": "Две разные фотографии птиц, сидящих на ветке с ягодами.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.280662477016449,
+        "CLIPScore_RU_caption_ru": 0.29277217388153076,
+        "CLIPScore_RU_archive_ru": 0.2925059199333191,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8359718322753906,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "many people sitting on the beach near the water",
+      "caption_ru": "много людей сидят на пляже рядом с водой",
+      "caption_ru_raw": "много людей сидят на пляже рядом с водой",
+      "archive_ru": "Много людей сидят на пляже рядом с водой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27353596687316895,
+        "CLIPScore_RU_caption_ru": 0.2913054823875427,
+        "CLIPScore_RU_archive_ru": 0.29062798619270325,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7376570701599121,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "araffe sitting on a horse in a field with other animals",
+      "caption_ru": "Арафф сидит на лошади в поле с другими животными",
+      "caption_ru_raw": "Арафф сидит на лошади в поле с другими животными",
+      "archive_ru": "Арафф сидит на лошади в поле с другими животными.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28268685936927795,
+        "CLIPScore_RU_caption_ru": 0.2927830219268799,
+        "CLIPScore_RU_archive_ru": 0.29573187232017517,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8833699226379395,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a picture of a postcard of a building with a flag on it",
+      "caption_ru": "фотографию открытки здания с флагом на ней",
+      "caption_ru_raw": "фотографию открытки здания с флагом на ней",
+      "archive_ru": "Фотографию открытки здания с флагом на ней.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2527308762073517,
+        "CLIPScore_RU_caption_ru": 0.27029335498809814,
+        "CLIPScore_RU_archive_ru": 0.2720327377319336,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8661880493164062,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man riding a donkey pulling a cart with a donkey",
+      "caption_ru": "Человек, который катается на осле, тянет повозку с оселом",
+      "caption_ru_raw": "Человек, который катается на осле, тянет повозку с оселом.",
+      "archive_ru": "Человек, который катается на осле, тянет повозку с оселом.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3067220151424408,
+        "CLIPScore_RU_caption_ru": 0.31185364723205566,
+        "CLIPScore_RU_archive_ru": 0.3125801682472229,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9957678318023682,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "view of a city with a bridge and a river",
+      "caption_ru": "Вид на город с мостом и рекой",
+      "caption_ru_raw": "Вид на город с мостом и рекой",
+      "archive_ru": "Вид на город с мостом и рекой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26282182335853577,
+        "CLIPScore_RU_caption_ru": 0.2625918984413147,
+        "CLIPScore_RU_archive_ru": 0.2641185224056244,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.7814900875091553,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "donkey with saddle standing on dirt road in wooded area",
+      "caption_ru": "осел с седлом, стоящим на грунтовой дороге в лесу",
+      "caption_ru_raw": "осел с седлом, стоящим на грунтовой дороге в лесу",
+      "archive_ru": "Осел с седлом, стоящим на грунтовой дороге в лесу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3056603670120239,
+        "CLIPScore_RU_caption_ru": 0.33689454197883606,
+        "CLIPScore_RU_archive_ru": 0.3380795121192932,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.870966911315918,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "araffes and a man on a horse near the pyramids",
+      "caption_ru": "Арафы и человек на лошади рядом с пирамидами",
+      "caption_ru_raw": "Арафы и человек на лошади рядом с пирамидами",
+      "archive_ru": "Арафы и человек на лошади рядом с пирамидами.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2716662287712097,
+        "CLIPScore_RU_caption_ru": 0.31451889872550964,
+        "CLIPScore_RU_archive_ru": 0.31558138132095337,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.9242589473724365,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "araffe with saddle standing in a field of grass near a bush",
+      "caption_ru": "araffe с седлом, стоящим в поле травы рядом с кустом",
+      "caption_ru_raw": "araffe с седлом, стоящим в поле травы рядом с кустом",
+      "archive_ru": "Araffe с седлом, стоящим в поле травы рядом с кустом.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25071752071380615,
+        "CLIPScore_RU_caption_ru": 0.2918318808078766,
+        "CLIPScore_RU_archive_ru": 0.3009908199310303,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.0215480327606201,
+      "retrieval": {
+        "rank_i2t": 5,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage christmas card with a santa claus riding in a sleigh",
+      "caption_ru": "Винтажная рождественская открытка с санта-клаусом, катающимся в санях",
+      "caption_ru_raw": "Винтажная рождественская открытка с санта-клаусом, катающимся в санях",
+      "archive_ru": "Винтажная рождественская открытка с санта-клаусом, катающимся в санях.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3339994251728058,
+        "CLIPScore_RU_caption_ru": 0.3516213297843933,
+        "CLIPScore_RU_archive_ru": 0.3520880937576294,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.173896074295044,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "santa claus climbing a ladder with a basket of presents on his back",
+      "caption_ru": "Санта Клаус лазит по лестнице с корзиной подарков на спине",
+      "caption_ru_raw": "Санта Клаус лазит по лестнице с корзиной подарков на спине",
+      "archive_ru": "Санта Клаус лазит по лестнице с корзиной подарков на спине.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33793431520462036,
+        "CLIPScore_RU_caption_ru": 0.34327131509780884,
+        "CLIPScore_RU_archive_ru": 0.34214985370635986,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.1062469482421875,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage valentine card with a child holding his hand to his mouth",
+      "caption_ru": "Винтажная валентиновая карточка с ребёнком, прижимающим руку к рту",
+      "caption_ru_raw": "Винтажная валентиновая карточка с ребёнком, прижимающим руку к рту",
+      "archive_ru": "Винтажная валентиновая карточка с ребёнком, прижимающим руку к рту.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.37781259417533875,
+        "CLIPScore_RU_caption_ru": 0.4028344452381134,
+        "CLIPScore_RU_archive_ru": 0.4030381143093109,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.1594488620758057,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a bunch of daisies that are on a card",
+      "caption_ru": "кучка маргариток, которые есть на открытке",
+      "caption_ru_raw": "кучка маргариток, которые есть на открытке",
+      "archive_ru": "Кучка маргариток, которые есть на открытке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3183787167072296,
+        "CLIPScore_RU_caption_ru": 0.34691715240478516,
+        "CLIPScore_RU_archive_ru": 0.34949731826782227,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8756108283996582,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vintage postcard of a tree growing on a rock outcropping in the water",
+      "caption_ru": "Винтажная открытка с деревом, выращиваемым на скале, раздирающей воду",
+      "caption_ru_raw": "Винтажная открытка с деревом, выращиваемым на скале, раздирающей воду.",
+      "archive_ru": "Винтажная открытка с деревом, выращиваемым на скале, раздирающей воду.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3836475610733032,
+        "CLIPScore_RU_caption_ru": 0.3848491311073303,
+        "CLIPScore_RU_archive_ru": 0.385731965303421,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 1.1385011672973633,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a drawing of a man with a mustache and a shirt",
+      "caption_ru": "рисунок человека с усами и рубашкой",
+      "caption_ru_raw": "рисунок человека с усами и рубашкой",
+      "archive_ru": "Рисунок человека с усами и рубашкой.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23436880111694336,
+        "CLIPScore_RU_caption_ru": 0.23959365487098694,
+        "CLIPScore_RU_archive_ru": 0.24625533819198608,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8319497108459473,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "view of a river with trees and bushes in the foreground",
+      "caption_ru": "вид на реку с деревьями и кустами на переднем плане",
+      "caption_ru_raw": "вид на реку с деревьями и кустами на переднем плане",
+      "archive_ru": "Вид на реку с деревьями и кустами на переднем плане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2820124328136444,
+        "CLIPScore_RU_caption_ru": 0.29058417677879333,
+        "CLIPScore_RU_archive_ru": 0.2914798855781555,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 0.8855280876159668,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

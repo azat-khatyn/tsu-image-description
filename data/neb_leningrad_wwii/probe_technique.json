@@ -1,0 +1,811 @@
+{
+  "device": "cpu",
+  "n_train": 212,
+  "n_val": 53,
+  "n_cross_n60": 60,
+  "class_distribution_neb": {
+    "lithograph": 154,
+    "zincography": 13,
+    "autotypia": 98
+  },
+  "train_accuracy": 0.9906,
+  "val_metrics": {
+    "n": 53,
+    "accuracy": 0.8868,
+    "macro_f1": 0.857,
+    "per_class": {
+      "lithograph": {
+        "support": 31,
+        "precision": 0.8788,
+        "recall": 0.9355,
+        "f1": 0.9062
+      },
+      "autotypia": {
+        "support": 20,
+        "precision": 0.9412,
+        "recall": 0.8,
+        "f1": 0.8649
+      },
+      "zincography": {
+        "support": 2,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      }
+    },
+    "confusion": {
+      "lithograph": {
+        "lithograph": 29,
+        "autotypia": 1,
+        "zincography": 1
+      },
+      "autotypia": {
+        "lithograph": 4,
+        "autotypia": 16,
+        "zincography": 0
+      },
+      "zincography": {
+        "lithograph": 0,
+        "autotypia": 0,
+        "zincography": 2
+      }
+    }
+  },
+  "cross_domain_n60": {
+    "distribution": {
+      "autotypia": 36,
+      "lithograph": 24
+    },
+    "by_source": {
+      "rgb": {
+        "n": 20,
+        "distribution": {
+          "autotypia": 12,
+          "lithograph": 8
+        }
+      },
+      "nypl": {
+        "n": 40,
+        "distribution": {
+          "autotypia": 24,
+          "lithograph": 16
+        }
+      }
+    }
+  },
+  "per_item_val": [
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087517.jpg",
+      "technique_raw": "хромолитогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087520.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085654.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086987.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086932.jpg",
+      "technique_raw": "автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085695.jpg",
+      "technique_raw": "цинкогр. с тоном",
+      "gt": "zincography",
+      "pred": "zincography",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086782.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085649.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086101.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085505.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087028.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086964.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086961.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "lithograph",
+      "correct": false
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086243.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "lithograph",
+      "correct": false
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087516.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085586.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085820.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087055.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086100.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087395.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087361.jpg",
+      "technique_raw": "хромолитогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087529.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086128.jpg",
+      "technique_raw": "цинкогр. с тоном",
+      "gt": "zincography",
+      "pred": "zincography",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087082.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "lithograph",
+      "correct": false
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085652.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086159.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087527.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "lithograph",
+      "correct": false
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086105.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087001.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087057.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086696.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085787.jpg",
+      "technique_raw": "литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087500.jpg",
+      "technique_raw": "хромолитогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086267.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "zincography",
+      "correct": false
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086154.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087012.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087226.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086930.jpg",
+      "technique_raw": "автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086703.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087382.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086613.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "autotypia",
+      "correct": false
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087390.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085962.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087460.jpg",
+      "technique_raw": "цв. литогр.",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087013.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087074.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2085891.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086459.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087017.jpg",
+      "technique_raw": "автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2086959.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087455.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087406.jpg",
+      "technique_raw": "цв. автотип.",
+      "gt": "autotypia",
+      "pred": "autotypia",
+      "correct": true
+    },
+    {
+      "image_file": "000200_000018_RU_NLR_bibl_2087229.jpg",
+      "technique_raw": "литогр. с тоном",
+      "gt": "lithograph",
+      "pred": "lithograph",
+      "correct": true
+    }
+  ],
+  "per_item_cross_n60": [
+    {
+      "image_file": "postcard_1.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5036114855781129
+    },
+    {
+      "image_file": "postcard_2.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5506777220311149
+    },
+    {
+      "image_file": "postcard_3.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5152907812123259
+    },
+    {
+      "image_file": "postcard_4.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5795100708076731
+    },
+    {
+      "image_file": "postcard_5.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.8681307992404232
+    },
+    {
+      "image_file": "postcard_6.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.9680302019519431
+    },
+    {
+      "image_file": "postcard_7.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.8880680901264657
+    },
+    {
+      "image_file": "postcard_8.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.9839298652649568
+    },
+    {
+      "image_file": "postcard_9.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.987120169843614
+    },
+    {
+      "image_file": "postcard_10.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.7027315482626822
+    },
+    {
+      "image_file": "postcard_11.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.7085103817586628
+    },
+    {
+      "image_file": "postcard_12.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.894699559081571
+    },
+    {
+      "image_file": "postcard_13.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5169080213683684
+    },
+    {
+      "image_file": "postcard_14.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.7946691367965959
+    },
+    {
+      "image_file": "postcard_15.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.8743311942730368
+    },
+    {
+      "image_file": "postcard_16.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.8289930231838761
+    },
+    {
+      "image_file": "postcard_17.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5946560589189489
+    },
+    {
+      "image_file": "postcard_18.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.8149668629697541
+    },
+    {
+      "image_file": "postcard_19.jpg",
+      "source": "rgb",
+      "pred": "autotypia",
+      "max_prob": 0.5184114998420838
+    },
+    {
+      "image_file": "postcard_20.jpg",
+      "source": "rgb",
+      "pred": "lithograph",
+      "max_prob": 0.9682127074055982
+    },
+    {
+      "image_file": "0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9797208561551306
+    },
+    {
+      "image_file": "0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.8403665760362203
+    },
+    {
+      "image_file": "0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9390372817549456
+    },
+    {
+      "image_file": "0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.7406573630314359
+    },
+    {
+      "image_file": "0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6395673327088791
+    },
+    {
+      "image_file": "0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6897904600488726
+    },
+    {
+      "image_file": "0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6388307090936657
+    },
+    {
+      "image_file": "0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9793697846744949
+    },
+    {
+      "image_file": "0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9869320106673425
+    },
+    {
+      "image_file": "16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9603974948311973
+    },
+    {
+      "image_file": "1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.8912067299650434
+    },
+    {
+      "image_file": "1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9450607779469223
+    },
+    {
+      "image_file": "1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9847342038159153
+    },
+    {
+      "image_file": "1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.8466987550996623
+    },
+    {
+      "image_file": "1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.8937748898371108
+    },
+    {
+      "image_file": "1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.8690308073825664
+    },
+    {
+      "image_file": "2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.9740619577440813
+    },
+    {
+      "image_file": "37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.900762413427652
+    },
+    {
+      "image_file": "3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.8774078863807009
+    },
+    {
+      "image_file": "43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.8899596143063419
+    },
+    {
+      "image_file": "4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9193553096589878
+    },
+    {
+      "image_file": "4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6811753916950695
+    },
+    {
+      "image_file": "4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6054876285766086
+    },
+    {
+      "image_file": "55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9943209809390259
+    },
+    {
+      "image_file": "58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.945926323571375
+    },
+    {
+      "image_file": "58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.6502212561520699
+    },
+    {
+      "image_file": "5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.7228052211851514
+    },
+    {
+      "image_file": "7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.8476823137613384
+    },
+    {
+      "image_file": "7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.91503762482466
+    },
+    {
+      "image_file": "7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9478933658555365
+    },
+    {
+      "image_file": "8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6464815166096048
+    },
+    {
+      "image_file": "8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9537824124512514
+    },
+    {
+      "image_file": "8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.6668521132877389
+    },
+    {
+      "image_file": "8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9546441765739108
+    },
+    {
+      "image_file": "8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.6967727327261516
+    },
+    {
+      "image_file": "8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9859283550015865
+    },
+    {
+      "image_file": "9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.5630316719921462
+    },
+    {
+      "image_file": "9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.9520423151221764
+    },
+    {
+      "image_file": "9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "lithograph",
+      "max_prob": 0.7849172268183898
+    },
+    {
+      "image_file": "9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "pred": "autotypia",
+      "max_prob": 0.6050946242492592
+    }
+  ]
+}

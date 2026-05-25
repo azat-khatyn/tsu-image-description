@@ -1,36 +1,178 @@
-# scripts/evaluate.py
+"""evaluate.py — reference-free evaluation for archive captioning.
 
+Supports:
+  - BLIP-1 / BLIP-2 caption backends
+  - RGB-20 references
+  - NYPL-200 pool
+  - combined ALL-220 retrieval / robustness runs
+  - CLIPScore variants
+  - retrieval R@k (image <-> archive description)
+
+Primary metric:
+  - CLIPScore_RU(image, archive_description_ru)
+
+Recommended usage:
+  - RGB-20 display quality
+  - NYPL-200 robustness
+  - ALL-220 retrieval
+"""
+
+import argparse
 import json
-import re
+import sys
 import time
 from pathlib import Path
-from collections import Counter
-
-import nltk
-from nltk.translate.meteor_score import meteor_score
-from nltk.stem.snowball import SnowballStemmer
-
-from sacrebleu.metrics import BLEU
-from bert_score import score as bertscore_score
 
 import numpy as np
+import open_clip
 import torch
 from PIL import Image
-import open_clip
 
-import sys
 sys.path.insert(0, "src")
 
 from tsu_image_description.pipeline import ArchiveDescriptionPipeline
 
 
-nltk.download("wordnet", quiet=True)
-nltk.download("omw-1.4", quiet=True)
+# ---------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------
+def parse_args():
+    parser = argparse.ArgumentParser()
 
-ru_stemmer = SnowballStemmer("russian")
+    parser.add_argument(
+        "--finetuned",
+        type=str,
+        default=None,
+        help="Path to a full finetuned BLIP checkpoint (BLIP-1 only).",
+    )
+    parser.add_argument(
+        "--caption-backend",
+        type=str,
+        choices=["blip1", "blip2"],
+        default="blip1",
+        help="Captioning backend.",
+    )
+    parser.add_argument(
+        "--mclip-model",
+        type=str,
+        default="M-CLIP/XLM-Roberta-Large-Vit-B-32",
+        help="HuggingFace model name for M-CLIP RU text encoder.",
+    )
+    parser.add_argument(
+        "--references",
+        type=str,
+        default="data/eval/references.jsonl",
+        help="Path to annotated references JSONL.",
+    )
+    parser.add_argument(
+        "--pool",
+        type=str,
+        default=None,
+        help="Optional retrieval pool JSONL appended to --references.",
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="data/eval/results/metrics_triad_run.json",
+        help="Path to output metrics JSON.",
+    )
+    parser.add_argument(
+        "--drop-theme",
+        action="store_true",
+        help="Drop theme sentence from archive_description.",
+    )
+    parser.add_argument(
+        "--drop-mood",
+        action="store_true",
+        help="Drop mood sentence from archive_description.",
+    )
+    parser.add_argument(
+        "--template-mode",
+        type=str,
+        choices=["full", "minimal", "caption_only"],
+        default="full",
+        help="Template for archive_description.",
+    )
+    parser.add_argument(
+        "--drop-generic-style",
+        action="store_true",
+        help="E05d: drop generic style labels (vintage/decorative/retro) from intro phrase. "
+             "No-op when taxonomy_version=archival_v2 (no generic labels exist).",
+    )
+    parser.add_argument(
+        "--taxonomy-version",
+        type=str,
+        default="archival_v2",
+        choices=["legacy_v1", "archival_v2"],
+        help="SigLIP taxonomy version. legacy_v1 reproduces pre-E06b experiments; "
+             "archival_v2 uses Файнштейн / MARC 21 / Getty AAT archival vocabulary.",
+    )
+    parser.add_argument(
+        "--use-llm-rewriter",
+        action="store_true",
+        help="E12: route archive description through a local LLM rewriter.",
+    )
+    parser.add_argument(
+        "--llm-model",
+        type=str,
+        default="Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24",
+        help="LLM rewriter model path (only used with --use-llm-rewriter).",
+    )
+    parser.add_argument(
+        "--llm-prompt-style",
+        type=str,
+        choices=["v1_archival", "v2_curator"],
+        default="v1_archival",
+        help="LLM rewriter prompt style (only used with --use-llm-rewriter). "
+             "v1_archival = E12 baseline (preamble: 'Открытка-хромолитография. ...'). "
+             "v2_curator = E13, calibrated to НЭБ field 327 (no material-type preamble).",
+    )
+    parser.add_argument(
+        "--translator-model",
+        type=str,
+        default=None,
+        help="Override EN→RU translator model.",
+    )
+    parser.add_argument(
+        "--num-beams",
+        type=int,
+        default=1,
+        help="Caption decoding beam count.",
+    )
+    parser.add_argument(
+        "--length-penalty",
+        type=float,
+        default=1.0,
+        help="Caption decoding length penalty.",
+    )
+    parser.add_argument(
+        "--prompt-prefix",
+        type=str,
+        default=None,
+        help="Optional English prompt prefix for captioning.",
+    )
+    parser.add_argument(
+        "--max-new-tokens",
+        type=int,
+        default=50,
+        help="Max new tokens for caption generation.",
+    )
+
+    return parser.parse_args()
 
 
-def load_references(path: str):
+# ---------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------
+def get_device():
+    if torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
+
+
+def load_references(path):
     items = []
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
@@ -40,378 +182,395 @@ def load_references(path: str):
     return items
 
 
-def normalize_text(text: str) -> str:
-    text = text.lower().strip()
-    text = text.replace("ё", "е")
-    text = re.sub(r"[^\w\s]", " ", text, flags=re.UNICODE)
-    text = re.sub(r"\s+", " ", text, flags=re.UNICODE)
-    return text.strip()
-
-
-def normalize_for_lexical_metrics(text: str) -> str:
-    text = normalize_text(text)
-    tokens = re.findall(r"\w+", text, flags=re.UNICODE)
-    stems = [ru_stemmer.stem(tok) for tok in tokens]
-    return " ".join(stems)
-
-
-def tokenize_for_lexical_metrics(text: str):
-    return normalize_for_lexical_metrics(text).split()
-
-
-def normalize_type_label(text: str) -> str:
-    text = normalize_text(text)
-    mapping = {
-        "a postcard": "открытка",
-        "postcard": "открытка",
-        "открытка": "открытка",
-        "greeting card": "открытка",
-        "a greeting card": "открытка",
-        "poster": "плакат",
-        "a poster": "плакат",
-        "плакат": "плакат",
-        "illustration": "иллюстрация",
-        "an illustration": "иллюстрация",
-        "иллюстрация": "иллюстрация",
-        "photograph": "фотография",
-        "a photograph": "фотография",
-        "photo": "фотография",
-        "фотография": "фотография",
-    }
-    return mapping.get(text, text)
-
-
-def encode_clip_image(image_path: str, model, preprocess, device: str) -> np.ndarray:
-    image = preprocess(Image.open(image_path).convert("RGB")).unsqueeze(0).to(device)
-
-    with torch.no_grad():
-        image_features = model.encode_image(image)
-        image_features = image_features / image_features.norm(dim=-1, keepdim=True)
-
-    return image_features.squeeze(0).detach().cpu().numpy().astype("float32")
-
-
-def encode_clip_text(text: str, model, tokenizer, device: str) -> np.ndarray:
-    text_tokens = tokenizer([text]).to(device)
-
-    with torch.no_grad():
-        text_features = model.encode_text(text_tokens)
-        text_features = text_features / text_features.norm(dim=-1, keepdim=True)
-
-    return text_features.squeeze(0).detach().cpu().numpy().astype("float32")
-
-
-def compute_clipscore_from_embeddings(image_emb: np.ndarray, text_emb: np.ndarray) -> float:
-    return float(np.dot(image_emb, text_emb))
-
-
 def mean(values):
-    return sum(values) / len(values) if values else 0.0
+    return float(np.mean(values)) if values else None
 
 
-def rouge1_f1_from_tokens(pred_tokens, ref_tokens):
-    pred_counts = Counter(pred_tokens)
-    ref_counts = Counter(ref_tokens)
-    overlap = sum((pred_counts & ref_counts).values())
-
-    if len(pred_tokens) == 0 or len(ref_tokens) == 0 or overlap == 0:
-        return 0.0
-
-    precision = overlap / len(pred_tokens)
-    recall = overlap / len(ref_tokens)
-
-    if precision + recall == 0:
-        return 0.0
-
-    return 2 * precision * recall / (precision + recall)
-
-
-def lcs_length(xs, ys):
-    n = len(xs)
-    m = len(ys)
-
-    dp = [[0] * (m + 1) for _ in range(n + 1)]
-
-    for i in range(1, n + 1):
-        xi = xs[i - 1]
-        for j in range(1, m + 1):
-            if xi == ys[j - 1]:
-                dp[i][j] = dp[i - 1][j - 1] + 1
-            else:
-                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
-
-    return dp[n][m]
-
-
-def rouge_l_f1_from_tokens(pred_tokens, ref_tokens):
-    if len(pred_tokens) == 0 or len(ref_tokens) == 0:
-        return 0.0
-
-    lcs = lcs_length(pred_tokens, ref_tokens)
-    if lcs == 0:
-        return 0.0
-
-    precision = lcs / len(pred_tokens)
-    recall = lcs / len(ref_tokens)
-
-    if precision + recall == 0:
-        return 0.0
-
-    return 2 * precision * recall / (precision + recall)
-
-
-def compute_text_metrics(predictions_raw_ru, references_raw_ru):
-    """
-    Лексические метрики считаем по нормализованным и стеммированным русским токенам.
-    BERTScore считаем по сырым русским строкам.
-    """
-    bleu = BLEU(effective_order=True)
-
-    pred_lex = [normalize_for_lexical_metrics(p) for p in predictions_raw_ru]
-    ref_lex = [normalize_for_lexical_metrics(r) for r in references_raw_ru]
-
-    pred_tok = [p.split() for p in pred_lex]
-    ref_tok = [r.split() for r in ref_lex]
-
-    meteor_scores = []
-    rouge1_scores = []
-    rougel_scores = []
-
-    for pred_tokens, ref_tokens in zip(pred_tok, ref_tok):
-        meteor_scores.append(meteor_score([ref_tokens], pred_tokens))
-        rouge1_scores.append(rouge1_f1_from_tokens(pred_tokens, ref_tokens))
-        rougel_scores.append(rouge_l_f1_from_tokens(pred_tokens, ref_tokens))
-
-    bleu_result = bleu.corpus_score(pred_lex, [[r for r in ref_lex]])
-
-    # BERTScore по сырым русским строкам
-    _, _, bert_f1 = bertscore_score(
-        predictions_raw_ru,
-        references_raw_ru,
-        lang="ru",
-        verbose=False,
-    )
-
-    return {
-        "BLEU": float(bleu_result.score),
-        "METEOR_mean": float(mean(meteor_scores)),
-        "ROUGE-1-F1_mean": float(mean(rouge1_scores)),
-        "ROUGE-L-F1_mean": float(mean(rougel_scores)),
-        "BERTScore_F1_mean": float(bert_f1.mean().item()),
-    }
-
-
-def main():
-    references_path = "data/eval/references.jsonl"
-    refs = load_references(references_path)
-
-    pipeline = ArchiveDescriptionPipeline()
-
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    clip_model, _, clip_preprocess = open_clip.create_model_and_transforms(
+# ---------------------------------------------------------------------
+# CLIP loaders
+# ---------------------------------------------------------------------
+def load_clip_en(device):
+    model, _, preprocess = open_clip.create_model_and_transforms(
         "ViT-B-32",
         pretrained="openai",
     )
-    clip_model = clip_model.to(device).eval()
-    clip_tokenizer = open_clip.get_tokenizer("ViT-B-32")
+    model = model.to(device).eval()
+    tokenizer = open_clip.get_tokenizer("ViT-B-32")
+    return model, preprocess, tokenizer
 
-    short_predictions_raw_ru = []
-    short_references_raw_ru = []
 
-    clip_scores_pred_en = []
-    clip_scores_pred_ru = []
-    clip_scores_archive = []
-    clip_scores_reference_ru = []
+class MCLIPTextEncoder(torch.nn.Module):
+    """Custom M-CLIP text encoder: XLM-R + linear projection."""
 
+    def __init__(self, transformer, linear):
+        super().__init__()
+        self.transformer = transformer
+        self.LinearTransformation = linear
+
+
+def load_mclip(model_name, device):
+    from huggingface_hub import hf_hub_download
+    from transformers import AutoConfig, AutoModel, AutoTokenizer
+
+    config_path = hf_hub_download(repo_id=model_name, filename="config.json")
+    with open(config_path, "r", encoding="utf-8") as cf:
+        cfg = json.load(cf)
+
+    base_model_name = cfg.get("modelBase", "xlm-roberta-large")
+    transformer_dim = cfg.get("transformerDimensions", 1024)
+    num_dims = cfg.get("numDims", 512)
+
+    try:
+        weights_path = hf_hub_download(repo_id=model_name, filename="model.safetensors")
+        from safetensors.torch import load_file
+
+        state = load_file(weights_path)
+    except Exception:
+        weights_path = hf_hub_download(repo_id=model_name, filename="pytorch_model.bin")
+        state = torch.load(weights_path, map_location="cpu")
+
+    base_cfg = AutoConfig.from_pretrained(base_model_name)
+    transformer = AutoModel.from_config(base_cfg)
+
+    transformer_state = {
+        k[len("transformer."):]: v
+        for k, v in state.items()
+        if k.startswith("transformer.")
+    }
+    missing, unexpected = transformer.load_state_dict(transformer_state, strict=False)
+    if missing or unexpected:
+        print(
+            f"[INFO] M-CLIP transformer load: "
+            f"{len(missing)} missing, {len(unexpected)} unexpected keys"
+        )
+
+    linear = torch.nn.Linear(transformer_dim, num_dims)
+    linear.load_state_dict(
+        {
+            "weight": state["LinearTransformation.weight"],
+            "bias": state["LinearTransformation.bias"],
+        }
+    )
+
+    text_model = MCLIPTextEncoder(transformer, linear).to(device).eval()
+    tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+    return text_model, tokenizer
+
+
+# ---------------------------------------------------------------------
+# Encoding
+# ---------------------------------------------------------------------
+@torch.no_grad()
+def encode_image(image_path, clip_model, preprocess, device):
+    image = preprocess(Image.open(image_path).convert("RGB")).unsqueeze(0).to(device)
+    feat = clip_model.encode_image(image)
+    feat = feat / feat.norm(dim=-1, keepdim=True)
+    return feat.squeeze(0).cpu().numpy()
+
+
+@torch.no_grad()
+def encode_text_en(text, clip_model, tokenizer, device):
+    tokens = tokenizer([text]).to(device)
+    feat = clip_model.encode_text(tokens)
+    feat = feat / feat.norm(dim=-1, keepdim=True)
+    return feat.squeeze(0).cpu().numpy()
+
+
+@torch.no_grad()
+def encode_text_ru(text, mclip_model, mclip_tokenizer, device):
+    tok = mclip_tokenizer([text], padding=True, return_tensors="pt")
+    tok = {k: v.to(device) for k, v in tok.items()}
+
+    embs = mclip_model.transformer(**tok)[0]
+    att = tok["attention_mask"]
+    pooled = (embs * att.unsqueeze(2)).sum(dim=1) / att.sum(dim=1)[:, None]
+    feat = mclip_model.LinearTransformation(pooled)
+
+    feat = feat / feat.norm(dim=-1, keepdim=True)
+    return feat.squeeze(0).cpu().numpy()
+
+
+def cosine(a, b):
+    return float(np.dot(a, b))
+
+
+# ---------------------------------------------------------------------
+# Retrieval
+# ---------------------------------------------------------------------
+def compute_retrieval(img_matrix, txt_matrix, ks=(1, 5, 10)):
+    """R@k for image <-> archive_description retrieval."""
+    n = img_matrix.shape[0]
+    sim = img_matrix @ txt_matrix.T
+
+    ranks_i2t = []
+    ranks_t2i = []
+
+    for i in range(n):
+        order_i2t = np.argsort(-sim[i])
+        ranks_i2t.append(int(np.where(order_i2t == i)[0][0]) + 1)
+
+        order_t2i = np.argsort(-sim[:, i])
+        ranks_t2i.append(int(np.where(order_t2i == i)[0][0]) + 1)
+
+    def at_k(ranks, k):
+        return float(np.mean([r <= k for r in ranks]))
+
+    aggregates = {
+        "n_pool": n,
+        "i2t": {f"R@{k}": at_k(ranks_i2t, k) for k in ks},
+        "t2i": {f"R@{k}": at_k(ranks_t2i, k) for k in ks},
+        "mean_rank_i2t": float(np.mean(ranks_i2t)),
+        "mean_rank_t2i": float(np.mean(ranks_t2i)),
+    }
+
+    per_item_ranks = [
+        {"rank_i2t": ri, "rank_t2i": rt}
+        for ri, rt in zip(ranks_i2t, ranks_t2i)
+    ]
+
+    return {"aggregates": aggregates, "ranks": per_item_ranks}
+
+
+# ---------------------------------------------------------------------
+# Pipeline setup
+# ---------------------------------------------------------------------
+def build_pipeline(
+    *,
+    finetuned_path=None,
+    builder_kwargs=None,
+    translator_model=None,
+    caption_kwargs=None,
+    use_llm_rewriter=False,
+    llm_rewriter_kwargs=None,
+    taxonomy_version: str = "archival_v2",
+):
+    pipeline = ArchiveDescriptionPipeline(
+        model_path=finetuned_path,
+        caption_kwargs=caption_kwargs,
+        translator_model=translator_model,
+        use_llm_rewriter=use_llm_rewriter,
+        llm_rewriter_kwargs=llm_rewriter_kwargs,
+        builder_kwargs=builder_kwargs,
+        taxonomy_version=taxonomy_version,
+    )
+    return pipeline
+
+
+# ---------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------
+def main():
+    args = parse_args()
+    device = get_device()
+
+    refs = load_references(args.references)
+    n_annotated = len(refs)
+
+    if args.pool:
+        pool_items = load_references(args.pool)
+        refs = refs + pool_items
+        print(
+            f"[INFO] Loaded {n_annotated} annotated + {len(pool_items)} pool items "
+            f"= {len(refs)} total"
+        )
+    else:
+        print(f"[INFO] Loaded {n_annotated} annotated items")
+
+    print(f"[INFO] Device: {device}")
+    print(f"[INFO] Eval items: {len(refs)}")
+
+    builder_kwargs = {
+        "template_mode": args.template_mode,
+        "include_theme": not args.drop_theme,
+        "include_mood": not args.drop_mood,
+        "drop_generic_style": args.drop_generic_style,
+    }
+
+    caption_kwargs = {
+        "backend": args.caption_backend,
+        "num_beams": args.num_beams,
+        "length_penalty": args.length_penalty,
+        "prompt_prefix": args.prompt_prefix,
+        "max_new_tokens": args.max_new_tokens,
+    }
+
+    finetuned_path = getattr(args, "finetuned", None)
+
+    print(
+        f"\n[INFO] Loading pipeline (finetuned={finetuned_path}, "
+        f"template_mode={builder_kwargs['template_mode']}, "
+        f"caption_kwargs={caption_kwargs})..."
+    )
+
+    pipeline = build_pipeline(
+        finetuned_path=finetuned_path,
+        builder_kwargs=builder_kwargs,
+        translator_model=args.translator_model,
+        caption_kwargs=caption_kwargs,
+        use_llm_rewriter=args.use_llm_rewriter,
+        llm_rewriter_kwargs={
+            "model_path": args.llm_model,
+            "prompt_style": args.llm_prompt_style,
+        } if args.use_llm_rewriter else None,
+        taxonomy_version=args.taxonomy_version,
+    )
+
+    print("[INFO] Loading EN CLIP (open_clip ViT-B-32 openai)...")
+    clip_en, preprocess, tokenizer_en = load_clip_en(device)
+
+    print(f"[INFO] Loading RU CLIP ({args.mclip_model})...")
+    mclip_text, mclip_tokenizer = load_mclip(args.mclip_model, device)
+
+    per_item = []
+    img_embs = []
+    archive_embs = []
     total_time = 0.0
-    rows = []
 
-    image_embeddings = []
-    reference_short_ru_embeddings = []
-    predicted_caption_ru_embeddings = []
-    predicted_caption_en_embeddings = []
-    archive_prediction_embeddings = []
+    print("\n--- RUNNING EVALUATION ---\n")
 
-    for item in refs:
+    for i, item in enumerate(refs):
         image_path = item["image_path"]
-        reference_short_ru = item["reference_short_ru"]
-        reference_type = item.get("type", "")
+        ref_ru = (item.get("reference_short_ru") or "").strip()
 
         t0 = time.time()
         result = pipeline.run(image_path)
         elapsed = time.time() - t0
-
-        pred_caption_ru_raw = result["caption"]["ru"]
-        pred_caption_en_raw = result["caption"].get("en", "")
-        pred_archive_raw = result["archive_description"]
-
-        short_predictions_raw_ru.append(pred_caption_ru_raw)
-        short_references_raw_ru.append(reference_short_ru)
-
-        pred_type_raw = result["metadata"]["image_type"]["label"]
-        pred_type_norm = normalize_type_label(pred_type_raw)
-        ref_type_norm = normalize_type_label(reference_type) if reference_type else ""
-
-        image_emb = encode_clip_image(
-            image_path=image_path,
-            model=clip_model,
-            preprocess=clip_preprocess,
-            device=device,
-        )
-
-        reference_short_ru_emb = encode_clip_text(
-            text=reference_short_ru,
-            model=clip_model,
-            tokenizer=clip_tokenizer,
-            device=device,
-        )
-
-        predicted_caption_ru_emb = encode_clip_text(
-            text=pred_caption_ru_raw,
-            model=clip_model,
-            tokenizer=clip_tokenizer,
-            device=device,
-        )
-
-        predicted_caption_en_text = pred_caption_en_raw if pred_caption_en_raw else pred_caption_ru_raw
-        predicted_caption_en_emb = encode_clip_text(
-            text=predicted_caption_en_text,
-            model=clip_model,
-            tokenizer=clip_tokenizer,
-            device=device,
-        )
-
-        archive_prediction_emb = encode_clip_text(
-            text=pred_archive_raw,
-            model=clip_model,
-            tokenizer=clip_tokenizer,
-            device=device,
-        )
-
-        # Основной CLIPScore — по predicted English caption
-        clip_val_pred_en = compute_clipscore_from_embeddings(image_emb, predicted_caption_en_emb)
-        clip_val_pred_ru = compute_clipscore_from_embeddings(image_emb, predicted_caption_ru_emb)
-        clip_val_archive = compute_clipscore_from_embeddings(image_emb, archive_prediction_emb)
-        clip_val_reference_ru = compute_clipscore_from_embeddings(image_emb, reference_short_ru_emb)
-
-        clip_scores_pred_en.append(clip_val_pred_en)
-        clip_scores_pred_ru.append(clip_val_pred_ru)
-        clip_scores_archive.append(clip_val_archive)
-        clip_scores_reference_ru.append(clip_val_reference_ru)
-
         total_time += elapsed
 
-        image_embeddings.append(image_emb)
-        reference_short_ru_embeddings.append(reference_short_ru_emb)
-        predicted_caption_ru_embeddings.append(predicted_caption_ru_emb)
-        predicted_caption_en_embeddings.append(predicted_caption_en_emb)
-        archive_prediction_embeddings.append(archive_prediction_emb)
+        caption_en = result["caption"].get("en", "") or ""
+        caption_ru = result["caption"].get("ru", "") or ""
+        caption_ru_raw = result["caption"].get("ru_raw", "") or ""
+        archive_ru = result.get("archive_description", "") or ""
 
-        rows.append(
+        img_emb = encode_image(image_path, clip_en, preprocess, device)
+
+        archive_emb = (
+            encode_text_ru(archive_ru, mclip_text, mclip_tokenizer, device)
+            if archive_ru
+            else None
+        )
+
+        scores = {
+            "CLIPScore_EN_caption_en": (
+                cosine(img_emb, encode_text_en(caption_en, clip_en, tokenizer_en, device))
+                if caption_en
+                else None
+            ),
+            "CLIPScore_RU_caption_ru": (
+                cosine(img_emb, encode_text_ru(caption_ru, mclip_text, mclip_tokenizer, device))
+                if caption_ru
+                else None
+            ),
+            "CLIPScore_RU_archive_ru": (
+                cosine(img_emb, archive_emb) if archive_emb is not None else None
+            ),
+            "CLIPScore_RU_reference_ru": (
+                cosine(img_emb, encode_text_ru(ref_ru, mclip_text, mclip_tokenizer, device))
+                if ref_ru
+                else None
+            ),
+        }
+
+        img_embs.append(img_emb)
+        archive_embs.append(archive_emb if archive_emb is not None else np.zeros_like(img_emb))
+
+        print(f"[{i + 1}/{len(refs)}] {Path(image_path).name}")
+        print(f"  caption_en:    {caption_en}")
+        print(f"  caption_ru:    {caption_ru}")
+        if caption_ru_raw and caption_ru_raw != caption_ru:
+            print(f"  caption_ru_raw:{caption_ru_raw}")
+        print(f"  archive:       {archive_ru[:140]}{'…' if len(archive_ru) > 140 else ''}")
+        for k, v in scores.items():
+            if v is not None:
+                print(f"  {k:32s}: {v:.4f}")
+        print(f"  latency: {elapsed:.2f}s\n")
+
+        per_item.append(
             {
-                "embedding_row_idx": len(rows),
                 "image_path": image_path,
-                "caption_en_prediction": pred_caption_en_raw,
-                "caption_ru_prediction": pred_caption_ru_raw,
-                "reference_short_ru": reference_short_ru,
-                "predicted_type_raw": pred_type_raw,
-                "predicted_type_normalized": pred_type_norm,
-                "reference_type": reference_type,
-                "reference_type_normalized": ref_type_norm,
-                "archive_prediction": pred_archive_raw,
-                "clipscore_pred_en": clip_val_pred_en,
-                "clipscore_pred_ru": clip_val_pred_ru,
-                "clipscore_archive": clip_val_archive,
-                "clipscore_reference_ru": clip_val_reference_ru,
-                "clipscore": clip_val_pred_en,
+                "source": item.get("source", "rgb"),
+                "caption_en": caption_en,
+                "caption_ru": caption_ru,
+                "caption_ru_raw": caption_ru_raw,
+                "archive_ru": archive_ru,
+                "reference_ru": ref_ru,
+                "scores": scores,
                 "latency_sec": elapsed,
             }
         )
 
-    short_metrics = compute_text_metrics(
-        short_predictions_raw_ru,
-        short_references_raw_ru,
-    )
+    def mean_of(key, source_filter=None):
+        vals = [
+            it["scores"][key]
+            for it in per_item
+            if it["scores"].get(key) is not None
+            and (source_filter is None or it.get("source") == source_filter)
+        ]
+        return mean(vals)
+
+    retrieval = compute_retrieval(np.stack(img_embs), np.stack(archive_embs))
+    for it, ranks in zip(per_item, retrieval["ranks"]):
+        it["retrieval"] = ranks
+
+    sources = sorted(set(it.get("source", "rgb") for it in per_item))
+    by_source = {}
+    for src in sources:
+        n_src = sum(1 for it in per_item if it.get("source") == src)
+        by_source[src] = {
+            "n": n_src,
+            "CLIPScore_RU_archive_ru": mean_of("CLIPScore_RU_archive_ru", src),
+            "CLIPScore_RU_caption_ru": mean_of("CLIPScore_RU_caption_ru", src),
+            "CLIPScore_EN_caption_en": mean_of("CLIPScore_EN_caption_en", src),
+        }
 
     summary = {
         "num_examples": len(refs),
-        "short_text_metrics": short_metrics,
-        "CLIPScore_mean": float(mean(clip_scores_pred_en)),
-        "CLIPScore_mean_pred_en": float(mean(clip_scores_pred_en)),
-        "CLIPScore_mean_pred_ru": float(mean(clip_scores_pred_ru)),
-        "CLIPScore_mean_archive": float(mean(clip_scores_archive)),
-        "CLIPScore_mean_reference_ru": float(mean(clip_scores_reference_ru)),
-        "Latency_mean_sec": float(total_time / len(refs)) if refs else 0.0,
-        "Images_per_sec": float(len(refs) / total_time) if total_time > 0 else 0.0,
-        "metric_protocol": {
-            "BLEU_METEOR_ROUGE": "normalized russian text + Snowball stemming + custom token-based ROUGE",
-            "BERTScore": "raw russian text",
-            "main_CLIPScore_variant": "image ↔ predicted_caption_en",
-            "type_metrics": "excluded from final summary as methodologically non-interpretable for current dataset",
+        "primary_metric": "CLIPScore_RU_archive_ru",
+        "config": {
+            "finetuned": finetuned_path,
+            "caption_backend": args.caption_backend,
+            "translator_model": args.translator_model or "Helsinki-NLP/opus-mt-en-ru",
+            "builder_kwargs": builder_kwargs,
+            "caption_kwargs": caption_kwargs,
+            "taxonomy_version": args.taxonomy_version,
+            "use_llm_rewriter": args.use_llm_rewriter,
+            "llm_model": args.llm_model if args.use_llm_rewriter else None,
+            "llm_prompt_style": args.llm_prompt_style if args.use_llm_rewriter else None,
+            "references_path": args.references,
+            "pool_path": args.pool,
+        },
+        "scorers": {
+            "EN": "open_clip ViT-B-32 (openai)",
+            "RU": args.mclip_model,
+        },
+        "metrics": {
+            "CLIPScore_EN_caption_en": mean_of("CLIPScore_EN_caption_en"),
+            "CLIPScore_RU_caption_ru": mean_of("CLIPScore_RU_caption_ru"),
+            "CLIPScore_RU_archive_ru": mean_of("CLIPScore_RU_archive_ru"),
+            "CLIPScore_RU_reference_ru": mean_of("CLIPScore_RU_reference_ru"),
+        },
+        "by_source": by_source,
+        "retrieval": retrieval["aggregates"],
+        "latency": {
+            "mean_sec": total_time / len(refs) if refs else None,
+            "images_per_sec": len(refs) / total_time if total_time > 0 else None,
         },
     }
 
-    out_dir = Path("data/eval/results")
-    out_dir.mkdir(parents=True, exist_ok=True)
+    print("\n=== FINAL RESULTS ===")
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
 
-    with open(out_dir / "metrics_summary.json", "w", encoding="utf-8") as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
-
-    with open(out_dir / "predictions_detailed.json", "w", encoding="utf-8") as f:
-        json.dump(rows, f, ensure_ascii=False, indent=2)
-
-    np.savez_compressed(
-        out_dir / "embeddings_clip.npz",
-        image_embeddings=np.stack(image_embeddings),
-        reference_short_ru_embeddings=np.stack(reference_short_ru_embeddings),
-        predicted_caption_ru_embeddings=np.stack(predicted_caption_ru_embeddings),
-        predicted_caption_en_embeddings=np.stack(predicted_caption_en_embeddings),
-        archive_prediction_embeddings=np.stack(archive_prediction_embeddings),
-    )
-
-    with open(out_dir / "embeddings_manifest.json", "w", encoding="utf-8") as f:
+    out_path = Path(args.output)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(
-            {
-                "embedding_model": "open_clip ViT-B-32",
-                "pretrained": "openai",
-                "normalized": True,
-                "main_clipscore_variant": "image ↔ predicted_caption_en",
-                "alignment_rule": (
-                    "row i in predictions_detailed.json corresponds to row i "
-                    "in every array in embeddings_clip.npz"
-                ),
-                "arrays": [
-                    "image_embeddings",
-                    "reference_short_ru_embeddings",
-                    "predicted_caption_ru_embeddings",
-                    "predicted_caption_en_embeddings",
-                    "archive_prediction_embeddings",
-                ],
-            },
+            {"summary": summary, "per_item": per_item},
             f,
-            ensure_ascii=False,
             indent=2,
+            ensure_ascii=False,
         )
 
-    print("\n=== SHORT DESCRIPTION METRICS ===")
-    for k, v in short_metrics.items():
-        print(f"{k}: {v:.4f}")
-
-    print("\n=== MULTIMODAL / CLIPSCORE ===")
-    print(f"CLIPScore_mean (pred_en): {summary['CLIPScore_mean_pred_en']:.4f}")
-    print(f"CLIPScore_mean (pred_ru): {summary['CLIPScore_mean_pred_ru']:.4f}")
-    print(f"CLIPScore_mean (archive): {summary['CLIPScore_mean_archive']:.4f}")
-    print(f"CLIPScore_mean (reference_ru): {summary['CLIPScore_mean_reference_ru']:.4f}")
-
-    print("\n=== PERFORMANCE ===")
-    print(f"Latency_mean_sec: {summary['Latency_mean_sec']:.4f}")
-    print(f"Images_per_sec: {summary['Images_per_sec']:.4f}")
-
-    print("\nSaved to:")
-    print(out_dir / "metrics_summary.json")
-    print(out_dir / "predictions_detailed.json")
-    print(out_dir / "embeddings_clip.npz")
-    print(out_dir / "embeddings_manifest.json")
+    print(f"\n[INFO] Saved metrics to {out_path}")
 
 
 if __name__ == "__main__":

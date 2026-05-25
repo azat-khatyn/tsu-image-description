@@ -1,0 +1,2482 @@
+{
+  "n_postcards": 74,
+  "probe_classes": [
+    "genre",
+    "landscape",
+    "portrait",
+    "religious",
+    "still-life"
+  ],
+  "archival_themes": [
+    "a landscape",
+    "an urban view",
+    "a portrait",
+    "a genre scene",
+    "a still life",
+    "a religious subject",
+    "a military subject",
+    "a holiday scene"
+  ],
+  "probe_distribution": {
+    "landscape": 22,
+    "genre": 14,
+    "portrait": 16,
+    "religious": 14,
+    "still-life": 8
+  },
+  "zero_shot_distribution": {
+    "a landscape": 9,
+    "a holiday scene": 23,
+    "an urban view": 9,
+    "a still life": 8,
+    "a military subject": 9,
+    "a portrait": 12,
+    "a religious subject": 3,
+    "a genre scene": 1
+  },
+  "probe_mean_margin": 0.7011469378111805,
+  "per_item": [
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_1.jpg",
+      "image_file": "postcard_1.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Сосновый лес",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.5841759894505021,
+        "margin": 0.1687766654820806,
+        "all_probs": {
+          "landscape": 0.5841759894505021,
+          "religious": 0.4153993239684215,
+          "portrait": 0.00042212991000037896,
+          "genre": 2.5207572127435034e-06,
+          "still-life": 3.5913863357434966e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.1301615983247757,
+        "all_probs": {
+          "a landscape": 0.1301615983247757,
+          "an urban view": 0.122434101998806,
+          "a portrait": 0.12252628058195114,
+          "a genre scene": 0.12547576427459717,
+          "a still life": 0.12296847254037857,
+          "a religious subject": 0.12249546498060226,
+          "a military subject": 0.1240558847784996,
+          "a holiday scene": 0.12988242506980896
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_2.jpg",
+      "image_file": "postcard_2.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8393445747013814,
+        "margin": 0.6922261801812815,
+        "all_probs": {
+          "genre": 0.8393445747013814,
+          "landscape": 0.14711839452009984,
+          "religious": 0.013316610000669022,
+          "portrait": 0.0002204099469518211,
+          "still-life": 1.0830897822345345e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13225647807121277,
+        "all_probs": {
+          "a landscape": 0.12749558687210083,
+          "an urban view": 0.11935825645923615,
+          "a portrait": 0.11976378411054611,
+          "a genre scene": 0.12882472574710846,
+          "a still life": 0.12424346804618835,
+          "a religious subject": 0.12137149274349213,
+          "a military subject": 0.12668626010417938,
+          "a holiday scene": 0.13225647807121277
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_3.jpg",
+      "image_file": "postcard_3.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9964559719823894,
+        "margin": 0.9929205869406257,
+        "all_probs": {
+          "landscape": 0.9964559719823894,
+          "religious": 0.00353538504176375,
+          "genre": 7.491883622002489e-06,
+          "portrait": 1.151089633899884e-06,
+          "still-life": 2.590969736932846e-12
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.12921962141990662,
+        "all_probs": {
+          "a landscape": 0.12786813080310822,
+          "an urban view": 0.12921962141990662,
+          "a portrait": 0.1175025925040245,
+          "a genre scene": 0.12476065754890442,
+          "a still life": 0.12158263474702835,
+          "a religious subject": 0.12415777146816254,
+          "a military subject": 0.12662793695926666,
+          "a holiday scene": 0.12828068435192108
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_4.jpg",
+      "image_file": "postcard_4.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Девочка с лукошком.",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8516214609004844,
+        "margin": 0.705349075057533,
+        "all_probs": {
+          "genre": 0.8516214609004844,
+          "portrait": 0.1462723858429514,
+          "religious": 0.002017178830704254,
+          "landscape": 7.990179601664934e-05,
+          "still-life": 9.072629843336963e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.128574401140213,
+        "all_probs": {
+          "a landscape": 0.12489365041255951,
+          "an urban view": 0.11612766981124878,
+          "a portrait": 0.12807847559452057,
+          "a genre scene": 0.1282973736524582,
+          "a still life": 0.128574401140213,
+          "a religious subject": 0.12284529209136963,
+          "a military subject": 0.1263144463300705,
+          "a holiday scene": 0.12486874312162399
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_5.jpg",
+      "image_file": "postcard_5.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9052047865562308,
+        "margin": 0.8583815028078378,
+        "all_probs": {
+          "portrait": 0.9052047865562308,
+          "genre": 0.04682328374839309,
+          "landscape": 0.027939269350890125,
+          "religious": 0.010398577606931884,
+          "still-life": 0.009634082737554072
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.12968474626541138,
+        "all_probs": {
+          "a landscape": 0.12627580761909485,
+          "an urban view": 0.11803964525461197,
+          "a portrait": 0.12366162240505219,
+          "a genre scene": 0.1264549046754837,
+          "a still life": 0.12506698071956635,
+          "a religious subject": 0.12178591638803482,
+          "a military subject": 0.12903039157390594,
+          "a holiday scene": 0.12968474626541138
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_6.jpg",
+      "image_file": "postcard_6.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.8616724815108804,
+        "margin": 0.7266861652211936,
+        "all_probs": {
+          "religious": 0.8616724815108804,
+          "landscape": 0.13498631628968683,
+          "genre": 0.003092742140581693,
+          "portrait": 0.00024099799672391535,
+          "still-life": 7.462062127181182e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.13007991015911102,
+        "all_probs": {
+          "a landscape": 0.12670071423053741,
+          "an urban view": 0.12209907919168472,
+          "a portrait": 0.12012920528650284,
+          "a genre scene": 0.12680946290493011,
+          "a still life": 0.12553472816944122,
+          "a religious subject": 0.12240106612443924,
+          "a military subject": 0.13007991015911102,
+          "a holiday scene": 0.1262458711862564
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_7.jpg",
+      "image_file": "postcard_7.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Розы расцветают...",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.9937526243724457,
+        "margin": 0.9911158944822667,
+        "all_probs": {
+          "still-life": 0.9937526243724457,
+          "portrait": 0.0026367298901790633,
+          "landscape": 0.0025281189852663717,
+          "genre": 0.0010799170314125894,
+          "religious": 2.609720696303214e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.13099290430545807,
+        "all_probs": {
+          "a landscape": 0.12508124113082886,
+          "an urban view": 0.116292305290699,
+          "a portrait": 0.12418479472398758,
+          "a genre scene": 0.12587778270244598,
+          "a still life": 0.13099290430545807,
+          "a religious subject": 0.12743841111660004,
+          "a military subject": 0.1253861039876938,
+          "a holiday scene": 0.12474647909402847
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_8.jpg",
+      "image_file": "postcard_8.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.45137734761437664,
+        "margin": 0.004354137953149206,
+        "all_probs": {
+          "portrait": 0.45137734761437664,
+          "landscape": 0.44702320966122744,
+          "still-life": 0.07731556440616726,
+          "genre": 0.021865061834613966,
+          "religious": 0.0024188164836146508
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.12940610945224762,
+        "all_probs": {
+          "a landscape": 0.12404397875070572,
+          "an urban view": 0.11821071803569794,
+          "a portrait": 0.12276774644851685,
+          "a genre scene": 0.1260172575712204,
+          "a still life": 0.12940610945224762,
+          "a religious subject": 0.12707211077213287,
+          "a military subject": 0.1244053840637207,
+          "a holiday scene": 0.1280767321586609
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_9.jpg",
+      "image_file": "postcard_9.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Гейша сидит у зеркала",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8533062193580939,
+        "margin": 0.7552121630011207,
+        "all_probs": {
+          "genre": 0.8533062193580939,
+          "portrait": 0.09809405635697317,
+          "landscape": 0.033199863694530075,
+          "religious": 0.009978089972846717,
+          "still-life": 0.00542177061755608
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13053520023822784,
+        "all_probs": {
+          "a landscape": 0.12291030585765839,
+          "an urban view": 0.11965510994195938,
+          "a portrait": 0.13053520023822784,
+          "a genre scene": 0.12830482423305511,
+          "a still life": 0.1267450451850891,
+          "a religious subject": 0.12358402460813522,
+          "a military subject": 0.12271199375391006,
+          "a holiday scene": 0.1255534142255783
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_10.jpg",
+      "image_file": "postcard_10.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Изображение цветов и девочки",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9098867479503607,
+        "margin": 0.8374155297992838,
+        "all_probs": {
+          "portrait": 0.9098867479503607,
+          "landscape": 0.07247121815107693,
+          "religious": 0.008902995985908312,
+          "still-life": 0.006467412898267886,
+          "genre": 0.0022716250143861765
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13098178803920746,
+        "all_probs": {
+          "a landscape": 0.12336920946836472,
+          "an urban view": 0.11615926027297974,
+          "a portrait": 0.13098178803920746,
+          "a genre scene": 0.12496268004179001,
+          "a still life": 0.12798964977264404,
+          "a religious subject": 0.12475619465112686,
+          "a military subject": 0.12436520308256149,
+          "a holiday scene": 0.12741610407829285
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_11.jpg",
+      "image_file": "postcard_11.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.9986678959258946,
+        "margin": 0.9977146224859484,
+        "all_probs": {
+          "still-life": 0.9986678959258946,
+          "religious": 0.0009532734399460685,
+          "landscape": 0.0002870229487548606,
+          "portrait": 7.706877226287623e-05,
+          "genre": 1.4738913141681728e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1324353963136673,
+        "all_probs": {
+          "a landscape": 0.12321899831295013,
+          "an urban view": 0.11970571428537369,
+          "a portrait": 0.12020765244960785,
+          "a genre scene": 0.12458852678537369,
+          "a still life": 0.1285145878791809,
+          "a religious subject": 0.12591063976287842,
+          "a military subject": 0.1254185140132904,
+          "a holiday scene": 0.1324353963136673
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_12.jpg",
+      "image_file": "postcard_12.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Девушка держит свечу",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8788076847097167,
+        "margin": 0.7622507576896983,
+        "all_probs": {
+          "genre": 0.8788076847097167,
+          "portrait": 0.11655692702001845,
+          "religious": 0.0028884833845214315,
+          "landscape": 0.001707367131474875,
+          "still-life": 3.9537754268683954e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13022591173648834,
+        "all_probs": {
+          "a landscape": 0.12188388407230377,
+          "an urban view": 0.11912861466407776,
+          "a portrait": 0.13022591173648834,
+          "a genre scene": 0.1280091404914856,
+          "a still life": 0.1277424842119217,
+          "a religious subject": 0.125563845038414,
+          "a military subject": 0.1240479126572609,
+          "a holiday scene": 0.12339822947978973
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_13.jpg",
+      "image_file": "postcard_13.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Дети в лесу зимой",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.49273804910135155,
+        "margin": 0.011119359199371126,
+        "all_probs": {
+          "religious": 0.49273804910135155,
+          "genre": 0.4816186899019804,
+          "landscape": 0.025628837299470277,
+          "portrait": 1.4410610419348253e-05,
+          "still-life": 1.3086778334238195e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1353738158941269,
+        "all_probs": {
+          "a landscape": 0.12535105645656586,
+          "an urban view": 0.11874882876873016,
+          "a portrait": 0.12142236530780792,
+          "a genre scene": 0.12728773057460785,
+          "a still life": 0.12323828786611557,
+          "a religious subject": 0.12634162604808807,
+          "a military subject": 0.12223634123802185,
+          "a holiday scene": 0.1353738158941269
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_14.jpg",
+      "image_file": "postcard_14.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.7161596716780303,
+        "margin": 0.5656126336291301,
+        "all_probs": {
+          "genre": 0.7161596716780303,
+          "portrait": 0.1505470380489003,
+          "religious": 0.1311117505001172,
+          "landscape": 0.0013235866052189284,
+          "still-life": 0.0008579531677332119
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13201570510864258,
+        "all_probs": {
+          "a landscape": 0.12043210119009018,
+          "an urban view": 0.11619629710912704,
+          "a portrait": 0.12503217160701752,
+          "a genre scene": 0.1299244463443756,
+          "a still life": 0.12463698536157608,
+          "a religious subject": 0.1255500316619873,
+          "a military subject": 0.12621234357357025,
+          "a holiday scene": 0.13201570510864258
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_15.jpg",
+      "image_file": "postcard_15.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.5406019348770764,
+        "margin": 0.13592298250884016,
+        "all_probs": {
+          "religious": 0.5406019348770764,
+          "landscape": 0.40467895236823626,
+          "portrait": 0.04469283848833122,
+          "genre": 0.008854199441812843,
+          "still-life": 0.001172074824543379
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1322183758020401,
+        "all_probs": {
+          "a landscape": 0.12508755922317505,
+          "an urban view": 0.12060246616601944,
+          "a portrait": 0.12360866367816925,
+          "a genre scene": 0.12582223117351532,
+          "a still life": 0.12396367639303207,
+          "a religious subject": 0.1254914104938507,
+          "a military subject": 0.12320559471845627,
+          "a holiday scene": 0.1322183758020401
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_16.jpg",
+      "image_file": "postcard_16.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.415691223557426,
+        "margin": 0.03818488193020236,
+        "all_probs": {
+          "portrait": 0.415691223557426,
+          "genre": 0.37750634162722363,
+          "religious": 0.20218024936320056,
+          "landscape": 0.004392447490192091,
+          "still-life": 0.00022973796195781778
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13252896070480347,
+        "all_probs": {
+          "a landscape": 0.12514156103134155,
+          "an urban view": 0.11890032887458801,
+          "a portrait": 0.12339000403881073,
+          "a genre scene": 0.12807627022266388,
+          "a still life": 0.12434234470129013,
+          "a religious subject": 0.1214933693408966,
+          "a military subject": 0.12612715363502502,
+          "a holiday scene": 0.13252896070480347
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_17.jpg",
+      "image_file": "postcard_17.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.8660075111058941,
+        "margin": 0.7356860528732947,
+        "all_probs": {
+          "portrait": 0.8660075111058941,
+          "religious": 0.1303214582325995,
+          "genre": 0.0020774044629114194,
+          "landscape": 0.0015926215307326245,
+          "still-life": 1.004667862566193e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.12861360609531403,
+        "all_probs": {
+          "a landscape": 0.12836575508117676,
+          "an urban view": 0.12710127234458923,
+          "a portrait": 0.11650995165109634,
+          "a genre scene": 0.12364469468593597,
+          "a still life": 0.12329549342393875,
+          "a religious subject": 0.127138152718544,
+          "a military subject": 0.12533116340637207,
+          "a holiday scene": 0.12861360609531403
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_18.jpg",
+      "image_file": "postcard_18.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9998329662886601,
+        "margin": 0.9997109195082982,
+        "all_probs": {
+          "portrait": 0.9998329662886601,
+          "genre": 0.00012204678036202475,
+          "religious": 4.498555915161431e-05,
+          "landscape": 1.2248420020816899e-09,
+          "still-life": 1.4698426358511973e-10
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13165852427482605,
+        "all_probs": {
+          "a landscape": 0.12472333759069443,
+          "an urban view": 0.11764562129974365,
+          "a portrait": 0.13165852427482605,
+          "a genre scene": 0.12457501143217087,
+          "a still life": 0.12745338678359985,
+          "a religious subject": 0.12532146275043488,
+          "a military subject": 0.12788575887680054,
+          "a holiday scene": 0.12073689699172974
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_19.jpg",
+      "image_file": "postcard_19.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.9257481176337637,
+        "margin": 0.874771019705602,
+        "all_probs": {
+          "genre": 0.9257481176337637,
+          "religious": 0.050977097928161796,
+          "landscape": 0.017492690057159078,
+          "portrait": 0.005769776859355471,
+          "still-life": 1.2317521559818904e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13360047340393066,
+        "all_probs": {
+          "a landscape": 0.12390407174825668,
+          "an urban view": 0.11863486468791962,
+          "a portrait": 0.12256114929914474,
+          "a genre scene": 0.12822987139225006,
+          "a still life": 0.12193536013364792,
+          "a religious subject": 0.12498074024915695,
+          "a military subject": 0.12615354359149933,
+          "a holiday scene": 0.13360047340393066
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images/postcard_20.jpg",
+      "image_file": "postcard_20.jpg",
+      "set": "n60",
+      "source": "rgb",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9251492256907109,
+        "margin": 0.8845838268530987,
+        "all_probs": {
+          "religious": 0.9251492256907109,
+          "genre": 0.040565398837612204,
+          "portrait": 0.03281633408620945,
+          "landscape": 0.0009044252605285115,
+          "still-life": 0.000564616124939019
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.1274065524339676,
+        "all_probs": {
+          "a landscape": 0.12271357327699661,
+          "an urban view": 0.12030137330293655,
+          "a portrait": 0.1274065524339676,
+          "a genre scene": 0.12474748492240906,
+          "a still life": 0.12708722054958344,
+          "a religious subject": 0.12708832323551178,
+          "a military subject": 0.12427505105733871,
+          "a holiday scene": 0.12638045847415924
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "image_file": "0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9916121039564001,
+        "margin": 0.9832904511859297,
+        "all_probs": {
+          "landscape": 0.9916121039564001,
+          "religious": 0.008321652770470384,
+          "genre": 5.221356885861748e-05,
+          "portrait": 1.400684714712507e-05,
+          "still-life": 2.2857123606579623e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.12971042096614838,
+        "all_probs": {
+          "a landscape": 0.12657330930233002,
+          "an urban view": 0.12971042096614838,
+          "a portrait": 0.11890830099582672,
+          "a genre scene": 0.12310373783111572,
+          "a still life": 0.12194708734750748,
+          "a religious subject": 0.1250423640012741,
+          "a military subject": 0.12702251970767975,
+          "a holiday scene": 0.12769228219985962
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "image_file": "0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.9596161456701373,
+        "margin": 0.9241927114642859,
+        "all_probs": {
+          "still-life": 0.9596161456701373,
+          "landscape": 0.035423434205851395,
+          "genre": 0.0031282426631693777,
+          "portrait": 0.0018069454672460998,
+          "religious": 2.5231993595826576e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.13001878559589386,
+        "all_probs": {
+          "a landscape": 0.126042902469635,
+          "an urban view": 0.1179252415895462,
+          "a portrait": 0.12437528371810913,
+          "a genre scene": 0.12605991959571838,
+          "a still life": 0.13001878559589386,
+          "a religious subject": 0.1248396709561348,
+          "a military subject": 0.12512366473674774,
+          "a holiday scene": 0.1256144940853119
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "image_file": "0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.602456246544969,
+        "margin": 0.3175860100379233,
+        "all_probs": {
+          "landscape": 0.602456246544969,
+          "religious": 0.2848702365070457,
+          "genre": 0.0871353236732925,
+          "portrait": 0.016005941278985154,
+          "still-life": 0.009532251995707688
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.12893249094486237,
+        "all_probs": {
+          "a landscape": 0.12807805836200714,
+          "an urban view": 0.12180206924676895,
+          "a portrait": 0.12288250029087067,
+          "a genre scene": 0.12638822197914124,
+          "a still life": 0.12598875164985657,
+          "a religious subject": 0.12145818769931793,
+          "a military subject": 0.12446969002485275,
+          "a holiday scene": 0.12893249094486237
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "image_file": "0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.6745442219651968,
+        "margin": 0.4786971334913439,
+        "all_probs": {
+          "religious": 0.6745442219651968,
+          "still-life": 0.19584708847385288,
+          "genre": 0.10072157120902485,
+          "portrait": 0.021859868752798824,
+          "landscape": 0.0070272495991265905
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1304367035627365,
+        "all_probs": {
+          "a landscape": 0.12342923879623413,
+          "an urban view": 0.1185852587223053,
+          "a portrait": 0.12318405508995056,
+          "a genre scene": 0.12977872788906097,
+          "a still life": 0.1261182278394699,
+          "a religious subject": 0.12455470114946365,
+          "a military subject": 0.12391315400600433,
+          "a holiday scene": 0.1304367035627365
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "image_file": "0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.9989272615477787,
+        "margin": 0.997871594692394,
+        "all_probs": {
+          "still-life": 0.9989272615477787,
+          "portrait": 0.0010556668553847114,
+          "genre": 1.0806675701282356e-05,
+          "religious": 6.249252417451326e-06,
+          "landscape": 1.56687178547998e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.13435257971286774,
+        "all_probs": {
+          "a landscape": 0.12556658685207367,
+          "an urban view": 0.11496459692716599,
+          "a portrait": 0.12236200273036957,
+          "a genre scene": 0.12995898723602295,
+          "a still life": 0.13435257971286774,
+          "a religious subject": 0.12371887266635895,
+          "a military subject": 0.12291496247053146,
+          "a holiday scene": 0.12616145610809326
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "image_file": "0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9999960607457716,
+        "margin": 0.9999933379283338,
+        "all_probs": {
+          "landscape": 0.9999960607457716,
+          "genre": 2.72281743789467e-06,
+          "religious": 1.1428379500967573e-06,
+          "portrait": 7.359838423784707e-08,
+          "still-life": 4.560518037550394e-13
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.1297626793384552,
+        "all_probs": {
+          "a landscape": 0.1291162371635437,
+          "an urban view": 0.1297626793384552,
+          "a portrait": 0.11967524886131287,
+          "a genre scene": 0.12469314783811569,
+          "a still life": 0.12210775166749954,
+          "a religious subject": 0.12171585112810135,
+          "a military subject": 0.12478981912136078,
+          "a holiday scene": 0.12813930213451385
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "image_file": "0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.8025112244020396,
+        "margin": 0.6500619324041265,
+        "all_probs": {
+          "still-life": 0.8025112244020396,
+          "landscape": 0.15244929199791316,
+          "religious": 0.031278016594336176,
+          "genre": 0.012068318367930174,
+          "portrait": 0.001693148637780909
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.13276900351047516,
+        "all_probs": {
+          "a landscape": 0.12405262887477875,
+          "an urban view": 0.13276900351047516,
+          "a portrait": 0.11983228474855423,
+          "a genre scene": 0.12810321152210236,
+          "a still life": 0.12215372174978256,
+          "a religious subject": 0.12217584997415543,
+          "a military subject": 0.1219487339258194,
+          "a holiday scene": 0.12896457314491272
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "image_file": "0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9543007582400338,
+        "margin": 0.9134996187495588,
+        "all_probs": {
+          "landscape": 0.9543007582400338,
+          "religious": 0.04080113949047508,
+          "genre": 0.0031396608022020325,
+          "still-life": 0.0010106940477962033,
+          "portrait": 0.0007477474194930922
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.12810903787612915,
+        "all_probs": {
+          "a landscape": 0.12523549795150757,
+          "an urban view": 0.12810903787612915,
+          "a portrait": 0.1216530054807663,
+          "a genre scene": 0.12374461442232132,
+          "a still life": 0.12243391573429108,
+          "a religious subject": 0.12481574714183807,
+          "a military subject": 0.12721426784992218,
+          "a holiday scene": 0.1267939656972885
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "image_file": "0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.893907463948448,
+        "margin": 0.8260816209329506,
+        "all_probs": {
+          "landscape": 0.893907463948448,
+          "genre": 0.06782584301549748,
+          "religious": 0.03572860735095761,
+          "portrait": 0.001364710176059814,
+          "still-life": 0.0011733755090370358
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1302378922700882,
+        "all_probs": {
+          "a landscape": 0.12604843080043793,
+          "an urban view": 0.12797175347805023,
+          "a portrait": 0.1207452341914177,
+          "a genre scene": 0.12410319596529007,
+          "a still life": 0.12317557632923126,
+          "a religious subject": 0.12198051810264587,
+          "a military subject": 0.12573739886283875,
+          "a holiday scene": 0.1302378922700882
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "image_file": "16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.5582029058809495,
+        "margin": 0.3027344607080062,
+        "all_probs": {
+          "landscape": 0.5582029058809495,
+          "genre": 0.25546844517294326,
+          "religious": 0.17580416426614792,
+          "portrait": 0.010474404620807225,
+          "still-life": 5.008005915214585e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13014061748981476,
+        "all_probs": {
+          "a landscape": 0.13014061748981476,
+          "an urban view": 0.12331339716911316,
+          "a portrait": 0.11969871819019318,
+          "a genre scene": 0.12707431614398956,
+          "a still life": 0.12291352450847626,
+          "a religious subject": 0.1211182028055191,
+          "a military subject": 0.12687328457832336,
+          "a holiday scene": 0.12886789441108704
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "image_file": "1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.7997596179531707,
+        "margin": 0.651696617434875,
+        "all_probs": {
+          "portrait": 0.7997596179531707,
+          "genre": 0.14806300051829582,
+          "religious": 0.0509880567628039,
+          "landscape": 0.0011767112396371148,
+          "still-life": 1.261352609230181e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a religious subject",
+        "score": 0.13161349296569824,
+        "all_probs": {
+          "a landscape": 0.12331891804933548,
+          "an urban view": 0.11753344535827637,
+          "a portrait": 0.1277603656053543,
+          "a genre scene": 0.12509658932685852,
+          "a still life": 0.12559126317501068,
+          "a religious subject": 0.13161349296569824,
+          "a military subject": 0.12521646916866302,
+          "a holiday scene": 0.12386950850486755
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "image_file": "1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9509360337402805,
+        "margin": 0.9018993965079474,
+        "all_probs": {
+          "landscape": 0.9509360337402805,
+          "religious": 0.049036637232333036,
+          "genre": 2.2861867990976163e-05,
+          "still-life": 2.9639588870093533e-06,
+          "portrait": 1.5032005085876772e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13010630011558533,
+        "all_probs": {
+          "a landscape": 0.13010630011558533,
+          "an urban view": 0.12137102335691452,
+          "a portrait": 0.12228890508413315,
+          "a genre scene": 0.12425582855939865,
+          "a still life": 0.12293226271867752,
+          "a religious subject": 0.12548890709877014,
+          "a military subject": 0.1253366470336914,
+          "a holiday scene": 0.12822014093399048
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "image_file": "1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9991735772538869,
+        "margin": 0.9987597619193257,
+        "all_probs": {
+          "portrait": 0.9991735772538869,
+          "religious": 0.0004138153345611638,
+          "landscape": 0.0003672536036551327,
+          "genre": 4.511837770832755e-05,
+          "still-life": 2.354301884029756e-07
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.1301540732383728,
+        "all_probs": {
+          "a landscape": 0.122245654463768,
+          "an urban view": 0.11974329501390457,
+          "a portrait": 0.12934722006320953,
+          "a genre scene": 0.12448138743638992,
+          "a still life": 0.12381001561880112,
+          "a religious subject": 0.12741421163082123,
+          "a military subject": 0.1301540732383728,
+          "a holiday scene": 0.1228041797876358
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "image_file": "1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.999962611415303,
+        "margin": 0.9999271657522812,
+        "all_probs": {
+          "landscape": 0.999962611415303,
+          "still-life": 3.5445663021679684e-05,
+          "genre": 9.760485831878302e-07,
+          "portrait": 7.324074435684663e-07,
+          "religious": 2.3446564853386578e-07
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.128754124045372,
+        "all_probs": {
+          "a landscape": 0.12638171017169952,
+          "an urban view": 0.128754124045372,
+          "a portrait": 0.12117985635995865,
+          "a genre scene": 0.12374136596918106,
+          "a still life": 0.12204389274120331,
+          "a religious subject": 0.12476412951946259,
+          "a military subject": 0.12596939504146576,
+          "a holiday scene": 0.12716558575630188
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "image_file": "1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8489737766507247,
+        "margin": 0.7666202370122831,
+        "all_probs": {
+          "genre": 0.8489737766507247,
+          "religious": 0.08235353963844161,
+          "portrait": 0.06842182847628143,
+          "landscape": 0.00020426628324592212,
+          "still-life": 4.658895130608361e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.12947729229927063,
+        "all_probs": {
+          "a landscape": 0.12309876829385757,
+          "an urban view": 0.11887168139219284,
+          "a portrait": 0.12947729229927063,
+          "a genre scene": 0.1274113953113556,
+          "a still life": 0.12635870277881622,
+          "a religious subject": 0.12676633894443512,
+          "a military subject": 0.12350224703550339,
+          "a holiday scene": 0.1245136559009552
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "image_file": "1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9736413539935798,
+        "margin": 0.9570893500940376,
+        "all_probs": {
+          "religious": 0.9736413539935798,
+          "portrait": 0.016552003899542124,
+          "genre": 0.008224671729191805,
+          "landscape": 0.001532270021262415,
+          "still-life": 4.970035642389471e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a genre scene",
+        "score": 0.13276028633117676,
+        "all_probs": {
+          "a landscape": 0.12580184638500214,
+          "an urban view": 0.11955820024013519,
+          "a portrait": 0.12098052352666855,
+          "a genre scene": 0.13276028633117676,
+          "a still life": 0.12502044439315796,
+          "a religious subject": 0.12472953647375107,
+          "a military subject": 0.12492549419403076,
+          "a holiday scene": 0.12622366845607758
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "image_file": "2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.48769006807108695,
+        "margin": 0.003535543198451341,
+        "all_probs": {
+          "genre": 0.48769006807108695,
+          "religious": 0.4841545248726356,
+          "portrait": 0.027674575225309184,
+          "landscape": 0.000472599138454501,
+          "still-life": 8.232692513751725e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.13013014197349548,
+        "all_probs": {
+          "a landscape": 0.12345057725906372,
+          "an urban view": 0.12239356338977814,
+          "a portrait": 0.1205267682671547,
+          "a genre scene": 0.12854255735874176,
+          "a still life": 0.12617886066436768,
+          "a religious subject": 0.1233593299984932,
+          "a military subject": 0.13013014197349548,
+          "a holiday scene": 0.1254182606935501
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "image_file": "37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9042396388712569,
+        "margin": 0.8195765559449432,
+        "all_probs": {
+          "portrait": 0.9042396388712569,
+          "landscape": 0.08466308292631376,
+          "religious": 0.005505872419563455,
+          "genre": 0.00484616401207184,
+          "still-life": 0.0007452417707941656
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13096828758716583,
+        "all_probs": {
+          "a landscape": 0.1230233684182167,
+          "an urban view": 0.11904779076576233,
+          "a portrait": 0.12422066926956177,
+          "a genre scene": 0.12665505707263947,
+          "a still life": 0.12319662421941757,
+          "a religious subject": 0.12580180168151855,
+          "a military subject": 0.12708643078804016,
+          "a holiday scene": 0.13096828758716583
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "image_file": "3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9999703042903955,
+        "margin": 0.999951613342104,
+        "all_probs": {
+          "landscape": 0.9999703042903955,
+          "religious": 1.8690948291423284e-05,
+          "genre": 1.0343823094569276e-05,
+          "portrait": 6.505243955522508e-07,
+          "still-life": 1.0413823008337944e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13072794675827026,
+        "all_probs": {
+          "a landscape": 0.13072794675827026,
+          "an urban view": 0.12222708016633987,
+          "a portrait": 0.12493835389614105,
+          "a genre scene": 0.12481550872325897,
+          "a still life": 0.1247466504573822,
+          "a religious subject": 0.12126759439706802,
+          "a military subject": 0.12335609644651413,
+          "a holiday scene": 0.12792080640792847
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "image_file": "43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.8360258657319817,
+        "margin": 0.6803578870049138,
+        "all_probs": {
+          "landscape": 0.8360258657319817,
+          "religious": 0.15566797872706786,
+          "genre": 0.007849289513400404,
+          "portrait": 0.0004334778349729192,
+          "still-life": 2.338819257712924e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13057629764080048,
+        "all_probs": {
+          "a landscape": 0.13057629764080048,
+          "an urban view": 0.12315057963132858,
+          "a portrait": 0.12298237532377243,
+          "a genre scene": 0.12272382527589798,
+          "a still life": 0.12681670486927032,
+          "a religious subject": 0.12209968268871307,
+          "a military subject": 0.1225745901465416,
+          "a holiday scene": 0.12907594442367554
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "image_file": "4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9955252295066116,
+        "margin": 0.9916945263085193,
+        "all_probs": {
+          "portrait": 0.9955252295066116,
+          "religious": 0.0038307031980922817,
+          "genre": 0.00048709368571975915,
+          "landscape": 0.0001000433322312941,
+          "still-life": 5.693027734511236e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a religious subject",
+        "score": 0.12841972708702087,
+        "all_probs": {
+          "a landscape": 0.12477337568998337,
+          "an urban view": 0.11669302731752396,
+          "a portrait": 0.12738056480884552,
+          "a genre scene": 0.1260606050491333,
+          "a still life": 0.12761016190052032,
+          "a religious subject": 0.12841972708702087,
+          "a military subject": 0.12204870581626892,
+          "a holiday scene": 0.12701387703418732
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "image_file": "4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.6962169152931642,
+        "margin": 0.39410646032280083,
+        "all_probs": {
+          "still-life": 0.6962169152931642,
+          "portrait": 0.3021104549703634,
+          "genre": 0.0008913425975883969,
+          "religious": 0.0007795144022802156,
+          "landscape": 1.772736603900578e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.1286562830209732,
+        "all_probs": {
+          "a landscape": 0.12267839163541794,
+          "an urban view": 0.12140517681837082,
+          "a portrait": 0.12382388859987259,
+          "a genre scene": 0.126617893576622,
+          "a still life": 0.1286562830209732,
+          "a religious subject": 0.12460614740848541,
+          "a military subject": 0.12849269807338715,
+          "a holiday scene": 0.12371955066919327
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "image_file": "4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9834574849766449,
+        "margin": 0.9680682672754238,
+        "all_probs": {
+          "landscape": 0.9834574849766449,
+          "still-life": 0.015389217701221012,
+          "portrait": 0.000961316810498798,
+          "religious": 0.0001411586590738631,
+          "genre": 5.082185256136049e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.12834464013576508,
+        "all_probs": {
+          "a landscape": 0.1260693222284317,
+          "an urban view": 0.11854252219200134,
+          "a portrait": 0.12301753461360931,
+          "a genre scene": 0.1254218965768814,
+          "a still life": 0.1281658262014389,
+          "a religious subject": 0.12576624751091003,
+          "a military subject": 0.12467203289270401,
+          "a holiday scene": 0.12834464013576508
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "image_file": "55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.6137439529565718,
+        "margin": 0.3096907522020171,
+        "all_probs": {
+          "genre": 0.6137439529565718,
+          "portrait": 0.3040532007545547,
+          "still-life": 0.06864648098401295,
+          "landscape": 0.012531060574697052,
+          "religious": 0.0010253047301634567
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13071203231811523,
+        "all_probs": {
+          "a landscape": 0.12261124700307846,
+          "an urban view": 0.11894624680280685,
+          "a portrait": 0.13071203231811523,
+          "a genre scene": 0.12661202251911163,
+          "a still life": 0.12932543456554413,
+          "a religious subject": 0.12324521690607071,
+          "a military subject": 0.12493091076612473,
+          "a holiday scene": 0.12361691147089005
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "image_file": "58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.955300236688858,
+        "margin": 0.9234645153763664,
+        "all_probs": {
+          "portrait": 0.955300236688858,
+          "still-life": 0.03183572131249157,
+          "religious": 0.007896236353950361,
+          "landscape": 0.00430095221183689,
+          "genre": 0.0006668534328632886
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.12807722389698029,
+        "all_probs": {
+          "a landscape": 0.12437207996845245,
+          "an urban view": 0.12026946991682053,
+          "a portrait": 0.12285315245389938,
+          "a genre scene": 0.12750597298145294,
+          "a still life": 0.12807722389698029,
+          "a religious subject": 0.12409308552742004,
+          "a military subject": 0.1273435354232788,
+          "a holiday scene": 0.1254855841398239
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "image_file": "58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.7818564787741438,
+        "margin": 0.5667184882376282,
+        "all_probs": {
+          "religious": 0.7818564787741438,
+          "landscape": 0.21513799053651567,
+          "genre": 0.002758220453526008,
+          "still-life": 0.0002471302723766293,
+          "portrait": 1.7996343807981436e-07
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13255971670150757,
+        "all_probs": {
+          "a landscape": 0.12498361617326736,
+          "an urban view": 0.1255512237548828,
+          "a portrait": 0.11907067894935608,
+          "a genre scene": 0.12793605029582977,
+          "a still life": 0.12089598178863525,
+          "a religious subject": 0.12326408177614212,
+          "a military subject": 0.1257386952638626,
+          "a holiday scene": 0.13255971670150757
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "image_file": "5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.7124841482445686,
+        "margin": 0.45405093898049137,
+        "all_probs": {
+          "genre": 0.7124841482445686,
+          "religious": 0.25843320926407726,
+          "portrait": 0.02899573377450125,
+          "still-life": 5.445004597020763e-05,
+          "landscape": 3.245867088260237e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.12931647896766663,
+        "all_probs": {
+          "a landscape": 0.12481176853179932,
+          "an urban view": 0.11714457720518112,
+          "a portrait": 0.12603648006916046,
+          "a genre scene": 0.12681740522384644,
+          "a still life": 0.12456376105546951,
+          "a religious subject": 0.12430717051029205,
+          "a military subject": 0.12931647896766663,
+          "a holiday scene": 0.12700243294239044
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "image_file": "7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.5359409902772073,
+        "margin": 0.07735875793294006,
+        "all_probs": {
+          "landscape": 0.5359409902772073,
+          "religious": 0.45858223234426726,
+          "portrait": 0.0037817440188775693,
+          "genre": 0.0016950216648759814,
+          "still-life": 1.1694771846321323e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.1271076500415802,
+        "all_probs": {
+          "a landscape": 0.12683069705963135,
+          "an urban view": 0.12492309510707855,
+          "a portrait": 0.12286117672920227,
+          "a genre scene": 0.12413892149925232,
+          "a still life": 0.12188050895929337,
+          "a religious subject": 0.1258711963891983,
+          "a military subject": 0.1271076500415802,
+          "a holiday scene": 0.12638676166534424
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "image_file": "7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.7212053828251757,
+        "margin": 0.4559741213438035,
+        "all_probs": {
+          "genre": 0.7212053828251757,
+          "religious": 0.26523126148137216,
+          "portrait": 0.012429464617230252,
+          "landscape": 0.0009678478423840453,
+          "still-life": 0.000166043233837776
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13071896135807037,
+        "all_probs": {
+          "a landscape": 0.12352573871612549,
+          "an urban view": 0.12055812776088715,
+          "a portrait": 0.11999130249023438,
+          "a genre scene": 0.13021700084209442,
+          "a still life": 0.12258128821849823,
+          "a religious subject": 0.12216131389141083,
+          "a military subject": 0.13024629652500153,
+          "a holiday scene": 0.13071896135807037
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "image_file": "7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9989093220098272,
+        "margin": 0.9978196094455233,
+        "all_probs": {
+          "landscape": 0.9989093220098272,
+          "religious": 0.0010897125643039237,
+          "genre": 8.459368346135695e-07,
+          "still-life": 1.1637092048131277e-07,
+          "portrait": 3.1181138897607e-09
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.13106510043144226,
+        "all_probs": {
+          "a landscape": 0.1289866864681244,
+          "an urban view": 0.13106510043144226,
+          "a portrait": 0.12032642215490341,
+          "a genre scene": 0.12220193445682526,
+          "a still life": 0.12275640666484833,
+          "a religious subject": 0.12231633812189102,
+          "a military subject": 0.12435854971408844,
+          "a holiday scene": 0.12798857688903809
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "image_file": "8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9787344994026311,
+        "margin": 0.9592622776194338,
+        "all_probs": {
+          "religious": 0.9787344994026311,
+          "genre": 0.019472221783197262,
+          "landscape": 0.0009252027943062636,
+          "portrait": 0.000833565481029232,
+          "still-life": 3.451053883613629e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.12648169696331024,
+        "all_probs": {
+          "a landscape": 0.12607455253601074,
+          "an urban view": 0.11999019980430603,
+          "a portrait": 0.12499631941318512,
+          "a genre scene": 0.1252502053976059,
+          "a still life": 0.12634290754795074,
+          "a religious subject": 0.12443944811820984,
+          "a military subject": 0.12648169696331024,
+          "a holiday scene": 0.12642471492290497
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "image_file": "8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9888030441196624,
+        "margin": 0.9776257682599832,
+        "all_probs": {
+          "religious": 0.9888030441196624,
+          "landscape": 0.011177275859679169,
+          "still-life": 1.2647677782043766e-05,
+          "portrait": 5.0854820794374965e-06,
+          "genre": 1.946860797004435e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.12839634716510773,
+        "all_probs": {
+          "a landscape": 0.1270878165960312,
+          "an urban view": 0.12319356203079224,
+          "a portrait": 0.11962372809648514,
+          "a genre scene": 0.12646052241325378,
+          "a still life": 0.12245070934295654,
+          "a religious subject": 0.12815026938915253,
+          "a military subject": 0.12463711202144623,
+          "a holiday scene": 0.12839634716510773
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "image_file": "8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8081174660405422,
+        "margin": 0.6309929176707496,
+        "all_probs": {
+          "genre": 0.8081174660405422,
+          "religious": 0.17712454836979266,
+          "portrait": 0.013224933532841043,
+          "landscape": 0.0012619720141749083,
+          "still-life": 0.000271080042649077
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.12735944986343384,
+        "all_probs": {
+          "a landscape": 0.12598036229610443,
+          "an urban view": 0.11903894692659378,
+          "a portrait": 0.12725023925304413,
+          "a genre scene": 0.1248578280210495,
+          "a still life": 0.12667323648929596,
+          "a religious subject": 0.12275528162717819,
+          "a military subject": 0.12735944986343384,
+          "a holiday scene": 0.12608468532562256
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "image_file": "8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9994529251707339,
+        "margin": 0.9990779944310121,
+        "all_probs": {
+          "religious": 0.9994529251707339,
+          "genre": 0.00037493073972180317,
+          "portrait": 0.00013948495766616956,
+          "landscape": 2.2211724085454378e-05,
+          "still-life": 1.0447407792824348e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13247843086719513,
+        "all_probs": {
+          "a landscape": 0.12299957871437073,
+          "an urban view": 0.11865921318531036,
+          "a portrait": 0.1231120377779007,
+          "a genre scene": 0.12789760529994965,
+          "a still life": 0.1230231374502182,
+          "a religious subject": 0.12770195305347443,
+          "a military subject": 0.1241280660033226,
+          "a holiday scene": 0.13247843086719513
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "image_file": "8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.8673485458011156,
+        "margin": 0.7737743795317642,
+        "all_probs": {
+          "religious": 0.8673485458011156,
+          "landscape": 0.09357416626935142,
+          "genre": 0.02787954951066611,
+          "portrait": 0.011156848856803007,
+          "still-life": 4.088956206372631e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1345621794462204,
+        "all_probs": {
+          "a landscape": 0.12443432956933975,
+          "an urban view": 0.121573805809021,
+          "a portrait": 0.12040261924266815,
+          "a genre scene": 0.1280595064163208,
+          "a still life": 0.12407512962818146,
+          "a religious subject": 0.12354054301977158,
+          "a military subject": 0.12335191667079926,
+          "a holiday scene": 0.1345621794462204
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "image_file": "8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.8108978217889453,
+        "margin": 0.6833312891954607,
+        "all_probs": {
+          "portrait": 0.8108978217889453,
+          "genre": 0.12756653259348463,
+          "religious": 0.06126349382668151,
+          "landscape": 0.00025236145953172625,
+          "still-life": 1.9790331356736414e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13156189024448395,
+        "all_probs": {
+          "a landscape": 0.12097767740488052,
+          "an urban view": 0.11819665879011154,
+          "a portrait": 0.13156189024448395,
+          "a genre scene": 0.12523692846298218,
+          "a still life": 0.12417933344841003,
+          "a religious subject": 0.12651443481445312,
+          "a military subject": 0.12517881393432617,
+          "a holiday scene": 0.12815430760383606
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "image_file": "9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.3054940055053998,
+        "margin": 0.023182273237127404,
+        "all_probs": {
+          "portrait": 0.3054940055053998,
+          "still-life": 0.2823117322682724,
+          "landscape": 0.26539889557809704,
+          "religious": 0.13023418171430773,
+          "genre": 0.016561184933923057
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.13145317137241364,
+        "all_probs": {
+          "a landscape": 0.12447765469551086,
+          "an urban view": 0.11990686506032944,
+          "a portrait": 0.12418040633201599,
+          "a genre scene": 0.12408062070608139,
+          "a still life": 0.12860749661922455,
+          "a religious subject": 0.12415481358766556,
+          "a military subject": 0.12313910573720932,
+          "a holiday scene": 0.13145317137241364
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "image_file": "9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.7016268922432387,
+        "margin": 0.513681142685668,
+        "all_probs": {
+          "landscape": 0.7016268922432387,
+          "genre": 0.18794574955757068,
+          "still-life": 0.08586132476902958,
+          "religious": 0.02315165328036581,
+          "portrait": 0.0014143801497952496
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.12991264462471008,
+        "all_probs": {
+          "a landscape": 0.12991264462471008,
+          "an urban view": 0.1214299201965332,
+          "a portrait": 0.1226915642619133,
+          "a genre scene": 0.12446983903646469,
+          "a still life": 0.12663941085338593,
+          "a religious subject": 0.12210091203451157,
+          "a military subject": 0.12418470531702042,
+          "a holiday scene": 0.1285710632801056
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "image_file": "9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9992991908011384,
+        "margin": 0.9986392503570692,
+        "all_probs": {
+          "portrait": 0.9992991908011384,
+          "genre": 0.0006599404440691066,
+          "religious": 4.086117983070297e-05,
+          "still-life": 5.047583379724369e-09,
+          "landscape": 2.5273784342955694e-09
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13212694227695465,
+        "all_probs": {
+          "a landscape": 0.12511339783668518,
+          "an urban view": 0.11704891920089722,
+          "a portrait": 0.13212694227695465,
+          "a genre scene": 0.12450272589921951,
+          "a still life": 0.12805195152759552,
+          "a religious subject": 0.12453506886959076,
+          "a military subject": 0.1276928037405014,
+          "a holiday scene": 0.12092822045087814
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/images NYPL based/9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "image_file": "9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "set": "n60",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.49025827561938184,
+        "margin": 0.03981647769897473,
+        "all_probs": {
+          "landscape": 0.49025827561938184,
+          "religious": 0.4504417979204071,
+          "genre": 0.05491002735331484,
+          "portrait": 0.004389356264651727,
+          "still-life": 5.428422444853239e-07
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13070495426654816,
+        "all_probs": {
+          "a landscape": 0.13070495426654816,
+          "an urban view": 0.12542568147182465,
+          "a portrait": 0.1225474625825882,
+          "a genre scene": 0.12498913705348969,
+          "a still life": 0.12371603399515152,
+          "a religious subject": 0.12065296620130539,
+          "a military subject": 0.12303262948989868,
+          "a holiday scene": 0.12893114984035492
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "image_file": "0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.602456246544969,
+        "margin": 0.3175860100379233,
+        "all_probs": {
+          "landscape": 0.602456246544969,
+          "religious": 0.2848702365070457,
+          "genre": 0.0871353236732925,
+          "portrait": 0.016005941278985154,
+          "still-life": 0.009532251995707688
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.12893249094486237,
+        "all_probs": {
+          "a landscape": 0.12807805836200714,
+          "an urban view": 0.12180206924676895,
+          "a portrait": 0.12288250029087067,
+          "a genre scene": 0.12638822197914124,
+          "a still life": 0.12598875164985657,
+          "a religious subject": 0.12145818769931793,
+          "a military subject": 0.12446969002485275,
+          "a holiday scene": 0.12893249094486237
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "image_file": "0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.9989272615477787,
+        "margin": 0.997871594692394,
+        "all_probs": {
+          "still-life": 0.9989272615477787,
+          "portrait": 0.0010556668553847114,
+          "genre": 1.0806675701282356e-05,
+          "religious": 6.249252417451326e-06,
+          "landscape": 1.56687178547998e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a still life",
+        "score": 0.13435257971286774,
+        "all_probs": {
+          "a landscape": 0.12556658685207367,
+          "an urban view": 0.11496459692716599,
+          "a portrait": 0.12236200273036957,
+          "a genre scene": 0.12995898723602295,
+          "a still life": 0.13435257971286774,
+          "a religious subject": 0.12371887266635895,
+          "a military subject": 0.12291496247053146,
+          "a holiday scene": 0.12616145610809326
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "image_file": "1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.7997596179531707,
+        "margin": 0.651696617434875,
+        "all_probs": {
+          "portrait": 0.7997596179531707,
+          "genre": 0.14806300051829582,
+          "religious": 0.0509880567628039,
+          "landscape": 0.0011767112396371148,
+          "still-life": 1.261352609230181e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a religious subject",
+        "score": 0.13161349296569824,
+        "all_probs": {
+          "a landscape": 0.12331891804933548,
+          "an urban view": 0.11753344535827637,
+          "a portrait": 0.1277603656053543,
+          "a genre scene": 0.12509658932685852,
+          "a still life": 0.12559126317501068,
+          "a religious subject": 0.13161349296569824,
+          "a military subject": 0.12521646916866302,
+          "a holiday scene": 0.12386950850486755
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "image_file": "1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9509360337402805,
+        "margin": 0.9018993965079474,
+        "all_probs": {
+          "landscape": 0.9509360337402805,
+          "religious": 0.049036637232333036,
+          "genre": 2.2861867990976163e-05,
+          "still-life": 2.9639588870093533e-06,
+          "portrait": 1.5032005085876772e-06
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13010630011558533,
+        "all_probs": {
+          "a landscape": 0.13010630011558533,
+          "an urban view": 0.12137102335691452,
+          "a portrait": 0.12228890508413315,
+          "a genre scene": 0.12425582855939865,
+          "a still life": 0.12293226271867752,
+          "a religious subject": 0.12548890709877014,
+          "a military subject": 0.1253366470336914,
+          "a holiday scene": 0.12822014093399048
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "image_file": "1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "portrait",
+        "score": 0.9991735772538869,
+        "margin": 0.9987597619193257,
+        "all_probs": {
+          "portrait": 0.9991735772538869,
+          "religious": 0.0004138153345611638,
+          "landscape": 0.0003672536036551327,
+          "genre": 4.511837770832755e-05,
+          "still-life": 2.354301884029756e-07
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.1301540732383728,
+        "all_probs": {
+          "a landscape": 0.122245654463768,
+          "an urban view": 0.11974329501390457,
+          "a portrait": 0.12934722006320953,
+          "a genre scene": 0.12448138743638992,
+          "a still life": 0.12381001561880112,
+          "a religious subject": 0.12741421163082123,
+          "a military subject": 0.1301540732383728,
+          "a holiday scene": 0.1228041797876358
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "image_file": "1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.999962611415303,
+        "margin": 0.9999271657522812,
+        "all_probs": {
+          "landscape": 0.999962611415303,
+          "still-life": 3.5445663021679684e-05,
+          "genre": 9.760485831878302e-07,
+          "portrait": 7.324074435684663e-07,
+          "religious": 2.3446564853386578e-07
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.128754124045372,
+        "all_probs": {
+          "a landscape": 0.12638171017169952,
+          "an urban view": 0.128754124045372,
+          "a portrait": 0.12117985635995865,
+          "a genre scene": 0.12374136596918106,
+          "a still life": 0.12204389274120331,
+          "a religious subject": 0.12476412951946259,
+          "a military subject": 0.12596939504146576,
+          "a holiday scene": 0.12716558575630188
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "image_file": "1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8489737766507247,
+        "margin": 0.7666202370122831,
+        "all_probs": {
+          "genre": 0.8489737766507247,
+          "religious": 0.08235353963844161,
+          "portrait": 0.06842182847628143,
+          "landscape": 0.00020426628324592212,
+          "still-life": 4.658895130608361e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.12947729229927063,
+        "all_probs": {
+          "a landscape": 0.12309876829385757,
+          "an urban view": 0.11887168139219284,
+          "a portrait": 0.12947729229927063,
+          "a genre scene": 0.1274113953113556,
+          "a still life": 0.12635870277881622,
+          "a religious subject": 0.12676633894443512,
+          "a military subject": 0.12350224703550339,
+          "a holiday scene": 0.1245136559009552
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "image_file": "3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9999703042903955,
+        "margin": 0.999951613342104,
+        "all_probs": {
+          "landscape": 0.9999703042903955,
+          "religious": 1.8690948291423284e-05,
+          "genre": 1.0343823094569276e-05,
+          "portrait": 6.505243955522508e-07,
+          "still-life": 1.0413823008337944e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a landscape",
+        "score": 0.13072794675827026,
+        "all_probs": {
+          "a landscape": 0.13072794675827026,
+          "an urban view": 0.12222708016633987,
+          "a portrait": 0.12493835389614105,
+          "a genre scene": 0.12481550872325897,
+          "a still life": 0.1247466504573822,
+          "a religious subject": 0.12126759439706802,
+          "a military subject": 0.12335609644651413,
+          "a holiday scene": 0.12792080640792847
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "image_file": "8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "set": "semtest",
+      "source": "nypl",
+      "reference_ru": "",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9787344994026311,
+        "margin": 0.9592622776194338,
+        "all_probs": {
+          "religious": 0.9787344994026311,
+          "genre": 0.019472221783197262,
+          "landscape": 0.0009252027943062636,
+          "portrait": 0.000833565481029232,
+          "still-life": 3.451053883613629e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a military subject",
+        "score": 0.12648169696331024,
+        "all_probs": {
+          "a landscape": 0.12607455253601074,
+          "an urban view": 0.11999019980430603,
+          "a portrait": 0.12499631941318512,
+          "a genre scene": 0.1252502053976059,
+          "a still life": 0.12634290754795074,
+          "a religious subject": 0.12443944811820984,
+          "a military subject": 0.12648169696331024,
+          "a holiday scene": 0.12642471492290497
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/postcard_11.jpg",
+      "image_file": "postcard_11.jpg",
+      "set": "semtest",
+      "source": "rgb",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "probe_theme": {
+        "label": "still-life",
+        "score": 0.9986678959258946,
+        "margin": 0.9977146224859484,
+        "all_probs": {
+          "still-life": 0.9986678959258946,
+          "religious": 0.0009532734399460685,
+          "landscape": 0.0002870229487548606,
+          "portrait": 7.706877226287623e-05,
+          "genre": 1.4738913141681728e-05
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1324353963136673,
+        "all_probs": {
+          "a landscape": 0.12321899831295013,
+          "an urban view": 0.11970571428537369,
+          "a portrait": 0.12020765244960785,
+          "a genre scene": 0.12458852678537369,
+          "a still life": 0.1285145878791809,
+          "a religious subject": 0.12591063976287842,
+          "a military subject": 0.1254185140132904,
+          "a holiday scene": 0.1324353963136673
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/postcard_13.jpg",
+      "image_file": "postcard_13.jpg",
+      "set": "semtest",
+      "source": "rgb",
+      "reference_ru": "Дети в лесу зимой",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.49273804910135155,
+        "margin": 0.011119359199371126,
+        "all_probs": {
+          "religious": 0.49273804910135155,
+          "genre": 0.4816186899019804,
+          "landscape": 0.025628837299470277,
+          "portrait": 1.4410610419348253e-05,
+          "still-life": 1.3086778334238195e-08
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a holiday scene",
+        "score": 0.1353738158941269,
+        "all_probs": {
+          "a landscape": 0.12535105645656586,
+          "an urban view": 0.11874882876873016,
+          "a portrait": 0.12142236530780792,
+          "a genre scene": 0.12728773057460785,
+          "a still life": 0.12323828786611557,
+          "a religious subject": 0.12634162604808807,
+          "a military subject": 0.12223634123802185,
+          "a holiday scene": 0.1353738158941269
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/postcard_20.jpg",
+      "image_file": "postcard_20.jpg",
+      "set": "semtest",
+      "source": "rgb",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "probe_theme": {
+        "label": "religious",
+        "score": 0.9251492256907109,
+        "margin": 0.8845838268530987,
+        "all_probs": {
+          "religious": 0.9251492256907109,
+          "genre": 0.040565398837612204,
+          "portrait": 0.03281633408620945,
+          "landscape": 0.0009044252605285115,
+          "still-life": 0.000564616124939019
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.1274065524339676,
+        "all_probs": {
+          "a landscape": 0.12271357327699661,
+          "an urban view": 0.12030137330293655,
+          "a portrait": 0.1274065524339676,
+          "a genre scene": 0.12474748492240906,
+          "a still life": 0.12708722054958344,
+          "a religious subject": 0.12708832323551178,
+          "a military subject": 0.12427505105733871,
+          "a holiday scene": 0.12638045847415924
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/postcard_3.jpg",
+      "image_file": "postcard_3.jpg",
+      "set": "semtest",
+      "source": "rgb",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "probe_theme": {
+        "label": "landscape",
+        "score": 0.9964559719823894,
+        "margin": 0.9929205869406257,
+        "all_probs": {
+          "landscape": 0.9964559719823894,
+          "religious": 0.00353538504176375,
+          "genre": 7.491883622002489e-06,
+          "portrait": 1.151089633899884e-06,
+          "still-life": 2.590969736932846e-12
+        }
+      },
+      "zero_shot_theme": {
+        "label": "an urban view",
+        "score": 0.12921962141990662,
+        "all_probs": {
+          "a landscape": 0.12786813080310822,
+          "an urban view": 0.12921962141990662,
+          "a portrait": 0.1175025925040245,
+          "a genre scene": 0.12476065754890442,
+          "a still life": 0.12158263474702835,
+          "a religious subject": 0.12415777146816254,
+          "a military subject": 0.12662793695926666,
+          "a holiday scene": 0.12828068435192108
+        }
+      }
+    },
+    {
+      "image_path": "/Users/yanakhalitova/workspace/project-seminar/tsu-image-description/data/eval/semantic testset/postcard_9.jpg",
+      "image_file": "postcard_9.jpg",
+      "set": "semtest",
+      "source": "rgb",
+      "reference_ru": "Гейша сидит у зеркала",
+      "probe_theme": {
+        "label": "genre",
+        "score": 0.8533062193580939,
+        "margin": 0.7552121630011207,
+        "all_probs": {
+          "genre": 0.8533062193580939,
+          "portrait": 0.09809405635697317,
+          "landscape": 0.033199863694530075,
+          "religious": 0.009978089972846717,
+          "still-life": 0.00542177061755608
+        }
+      },
+      "zero_shot_theme": {
+        "label": "a portrait",
+        "score": 0.13053520023822784,
+        "all_probs": {
+          "a landscape": 0.12291030585765839,
+          "an urban view": 0.11965510994195938,
+          "a portrait": 0.13053520023822784,
+          "a genre scene": 0.12830482423305511,
+          "a still life": 0.1267450451850891,
+          "a religious subject": 0.12358402460813522,
+          "a military subject": 0.12271199375391006,
+          "a holiday scene": 0.1255534142255783
+        }
+      }
+    }
+  ]
+}

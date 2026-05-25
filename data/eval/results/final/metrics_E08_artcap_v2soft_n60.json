@@ -1,0 +1,1271 @@
+{
+  "summary": {
+    "num_examples": 60,
+    "primary_metric": "CLIPScore_RU_archive_ru",
+    "config": {
+      "finetuned": "models/blip_artcap_lora/v2_soft_epoch_0",
+      "caption_backend": "blip1",
+      "translator_model": "Helsinki-NLP/opus-mt-en-ru",
+      "builder_kwargs": {
+        "template_mode": "full",
+        "include_theme": false,
+        "include_mood": false,
+        "drop_generic_style": true
+      },
+      "caption_kwargs": {
+        "backend": "blip1",
+        "num_beams": 1,
+        "length_penalty": 1.0,
+        "prompt_prefix": null,
+        "max_new_tokens": 50
+      },
+      "references_path": "data/eval/references.jsonl",
+      "pool_path": "data/eval/pool_nypl_curated.jsonl"
+    },
+    "scorers": {
+      "EN": "open_clip ViT-B-32 (openai)",
+      "RU": "M-CLIP/XLM-Roberta-Large-Vit-B-32"
+    },
+    "metrics": {
+      "CLIPScore_EN_caption_en": 0.2851974417765935,
+      "CLIPScore_RU_caption_ru": 0.29403463552395503,
+      "CLIPScore_RU_archive_ru": 0.30698042139410975,
+      "CLIPScore_RU_reference_ru": 0.30870684757828715
+    },
+    "by_source": {
+      "nypl": {
+        "n": 40,
+        "CLIPScore_RU_archive_ru": 0.3046471502631903,
+        "CLIPScore_RU_caption_ru": 0.2922497037798166,
+        "CLIPScore_EN_caption_en": 0.28345748223364353
+      },
+      "rgb": {
+        "n": 20,
+        "CLIPScore_RU_archive_ru": 0.31164696365594863,
+        "CLIPScore_RU_caption_ru": 0.29760449901223185,
+        "CLIPScore_EN_caption_en": 0.2886773608624935
+      }
+    },
+    "retrieval": {
+      "n_pool": 60,
+      "i2t": {
+        "R@1": 0.6166666666666667,
+        "R@5": 0.9666666666666667,
+        "R@10": 0.9833333333333333
+      },
+      "t2i": {
+        "R@1": 0.6166666666666667,
+        "R@5": 0.9166666666666666,
+        "R@10": 1.0
+      },
+      "mean_rank_i2t": 1.9166666666666667,
+      "mean_rank_t2i": 2.066666666666667
+    },
+    "latency": {
+      "mean_sec": 14.202776622772216,
+      "images_per_sec": 0.07040876770508636
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "caption_en": "a black and white photo of a path through the woods",
+      "caption_ru": "черно-белое фото пути через лес",
+      "caption_ru_raw": "черно-белое фото пути через лес",
+      "archive_ru": "Фотография. Чёрно-белое изображение тропы, ведущей через лес.",
+      "reference_ru": "Сосновый лес",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2641564607620239,
+        "CLIPScore_RU_caption_ru": 0.28618675470352173,
+        "CLIPScore_RU_archive_ru": 0.3044687509536743,
+        "CLIPScore_RU_reference_ru": 0.30132925510406494
+      },
+      "latency_sec": 14.228620767593384,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "caption_en": "a woman is walking through the woods with horses",
+      "caption_ru": "Женщина ходит по лесу с лошадьми",
+      "caption_ru_raw": "Женщина ходит по лесу с лошадьми.",
+      "archive_ru": "Открытка. Женщина проходит через лес с лошадьми.",
+      "reference_ru": "Зима в лесу. Картины деревенской жизни России.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27567535638809204,
+        "CLIPScore_RU_caption_ru": 0.27788785099983215,
+        "CLIPScore_RU_archive_ru": 0.2874259948730469,
+        "CLIPScore_RU_reference_ru": 0.3090788722038269
+      },
+      "latency_sec": 11.210213899612427,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "caption_en": "a river runs through a town with a bridge and a church",
+      "caption_ru": "река проходит через город с мостом и церковью",
+      "caption_ru_raw": "река проходит через город с мостом и церковью.",
+      "archive_ru": "Открытка. Цветная фотография реки, протекающей через город с мостом и церковью.",
+      "reference_ru": "Галич. Вид на пруд , город и Рождественская церковь.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2820810079574585,
+        "CLIPScore_RU_caption_ru": 0.2938162684440613,
+        "CLIPScore_RU_archive_ru": 0.28134676814079285,
+        "CLIPScore_RU_reference_ru": 0.23506632447242737
+      },
+      "latency_sec": 11.959956884384155,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "caption_en": "a little girl is holding a cat",
+      "caption_ru": "маленькая девочка держит кошку",
+      "caption_ru_raw": "маленькая девочка держит кошку",
+      "archive_ru": "Открытка. Девочка держит кота.",
+      "reference_ru": "Девочка с лукошком.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.24451777338981628,
+        "CLIPScore_RU_caption_ru": 0.276162326335907,
+        "CLIPScore_RU_archive_ru": 0.28947675228118896,
+        "CLIPScore_RU_reference_ru": 0.28499191999435425
+      },
+      "latency_sec": 10.082149028778076,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "caption_en": "a man is riding a reindeer with a dog",
+      "caption_ru": "Человек катается на олене с собакой",
+      "caption_ru_raw": "Человек катается на олене с собакой.",
+      "archive_ru": "Открытка. Мужчина едет на олене с собакой.",
+      "reference_ru": "Эвенки-охотник, с охотничьей собакой .",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33092352747917175,
+        "CLIPScore_RU_caption_ru": 0.2873647212982178,
+        "CLIPScore_RU_archive_ru": 0.2773185968399048,
+        "CLIPScore_RU_reference_ru": 0.340998113155365
+      },
+      "latency_sec": 11.669985055923462,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "caption_en": "a ship is sailing in the water",
+      "caption_ru": "Корабль плывет в воде",
+      "caption_ru_raw": "Корабль плывет в воде.",
+      "archive_ru": "Открытка-гравюра с изображением корабля, плывущего по воде.",
+      "reference_ru": "Броненосный корабль 'Синоп'",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.23845522105693817,
+        "CLIPScore_RU_caption_ru": 0.2219533622264862,
+        "CLIPScore_RU_archive_ru": 0.3142702877521515,
+        "CLIPScore_RU_reference_ru": 0.30421382188796997
+      },
+      "latency_sec": 12.30907416343689,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "caption_en": "a rose is on a piece of paper with writing",
+      "caption_ru": "Роза на листе бумаги с надписью",
+      "caption_ru_raw": "Роза на листе бумаги с надписью",
+      "archive_ru": "Открытка. На бумаге изображена роза с надписью.",
+      "reference_ru": "Розы расцветают...",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3165696859359741,
+        "CLIPScore_RU_caption_ru": 0.33512723445892334,
+        "CLIPScore_RU_archive_ru": 0.3694010376930237,
+        "CLIPScore_RU_reference_ru": 0.29505568742752075
+      },
+      "latency_sec": 11.933090925216675,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "caption_en": "a card with a picture of a branch of a tree with flowers",
+      "caption_ru": "Карта с изображением ветки дерева с цветами",
+      "caption_ru_raw": "Карта с изображением ветки дерева с цветами",
+      "archive_ru": "Открытка. Изображение ветки дерева с цветами.",
+      "reference_ru": "Ветки распускающейся вербы и расписные пасхальные яйца",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3179490566253662,
+        "CLIPScore_RU_caption_ru": 0.36230671405792236,
+        "CLIPScore_RU_archive_ru": 0.30699896812438965,
+        "CLIPScore_RU_reference_ru": 0.3077434301376343
+      },
+      "latency_sec": 10.869744062423706,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "caption_en": "a woman in a kimono sitting in front of a mirror",
+      "caption_ru": "женщина в кимоно, сидящая перед зеркалом",
+      "caption_ru_raw": "женщина в кимоно, сидящая перед зеркалом",
+      "archive_ru": "Фотография. Женщина в кимоно сидит перед зеркалом.",
+      "reference_ru": "Гейша сидит у зеркала",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.357138991355896,
+        "CLIPScore_RU_caption_ru": 0.36672675609588623,
+        "CLIPScore_RU_archive_ru": 0.3761224150657654,
+        "CLIPScore_RU_reference_ru": 0.38331902027130127
+      },
+      "latency_sec": 11.24354100227356,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "caption_en": "a young girl with a hat and a bouquet of flowers",
+      "caption_ru": "Девочка с шляпой и букетом цветов",
+      "caption_ru_raw": "Девочка с шляпой и букетом цветов",
+      "archive_ru": "Фотография. Молодая девушка в шляпе с букетом цветов.",
+      "reference_ru": "Изображение цветов и девочки",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2805294692516327,
+        "CLIPScore_RU_caption_ru": 0.2755763530731201,
+        "CLIPScore_RU_archive_ru": 0.28295230865478516,
+        "CLIPScore_RU_reference_ru": 0.23262850940227509
+      },
+      "latency_sec": 11.384896993637085,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "caption_en": "a christmas card with a gift wrapped in red ribbon and holly",
+      "caption_ru": "Рождественская открытка с подарком, завернутым в красную ленту и Холли",
+      "caption_ru_raw": "Рождественская открытка с подарком, завернутым в красную ленту и Холли",
+      "archive_ru": "Открытка. Праздничная открытка с изображением подарка, упакованного в красную ленту и падуб.",
+      "reference_ru": "Подарочка коробка с красной лентой и ветками омелы внутри.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3200540244579315,
+        "CLIPScore_RU_caption_ru": 0.33409735560417175,
+        "CLIPScore_RU_archive_ru": 0.35934770107269287,
+        "CLIPScore_RU_reference_ru": 0.3053925633430481
+      },
+      "latency_sec": 13.588347911834717,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "caption_en": "a woman is holding a candle in her hand",
+      "caption_ru": "женщина держит свечу в руке",
+      "caption_ru_raw": "женщина держит свечу в руке.",
+      "archive_ru": "Фотография. Женщина держит свечу в руке.",
+      "reference_ru": "Девушка держит свечу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29455533623695374,
+        "CLIPScore_RU_caption_ru": 0.3243767023086548,
+        "CLIPScore_RU_archive_ru": 0.342939555644989,
+        "CLIPScore_RU_reference_ru": 0.29088130593299866
+      },
+      "latency_sec": 10.536911010742188,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "caption_en": "a family of three is walking in the snow with a christmas tree",
+      "caption_ru": "Семья из трех ходит по снегу с рождественским деревом",
+      "caption_ru_raw": "Семья из трех ходит по снегу с рождественским деревом.",
+      "archive_ru": "Открытка. Семья из трех человек гуляет по снегу с рождественской елкой.",
+      "reference_ru": "Дети в лесу зимой",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28215593099594116,
+        "CLIPScore_RU_caption_ru": 0.29762816429138184,
+        "CLIPScore_RU_archive_ru": 0.3141239285469055,
+        "CLIPScore_RU_reference_ru": 0.27898356318473816
+      },
+      "latency_sec": 13.668948888778687,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "caption_en": "a boy and girl are kissing under a misty tree",
+      "caption_ru": "Мальчик и девочка целуются под туманным деревом",
+      "caption_ru_raw": "Мальчик и девочка целуются под туманным деревом.",
+      "archive_ru": "Открытка. Мальчик и девочка целуются под туманным деревом.",
+      "reference_ru": "Мальчик-матрос целует девочку",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27259206771850586,
+        "CLIPScore_RU_caption_ru": 0.26940709352493286,
+        "CLIPScore_RU_archive_ru": 0.29917287826538086,
+        "CLIPScore_RU_reference_ru": 0.3731614649295807
+      },
+      "latency_sec": 13.324579954147339,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "caption_en": "a bird is sitting on a branch with berries and a wreath",
+      "caption_ru": "Птица сидит на ветке с ягодами и венок",
+      "caption_ru_raw": "Птица сидит на ветке с ягодами и венок.",
+      "archive_ru": "Открытка. Птица сидит на ветке с ягодами и венком.",
+      "reference_ru": "Птица сидит на ветке омелы.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3093513250350952,
+        "CLIPScore_RU_caption_ru": 0.31634193658828735,
+        "CLIPScore_RU_archive_ru": 0.33043742179870605,
+        "CLIPScore_RU_reference_ru": 0.2770371735095978
+      },
+      "latency_sec": 14.067270040512085,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "caption_en": "a dog is standing in the snow with other dogs",
+      "caption_ru": "Собака стоит в снегу с другими собаками",
+      "caption_ru_raw": "Собака стоит в снегу с другими собаками.",
+      "archive_ru": "Открытка. Собака стоит в снегу вместе с другими собаками.",
+      "reference_ru": "Взрослая собака и щенок на снегу.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27006426453590393,
+        "CLIPScore_RU_caption_ru": 0.2736487090587616,
+        "CLIPScore_RU_archive_ru": 0.28714367747306824,
+        "CLIPScore_RU_reference_ru": 0.29683560132980347
+      },
+      "latency_sec": 13.16979193687439,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "caption_en": "a tall pagoda is in the middle of a field",
+      "caption_ru": "Высокий пагода находится в центре поля",
+      "caption_ru_raw": "Высокий пагода находится в центре поля.",
+      "archive_ru": "Открытка. Высокая пагода находится в центре поля.",
+      "reference_ru": "Черно-белое изображение пагоды.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2899448871612549,
+        "CLIPScore_RU_caption_ru": 0.2947375476360321,
+        "CLIPScore_RU_archive_ru": 0.3076610863208771,
+        "CLIPScore_RU_reference_ru": 0.3548523187637329
+      },
+      "latency_sec": 11.415004253387451,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "caption_en": "a man with a beard and a white shirt looks at the camera",
+      "caption_ru": "Человек с бородой и белой рубашкой смотрит в камеру",
+      "caption_ru_raw": "Человек с бородой и белой рубашкой смотрит в камеру.",
+      "archive_ru": "Открытка. Человек с бородой и белой рубашкой смотрит в камеру.",
+      "reference_ru": "Рисунок лица старого мужчины.",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22526252269744873,
+        "CLIPScore_RU_caption_ru": 0.22987957298755646,
+        "CLIPScore_RU_archive_ru": 0.2368839681148529,
+        "CLIPScore_RU_reference_ru": 0.3040972352027893
+      },
+      "latency_sec": 12.409379720687866,
+      "retrieval": {
+        "rank_i2t": 3,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "caption_en": "two children are riding a sled in the snow",
+      "caption_ru": "Двое детей ездят на сани в снегу",
+      "caption_ru_raw": "Двое детей ездят на сани в снегу.",
+      "archive_ru": "Открытка. Двое детей катаются на санях по снегу.",
+      "reference_ru": "Пара детей едет на санях в зимнем лесу",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3111298680305481,
+        "CLIPScore_RU_caption_ru": 0.3255184292793274,
+        "CLIPScore_RU_archive_ru": 0.3316620886325836,
+        "CLIPScore_RU_reference_ru": 0.34150415658950806
+      },
+      "latency_sec": 10.524274826049805,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "caption_en": "a little girl in a colorful dress is holding a bunch of flowers",
+      "caption_ru": "маленькая девочка в ярком платье держит кучу цветов",
+      "caption_ru_raw": "маленькая девочка в ярком платье держит кучу цветов",
+      "archive_ru": "Открытка. Девочка в ярком платье держит букет цветов.",
+      "reference_ru": "Девочка в цветном костюме с цветами",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2904404401779175,
+        "CLIPScore_RU_caption_ru": 0.3033461272716522,
+        "CLIPScore_RU_archive_ru": 0.3337850868701935,
+        "CLIPScore_RU_reference_ru": 0.35696661472320557
+      },
+      "latency_sec": 11.648261070251465,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a view of a harbor with a crane and boats",
+      "caption_ru": "Вид гавани с краном и катерами",
+      "caption_ru_raw": "Вид гавани с краном и катерами",
+      "archive_ru": "Открытка. Вид на гавань с краном и лодками.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.270053893327713,
+        "CLIPScore_RU_caption_ru": 0.27604594826698303,
+        "CLIPScore_RU_archive_ru": 0.28305673599243164,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 10.847965002059937,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0a8110a0-c5c5-012f-a8ac-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a bunch of flowers are shown in a series of four different colors",
+      "caption_ru": "кучка цветов показана в четырёх разных цветах",
+      "caption_ru_raw": "кучка цветов показана в четырёх разных цветах.",
+      "archive_ru": "Открытка. На фотографии изображены цветы в серии из четырех разных цветов.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3221566677093506,
+        "CLIPScore_RU_caption_ru": 0.32902711629867554,
+        "CLIPScore_RU_archive_ru": 0.3434167504310608,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 12.242043018341064,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a large wave breaks on the rocks near the ocean",
+      "caption_ru": "Большая волна ломается на скалах вблизи океана",
+      "caption_ru_raw": "Большая волна ломается на скалах вблизи океана",
+      "archive_ru": "Открытка. Цветная фотография большой волны, разбивающейся о скалы у океана.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29107028245925903,
+        "CLIPScore_RU_caption_ru": 0.2920041084289551,
+        "CLIPScore_RU_archive_ru": 0.3119206726551056,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.645596981048584,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d1887e0-c5c4-012f-e38e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a boy and girl are dressed up as a witch and a boy is holding a broom",
+      "caption_ru": "Мальчик и девочка одеты как ведьма, а мальчик держит метлу",
+      "caption_ru_raw": "Мальчик и девочка одеты как ведьма, а мальчик держит метлу.",
+      "archive_ru": "Открытка. Мальчик и девочка одеты в костюмы ведьмы и колдуна, мальчик держит метлу.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3286893963813782,
+        "CLIPScore_RU_caption_ru": 0.3576161861419678,
+        "CLIPScore_RU_archive_ru": 0.36667460203170776,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 13.2479088306427,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a vase of roses and other flowers is on a table",
+      "caption_ru": "ваза роз и других цветов на столе",
+      "caption_ru_raw": "ваза роз и других цветов на столе",
+      "archive_ru": "Открытка-гравюра с изображением вазы, наполненной розами и другими цветами на столе.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33014407753944397,
+        "CLIPScore_RU_caption_ru": 0.3596644699573517,
+        "CLIPScore_RU_archive_ru": 0.3664575219154358,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.407142877578735,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0d86cf70-c5d2-012f-df68-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a view of a town with a river and a boat in the water",
+      "caption_ru": "Вид на город с рекой и лодкой в воде",
+      "caption_ru_raw": "Вид на город с рекой и лодкой в воде",
+      "archive_ru": "Открытка. Вид на город с рекой и лодкой на воде.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2816566824913025,
+        "CLIPScore_RU_caption_ru": 0.2733956575393677,
+        "CLIPScore_RU_archive_ru": 0.2806960940361023,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 12.470372200012207,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0e98e570-c560-012f-5fb4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a crowd of people are walking down the street",
+      "caption_ru": "толпа людей идет по улице",
+      "caption_ru_raw": "толпа людей идет по улице",
+      "archive_ru": "Открытка. Группа людей идет по улице.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26585179567337036,
+        "CLIPScore_RU_caption_ru": 0.26095107197761536,
+        "CLIPScore_RU_archive_ru": 0.2556040287017822,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 12.475330114364624,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0ef3e450-c55c-012f-375f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man is walking across the bridge",
+      "caption_ru": "Человек ходит по мосту",
+      "caption_ru_raw": "Человек ходит по мосту.",
+      "archive_ru": "Открытка. Человек переходит через мост.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30928540229797363,
+        "CLIPScore_RU_caption_ru": 0.3091181814670563,
+        "CLIPScore_RU_archive_ru": 0.3164748549461365,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 12.514986991882324,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/0fc7c130-c55c-012f-bd6b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a boat is passing under the bridge",
+      "caption_ru": "лодка проходит под мостом",
+      "caption_ru_raw": "лодка проходит под мостом.",
+      "archive_ru": "Открытка. Корабль проходит под мостом.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27481597661972046,
+        "CLIPScore_RU_caption_ru": 0.27677682042121887,
+        "CLIPScore_RU_archive_ru": 0.28457140922546387,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.484301090240479,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/16c2db10-7757-013c-8461-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a man is plowing the field with horses",
+      "caption_ru": "Человек пахнет поля лошадьми",
+      "caption_ru_raw": "Человек пахнет поля лошадьми.",
+      "archive_ru": "Фотография. Мужчина вспахивает поле с помощью лошадей.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.29406261444091797,
+        "CLIPScore_RU_caption_ru": 0.32290154695510864,
+        "CLIPScore_RU_archive_ru": 0.3422393202781677,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 11.670216798782349,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a man with a long beard and a turban",
+      "caption_ru": "мужчина с долгой бородой и тюрбаном",
+      "caption_ru_raw": "мужчина с долгой бородой и тюрбаном",
+      "archive_ru": "Фотография мужчины с длинной бородой и тюрбаном.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2942100167274475,
+        "CLIPScore_RU_caption_ru": 0.32757049798965454,
+        "CLIPScore_RU_archive_ru": 0.34417369961738586,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 12.788051843643188,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man is climbing up a ladder to the top of a mountain",
+      "caption_ru": "Человек поднимается по лестнице на вершину горы",
+      "caption_ru_raw": "Человек поднимается по лестнице на вершину горы",
+      "archive_ru": "Открытка. Цветная фотография мужчины, взбирающегося по лестнице на вершину горы.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30764859914779663,
+        "CLIPScore_RU_caption_ru": 0.3345705270767212,
+        "CLIPScore_RU_archive_ru": 0.36393076181411743,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 15.844522953033447,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "caption_en": "a man in a tuxedo and a bow tie",
+      "caption_ru": "Человек в смокинге и галстуке",
+      "caption_ru_raw": "Человек в смокинге и галстуке",
+      "archive_ru": "Фотография. Мужчина в смокинге и бабочке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27037313580513,
+        "CLIPScore_RU_caption_ru": 0.3040781617164612,
+        "CLIPScore_RU_archive_ru": 0.3077181577682495,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 13.743541955947876,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a bridge is over the water and a city is in the background",
+      "caption_ru": "Мост над водой, а город находится на заднем плане",
+      "caption_ru_raw": "Мост над водой, а город находится на заднем плане.",
+      "archive_ru": "Открытка. Мост перекинут через воду, в фоновом изображении виден город.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2728118598461151,
+        "CLIPScore_RU_caption_ru": 0.28446152806282043,
+        "CLIPScore_RU_archive_ru": 0.3003391623497009,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 15.193231105804443,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "caption_en": "a woman in a blue head scarf is looking down",
+      "caption_ru": "Женщина в шарфе с синей головой смотрит вниз",
+      "caption_ru_raw": "Женщина в шарфе с синей головой смотрит вниз",
+      "archive_ru": "Фотография. Женщина в голубом головном платке смотрит вниз.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.27790144085884094,
+        "CLIPScore_RU_caption_ru": 0.29697537422180176,
+        "CLIPScore_RU_archive_ru": 0.3033286929130554,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.985649824142456,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/1e1b5910-3354-0135-7291-15f61fc083fb.jpg",
+      "source": "nypl",
+      "caption_en": "a woman in a kimono dress is holding a fan",
+      "caption_ru": "женщина в платье кимоно держит вентилятор",
+      "caption_ru_raw": "женщина в платье кимоно держит вентилятор",
+      "archive_ru": "Иллюстрация. Женщина в кимоно держит веер.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2781766951084137,
+        "CLIPScore_RU_caption_ru": 0.28573018312454224,
+        "CLIPScore_RU_archive_ru": 0.3327730894088745,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.444525003433228,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/2d7972b0-c6eb-012f-8c7f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people are marching with a flag and a hammer",
+      "caption_ru": "группа людей марширует с флагом и молотком",
+      "caption_ru_raw": "группа людей марширует с флагом и молотком",
+      "archive_ru": "Открытка. Группа людей марширует с флагом и молотом.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2373880296945572,
+        "CLIPScore_RU_caption_ru": 0.2657015919685364,
+        "CLIPScore_RU_archive_ru": 0.2737714648246765,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.901278972625732,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/37e0f9d0-c5c3-012f-b6c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a dog is sitting on the ground and looking at the camera",
+      "caption_ru": "Собака сидит на земле и смотрит в камеру",
+      "caption_ru_raw": "Собака сидит на земле и смотрит в камеру.",
+      "archive_ru": "Открытка. Собака сидит на земле и смотрит на камеру.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.21360823512077332,
+        "CLIPScore_RU_caption_ru": 0.21044503152370453,
+        "CLIPScore_RU_archive_ru": 0.2242911159992218,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 15.015882015228271,
+      "retrieval": {
+        "rank_i2t": 12,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a path in the woods is surrounded by trees",
+      "caption_ru": "Дорога в лесу окружена деревьями",
+      "caption_ru_raw": "Дорога в лесу окружена деревьями.",
+      "archive_ru": "Фотография. Путь в лесу окружён деревьями.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2858923375606537,
+        "CLIPScore_RU_caption_ru": 0.2893979549407959,
+        "CLIPScore_RU_archive_ru": 0.2967051863670349,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.103584051132202,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/43c69570-c62e-012f-9f41-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a full moon is shining over the ocean and the water",
+      "caption_ru": "Полная луна сияет над океаном и водой",
+      "caption_ru_raw": "Полная луна сияет над океаном и водой",
+      "archive_ru": "Фотография. Полная луна светит над океаном, вода.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2917880713939667,
+        "CLIPScore_RU_caption_ru": 0.2992855906486511,
+        "CLIPScore_RU_archive_ru": 0.3326265513896942,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.413350820541382,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a young girl is holding a bunch of flowers in her hands",
+      "caption_ru": "Девочка держит в руках кучу цветов",
+      "caption_ru_raw": "Девочка держит в руках кучу цветов.",
+      "archive_ru": "Фотография. Молодая девушка держит в руках букет цветов.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2787707448005676,
+        "CLIPScore_RU_caption_ru": 0.2869611978530884,
+        "CLIPScore_RU_archive_ru": 0.301603764295578,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.873496055603027,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4b835010-c5c6-012f-70c9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a hat with a patch on the top of it",
+      "caption_ru": "Шляпа с повязкой наверху",
+      "caption_ru_raw": "Шляпа с повязкой наверху.",
+      "archive_ru": "Открытка. Иллюстрация шляпы с нашивкой на верхушке.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33270832896232605,
+        "CLIPScore_RU_caption_ru": 0.3108483552932739,
+        "CLIPScore_RU_archive_ru": 0.3610791563987732,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 15.321144104003906,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/4da750a0-c5c3-012f-7cec-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a card with a bunch of flowers on it",
+      "caption_ru": "Карта с кучей цветов на ней",
+      "caption_ru_raw": "Карта с кучей цветов на ней",
+      "archive_ru": "Открытка с изображением букета цветов.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2741660475730896,
+        "CLIPScore_RU_caption_ru": 0.2693759799003601,
+        "CLIPScore_RU_archive_ru": 0.3037797510623932,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 13.624983072280884,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 8
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/55d8ed60-c632-012f-7494-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a woman with a hat and a pipe",
+      "caption_ru": "женщина с шляпой и трубой",
+      "caption_ru_raw": "женщина с шляпой и трубой",
+      "archive_ru": "Открытка. Иллюстрация женщины в шляпе.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2890776991844177,
+        "CLIPScore_RU_caption_ru": 0.29551148414611816,
+        "CLIPScore_RU_archive_ru": 0.27825844287872314,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.165778160095215,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 4
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c43930-c5c6-012f-6f50-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "two birds are sitting on a branch with berries in their beaks",
+      "caption_ru": "Две птицы сидят на ветке с ягодами в клюве",
+      "caption_ru_raw": "Две птицы сидят на ветке с ягодами в клюве.",
+      "archive_ru": "Открытка. Две птицы сидят на ветке с ягодами в клювах.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2843998074531555,
+        "CLIPScore_RU_caption_ru": 0.30506008863449097,
+        "CLIPScore_RU_archive_ru": 0.319463849067688,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 16.61986804008484,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "people are sitting on the beach and watching the boats",
+      "caption_ru": "Люди сидят на пляже и смотрят на лодки",
+      "caption_ru_raw": "Люди сидят на пляже и смотрят на лодки.",
+      "archive_ru": "Открытка. Люди сидят на пляже и смотрят на лодки.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2654198706150055,
+        "CLIPScore_RU_caption_ru": 0.28258219361305237,
+        "CLIPScore_RU_archive_ru": 0.28963762521743774,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 15.754119873046875,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/5c13a9d0-c62f-012f-e334-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a young boy is riding a horse in a field",
+      "caption_ru": "маленький мальчик едет на лошади на поле",
+      "caption_ru_raw": "маленький мальчик едет на лошади на поле",
+      "archive_ru": "Открытка. Молодой мальчик верхом на лошади в поле.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28933635354042053,
+        "CLIPScore_RU_caption_ru": 0.2945011556148529,
+        "CLIPScore_RU_archive_ru": 0.30484384298324585,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 14.970638990402222,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7be2ec90-c5ee-012f-c27c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a large white building with green shutters and a clock on the front",
+      "caption_ru": "Крупное белое здание с зелеными затворами и часами спереди",
+      "caption_ru_raw": "Крупное белое здание с зелеными затворами и часами спереди",
+      "archive_ru": "Открытка. Большое белое здание с зелёными ставнями и часами на фасаде.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2589278817176819,
+        "CLIPScore_RU_caption_ru": 0.2514689564704895,
+        "CLIPScore_RU_archive_ru": 0.24427278339862823,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 16.092379093170166,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7bfc6af0-c62d-012f-1be1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man is riding a donkey with a man on a cart",
+      "caption_ru": "Человек катается на осле с мужчиной на тележке",
+      "caption_ru_raw": "Человек катается на осле с мужчиной на тележке",
+      "archive_ru": "Открытка. Мужчина едет на осле, за ним следует повозка с человеком.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.3274930715560913,
+        "CLIPScore_RU_caption_ru": 0.33260291814804077,
+        "CLIPScore_RU_archive_ru": 0.32352763414382935,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 13.785346984863281,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 3
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/7e684de0-c5ee-012f-6fd9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a view of a city with a bridge in the background",
+      "caption_ru": "Вид на город с мостом на заднем плане",
+      "caption_ru_raw": "Вид на город с мостом на заднем плане",
+      "archive_ru": "Фотография. Вид города с мостом на заднем плане.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26024746894836426,
+        "CLIPScore_RU_caption_ru": 0.25347745418548584,
+        "CLIPScore_RU_archive_ru": 0.26805567741394043,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 17.17167615890503,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a white donkey with a saddle is standing on a dirt road",
+      "caption_ru": "Белый осел с седлом стоит на грунтовой дороге",
+      "caption_ru_raw": "Белый осел с седлом стоит на грунтовой дороге",
+      "archive_ru": "Открытка. Белая ослица с седлом стоит на грунтовой дороге.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.33500972390174866,
+        "CLIPScore_RU_caption_ru": 0.34974512457847595,
+        "CLIPScore_RU_archive_ru": 0.3516578674316406,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 18.05326819419861,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a group of people are riding horses on the beach",
+      "caption_ru": "группа людей катается на лошадях на пляже",
+      "caption_ru_raw": "группа людей катается на лошадях на пляже",
+      "archive_ru": "Открытка. Группа людей верхом на лошадях на пляже.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.20525899529457092,
+        "CLIPScore_RU_caption_ru": 0.21042916178703308,
+        "CLIPScore_RU_archive_ru": 0.22278755903244019,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 18.028193712234497,
+      "retrieval": {
+        "rank_i2t": 10,
+        "rank_t2i": 6
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8a765950-c62b-012f-bce3-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a white horse with a saddle is standing in the grass",
+      "caption_ru": "Белая лошадь с седлом стоит в траве",
+      "caption_ru_raw": "Белая лошадь с седлом стоит в траве",
+      "archive_ru": "Открытка. Белая лошадь с седлом стоит на траве.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.299746036529541,
+        "CLIPScore_RU_caption_ru": 0.30417364835739136,
+        "CLIPScore_RU_archive_ru": 0.29855185747146606,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 18.609925031661987,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8be41130-c5c3-012f-613c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a santa claus is riding in a sleigh with a child",
+      "caption_ru": "Санта-Клаус едет в санях с ребенком",
+      "caption_ru_raw": "Санта-Клаус едет в санях с ребенком.",
+      "archive_ru": "Открытка. Санта-Клаус едет в санях с ребенком.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.30478447675704956,
+        "CLIPScore_RU_caption_ru": 0.31258532404899597,
+        "CLIPScore_RU_archive_ru": 0.3215251564979553,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 21.138910055160522,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8c855600-c5c3-012f-20c8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a santa claus is climbing a ladder to get a gift",
+      "caption_ru": "Санта Клаус поднимается по лестнице, чтобы получить подарок",
+      "caption_ru_raw": "Санта Клаус поднимается по лестнице, чтобы получить подарок",
+      "archive_ru": "Открытка. Санта-Клаус взбирается по лестнице, чтобы достать подарок.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.32240596413612366,
+        "CLIPScore_RU_caption_ru": 0.3302108645439148,
+        "CLIPScore_RU_archive_ru": 0.33735156059265137,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 23.514813899993896,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/8e1ab320-c5c4-012f-5f2c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a little boy is holding his hand to his mouth",
+      "caption_ru": "Маленький мальчик прижимает руку к рту",
+      "caption_ru_raw": "Маленький мальчик прижимает руку к рту.",
+      "archive_ru": "Открытка. Мальчик прижимает руку ко рту.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.25561168789863586,
+        "CLIPScore_RU_caption_ru": 0.2796429395675659,
+        "CLIPScore_RU_archive_ru": 0.30116167664527893,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 19.949313163757324,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 2
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a bunch of white flowers are in a vase",
+      "caption_ru": "Кучка белых цветов в вазе",
+      "caption_ru_raw": "Кучка белых цветов в вазе.",
+      "archive_ru": "Открытка. В вазе букет белых цветов.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.26149970293045044,
+        "CLIPScore_RU_caption_ru": 0.2543025016784668,
+        "CLIPScore_RU_archive_ru": 0.281869113445282,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 18.06812286376953,
+      "retrieval": {
+        "rank_i2t": 4,
+        "rank_t2i": 5
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9cb44890-c62f-012f-3570-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a tree is growing on a rock out in the water",
+      "caption_ru": "дерево растет на скале в воде",
+      "caption_ru_raw": "дерево растет на скале в воде",
+      "archive_ru": "Открытка. Цветная фотография дерева, растущего на скале в воде.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.28348785638809204,
+        "CLIPScore_RU_caption_ru": 0.29959970712661743,
+        "CLIPScore_RU_archive_ru": 0.3189094066619873,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 17.649597883224487,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9d929100-c612-012f-402d-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a man with a beard and a white shirt looks at the camera",
+      "caption_ru": "Человек с бородой и белой рубашкой смотрит в камеру",
+      "caption_ru_raw": "Человек с бородой и белой рубашкой смотрит в камеру.",
+      "archive_ru": "Открытка. Человек с бородой и белой рубашкой смотрит в камеру.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.22327637672424316,
+        "CLIPScore_RU_caption_ru": 0.22578135132789612,
+        "CLIPScore_RU_archive_ru": 0.23318693041801453,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 19.266863107681274,
+      "retrieval": {
+        "rank_i2t": 2,
+        "rank_t2i": 7
+      }
+    },
+    {
+      "image_path": "data/eval/images NYPL based/9f3ee840-c62d-012f-6a5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "caption_en": "a river runs through a tropical forest",
+      "caption_ru": "река проходит через тропический лес",
+      "caption_ru_raw": "река проходит через тропический лес",
+      "archive_ru": "Открытка. Цветная фотография реки, протекающей через тропический лес.",
+      "reference_ru": "",
+      "scores": {
+        "CLIPScore_EN_caption_en": 0.2890859842300415,
+        "CLIPScore_RU_caption_ru": 0.28541019558906555,
+        "CLIPScore_RU_archive_ru": 0.2935924828052521,
+        "CLIPScore_RU_reference_ru": null
+      },
+      "latency_sec": 15.824634075164795,
+      "retrieval": {
+        "rank_i2t": 1,
+        "rank_t2i": 1
+      }
+    }
+  ]
+}

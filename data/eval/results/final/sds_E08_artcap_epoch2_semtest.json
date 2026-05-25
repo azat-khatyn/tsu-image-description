@@ -1,0 +1,225 @@
+{
+  "mode": "keyword",
+  "model": null,
+  "description_key": "archive_ru",
+  "aggregates": {
+    "n": 14,
+    "mean_sds": 0.39285714285714285,
+    "per_axis_coverage": {
+      "type_of_material": 1.0,
+      "visual_subject": 1.0,
+      "artistic_style": 0.2857142857142857,
+      "epoch": 0.0,
+      "cultural_context": 0.07142857142857142,
+      "mood": 0.0
+    },
+    "by_source": {
+      "nypl": {
+        "n": 9,
+        "mean_sds": 0.3888888888888889
+      },
+      "rgb": {
+        "n": 5,
+        "mean_sds": 0.4
+      }
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/semantic testset/0b442e10-c630-012f-6ec8-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография большой волны, разбивающейся о скалы на пляже.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/0d265800-c5c5-012f-61dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка-гравюра с изображением вазы роз и других цветов.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1a384870-bd07-013a-35e8-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Фотография бородатого мужчины в тюрбане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1afd2650-c630-012f-23f5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Цветная фотография мужчины, взбирающегося по лестнице в горах.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Фотография. Мужчина в смокинге и усы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c4b2d30-c55c-012f-486b-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Мост перекинут через воду с закатом на заднем плане.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/1c904500-b76b-013a-7d90-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Фотография. Женщина в голубом головном платке.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/3b67dcf0-c630-012f-a31e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография. Путь в лесу с деревьями и листьями.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/8a2c9120-c62b-012f-8e85-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Открытка. Осел с седлом стоит на грунтовой дороге.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_11.jpg",
+      "source": "rgb",
+      "description": "Открытка. Коробка с ветвями остролиста и красными ягодами.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_13.jpg",
+      "source": "rgb",
+      "description": "Открытка. Семья идёт по снегу с рождественской ёлкой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_20.jpg",
+      "source": "rgb",
+      "description": "Открытка. Ребёнок в зелёно-розовом наряде держит цветы.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_3.jpg",
+      "source": "rgb",
+      "description": "Открытка. Цветная фотография реки, протекающей через город с мостом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/semantic testset/postcard_9.jpg",
+      "source": "rgb",
+      "description": "Фотография. Женщина сидит перед зеркалом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    }
+  ]
+}

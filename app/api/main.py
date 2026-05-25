@@ -3,7 +3,7 @@ from pathlib import Path
 from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import HTMLResponse
 
-from app.api.schemas import HealthResponse, InferenceResponse
+from app.api.schemas import HealthResponse, InferenceResponse, PipelineConfig
 from app.core.config import settings
 from app.services.image_io import (
     cleanup_file,
@@ -33,6 +33,7 @@ def health(
         status="ok",
         model_loaded=service.model_loaded,
         device=service.device,
+        pipeline_config=PipelineConfig(**service.pipeline_config),
     )
 
 

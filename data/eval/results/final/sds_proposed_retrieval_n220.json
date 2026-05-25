@@ -1,0 +1,3109 @@
+{
+  "mode": "keyword",
+  "model": null,
+  "description_key": "archive_ru",
+  "aggregates": {
+    "n": 220,
+    "mean_sds": 0.25227272727272726,
+    "per_axis_coverage": {
+      "type_of_material": 0.2863636363636364,
+      "visual_subject": 1.0,
+      "artistic_style": 0.1590909090909091,
+      "epoch": 0.0,
+      "cultural_context": 0.06818181818181818,
+      "mood": 0.0
+    },
+    "by_source": {
+      "rgb": {
+        "n": 20,
+        "mean_sds": 0.26666666666666666
+      },
+      "nypl": {
+        "n": 200,
+        "mean_sds": 0.2508333333333333
+      }
+    }
+  },
+  "per_item": [
+    {
+      "image_path": "data/eval/images/postcard_1.jpg",
+      "source": "rgb",
+      "description": "Есть черно-белая фотография леса с деревьями.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_2.jpg",
+      "source": "rgb",
+      "description": "Картина группы людей в снежном лесу с лошадьми",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_3.jpg",
+      "source": "rgb",
+      "description": "Вид на реку с мостом и зданиями на заднем плане",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_4.jpg",
+      "source": "rgb",
+      "description": "рисунок молодой девушки, держащей кошку на руках.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_5.jpg",
+      "source": "rgb",
+      "description": "Есть человек, который катается на оленях с собакой на спине.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_6.jpg",
+      "source": "rgb",
+      "description": "Арабы в воде, и из нее выпадает много дыма.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_7.jpg",
+      "source": "rgb",
+      "description": "Есть картина розы на открытке с дамским жучком.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_8.jpg",
+      "source": "rgb",
+      "description": "старая открытка с картинкой ветки дерева и цветка",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_9.jpg",
+      "source": "rgb",
+      "description": "Женщина в кимоно, сидящая перед зеркалом",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_10.jpg",
+      "source": "rgb",
+      "description": "три различных цветных отпечатка женщины с цветами и фруктами",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_11.jpg",
+      "source": "rgb",
+      "description": "Есть рождественская открытка с коробкой и листьями Холли.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_12.jpg",
+      "source": "rgb",
+      "description": "Закрытая женщиной, держащей свечу в фоторамке",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_13.jpg",
+      "source": "rgb",
+      "description": "Трое детей стоят в снегу с рождественским деревом.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_14.jpg",
+      "source": "rgb",
+      "description": "Есть фотография пары поцелуев под рождественским деревом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_15.jpg",
+      "source": "rgb",
+      "description": "Там птица сидит на ветке с листьями Холли.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_16.jpg",
+      "source": "rgb",
+      "description": "Арафированная собака, стоящая в снегу с другими собаками",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_17.jpg",
+      "source": "rgb",
+      "description": "Пагода в центре города с множеством людей",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_18.jpg",
+      "source": "rgb",
+      "description": "черно-белый рисунок человека с усами",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_19.jpg",
+      "source": "rgb",
+      "description": "Двое детей ездят на санях вниз по снегопаду.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/eval/images/postcard_20.jpg",
+      "source": "rgb",
+      "description": "арафированная фотография ребенка в цветном наряде с цветами",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/005aeab0-5fce-0137-881b-0710f6dfc445.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением мужчины и женщины на ней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/017c4780-5fce-0137-ce31-5be392b29c69.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением мужчины и женщины на ней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/028fd910-4f1d-0137-4f08-41eb8aaaf8dc.jpg",
+      "source": "nypl",
+      "description": "Газеты сложены друг на друга с титулом.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/02c4d6d0-5fce-0137-8a76-02d7c9fe3a2f.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением самолета.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/051f4b80-82a1-0130-37bb-58d385a7b928.jpg",
+      "source": "nypl",
+      "description": "Многие мужчины стоят вместе в группе, позируя на фотографию.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/08275cc0-4f1d-0137-2950-49fededf6132.jpg",
+      "source": "nypl",
+      "description": "Книгу с фотографией рекорда.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/08db6da0-5fce-0137-8379-038cdfa421c9.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением мужчины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/09d2f3d0-4f1d-0137-0e6e-11fac4f49b10.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с кучей людей на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0a134590-4f1d-0137-c6b5-0f9b63e756c6.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с кучей людей на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0b021ce0-c5c3-012f-4add-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "есть рисунок женщины и ребенка со знаком",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0b883610-5fce-0137-ff87-176fd0c98087.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением мужчины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0bc8b730-5fce-0137-e053-2dbe10d11a50.jpg",
+      "source": "nypl",
+      "description": "Есть книга с изображением человека, катающегося на лошади.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0be98850-5fce-0137-624f-79c558cc7e20.jpg",
+      "source": "nypl",
+      "description": "Есть книга с изображением человека, катающегося на лошади.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0eda2e20-5fce-0137-b89d-02d64ec962a9.jpg",
+      "source": "nypl",
+      "description": "Есть книга с изображением человека, катающегося на лошади.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/0fcecc40-4f1d-0137-05cf-005d1f7854e6.jpg",
+      "source": "nypl",
+      "description": "Там есть газета с фотографией мужчины на ней.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/101bfba0-c560-012f-ce19-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "снимок толпы людей в городе",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/12b25b00-54d6-0137-9482-65cbc98e59ef.jpg",
+      "source": "nypl",
+      "description": "Обложка фильма с несколькими фотографиями",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/13227dd0-5af1-0137-97af-111685f671b5.jpg",
+      "source": "nypl",
+      "description": "Книгу с обложкой человека на лошади.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/137580b0-5fce-0137-7fc3-2575cd677097.jpg",
+      "source": "nypl",
+      "description": "Есть книга с фотографией мужчины в костюме",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/14539ed0-5af1-0137-fa5f-7dacbbe64b78.jpg",
+      "source": "nypl",
+      "description": "Книгу с обложкой человека на лошади.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1465de20-54d6-0137-1fd2-01d4ded44b75.jpg",
+      "source": "nypl",
+      "description": "Обложка фильма с несколькими фотографиями",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/14f9e840-5fce-0137-9f57-71ab303bb37b.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с картинкой с записью.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15424f10-54d6-0137-704f-7dd65db13afa.jpg",
+      "source": "nypl",
+      "description": "Обложка фильма с несколькими фотографиями",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15bd8790-4f1d-0137-baa2-02761820a540.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с кучей информации о нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/15bf0ae0-54d6-0137-6a31-0b767ccb4be8.jpg",
+      "source": "nypl",
+      "description": "Обложка фильма с несколькими фотографиями",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/16208a70-5fce-0137-2b6b-1bcf211791f0.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением белого слона.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/16410a70-5fce-0137-3748-31984762c3e2.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением белого слона.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/17ccd060-4f1d-0137-0d46-2dbbd1b594bf.jpg",
+      "source": "nypl",
+      "description": "арафированный образ записи с несколькими названиями",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/18050fb0-54d6-0137-0408-0b1bd74e514f.jpg",
+      "source": "nypl",
+      "description": "Книгу с обложкой записи",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/19c542b0-54d6-0137-ecf4-29c49ae26489.jpg",
+      "source": "nypl",
+      "description": "Книгу с бейсбольной битой на ней.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1a0fda90-3944-0138-ae0a-2de23f29d4fc.jpg",
+      "source": "nypl",
+      "description": "Арафированная фотография мужчины в костюме и бабочка в красном ящике",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1b185540-2b59-0138-d8b7-1367f0d61643.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с кучей людей на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1bb89160-54d6-0137-933f-1f10e469ec5c.jpg",
+      "source": "nypl",
+      "description": "Там есть газета с фотографией мужчины на ней.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1bf6f140-54d6-0137-1b0c-0a78619dfd5f.jpg",
+      "source": "nypl",
+      "description": "Там есть газета с фотографией мужчины на ней.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1c1d91d0-c530-012f-9371-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": ":: закрытие документа с изображением человека на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1cee40a0-4f1d-0137-8a47-0d3749456c93.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1ea29040-a002-0137-cea5-0bc4aa8f3a9a.jpg",
+      "source": "nypl",
+      "description": "Есть книга с изображением человека, катающегося на лошади.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1f5b4010-bd07-013a-463b-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Есть старое фото здания с часами на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/1fe5b8a0-54d6-0137-5e16-0b8350bed3c7.jpg",
+      "source": "nypl",
+      "description": "Есть книга с фотографией человека, держащего книгу.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/22d98420-54d6-0137-3b28-5dc5c47c3140.jpg",
+      "source": "nypl",
+      "description": "арафированный чикаго и полночь вспыхивают, чистят, щёлкают, щёлкают и рэнс",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/24f1d430-2721-0132-e268-58d385a7bbd0.jpg",
+      "source": "nypl",
+      "description": "Многие люди ездят на крокодиле в воде.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/25d98910-4f1d-0137-dd88-173a66b91735.jpg",
+      "source": "nypl",
+      "description": "Обложка журнала с парами поцелуев перед камерой",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/25edd4f0-7759-013c-8413-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Есть черная и белая фотография человека, пахающего поле лошадьми.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/26fcb120-4f1d-0137-9aa6-000dda42a5ae.jpg",
+      "source": "nypl",
+      "description": "Книгу с мультфильмом на ней.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/29380870-54d6-0137-ed8c-083850e15911.jpg",
+      "source": "nypl",
+      "description": "Есть книга с фотографией человека с множеством лиц",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2acff8e0-54d6-0137-7c4d-73ce9872fb5a.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2b0ee550-54d6-0137-177c-2d73dbe691c3.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2be9d970-54d6-0137-516d-2df384e56b4e.jpg",
+      "source": "nypl",
+      "description": "Книгу с обложкой мультфильма мужчины и женщины",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/2df1ef10-ffc2-0131-42a5-58d385a7b928.jpg",
+      "source": "nypl",
+      "description": "Фотография мужчины в шляпе и одежде",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/30c7f030-54d6-0137-c335-796733c091de.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением мужчины и женщины на ней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/310e5050-4f1d-0137-39a7-39c5ab556270.jpg",
+      "source": "nypl",
+      "description": "Газета Arafed рекламирует рождение Гарбо",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3238c5a0-c5d2-012f-fa26-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Там есть винтажное фото уличной сцены с людьми, ходящими",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/39c2f540-bd07-013a-f730-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Женщина, которая сидит за столом и пишет на ручке",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3ac78850-54d6-0137-8014-039963576fd5.jpg",
+      "source": "nypl",
+      "description": "Книжка с изображением мужчины в костюме и галстуке",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3be77dd0-54d6-0137-5155-79bcf8ac3134.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с постером турнира для гольфа.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3e1531c0-0bec-0134-5861-00505686a51c.jpg",
+      "source": "nypl",
+      "description": "На странице есть рисунок женщины и кошки.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/3f8eced0-c62c-012f-d76e-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "старое фото человека, сидящего на выступе с шляпой",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/41c35ab0-a002-0137-81f3-5ff093cbf530.jpg",
+      "source": "nypl",
+      "description": "есть книга с изображением большой 3 на ней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/431976d0-c55f-012f-0530-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Там есть открытка из здания с колоннами и деревом.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/4434cfb0-c5ee-012f-2c98-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "на пирсе, где люди ходят по нему, и лодки в воде.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/459df520-54d6-0137-4af9-49169630bf81.jpg",
+      "source": "nypl",
+      "description": "На странице газеты с изображением мужчины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/49b47c80-b849-013a-2de5-0242ac110002.jpg",
+      "source": "nypl",
+      "description": "рисунок человека с белой бородой и красной шляпой",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/4f3c9c20-0339-0138-c8fe-231b22998eaa.jpg",
+      "source": "nypl",
+      "description": "Есть человек, стоящий перед группой людей",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a2e2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Там есть открытка с домом с деревом перед ним.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a304-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "есть фотография большого здания с лестницей",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a464-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Там много людей, идущих по набережной с тележкой.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-a4d2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть фотография железнодорожной станции с поездом на рельсах.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-c061-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Там много лодок на воде рядом с пляжем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbca-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Вид большого здания с рекой на переднем плане",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbd0-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "есть фотография открытки здания посреди дня.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbe3-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть винтажная фотография моста через реку.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cbf2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть черно-белая фотография фермы с грунтовой дорогой.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cc04-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "В снегу маленькая хижина с мостом на заднем плане.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47d9-cc33-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Там есть коричневый дом с белыми затворами на окнах.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-3746-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Фотография группы людей, сидящих на лодке",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-5484-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Арафированный образ женщины в платье с мечом и щитом",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47da-88b9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "В парке есть рисунок беседки.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bad2-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "картинка кучки разных цветов с лентами",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bc92-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Четыре карты с мармеладками и птицей на них.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bf0e-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Куча рисунков людей с рождественскими деревьями.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bf9d-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Закрытую кучу рисунков птиц и цветов",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-bfa6-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Закрыть картинку с кучей разных картин",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c0bc-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Рядом с кучей разных типов птичьего гнезда",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c4aa-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Закрыть постер с ключом на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47db-c4b9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Закрыть лист бумаги с рисунками людей",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47dd-ce05-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "старое гравирование человека в больничной койке с солнцем над ним",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47df-e3da-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Фотография группы людей, стоящих перед библиотекой",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b80-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "На этой старой фотографии много людей ходят по улице.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b94-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "старое фото городской улицы с лошадиной каретой",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b9b-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Посмотри на парад с большой толпой людей.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1b9c-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Посмотри на парад с большой толпой людей.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1ba9-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "есть фотография городской улицы с часовой башней",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1bb0-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Фотография парада с толпой людей",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1bc8-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Фотография толпы людей, собравшихся вокруг здания",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c12-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "..оскорбленный вид на толпу людей на городской улице.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c14-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Арабианский взгляд на группу солдат, марширующих в строю",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c21-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Вид на городскую улицу с парадом.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c22-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Вид на городскую улицу с парадом.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-1c23-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Многие люди стоят вокруг большой лодки со множеством плюшевых животных",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4309-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "На этой старой фотографии много людей ходят по улице.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4e50-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Фотография пары людей, сидящих на крыльце дома",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e0-4e55-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть две старые фотографии людей, сидящих на крыльце дома.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e1-bf79-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть две старые фотографии мужчины и женщины в лесу.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-59f7-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть винтажная рождественская открытка с собакой и другими животными.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.6666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5a8b-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "рисунок лошадиной коляски на грунтовой дороге вблизи реки",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5d2e-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть фотография мальчика, склонившегося на колени до рождественской открытки.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/510d47e3-5d2f-a3d9-e040-e00a18064a99.jpg",
+      "source": "nypl",
+      "description": "Есть фотография мальчика, склонившегося на колени до рождественской открытки.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/56d6ec70-2290-0132-0aa3-58d385a7b928.jpg",
+      "source": "nypl",
+      "description": "Фотография мужчины в шляпе и одежде",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/58245f10-1f95-0134-abe9-00505686a51c.jpg",
+      "source": "nypl",
+      "description": "На странице есть рисунок женщины и кошки.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/583f0100-2290-0132-7f31-58d385a7b928.jpg",
+      "source": "nypl",
+      "description": "Фотография мужчины в шляпе и одежде",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/59878270-2290-0132-6502-58d385a7b928.jpg",
+      "source": "nypl",
+      "description": "Фотография мужчины в шляпе и одежде",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/60e11ab0-c6e8-012f-95df-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "плакат для музыкальной песенки про цветочный барабан",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/65336510-2b57-0138-5aec-04723c3f1c68.jpg",
+      "source": "nypl",
+      "description": "Книжка с изображением мужчины в костюме и галстуке",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/680a5be0-c5ee-012f-7fb7-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Фотография улицы, где люди ходят вокруг нее",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/688ca6d0-5e8e-013e-fca2-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Есть черная и белая фотография человека, пахающего поле лошадьми.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/6fa553c0-c5c3-012f-fdb0-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Есть фотография мальчика, кормящего кроликов в снегу.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/708b9720-c5d1-012f-b1dc-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "На этой старой картинке много людей гуляют по улицам.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/750c34c0-c56b-012f-69fa-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение документа с датой сообщения",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7a7bf640-c5c6-012f-3478-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "черно-белое фото мужчины с трубой во рту",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7bd5bda0-c559-012f-16ae-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "закрыть документ с изображением самолета",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/7d8af6d0-54d6-0137-8432-6367cc465540.jpg",
+      "source": "nypl",
+      "description": "Там есть газета с фотографией мужчины на ней.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/812ff580-c56b-012f-a0c7-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение таблицы с цифрами и списком",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/85bb13b0-2bfc-0138-7b75-0fa38eefb123.jpg",
+      "source": "nypl",
+      "description": "Есть черная и белая фотография человека, пахающего поле лошадьми.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/872c3a30-c56b-012f-e507-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": ":: закрытие документа с изображением человека на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8947b270-c5c4-012f-60fd-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Там рисунок мальчика с котом и знаком",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/89512430-8d18-677c-e040-e00a18064a45.jpg",
+      "source": "nypl",
+      "description": "В парке много людей с часовой башней на заднем плане.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/89e3b450-c559-012f-5da5-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение таблицы с рядом предметов",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8bdbc4f0-8883-0136-f89f-7559ce27bf8c.jpg",
+      "source": "nypl",
+      "description": "Ближе к штампу с фотографией человека с усами",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/8ef6b180-c560-012f-14e4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "начертанный рекой с мостом и несколькими людьми,",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/90197b40-c556-012f-c481-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Снимок парада, идущего по городской улице",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/903addc0-791e-0139-9ad8-0242ac110003.jpg",
+      "source": "nypl",
+      "description": "Есть черная и белая фотография человека, пахающего поле лошадьми.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9199c120-c5d1-012f-3fa9-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Там много людей, стоящих вокруг лошадиной кареты.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/91d2b2a0-c5d1-012f-caf0-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Есть фотография человека, стоящего во дворе.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9253ff90-54d6-0137-4e50-6ddabcf1f9ff.jpg",
+      "source": "nypl",
+      "description": "на обложке книги с изображением мужчины и женщины",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/93012010-7480-0135-bff5-2fc23542849e.jpg",
+      "source": "nypl",
+      "description": "Фотография двоих мужчин в костюмах и галстуках, позирующих для фотографии",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/942b2300-54d6-0137-a470-4b6f2bd6bae1.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с кучей людей на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/9dda17c0-c556-012f-028a-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Многие люди стоят на городской улице с флагами.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a0850770-c556-012f-3b35-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "а злой вид на улицу со многими людьми и лошадиной каретой",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a0a3f1f0-5af0-0137-bdea-47d4397f339e.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с фотографией женщины на ней.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a15f7c20-c556-012f-51f4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Арафийская фотография большой толпы людей, собравшихся в городе",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a31c2880-c55c-012f-cc11-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "рисунок лошадиной коляски, проезжающей мимо здания с часовой башней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/a9a87a90-5fce-0137-3a79-71f727785bc6.jpg",
+      "source": "nypl",
+      "description": "есть книга с изображением большой 3 на ней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa2a4f90-5fce-0137-2c1a-03be08b55f45.jpg",
+      "source": "nypl",
+      "description": "есть книга с изображением большой 3 на ней",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa2ca8c0-5af0-0137-1957-19f6ba3a2641.jpg",
+      "source": "nypl",
+      "description": "Обложка журнала, на которой мужчины и женщины читают книгу",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa4dd950-5af0-0137-4a2b-007bef5aab4f.jpg",
+      "source": "nypl",
+      "description": "Обложка журнала, на которой мужчины и женщины читают книгу",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/aa910700-5af0-0137-a6ac-0f34d98c395a.jpg",
+      "source": "nypl",
+      "description": "Обложка журнала, на которой мужчины и женщины читают книгу",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/abff29c0-5af0-0137-f7b0-63e0db87ed3c.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с фотографией мужчины.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/adb66d40-c5c4-012f-b785-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Закрытое от рисунка группы людей на холме",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b23f3b90-c532-012f-8f65-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "черно-белый образ бумаги с перечнем предметов",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-c80d-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение таблицы с перечнем предметов",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-cc46-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение документа с датой сообщения",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-ce1a-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение документа с изображением мужчины",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-ce23-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": ":: закрытие документа с изображением человека на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-d40c-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение документа с датой публикации",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd97-d4fc-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": ":: закрытие документа с строкой текста на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-136f-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение документа с изображением плоскости",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-2ccb-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": ":: закрытие документа с изображением человека на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-44ab-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": ":: закрытие документа с изображением человека на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd98-44c0-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение таблицы с перечнем предметов",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b619bd99-a473-e6d9-e040-e00a1806748c.jpg",
+      "source": "nypl",
+      "description": "черно-белое изображение квитанции с указанием даты и времени",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b9bd99e0-5af0-0137-504d-33f71272a690.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/b9ffd5c0-5af0-0137-b24b-001c893f66c8.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/bb095ce0-5af0-0137-1272-0d50344e33f6.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/be7bfb80-5af0-0137-e341-23286e2b6410.jpg",
+      "source": "nypl",
+      "description": "Арабы с картинкой мужчины и женщины на ней.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c261ef12-e4a2-3577-e040-e00a18067776.jpg",
+      "source": "nypl",
+      "description": "Две женщины в кимоно идут по тропинке.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c2624937-b3a6-2318-e040-e00a18067b59.jpg",
+      "source": "nypl",
+      "description": "Есть черно-белое фото церкви посреди леса.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c26322c6-3b52-69f1-e040-e00a18061651.jpg",
+      "source": "nypl",
+      "description": "Там есть лодка, которая плавает в воде рядом с деревней.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c2b94680-c5c2-012f-dc92-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Есть фотография мальчика, склонившегося на колени до рождественской открытки.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 1,
+        "mood": 0,
+        "sds": 0.5
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c494b3e0-c55c-012f-d829-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Снимок здания с фонтаном перед ним",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c72ec7b0-5af0-0137-edbd-7f48bff61e15.jpg",
+      "source": "nypl",
+      "description": "Книжка с изображением женщины в ванне",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/c86e2b10-2a66-0138-057a-5da2aea97820.jpg",
+      "source": "nypl",
+      "description": "Есть газета с фотографией мужчины и женщины.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cca51a90-18b3-013e-f4c3-0242ac110004.jpg",
+      "source": "nypl",
+      "description": "Арафированная фотография мужчины в смокинге, держащего бумагу",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cd564530-c5c5-012f-d6e2-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Закрыть постер с ключом на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ce1236b0-5af0-0137-f14b-4d9e46d24793.jpg",
+      "source": "nypl",
+      "description": "Там есть книга с кучей рекламы.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/cf5bdd90-c5bf-012f-e8c6-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Арабостроение на берегу водоема",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d2990540-c564-012f-0845-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Многие люди стоят вокруг большой лодки со множеством плюшевых животных",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d6b54a30-5af0-0137-b38b-08f34cc2abfc.jpg",
+      "source": "nypl",
+      "description": "Там есть книга с кучей рекламы.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/d7b9c6d0-c6f7-012f-adc4-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "рисунок человека, держащего глобус с ребенком на нем",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/db728010-b3f3-0134-054f-00505686a51c.jpg",
+      "source": "nypl",
+      "description": "Закрытое от рисунка короны с крестом наверху",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/dc58e9c0-c5c5-012f-1a90-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "рисунок группы людей в различных нарядах",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 1,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/dc6b3420-9c1e-0137-afe8-1d56742e6e5d.jpg",
+      "source": "nypl",
+      "description": "Фотография двоих мужчин в костюмах и галстуках, позирующих для фотографии",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e2cb1880-c6f7-012f-c077-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "старое гравирование человека в форме каменщика",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e35d0020-c6f7-012f-c36c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "старая книга с фотографией человека в лодке",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/e9515ab0-c56b-012f-ed3f-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": ":: завершение подготовки документа с рядом пунктов на нем;",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eacb14d0-5fcd-0137-fb7f-043655789ed3.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с картинкой поезда.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eb8ea370-5fcd-0137-690d-01ba0d5fa1b7.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с картинкой поезда.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ebbf0f70-c5d1-012f-6e5c-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "Много людей ходят по мосту в парке.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ecd6d120-5fcd-0137-6ea9-4d546e4cf931.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с картинкой поезда.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/ee80c2b0-5fcd-0137-4148-519765192285.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением двух мужчин.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/eea2e7d0-5fcd-0137-ae63-7b6a533f5a3e.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением двух мужчин.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f5791520-4f1c-0137-dc9f-0d6e6a48755c.jpg",
+      "source": "nypl",
+      "description": "Есть газета с фотографией мужчины и женщины.",
+      "sds": {
+        "type_of_material": 1,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.3333333333333333
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f686d090-5fcd-0137-3e0e-0debf84afeb2.jpg",
+      "source": "nypl",
+      "description": "Есть книга с изображением человека, катающегося на мотоцикле.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f8b5c9c0-5fcd-0137-6b2f-37fa627dc973.jpg",
+      "source": "nypl",
+      "description": "Книгу с обложкой фильма.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/f938a380-5fcd-0137-38ee-77b8b4844277.jpg",
+      "source": "nypl",
+      "description": "Книгу с обложкой фильма.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fb87bd90-5fcd-0137-6979-0baa316db2ca.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением мужчины и женщины в костюме",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fbeb4f20-5fcd-0137-d35a-6556226e44d2.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением мужчины и женщины в костюме",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fd37d040-4f1c-0137-b2d5-0f211d2a9198.jpg",
+      "source": "nypl",
+      "description": "в конце журнала с кучей людей на нем.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fd4e8210-5fcd-0137-7417-08556917d794.jpg",
+      "source": "nypl",
+      "description": "Книгу с изображением мужчины и женщины в костюме",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fdb014d0-5fcd-0137-3105-07bc3b8b766f.jpg",
+      "source": "nypl",
+      "description": "На ней есть книга с изображением мужчины и женщины.",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    },
+    {
+      "image_path": "data/nypl/images/fe2fd0c0-c5bf-012f-d3da-58d385a7bc34.jpg",
+      "source": "nypl",
+      "description": "старое фото римской ампулы с часовой башней на заднем плане",
+      "sds": {
+        "type_of_material": 0,
+        "visual_subject": 1,
+        "artistic_style": 0,
+        "epoch": 0,
+        "cultural_context": 0,
+        "mood": 0,
+        "sds": 0.16666666666666666
+      }
+    }
+  ]
+}

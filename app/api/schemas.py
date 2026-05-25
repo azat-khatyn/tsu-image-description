@@ -7,9 +7,12 @@ class CandidateScore(BaseModel):
 
 
 class MetadataField(BaseModel):
-    label: str
-    score: float
-    confident: bool
+    # label может быть None, когда соответствующая ось таксономии пуста
+    # (например, mood в archival_v2 — каталожные описания не содержат
+    # субъективных категорий настроения)
+    label: str | None = None
+    score: float = 0.0
+    confident: bool = False
     alternatives: list[CandidateScore] = Field(default_factory=list)
 
 
@@ -40,9 +43,23 @@ class InferenceResponse(BaseModel):
     inference: InferenceBlock
     archive_description: str
     search_text: str
+    # Русифицированные теги уверенно предсказанных полей классификатора.
+    # В отличие от metadata.tags (сырые англоязычные метки SigLIP),
+    # эти теги пригодны для отображения в UI / архивной системе без перевода.
+    tags_ru: list[str] = Field(default_factory=list)
+
+
+class PipelineConfig(BaseModel):
+    caption_model: str
+    caption_backend: str
+    taxonomy_version: str
+    use_llm_rewriter: bool
+    llm_prompt_style: str | None = None
+    llm_model: str | None = None
 
 
 class HealthResponse(BaseModel):
     status: str
     model_loaded: bool
     device: str
+    pipeline_config: PipelineConfig | None = None
