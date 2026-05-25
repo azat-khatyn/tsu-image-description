@@ -1,23 +1,31 @@
 # Зависимости Docker-образа.
-# torch / torchvision устанавливаются отдельно в Dockerfile через CPU-индекс
+# Версии явно зафиксированы для воспроизводимости.
+#
+# torch и torchvision устанавливаются отдельно в Dockerfile через CPU-индекс
 # PyTorch (https://download.pytorch.org/whl/cpu) и здесь не дублируются,
 # чтобы не утянуть GPU-сборку.
 
-transformers
-accelerate
-sentencepiece
-pillow
-numpy
-safetensors
-huggingface_hub
-protobuf
-open_clip_torch
-scikit-learn
+# ─── Vision / language модели ──────────────────────────────────────────
+transformers==5.5.4
+accelerate==1.13.0
+sentencepiece==0.2.1
+safetensors==0.7.0
+huggingface_hub==1.15.0
+protobuf==7.34.1
+open_clip_torch==3.3.0
+peft==0.19.1
 
-# Reference-free метрики (используются в evaluate.py при онлайн-оценке)
-sacrebleu
+# ─── Базовые научные библиотеки ────────────────────────────────────────
+pillow==12.2.0
+numpy==2.4.4
+scikit-learn==1.8.0
 
-# FastAPI runtime
-fastapi
-uvicorn[standard]
-python-multipart
+# ─── Reference-free метрики evaluate.py ────────────────────────────────
+# (reference-based метрики из eval_reference_based.py для образа не нужны:
+# rouge-score, nltk, bert-score используются только в offline-оценке.)
+sacrebleu==2.6.0
+
+# ─── FastAPI runtime ───────────────────────────────────────────────────
+fastapi==0.136.0
+uvicorn[standard]==0.45.0
+python-multipart==0.0.26
