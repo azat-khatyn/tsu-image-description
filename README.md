@@ -28,27 +28,22 @@
 
 ```mermaid
 flowchart TD
-    classDef io fill:#f3f4f6,stroke:#9ca3af,stroke-width:1.5px,color:#111827
-    classDef vision fill:#dbeafe,stroke:#3b82f6,stroke-width:1.5px,color:#1e3a8a
-    classDef rule fill:#fef3c7,stroke:#d97706,stroke-width:1.5px,color:#78350f
-    classDef llm fill:#ede9fe,stroke:#7c3aed,stroke-width:2.5px,color:#4c1d95
-
-    IMG([Изображение]):::io
+    IMG[Изображение]
 
     subgraph CV [Визуальное восприятие]
-        BLIP["<b>CaptionGenerator</b><br/>BLIP-large"]:::vision
-        SigLIP["<b>SigLIPMetadataExtractor</b><br/>каталожная таксономия"]:::vision
+        BLIP[CaptionGenerator<br/>BLIP-large]
+        SigLIP[SigLIPMetadataExtractor<br/>каталожная таксономия]
     end
 
-    ENPP["<b>EnglishCaptionPostprocessor</b><br/>очистка артефактов BLIP"]:::rule
+    ENPP[EnglishCaptionPostprocessor]
 
-    subgraph SEM [Семантика и сборка описания]
-        THEME["<b>ThemeInferencer</b><br/>фильтр уверенности"]:::rule
-        BUILD["<b>DescriptionBuilder</b><br/>поисковые теги + черновик"]:::rule
-        LLM["<b>LLMRewriter</b><br/>Vikhr-Nemo-12B"]:::llm
+    subgraph SEM [Семантика и сборка]
+        THEME[ThemeInferencer]
+        BUILD[DescriptionBuilder<br/>search_text + опорный шаблон]
+        LLM[LLMRewriter<br/>Vikhr-Nemo-12B]
     end
 
-    OUT(["<b>JSON-результат</b><br/>caption · metadata<br/>archive_description · search_text"]):::io
+    OUT[JSON-результат:<br/>caption_en, metadata,<br/>archive_description RU,<br/>search_text]
 
     IMG --> BLIP --> ENPP
     IMG --> SigLIP --> THEME
@@ -59,8 +54,6 @@ flowchart TD
     BUILD --> OUT
     LLM --> OUT
 ```
-
-*Цветовая кодировка:* синие — vision-кодировщики, жёлтые — компоненты на основе правил (rule-based), сиреневый — большая языковая модель, серые — вход и выход.
 
 
 ## Оценки качества и производительности 
