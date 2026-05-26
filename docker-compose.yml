@@ -14,6 +14,10 @@ services:
       TRANSFORMERS_CACHE: /models/huggingface
       TOKENIZERS_PARALLELISM: "false"
       MAX_UPLOAD_SIZE_MB: "10"
+      # Языковой редактор (Vikhr-Nemo-12B) отключён по умолчанию: CPU-инференс
+      # 12B-модели нецелесообразен по латентности и требует ~32 ГБ RAM.
+      # Включить можно так: USE_LLM_REWRITER=true docker compose up
+      USE_LLM_REWRITER: "false"
     volumes:
       - ./mounted_data:/mounted_data
       - hf_cache:/models/huggingface
