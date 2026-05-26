@@ -221,7 +221,6 @@ tsu-image-description/
 │   ├── evaluate.py                   # основная оценка
 │   ├── eval_reference_based.py       # BERTScore_RU + chrF + ROUGE-L + BLEU
 │   ├── eval_stats.py                 # bootstrap CI + paired test
-│   ├── llm_judge.py                  # LLM-as-judge
 │   ├── run_demo.py
 │   ├── preload_models.py
 │   ├── exp_db.py
@@ -232,9 +231,10 @@ tsu-image-description/
 │   ├── eval/                         # эталонные наборы + результаты
 │   ├── semart/                       # бенчмарк + признаки для probe
 │   ├── neb_leningrad_wwii/           # размеченная коллекция №529
+│   ├── artcap/                       # ArtCap для эксперимента BLIP-LoRA
 │   └── nypl/                         # NYPL training data
 ├── notebooks/                        # анализ embedding'ов и результатов
-├── docs/                             # лог экспериментов, рубрики, планы
+├── docs/experiments.md               # подробный журнал экспериментов
 ├── demo/screenshots/
 ├── requirements.txt
 ├── requirements.docker.txt
