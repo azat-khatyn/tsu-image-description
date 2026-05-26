@@ -255,7 +255,7 @@ PYTHONPATH=src python scripts/eval_reference_based.py \
   --fields archive_ru,caption_ru
 
 # Сбор открыток с curator-описаниями из НЭБ
-python scripts/data/scrape_neb_collection.py \
+python scripts/data_preparation/scrape_neb_collection.py \
   --output-dir data/neb_leningrad_wwii --delay 1.0
 ```
 
@@ -287,9 +287,9 @@ tsu-image-description/
 │   ├── run_demo.py
 │   ├── preload_models.py
 │   ├── exp_db.py
-│   ├── data/                         # ingestion / sampling
-│   ├── probes/                       # supervised SigLIP-эксперименты
-│   └── _legacy/                      # архив воспроизводимости
+│   ├── data_preparation/             # подготовка датасетов (NEB scrape, SemArt/ArtCap prep, NYPL CapFilt)
+│   ├── training/                     # LoRA / полное дообучение BLIP
+│   └── benchmarks/                   # бенчмарки и probe-эксперименты SigLIP
 ├── data/
 │   ├── eval/                         # эталонные наборы + результаты
 │   ├── semart/                       # бенчмарк + признаки для probe

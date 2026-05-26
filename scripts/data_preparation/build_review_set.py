@@ -10,7 +10,7 @@ Generic verb-based CLI. На вход — два metrics-JSON (например,
 Использование (значения по умолчанию воспроизводят набор, описанный в
 README → «Демонстрационный набор для рецензирования РНБ»):
 
-    PYTHONPATH=src python scripts/data/build_review_set.py \\
+    PYTHONPATH=src python scripts/data_preparation/build_review_set.py \\
         --output demo/review_set_rgb_rnb.md
 """
 
