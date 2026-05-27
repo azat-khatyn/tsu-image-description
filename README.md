@@ -37,22 +37,21 @@ flowchart TD
         SigLIP[ЭкстракторМетаданныхSigLIP<br/>каталожная таксономия]
     end
 
-    ENPP[ПостпроцессорАнглийскойПодписи]
+    POSTCAP[ПостпроцессорПодписи<br/>+ перевод EN→RU]
 
     subgraph SEM [Обогащение семантики и сборка]
-        THEME[ОпределительТемы]
-        BUILD[КонструкторОписания<br/>]
+        BUILD[КонструкторОписания<br/>+ ОпределительТемы]
         LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B]
     end
 
     OUT[JSON-результат:<br/>caption_en, metadata,<br/>archive_description RU,<br/>search_text]
 
-    IMG --> BLIP --> ENPP
-    IMG --> SigLIP --> THEME
-    ENPP --> BUILD
-    THEME --> BUILD
-    ENPP --> LLM
-    THEME --> LLM
+    IMG --> BLIP --> POSTCAP
+    IMG --> SigLIP
+    POSTCAP --> BUILD
+    POSTCAP --> LLM
+    SigLIP --> BUILD
+    SigLIP --> LLM
     BUILD --> OUT
     LLM --> OUT
 ```
