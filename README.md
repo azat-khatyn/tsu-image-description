@@ -39,34 +39,22 @@ flowchart TD
 
     ENPP[ПостпроцессорАнглийскойПодписи]
 
-    subgraph TXT [Перевод подписи на русский]
-        TR[Переводчик<br/>MarianMT EN→RU]
-        TXPP[ПостпроцессорРусскойПодписи]
-    end
-
     subgraph SEM [Обогащение семантики и сборка]
         THEME[ОпределительТемы]
-        BUILD[КонструкторОписания]
+        BUILD[КонструкторОписания<br/>]
         LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B]
     end
 
-    OUT_DESC[archive_description RU<br/>основное архивное описание]
-    OUT_AUX[search_text + tags_ru<br/>поисковое представление]
+    OUT[JSON-результат:<br/>caption_en, metadata,<br/>archive_description RU,<br/>search_text]
 
-    IMG --> BLIP --> ENPP --> TR --> TXPP
-    IMG --> SigLIP
-
-    SigLIP --> THEME
-    SigLIP --> BUILD
-    SigLIP --> LLM
-    TXPP --> BUILD
+    IMG --> BLIP --> ENPP
+    IMG --> SigLIP --> THEME
+    ENPP --> BUILD
     THEME --> BUILD
     ENPP --> LLM
     THEME --> LLM
-
-    LLM --> OUT_DESC
-    BUILD -.->|fallback при отключённом LLM| OUT_DESC
-    BUILD --> OUT_AUX
+    BUILD --> OUT
+    LLM --> OUT
 ```
 
 ## Оценки качества и производительности 
