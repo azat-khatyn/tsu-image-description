@@ -1,11 +1,11 @@
-"""sample_eval_pool.py — собрать дополнительный retrieval pool из NYPL для evaluation.
+"""sample_eval_pool.py — собрать дополнительный пул NYPL для оценки.
 
-Семплирует случайные NYPL-изображения, исключая те, что присутствуют в обучающих
-сплитах (`data/nypl/splits/train_*.json`, `val_*.json`). Это нужно, чтобы при
-fine-tuning эксперименты (E-7 / E-8) не оценивались на части обучения.
+Семплирует случайные изображения NYPL, исключая те, что присутствуют в обучающих
+сплитах (`data/nypl/splits/train_*.json`, `val_*.json`). Это нужно, чтобы оценка
+не пересекалась с обучающей выборкой.
 
-Выход — JSONL-файл по одной записи на изображение, без `reference_short_ru`
-(NYPL разметки нет; используется только как retrieval pool).
+Выход - JSONL-файл по одной записи на изображение, без `reference_short_ru`
+(у NYPL нет разметки; используется только как пул для поиска).
 
     python scripts/sample_eval_pool.py --n 200 --seed 42
 """
@@ -37,7 +37,7 @@ def parse_args():
 
 
 def collect_excluded_filenames(splits_dir: Path) -> set:
-    """Read all train_*.json and val_*.json in splits_dir and return basenames."""
+    """Прочитать все train_*.json и val_*.json в splits_dir и вернуть имена файлов."""
     excluded = set()
     if not splits_dir.exists():
         print(f"[WARN] splits dir {splits_dir} not found — no exclusions applied")
@@ -74,19 +74,19 @@ def main():
     print(f"[INFO] n:          {args.n}")
     print(f"[INFO] seed:       {args.seed}\n")
 
-    # 1. Excluded filenames from training splits
+    # 1. имена файлов для исключения из обучающих сплитов
     print("[INFO] Reading splits to determine excluded filenames...")
     excluded = collect_excluded_filenames(splits_dir)
     print(f"[INFO] Total excluded filenames: {len(excluded)}\n")
 
-    # 2. All available images
+    # 2. все доступные изображения
     all_images = sorted(
         f.name for f in images_dir.iterdir()
         if f.is_file() and f.suffix.lower() in {".jpg", ".jpeg", ".png"}
     )
     print(f"[INFO] Total images in {images_dir}: {len(all_images)}")
 
-    # 3. Candidates = available - excluded
+    # 3. кандидаты = доступные минус исключённые
     candidates = [name for name in all_images if name not in excluded]
     print(f"[INFO] Candidates (not in splits): {len(candidates)}")
 
@@ -95,11 +95,11 @@ def main():
             f"[ERROR] only {len(candidates)} candidates, asked for {args.n}"
         )
 
-    # 4. Reproducible random sample
+    # 4. воспроизводимая случайная выборка
     rng = random.Random(args.seed)
     sample = sorted(rng.sample(candidates, args.n))
 
-    # 5. Write JSONL
+    # 5. запись JSONL
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         for name in sample:

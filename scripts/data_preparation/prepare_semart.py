@@ -1,21 +1,21 @@
-"""prepare_semart.py — convert SemArt to BLIP-compatible (image, caption) pairs.
+"""prepare_semart.py — преобразовать SemArt в пары (image, caption) для BLIP.
 
-SemArt descriptions are art-historical commentary (often 50-200 words). Direct
-training would over-bias BLIP toward encyclopedic regime. We extract VISUAL
-SENTENCES — short (8-30 words), describing what's IN the painting, not its
-historical context.
+Описания SemArt - это искусствоведческий комментарий (часто 50-200 слов).
+Прямое обучение слишком сместило бы BLIP к энциклопедическому стилю. Извлекаются
+предложения, описывающие визуальную сторону - короткие (8-30 слов), описывающие то, что изображено
+на картине, а не её исторический контекст (художник, страна и тд.).
 
-Filter pipeline per painting:
-  1. Split DESCRIPTION into sentences (simple regex).
-  2. Filter by word count (8-30).
-  3. Drop biographical/context sentences (author names, dates, schools).
-  4. Bias toward visual verbs (depicts, shows, stands, holds, wears, ...).
-  5. Take up to 2 best sentences per painting → multiple caption rows.
+Конвейер фильтрации для каждой картины:
+  1. Разбить DESCRIPTION на предложения (простой regex).
+  2. Отфильтровать по числу слов (8-30).
+  3. Убрать биографические/контекстные предложения (имена, даты, школы).
+  4. Предпочесть визуальные глаголы (depicts, shows, stands, holds, wears, ...).
+  5. Взять до 2 лучших предложений с картины --> несколько строк-подписей.
 
-Output:
+Выход:
   data/semart/train.json  list[{id, image_path, caption}]
-  data/semart/val.json    same
-  data/semart/manifest.json  full + filtering stats
+  data/semart/val.json    то же
+  data/semart/manifest.json  полный набор и статистика фильтрации
 """
 
 import csv
@@ -31,11 +31,11 @@ SEED = 42
 
 MIN_WORDS = 8
 MAX_WORDS = 30
-MAX_SENTENCES_PER_PAINTING = 1   # 1 best caption per image (was 2)
-MAX_TRAIN_SAMPLES = 8000          # cap to keep M1 training tractable
-REQUIRE_VISUAL_CUE = True         # only sentences with explicit visual verbs
+MAX_SENTENCES_PER_PAINTING = 1   # 1 лучшая подпись на изображение
+MAX_TRAIN_SAMPLES = 8000          # ограничение размера обучающей выборки
+REQUIRE_VISUAL_CUE = True         # только предложения с явными визуальными глаголами
 
-# Visual verbs / cues — sentences with these are preferred captions
+# визуальные глаголы / маркеры — предложения с ними предпочтительны как подписи
 VISUAL_CUES = [
     r"\bdepicts?\b", r"\bdepicted\b", r"\bdepicting\b",
     r"\bshows?\b", r"\bshowing\b",
@@ -55,14 +55,14 @@ VISUAL_CUES = [
 ]
 VISUAL_RE = re.compile("|".join(VISUAL_CUES), re.IGNORECASE)
 
-# Biographical / contextual patterns to EXCLUDE
+# биографические / контекстные шаблоны для ИСКЛЮЧЕНИЯ
 EXCLUDE_PATTERNS = [
     r"\bwas (a |an |the )?\w+ painter\b",       # "was a Flemish painter"
     r"\bbelongs? to (the )?\w+ school\b",
     r"\bcommissioned by\b",
     r"\bin the \d{4}s?\b",                       # "in the 1850s"
     r"\bduring (the )?\d{4}",
-    r"\b\d{4}\b",                                # ANY 4-digit year (1506, 1850, etc.)
+    r"\b\d{4}\b",                                # любой 4-значный год (1506, 1850 и т.п.)
     r"\b(eighteenth|nineteenth|seventeenth|twentieth) century\b",
     r"\bthe artist\b",
     r"\bthe painter\b",
@@ -70,8 +70,8 @@ EXCLUDE_PATTERNS = [
     r"\bwas born\b",
     r"\bdied in\b",
     r"\bschool of\b",
-    r"\b(was |were )(sent|moved|transferred|destroyed|commissioned)\b",  # historical events
-    r"\bover the course of\b",                   # biographical narration
+    r"\b(was |were )(sent|moved|transferred|destroyed|commissioned)\b",  # исторические события
+    r"\bover the course of\b",                   # биографическое повествование
     r"\bthroughout his (career|life)\b",
     r"\bover his (career|life)\b",
 ]
@@ -79,39 +79,39 @@ EXCLUDE_RE = re.compile("|".join(EXCLUDE_PATTERNS), re.IGNORECASE)
 
 
 def split_sentences(text: str):
-    """Simple sentence splitter on .!? followed by whitespace and capital."""
-    # Normalize whitespace
+    """Простое разбиение на предложения по .!? с пробелом и заглавной буквой."""
+    # нормализация пробелов
     text = re.sub(r"\s+", " ", text).strip()
-    # Split on terminators followed by space
+    # разбиение по терминаторам с последующим пробелом
     sentences = re.split(r"(?<=[.!?])\s+(?=[A-Z])", text)
     return [s.strip() for s in sentences if s.strip()]
 
 
 def filter_sentence(sentence: str) -> bool:
-    """Return True if sentence is a good visual caption candidate."""
+    """Вернуть True, если предложение — хороший кандидат на визуальную подпись."""
     words = sentence.split()
     n = len(words)
     if n < MIN_WORDS or n > MAX_WORDS:
         return False
     if EXCLUDE_RE.search(sentence):
         return False
-    # Don't start with author/proper noun chains
+    # не начинать с цепочки имён собственных
     if re.match(r"^[A-Z][a-z]+ [A-Z][a-z]+(?: [A-Z][a-z]+)?\b", sentence):
-        # E.g., "Hans Holbein the Younger..." — likely biographical
-        # But allow if visual cue present
+        # например "Hans Holbein the Younger..." — вероятно биография;
+        # но допускаем при наличии визуального маркера
         if not VISUAL_RE.search(sentence):
             return False
-    # Stricter mode: REQUIRE explicit visual cue
+    # строгий режим: ТРЕБОВАТЬ явный визуальный маркер
     if REQUIRE_VISUAL_CUE and not VISUAL_RE.search(sentence):
         return False
     return True
 
 
 def rank_sentence(sentence: str) -> float:
-    """Score sentence — higher = more visual / useful as caption."""
+    """Оценить предложение: выше = визуальнее / полезнее как подпись."""
     n_visual = len(VISUAL_RE.findall(sentence))
     n_words = len(sentence.split())
-    # Prefer sentences with visual cues + moderate length (10-20 words)
+    # предпочитаем предложения с визуальными маркерами и умеренной длиной (10-20 слов)
     length_score = 1.0 if 10 <= n_words <= 20 else 0.6
     return n_visual * 1.5 + length_score
 
@@ -126,7 +126,7 @@ def load_csv(path: Path):
 
 
 def build_pairs(rows, label: str):
-    """Build (image_path, caption) pairs from SemArt CSV rows."""
+    """Построить пары (image_path, caption) из строк CSV SemArt."""
     out = []
     stats = {"n_paintings": 0, "n_paintings_kept": 0, "n_sentences_kept": 0,
              "no_image": 0, "no_visual_sentence": 0}
@@ -150,7 +150,7 @@ def build_pairs(rows, label: str):
             stats["no_visual_sentence"] += 1
             continue
 
-        # Sort by rank, take top N
+        # сортировка по рангу, берём top-N
         candidates.sort(key=rank_sentence, reverse=True)
         kept = candidates[:MAX_SENTENCES_PER_PAINTING]
 
@@ -187,7 +187,7 @@ def main():
     print(f"      Val stats:   {val_stats}")
     print()
 
-    # Cap train size to MAX_TRAIN_SAMPLES (random subsample if needed)
+    # ограничить размер train до MAX_TRAIN_SAMPLES (при необходимости случайная подвыборка)
     if len(train_pairs) > MAX_TRAIN_SAMPLES:
         random.seed(SEED)
         random.shuffle(train_pairs)
@@ -210,7 +210,7 @@ def main():
         print(f"   • [{s['type']:>10}] {s['caption'][:120]}")
     print()
 
-    # Word count distribution
+    # распределение числа слов
     import statistics
     wc = [len(p["caption"].split()) for p in train_pairs]
     print(f"Caption word count: min={min(wc)} median={statistics.median(wc):.0f} "

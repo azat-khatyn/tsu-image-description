@@ -21,7 +21,7 @@ LR = 3e-6  # ниже, чем обычный fine-tuning
 
 
 # =========================
-# Dataset
+# Датасет
 # =========================
 class NYPLDataset(Dataset):
     def __init__(self, path, processor):
@@ -54,7 +54,7 @@ class NYPLDataset(Dataset):
 
 
 # =========================
-# Training
+# Обучение
 # =========================
 def train():
     processor = BlipProcessor.from_pretrained(
@@ -66,7 +66,7 @@ def train():
     )
 
     # =========================
-    # LoRA CONFIG
+    # Конфигурация LoRA
     # =========================
     lora_config = LoraConfig(
         r=16,  # было 8
@@ -89,7 +89,7 @@ def train():
     optimizer = torch.optim.AdamW(model.parameters(), lr=LR)
 
     for epoch in range(EPOCHS):
-        # ===== TRAIN =====
+        # ===== Обучение =====
         model.train()
         train_loss = 0
 
@@ -107,7 +107,7 @@ def train():
 
         train_loss /= len(train_loader)
 
-        # ===== VALIDATION =====
+        # ===== Валидация =====
         model.eval()
         val_loss = 0
 
@@ -124,7 +124,7 @@ def train():
         print(f"Train Loss: {train_loss}")
         print(f"Val Loss: {val_loss}")
 
-        # ===== SAVE CHECKPOINT =====
+        # ===== Сохранение чекпойнта =====
         save_path = os.path.join(
             OUTPUT_DIR,
             f"{EXPERIMENT_NAME}_epoch_{epoch}"

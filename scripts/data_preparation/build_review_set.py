@@ -1,14 +1,13 @@
 """build_review_set.py — собрать демонстрационный набор для рецензирования.
 
-Generic verb-based CLI. На вход — два metrics-JSON (например, опорный n=60 и
-литературная переработка n=224). На выход — Markdown-файл с парами
-«эталонное описание ↔ автоматически сгенерированное» для качественной оценки
-экспертом.
+На вход - два metrics-JSON (набор РГБ и набор НЭБ). На выход - Markdown-файл
+с парами «эталонное описание ↔ автоматически сгенерированное» для качественной
+оценки экспертом.
 
-Назначение — подготовка пакета изображений и описаний для рецензента РНБ.
+Назначение - подготовка пакета изображений и описаний для рецензента.
 
 Использование (значения по умолчанию воспроизводят набор, описанный в
-README → «Демонстрационный набор для рецензирования РНБ»):
+README → «Демонстрационный набор для рецензирования»):
 
     PYTHONPATH=src python scripts/data_preparation/build_review_set.py \\
         --output demo/review_set_rgb_rnb.md
@@ -31,7 +30,7 @@ DEFAULT_RGB_PICKS = [
     ("postcard_20.jpg", "детский портрет"),
 ]
 
-# НЭБ-открытки выбираем по характерным признакам в curator-описании.
+# НЭБ-открытки выбираем по характерным признакам каталожного описания.
 NEB_CATEGORIES = [
     ("городской пейзаж",   lambda r: ("Вид" in r) and ("Ленинграде" in r or "набережн" in r) and "Карикатур" not in r),
     ("военный сюжет",      lambda r: "Стрелк" in r or "Невы" in r and "военно" in r.lower()),
@@ -60,7 +59,7 @@ def load_per_item(path):
 
 
 def pick_rgb(items, picks):
-    """Pick by exact filename, preserving order in `picks`."""
+    """Выбор по точному имени файла с сохранением порядка из `picks`."""
     by_name = {Path(it["image_path"]).name: it for it in items}
     out = []
     for fname, category in picks:
@@ -72,7 +71,7 @@ def pick_rgb(items, picks):
 
 
 def pick_neb(items, categories, n_target):
-    """Pick one item per category by matching reference_ru against predicate."""
+    """Выбрать по одной записи на категорию, сопоставляя reference_ru с предикатом."""
     seen_categories = set()
     out = []
     for it in items:

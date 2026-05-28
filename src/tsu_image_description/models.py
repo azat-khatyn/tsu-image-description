@@ -19,15 +19,15 @@ def get_device() -> str:
 
 
 class CaptionGenerator:
-    """Unified caption generator with BLIP-1 / BLIP-2 backends.
+    """Генератор подписей с бэкендами BLIP-1 / BLIP-2.
 
     backend:
-      - "blip1" (default)
+      - "blip1" (по умолчанию)
       - "blip2"
 
-    Notes:
-      - BLIP-2 can improve caption quality, but may be heavy on Apple M1.
-      - Keep BLIP-1 as safe default and switch to BLIP-2 experimentally.
+    Примечания:
+      - BLIP-2 повышает качество подписи, но тяжелее на Apple M1.
+      - BLIP-1 — безопасный дефолт; BLIP-2 включается экспериментально.
     """
 
     def __init__(
@@ -57,12 +57,12 @@ class CaptionGenerator:
                 torch_dtype=dtype,
             ).to(self.device)
         else:
-            # Default BLIP-1 backend switched from base to large.
+            # Дефолтный бэкенд BLIP-1: модель переключена с base на large.
             self.model_path = model_path or "Salesforce/blip-image-captioning-large"
 
-            # Detect PEFT (LoRA) adapter: folder containing adapter_config.json
-            # without a full model.safetensors. Load base from adapter_config and
-            # attach the adapter on top.
+            # Распознавание PEFT (LoRA) адаптера: папка с adapter_config.json
+            # без полного model.safetensors. Грузим базовую модель из конфига
+            # адаптера и надеваем адаптер поверх.
             from pathlib import Path
             adapter_cfg = Path(self.model_path) / "adapter_config.json"
             is_adapter = adapter_cfg.is_file()
@@ -123,7 +123,7 @@ class CaptionGenerator:
 
 
 class Translator:
-    """EN→RU translator. Supports both MarianMT and NLLB-200."""
+    """Переводчик EN→RU. Поддерживает бэкенды MarianMT и NLLB-200."""
 
     def __init__(self, model_name: str = "Helsinki-NLP/opus-mt-en-ru"):
         self.device = get_device()

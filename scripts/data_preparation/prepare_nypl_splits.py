@@ -11,7 +11,7 @@ VAL_SIZE = 0.1
 
 data = []
 
-# counters
+# счётчики
 skipped_url = 0
 skipped_missing = 0
 kept = 0

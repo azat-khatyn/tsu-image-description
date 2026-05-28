@@ -1,19 +1,19 @@
-"""llm_rewriter.py — E12 component: local-LLM-based archive description rewriter.
+"""llm_rewriter.py — языковой редактор архивного описания на локальной LLM.
 
-Берёт caption_en (от BLIP) + структурированные метаданные (от SigLIP) и
-напрямую генерирует русскоязычное архивное описание, минуя literal MT.
+Берёт caption_en (от BLIP) и структурированные метаданные (от SigLIP) и
+напрямую генерирует русское архивное описание, минуя дословный машинный перевод.
 
 Решает:
-  - MarianMT polysemy (painting → картина, не покраска)
-  - proper-noun transliteration (holly → падуб)
-  - грамматику / naturalness (без `фотографию пары` в винительном)
-  - template repetition (LLM не повторяет одну фразу 36% корпуса)
+  - многозначность MarianMT (painting → картина, не покраска)
+  - транслитерацию имён собственных (holly → падуб)
+  - грамматику и естественность речи
+  - повтор шаблонной фразы по корпусу
 
-Сохраняет П2 (закрытые таксономии): SigLIP labels передаются в prompt как
-структурированный контекст, LLM использует их для архивной стандартизации.
+Сохраняет принцип закрытых таксономий: метки SigLIP передаются в prompt как
+структурированный контекст и используются LLM для архивной стандартизации.
 
-Backend по умолчанию — Qwen2.5-3B-Instruct (29 языков нативно, включая
-русский; 3B параметров; ~7 GB fp16). Меняется через `model_path`.
+Модель по умолчанию — Vikhr-Nemo-12B-Instruct-R (русский нативно, fp16).
+Меняется через `model_path`.
 """
 
 from typing import Dict, Optional
@@ -34,19 +34,17 @@ GENERIC_STYLES_RU = {
 # ===========================================================================
 # Версионирование prompt-стилей
 # ===========================================================================
-# v1_archival — оригинальная схема E12 (мая 2026). Выход начинается с типа
-#               материала: «Открытка-хромолитография. …». Сохраняется для
-#               воспроизводимости E12-результатов.
+# v1_archival — исходная схема. Описание начинается с типа материала:
+#               «Открытка-хромолитография. …». Сохраняется для
+#               воспроизводимости прежних прогонов.
 #
-# v2_curator  — настройка под curator-style РНБ (E13, май 2026). Описание
-#               начинается с visual content без преамбулы; тип материала и
-#               техника НЕ дублируются в тексте — они хранятся в отдельных
-#               полях каталога (RUSMARC 200, 215). Стилистически имитирует
-#               curator-описания НЭБ (поле 327 / «Примечание содержания»):
-#               компактная нарративная конструкция, именные/причастные обороты.
+# v2_curator  — настройка под curator-описания РНБ. Текст начинается сразу с
+#               визуального содержания, без преамбулы; тип материала и техника
+#               не дублируются (хранятся в полях RUSMARC 200, 215). Имитирует
+#               стиль поля 327 НЭБ: компактные именные и причастные обороты.
 # ===========================================================================
 
-# ----- v1_archival (E12 baseline) -------------------------------------------
+# ----- v1_archival (исходная схема) -----------------------------------------
 
 SYSTEM_PROMPT_V1_ARCHIVAL = (
     "Ты — каталогизатор Российской государственной библиотеки. "
@@ -137,7 +135,7 @@ USER_PROMPT_TEMPLATE_V1_ARCHIVAL = """Тебе даны:
 Описание:"""
 
 
-# ----- v2_curator (E13, calibrated to НЭБ field 327) ------------------------
+# ----- v2_curator (под поле 327 НЭБ) ----------------------------------------
 
 SYSTEM_PROMPT_V2_CURATOR = (
     "Ты — каталогизатор Российской государственной библиотеки. "
@@ -263,10 +261,10 @@ def _build_user_prompt(style_config: Dict, caption_en: str,
 
 
 def _format_field(field: Dict, fallback: str = "—") -> str:
-    """Format SigLIP-field dict into a human-readable hint for the prompt.
+    """Форматирует поле SigLIP в человекочитаемую подсказку для prompt.
 
-    Включает явный confidence-маркер так, чтобы LLM мог легко его
-    распознать через few-shot pattern (см. FEW_SHOT_EXAMPLES).
+    Добавляет явный маркер уверенности, чтобы LLM распознавал его через
+    few-shot примеры (см. FEW_SHOT_EXAMPLES).
     """
     if not field:
         return fallback
@@ -279,15 +277,15 @@ def _format_field(field: Dict, fallback: str = "—") -> str:
 
 
 class LLMRewriter:
-    """Local-LLM-based archive description rewriter.
+    """Языковой редактор архивного описания на локальной LLM.
 
     Args:
-        model_path: HF model identifier (default Vikhr-Nemo-12B-Instruct-R).
-        prompt_style: One of {"v1_archival", "v2_curator"}. v1_archival —
-            оригинальный E12 prompt с "Открытка." преамбулой; v2_curator —
-            настроенный под НЭБ field 327 стиль, без преамбулы (E13).
-        max_new_tokens: Override generation length. Если None — берётся
-            значение по умолчанию из выбранного prompt_style.
+        model_path: идентификатор модели HF (по умолчанию Vikhr-Nemo-12B-Instruct-R).
+        prompt_style: одно из {"v1_archival", "v2_curator"}. v1_archival —
+            исходный prompt с преамбулой «Открытка.»; v2_curator — стиль под
+            поле 327 НЭБ, без преамбулы.
+        max_new_tokens: переопределяет длину генерации. Если None — берётся
+            значение по умолчанию выбранного prompt_style.
     """
 
     def __init__(
@@ -329,8 +327,8 @@ class LLMRewriter:
     ) -> str:
         inference = inference or {}
 
-        # Build hints from SigLIP fields. Theme/mood могут не иметь
-        # `confident` ключа в inference dict — берём из metadata, если есть.
+        # Подсказки из полей SigLIP. У theme/mood может не быть ключа
+        # `confident` в inference — берём из metadata, если есть.
         image_type_hint = _format_field(metadata.get("image_type", {}))
         style_hint = _format_field(metadata.get("style", {}))
         theme_hint = _format_field(metadata.get("theme") or {})
@@ -365,7 +363,7 @@ class LLMRewriter:
                 pad_token_id=self.tokenizer.eos_token_id,
             )
 
-        # Strip input tokens
+        # отбрасываем токены входного prompt
         new_tokens = output[0][inputs["input_ids"].shape[1]:]
         text = self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
         return text

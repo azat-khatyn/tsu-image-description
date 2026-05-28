@@ -1,6 +1,5 @@
 import json
 import torch
-import numpy as np
 from PIL import Image
 import open_clip
 
@@ -45,7 +44,7 @@ with open(INPUT) as f_in, open(OUTPUT, "w") as f_out:
         caption = item.get("caption", "").strip()
         title = item.get("title", "").strip()
 
-        # 🔥 1. фильтр по длине
+        # 1. фильтр по длине
         if len(caption.split()) < 4:
             continue
 
@@ -57,7 +56,7 @@ with open(INPUT) as f_in, open(OUTPUT, "w") as f_out:
         if score >= THRESHOLD:
             kept += 1
 
-            # 🔥 2. аккуратный hybrid caption
+            # 2. гибридная подпись: caption и title
             if title:
                 final_caption = f"{caption}. {title}"
             else:

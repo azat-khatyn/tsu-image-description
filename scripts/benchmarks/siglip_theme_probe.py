@@ -1,17 +1,16 @@
-"""siglip_theme_probe.py — supervised linear probe on frozen SigLIP features.
+"""siglip_theme_probe.py - supervised linear классификатор на замороженных SigLIP features.
 
-Опция B: вместо zero-shot prompts учим линейный классификатор поверх замороженных
-SigLIP image embeddings, используя SemArt TYPE как supervision.
+Альтернатива zero-shot prompt'ам: учим линейный классификатор поверх замороженных
+SigLIP image embeddings, используя SemArt TYPE как разметку.
 
 Сравнение делается с zero-shot baseline из benchmark_siglip_on_semart.py
-(theme accuracy 57.1% на тех же 5 классах).
 
 Pipeline:
-  1. (cache) Извлечь SigLIP image features для всех SemArt train+val
-  2. Отфильтровать строки с mappable TYPE (5 классов)
-  3. Обучить sklearn LogisticRegression (class_weight='balanced')
-  4. Оценить на val: accuracy, P/R, F1, confusion matrix
-  5. Сравнить с zero-shot baseline
+  1. (кэш) извлекаем SigLIP image features для всего SemArt train+val
+  2. оставляем строки с TYPE (5 классов)
+  3. обучаем sklearn LogisticRegression (class_weight='balanced')
+  4. оцениваем на val: accuracy, P/R, F1, confusion matrix
+  5. сравниваем с zero-shot baseline
 
 Кэш: data/semart/siglip_features_{train,val}.npz
 Результаты: data/semart/probe_theme_archival_v2.json
@@ -50,7 +49,7 @@ def get_device():
 
 
 def load_rows(csv_path: Path):
-    """Read SemArt CSV → list of dicts with mappable TYPE only."""
+    """Читает SemArt CSV → список словарей только со строками, где TYPE маппится."""
     out = []
     with open(csv_path, encoding="latin-1") as f:
         reader = csv.DictReader(f, delimiter="\t")
@@ -76,7 +75,7 @@ def load_rows(csv_path: Path):
 
 
 def extract_features(rows, model, processor, device, batch_size=16, log_every=200):
-    """Run SigLIP vision encoder over a list of rows, return (N, d) numpy array."""
+    """Прогоняет SigLIP vision encoder по списку строк, возвращает numpy-массив (N, d)."""
     feats = []
     t0 = time.time()
     n = len(rows)
@@ -86,14 +85,14 @@ def extract_features(rows, model, processor, device, batch_size=16, log_every=20
         inputs = processor(images=images, return_tensors="pt").to(device)
         with torch.no_grad():
             out = model.get_image_features(**inputs)
-        # In some transformers versions get_image_features returns the full
-        # BaseModelOutputWithPooling; in others it returns the projected tensor.
+        # в одних версиях transformers get_image_features возвращает полный
+        # BaseModelOutputWithPooling, в других — спроецированный тензор
         if isinstance(out, torch.Tensor):
             tensor = out
         elif hasattr(out, "pooler_output") and out.pooler_output is not None:
             tensor = out.pooler_output
         elif hasattr(out, "last_hidden_state"):
-            # mean-pool over patch tokens as last-resort
+            # как крайний случай — mean-pool по patch-токенам
             tensor = out.last_hidden_state.mean(dim=1)
         else:
             raise RuntimeError(f"Unexpected get_image_features return type: {type(out)}")
@@ -110,7 +109,7 @@ def extract_features(rows, model, processor, device, batch_size=16, log_every=20
 
 
 def build_or_load_cache(split: str, model, processor, device, force_recompute=False):
-    """Return (features, rows). Cache features to disk."""
+    """Возвращает (features, rows). Кэширует features на диск."""
     cache = CACHE_DIR / f"siglip_features_{split}.npz"
     csv_path = SEMART_DIR / f"semart_{split}.csv"
 
@@ -121,7 +120,7 @@ def build_or_load_cache(split: str, model, processor, device, force_recompute=Fa
         data = np.load(cache, allow_pickle=True)
         feats = data["features"]
         cached_files = list(data["image_files"])
-        # Verify cache matches current row order
+        # проверяем, что кэш совпадает с текущим порядком строк
         if cached_files == [r["image_file"] for r in rows]:
             print(f"  → loaded {feats.shape} from cache")
             return feats, rows
@@ -139,7 +138,7 @@ def build_or_load_cache(split: str, model, processor, device, force_recompute=Fa
 
 
 def evaluate(X, y_true, clf, class_order):
-    """Return dict with accuracy, per-class P/R/F1, confusion matrix."""
+    """Возвращает словарь с accuracy, P/R/F1 по классам и confusion matrix."""
     from collections import Counter
     y_pred = clf.predict(X)
     n = len(y_true)
@@ -219,7 +218,7 @@ def main():
     print(f"[3/4] Training LogisticRegression (C={args.C}, class_weight={args.class_weight})")
     from sklearn.linear_model import LogisticRegression
     cw = "balanced" if args.class_weight == "balanced" else None
-    # multi_class arg removed in sklearn 1.5+ (multinomial is default for >2 classes)
+    # аргумент multi_class убран в sklearn 1.5+ (multinomial по умолчанию для >2 классов)
     clf = LogisticRegression(
         C=args.C,
         class_weight=cw,
@@ -243,7 +242,7 @@ def main():
         row = metrics["confusion"][gt]
         print(f'{gt:15}' + "".join(f"{row[pr]:>12}" for pr in THEME_CLASSES))
 
-    # Compare to zero-shot baseline (read benchmark output if present)
+    # сравниваем с zero-shot baseline (читаем вывод бенчмарка, если есть)
     baseline_path = CACHE_DIR / "benchmark_archival_v2_val.json"
     comparison = None
     if baseline_path.exists():

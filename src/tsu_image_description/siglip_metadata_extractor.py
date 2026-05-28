@@ -1,12 +1,12 @@
-"""SigLIP zero-shot taxonomy classifier.
+"""SigLIP zero-shot классификатор по таксономии.
 
-Поддерживает несколько versions of taxonomy (для воспроизводимости старых
-экспериментов). По умолчанию используется "archival_v2" — каталожная
-таксономия, согласованная с MARC 21 п.655, Getty AAT (Print processes / Subjects)
+Поддерживает несколько версий таксономии (для воспроизводимости старых
+экспериментов). По умолчанию — "archival_v2": каталожная таксономия,
+согласованная с MARC 21 п.655, Getty AAT (Print processes / Subjects)
 и российской филокартической традицией (Файнштейн Э.Б. «В мире открытки», 1976).
 
-Чтобы воспроизвести старые эксперименты, прогоняемые до 2026-05-21 — передавайте
-taxonomy_version="legacy_v1" (вернёт colloquial "vintage illustration" + mood).
+Для воспроизводимости старых прогонов передавайте taxonomy_version="legacy_v1"
+(вернёт разговорные метки стиля и поле mood).
 """
 
 from typing import Dict, List
@@ -19,10 +19,10 @@ from .models import get_device
 
 TAXONOMIES = {
     # ====================================================================
-    # Legacy (v1) — first iteration, до 2026-05-21.
-    # Содержит colloquial-метки (vintage illustration, decorative illustration,
-    # retro design), субъективные mood-категории. Сохранена для
-    # воспроизводимости старых экспериментов (legacy_*, proposed_v1, E00, E05*, E12_*).
+    # legacy_v1 — первая итерация таксономии.
+    # Разговорные метки стиля (vintage illustration, decorative illustration,
+    # retro design) и субъективные mood-категории. Сохранена только для
+    # воспроизводимости старых прогонов.
     # ====================================================================
     "legacy_v1": {
         "image_types": [
@@ -60,25 +60,14 @@ TAXONOMIES = {
     },
 
     # ====================================================================
-    # Archival (v2) — каталожная таксономия (введена 2026-05-21).
+    # archival_v2 — каталожная таксономия (основная).
     #
-    # Источники:
-    #   - Файнштейн Э.Б. «В мире открытки» (М., 1976) — типология русских
-    #     открыток; основа для image_types и subjects.
-    #   - MARC 21 поле 655 (Genre/Form Term) — international cataloging.
-    #   - Getty AAT раздел "Print processes" — техники печати.
-    #   - Getty AAT раздел "Subjects" — традиционные art-categories.
-    #   - ГОСТ 7.69-2009 (Аудиовизуальные документы) — тип материала.
+    # Источники: Файнштейн Э.Б. «В мире открытки» (1976) — типология открыток;
+    # MARC 21 поле 655; Getty AAT (Print processes, Subjects); ГОСТ 7.69-2009.
     #
-    # Отличия от legacy_v1:
-    #   1. Убраны colloquial-метки стиля: vintage illustration, decorative
-    #      illustration, retro design — заменены на конкретные техники.
-    #   2. Добавлены архивно-релевантные техники: lithograph, chromolithograph,
-    #      etching, watercolor, oil painting.
-    #   3. Themes → subjects: переименовано на каталожный язык,
-    #      "holiday/religious scene" → "holiday/religious subject".
-    #   4. Moods УДАЛЕНЫ полностью — субъективные суждения не идут
-    #      в архивную опись.
+    # Отличия от legacy_v1: разговорные метки стиля заменены на конкретные
+    # техники печати; темы переименованы на каталожный язык; поле mood удалено
+    # (субъективные суждения не идут в архивную опись).
     # ====================================================================
     "archival_v2": {
         "image_types": [
@@ -112,18 +101,18 @@ TAXONOMIES = {
             "a military subject",    # военный сюжет
             "a holiday scene",       # праздничная сцена (Рождество, Пасха, и пр.)
         ],
-        # Moods removed — субъективные суждения не каталожны.
+        # mood удалён — субъективные суждения не каталожны.
         "moods": [],
     },
 }
 
 
 class SigLIPMetadataExtractor:
-    """SigLIP zero-shot classifier with versioned taxonomy.
+    """SigLIP zero-shot классификатор с версионируемой таксономией.
 
     Args:
-        model_name: HF model identifier.
-        taxonomy_version: One of {"legacy_v1", "archival_v2"}. Default "archival_v2".
+        model_name: идентификатор модели HF.
+        taxonomy_version: одно из {"legacy_v1", "archival_v2"}. По умолчанию "archival_v2".
     """
 
     def __init__(
@@ -203,7 +192,7 @@ class SigLIPMetadataExtractor:
         }
 
     def _empty_field(self) -> Dict:
-        """Placeholder for taxonomies with no labels (e.g. moods in archival_v2)."""
+        """Заглушка для таксономий без меток (например, mood в archival_v2)."""
         return {
             "label": None,
             "score": 0.0,

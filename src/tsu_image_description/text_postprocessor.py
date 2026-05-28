@@ -3,21 +3,15 @@ import unicodedata
 
 
 class TextPostprocessor:
-    """Class-level cleanup for translated RU captions.
+    """Очистка русской подписи после перевода.
 
-    Принцип: содержит ТОЛЬКО правила, лечащие *известные классы* артефактов
-    моделей пайплайна (BLIP-token residue, MarianMT lead-in artefacts). Не
-    содержит case-specific patches под конкретные тестовые изображения —
-    такие проблемы должны лечиться более сильной моделью (см. LLM rewriter
-    в section_3_architecture.md), а не разрастающимся словарём regex.
+    Содержит только правила для известных классов артефактов пайплайна
+    (мусорные токены BLIP, зачины MarianMT). Точечных правок под конкретные
+    изображения здесь нет — такие случаи лечит языковой редактор LLM.
 
-    Текущие лечимые классы:
-      1. BLIP-1 hallucination token `arafed`, протекающий в RU
-         (`арафированн*`). EN-сторона тоже его стрипает; держим parallel
-         защиту на случай прямого input.
-      2. Leading fillers `есть/там/имеется/можно увидеть`, переведённые с
-         BLIP-1 паттернов `there is / there are`. EN-сторона тоже их
-         стрипает; держим parallel защиту на случай прямого input.
+    Лечимые классы:
+      1. Токен-галлюцинация `arafed` BLIP-1, протекающий в русский (`арафированн*`).
+      2. Начала строк `есть/там/имеется/можно увидеть` из паттернов `there is / there are`.
       3. Нормализация пробелов и пунктуации.
     """
 
@@ -40,27 +34,27 @@ class TextPostprocessor:
 
         text = unicodedata.normalize("NFKC", text).strip()
 
-        # Normalize spacing around punctuation
+        # нормализация пробелов вокруг пунктуации
         text = re.sub(r"\s+", " ", text)
         text = re.sub(r"\s+([,.;:!?])", r"\1", text)
 
-        # Class-level: remove known model artifact tokens
+        # удаление известных мусорных токенов модели
         for pattern in self._BAD_TOKEN_PATTERNS:
             text = re.sub(pattern, " ", text, flags=re.IGNORECASE)
 
-        # Class-level: remove known leading-filler patterns from BLIP-1 lead-ins
+        # удаление известных зачинов из паттернов BLIP-1
         for pattern in self._LEADING_FILLERS:
             new_text = re.sub(pattern, "", text, flags=re.IGNORECASE)
             if new_text != text:
                 text = new_text
                 break
 
-        # Clean punctuation / double spaces after replacements
+        # повторная чистка пробелов и пунктуации после замен
         text = re.sub(r"\s+", " ", text)
         text = re.sub(r"\s+([,.;:!?])", r"\1", text)
         text = text.strip(" \t\n\r,;:.!-")
 
-        # Fallback if everything got wiped
+        # фолбэк, если текст полностью вычищен
         if not text:
             return "изображение"
 

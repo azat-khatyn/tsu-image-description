@@ -1,4 +1,4 @@
-"""eval_stats.py — bootstrap CI и paired-test для триады (I-4).
+"""eval_stats.py — bootstrap CI и paired-test для метрик триады.
 
 Использование как библиотеки:
 
@@ -23,7 +23,7 @@ import numpy as np
 
 
 # ---------------------------------------------------------------------
-# Core utilities
+# Базовые функции
 # ---------------------------------------------------------------------
 def bootstrap_ci(values, n_iter=1000, conf=0.95, seed=42):
     """Percentile bootstrap CI для среднего."""
@@ -49,7 +49,7 @@ def bootstrap_ci(values, n_iter=1000, conf=0.95, seed=42):
 
 
 def paired_bootstrap(a, b, n_iter=1000, seed=42):
-    """Paired bootstrap: P(mean(a-b) <= 0) — двусторонний test через симметрию.
+    """Парный bootstrap, двусторонний тест через симметрию распределения.
 
     Возвращает p-value для гипотезы H0: mean(a) == mean(b).
     Малое p — отвергаем H0 в пользу того, что распределения различны.
@@ -127,7 +127,7 @@ def main():
         f"CI{int(args.conf * 100)}=[{cand_lo:.4f}, {cand_hi:.4f}]"
     )
 
-    # Paired test only valid if same eval pool size
+    # парный тест корректен только при одинаковом размере пула
     if len(base_vals) == len(cand_vals):
         p = paired_bootstrap(cand_vals, base_vals, n_iter=args.n_iter)
         delta = float(np.mean(cand_vals) - np.mean(base_vals))

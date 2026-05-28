@@ -1,19 +1,19 @@
-"""probe_on_postcards.py — apply SemArt-trained linear probe to postcards.
+"""probe_on_postcards.py — применяет обученный на SemArt linear probe к postcards.
 
-Validation of domain transfer: probe trained on Renaissance/Baroque paintings
-(5 classes: religious/portrait/landscape/genre/still-life). Postcards belong to
-a different visual domain (early-XX-century printed graphics) and a different
-subject distribution (holidays, urban views, military scenes — none of which
-were in SemArt).
+Проверка переноса между доменами: обучен на ренессансной/барочной живописи
+(5 классов: religious/portrait/landscape/genre/still-life). Открытки относятся к
+другому визуальному домену (печатная графика начала XX века) и другому
+распределению сюжетов (праздники, городские виды, военные сцены - ничего из этого
+в SemArt не было).
 
-This script:
-  1. Extracts SigLIP features for postcards (n=60 + n=14 semtest).
-  2. Re-trains probe from cached SemArt features (3 sec) — to avoid pickling.
-  3. Applies probe → predicted theme + confidence per postcard.
-  4. Also runs zero-shot SigLIP on archival_v2 themes (8 classes) for comparison.
-  5. Saves per-item JSON with both predictions for manual inspection.
+Этот скрипт:
+  1. извлекает SigLIP features для postcards (n=60 + n=14 semtest).
+  2. переобучает из кэшированных SemArt features.
+  3. применяет предсказанный theme + confidence для каждой открытки.
+  4. также прогоняет zero-shot SigLIP по themes из archival_v2 (8 классов) для сравнения.
+  5. сохраняет per-item JSON с обоими предсказаниями для ручной проверки.
 
-Output: data/semart/probe_postcards_n74.json
+Выход: data/semart/probe_postcards_n74.json
 """
 
 import csv
@@ -29,16 +29,16 @@ from transformers import AutoModel, AutoProcessor
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# ---------- Probe training data (cached SemArt features) ----------
+# ---------- данные для обучения probe (кэшированные SemArt features) ----------
 PROBE_CACHE_TRAIN = ROOT / "data" / "semart" / "siglip_features_train.npz"
 PROBE_VAL_CSV = ROOT / "data" / "semart" / "SemArt" / "semart_train.csv"
 THEME_CLASSES = ["religious", "portrait", "landscape", "genre", "still-life"]
 
-# ---------- Postcard sources ----------
+# ---------- источники postcards ----------
 EVAL_N60_METRICS = ROOT / "data" / "eval" / "results" / "final" / "metrics_E06b_archival_v2_n60.json"
 EVAL_SEMTEST_METRICS = ROOT / "data" / "eval" / "results" / "final" / "metrics_E00_semtest.json"
 
-# ---------- archival_v2 themes for zero-shot comparison ----------
+# ---------- themes из archival_v2 для zero-shot сравнения ----------
 ARCHIVAL_THEMES = [
     "a landscape",
     "an urban view",
@@ -60,7 +60,7 @@ def get_device():
 
 
 def load_postcard_images():
-    """Return list of dicts {image_path, source, set, reference_ru, image_file}."""
+    """Возвращает список словарей {image_path, source, set, reference_ru, image_file}."""
     items = []
     seen = set()
     for set_name, metrics_path in [("n60", EVAL_N60_METRICS), ("semtest", EVAL_SEMTEST_METRICS)]:
@@ -90,10 +90,10 @@ def load_postcard_images():
 
 def extract_features_and_zeroshot(items, model, processor, device,
                                    archival_themes):
-    """Single forward pass per image: image features + zero-shot scores over themes."""
+    """Один forward pass на изображение: image features + zero-shot scores по themes."""
     feats_list = []
     zs_preds = []
-    # Tokenize text once
+    # токенизируем текст один раз
     text_inputs = processor(text=archival_themes, return_tensors="pt",
                             padding="max_length").to(device)
     with torch.no_grad():
@@ -115,7 +115,7 @@ def extract_features_and_zeroshot(items, model, processor, device,
         else:
             img_feat = out.last_hidden_state.mean(dim=1)
 
-        # Zero-shot via cosine + softmax (same as logits_per_image in SigLIP forward)
+        # zero-shot через cosine + softmax (как logits_per_image в forward SigLIP)
         img_feat_norm = img_feat / img_feat.norm(dim=-1, keepdim=True)
         logits = (img_feat_norm @ text_features.T).squeeze(0)
         probs = torch.softmax(logits, dim=0).detach().cpu().numpy()
@@ -134,12 +134,12 @@ def extract_features_and_zeroshot(items, model, processor, device,
 
 
 def train_probe_from_cache():
-    """Re-train probe from cached SemArt train features."""
+    """Переобучает probe из кэшированных SemArt train features."""
     data = np.load(PROBE_CACHE_TRAIN, allow_pickle=True)
     X_train = data["features"]
     image_files = list(data["image_files"])
 
-    # Need to recover labels from semart_train.csv
+    # метки восстанавливаем из semart_train.csv
     label_by_file = {}
     with open(PROBE_VAL_CSV, encoding="latin-1") as f:
         reader = csv.DictReader(f, delimiter="\t")
@@ -196,7 +196,7 @@ def main():
             "all_probs": {c: float(p) for c, p in ranked},
         })
 
-    # Per-item assembly
+    # сборка per-item
     per_item = []
     for it, zp, pp in zip(items, zs_preds, probe_preds):
         per_item.append({
@@ -205,7 +205,7 @@ def main():
             "zero_shot_theme": zp,
         })
 
-    # Distribution analyses
+    # анализ распределений
     from collections import Counter
     probe_dist = Counter(p["probe_theme"]["label"] for p in per_item)
     zs_dist = Counter(p["zero_shot_theme"]["label"] for p in per_item)
@@ -218,20 +218,20 @@ def main():
     for c, n in zs_dist.most_common():
         print(f"  {n:4d}  {c}")
 
-    # Probe confidence (mean margin)
+    # confidence probe (средний margin)
     margins = [p["probe_theme"]["margin"] for p in per_item]
     mean_margin = sum(margins) / len(margins)
     low_conf = sum(1 for m in margins if m < 0.1)
     print(f"\nProbe confidence: mean margin = {mean_margin:.3f}, low-conf (margin<0.1): {low_conf}/{len(per_item)}")
 
-    # Per-set breakdown
+    # разбивка по set
     print("\n=== Probe predictions by set ===")
     for set_name, set_items in by_set.items():
         set_probe = Counter(it["probe_theme"]["label"]
                             for it in per_item if it["set"] == set_name)
         print(f"  {set_name} (n={len(set_items)}): {dict(set_probe)}")
 
-    # Save
+    # сохраняем
     out_path = ROOT / "data" / "semart" / "probe_postcards_n74.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({

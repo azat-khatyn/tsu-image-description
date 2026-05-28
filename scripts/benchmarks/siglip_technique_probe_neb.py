@@ -1,33 +1,32 @@
-"""siglip_technique_probe_neb.py — domain-matched technique probe на НЭБ.
+"""siglip_technique_probe_neb.py — technique probe в домене НЭБ.
 
-Опция B из обсуждения: linear probe на frozen SigLIP features, обученный на
-НЭБ-данных (Leningrad WWII collection, 322 postcards) с supervisor-меткой =
-канонизированной TECHNIQUE из RUSMARC field 215 $c.
+Эксперимент с линейным классификатором на замороженных SigLIP features, обученный на данных НЭБ
+(коллекция "Ленинград в годы Великой Отечественной Войны"). В качестве разметки используется
+TECHNIQUE из поля 215 $c формата RUSMARC.
 
-3 класса (после нормализации, см. CANONICAL_CLASSES):
+3 класса (после нормализации, см. canonicalize_technique):
   - lithograph  (литогр. + хромолитогр., n≈148)
   - autotypia   (автотип., n≈98)
   - zincography (цинкогр., n≈19)
 
-Архитектурное обоснование выбора именно TECHNIQUE (а не theme):
-  - Техника — визуальный признак, мало зависящий от тематики (цвет vs ч/б,
-    тип штриха, наличие растровой структуры). Поэтому overfit-риск на узкий
-    Soviet-WWII domain здесь существенно ниже, чем для theme probe.
-  - 3 класса с разумным data balance после балансирующих весов.
+Почему выбрана именно ось TECHNIQUE, а не theme:
+  - техника - визуальный признак, слабо зависящий от тематики (цвет vs ч/б,
+    тип штриха, наличие растровой структуры). Поэтому риск переобучения на узкий
+    тематический здесь заметно ниже.
+  - 3 класса с разумным балансом данных после применения балансирующих весов.
 
 Pipeline:
-  1. Extract SigLIP features для 322 НЭБ-изображений (CPU, чтобы не конфликтовать
-     с одновременно работающим E12 pipeline на MPS).
-  2. Map technique strings → 3 канонических класса.
-  3. 80/20 train/val split с stratify по классу.
-  4. Train sklearn LogisticRegression (class_weight='balanced').
-  5. Evaluate on val: accuracy, per-class P/R/F1, confusion.
-  6. CROSS-DOMAIN: apply probe to n=60 (RGB+NYPL) postcards, посчитать
-     distribution и compare к zero-shot SigLIP style-axis. Если probe
-     уверенно говорит «lithograph» на 100% NYPL-photos — overfit подтверждён.
+  1. извлекаем SigLIP features для 322 изображений НЭБ.
+  2. соотносим строки technique в 3 канонических класса.
+  3. train/val split 80/20 со stratification по классу.
+  4. обучаем sklearn LogisticRegression (class_weight='balanced').
+  5. оцениваем на val: accuracy, P/R/F1 по классам, confusion.
+  6. CROSS-DOMAIN: применяем к n=60 (RGB+NYPL) открыток, считаем
+     распределение и сравниваем с zero-shot SigLIP по оси style. Если
+     уверенно получаем «lithograph» на 100% NYPL-фото - отмечаем переобучение.
 
-Outputs:
-  - data/neb_leningrad_wwii/probe_technique.json — metrics + per-item predictions
+Выход:
+  - data/neb_leningrad_wwii/probe_technique.json: метрики + per-item prediction
   - logs/probe_technique_neb.log
 """
 
@@ -50,19 +49,19 @@ NEB_MANIFEST = ROOT / "data" / "neb_leningrad_wwii" / "manifest.json"
 N60_METRICS = ROOT / "data" / "eval" / "results" / "final" / "metrics_E06b_archival_v2_n60.json"
 
 
-# Канонизация — какие строки technique в какой класс
+# канонизация — какая строка technique в какой класс
 def canonicalize_technique(tech: str) -> str | None:
     t = (tech or "").strip().lower()
     if not t:
         return None
-    # priority order
+    # порядок проверок по приоритету
     if "автотип" in t:
         return "autotypia"
     if "цинкогр" in t and "литогр" not in t:
         return "zincography"
     if "литогр" in t or "хромолитогр" in t:
         return "lithograph"
-    return None  # рис., портр., ил., фототип. — skip
+    return None  # рис., портр., ил., фототип. — пропускаем
 
 
 CLASS_ORDER = ["lithograph", "autotypia", "zincography"]
@@ -201,7 +200,7 @@ def main():
     print(f"  Feature matrix: {X.shape}")
     print()
 
-    # Stratified split
+    # стратифицированный split
     X_train, X_val, y_train, y_val, idx_train, idx_val = train_test_split(
         X, y, np.arange(len(neb_items)),
         test_size=args.val_fraction, stratify=y, random_state=args.seed,
@@ -228,7 +227,7 @@ def main():
         print(f"  {gt:>12} " + "".join(f"{row[pr]:>13}" for pr in CLASS_ORDER))
     print()
 
-    # Cross-domain check on n=60
+    # cross-domain проверка на n=60
     print("[5/5] Cross-domain check on n=60 (RGB+NYPL, no ground-truth TECHNIQUE)")
     n60_items = load_n60_items()
     print(f"  Loaded {len(n60_items)} n=60 items")
@@ -236,10 +235,10 @@ def main():
         X_n60 = extract_features(n60_items, model, processor, device)
         y_pred_n60 = clf.predict(X_n60)
         n60_probs = clf.predict_proba(X_n60)
-        # Distribution
+        # распределение
         cross_dist = Counter(y_pred_n60.tolist())
         print(f"  Probe predictions on n=60: {dict(cross_dist)}")
-        # Per-source breakdown
+        # разбивка по source
         by_source = {}
         for it, pr in zip(n60_items, y_pred_n60):
             by_source.setdefault(it["source"], []).append(pr)
@@ -249,7 +248,7 @@ def main():
             cross_by_source[src] = {"n": len(preds), "distribution": dict(d)}
             print(f"    {src}: n={len(preds)}, "
                   f"{', '.join(f'{c}={n}' for c, n in d.most_common())}")
-        # Confidence distribution
+        # распределение confidence
         max_probs = n60_probs.max(axis=1)
         print(f"  Mean confidence (max prob): {max_probs.mean():.3f}")
         print(f"  Low-confidence (<0.5): {(max_probs < 0.5).sum()}/{len(max_probs)}")
@@ -259,7 +258,7 @@ def main():
         cross_dist = {}
         cross_by_source = {}
 
-    # Save
+    # сохраняем
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -267,7 +266,7 @@ def main():
     for i in idx_val:
         it = neb_items[int(i)]
         gt = y[int(i)]
-        # find prediction
+        # находим prediction
         pred_idx = list(idx_val).index(int(i))
         pred = y_pred_val[pred_idx]
         per_item_val.append({

@@ -1,20 +1,20 @@
-"""evaluate.py — reference-free evaluation for archive captioning.
+"""evaluate.py — reference-free оценка архивных описаний.
 
-Supports:
-  - BLIP-1 / BLIP-2 caption backends
-  - RGB-20 references
-  - NYPL-200 pool
-  - combined ALL-220 retrieval / robustness runs
-  - CLIPScore variants
-  - retrieval R@k (image <-> archive description)
+Поддерживает:
+  - бэкенды генерации caption_en: BLIP-1 / BLIP-2
+  - набор RGB-20 с разметкой
+  - пул NYPL-200
+  - объединённый прогон ALL-220 (retrieval / устойчивость)
+  - варианты CLIPScore
+  - retrieval R@k (изображение <-> архивное описание)
 
-Primary metric:
-  - CLIPScore_RU(image, archive_description_ru)
+Основная метрика:
+  - CLIPScore_RU(изображение, archive_description_ru)
 
-Recommended usage:
-  - RGB-20 display quality
-  - NYPL-200 robustness
-  - ALL-220 retrieval
+Рекомендуемые сценарии:
+  - RGB-20 — качество отображения
+  - NYPL-200 — устойчивость
+  - ALL-220 — retrieval
 """
 
 import argparse
@@ -34,7 +34,7 @@ from tsu_image_description.pipeline import ArchiveDescriptionPipeline
 
 
 # ---------------------------------------------------------------------
-# CLI
+# Аргументы CLI
 # ---------------------------------------------------------------------
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -162,7 +162,7 @@ def parse_args():
 
 
 # ---------------------------------------------------------------------
-# Helpers
+# Вспомогательные функции
 # ---------------------------------------------------------------------
 def get_device():
     if torch.backends.mps.is_available():
@@ -187,7 +187,7 @@ def mean(values):
 
 
 # ---------------------------------------------------------------------
-# CLIP loaders
+# Загрузка CLIP
 # ---------------------------------------------------------------------
 def load_clip_en(device):
     model, _, preprocess = open_clip.create_model_and_transforms(
@@ -200,7 +200,7 @@ def load_clip_en(device):
 
 
 class MCLIPTextEncoder(torch.nn.Module):
-    """Custom M-CLIP text encoder: XLM-R + linear projection."""
+    """Текстовый энкодер M-CLIP: XLM-R + линейная проекция."""
 
     def __init__(self, transformer, linear):
         super().__init__()
@@ -258,7 +258,7 @@ def load_mclip(model_name, device):
 
 
 # ---------------------------------------------------------------------
-# Encoding
+# Кодирование
 # ---------------------------------------------------------------------
 @torch.no_grad()
 def encode_image(image_path, clip_model, preprocess, device):
@@ -298,7 +298,7 @@ def cosine(a, b):
 # Retrieval
 # ---------------------------------------------------------------------
 def compute_retrieval(img_matrix, txt_matrix, ks=(1, 5, 10)):
-    """R@k for image <-> archive_description retrieval."""
+    """R@k для retrieval изображение <-> archive_description."""
     n = img_matrix.shape[0]
     sim = img_matrix @ txt_matrix.T
 
@@ -332,7 +332,7 @@ def compute_retrieval(img_matrix, txt_matrix, ks=(1, 5, 10)):
 
 
 # ---------------------------------------------------------------------
-# Pipeline setup
+# Сборка pipeline
 # ---------------------------------------------------------------------
 def build_pipeline(
     *,
@@ -357,7 +357,7 @@ def build_pipeline(
 
 
 # ---------------------------------------------------------------------
-# Main
+# Точка входа
 # ---------------------------------------------------------------------
 def main():
     args = parse_args()

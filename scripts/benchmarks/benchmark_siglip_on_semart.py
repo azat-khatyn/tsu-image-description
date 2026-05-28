@@ -1,31 +1,31 @@
-"""benchmark_siglip_on_semart.py — измерить точность SigLIPMetadataExtractor
-на размеченном SemArt датасете (19,244 paintings с canonical labels TYPE/TECHNIQUE).
+"""benchmark_siglip_on_semart.py - измеряет точность SigLIPMetadataExtractor
+на размеченном SemArt (19 244 картин с каноническими метками TYPE/TECHNIQUE).
 
-SemArt служит ground-truth benchmark для нашего zero-shot классификатора:
-сравниваем top-1 prediction по theme/style с метаданными SemArt.
+SemArt служит ground-truth для нашего zero-shot классификатора:
+сравниваем top-1 prediction по осям theme/style с метаданными SemArt.
 
 Маппинг SemArt → archival_v2:
-  TYPE → themes axis
+  TYPE → ось themes
     religious   → "a religious subject"
     portrait    → "a portrait"
     landscape   → "a landscape"
     genre       → "a genre scene"
     still-life  → "a still life"
-    (mythological/historical/interior/other/study — SKIP, нет однозначного маппинга)
-  TECHNIQUE → styles axis
+    (mythological/historical/interior/other/study - пропускается, нет однозначного маппинга)
+  TECHNIQUE → ось styles
     "Oil on ..." → "an oil painting"
     "Watercolour" → "a watercolor painting"
     "Etching"     → "an etching"
     "Engraving"   → "an engraving"
     "Pencil/Charcoal/..." → "a pencil drawing"
-    (fresco / tempera / panel — SKIP, не в нашей таксономии)
+    (fresco / tempera / panel — пропускаем, нет в нашей таксономии)
 
-Поскольку 99% mapped technique → oil painting, style benchmark показателен
-только как 1-vs-rest recall. Основной сигнал — theme accuracy на 5 классах.
+ 99% сопоставленной техники = "oil painting", бенчмарк по style
+информативен только как 1-vs-rest recall. Основной сигнал: theme accuracy на 5 классах.
 
 Выход: JSON с
-  - per-axis accuracy, macro precision/recall, confusion matrix
-  - per-item predictions для error analysis
+  - accuracy по каждой оси, macro precision/recall, confusion matrix
+  - per-item prediction для разбора ошибок
 
 Использование:
     PYTHONPATH=src python scripts/benchmark_siglip_on_semart.py \\
@@ -33,7 +33,7 @@ SemArt служит ground-truth benchmark для нашего zero-shot кла�
       --taxonomy archival_v2 \\
       --output data/semart/benchmark_archival_v2_val.json
 
-    # Опционально: full train split (~3-5 часов на M1)
+    # Опционально: полный train-сплит (~3-5 часов на M1)
     PYTHONPATH=src python scripts/benchmark_siglip_on_semart.py \\
       --split train --max-items 5000 \\
       --output data/semart/benchmark_archival_v2_train5k.json
@@ -54,7 +54,7 @@ IMAGES_DIR = SEMART_DIR / "Images"
 
 
 # ----------------------------------------------------------------------------
-# SemArt → taxonomy mapping
+# Маппинг SemArt → taxonomy
 # ----------------------------------------------------------------------------
 
 THEME_MAP_ARCHIVAL_V2 = {
@@ -68,19 +68,19 @@ THEME_MAP_ARCHIVAL_V2 = {
 THEME_MAP_LEGACY_V1 = {
     "religious": "religious scene",
     "landscape": "nature scene",
-    # остальные SemArt TYPE → нет однозначного маппинга на legacy_v1 themes
+    # прочие SemArt TYPE не имеют однозначного маппинга на themes из legacy_v1
 }
 
 
 def normalize_technique(tech: str) -> str:
-    """Strip dimensions and lowercase."""
+    """Убирает размеры и приводит к нижнему регистру."""
     return (tech or "").strip().lower().split(",")[0].strip()
 
 
 def map_style_archival_v2(tech_normalized: str):
-    """Map normalized SemArt TECHNIQUE → archival_v2 style label.
+    """Сопоставляет нормализованный SemArt TECHNIQUE → метка style из archival_v2.
 
-    Returns None if no clean mapping (fresco, tempera, panel without explicit medium).
+    Возвращает None, если чистого маппинга нет (fresco, tempera, panel без явного медиума).
     """
     t = tech_normalized
     if "oil on" in t or t == "oil":
@@ -114,11 +114,11 @@ def map_style_legacy_v1(tech_normalized: str):
 
 
 # ----------------------------------------------------------------------------
-# Benchmark
+# Бенчмарк
 # ----------------------------------------------------------------------------
 
 def build_eval_set(csv_path: Path, taxonomy: str, max_items=None):
-    """Read SemArt CSV → list of dicts {image_path, gt_theme, gt_style}."""
+    """Читает SemArt CSV → список словарей {image_path, gt_theme, gt_style}."""
     rows = []
     with open(csv_path, encoding="latin-1") as f:
         reader = csv.DictReader(f, delimiter="\t")
@@ -140,7 +140,7 @@ def build_eval_set(csv_path: Path, taxonomy: str, max_items=None):
                 gt_theme = THEME_MAP_LEGACY_V1.get(semart_type)
                 gt_style = map_style_legacy_v1(semart_tech)
 
-            # Skip rows where NEITHER axis is mappable
+            # пропускаем строки, где не маппится НИ ОДНА ось
             if gt_theme is None and gt_style is None:
                 continue
 
@@ -161,7 +161,7 @@ def build_eval_set(csv_path: Path, taxonomy: str, max_items=None):
 
 
 def aggregate_axis(predictions, gt_key, pred_key, classes):
-    """Compute accuracy + per-class P/R + confusion matrix for one axis."""
+    """Считает accuracy + P/R по классам + confusion matrix для одной оси."""
     relevant = [p for p in predictions if p[gt_key] is not None]
     n = len(relevant)
     if n == 0:
@@ -170,7 +170,7 @@ def aggregate_axis(predictions, gt_key, pred_key, classes):
     correct = sum(1 for p in relevant if p[pred_key] == p[gt_key])
     accuracy = correct / n
 
-    # Per-class precision / recall
+    # precision / recall по классам
     tp = Counter()
     fp = Counter()
     fn = Counter()
@@ -200,7 +200,7 @@ def aggregate_axis(predictions, gt_key, pred_key, classes):
     macro_r = sum(per_class[c]["recall"] for c in classes) / len(classes)
     macro_f = sum(per_class[c]["f1"] for c in classes) / len(classes)
 
-    # Confusion matrix
+    # confusion matrix
     conf = defaultdict(lambda: defaultdict(int))
     for p in relevant:
         conf[p[gt_key]][p[pred_key]] += 1
@@ -236,7 +236,7 @@ def main():
     eval_set = build_eval_set(csv_path, args.taxonomy, max_items=args.max_items)
     print(f"      Evaluable rows: {len(eval_set)}")
 
-    # Quick stats on label distribution
+    # краткая статистика по распределению меток
     type_dist = Counter(r["gt_theme"] for r in eval_set if r["gt_theme"])
     style_dist = Counter(r["gt_style"] for r in eval_set if r["gt_style"])
     print(f"      Theme gt distribution: {dict(type_dist)}")
@@ -290,7 +290,7 @@ def main():
     print(f"\n      Done in {total_time/60:.1f} min ({len(eval_set)/total_time:.2f} img/sec)")
     print()
 
-    # Aggregate
+    # агрегируем
     theme_classes = list(set(p["gt_theme"] for p in predictions if p["gt_theme"]))
     style_classes = list(set(p["gt_style"] for p in predictions if p["gt_style"]))
 

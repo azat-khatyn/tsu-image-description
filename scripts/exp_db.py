@@ -1,35 +1,35 @@
-"""exp_db.py — SQLite-based experiment tracker.
+"""exp_db.py — трекер экспериментов на SQLite.
 
 Стандартизирует хранение и сравнение результатов экспериментов.
 
-Schema:
+Схема:
   experiments — одна строка на (config, pool)
-  per_item    — per-image: caption_en, caption_ru, archive_ru, sds_axes, retrieval_rank
+  per_item    — на каждое изображение: caption_en, caption_ru, archive_ru, sds_axes, retrieval_rank
   metrics     — агрегаты (CLIPScore, R@k, SDS) с разбиением по source
 
-Usage:
-  # init
+Использование:
+  # инициализация БД
   python scripts/exp_db.py init
 
-  # ingest one JSON
+  # загрузка одного JSON
   python scripts/exp_db.py ingest \\
       --json data/eval/results/final/metrics_proposed_display_n220.json \\
       --exp-id E00_proposed_display_n220 \\
       --block A \\
       --name "Proposed display (BLIP-large + Marian + full -theme -mood)"
 
-  # also attach SDS file
+  # дополнительно прикрепить SDS-файл
   python scripts/exp_db.py ingest-sds \\
       --json data/eval/results/final/sds_proposed_display_n220.json \\
       --exp-id E00_proposed_display_n220
 
-  # list experiments
+  # список экспериментов
   python scripts/exp_db.py list
 
-  # compare two experiments
+  # сравнение двух экспериментов
   python scripts/exp_db.py compare --exp-a E00_v1 --exp-b E00_v2
 
-  # show metrics
+  # вывод метрик
   python scripts/exp_db.py metrics --exp-id E00_proposed_display_n220
 """
 
@@ -41,9 +41,8 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-# Project root resolved from this file (scripts/exp_db.py is at <root>/scripts/exp_db.py).
-# Using absolute path so the DB is found regardless of cwd (e.g. when opening from
-# a Jupyter notebook in notebooks/).
+# корень проекта вычисляется относительно этого файла (scripts/exp_db.py).
+# абсолютный путь, чтобы БД находилась независимо от cwd (например, из Jupyter в notebooks/).
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = PROJECT_ROOT / "data" / "eval" / "experiments.db"
 
@@ -101,7 +100,7 @@ CREATE INDEX IF NOT EXISTS idx_metrics_name        ON metrics(metric_name);
 
 
 # ---------------------------------------------------------------------------
-# DB helpers
+# Работа с БД
 # ---------------------------------------------------------------------------
 
 def get_conn():
@@ -130,7 +129,7 @@ def git_commit():
 
 
 # ---------------------------------------------------------------------------
-# Ingestion: metrics_triad_*.json (from evaluate.py)
+# Загрузка metrics_triad_*.json (из evaluate.py)
 # ---------------------------------------------------------------------------
 
 def ingest_triad(
@@ -148,7 +147,7 @@ def ingest_triad(
 
     conn = get_conn()
 
-    # If exists, optionally replace
+    # если запись уже есть — при флаге replace перезаписываем
     existing = conn.execute(
         "SELECT id FROM experiments WHERE exp_id = ?", (exp_id,)
     ).fetchone()
@@ -157,7 +156,7 @@ def ingest_triad(
             print(f"[WARN] exp_id={exp_id} already exists. Use --replace to overwrite.")
             conn.close()
             return existing["id"]
-        # Delete cascades to per_item / metrics
+        # удаление каскадом затрагивает per_item / metrics
         conn.execute("DELETE FROM experiments WHERE exp_id = ?", (exp_id,))
         print(f"[INFO] Replaced existing exp_id={exp_id}")
 
@@ -179,7 +178,7 @@ def ingest_triad(
     )
     experiment_id = cur.lastrowid
 
-    # per_item
+    # построчная запись per_item
     for it in per_item:
         retrieval = it.get("retrieval", {}) or {}
         conn.execute(
@@ -213,20 +212,20 @@ def ingest_triad(
             ),
         )
 
-    # Aggregate metrics — flat key set + per-source variants
+    # агрегатные метрики — плоский набор ключей + варианты по source
     def _log_metric(name_, source_, n_, value_):
         conn.execute(
             "INSERT INTO metrics (experiment_id, metric_name, source, n, value) VALUES (?, ?, ?, ?, ?)",
             (experiment_id, name_, source_, n_, value_),
         )
 
-    # Overall metrics
+    # общие метрики
     metrics_block = summary.get("metrics", {})
     for k, v in metrics_block.items():
         if v is not None:
             _log_metric(k, "all", summary.get("num_examples"), v)
 
-    # Retrieval
+    # retrieval
     retrieval = summary.get("retrieval", {})
     n_pool = retrieval.get("n_pool", summary.get("num_examples"))
     for direction in ("i2t", "t2i"):
@@ -238,14 +237,14 @@ def ingest_triad(
     if "mean_rank_t2i" in retrieval:
         _log_metric("mean_rank_t2i", "all", n_pool, retrieval["mean_rank_t2i"])
 
-    # Latency
+    # задержка
     latency = summary.get("latency", {})
     if latency.get("mean_sec") is not None:
         _log_metric("latency_mean_sec", "all", summary.get("num_examples"), latency["mean_sec"])
     if latency.get("images_per_sec") is not None:
         _log_metric("images_per_sec", "all", summary.get("num_examples"), latency["images_per_sec"])
 
-    # Per-source
+    # разбиение по source
     by_source = summary.get("by_source", {})
     for src, src_block in by_source.items():
         n_src = src_block.get("n")
@@ -262,7 +261,7 @@ def ingest_triad(
 
 
 # ---------------------------------------------------------------------------
-# Ingestion: sds_*.json (from compute_sds.py)
+# Загрузка sds_*.json (из compute_sds.py)
 # ---------------------------------------------------------------------------
 
 def ingest_sds(
@@ -282,7 +281,7 @@ def ingest_sds(
         return None
     experiment_id = row["id"]
 
-    # Patch per_item rows: set sds_axes_json + sds_value
+    # обновляем строки per_item: проставляем sds_axes_json + sds_value
     for it in per_item:
         sds = it.get("sds", {})
         sds_value = sds.get("sds")
@@ -298,9 +297,9 @@ def ingest_sds(
             ),
         )
 
-    # Aggregate SDS metrics
+    # агрегатные метрики SDS
     def _log_metric(name_, source_, n_, value_):
-        # idempotent: replace if exists
+        # идемпотентно: при наличии записи перезаписываем
         conn.execute(
             "DELETE FROM metrics WHERE experiment_id = ? AND metric_name = ? AND source = ?",
             (experiment_id, name_, source_),
@@ -313,11 +312,11 @@ def ingest_sds(
     if aggregates.get("mean_sds") is not None:
         _log_metric("SDS_mean", "all", aggregates.get("n"), aggregates["mean_sds"])
 
-    # per-axis coverage as separate metrics
+    # покрытие по каждой оси — отдельными метриками
     for axis, value in aggregates.get("per_axis_coverage", {}).items():
         _log_metric(f"SDS_axis_{axis}", "all", aggregates.get("n"), value)
 
-    # by source
+    # разбиение по source
     for src, src_block in aggregates.get("by_source", {}).items():
         _log_metric("SDS_mean", src, src_block.get("n"), src_block.get("mean_sds"))
 
@@ -327,7 +326,7 @@ def ingest_sds(
 
 
 # ---------------------------------------------------------------------------
-# Query commands
+# Команды запросов
 # ---------------------------------------------------------------------------
 
 def cmd_list(args):
@@ -423,7 +422,7 @@ def cmd_compare(args):
 
 
 def cmd_show(args):
-    """Show all generated descriptions for one experiment."""
+    """Выводит все сгенерированные описания для одного эксперимента."""
     conn = get_conn()
     where = "e.exp_id = ?"
     params = [args.exp_id]
@@ -466,7 +465,7 @@ def cmd_show(args):
             print(json.dumps({k: r[k] for k in r.keys()}, ensure_ascii=False))
         return
 
-    # Default: human-readable table
+    # по умолчанию — таблица для чтения человеком
     print(f"\nDescriptions for {args.exp_id}  (n={len(rows)})")
     print("=" * 110)
     for i, r in enumerate(rows, 1):
@@ -489,7 +488,7 @@ def cmd_show(args):
 
 
 def cmd_per_item(args):
-    """Show one item across multiple experiments — same image_path side by side."""
+    """Сравнивает один image_path в нескольких экспериментах бок о бок."""
     conn = get_conn()
     exp_ids = args.exp_ids
     placeholders = ",".join("?" * len(exp_ids))

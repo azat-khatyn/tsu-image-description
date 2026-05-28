@@ -33,8 +33,8 @@ class ArchiveDescriptionPipeline:
         self.description_builder = DescriptionBuilder(**(builder_kwargs or {}))
         self.en_postprocessor = EnglishCaptionPostprocessor()
 
-        # E12 — optional LLM rewriter. When enabled, overrides DescriptionBuilder
-        # output for archive_description (search_text still comes from builder).
+        # Опциональный языковой редактор. Когда включён, заменяет архивное
+        # описание от DescriptionBuilder (search_text всё равно берётся из builder).
         self.llm_rewriter = None
         if use_llm_rewriter:
             from .llm_rewriter import LLMRewriter
@@ -62,8 +62,8 @@ class ArchiveDescriptionPipeline:
 
         description_result = self.description_builder.build(base_result)
 
-        # E12 — replace archive_description from template with LLM-generated one.
-        # search_text from builder is kept (closed-taxonomy tags for retrieval).
+        # Замена шаблонного архивного описания на сгенерированное LLM.
+        # search_text от builder сохраняется (теги закрытой таксономии для поиска).
         if self.llm_rewriter is not None:
             llm_archive = self.llm_rewriter.rewrite(
                 caption_en=caption_en,

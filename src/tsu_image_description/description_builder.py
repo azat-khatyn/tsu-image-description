@@ -2,21 +2,20 @@ from typing import Dict
 
 
 class DescriptionBuilder:
-    """Builds the Russian archive description from caption + metadata.
+    """Собирает русское архивное описание из подписи и метаданных.
 
     template_mode:
-      - "full"         : intro sentence + "На изображении: <caption>." + optional theme/mood
+      - "full"         : вводная фраза + "На изображении: <caption>." + опц. тема/настроение
       - "minimal"      : "На изображении: <caption>."
-      - "caption_only" : cleaned raw caption_ru only
+      - "caption_only" : только очищенная caption_ru
     """
 
     VALID_MODES = {"full", "minimal", "caption_only"}
 
-    # Style labels that don't carry archive-relevant discriminative info.
-    # Each of them applies to roughly any decorated postcard, so the phrase
-    # "Открытка в стиле винтажной иллюстрации" repeats across most items and
-    # adds no semantic value. When `drop_generic_style=True`, intro phrase
-    # is built without "в стиле X" for these.
+    # Метки стиля без каталожной ценности. Подходят почти к любой открытке,
+    # поэтому фраза «Открытка в стиле винтажной иллюстрации» повторяется по
+    # всему корпусу и ничего не уточняет. При drop_generic_style=True вводная
+    # фраза строится без «в стиле X» для этих меток.
     _GENERIC_STYLE_LABELS = {
         "vintage illustration",
         "decorative illustration",
@@ -121,15 +120,15 @@ class DescriptionBuilder:
         image_conf = image_type_field.get("confident", False)
         style_conf = style_field.get("confident", False)
 
-        # Drop generic-style label from intro phrase entirely — the words
-        # "vintage / decorative / retro" don't help disambiguate postcards
-        # and produce repeating, non-informative intros across the corpus.
-        # Type stays; style stays in `search_text` regardless.
+        # Полностью убираем generic-стиль из вводной фразы: слова
+        # «vintage / decorative / retro» не различают открытки и дают
+        # повторяющиеся неинформативные зачины. Тип материала остаётся;
+        # стиль в любом случае сохраняется в search_text.
         if self.drop_generic_style and style_label in self._GENERIC_STYLE_LABELS:
             style_conf = False
             style_ru_gen = None
 
-        # Special safe cases for photographs
+        # отдельные безопасные случаи для фотографий
         if image_conf and image_type_label == "a photograph":
             if style_label == "black and white photo":
                 return "Черно-белая фотография."
@@ -171,12 +170,12 @@ class DescriptionBuilder:
         return f"{text}."
 
     # ====================================================================
-    # Versioned RU mappings — selected based on metadata["taxonomy_version"].
-    # See src/tsu_image_description/siglip_metadata_extractor.py for full
-    # taxonomy definitions and source citations.
+    # Версионируемые русские мапы — выбираются по metadata["taxonomy_version"].
+    # Полные определения таксономий и источники — в
+    # src/tsu_image_description/siglip_metadata_extractor.py.
     # ====================================================================
 
-    # Common мапы типа материала — pattern одинаковый между versions.
+    # мапа типа материала — общая для обеих версий
     _IMAGE_TYPE_MAP_COMMON = {
         "a postcard": "открытка",
         "a poster": "плакат",
@@ -261,7 +260,7 @@ class DescriptionBuilder:
 
     @classmethod
     def _image_type_map_for(cls, version: str) -> Dict:
-        # type mapping одинаковый для обеих versions
+        # мапа типа материала одинакова для обеих версий
         return cls._IMAGE_TYPE_MAP_COMMON
 
     @classmethod

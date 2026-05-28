@@ -27,7 +27,7 @@ from rouge_score import rouge_scorer
 
 
 def load_pairs(input_path, field, ref_key="reference_ru"):
-    """Read metrics JSON, return list of (ref, hyp, image_path)."""
+    """Читает metrics JSON, возвращает список (ref, hyp, image_path)."""
     with open(input_path) as f:
         d = json.load(f)
     per_item = d.get("per_item", [])
@@ -41,7 +41,7 @@ def load_pairs(input_path, field, ref_key="reference_ru"):
 
 
 def compute_bertscore(refs, hyps, lang="ru", model_type=None, batch_size=16):
-    """Returns dict with P/R/F1 (mean) and per-item F1."""
+    """Возвращает dict со средними P/R/F1 и per-item F1."""
     from bert_score import score as bert_score
     kw = dict(lang=lang, batch_size=batch_size, verbose=False, rescale_with_baseline=False)
     if model_type:
@@ -56,7 +56,7 @@ def compute_bertscore(refs, hyps, lang="ru", model_type=None, batch_size=16):
 
 
 def compute_sacrebleu(refs, hyps):
-    """Corpus-level BLEU and chrF (sacrebleu standard configs)."""
+    """BLEU и chrF на уровне корпуса (стандартные конфиги sacrebleu)."""
     bleu = sacrebleu.corpus_bleu(hyps, [refs])
     chrf = sacrebleu.corpus_chrf(hyps, [refs])
     return {
@@ -68,16 +68,16 @@ def compute_sacrebleu(refs, hyps):
 
 
 class _CyrillicWordTokenizer:
-    """Tokenizer for rouge-score that supports Cyrillic. Default tokenizer of
-    rouge-score strips non-ASCII characters via NON_ALPHANUM_RE — yielding
-    0 for any Russian text. This wrapper splits on whitespace + word boundary
-    keeping Unicode letters, lowercasing for case-insensitive matching."""
+    """Токенизатор для rouge-score с поддержкой кириллицы. Штатный токенизатор
+    rouge-score выбрасывает не-ASCII символы через NON_ALPHANUM_RE — для русского
+    текста это даёт 0. Здесь разбиваем по границам слов, сохраняя буквы Unicode,
+    и приводим к нижнему регистру для регистронезависимого сравнения."""
 
     _RE = None
 
     def __init__(self):
         import re
-        # \w with re.UNICODE matches Cyrillic letters
+        # \w с re.UNICODE захватывает кириллицу
         self._RE = re.compile(r"[\w]+", re.UNICODE)
 
     def tokenize(self, text):
@@ -85,7 +85,7 @@ class _CyrillicWordTokenizer:
 
 
 def compute_rouge(refs, hyps):
-    """ROUGE-L F1 on per-item, then mean. Uses Unicode-aware tokenizer."""
+    """ROUGE-L F1 по каждой паре, затем среднее. Токенизатор с поддержкой Unicode."""
     tokenizer = _CyrillicWordTokenizer()
     scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=False, tokenizer=tokenizer)
     f1s = []
@@ -188,7 +188,7 @@ def main():
         if r:
             results[field] = r
 
-    # Cross-field comparison summary
+    # сводка для сравнения полей между собой
     summary = {}
     for field, r in results.items():
         summary[field] = {

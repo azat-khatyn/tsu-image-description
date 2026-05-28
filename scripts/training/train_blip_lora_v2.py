@@ -1,21 +1,21 @@
-"""train_blip_lora_v2.py — generic BLIP LoRA training, M1 MPS friendly.
+"""Универсальное обучение BLIP с LoRA, совместимое с MPS на M1.
 
-Improvements over scripts/train_blip_lora.py:
-  - CLI-configurable (any dataset that follows {image_path, caption} format)
-  - BLIP-large by default (was base)
-  - MPS-optimized: num_workers=0, periodic mps.empty_cache, fp32
-  - Standard LoRA lr (1e-4) instead of suspicious 3e-6 from v5
-  - Train/val loss logging + per-step prints
-  - Saves checkpoint each epoch
+Отличия от scripts/train_blip_lora.py:
+  - настройка через CLI (любой датасет формата {image_path, caption})
+  - по умолчанию BLIP-large (раньше base)
+  - оптимизация под MPS: num_workers=0, периодический mps.empty_cache, fp32
+  - стандартный LoRA lr (1e-4) вместо сомнительного 3e-6 из прошлого прогона
+  - логирование train/val loss и пошаговый вывод
+  - сохранение чекпойнта каждую эпоху
 
-Usage:
+Пример запуска:
   PYTHONPATH=src python scripts/train_blip_lora_v2.py \\
       --train data/artcap/train.json \\
       --val data/artcap/val.json \\
       --output-dir models/blip_artcap_lora \\
       --epochs 3 --batch-size 8 --lr 1e-4 --lora-r 16
 
-Dataset format (JSON list):
+Формат датасета (список JSON):
   [{"image_path": "...", "caption": "..."}, ...]
 """
 
@@ -81,7 +81,7 @@ class CaptionDataset(Dataset):
 
     def __getitem__(self, idx):
         item = self.data[idx]
-        # Backward-compat: support old "image" key as well as "image_path"
+        # обратная совместимость: поддерживаем старый ключ "image" наряду с "image_path"
         image_path = item.get("image_path") or item.get("image")
         caption = item["caption"]
 
@@ -199,7 +199,7 @@ def main():
 
         train_loss = train_loss_sum / max(n_steps, 1)
 
-        # ===== VALIDATION =====
+        # ===== Валидация =====
         model.eval()
         val_loss_sum = 0.0
         n_val = 0

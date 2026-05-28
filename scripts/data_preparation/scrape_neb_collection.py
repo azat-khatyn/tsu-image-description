@@ -1,35 +1,35 @@
 """scrape_neb_collection.py — собрать коллекцию открыток с НЭБ.
 
-Парсит каталожные карточки rusneb.ru, извлекает RUSMARC-метаданные
-и скачивает thumbnail-изображения для дальнейшего использования
-в reference-evaluation и probe-training.
+Парсит каталожные карточки rusneb.ru, извлекает метаданные RUSMARC
+и скачивает изображения-миниатюры для дальнейшего использования
+в эталонной оценке.
 
 Текущая целевая коллекция:
     529 «Ленинград в Великой Отечественной войне 1941-1945 гг. (открытки)»
     https://rusneb.ru/collections/529_leningrad_v_velikoy_otechestvennoy_voyne_1941_1945_gg_otkrytki/
     324 материала
 
-Извлекаемые поля (по RUSMARC):
+Извлекаемые поля RUSMARC:
     001         — catalog_id
-    200 $a/$e/$f — title / format / artist credit
-    210 $a/$c/$d — place / publisher / year
-    215 $a/$c/$d — quantity / technique / dimensions
-    321 $a      — публикация-источник (если есть упоминание в каталоге)
-    327 $a      — содержательное примечание (Примечание содержания)
-    540 $a      — вариант заглавия + Named Entities (несколько штук!)
-    606 $a/$x/$z — topical subject + sub-heading + date
+    200 $a/$e/$f — заглавие / формат / художник
+    210 $a/$c/$d — место / издатель / год
+    215 $a/$c/$d — объём / техника / размеры
+    321 $a      — источник публикации (если упомянут в каталоге)
+    327 $a      — примечание содержания
+    540 $a      — вариант заглавия и именованные сущности (может быть несколько)
+    606 $a/$x/$z — тематическая рубрика / подрубрика / дата
     700 $a/$b/$f — автор: фамилия / инициалы / годы жизни
-    852 $b      — shelf mark
+    852 $b      — шифр хранения
     856 $u      — внешние URL (vivaldi.nlr.ru/...)
 
-Изображения: thumbnail 315×460 JPEG (full-res скрыт за JS-viewer).
+Изображения: миниатюра 315×460 JPEG (полное разрешение скрыто за JS-viewer).
 URL: https://rusneb.ru/local/tools/exalead/thumbnail.php?url={catalog_id}
 
 Использование:
     python scripts/scrape_neb_collection.py \\
         --output-dir data/neb_leningrad_wwii \\
         --delay 1.0
-    # для smoke-test:
+    # быстрая проверка:
     python scripts/scrape_neb_collection.py \\
         --output-dir data/neb_leningrad_wwii \\
         --max-items 5
@@ -62,7 +62,7 @@ USER_AGENT = (
 
 
 def get(session, url, timeout=30, retries=3):
-    """GET with retries and polite UA."""
+    """GET с повторами и вежливым User-Agent."""
     for attempt in range(retries):
         try:
             r = session.get(url, timeout=timeout)
@@ -73,15 +73,15 @@ def get(session, url, timeout=30, retries=3):
                 raise
             print(f"  ! retry {attempt+1}/{retries} after error: {e}")
             time.sleep(2 ** attempt)
-    return None  # unreachable
+    return None  # недостижимо
 
 
 # ---------------------------------------------------------------------------
-# Page enumeration
+# Перебор страниц
 # ---------------------------------------------------------------------------
 
 def collect_catalog_ids(session, collection_url, delay=1.0, max_pages=50):
-    """Iterate through pages of collection, collect /catalog/{id}/ links."""
+    """Обойти страницы коллекции и собрать ссылки /catalog/{id}/."""
     catalog_ids = []
     seen = set()
 
@@ -112,7 +112,7 @@ def collect_catalog_ids(session, collection_url, delay=1.0, max_pages=50):
 
 
 # ---------------------------------------------------------------------------
-# RUSMARC parsing from catalog HTML
+# Разбор RUSMARC из HTML карточки
 # ---------------------------------------------------------------------------
 
 SUBFIELD_RE = re.compile(r"\$([a-z0-9]):\s*(.*?)(?=(?:<br\s*/?>\s*)?\$[a-z0-9]:|$)",
@@ -120,18 +120,18 @@ SUBFIELD_RE = re.compile(r"\$([a-z0-9]):\s*(.*?)(?=(?:<br\s*/?>\s*)?\$[a-z0-9]:|
 
 
 def parse_rusmarc_subfields(html_chunk):
-    """Parse '$a: foo<br>$b: bar' chunk into dict {a: 'foo', b: 'bar'}.
+    """Разобрать фрагмент '$a: foo<br>$b: bar' в словарь {a: 'foo', b: 'bar'}.
 
-    For repeating subfields, joins with ' | '.
-    Cleans <br> tags and trailing whitespace.
+    Повторяющиеся подполя объединяются через ' | '.
+    Убираются теги <br> и хвостовые пробелы.
     """
-    # Drop the leading indicator (e.g. "1#" or "##" before first $)
+    # убрать ведущий индикатор (например "1#" или "##" перед первым $)
     cleaned = re.sub(r"<br\s*/?>", "\n", html_chunk)
     out = {}
     for m in SUBFIELD_RE.finditer(cleaned):
         code = m.group(1).lower()
         value = m.group(2).strip().rstrip("<br>").rstrip().rstrip(";").strip()
-        # Strip residual HTML
+        # удалить остатки HTML
         value = re.sub(r"\s+", " ", value).strip()
         if code in out:
             out[code] = out[code] + " | " + value
@@ -141,7 +141,7 @@ def parse_rusmarc_subfields(html_chunk):
 
 
 def parse_catalog_page(html: str, catalog_id: str) -> dict:
-    """Extract structured record from a НЭБ catalog HTML page."""
+    """Извлечь структурированную запись из HTML карточки НЭБ."""
     soup = BeautifulSoup(html, "html.parser")
 
     record = {
@@ -166,7 +166,7 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
         "vivaldi_id": None,
     }
 
-    # Parse RUSMARC table — these rows are reliable
+    # разбор таблицы RUSMARC — эти строки надёжны
     rows = soup.select("div.cards-table__row")
     by_tag = {}
     for row in rows:
@@ -176,13 +176,13 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
             continue
         tag = left.get_text(strip=True)
         chunk = right.decode_contents()
-        # Preserve <br> for subfield splitter
+        # сохранить <br> для разбиения на подполя
         by_tag.setdefault(tag, []).append(chunk)
 
     def fields(tag):
         return by_tag.get(tag, [])
 
-    # 200 — title block
+    # 200 — блок заглавия
     for chunk in fields("200"):
         sub = parse_rusmarc_subfields(chunk)
         if "a" in sub and not record["title"]:
@@ -193,7 +193,7 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
             # "худ.: Гордон М.А."
             record["artist"] = sub["f"]
 
-    # 210 — publication block
+    # 210 — блок издания
     for chunk in fields("210"):
         sub = parse_rusmarc_subfields(chunk)
         if "a" in sub:
@@ -203,7 +203,7 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
         if "d" in sub:
             record["year"] = sub["d"]
 
-    # 215 — physical description
+    # 215 — физическое описание
     for chunk in fields("215"):
         sub = parse_rusmarc_subfields(chunk)
         if "a" in sub:
@@ -213,19 +213,19 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
         if "d" in sub:
             record["dimensions"] = sub["d"]
 
-    # 327 — content notes
+    # 327 — примечания содержания
     for chunk in fields("327"):
         sub = parse_rusmarc_subfields(chunk)
         if "a" in sub:
             record["content_notes"].append(sub["a"])
 
-    # 540 — variant titles + Named Entities
+    # 540 — варианты заглавия и именованные сущности
     for chunk in fields("540"):
         sub = parse_rusmarc_subfields(chunk)
         if "a" in sub:
             record["variant_titles"].append(sub["a"])
 
-    # 606 — topical subjects + dates
+    # 606 — тематические рубрики и даты
     for chunk in fields("606"):
         sub = parse_rusmarc_subfields(chunk)
         if "a" in sub:
@@ -236,7 +236,7 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
         if "z" in sub:
             record["topical_subjects_dates"].append(sub["z"])
 
-    # 700 — authors
+    # 700 — авторы
     for chunk in fields("700"):
         sub = parse_rusmarc_subfields(chunk)
         parts = []
@@ -247,13 +247,13 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
         if full:
             record["authors"].append(full.strip())
 
-    # 852 — shelf mark
+    # 852 — шифр хранения
     for chunk in fields("852"):
         sub = parse_rusmarc_subfields(chunk)
         if "b" in sub:
             record["shelf_mark"] = sub["b"]
 
-    # 856 — external URLs, vivaldi ID
+    # 856 — внешние URL, vivaldi_id
     for chunk in fields("856"):
         sub = parse_rusmarc_subfields(chunk)
         if "u" in sub:
@@ -262,8 +262,8 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
             if m:
                 record["vivaldi_id"] = m.group(1)
 
-    # Build a unified "reference_ru" — best curator-written description
-    # Priority: first content_note → first variant_title → title
+    # сформировать единый "reference_ru" — лучшее каталожное описание
+    # приоритет: первый content_note → первый variant_title → title
     record["reference_ru"] = (
         record["content_notes"][0] if record["content_notes"]
         else (record["variant_titles"][0] if record["variant_titles"]
@@ -274,7 +274,7 @@ def parse_catalog_page(html: str, catalog_id: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Main scrape loop
+# Основной цикл скрейпинга
 # ---------------------------------------------------------------------------
 
 def scrape(args):
@@ -286,7 +286,7 @@ def scrape(args):
     session.headers.update({"User-Agent": USER_AGENT,
                             "Accept-Language": "ru,en;q=0.8"})
 
-    # Phase 1 — enumerate catalog IDs
+    # этап 1 — перебор catalog_id
     print("=" * 60)
     print("[Phase 1] Enumerating catalog IDs from collection pages")
     print("=" * 60)
@@ -297,7 +297,7 @@ def scrape(args):
         catalog_ids = catalog_ids[: args.max_items]
         print(f"→ Capped to first {len(catalog_ids)} for smoke test")
 
-    # Phase 2 — fetch each catalog page + thumbnail
+    # этап 2 — загрузка каждой карточки и миниатюры
     print()
     print("=" * 60)
     print(f"[Phase 2] Fetching {len(catalog_ids)} catalog pages + thumbnails")
@@ -313,7 +313,7 @@ def scrape(args):
         thumb_url = THUMBNAIL_TEMPLATE.format(catalog_id=cid)
         image_path = images_dir / f"{cid}.jpg"
 
-        # Fetch catalog page
+        # загрузка карточки
         try:
             r = get(session, catalog_url)
             record = parse_catalog_page(r.text, cid)
@@ -322,7 +322,7 @@ def scrape(args):
             n_failed += 1
             continue
 
-        # Download thumbnail (skip if exists)
+        # загрузка миниатюры (пропустить, если уже есть)
         if not image_path.exists():
             try:
                 ri = get(session, thumb_url, timeout=30)
@@ -349,7 +349,7 @@ def scrape(args):
 
         time.sleep(args.delay)
 
-    # Save manifest
+    # сохранить manifest
     manifest_path = out_dir / "manifest.json"
     with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump({

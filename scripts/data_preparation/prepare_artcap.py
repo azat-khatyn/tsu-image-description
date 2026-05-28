@@ -1,16 +1,16 @@
-"""prepare_artcap.py — download ArtCap from HuggingFace + convert to BLIP train format.
+"""prepare_artcap.py - скачать ArtCap с HuggingFace и привести к формату обучения BLIP.
 
-Skachivaet 5unnySunny/artcapDataset (~3606 art images + captions).
-Каждое изображение помещается в data/artcap/images/, captions парсятся из
+Скачивает 5unnySunny/artcapDataset (~3606 изображений и подписей).
+Каждое изображение кладётся в data/artcap/images/, подписи берутся из
 prompts/*.txt. Делим 90/10 train/val с seed=42 для воспроизводимости.
 
 Выходные файлы:
   data/artcap/images/{000000..003605}.png
   data/artcap/train.json   # [{image_path, caption}, ...]
   data/artcap/val.json
-  data/artcap/manifest.json   # full dataset for inspection
+  data/artcap/manifest.json   # полный набор для проверки
 
-Usage:
+Использование:
   python scripts/prepare_artcap.py
 """
 
@@ -40,7 +40,7 @@ def main():
         repo_id=REPO_ID,
         repo_type="dataset",
         local_dir=str(TARGET_DIR / "_raw"),
-        # Skip ControlNet conditioning maps — not needed for BLIP training
+        # пропускаем карты ControlNet — для обучения BLIP не нужны
         ignore_patterns=["conditions/*"],
     )
     print(f"      Downloaded to: {local_path}")
