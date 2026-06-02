@@ -39,6 +39,27 @@ class DescriptionBuilder:
         self.include_mood = include_mood
         self.drop_generic_style = drop_generic_style
 
+    @staticmethod
+    def infer_theme_mood(metadata: Dict) -> Dict:
+        """Гейтит тему и настроение по уверенности классификатора.
+
+        Метка темы/настроения сохраняется только если поле помечено confident;
+        балл возвращается всегда. Формирует блок inference, который дальше
+        использует build() и публичный вывод пайплайна.
+        """
+        theme_field = metadata.get("theme", {})
+        mood_field = metadata.get("mood", {})
+
+        theme = theme_field.get("label") if theme_field.get("confident") else None
+        mood = mood_field.get("label") if mood_field.get("confident") else None
+
+        return {
+            "theme": theme,
+            "mood": mood,
+            "theme_confidence": theme_field.get("score"),
+            "mood_confidence": mood_field.get("score"),
+        }
+
     def build(self, result: Dict) -> Dict:
         caption_ru = self._normalize_caption(result["caption"]["ru"])
         metadata = result["metadata"]

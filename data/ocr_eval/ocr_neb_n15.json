@@ -1,0 +1,357 @@
+{
+  "images": [
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086613.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087013.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065953.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086100.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085694.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086367.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086706.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086814.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086900.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087105.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085773.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087015.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065961.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086102.jpg",
+    "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065979.jpg"
+  ],
+  "engines": {
+    "tesseract": {
+      "available": true,
+      "version": "5.5.2",
+      "error": null,
+      "per_image": [
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086613.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.11424994468688965,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087013.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10193085670471191,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065953.jpg",
+          "text": "Е\nо\noO\nАО\n©\nо\n=:\na\nо\n=\n=",
+          "confidence": 0.6591666666666667,
+          "elapsed_sec": 0.2917771339416504,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086100.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10778379440307617,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085694.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10714387893676758,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086367.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10168290138244629,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086706.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.0913541316986084,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086814.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10080695152282715,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086900.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10143899917602539,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087105.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10283613204956055,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085773.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.1024470329284668,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087015.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.09784126281738281,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065961.jpg",
+          "text": "Загадки отгадки\n\nane\nrae ПИСЬМО С ФРОНТА\n\n№\n\nFoxy\n\n*",
+          "confidence": 0.5533333333333333,
+          "elapsed_sec": 0.31968069076538086,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086102.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.10549616813659668,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065979.jpg",
+          "text": "Keys :\n\n|\n\nSm. 2363,",
+          "confidence": 0.65,
+          "elapsed_sec": 0.24543404579162598,
+          "error": null
+        }
+      ]
+    },
+    "easyocr": {
+      "available": true,
+      "version": "easyocr",
+      "error": null,
+      "per_image": [
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086613.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.23639297485351562,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087013.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.20390605926513672,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065953.jpg",
+          "text": "IАчо/\nписьм о\nC ФР ОНТА\nJtи\nше4ыа",
+          "confidence": 0.30114222315699635,
+          "elapsed_sec": 0.30361008644104004,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086100.jpg",
+          "text": "Гаимягр\nГачотtер\n9\n1п\n1uuMa Gana\n1arn",
+          "confidence": 0.17751285886299514,
+          "elapsed_sec": 0.3827083110809326,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085694.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.19948315620422363,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086367.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.2001500129699707,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086706.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.3647770881652832,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086814.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.20226192474365234,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086900.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.193619966506958,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087105.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.19599413871765137,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085773.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.19950604438781738,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087015.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.18915200233459473,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065961.jpg",
+          "text": "Iы-wol\nписьмо\nФ Р О НТА\n0fпаллъмм\naелс",
+          "confidence": 0.35600252034332197,
+          "elapsed_sec": 0.3141319751739502,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086102.jpg",
+          "text": "Жори\n1\nП\n[an\n1\n1hTD\n1u\n'uuaгакc4у\n11 1\nАшта4рьу\nтарашс\nл\n1mL]т1",
+          "confidence": 0.2613451748020758,
+          "elapsed_sec": 0.4782118797302246,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065979.jpg",
+          "text": "тшзов\nОтутоcz az\nJсесбjо\nTуаа\nЖому\nЛрес отя/чёчтч7^\nммлгамс ,\nЯgu,\nЛж е368",
+          "confidence": 0.32144109896120115,
+          "elapsed_sec": 0.38755083084106445,
+          "error": null
+        }
+      ]
+    },
+    "paddleocr": {
+      "available": true,
+      "version": "paddleocr",
+      "error": null,
+      "per_image": [
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086613.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 1.1123299598693848,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087013.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9561688899993896,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065953.jpg",
+          "text": "Kar\no7 Ap ne g\nCee \n8r0 306\nCev0 1n ro\nIl a cugy a,\nTro\nHa wup\nMu pe  cй pa\nзенеCuло 7pое nос.\nTe6 30\n(TOMTCA\nOVKE TOOD\n470 X02000М\nREK H\nt0 0\n9epru.\n2\nCP24 ML1\n200\nOpoodu\nAOLA\nT\n3-340/>\n8\nПИСЬМОС ФРОНТА\nKyve\nKoay",
+          "confidence": 0.47628979118806974,
+          "elapsed_sec": 4.8767170906066895,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086100.jpg",
+          "text": "Гиммлер\nРеводьер и пастка в лапах,-\nГкинер ССукии сив-гестапо.",
+          "confidence": 0.6370967229207357,
+          "elapsed_sec": 1.6781949996948242,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085694.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9880008697509766,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086367.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9597451686859131,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086706.jpg",
+          "text": "",
+          "confidence": 0.0,
+          "elapsed_sec": 1.2298040390014648,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086814.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 1.0092051029205322,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086900.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9552841186523438,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087105.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9519860744476318,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085773.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9701859951019287,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087015.jpg",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.9496431350708008,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065961.jpg",
+          "text": "290\n(Фuстoй\nhengid cog\nx c\ng2 3 \noou n.og\n(Mama\nEordo\nW\nwepest\n42\n71\n0\n-3Y0/2\n16\nПИСЬМОСФРОНТА\nKyda\nKomy\nОбратний адрсс\ncm6о",
+          "confidence": 0.5416047289967537,
+          "elapsed_sec": 3.437457323074341,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086102.jpg",
+          "text": "Разодраенсь па-з ности.\nЭто Хорти с Аитовеску\nMworo шyy\nВизг, гризик, каскады здости,\nХорти а Антонеску\nмеого треску",
+          "confidence": 0.6955185780922571,
+          "elapsed_sec": 1.963622808456421,
+          "error": null
+        },
+        {
+          "image": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_INFOCOMM_10_5000065979.jpg",
+          "text": "2.\nОткрытос Письуо\nKya\nKopy\nFopеc oтnрaburеpа\n-C239. Tpж 16 0m, 1ew 20 x. 3aк. 71",
+          "confidence": 0.641228715578715,
+          "elapsed_sec": 2.254812002182007,
+          "error": null
+        }
+      ]
+    }
+  }
+}

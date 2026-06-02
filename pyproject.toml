@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+# Пакет лежит в src/, добавляем его в путь импорта для тестов.
+pythonpath = ["src"]
+testpaths = ["tests"]

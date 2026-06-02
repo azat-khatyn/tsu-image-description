@@ -1,0 +1,93 @@
+{
+  "images": [
+    "data/ocr_eval/Screenshot 2026-05-21 at 18.49.02.png",
+    "data/ocr_eval/Screenshot 2026-05-21 at 18.54.10.png",
+    "data/ocr_eval/postcard_3.jpg"
+  ],
+  "engines": {
+    "tesseract": {
+      "available": true,
+      "version": "5.5.2",
+      "error": null,
+      "per_image": [
+        {
+          "image": "data/ocr_eval/Screenshot 2026-05-21 at 18.49.02.png",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.31363725662231445,
+          "error": null
+        },
+        {
+          "image": "data/ocr_eval/Screenshot 2026-05-21 at 18.54.10.png",
+          "text": "",
+          "confidence": null,
+          "elapsed_sec": 0.27515697479248047,
+          "error": null
+        },
+        {
+          "image": "data/ocr_eval/postcard_3.jpg",
+          "text": "Галичъ.—байсве. № 11.\n\nВидъ на прудъ, городъ и Рождественская церковь,",
+          "confidence": 0.8641666666666667,
+          "elapsed_sec": 1.1171379089355469,
+          "error": null
+        }
+      ]
+    },
+    "easyocr": {
+      "available": true,
+      "version": "easyocr",
+      "error": null,
+      "per_image": [
+        {
+          "image": "data/ocr_eval/Screenshot 2026-05-21 at 18.49.02.png",
+          "text": "хРиСтОсЪ\nВОСКРЕСЕ",
+          "confidence": 0.6033696274119071,
+          "elapsed_sec": 2.7718307971954346,
+          "error": null
+        },
+        {
+          "image": "data/ocr_eval/Screenshot 2026-05-21 at 18.54.10.png",
+          "text": "2\n4бьж/\n+\n5\n[",
+          "confidence": 0.49998057086992864,
+          "elapsed_sec": 2.110384225845337,
+          "error": null
+        },
+        {
+          "image": "data/ocr_eval/postcard_3.jpg",
+          "text": "Галичъ _Galitche. % 1l.\nВидъ на прудъ, городъ\n#\nРождествепскал церковь.",
+          "confidence": 0.5420425407630619,
+          "elapsed_sec": 5.298464059829712,
+          "error": null
+        }
+      ]
+    },
+    "paddleocr": {
+      "available": true,
+      "version": "paddleocr",
+      "error": null,
+      "per_image": [
+        {
+          "image": "data/ocr_eval/Screenshot 2026-05-21 at 18.49.02.png",
+          "text": "ХРИСТОСЪ ВОСКРЕСЕ.",
+          "confidence": 0.9779815673828125,
+          "elapsed_sec": 8.814076900482178,
+          "error": null
+        },
+        {
+          "image": "data/ocr_eval/Screenshot 2026-05-21 at 18.54.10.png",
+          "text": "S\n/n22501\nHobum\ne\n2od0",
+          "confidence": 0.5971847862005234,
+          "elapsed_sec": 7.7734668254852295,
+          "error": null
+        },
+        {
+          "image": "data/ocr_eval/postcard_3.jpg",
+          "text": "Гaличь.—Galitсhe. № 11.\nВидь на прудь, городь и Рождественскал церковь.",
+          "confidence": 0.9187796413898468,
+          "elapsed_sec": 15.437319993972778,
+          "error": null
+        }
+      ]
+    }
+  }
+}

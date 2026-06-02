@@ -1,6 +1,5 @@
 from .models import CaptionGenerator, Translator
 from .siglip_metadata_extractor import SigLIPMetadataExtractor
-from .theme_inference import ThemeInferencer
 from .description_builder import DescriptionBuilder
 from .text_postprocessor import TextPostprocessor
 from .english_caption_postprocessor import EnglishCaptionPostprocessor
@@ -28,7 +27,6 @@ class ArchiveDescriptionPipeline:
             else Translator()
         )
         self.metadata_extractor = SigLIPMetadataExtractor(taxonomy_version=taxonomy_version)
-        self.theme_inferencer = ThemeInferencer()
         self.text_postprocessor = TextPostprocessor()
         self.description_builder = DescriptionBuilder(**(builder_kwargs or {}))
         self.en_postprocessor = EnglishCaptionPostprocessor()
@@ -48,7 +46,7 @@ class ArchiveDescriptionPipeline:
         caption_ru = self.text_postprocessor.clean_ru_caption(caption_ru_raw)
 
         metadata = self.metadata_extractor.extract(image_path)
-        inference = self.theme_inferencer.infer(metadata)
+        inference = DescriptionBuilder.infer_theme_mood(metadata)
 
         base_result = {
             "caption": {
