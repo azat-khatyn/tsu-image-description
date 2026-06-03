@@ -179,7 +179,7 @@ docker compose up --build
 
 **Состав образа:** Python 3.12-slim; PyTorch CPU-сборка для переносимости (на машинах с GPU локальный запуск ускоряет инференс в 5–10 раз); набор библиотек зафиксирован в `requirements.docker.txt`. Healthcheck опрашивает endpoint `/health`; `start_period=120` сек даёт пайплайну прогрузить веса при первом старте.
 
-Языковой редактор в Docker-конфигурации отключён по умолчанию (`USE_LLM_REWRITER=false` в `docker-compose.yml`): CPU-инференс Vikhr-Nemo-12B нецелесообразен по latency и требует ~32 ГБ RAM, тогда как остальная часть пайплайна укладывается в 8 ГБ. Включить редактор можно явным переопределением переменнойп:
+Языковой редактор в Docker-конфигурации отключён по умолчанию (`USE_LLM_REWRITER=false` в `docker-compose.yml`): CPU-инференс Vikhr-Nemo-12B нецелесообразен по latency и требует ~32 ГБ RAM, тогда как остальная часть пайплайна укладывается в 8 ГБ. Включить редактор можно явным переопределением переменной:
 
 ```bash
 USE_LLM_REWRITER=true docker compose up
@@ -190,7 +190,7 @@ USE_LLM_REWRITER=true docker compose up
 Запуск пайплайна на одном изображении для получения JSON с описанием, тегами и метаданными:
 
 ```bash
-PYTHONPATH=src python scripts/run_demo.py --image data/eval/images/postcard_1.jpg
+PYTHONPATH=src python scripts/run_demo.py --image data/eval/images/postcard_name.jpg
 ```
 
 ### Воспроизводимость
