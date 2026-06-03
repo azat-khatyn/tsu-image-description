@@ -17,10 +17,8 @@
 """
 
 from typing import Dict, Optional
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from .models import get_device
+from .models import CausalLMGenerator
 
 
 DEFAULT_MODEL = "Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24"
@@ -312,19 +310,12 @@ class LLMRewriter:
         self.model_path = model_path
         self.prompt_style = prompt_style
         self.style_config = PROMPT_STYLES[prompt_style]
-        self.device = get_device()
         self.max_new_tokens = max_new_tokens or self.style_config["max_new_tokens"]
         self.temperature = temperature
 
-        print(f"[LLMRewriter] Loading {model_path} on {self.device} "
+        print(f"[LLMRewriter] Loading {model_path} "
               f"(prompt_style={prompt_style}, max_new_tokens={self.max_new_tokens})...")
-        dtype = torch.float16 if self.device != "cpu" else torch.float32
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_path,
-            torch_dtype=dtype,
-        ).to(self.device)
-        self.model.eval()
+        self.generator = CausalLMGenerator(model_path)
         print(f"[LLMRewriter] Loaded.")
 
     def rewrite(
@@ -362,22 +353,8 @@ class LLMRewriter:
             {"role": "user", "content": user_prompt},
         ]
 
-        prompt_text = self.tokenizer.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
+        return self.generator.generate(
+            messages,
+            max_new_tokens=self.max_new_tokens,
+            temperature=self.temperature,
         )
-
-        inputs = self.tokenizer(prompt_text, return_tensors="pt").to(self.device)
-
-        with torch.no_grad():
-            output = self.model.generate(
-                **inputs,
-                max_new_tokens=self.max_new_tokens,
-                do_sample=self.temperature > 0,
-                temperature=self.temperature if self.temperature > 0 else 1.0,
-                pad_token_id=self.tokenizer.eos_token_id,
-            )
-
-        # отбрасываем токены входного prompt
-        new_tokens = output[0][inputs["input_ids"].shape[1]:]
-        text = self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
-        return text
