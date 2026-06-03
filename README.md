@@ -46,7 +46,7 @@ flowchart TD
         BUILD[КонструкторОписания<br/>шаблон описания, теги]
         LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B, опционально]
     end
-    OUT[JSON-результат:<br/>caption_en/ru, metadata, ocr,<br/>archive_description RU, tags_ru]
+    OUT[JSON-результат:<br/>caption_en/ru, metadata, ocr,<br/>archive_description RU, tags_ru, reliability]
 
     IMG --> REC
     REC --> SEM
@@ -214,6 +214,8 @@ tsu-image-description/
 │   ├── taxonomy.py                   # единый источник меток (EN-зонды + RU-канон)
 │   ├── ocr_extractor.py              # OCR (PaddleOCR), опционально
 │   ├── description_builder.py        # опорный шаблон описания + теги
+│   ├── reliability.py                # сводка надёжности (SigLIP/OCR/CLIPScore)
+│   ├── clip_scorer.py                # reference-free CLIPScore описания, опционально
 │   └── llm_rewriter.py               # Vikhr-Nemo: финальное русское описание
 ├── scripts/
 │   ├── evaluate.py                   # основная оценка
