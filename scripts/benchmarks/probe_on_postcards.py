@@ -27,6 +27,8 @@ from PIL import Image
 from sklearn.linear_model import LogisticRegression
 from transformers import AutoModel, AutoProcessor
 
+from tsu_image_description.models import get_device
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # ---------- данные для обучения probe (кэшированные SemArt features) ----------
@@ -49,14 +51,6 @@ ARCHIVAL_THEMES = [
     "a military subject",
     "a holiday scene",
 ]
-
-
-def get_device():
-    if torch.backends.mps.is_available():
-        return torch.device("mps")
-    if torch.cuda.is_available():
-        return torch.device("cuda")
-    return torch.device("cpu")
 
 
 def load_postcard_images():
@@ -158,7 +152,7 @@ def train_probe_from_cache():
 
 
 def main():
-    device = get_device()
+    device = torch.device(get_device())
     print(f"[1/5] Loading SigLIP on {device}")
     processor = AutoProcessor.from_pretrained("google/siglip-base-patch16-224")
     model = AutoModel.from_pretrained("google/siglip-base-patch16-224").to(device).eval()

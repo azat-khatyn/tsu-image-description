@@ -30,6 +30,8 @@ import torch
 from PIL import Image
 from transformers import AutoModel, AutoProcessor
 
+from tsu_image_description.models import get_device
+
 ROOT = Path(__file__).resolve().parents[2]
 
 SIGLIP1 = "google/siglip-base-patch16-224"
@@ -64,14 +66,6 @@ CONFIGS = {
     "B_siglip2_ru": (SIGLIP2, "ru"),
     "C_siglip2_en": (SIGLIP2, "en"),
 }
-
-
-def get_device():
-    if torch.backends.mps.is_available():
-        return torch.device("mps")
-    if torch.cuda.is_available():
-        return torch.device("cuda")
-    return torch.device("cpu")
 
 
 def canon_technique(tech: str):
@@ -191,7 +185,7 @@ def run_config(model_name, lang, neb_items, postcards, device):
 
 
 def main():
-    device = get_device()
+    device = torch.device(get_device())
     print(f"device={device}")
     neb_items = load_neb_items()
     postcards = load_postcards()

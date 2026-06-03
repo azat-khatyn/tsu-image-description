@@ -3,7 +3,9 @@ from PIL import Image
 import torch
 from transformers import BlipProcessor, BlipForConditionalGeneration
 
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+from tsu_image_description.models import get_device
+
+DEVICE = get_device()
 
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 model = BlipForConditionalGeneration.from_pretrained(

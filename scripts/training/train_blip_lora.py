@@ -7,7 +7,9 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 from peft import LoraConfig, get_peft_model
 import os
 
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+from tsu_image_description.models import get_device
+
+DEVICE = get_device()
 
 TRAIN_PATH = "data/nypl/splits/train_v1.json"
 VAL_PATH = "data/nypl/splits/val_v1.json"

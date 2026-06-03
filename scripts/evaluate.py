@@ -19,17 +19,15 @@
 
 import argparse
 import json
-import sys
 import time
 from pathlib import Path
 
 import numpy as np
 import torch
 
-sys.path.insert(0, "src")
-
 from tsu_image_description.pipeline import ArchiveDescriptionPipeline
 from tsu_image_description.clip_scorer import CLIPScorer
+from tsu_image_description.models import get_device
 
 
 # ---------------------------------------------------------------------
@@ -163,14 +161,6 @@ def parse_args():
 # ---------------------------------------------------------------------
 # Вспомогательные функции
 # ---------------------------------------------------------------------
-def get_device():
-    if torch.backends.mps.is_available():
-        return "mps"
-    if torch.cuda.is_available():
-        return "cuda"
-    return "cpu"
-
-
 def load_references(path):
     items = []
     with open(path, "r", encoding="utf-8") as f:

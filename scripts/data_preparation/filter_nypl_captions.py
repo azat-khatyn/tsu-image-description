@@ -3,7 +3,9 @@ import torch
 from PIL import Image
 import open_clip
 
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+from tsu_image_description.models import get_device
+
+DEVICE = get_device()
 
 model, _, preprocess = open_clip.create_model_and_transforms(
     "ViT-B-32",

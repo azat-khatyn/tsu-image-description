@@ -43,7 +43,6 @@ import argparse
 import csv
 import json
 import re
-import sys
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -244,7 +243,6 @@ def main():
     print()
 
     print(f"[2/3] Loading MetadataExtractor (taxonomy={args.taxonomy})")
-    sys.path.insert(0, str(ROOT / "src"))
     from tsu_image_description.metadata_extractor import MetadataExtractor
     extractor = MetadataExtractor(taxonomy_version=args.taxonomy)
     print()
