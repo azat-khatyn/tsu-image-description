@@ -35,6 +35,7 @@ flowchart TD
     IMG[Изображение]
 
     subgraph REC [Извлечение визуальных признаков, параллельные модули]
+        direction LR
         BLIP[ГенераторПодписи<br/>BLIP-large + перевод MarianMT RU]
         SigLIP[ЭкстракторМетаданных<br/>SigLIP + каталожная таксономия]
         OCR[ЭкстракторНадписей<br/>OCR PaddleOCR, опционально]
