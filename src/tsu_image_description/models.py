@@ -196,7 +196,7 @@ class SigLIPZeroShotClassifier:
         return {candidate: float(score) for candidate, score in zip(candidates, probs)}
 
 
-class CausalLMGenerator:
+class LocalLLM:
     """Локальная causal-LM: chat-сообщения -> текст. Тонкая обёртка над моделью.
 
     Промпты, few-shot и правила — в llm_rewriter.py; здесь только загрузка модели

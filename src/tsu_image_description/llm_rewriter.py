@@ -18,7 +18,7 @@
 
 from typing import Dict, Optional
 
-from .models import CausalLMGenerator
+from .models import LocalLLM
 
 
 DEFAULT_MODEL = "Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24"
@@ -315,7 +315,7 @@ class LLMRewriter:
 
         print(f"[LLMRewriter] Loading {model_path} "
               f"(prompt_style={prompt_style}, max_new_tokens={self.max_new_tokens})...")
-        self.generator = CausalLMGenerator(model_path)
+        self.generator = LocalLLM(model_path)
         print(f"[LLMRewriter] Loaded.")
 
     def rewrite(
