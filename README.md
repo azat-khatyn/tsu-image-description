@@ -39,6 +39,7 @@ flowchart TD
         BLIP[ГенераторПодписи<br/>BLIP-large + перевод MarianMT RU]
         SigLIP[ЭкстракторМетаданных<br/>SigLIP + каталожная таксономия]
         OCR[ЭкстракторНадписей<br/>OCR PaddleOCR, опционально]
+        BLIP ~~~ SigLIP ~~~ OCR
     end
 
     subgraph SEM [Сборка и улучшение стилистики]
