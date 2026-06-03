@@ -34,32 +34,25 @@
 flowchart TD
     IMG[Изображение]
 
-    subgraph REC [Распознавание изображения, 3 параллельных модуля]
+    subgraph REC [Извлечение визуальных признаков, параллельные модули]
         BLIP[ГенераторПодписи<br/>BLIP-large + перевод MarianMT RU]
         SigLIP[ЭкстракторМетаданных<br/>SigLIP + каталожная таксономия]
         OCR[ЭкстракторНадписей<br/>OCR PaddleOCR, опционально]
     end
 
-    subgraph SEM [Сборка и редактура]
+    subgraph SEM [Сборка и улучшение стилистики]
         BUILD[КонструкторОписания<br/>шаблон, теги, search_text]
-        LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B]
+        LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B, опционально]
     end
-
     OUT[JSON-результат:<br/>caption_en/ru, metadata, ocr,<br/>archive_description RU,<br/>search_text, tags_ru]
 
-    IMG --> BLIP
-    IMG --> SigLIP
-    IMG --> OCR
+    IMG --> REC
+    REC --> SEM
+    SEM --> OUT
 
-    BLIP --> BUILD
-    SigLIP --> BUILD
-    OCR -.-> BUILD
-    BLIP --> LLM
-    SigLIP --> LLM
-    OCR -.-> LLM
-
-    BUILD --> OUT
-    LLM --> OUT
+    %% опциональные компоненты — пунктирная рамка
+    style OCR stroke-dasharray: 5 5
+    style LLM stroke-dasharray: 5 5
 ```
 
 ## Оценки качества и производительности 
