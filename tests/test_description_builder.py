@@ -16,7 +16,6 @@ def make_result(
     taxonomy_version="archival_v2",
     inf_theme=None,
     inf_mood=None,
-    ocr=None,
 ):
     return {
         "caption": {"ru": caption_ru},
@@ -29,7 +28,6 @@ def make_result(
             "taxonomy_version": taxonomy_version,
         },
         "inference": {"theme": inf_theme, "mood": inf_mood},
-        "ocr": ocr,
     }
 
 
@@ -99,60 +97,6 @@ def test_drop_generic_style_removes_vintage_from_intro():
     # generic-стиль убран, остаётся только тип материала
     assert out["archive_description"].startswith("Открытка. ")
     assert "стиле" not in out["archive_description"]
-
-
-def test_search_text_uses_ru_terms_not_raw_english_tags():
-    builder = DescriptionBuilder()
-    out = builder.build(
-        make_result(
-            caption_ru="Зимний Пейзаж",
-            image_type={"label": "a postcard", "confident": True},
-            style={"label": "a chromolithograph", "confident": True},
-            tags=["a postcard", "a chromolithograph"],
-            inf_theme="a landscape",
-        )
-    )
-    search = out["search_text"]
-    assert search == "открытка хромолитография пейзаж зимний пейзаж"
-    assert "postcard" not in search
-
-
-def test_search_text_appends_confident_ocr_after_caption():
-    builder = DescriptionBuilder()
-    out = builder.build(
-        make_result(
-            caption_ru="вид на пруд",
-            image_type={"label": "a postcard", "confident": True},
-            ocr={"text": "Видъ на прудъ", "confidence": 0.92, "confident": True},
-        )
-    )
-    # надпись OCR дописывается в конце, после подписи
-    assert out["search_text"] == "открытка вид на пруд видъ на прудъ"
-
-
-def test_search_text_ignores_non_confident_ocr():
-    builder = DescriptionBuilder()
-    out = builder.build(
-        make_result(
-            caption_ru="вид на пруд",
-            image_type={"label": "a postcard", "confident": True},
-            ocr={"text": "|! — .", "confidence": 0.95, "confident": False},
-        )
-    )
-    assert "|!" not in out["search_text"]
-    assert out["search_text"] == "открытка вид на пруд"
-
-
-def test_search_text_without_ocr_block_unchanged():
-    builder = DescriptionBuilder()
-    out = builder.build(
-        make_result(
-            caption_ru="вид на пруд",
-            image_type={"label": "a postcard", "confident": True},
-            ocr=None,
-        )
-    )
-    assert out["search_text"] == "открытка вид на пруд"
 
 
 def test_tags_ru_localized():

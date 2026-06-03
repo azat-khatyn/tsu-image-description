@@ -36,19 +36,16 @@ class DescriptionBuilder:
         caption_ru = self._normalize_caption(result["caption"]["ru"])
         metadata = result["metadata"]
         inference = result["inference"]
-        ocr = result.get("ocr")
 
         if self.template_mode == "caption_only":
             archive = self._sentence(caption_ru, capitalize=True)
-            search_text = self._search_text(metadata, inference, caption_ru, ocr)
             tags_ru = self._tags_ru(metadata, inference)
-            return {"archive_description": archive, "search_text": search_text, "tags_ru": tags_ru}
+            return {"archive_description": archive, "tags_ru": tags_ru}
 
         if self.template_mode == "minimal":
             archive = f"На изображении: {self._inline(caption_ru)}."
-            search_text = self._search_text(metadata, inference, caption_ru, ocr)
             tags_ru = self._tags_ru(metadata, inference)
-            return {"archive_description": archive, "search_text": search_text, "tags_ru": tags_ru}
+            return {"archive_description": archive, "tags_ru": tags_ru}
 
         image_type_field = metadata.get("image_type", {})
         style_field = metadata.get("style", {})
@@ -93,12 +90,10 @@ class DescriptionBuilder:
             parts.append(f"Общее настроение изображения можно охарактеризовать как {mood_ru}.")
 
         archive_description = " ".join(parts)
-        search_text = self._search_text(metadata, inference, caption_ru, ocr)
         tags_ru = self._tags_ru(metadata, inference)
 
         return {
             "archive_description": archive_description,
-            "search_text": search_text,
             "tags_ru": tags_ru,
         }
 
@@ -119,7 +114,7 @@ class DescriptionBuilder:
         # Полностью убираем generic-стиль из вводной фразы: слова
         # «vintage / decorative / retro» не различают открытки и дают
         # повторяющиеся неинформативные зачины. Тип материала остаётся;
-        # стиль в любом случае сохраняется в search_text.
+        # стиль при уверенности сохраняется в tags_ru.
         if self.drop_generic_style and style_label in generic_styles:
             style_conf = False
             style_ru_gen = None
@@ -198,55 +193,3 @@ class DescriptionBuilder:
         if mood:
             out.append(mood_map.get(mood, mood))
         return out
-
-    @classmethod
-    def _search_text(
-        cls,
-        metadata: Dict,
-        inference: Dict,
-        caption_ru: str | None = None,
-        ocr: Dict | None = None,
-    ) -> str:
-        image_type_field = metadata.get("image_type", {})
-        style_field = metadata.get("style", {})
-        tags = metadata.get("tags", [])
-        version = metadata.get("taxonomy_version", taxonomy.DEFAULT_VERSION)
-
-        image_type_map = taxonomy.ru_map(version, "image_type")
-        style_map = taxonomy.ru_map(version, "style")
-        theme_map = taxonomy.ru_map(version, "theme")
-        mood_map = taxonomy.ru_map(version, "mood")
-
-        search_terms = []
-
-        image_type_ru = image_type_map.get(image_type_field.get("label"))
-        style_ru = style_map.get(style_field.get("label"))
-        theme_ru = theme_map.get(inference.get("theme"), inference.get("theme")) if inference.get("theme") else None
-        mood_ru = mood_map.get(inference.get("mood"), inference.get("mood")) if inference.get("mood") else None
-
-        if image_type_field.get("confident") and image_type_ru:
-            search_terms.append(image_type_ru)
-        if style_field.get("confident") and style_ru:
-            search_terms.append(style_ru)
-        if theme_ru:
-            search_terms.append(theme_ru)
-        if mood_ru:
-            search_terms.append(mood_ru)
-
-        # NB: metadata["tags"] хранит сырые англоязычные метки SigLIP
-        # ("a postcard", "a chromolithograph", ...). Они УЖЕ покрыты
-        # русскими переводами выше через image_type_ru / style_ru / theme_ru.
-        # Повторно дублировать их в search_text вредно — это вносит шум
-        # в поисковую строку и ухудшает токенизацию ("a postcard" → "a", "postcard").
-
-        if caption_ru:
-            caption_norm = caption_ru.strip().rstrip(" .,:;!-")
-            if caption_norm:
-                search_terms.append(caption_norm.lower())
-
-        # Надпись OCR - только уверенная (гейт по confidence + санити-фильтр),
-        # иначе в поисковую строку попал бы шум распознавания.
-        if ocr and ocr.get("confident") and ocr.get("text"):
-            search_terms.append(ocr["text"].strip().lower())
-
-        return " ".join(search_terms)

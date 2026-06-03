@@ -11,6 +11,8 @@ __all__ = [
     "description_builder",
     "caption_cleaner",
     "ocr_extractor",
+    "clip_scorer",
     "taxonomy",
+    "reliability",
     "llm_rewriter",
 ]

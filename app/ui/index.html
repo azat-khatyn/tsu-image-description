@@ -219,15 +219,6 @@
       font-weight: 500;
     }
 
-    .search-text {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 13px;
-      color: var(--text);
-      background: var(--tag-bg);
-      padding: 10px 12px;
-      border-radius: 8px;
-    }
-
     .tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .tag {
       background: var(--tag-bg);
@@ -404,10 +395,6 @@
               <div class="raw-tag">RU перевод</div>
               <div class="raw-val muted" id="captionRu">—</div>
             </div>
-            <div class="raw-row">
-              <div class="raw-tag">Search text</div>
-              <div class="raw-val muted" id="searchText">—</div>
-            </div>
           </div>
         </div>
       </details>
@@ -435,7 +422,6 @@
     const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
     const captionRuEl = document.getElementById("captionRu");
-    const searchTextEl = document.getElementById("searchText");
     const rawJsonEl = document.getElementById("rawJson");
 
     const archLinesEl = document.getElementById("archLines");
@@ -510,8 +496,6 @@
       captionEnEl.classList.add("muted");
       captionRuEl.textContent = "—";
       captionRuEl.classList.add("muted");
-      searchTextEl.textContent = "—";
-      searchTextEl.classList.add("muted");
       rawJsonEl.textContent = "Здесь появится сырой ответ API.";
     }
 
@@ -571,8 +555,6 @@
       captionEnEl.classList.remove("muted");
       captionRuEl.textContent = data.caption?.ru || "—";
       captionRuEl.classList.remove("muted");
-      searchTextEl.textContent = data.search_text || "—";
-      searchTextEl.classList.remove("muted");
 
       rawJsonEl.textContent = JSON.stringify(data, null, 2);
     }

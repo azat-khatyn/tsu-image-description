@@ -34,6 +34,7 @@ class InferenceService:
             ),
             "llm_model": settings.llm_model if settings.use_llm_rewriter else None,
             "use_ocr": settings.use_ocr,
+            "use_clipscore": settings.use_clipscore,
         }
 
     @property
@@ -64,6 +65,7 @@ class InferenceService:
                         use_llm_rewriter=settings.use_llm_rewriter,
                         llm_rewriter_kwargs=llm_kwargs,
                         use_ocr=settings.use_ocr,
+                        use_clipscore=settings.use_clipscore,
                     )
 
     def infer(self, image_path: str) -> dict:

@@ -5,6 +5,8 @@ from .metadata_extractor import MetadataExtractor
 from .description_builder import DescriptionBuilder
 from .caption_cleaner import CaptionCleaner
 from .ocr_extractor import OCRExtractor
+from .clip_scorer import CLIPScorer
+from . import reliability
 
 
 class ArchiveDescriptionPipeline:
@@ -20,6 +22,8 @@ class ArchiveDescriptionPipeline:
         taxonomy_version: str = "archival_v2",
         use_ocr: bool = False,
         ocr_kwargs=None,
+        use_clipscore: bool = False,
+        clipscore_kwargs=None,
     ):
         self.taxonomy_version = taxonomy_version
         self.caption_generator = CaptionGenerator(
@@ -43,8 +47,17 @@ class ArchiveDescriptionPipeline:
             except ImportError as e:
                 logging.warning("OCR отключён: %s", e)
 
+        # Опциональный reference-free CLIPScore описания (тот же код, что в
+        # офлайн-оценке). Тяжёлый: грузит CLIP + M-CLIP. По умолчанию выключен.
+        self.clip_scorer = None
+        if use_clipscore:
+            try:
+                self.clip_scorer = CLIPScorer(**(clipscore_kwargs or {}))
+            except ImportError as e:
+                logging.warning("CLIPScore отключён: %s", e)
+
         # Опциональный языковой редактор. Когда включён, заменяет архивное
-        # описание от DescriptionBuilder (search_text всё равно берётся из builder).
+        # описание от DescriptionBuilder (теги tags_ru всё равно берутся из builder).
         self.llm_rewriter = None
         if use_llm_rewriter:
             from .llm_rewriter import LLMRewriter
@@ -78,7 +91,7 @@ class ArchiveDescriptionPipeline:
         description_result = self.description_builder.build(base_result)
 
         # Замена шаблонного архивного описания на сгенерированное LLM.
-        # search_text от builder сохраняется (теги закрытой таксономии для поиска).
+        # tags_ru от builder сохраняются (теги закрытой таксономии).
         if self.llm_rewriter is not None:
             llm_archive = self.llm_rewriter.rewrite(
                 caption_en=caption_en,
@@ -90,7 +103,16 @@ class ArchiveDescriptionPipeline:
             description_result["archive_description_template"] = description_result["archive_description"]
             description_result["archive_description"] = llm_archive
 
-        return {
-            **base_result,
-            **description_result,
-        }
+        result = {**base_result, **description_result}
+
+        # Reference-free CLIPScore финального описания (если стадия включена).
+        clipscore = None
+        if self.clip_scorer is not None:
+            clipscore = self.clip_scorer.score(
+                image_path, description_result["archive_description"], lang="ru"
+            )
+
+        # Сводка надёжности из уже посчитанных сигналов (SigLIP/OCR) + CLIPScore.
+        result["reliability"] = reliability.assess(metadata, ocr, clipscore=clipscore)
+
+        return result

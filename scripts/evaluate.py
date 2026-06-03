@@ -24,13 +24,12 @@ import time
 from pathlib import Path
 
 import numpy as np
-import open_clip
 import torch
-from PIL import Image
 
 sys.path.insert(0, "src")
 
 from tsu_image_description.pipeline import ArchiveDescriptionPipeline
+from tsu_image_description.clip_scorer import CLIPScorer
 
 
 # ---------------------------------------------------------------------
@@ -187,114 +186,6 @@ def mean(values):
 
 
 # ---------------------------------------------------------------------
-# Загрузка CLIP
-# ---------------------------------------------------------------------
-def load_clip_en(device):
-    model, _, preprocess = open_clip.create_model_and_transforms(
-        "ViT-B-32",
-        pretrained="openai",
-    )
-    model = model.to(device).eval()
-    tokenizer = open_clip.get_tokenizer("ViT-B-32")
-    return model, preprocess, tokenizer
-
-
-class MCLIPTextEncoder(torch.nn.Module):
-    """Текстовый энкодер M-CLIP: XLM-R + линейная проекция."""
-
-    def __init__(self, transformer, linear):
-        super().__init__()
-        self.transformer = transformer
-        self.LinearTransformation = linear
-
-
-def load_mclip(model_name, device):
-    from huggingface_hub import hf_hub_download
-    from transformers import AutoConfig, AutoModel, AutoTokenizer
-
-    config_path = hf_hub_download(repo_id=model_name, filename="config.json")
-    with open(config_path, "r", encoding="utf-8") as cf:
-        cfg = json.load(cf)
-
-    base_model_name = cfg.get("modelBase", "xlm-roberta-large")
-    transformer_dim = cfg.get("transformerDimensions", 1024)
-    num_dims = cfg.get("numDims", 512)
-
-    try:
-        weights_path = hf_hub_download(repo_id=model_name, filename="model.safetensors")
-        from safetensors.torch import load_file
-
-        state = load_file(weights_path)
-    except Exception:
-        weights_path = hf_hub_download(repo_id=model_name, filename="pytorch_model.bin")
-        state = torch.load(weights_path, map_location="cpu")
-
-    base_cfg = AutoConfig.from_pretrained(base_model_name)
-    transformer = AutoModel.from_config(base_cfg)
-
-    transformer_state = {
-        k[len("transformer."):]: v
-        for k, v in state.items()
-        if k.startswith("transformer.")
-    }
-    missing, unexpected = transformer.load_state_dict(transformer_state, strict=False)
-    if missing or unexpected:
-        print(
-            f"[INFO] M-CLIP transformer load: "
-            f"{len(missing)} missing, {len(unexpected)} unexpected keys"
-        )
-
-    linear = torch.nn.Linear(transformer_dim, num_dims)
-    linear.load_state_dict(
-        {
-            "weight": state["LinearTransformation.weight"],
-            "bias": state["LinearTransformation.bias"],
-        }
-    )
-
-    text_model = MCLIPTextEncoder(transformer, linear).to(device).eval()
-    tokenizer = AutoTokenizer.from_pretrained(base_model_name)
-    return text_model, tokenizer
-
-
-# ---------------------------------------------------------------------
-# Кодирование
-# ---------------------------------------------------------------------
-@torch.no_grad()
-def encode_image(image_path, clip_model, preprocess, device):
-    image = preprocess(Image.open(image_path).convert("RGB")).unsqueeze(0).to(device)
-    feat = clip_model.encode_image(image)
-    feat = feat / feat.norm(dim=-1, keepdim=True)
-    return feat.squeeze(0).cpu().numpy()
-
-
-@torch.no_grad()
-def encode_text_en(text, clip_model, tokenizer, device):
-    tokens = tokenizer([text]).to(device)
-    feat = clip_model.encode_text(tokens)
-    feat = feat / feat.norm(dim=-1, keepdim=True)
-    return feat.squeeze(0).cpu().numpy()
-
-
-@torch.no_grad()
-def encode_text_ru(text, mclip_model, mclip_tokenizer, device):
-    tok = mclip_tokenizer([text], padding=True, return_tensors="pt")
-    tok = {k: v.to(device) for k, v in tok.items()}
-
-    embs = mclip_model.transformer(**tok)[0]
-    att = tok["attention_mask"]
-    pooled = (embs * att.unsqueeze(2)).sum(dim=1) / att.sum(dim=1)[:, None]
-    feat = mclip_model.LinearTransformation(pooled)
-
-    feat = feat / feat.norm(dim=-1, keepdim=True)
-    return feat.squeeze(0).cpu().numpy()
-
-
-def cosine(a, b):
-    return float(np.dot(a, b))
-
-
-# ---------------------------------------------------------------------
 # Retrieval
 # ---------------------------------------------------------------------
 def compute_retrieval(img_matrix, txt_matrix, ks=(1, 5, 10)):
@@ -415,11 +306,8 @@ def main():
         taxonomy_version=args.taxonomy_version,
     )
 
-    print("[INFO] Loading EN CLIP (open_clip ViT-B-32 openai)...")
-    clip_en, preprocess, tokenizer_en = load_clip_en(device)
-
-    print(f"[INFO] Loading RU CLIP ({args.mclip_model})...")
-    mclip_text, mclip_tokenizer = load_mclip(args.mclip_model, device)
+    print(f"[INFO] Loading CLIPScorer (EN ViT-B-32 + RU {args.mclip_model})...")
+    scorer = CLIPScorer(mclip_model=args.mclip_model, device=device)
 
     per_item = []
     img_embs = []
@@ -442,30 +330,30 @@ def main():
         caption_ru_raw = result["caption"].get("ru_raw", "") or ""
         archive_ru = result.get("archive_description", "") or ""
 
-        img_emb = encode_image(image_path, clip_en, preprocess, device)
+        img_emb = scorer.encode_image(image_path)
 
         archive_emb = (
-            encode_text_ru(archive_ru, mclip_text, mclip_tokenizer, device)
+            scorer.encode_text(archive_ru, "ru")
             if archive_ru
             else None
         )
 
         scores = {
             "CLIPScore_EN_caption_en": (
-                cosine(img_emb, encode_text_en(caption_en, clip_en, tokenizer_en, device))
+                scorer.cosine(img_emb, scorer.encode_text(caption_en, "en"))
                 if caption_en
                 else None
             ),
             "CLIPScore_RU_caption_ru": (
-                cosine(img_emb, encode_text_ru(caption_ru, mclip_text, mclip_tokenizer, device))
+                scorer.cosine(img_emb, scorer.encode_text(caption_ru, "ru"))
                 if caption_ru
                 else None
             ),
             "CLIPScore_RU_archive_ru": (
-                cosine(img_emb, archive_emb) if archive_emb is not None else None
+                scorer.cosine(img_emb, archive_emb) if archive_emb is not None else None
             ),
             "CLIPScore_RU_reference_ru": (
-                cosine(img_emb, encode_text_ru(ref_ru, mclip_text, mclip_tokenizer, device))
+                scorer.cosine(img_emb, scorer.encode_text(ref_ru, "ru"))
                 if ref_ru
                 else None
             ),

@@ -37,6 +37,8 @@ class Settings:
     )
     # OCR — опциональная стадия (тяжёлая зависимость paddleocr), по умолчанию выкл.
     use_ocr: bool = _env_bool("USE_OCR", False)
+    # CLIPScore — опциональный reference-free сигнал надёжности (грузит CLIP+M-CLIP).
+    use_clipscore: bool = _env_bool("USE_CLIPSCORE", False)
 
 
 settings = Settings()

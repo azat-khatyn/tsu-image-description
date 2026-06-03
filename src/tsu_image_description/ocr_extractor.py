@@ -4,7 +4,7 @@
 печатной кириллице и дореформенной орфографии (conf 0.92–0.98), но на большинстве
 лицевых сторон текста нет, а рукописный даёт мусор. Поэтому результат проходит
 двойной гейт: порог уверенности движка И санити-фильтр (_looks_like_text). В
-search_text/LLM уходит только текст с confident=True — иначе шум попал бы в поиск.
+подсказку LLM уходит только текст с confident=True — иначе шум попал бы в описание.
 
 paddleocr — тяжёлая опциональная зависимость (requirements-ocr.txt). Импорт
 ленивый (в __init__): без библиотеки модуль импортируется, ошибка возникает
@@ -56,7 +56,7 @@ class OCRExtractor:
         """Возвращает блок OCR: {text, raw_text, confidence, confident}.
 
         text — очищенный текст (всегда), confident — прошёл ли он гейт.
-        Потребители (search_text/LLM) используют text только при confident=True.
+        Потребитель (подсказка LLM) использует text только при confident=True.
         """
         raw_text, confidence = self._run_ocr(image_path)
         text = self._normalize(raw_text)
