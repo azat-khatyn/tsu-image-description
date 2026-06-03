@@ -5,11 +5,9 @@ from PIL import Image
 import json
 from tqdm import tqdm
 
-DEVICE = (
-    "mps" if torch.backends.mps.is_available()
-    else "cuda" if torch.cuda.is_available()
-    else "cpu"
-)
+from tsu_image_description.models import get_device
+
+DEVICE = get_device()
 
 class PostcardDataset(Dataset):
     def __init__(self, path, processor):

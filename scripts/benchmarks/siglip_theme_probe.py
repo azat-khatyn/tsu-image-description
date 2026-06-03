@@ -31,6 +31,8 @@ import torch
 from PIL import Image
 from transformers import AutoModel, AutoProcessor
 
+from tsu_image_description.models import get_device
+
 ROOT = Path(__file__).resolve().parent.parent
 SEMART_DIR = ROOT / "data" / "semart" / "SemArt"
 IMAGES_DIR = SEMART_DIR / "Images"
@@ -38,14 +40,6 @@ CACHE_DIR = ROOT / "data" / "semart"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 THEME_CLASSES = ["religious", "portrait", "landscape", "genre", "still-life"]
-
-
-def get_device():
-    if torch.backends.mps.is_available():
-        return torch.device("mps")
-    if torch.cuda.is_available():
-        return torch.device("cuda")
-    return torch.device("cpu")
 
 
 def load_rows(csv_path: Path):
@@ -194,7 +188,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    device = get_device()
+    device = torch.device(get_device())
     print(f"[1/4] Loading SigLIP ({args.model_name}) on {device}")
     processor = AutoProcessor.from_pretrained(args.model_name)
     model = AutoModel.from_pretrained(args.model_name).to(device).eval()

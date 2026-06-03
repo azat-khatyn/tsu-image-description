@@ -36,13 +36,35 @@ class InferenceBlock(BaseModel):
     mood_confidence: float | None = None
 
 
+class OCRBlock(BaseModel):
+    # Распознанная надпись (text) и гейт уверенности (confident).
+    # В подсказку LLM попадает только text при confident=True.
+    text: str = ""
+    confidence: float | None = None
+    confident: bool = False
+
+
+class ReliabilityBlock(BaseModel):
+    # Сводка надёжности ответа: level — грубый уровень по доле уверенных осей
+    # классификатора; clipscore — reference-free семантическое соответствие
+    # описания изображению (None, если стадия выключена).
+    level: str = "unknown"
+    confident_fields: list[str] = Field(default_factory=list)
+    n_confident: int = 0
+    n_applicable: int = 0
+    mean_confidence: float | None = None
+    ocr_confidence: float | None = None
+    clipscore: float | None = None
+
+
 class InferenceResponse(BaseModel):
     filename: str
     caption: CaptionBlock
     metadata: MetadataBlock
     inference: InferenceBlock
+    ocr: OCRBlock = Field(default_factory=OCRBlock)
+    reliability: ReliabilityBlock = Field(default_factory=ReliabilityBlock)
     archive_description: str
-    search_text: str
     # Русифицированные теги уверенно предсказанных полей классификатора.
     # В отличие от metadata.tags (сырые англоязычные метки SigLIP),
     # эти теги пригодны для отображения в UI / архивной системе без перевода.
@@ -56,6 +78,8 @@ class PipelineConfig(BaseModel):
     use_llm_rewriter: bool
     llm_prompt_style: str | None = None
     llm_model: str | None = None
+    use_ocr: bool = False
+    use_clipscore: bool = False
 
 
 class HealthResponse(BaseModel):

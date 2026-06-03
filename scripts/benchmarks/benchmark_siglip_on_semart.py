@@ -1,4 +1,4 @@
-"""benchmark_siglip_on_semart.py - измеряет точность SigLIPMetadataExtractor
+"""benchmark_siglip_on_semart.py - измеряет точность MetadataExtractor
 на размеченном SemArt (19 244 картин с каноническими метками TYPE/TECHNIQUE).
 
 SemArt служит ground-truth для нашего zero-shot классификатора:
@@ -43,7 +43,6 @@ import argparse
 import csv
 import json
 import re
-import sys
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -243,10 +242,9 @@ def main():
     print(f"      Style gt distribution: {dict(style_dist)}")
     print()
 
-    print(f"[2/3] Loading SigLIPMetadataExtractor (taxonomy={args.taxonomy})")
-    sys.path.insert(0, str(ROOT / "src"))
-    from tsu_image_description.siglip_metadata_extractor import SigLIPMetadataExtractor
-    extractor = SigLIPMetadataExtractor(taxonomy_version=args.taxonomy)
+    print(f"[2/3] Loading MetadataExtractor (taxonomy={args.taxonomy})")
+    from tsu_image_description.metadata_extractor import MetadataExtractor
+    extractor = MetadataExtractor(taxonomy_version=args.taxonomy)
     print()
 
     print(f"[3/3] Running predictions on {len(eval_set)} images")

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsu-image-description"
+version = "0.1.0"
+description = "Модульный пайплайн архивных описаний открыток (магистерская ТГУ)."
+requires-python = ">=3.12"
+# Пины рантайм-зависимостей живут в requirements.txt (единый источник версий),
+# опциональная стадия OCR — в requirements-ocr.txt. Здесь они не дублируются,
+# чтобы не возникало расхождения версий.
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+# Пакет лежит в src/. После `pip install -e .` путь не нужен, но строка
+# оставлена, чтобы тесты запускались и без установки пакета.
+pythonpath = ["src"]
+testpaths = ["tests"]

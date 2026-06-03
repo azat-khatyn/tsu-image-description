@@ -1,6 +1,12 @@
+from typing import Dict, List
+
 from PIL import Image
 import torch
 from transformers import (
+    AutoModel,
+    AutoModelForCausalLM,
+    AutoProcessor,
+    AutoTokenizer,
     BlipProcessor,
     BlipForConditionalGeneration,
     Blip2Processor,
@@ -159,3 +165,76 @@ class Translator:
             translated = self.model.generate(**inputs)
 
         return self.tokenizer.decode(translated[0], skip_special_tokens=True)
+
+
+class SigLIPZeroShotClassifier:
+    """SigLIP zero-shot скоринг: (изображение, тексты-кандидаты) -> {label: prob}.
+
+    Тонкая обёртка над моделью, без гейтинга и таксономии (они — в
+    metadata_extractor.py). Свап SigLIP-1 -> SigLIP-2 затрагивает только этот класс.
+    """
+
+    def __init__(self, model_name: str = "google/siglip-base-patch16-224"):
+        self.model_name = model_name
+        self.device = get_device()
+        self.processor = AutoProcessor.from_pretrained(model_name)
+        self.model = AutoModel.from_pretrained(model_name).to(self.device)
+
+    def score(self, image: Image.Image, candidates: List[str]) -> Dict[str, float]:
+        inputs = self.processor(
+            text=candidates,
+            images=image,
+            padding="max_length",
+            return_tensors="pt",
+        ).to(self.device)
+
+        with torch.no_grad():
+            outputs = self.model(**inputs)
+            logits = outputs.logits_per_image
+            probs = torch.softmax(logits, dim=1).squeeze(0).detach().cpu().tolist()
+
+        return {candidate: float(score) for candidate, score in zip(candidates, probs)}
+
+
+class LocalLLM:
+    """Локальная causal-LM: chat-сообщения -> текст. Тонкая обёртка над моделью.
+
+    Промпты, few-shot и правила — в llm_rewriter.py; здесь только загрузка модели
+    и генерация. Свап модели — через model_path (любая HF causal-LM с chat-шаблоном).
+    """
+
+    def __init__(self, model_path: str):
+        self.model_path = model_path
+        self.device = get_device()
+        dtype = torch.float16 if self.device != "cpu" else torch.float32
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            torch_dtype=dtype,
+        ).to(self.device)
+        self.model.eval()
+
+    def generate(
+        self,
+        messages: List[Dict[str, str]],
+        *,
+        max_new_tokens: int,
+        temperature: float = 0.0,
+    ) -> str:
+        prompt_text = self.tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        inputs = self.tokenizer(prompt_text, return_tensors="pt").to(self.device)
+
+        with torch.no_grad():
+            output = self.model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                do_sample=temperature > 0,
+                temperature=temperature if temperature > 0 else 1.0,
+                pad_token_id=self.tokenizer.eos_token_id,
+            )
+
+        # отбрасываем токены входного prompt
+        new_tokens = output[0][inputs["input_ids"].shape[1]:]
+        return self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
