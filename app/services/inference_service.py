@@ -2,7 +2,6 @@ from functools import lru_cache
 from threading import Lock
 import logging
 
-from app.bootstrap import SRC_DIR  # noqa: F401
 from app.core.config import settings
 from tsu_image_description.models import get_device
 from tsu_image_description.pipeline import ArchiveDescriptionPipeline
@@ -34,6 +33,7 @@ class InferenceService:
                 settings.llm_prompt_style if settings.use_llm_rewriter else None
             ),
             "llm_model": settings.llm_model if settings.use_llm_rewriter else None,
+            "use_ocr": settings.use_ocr,
         }
 
     @property
@@ -63,6 +63,7 @@ class InferenceService:
                         taxonomy_version=settings.taxonomy_version,
                         use_llm_rewriter=settings.use_llm_rewriter,
                         llm_rewriter_kwargs=llm_kwargs,
+                        use_ocr=settings.use_ocr,
                     )
 
     def infer(self, image_path: str) -> dict:

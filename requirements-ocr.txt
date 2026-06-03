@@ -1,0 +1,5 @@
+# Опциональная зависимость OCR-стадии (флаг use_ocr пайплайна).
+# Тяжёлая и платформозависимая, поэтому вынесена из основного requirements.txt.
+# Установка: pip install -r requirements-ocr.txt
+paddleocr==3.6.0
+paddlepaddle==3.3.1

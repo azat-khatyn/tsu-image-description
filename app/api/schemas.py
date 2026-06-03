@@ -36,11 +36,20 @@ class InferenceBlock(BaseModel):
     mood_confidence: float | None = None
 
 
+class OCRBlock(BaseModel):
+    # Распознанная надпись (text) и гейт уверенности (confident). В search_text
+    # и подсказку LLM попадает только text при confident=True.
+    text: str = ""
+    confidence: float | None = None
+    confident: bool = False
+
+
 class InferenceResponse(BaseModel):
     filename: str
     caption: CaptionBlock
     metadata: MetadataBlock
     inference: InferenceBlock
+    ocr: OCRBlock = Field(default_factory=OCRBlock)
     archive_description: str
     search_text: str
     # Русифицированные теги уверенно предсказанных полей классификатора.
@@ -56,6 +65,7 @@ class PipelineConfig(BaseModel):
     use_llm_rewriter: bool
     llm_prompt_style: str | None = None
     llm_model: str | None = None
+    use_ocr: bool = False
 
 
 class HealthResponse(BaseModel):

@@ -35,6 +35,8 @@ class Settings:
     llm_model: str = os.getenv(
         "LLM_MODEL", "Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24"
     )
+    # OCR — опциональная стадия (тяжёлая зависимость paddleocr), по умолчанию выкл.
+    use_ocr: bool = _env_bool("USE_OCR", False)
 
 
 settings = Settings()

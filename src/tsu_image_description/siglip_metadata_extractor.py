@@ -15,96 +15,7 @@ import torch
 from transformers import AutoModel, AutoProcessor
 
 from .models import get_device
-
-
-TAXONOMIES = {
-    # ====================================================================
-    # legacy_v1 — первая итерация таксономии.
-    # Разговорные метки стиля (vintage illustration, decorative illustration,
-    # retro design) и субъективные mood-категории. Сохранена только для
-    # воспроизводимости старых прогонов.
-    # ====================================================================
-    "legacy_v1": {
-        "image_types": [
-            "a postcard",
-            "a poster",
-            "a greeting card",
-            "an illustration",
-            "a photograph",
-        ],
-        "styles": [
-            "vintage illustration",
-            "retro design",
-            "decorative illustration",
-            "engraving",
-            "drawing",
-            "painting",
-            "black and white photo",
-            "color photograph",
-        ],
-        "themes": [
-            "holiday scene",
-            "Easter holiday scene",
-            "Christmas holiday scene",
-            "New Year celebration",
-            "romantic scene",
-            "children scene",
-            "urban scene",
-            "nature scene",
-            "religious scene",
-        ],
-        "moods": [
-            "happy", "festive", "romantic",
-            "nostalgic", "calm", "serious",
-        ],
-    },
-
-    # ====================================================================
-    # archival_v2 — каталожная таксономия (основная).
-    #
-    # Источники: Файнштейн Э.Б. «В мире открытки» (1976) — типология открыток;
-    # MARC 21 поле 655; Getty AAT (Print processes, Subjects); ГОСТ 7.69-2009.
-    #
-    # Отличия от legacy_v1: разговорные метки стиля заменены на конкретные
-    # техники печати; темы переименованы на каталожный язык; поле mood удалено
-    # (субъективные суждения не идут в архивную опись).
-    # ====================================================================
-    "archival_v2": {
-        "image_types": [
-            "a postcard",          # открытка
-            "a greeting card",     # поздравительная карточка
-            "an illustration",     # иллюстрация
-            "a photograph",        # фотография
-            "a poster",            # плакат
-        ],
-        "styles": [
-            # Print processes (Getty AAT)
-            "a chromolithograph",      # хромолитография
-            "an engraving",            # гравюра
-            "an etching",              # офорт
-            # Painting / drawing media
-            "a watercolor painting",   # акварель
-            "an oil painting",         # масляная живопись
-            "a pencil drawing",        # карандашный рисунок
-            # Photography
-            "a black and white photograph",  # чёрно-белая фотография
-            "a color photograph",            # цветная фотография
-        ],
-        "themes": [
-            # Traditional art subject categories
-            "a landscape",           # пейзаж
-            "an urban view",         # городской вид
-            "a portrait",            # портрет
-            "a genre scene",         # жанровая сцена
-            "a still life",          # натюрморт
-            "a religious subject",   # религиозный сюжет
-            "a military subject",    # военный сюжет
-            "a holiday scene",       # праздничная сцена (Рождество, Пасха, и пр.)
-        ],
-        # mood удалён — субъективные суждения не каталожны.
-        "moods": [],
-    },
-}
+from . import taxonomy
 
 
 class SigLIPMetadataExtractor:
@@ -121,21 +32,21 @@ class SigLIPMetadataExtractor:
         *,
         taxonomy_version: str = "archival_v2",
     ):
-        if taxonomy_version not in TAXONOMIES:
+        if taxonomy_version not in taxonomy.VERSIONS:
             raise ValueError(
                 f"Unknown taxonomy_version={taxonomy_version!r}. "
-                f"Available: {sorted(TAXONOMIES.keys())}"
+                f"Available: {sorted(taxonomy.VERSIONS)}"
             )
         self.taxonomy_version = taxonomy_version
         self.device = get_device()
         self.processor = AutoProcessor.from_pretrained(model_name)
         self.model = AutoModel.from_pretrained(model_name).to(self.device)
 
-        taxonomy = TAXONOMIES[taxonomy_version]
-        self.image_types = taxonomy["image_types"]
-        self.styles = taxonomy["styles"]
-        self.themes = taxonomy["themes"]
-        self.moods = taxonomy["moods"]
+        # Зонды берутся из единого источника taxonomy.py (англ. строки = id).
+        self.image_types = taxonomy.prompts(taxonomy_version, "image_type")
+        self.styles = taxonomy.prompts(taxonomy_version, "style")
+        self.themes = taxonomy.prompts(taxonomy_version, "theme")
+        self.moods = taxonomy.prompts(taxonomy_version, "mood")
 
         self.thresholds = {
             "image_type": 0.35,
@@ -199,6 +110,28 @@ class SigLIPMetadataExtractor:
             "margin": 0.0,
             "confident": False,
             "alternatives": [],
+        }
+
+    @staticmethod
+    def infer_theme_mood(metadata: Dict) -> Dict:
+        """Гейтит тему и настроение по уверенности классификатора.
+
+        Метка темы/настроения сохраняется только если поле помечено confident;
+        балл возвращается всегда. Формирует блок inference — единственную
+        репрезентацию гейтинга темы/настроения для билдера и публичного вывода.
+        Живёт рядом с производителем метаданных, а не в билдере описания.
+        """
+        theme_field = metadata.get("theme", {})
+        mood_field = metadata.get("mood", {})
+
+        theme = theme_field.get("label") if theme_field.get("confident") else None
+        mood = mood_field.get("label") if mood_field.get("confident") else None
+
+        return {
+            "theme": theme,
+            "mood": mood,
+            "theme_confidence": theme_field.get("score"),
+            "mood_confidence": mood_field.get("score"),
         }
 
     def extract(self, image_path: str) -> Dict:

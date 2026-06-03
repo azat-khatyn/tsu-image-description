@@ -15,16 +15,15 @@
 
 ## Предлагаемая архитектура
 
-Предлагаемая архитектура состоит из шести модулей. Каждый представляет собой замороженную предобученную модель или компонент на основе установленных правил (rule-based) с четко определенной функцией. Параметры отдельных компонентов могут быть адаптированы под конкретные задачи и сценарии использования внутри РГБ.
+Предлагаемая архитектура состоит из пяти модулей. Модули 1–3 работают параллельно на этапе распознавания изображения (генерация подписи на базе BLIP с переводом MarianMT, классификация по каталожной таксономии и опциональное распознавание надписей OCR), после чего конструктор собирает описание (модуль 4), а языковой редактор формирует финальный текст (модуль 5). Каждый представляет собой замороженную предобученную модель или компонент на основе установленных правил (rule-based) с четко определенной функцией. Параметры отдельных компонентов могут быть адаптированы под конкретные задачи и сценарии использования внутри РГБ.
 
 | # | Модуль                                                             | Модель / реализация | Особенности                                                                                                                         |
 |---|--------------------------------------------------------------------|---|-------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | `ГенераторПодписи`/<br/>`CaptionGenerator`                         | BLIP-large (`Salesforce/blip-image-captioning-large`) | Английская подпись по изображению                                                                                                   |
-| 2 | `ПодготовкаПодписи`/<br/>`EnglishCaptionPostprocessor` + `Translator` + `TextPostprocessor` | rule-based + MarianMT (`Helsinki-NLP/opus-mt-en-ru`) | Очистка артефактов BLIP (повторы, обрывы); перевод подписи на русский; нормализация русского текста                                  |
-| 3 | `ЭкстракторМетаданныхSigLIP`/<br/>`SigLIPMetadataExtractor`         | SigLIP-base (`google/siglip-base-patch16-224`) | Zero-shot классификация по категориям; каталожная таксономия на основе Файнштейн Э. Б. (1976), MARC 21, Getty AAT                   |
-| 4 | `ОпределительТемы`/<br/>`ThemeInferencer`                               | rule-based | Агрегация полей; отбрасывает неуверенные и неоднозначные результаты классификации                                                   |
-| 5 | `КонструкторОписания`/<br/>`DescriptionBuilder`                         | template-based | Поисковые теги и шаблонная заготовка описания                                                     |
-| 6 | `ЯзыковойРедакторLLM`/<br/>`LLMRewriter`                                | Vikhr-Nemo-12B-Instruct-R | Генерация финального русского архивного описания по английской подписи + метаданным; собственная prompt-инструкция в архивном стиле |
+| 1 | `ГенераторПодписи`/<br/>`CaptionGenerator` (+ `CaptionCleaner`, `Translator`) | BLIP-large (`Salesforce/blip-image-captioning-large`) + MarianMT (`Helsinki-NLP/opus-mt-en-ru`) | Английская подпись по изображению; очистка артефактов BLIP (повторы, обрывы); перевод подписи на русский и нормализация             |
+| 2 | `ЭкстракторМетаданныхSigLIP`/<br/>`SigLIPMetadataExtractor`         | SigLIP-base (`google/siglip-base-patch16-224`) | Zero-shot классификация по категориям; каталожная таксономия на основе Файнштейн Э. Б. (1976), MARC 21, Getty AAT; отбор уверенных тем/настроения |
+| 3 | `ЭкстракторНадписей`/<br/>`OCRExtractor` *(опционально)* | PaddleOCR (`lang="ru"`) | Распознавание надписей на открытке; гейт по уверенности и санити-фильтр (в поиск и LLM попадает только уверенный текст)              |
+| 4 | `КонструкторОписания`/<br/>`DescriptionBuilder`                         | template-based | Поисковые теги, поисковое представление (`search_text`) и шаблонная заготовка описания                                              |
+| 5 | `ЯзыковойРедакторLLM`/<br/>`LLMRewriter`                                | Vikhr-Nemo-12B-Instruct-R | Генерация финального русского архивного описания по подписи, метаданным и надписи; собственная prompt-инструкция в архивном стиле   |
 
 Модульная организация архитектуры обеспечивает интерпретируемость и диагностируемость решения. Каждый этап формирует промежуточный результат, который может быть отдельно проанализирован: английская подпись, очищенная подпись, структурированные метаданные, поисковое представление и итоговое архивное описание. Это позволяет локализовать источники ошибок, сравнивать альтернативные конфигурации отдельных компонентов и выполнять поэтапную адаптацию системы без полной перестройки всего пайплайна.
 
@@ -32,26 +31,30 @@
 flowchart TD
     IMG[Изображение]
 
-    subgraph CV [Извлечение визуальных признаков]
-        BLIP[ГенераторПодписи<br/>BLIP-large]
+    subgraph REC [Распознавание изображения, 3 параллельных модуля]
+        BLIP[ГенераторПодписи<br/>BLIP-large + перевод MarianMT RU]
         SigLIP[ЭкстракторМетаданныхSigLIP<br/>каталожная таксономия]
+        OCR[ЭкстракторНадписей<br/>OCR PaddleOCR, опционально]
     end
 
-    POSTCAP[ПодготовкаПодписи<br/>EN→RU]
-
-    subgraph SEM [Обогащение семантики и сборка]
-        BUILD[КонструкторОписания<br/>+ ОпределительТемы]
+    subgraph SEM [Сборка и редактура]
+        BUILD[КонструкторОписания<br/>шаблон, теги, search_text]
         LLM[ЯзыковойРедакторLLM<br/>Vikhr-Nemo-12B]
     end
 
-    OUT[JSON-результат:<br/>caption_en, metadata,<br/>archive_description RU,<br/>search_text]
+    OUT[JSON-результат:<br/>caption_en/ru, metadata, ocr,<br/>archive_description RU,<br/>search_text, tags_ru]
 
-    IMG --> BLIP --> POSTCAP
+    IMG --> BLIP
     IMG --> SigLIP
-    POSTCAP --> BUILD
-    POSTCAP --> LLM
+    IMG --> OCR
+
+    BLIP --> BUILD
     SigLIP --> BUILD
+    OCR -.-> BUILD
+    BLIP --> LLM
     SigLIP --> LLM
+    OCR -.-> LLM
+
     BUILD --> OUT
     LLM --> OUT
 ```
@@ -206,14 +209,14 @@ PYTHONPATH=src python scripts/run_demo.py --image data/eval/images/postcard_1.jp
 tsu-image-description/
 ├── app/                              # FastAPI приложение (API + UI)
 ├── src/tsu_image_description/        # библиотека (pipeline и компоненты)
-│   ├── pipeline.py
-│   ├── models.py                     # CaptionGenerator (BLIP)
-│   ├── english_caption_postprocessor.py
-│   ├── siglip_metadata_extractor.py  # zero-shot classifier (versioned taxonomy)
-│   ├── theme_inference.py
+│   ├── pipeline.py                   # оркестратор пайплайна
+│   ├── models.py                     # CaptionGenerator (BLIP) + Translator (MarianMT)
+│   ├── caption_cleaner.py            # очистка подписи EN/RU
+│   ├── siglip_metadata_extractor.py  # zero-shot classifier + гейтинг темы/настроения
+│   ├── taxonomy.py                   # единый источник меток (EN-зонды + RU-канон)
+│   ├── ocr_extractor.py              # OCR (PaddleOCR), опционально
 │   ├── description_builder.py        # search_text + опорный шаблон
-│   ├── llm_rewriter.py               # Vikhr-Nemo: финальное русское описание
-│   └── text_postprocessor.py
+│   └── llm_rewriter.py               # Vikhr-Nemo: финальное русское описание
 ├── scripts/
 │   ├── evaluate.py                   # основная оценка
 │   ├── eval_reference_based.py       # BERTScore_RU + chrF + ROUGE-L + BLEU
@@ -234,6 +237,7 @@ tsu-image-description/
 ├── docs/experiments.md               # подробный журнал экспериментов
 ├── demo/screenshots/
 ├── requirements.txt
+├── requirements-ocr.txt              # опциональные зависимости OCR (PaddleOCR)
 ├── requirements.docker.txt
 ├── docker-compose.yml
 └── Dockerfile
