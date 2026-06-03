@@ -1,6 +1,10 @@
+from typing import Dict, List
+
 from PIL import Image
 import torch
 from transformers import (
+    AutoModel,
+    AutoProcessor,
     BlipProcessor,
     BlipForConditionalGeneration,
     Blip2Processor,
@@ -159,3 +163,32 @@ class Translator:
             translated = self.model.generate(**inputs)
 
         return self.tokenizer.decode(translated[0], skip_special_tokens=True)
+
+
+class SigLIPZeroShotClassifier:
+    """SigLIP zero-shot скоринг: (изображение, тексты-кандидаты) -> {label: prob}.
+
+    Тонкая обёртка над моделью, без гейтинга и таксономии (они — в
+    metadata_extractor.py). Свап SigLIP-1 -> SigLIP-2 затрагивает только этот класс.
+    """
+
+    def __init__(self, model_name: str = "google/siglip-base-patch16-224"):
+        self.model_name = model_name
+        self.device = get_device()
+        self.processor = AutoProcessor.from_pretrained(model_name)
+        self.model = AutoModel.from_pretrained(model_name).to(self.device)
+
+    def score(self, image: Image.Image, candidates: List[str]) -> Dict[str, float]:
+        inputs = self.processor(
+            text=candidates,
+            images=image,
+            padding="max_length",
+            return_tensors="pt",
+        ).to(self.device)
+
+        with torch.no_grad():
+            outputs = self.model(**inputs)
+            logits = outputs.logits_per_image
+            probs = torch.softmax(logits, dim=1).squeeze(0).detach().cpu().tolist()
+
+        return {candidate: float(score) for candidate, score in zip(candidates, probs)}

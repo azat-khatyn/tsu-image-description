@@ -1,13 +1,13 @@
 """Тесты гейтинга темы и настроения по уверенности.
 
 Гейтинг живёт рядом с производителем метаданных:
-SigLIPMetadataExtractor.infer_theme_mood. Тест не загружает модель —
+MetadataExtractor.infer_theme_mood. Тест не загружает модель —
 infer_theme_mood это staticmethod без обращения к весам.
 """
 
-from tsu_image_description.siglip_metadata_extractor import SigLIPMetadataExtractor
+from tsu_image_description.metadata_extractor import MetadataExtractor
 
-infer = SigLIPMetadataExtractor.infer_theme_mood
+infer = MetadataExtractor.infer_theme_mood
 
 
 def test_confident_fields_passed_through():

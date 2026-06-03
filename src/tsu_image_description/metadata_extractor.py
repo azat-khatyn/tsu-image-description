@@ -1,7 +1,8 @@
-"""SigLIP zero-shot классификатор по таксономии.
+"""Экстрактор метаданных по таксономии (поверх SigLIP zero-shot скоринга).
 
-Поддерживает несколько версий таксономии (для воспроизводимости старых
-экспериментов). По умолчанию — "archival_v2": каталожная таксономия,
+Сама модель — в models.py (SigLIPZeroShotClassifier); здесь только таксономия,
+пороги и гейтинг. Поддерживает несколько версий таксономии (для воспроизводимости
+старых экспериментов). По умолчанию — "archival_v2": каталожная таксономия,
 согласованная с MARC 21 п.655, Getty AAT (Print processes / Subjects)
 и российской филокартической традицией (Файнштейн Э.Б. «В мире открытки», 1976).
 
@@ -11,18 +12,16 @@
 
 from typing import Dict, List
 from PIL import Image
-import torch
-from transformers import AutoModel, AutoProcessor
 
-from .models import get_device
+from .models import SigLIPZeroShotClassifier
 from . import taxonomy
 
 
-class SigLIPMetadataExtractor:
-    """SigLIP zero-shot классификатор с версионируемой таксономией.
+class MetadataExtractor:
+    """Гейтинг zero-shot предсказаний по версионируемой таксономии.
 
     Args:
-        model_name: идентификатор модели HF.
+        model_name: идентификатор модели SigLIP для скоринга.
         taxonomy_version: одно из {"legacy_v1", "archival_v2"}. По умолчанию "archival_v2".
     """
 
@@ -38,9 +37,7 @@ class SigLIPMetadataExtractor:
                 f"Available: {sorted(taxonomy.VERSIONS)}"
             )
         self.taxonomy_version = taxonomy_version
-        self.device = get_device()
-        self.processor = AutoProcessor.from_pretrained(model_name)
-        self.model = AutoModel.from_pretrained(model_name).to(self.device)
+        self.classifier = SigLIPZeroShotClassifier(model_name)
 
         # Зонды берутся из единого источника taxonomy.py (англ. строки = id).
         self.image_types = taxonomy.prompts(taxonomy_version, "image_type")
@@ -63,25 +60,10 @@ class SigLIPMetadataExtractor:
         }
 
         print(
-            f"[SigLIPMetadataExtractor] taxonomy_version={taxonomy_version} "
+            f"[MetadataExtractor] taxonomy_version={taxonomy_version} "
             f"({len(self.image_types)}/{len(self.styles)}/"
             f"{len(self.themes)}/{len(self.moods)} types/styles/themes/moods)"
         )
-
-    def _classify_with_scores(self, image: Image.Image, candidates: List[str]) -> Dict[str, float]:
-        inputs = self.processor(
-            text=candidates,
-            images=image,
-            padding="max_length",
-            return_tensors="pt"
-        ).to(self.device)
-
-        with torch.no_grad():
-            outputs = self.model(**inputs)
-            logits = outputs.logits_per_image
-            probs = torch.softmax(logits, dim=1).squeeze(0).detach().cpu().tolist()
-
-        return {candidate: float(score) for candidate, score in zip(candidates, probs)}
 
     def _top_k(self, scores: Dict[str, float], k: int = 3) -> List[Dict[str, float]]:
         ordered = sorted(scores.items(), key=lambda x: x[1], reverse=True)
@@ -137,9 +119,9 @@ class SigLIPMetadataExtractor:
     def extract(self, image_path: str) -> Dict:
         image = Image.open(image_path).convert("RGB")
 
-        image_type_scores = self._classify_with_scores(image, self.image_types)
-        style_scores = self._classify_with_scores(image, self.styles)
-        theme_scores = self._classify_with_scores(image, self.themes)
+        image_type_scores = self.classifier.score(image, self.image_types)
+        style_scores = self.classifier.score(image, self.styles)
+        theme_scores = self.classifier.score(image, self.themes)
 
         image_type = self._pack_field(
             image_type_scores,
@@ -158,7 +140,7 @@ class SigLIPMetadataExtractor:
         )
 
         if self.moods:
-            mood_scores = self._classify_with_scores(image, self.moods)
+            mood_scores = self.classifier.score(image, self.moods)
             mood = self._pack_field(
                 mood_scores,
                 self.thresholds["mood"],

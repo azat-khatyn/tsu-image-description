@@ -1,17 +1,17 @@
-"""Тесты логики gating классификатора SigLIP (порог + отрыв от второго).
+"""Тесты логики gating экстрактора метаданных (порог + отрыв от второго).
 
 Модель не загружается: методы _top_k / _pack_field / _empty_field чисто
 вычислительные, поэтому экземпляр создаётся через object.__new__ в обход
-__init__ (который иначе скачал бы веса).
+__init__ (который иначе создал бы классификатор и скачал веса).
 """
 
 import pytest
 
-from tsu_image_description.siglip_metadata_extractor import SigLIPMetadataExtractor
+from tsu_image_description.metadata_extractor import MetadataExtractor
 
 
 def make_extractor():
-    return object.__new__(SigLIPMetadataExtractor)
+    return object.__new__(MetadataExtractor)
 
 
 def test_top_k_orders_and_rounds():

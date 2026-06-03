@@ -15,7 +15,7 @@
 
 Скоринг повторяет продакшн (_classify_with_scores/_pack_field):
 softmax по кандидатам от logits_per_image; confident = score>=threshold И
-(best-second)>=margin. Пороги взяты из SigLIPMetadataExtractor (style/theme).
+(best-second)>=margin. Пороги взяты из MetadataExtractor (style/theme).
 
 Только чтение: исходники не меняются, веса докачиваются в кэш HF.
 Результат → data/eval/siglip2_ru_probe.json.
@@ -35,7 +35,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SIGLIP1 = "google/siglip-base-patch16-224"
 SIGLIP2 = "google/siglip2-base-patch16-224"
 
-# пороги продакшна (SigLIPMetadataExtractor)
+# пороги продакшна (MetadataExtractor)
 STYLE_THRESHOLD, STYLE_MARGIN = 0.22, 0.03
 THEME_THRESHOLD, THEME_MARGIN = 0.18, 0.03
 

@@ -1,7 +1,7 @@
 import logging
 
 from .models import CaptionGenerator, Translator
-from .siglip_metadata_extractor import SigLIPMetadataExtractor
+from .metadata_extractor import MetadataExtractor
 from .description_builder import DescriptionBuilder
 from .caption_cleaner import CaptionCleaner
 from .ocr_extractor import OCRExtractor
@@ -30,7 +30,7 @@ class ArchiveDescriptionPipeline:
             Translator(model_name=translator_model) if translator_model
             else Translator()
         )
-        self.metadata_extractor = SigLIPMetadataExtractor(taxonomy_version=taxonomy_version)
+        self.metadata_extractor = MetadataExtractor(taxonomy_version=taxonomy_version)
         self.caption_cleaner = CaptionCleaner()
         self.description_builder = DescriptionBuilder(**(builder_kwargs or {}))
 
@@ -58,7 +58,7 @@ class ArchiveDescriptionPipeline:
         caption_ru = self.caption_cleaner.clean_ru(caption_ru_raw)
 
         metadata = self.metadata_extractor.extract(image_path)
-        inference = SigLIPMetadataExtractor.infer_theme_mood(metadata)
+        inference = MetadataExtractor.infer_theme_mood(metadata)
 
         # OCR-блок присутствует всегда (пустой при выключенной стадии),
         # чтобы форма ответа была стабильной.

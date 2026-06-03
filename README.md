@@ -20,7 +20,7 @@
 | # | Модуль                                                             | Модель / реализация | Особенности                                                                                                                         |
 |---|--------------------------------------------------------------------|---|-------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | `ГенераторПодписи`/<br/>`CaptionGenerator` (+ `CaptionCleaner`, `Translator`) | BLIP-large (`Salesforce/blip-image-captioning-large`) + MarianMT (`Helsinki-NLP/opus-mt-en-ru`) | Английская подпись по изображению; очистка артефактов BLIP (повторы, обрывы); перевод подписи на русский и нормализация             |
-| 2 | `ЭкстракторМетаданныхSigLIP`/<br/>`SigLIPMetadataExtractor`         | SigLIP-base (`google/siglip-base-patch16-224`) | Zero-shot классификация по категориям; каталожная таксономия на основе Файнштейн Э. Б. (1976), MARC 21, Getty AAT; отбор уверенных тем/настроения |
+| 2 | `ЭкстракторМетаданных`/<br/>`MetadataExtractor`         | SigLIP-base (`google/siglip-base-patch16-224`) | Zero-shot классификация по категориям; каталожная таксономия на основе Файнштейн Э. Б. (1976), MARC 21, Getty AAT; отбор уверенных тем/настроения |
 | 3 | `ЭкстракторНадписей`/<br/>`OCRExtractor` *(опционально)* | PaddleOCR (`lang="ru"`) | Распознавание надписей на открытке; гейт по уверенности и санити-фильтр (в поиск и LLM попадает только уверенный текст)              |
 | 4 | `КонструкторОписания`/<br/>`DescriptionBuilder`                         | template-based | Поисковые теги, поисковое представление (`search_text`) и шаблонная заготовка описания                                              |
 | 5 | `ЯзыковойРедакторLLM`/<br/>`LLMRewriter`                                | Vikhr-Nemo-12B-Instruct-R | Генерация финального русского архивного описания по подписи, метаданным и надписи; собственная prompt-инструкция в архивном стиле   |
@@ -33,7 +33,7 @@ flowchart TD
 
     subgraph REC [Распознавание изображения, 3 параллельных модуля]
         BLIP[ГенераторПодписи<br/>BLIP-large + перевод MarianMT RU]
-        SigLIP[ЭкстракторМетаданныхSigLIP<br/>каталожная таксономия]
+        SigLIP[ЭкстракторМетаданных<br/>SigLIP + каталожная таксономия]
         OCR[ЭкстракторНадписей<br/>OCR PaddleOCR, опционально]
     end
 
@@ -210,9 +210,9 @@ tsu-image-description/
 ├── app/                              # FastAPI приложение (API + UI)
 ├── src/tsu_image_description/        # библиотека (pipeline и компоненты)
 │   ├── pipeline.py                   # оркестратор пайплайна
-│   ├── models.py                     # CaptionGenerator (BLIP) + Translator (MarianMT)
+│   ├── models.py                     # модели: BLIP, MarianMT, SigLIP
 │   ├── caption_cleaner.py            # очистка подписи EN/RU
-│   ├── siglip_metadata_extractor.py  # zero-shot classifier + гейтинг темы/настроения
+│   ├── metadata_extractor.py         # таксономия + пороги + гейтинг (поверх SigLIP)
 │   ├── taxonomy.py                   # единый источник меток (EN-зонды + RU-канон)
 │   ├── ocr_extractor.py              # OCR (PaddleOCR), опционально
 │   ├── description_builder.py        # search_text + опорный шаблон

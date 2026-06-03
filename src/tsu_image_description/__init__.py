@@ -7,7 +7,7 @@ tsu_image_description` не тянул тяжёлые зависимости tor
 __all__ = [
     "pipeline",
     "models",
-    "siglip_metadata_extractor",
+    "metadata_extractor",
     "description_builder",
     "caption_cleaner",
     "ocr_extractor",
