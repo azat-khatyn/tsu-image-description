@@ -25,18 +25,24 @@
 Изображения: миниатюра 315×460 JPEG (полное разрешение скрыто за JS-viewer).
 URL: https://rusneb.ru/local/tools/exalead/thumbnail.php?url={catalog_id}
 
+Принимает как URL коллекции, так и URL поиска (rusneb.ru/search/?q=...): поиск
+пагинируется параметром PAGEN_1, коллекция — page-N (определяется автоматически).
+Поиск по «открытка» + открытый доступ + Изодокументы (c=23) даёт ~10к открыток
+разных сюжетов — это снимает тематический перекос одной коллекции.
+
 Использование:
+    # коллекция:
     python scripts/scrape_neb_collection.py \\
-        --output-dir data/neb_leningrad_wwii \\
-        --delay 1.0
-    # быстрая проверка:
+        --output-dir data/neb_leningrad_wwii --delay 1.0
+    # поиск (разнотематические открытки), смоук на 5:
     python scripts/scrape_neb_collection.py \\
-        --output-dir data/neb_leningrad_wwii \\
-        --max-items 5
+        --collection-url "https://rusneb.ru/search/?q=%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BA%D0%B0&access%5B0%5D=open&c%5B%5D=23" \\
+        --output-dir data/neb_search_postcards --max-items 5
 """
 
 import argparse
 import json
+import random
 import re
 import sys
 import time
@@ -80,13 +86,30 @@ def get(session, url, timeout=30, retries=3):
 # Перебор страниц
 # ---------------------------------------------------------------------------
 
-def collect_catalog_ids(session, collection_url, delay=1.0, max_pages=50):
-    """Обойти страницы коллекции и собрать ссылки /catalog/{id}/."""
+def _page_url(base_url, page_num):
+    """URL страницы списка: поиск (?...&PAGEN_1=N) или коллекция (?page=page-N).
+
+    Поиск НЭБ (/search/?q=...) пагинируется параметром PAGEN_1, коллекции —
+    page-N. Определяем по виду URL и аккуратно дописываем разделитель.
+    """
+    is_search = "/search/" in base_url or "q=" in base_url
+    sep = "&" if "?" in base_url else "?"
+    if is_search:
+        return f"{base_url}{sep}PAGEN_1={page_num}"
+    return f"{base_url}{sep}page=page-{page_num}"
+
+
+def collect_catalog_ids(session, collection_url, delay=1.0, max_pages=50, target=None):
+    """Обойти страницы списка (коллекция или поиск) и собрать ссылки /catalog/{id}/.
+
+    target — если задан, прекращаем перечисление, как только набрали столько ID
+    (не выкачиваем все страницы ради небольшого набора).
+    """
     catalog_ids = []
     seen = set()
 
     for page_num in range(1, max_pages + 1):
-        url = f"{collection_url}?page=page-{page_num}"
+        url = _page_url(collection_url, page_num)
         print(f"[page {page_num}] {url}")
         try:
             r = get(session, url)
@@ -106,6 +129,9 @@ def collect_catalog_ids(session, collection_url, delay=1.0, max_pages=50):
             print("  ← no new catalog IDs, stop pagination")
             break
         print(f"  found {n_new} new (total {len(catalog_ids)})")
+        if target and len(catalog_ids) >= target:
+            print(f"  ← набрано {len(catalog_ids)} ≥ target {target}, stop pagination")
+            break
         time.sleep(delay)
 
     return catalog_ids
@@ -290,10 +316,19 @@ def scrape(args):
     print("=" * 60)
     print("[Phase 1] Enumerating catalog IDs from collection pages")
     print("=" * 60)
-    catalog_ids = collect_catalog_ids(session, args.collection_url, delay=args.delay)
+    # при --sample перечисляем широко (target=None), потом берём случайную выборку;
+    # иначе ранний стоп по --max-items (первые подряд).
+    target = None if args.sample else args.max_items
+    catalog_ids = collect_catalog_ids(
+        session, args.collection_url, delay=args.delay,
+        max_pages=args.max_pages, target=target,
+    )
     print(f"\n→ Total unique catalog IDs: {len(catalog_ids)}")
 
-    if args.max_items:
+    if args.sample and len(catalog_ids) > args.sample:
+        catalog_ids = sorted(random.Random(args.seed).sample(catalog_ids, args.sample))
+        print(f"→ Случайная выборка {len(catalog_ids)} (seed={args.seed}) для тематического разброса")
+    elif args.max_items:
         catalog_ids = catalog_ids[: args.max_items]
         print(f"→ Capped to first {len(catalog_ids)} for smoke test")
 
@@ -380,7 +415,13 @@ def parse_args():
     p.add_argument("--delay", type=float, default=1.0,
                    help="Delay between requests in seconds")
     p.add_argument("--max-items", type=int, default=None,
-                   help="Cap to N items (for smoke test)")
+                   help="Взять первые N (быстрый смоук, ранний стоп пагинации)")
+    p.add_argument("--max-pages", type=int, default=50,
+                   help="Сколько страниц списка перечислять (для --sample — шире пул)")
+    p.add_argument("--sample", type=int, default=None,
+                   help="Случайно выбрать N ID из перечисленных (тематический разброс)")
+    p.add_argument("--seed", type=int, default=42,
+                   help="Seed для --sample")
     return p.parse_args()
 
 
