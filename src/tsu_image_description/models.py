@@ -195,6 +195,17 @@ class SigLIPZeroShotClassifier:
 
         return {candidate: float(score) for candidate, score in zip(candidates, probs)}
 
+    def encode_image(self, image: Image.Image) -> "list":
+        """Сырой L2-нормированный image-эмбеддинг SigLIP (для анализа эмбеддингов)."""
+        inputs = self.processor(images=image, return_tensors="pt").to(self.device)
+        with torch.no_grad():
+            feat = self.model.get_image_features(**inputs)
+            # в части версий transformers возвращается output-объект, а не тензор
+            if not torch.is_tensor(feat):
+                feat = feat.pooler_output
+            feat = feat / feat.norm(dim=-1, keepdim=True)
+        return feat.squeeze(0).detach().cpu().tolist()
+
 
 class LocalLLM:
     """Локальная causal-LM: chat-сообщения -> текст. Тонкая обёртка над моделью.

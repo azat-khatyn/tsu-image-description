@@ -58,8 +58,8 @@ def parse_args():
     parser.add_argument(
         "--references",
         type=str,
-        default="data/eval/references.jsonl",
-        help="Path to annotated references JSONL.",
+        default="data/eval/references_neb_n224.jsonl",
+        help="Path to annotated references JSONL (НЭБ — экспертная разметка).",
     )
     parser.add_argument(
         "--pool",
@@ -154,6 +154,19 @@ def parse_args():
         default=50,
         help="Max new tokens for caption generation.",
     )
+    parser.add_argument(
+        "--checkpoint",
+        type=str,
+        default=None,
+        help="Путь к чекпойнт-файлу (JSONL). По умолчанию <output>.ckpt.jsonl. "
+             "Пишется после каждого изображения; при повторном запуске прогон "
+             "возобновляется с места обрыва.",
+    )
+    parser.add_argument(
+        "--no-resume",
+        action="store_true",
+        help="Игнорировать существующий чекпойнт и считать заново.",
+    )
 
     return parser.parse_args()
 
@@ -173,6 +186,54 @@ def load_references(path):
 
 def mean(values):
     return float(np.mean(values)) if values else None
+
+
+# ---------------------------------------------------------------------
+# Чекпойнт (инкрементальное сохранение + возобновление)
+# ---------------------------------------------------------------------
+def run_signature(args):
+    """Сигнатура конфига прогона — чтобы не дописывать в чекпойнт от другого запуска."""
+    return {
+        "references": args.references,
+        "pool": args.pool,
+        "caption_backend": args.caption_backend,
+        "finetuned": getattr(args, "finetuned", None),
+        "translator_model": args.translator_model,
+        "taxonomy_version": args.taxonomy_version,
+        "template_mode": args.template_mode,
+        "drop_theme": args.drop_theme,
+        "drop_mood": args.drop_mood,
+        "drop_generic_style": args.drop_generic_style,
+        "use_llm_rewriter": args.use_llm_rewriter,
+        "llm_model": args.llm_model if args.use_llm_rewriter else None,
+        "llm_prompt_style": args.llm_prompt_style if args.use_llm_rewriter else None,
+        "num_beams": args.num_beams,
+        "length_penalty": args.length_penalty,
+        "prompt_prefix": args.prompt_prefix,
+        "max_new_tokens": args.max_new_tokens,
+        "mclip_model": args.mclip_model,
+    }
+
+
+def load_checkpoint(path, signature):
+    """Готовые записи из чекпойнта при совпадении сигнатуры. Иначе пустой dict."""
+    if not path.exists():
+        return {}
+    header, done = None, {}
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            if rec.get("_type") == "header":
+                header = rec.get("signature")
+                continue
+            done[rec["item"]["image_path"]] = rec
+    if header != signature:
+        print(f"[WARN] Чекпойнт {path} от другого конфига — игнорирую (старт заново).")
+        return {}
+    return done
 
 
 # ---------------------------------------------------------------------
@@ -299,6 +360,19 @@ def main():
     print(f"[INFO] Loading CLIPScorer (EN ViT-B-32 + RU {args.mclip_model})...")
     scorer = CLIPScorer(mclip_model=args.mclip_model, device=device)
 
+    sig = run_signature(args)
+    ckpt_path = Path(args.checkpoint) if args.checkpoint else Path(f"{args.output}.ckpt.jsonl")
+    done = {} if args.no_resume else load_checkpoint(ckpt_path, sig)
+    if done:
+        print(f"[INFO] Возобновление: {len(done)} изображений уже в чекпойнте {ckpt_path}")
+
+    ckpt_path.parent.mkdir(parents=True, exist_ok=True)
+    fresh = not done
+    ckpt_file = open(ckpt_path, "w" if fresh else "a", encoding="utf-8")
+    if fresh:
+        ckpt_file.write(json.dumps({"_type": "header", "signature": sig}, ensure_ascii=False) + "\n")
+        ckpt_file.flush()
+
     per_item = []
     img_embs = []
     archive_embs = []
@@ -309,6 +383,19 @@ def main():
     for i, item in enumerate(refs):
         image_path = item["image_path"]
         ref_ru = (item.get("reference_short_ru") or "").strip()
+
+        if image_path in done:
+            rec = done[image_path]
+            per_item.append(rec["item"])
+            img_emb = np.array(rec["img_emb"], dtype=np.float32)
+            img_embs.append(img_emb)
+            ae = rec.get("archive_emb")
+            archive_embs.append(
+                np.array(ae, dtype=np.float32) if ae is not None else np.zeros_like(img_emb)
+            )
+            total_time += rec["item"].get("latency_sec", 0.0) or 0.0
+            print(f"[{i + 1}/{len(refs)}] {Path(image_path).name} (из чекпойнта)")
+            continue
 
         t0 = time.time()
         result = pipeline.run(image_path)
@@ -363,19 +450,31 @@ def main():
                 print(f"  {k:32s}: {v:.4f}")
         print(f"  latency: {elapsed:.2f}s\n")
 
-        per_item.append(
-            {
-                "image_path": image_path,
-                "source": item.get("source", "rgb"),
-                "caption_en": caption_en,
-                "caption_ru": caption_ru,
-                "caption_ru_raw": caption_ru_raw,
-                "archive_ru": archive_ru,
-                "reference_ru": ref_ru,
-                "scores": scores,
-                "latency_sec": elapsed,
-            }
+        item_record = {
+            "image_path": image_path,
+            "source": item.get("source", "rgb"),
+            "caption_en": caption_en,
+            "caption_ru": caption_ru,
+            "caption_ru_raw": caption_ru_raw,
+            "archive_ru": archive_ru,
+            "reference_ru": ref_ru,
+            "scores": scores,
+            "latency_sec": elapsed,
+        }
+        per_item.append(item_record)
+
+        ckpt_file.write(
+            json.dumps(
+                {
+                    "item": item_record,
+                    "img_emb": img_emb.tolist(),
+                    "archive_emb": archive_emb.tolist() if archive_emb is not None else None,
+                },
+                ensure_ascii=False,
+            )
+            + "\n"
         )
+        ckpt_file.flush()
 
     def mean_of(key, source_filter=None):
         vals = [
@@ -385,6 +484,8 @@ def main():
             and (source_filter is None or it.get("source") == source_filter)
         ]
         return mean(vals)
+
+    ckpt_file.close()
 
     retrieval = compute_retrieval(np.stack(img_embs), np.stack(archive_embs))
     for it, ranks in zip(per_item, retrieval["ranks"]):
