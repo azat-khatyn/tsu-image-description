@@ -44,6 +44,14 @@ class OCRBlock(BaseModel):
     confident: bool = False
 
 
+class FormatBlock(BaseModel):
+    # Ориентация и формат открытки из размеров изображения (без ML).
+    orientation: str | None = None   # вертикальная / горизонтальная / квадратная
+    aspect: str | None = None        # ближайшее стандартное соотношение, напр. "3:4"
+    width: int | None = None
+    height: int | None = None
+
+
 class ReliabilityBlock(BaseModel):
     # Сводка надёжности ответа: level — грубый уровень по доле уверенных осей
     # классификатора; clipscore — reference-free семантическое соответствие
@@ -63,6 +71,7 @@ class InferenceResponse(BaseModel):
     metadata: MetadataBlock
     inference: InferenceBlock
     ocr: OCRBlock = Field(default_factory=OCRBlock)
+    format: FormatBlock = Field(default_factory=FormatBlock)
     reliability: ReliabilityBlock = Field(default_factory=ReliabilityBlock)
     archive_description: str
     # Русифицированные теги уверенно предсказанных полей классификатора.
@@ -87,3 +96,19 @@ class HealthResponse(BaseModel):
     model_loaded: bool
     device: str
     pipeline_config: PipelineConfig | None = None
+
+
+class SaveDescriptionRequest(BaseModel):
+    # Ручная правка/валидация результата сотрудником (полуавтоматическая обработка).
+    filename: str
+    description: str
+    description_original: str | None = None
+    verdict: str | None = None            # "correct" | "incorrect"
+    ocr_text: str | None = None           # надпись (возможно, исправленная вручную)
+    ocr_text_original: str | None = None  # исходная надпись от OCR
+
+
+class SaveDescriptionResponse(BaseModel):
+    saved: bool
+    path: str
+    saved_at: str

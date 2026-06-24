@@ -18,6 +18,10 @@ class Settings:
     app_name: str = os.getenv("APP_NAME", "Archive Description MVP")
     app_version: str = os.getenv("APP_VERSION", "0.1.0")
     upload_dir: Path = Path(os.getenv("UPLOAD_DIR", BASE_DIR / "tmp" / "uploads"))
+    # Журнал ручных правок описаний (полуавтоматическая обработка сотрудником).
+    corrections_path: Path = Path(
+        os.getenv("CORRECTIONS_PATH", str(BASE_DIR / "data" / "corrections" / "corrections.jsonl"))
+    )
     max_upload_size_mb: int = int(os.getenv("MAX_UPLOAD_SIZE_MB", "10"))
     allowed_extensions: tuple[str, ...] = (".jpg", ".jpeg", ".png")
 
@@ -35,8 +39,10 @@ class Settings:
     llm_model: str = os.getenv(
         "LLM_MODEL", "Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24"
     )
-    # OCR — опциональная стадия (тяжёлая зависимость paddleocr), по умолчанию выкл.
-    use_ocr: bool = _env_bool("USE_OCR", False)
+    # OCR — стадия распознавания надписей (paddleocr); включена по умолчанию,
+    # чтобы пользователь сразу получал и описание, и текст надписи. Отключается
+    # переменной USE_OCR=0 (напр. в Docker без paddleocr).
+    use_ocr: bool = _env_bool("USE_OCR", True)
     # CLIPScore — опциональный reference-free сигнал надёжности (грузит CLIP+M-CLIP).
     use_clipscore: bool = _env_bool("USE_CLIPSCORE", False)
 

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Генерация архивного описания изображения</title>
+  <title>Генерация семантического описания изображения</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -218,6 +218,35 @@
       color: var(--text);
       font-weight: 500;
     }
+    /* Редактируемое описание: подсветка границы в режиме правки. */
+    .archive-text[contenteditable="true"] {
+      outline: none;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      background: #fff;
+    }
+    .archive-text[contenteditable="true"]:focus { border-color: var(--accent); }
+    .copy-btn {
+      float: right;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      background: transparent;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 2px 9px;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: var(--accent-soft); }
+    .save-btn { color: #fff; background: var(--accent); border-color: var(--accent); }
+    .save-btn:hover { background: #1e40af; }
+    .save-btn:disabled { opacity: 0.6; cursor: default; }
+    .wrong-btn { color: #b91c1c; border-color: #fecaca; }
+    .wrong-btn:hover { background: #fef2f2; }
+    .wrong-btn:disabled { opacity: 0.6; cursor: default; }
+    .ocr-conf { float: right; font-size: 12px; font-weight: 500; color: var(--muted); }
+    .edit-hint { margin-top: 8px; font-size: 12px; color: var(--muted); }
 
     .tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .tag {
@@ -311,7 +340,7 @@
 </head>
 <body>
   <header>
-    <h1>Генерация архивного описания изображения</h1>
+    <h1>Генерация семантического описания изображения</h1>
     <p class="subtitle">
       Модульный пайплайн для автоматической генерации структурированных описаний
       художественных изображений (открытки, плакаты) на русском языке.
@@ -359,13 +388,36 @@
         <img id="preview" class="hidden" alt="preview" />
       </div>
       <div id="filename" class="filename"></div>
+      <div id="formatInfo" class="filename"></div>
     </aside>
 
     <div class="content-stack">
       <div class="result-card primary">
-        <div class="card-label">Архивное описание</div>
+        <div class="card-label">
+          Семантическое описание
+          <button type="button" id="copyDescBtn" class="copy-btn" hidden>Копировать</button>
+          <button type="button" id="markWrongBtn" class="copy-btn wrong-btn" hidden>✗ Неверно</button>
+          <button type="button" id="markRightBtn" class="copy-btn save-btn" hidden>✓ Верно</button>
+        </div>
         <div id="archiveDescription" class="archive-text muted">
           Здесь появится финальное описание, сгенерированное предложенным пайплайном.
+        </div>
+        <div id="editHint" class="edit-hint" hidden>
+          Описание и надпись редактируемые. «Верно/Неверно» сохраняет их с вашей оценкой в журнал.
+        </div>
+        <div id="saveStatus" class="edit-hint" hidden></div>
+      </div>
+
+      <div class="result-card" id="ocrCard">
+        <div class="card-label">
+          Надпись на изображении (OCR)
+          <span id="ocrConf" class="ocr-conf" hidden></span>
+        </div>
+        <div id="ocrText" class="archive-text muted">
+          Здесь появится распознанная надпись (если есть).
+        </div>
+        <div id="ocrHint" class="edit-hint" hidden>
+          Поле редактируемое — надпись можно поправить или ввести вручную.
         </div>
       </div>
 
@@ -418,6 +470,18 @@
     const filenameEl = document.getElementById("filename");
 
     const archiveDescriptionEl = document.getElementById("archiveDescription");
+    const ocrTextEl = document.getElementById("ocrText");
+    const formatInfoEl = document.getElementById("formatInfo");
+    const copyDescBtn = document.getElementById("copyDescBtn");
+    const markRightBtn = document.getElementById("markRightBtn");
+    const markWrongBtn = document.getElementById("markWrongBtn");
+    const editHintEl = document.getElementById("editHint");
+    const saveStatusEl = document.getElementById("saveStatus");
+    const ocrConfEl = document.getElementById("ocrConf");
+    const ocrHintEl = document.getElementById("ocrHint");
+    let currentFilename = null;
+    let originalDescription = null;
+    let ocrOriginal = null;
     const tagsContainerEl = document.getElementById("tagsContainer");
     const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
@@ -426,6 +490,49 @@
 
     const archLinesEl = document.getElementById("archLines");
     const archMetricsEl = document.getElementById("archMetrics");
+
+    // Копирование (возможно, отредактированного) описания в буфер обмена.
+    copyDescBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(archiveDescriptionEl.textContent.trim());
+        const prev = copyDescBtn.textContent;
+        copyDescBtn.textContent = "Скопировано";
+        setTimeout(() => { copyDescBtn.textContent = prev; }, 1200);
+      } catch (e) { /* буфер обмена недоступен */ }
+    });
+
+    // Сохранение результата (описание + надпись) с оценкой верно/неверно в журнал.
+    async function saveReview(verdict) {
+      markRightBtn.disabled = true;
+      markWrongBtn.disabled = true;
+      try {
+        const resp = await fetch("/save_description", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            filename: currentFilename || "—",
+            verdict: verdict,
+            description: archiveDescriptionEl.textContent.trim(),
+            description_original: originalDescription,
+            ocr_text: ocrTextEl.textContent.trim(),
+            ocr_text_original: ocrOriginal,
+          }),
+        });
+        const data = await resp.json();
+        if (!data.saved) throw new Error("not saved");
+        saveStatusEl.hidden = false;
+        const label = verdict === "correct" ? "верно" : "неверно";
+        saveStatusEl.textContent = `Сохранено как «${label}» в ${data.path} (${data.saved_at})`;
+      } catch (e) {
+        saveStatusEl.hidden = false;
+        saveStatusEl.textContent = "Ошибка сохранения.";
+      } finally {
+        markRightBtn.disabled = false;
+        markWrongBtn.disabled = false;
+      }
+    }
+    markRightBtn.addEventListener("click", () => saveReview("correct"));
+    markWrongBtn.addEventListener("click", () => saveReview("incorrect"));
 
     // === Подгружаем конфигурацию пайплайна для шапки ===
     async function loadArchInfo() {
@@ -451,6 +558,11 @@
         } else {
           lines.push("Языковой редактор: отключён (template-режим)");
         }
+        lines.push(
+          cfg.use_ocr
+            ? "Распознавание надписей (OCR): включено"
+            : "Распознавание надписей (OCR): отключено"
+        );
         lines.push(`Устройство: <code>${data.device}</code>`);
         archLinesEl.innerHTML = lines.map(l => `<div class="arch-line">${l}</div>`).join("");
         archMetricsEl.style.display = "block";
@@ -490,6 +602,21 @@
       archiveDescriptionEl.textContent =
         "Здесь появится финальное описание, сгенерированное предложенным пайплайном.";
       archiveDescriptionEl.classList.add("muted");
+      archiveDescriptionEl.contentEditable = "false";
+      copyDescBtn.hidden = true;
+      markRightBtn.hidden = true;
+      markWrongBtn.hidden = true;
+      editHintEl.hidden = true;
+      saveStatusEl.hidden = true;
+      currentFilename = null;
+      originalDescription = null;
+      ocrOriginal = null;
+      formatInfoEl.textContent = "";
+      ocrTextEl.textContent = "Здесь появится распознанная надпись (если есть).";
+      ocrTextEl.classList.add("muted");
+      ocrTextEl.contentEditable = "false";
+      ocrConfEl.hidden = true;
+      ocrHintEl.hidden = true;
       tagsContainerEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
       metadataGridEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
       captionEnEl.textContent = "—";
@@ -503,6 +630,39 @@
     function renderResult(data) {
       archiveDescriptionEl.textContent = data.archive_description || "—";
       archiveDescriptionEl.classList.remove("muted");
+      archiveDescriptionEl.contentEditable = "true";
+      copyDescBtn.hidden = false;
+      markRightBtn.hidden = false;
+      markWrongBtn.hidden = false;
+      editHintEl.hidden = false;
+      saveStatusEl.hidden = true;
+      currentFilename = data.filename || null;
+      originalDescription = data.archive_description || null;
+
+      // Ориентация и формат открытки (из размеров изображения)
+      const fmt = data.format;
+      if (fmt && fmt.orientation) {
+        const dims = (fmt.width && fmt.height) ? `, ${fmt.width}×${fmt.height}` : "";
+        formatInfoEl.textContent =
+          `Формат: ${fmt.orientation}, ${fmt.aspect || "—"}${dims}`;
+      } else {
+        formatInfoEl.textContent = "";
+      }
+
+      // OCR: распознанная надпись — редактируемая; уверенность отдельным бейджем.
+      const ocr = data.ocr;
+      const ocrVal = (ocr && ocr.text) ? ocr.text : "";
+      ocrTextEl.textContent = ocrVal;
+      ocrTextEl.classList.remove("muted");
+      ocrTextEl.contentEditable = "true";
+      ocrHintEl.hidden = false;
+      ocrOriginal = ocrVal;
+      if (ocr && ocr.confident && ocr.confidence != null) {
+        ocrConfEl.textContent = `уверенность ${Math.round(ocr.confidence * 100)}%`;
+        ocrConfEl.hidden = false;
+      } else {
+        ocrConfEl.hidden = true;
+      }
 
       // Теги: предпочитаем русифицированные tags_ru от DescriptionBuilder;
       // если их нет (backward-compat), показываем сырые metadata.tags.

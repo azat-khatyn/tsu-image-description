@@ -55,16 +55,32 @@ _SRC_LABEL = {  # человекочитаемые подписи источни
     "semart": "SemArt (живопись, референс)",
 }
 
+# Две группы: наши открытки — оттенки зелёного, внешний референс SemArt — фиолетовый.
+_SRC_COLOR = {
+    "neb_wwii": "#1b7837",       # тёмно-зелёный
+    "neb_diverse": "#5aae61",    # средне-зелёный
+    "nypl_curated": "#00838f",   # сине-зелёный (другой оттенок зелёного)
+    "semantic_demo": "#a6dba0",  # светло-зелёный
+    "semart": "#762a83",         # фиолетовый
+}
+
+# Порядок легенды: сначала зелёные (наши), потом фиолетовый SemArt.
+_SRC_ORDER = ["neb_wwii", "neb_diverse", "nypl_curated", "semantic_demo", "semart"]
+
 
 def fig_domain_shift(emb, meta, out):
     Y = _tsne2(emb["siglip"])
     src = np.array([m["source"] for m in meta])
+    order = [s for s in _SRC_ORDER if s in set(src)] + \
+            [s for s in sorted(set(src)) if s not in _SRC_ORDER]
     plt.figure(figsize=(7, 6))
-    for s in sorted(set(src)):
+    for s in order:
         m = src == s
         label = _SRC_LABEL.get(s, s)
-        plt.scatter(Y[m, 0], Y[m, 1], s=12, alpha=0.6, label=f"{label} (n={int(m.sum())})")
-    plt.legend(); plt.title("Доменный сдвиг: SigLIP image features (t-SNE)")
+        plt.scatter(Y[m, 0], Y[m, 1], s=12, alpha=0.6,
+                    c=_SRC_COLOR.get(s), label=f"{label} (n={int(m.sum())})")
+    plt.legend(); plt.title("Доменный сдвиг (SigLIP, t-SNE)\n"
+                            "открытки (зелёный) — живопись (фиолетовый)")
     _save(out / "fig_domain_shift.png")
 
 

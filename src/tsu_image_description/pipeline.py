@@ -1,5 +1,7 @@
 import logging
 
+from PIL import Image
+
 from .models import CaptionGenerator, Translator
 from .metadata_extractor import MetadataExtractor
 from .description_builder import DescriptionBuilder
@@ -7,6 +9,30 @@ from .caption_cleaner import CaptionCleaner
 from .ocr_extractor import OCRExtractor
 from .clip_scorer import CLIPScorer
 from . import reliability
+
+
+# Стандартные соотношения сторон (ширина/высота) для бакетирования формата.
+_ASPECT_BUCKETS = {
+    "1:1": 1.0, "5:4": 1.25, "4:3": 4 / 3, "3:2": 1.5, "16:9": 16 / 9,
+    "4:5": 0.8, "3:4": 0.75, "2:3": 2 / 3, "9:16": 9 / 16,
+}
+
+
+def image_format(image_path: str) -> dict:
+    """Ориентация и формат открытки из размеров изображения (без ML)."""
+    with Image.open(image_path) as im:
+        w, h = im.size
+    if not h:
+        return {"orientation": None, "aspect": None, "width": w, "height": h}
+    r = w / h
+    if 0.95 <= r <= 1.05:
+        orientation = "квадратная"
+    elif w > h:
+        orientation = "горизонтальная"
+    else:
+        orientation = "вертикальная"
+    aspect = min(_ASPECT_BUCKETS, key=lambda k: abs(_ASPECT_BUCKETS[k] - r))
+    return {"orientation": orientation, "aspect": aspect, "width": w, "height": h}
 
 
 class ArchiveDescriptionPipeline:
@@ -86,6 +112,7 @@ class ArchiveDescriptionPipeline:
             "metadata": metadata,
             "inference": inference,
             "ocr": ocr,
+            "format": image_format(image_path),
         }
 
         description_result = self.description_builder.build(base_result)

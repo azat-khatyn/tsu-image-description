@@ -1,0 +1,847 @@
+{
+  "finetuned": "models/blip_semart_lora/v1_soft_epoch_2",
+  "images": [
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010777622.jpg",
+      "base": "arafed view of a church in a forest with a path",
+      "ft": "the picture shows the view of the church from the north"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010514383.jpg",
+      "base": "a close up of a woman walking a dog with a basket of flowers",
+      "ft": "this card depicts a young girl with a basket of flowers and pigs"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_006696348.jpg",
+      "base": "arafed image of a ship in the ocean with a poem written on it",
+      "ft": "the painting depicts a german ship in a stormy sea"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011159228.jpg",
+      "base": "arafed view of a train yard with a train and a boat",
+      "ft": "the picture shows the view of the port of san francisco from the top of the hill"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010564705.jpg",
+      "base": "there are two girls kissing each other in front of a sign",
+      "ft": "the picture shows a postcard from the early 20th century of the famous angelic cupcake"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010563892.jpg",
+      "base": "arafed image of a boy and a girl on a sled",
+      "ft": "the picture shows a young boy and a girl on a sled in the snow"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010562878.jpg",
+      "base": "painting of a boy and a girl playing with a wooden toy",
+      "ft": "the painting depicts a young boy playing with a toy"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010555275.jpg",
+      "base": "araffe and chicks on a branch of a tree with flowers",
+      "ft": "the picture shows a postcard depicting a hen and her chicks"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011147277.jpg",
+      "base": "arafies in the middle of a town street with horses and carriages",
+      "ft": "the picture shows a postcard from the early 20th century of the city of kharysyk"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010435850.jpg",
+      "base": "arafed photograph of a lake with a bridge and trees",
+      "ft": "the photograph shows a view of the river from the bridge on the river"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010967605.jpg",
+      "base": "arafed view of a rocky outcropping with trees and a sky",
+      "ft": "the picture shows a view of the valley from the top of the mountain"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_013201501.jpg",
+      "base": "painting of a basket of flowers on a table with a green background",
+      "ft": "this painting is a signed and dated"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010599514.jpg",
+      "base": "an old photo of a street with a train on it",
+      "ft": "the picture shows the main street of the town of astraca, with the town hall in the background"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010261531.jpg",
+      "base": "arafed photograph of a group of people standing on a platform",
+      "ft": "the picture shows a postcard of the station in the early 20th century"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010693009.jpg",
+      "base": "there is a boat that is sitting on the shore of the water",
+      "ft": "the picture shows a boat on the shore of a lake"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010573196.jpg",
+      "base": "an old book with a picture of a man holding a child",
+      "ft": "the cover of the first edition of the russian children ' s book"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_007518052.jpg",
+      "base": "arafed cemetery with graves and a car in the foreground",
+      "ft": "the photograph shows a cemetery in the early 20th century"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_006774906.jpg",
+      "base": "an old russian poster with a picture of a woman on a cross",
+      "ft": "the poster for the russian festival of the russian festival of the russian festival of the russian festival of the russian"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010387568.jpg",
+      "base": "an old photo of a building with a clock tower on top",
+      "ft": "the picture shows the facade of the building in the early 20th century"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010562518.jpg",
+      "base": "a close up of a drawing of a woman in a blue dress",
+      "ft": "the picture shows a postcard from the early 20th century of the russian fairy"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010563542.jpg",
+      "base": "a close up of a child holding a tray with a cake",
+      "ft": "the picture shows a cover for the magazine the little girl in the red circle is holding a basket of toys"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010581831.jpg",
+      "base": "a black and white photo of nine different designs on a piece of paper",
+      "ft": "the picture shows a series of nine circular designs in the form of a circle"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010708616.jpg",
+      "base": "arafed view of a train station with people standing outside",
+      "ft": "the picture shows the station building of the railway station in the early 20th century"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000200_000018_RU_NLR_BIBL_A_010188013.jpg",
+      "base": "a picture of a picture of a horse and rider with a banner",
+      "ft": "the cover of the book the emperor of the north, by the author of the novel"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010646829.jpg",
+      "base": "arafiance view of a harbor with a ship and a dock",
+      "ft": "the picture shows the port of st john ' s, newfoundland"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010560376.jpg",
+      "base": "there is a picture of a woman and a child holding apples",
+      "ft": "the picture shows a young girl holding an apple, and a young girl holding an apple"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011133678.jpg",
+      "base": "an old photo of a building with a gate and a fence",
+      "ft": "the picture shows the building of the school of the russian academy of the arts"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010920927.jpg",
+      "base": "there is a black and white photo of a boat on the water",
+      "ft": "the picture shows a postcard depicting a boat on the river"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011099098.jpg",
+      "base": "arafed view of a street with a train and a horse drawn carriage",
+      "ft": "the picture shows a postcard of the old railway station in the early 20th century"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011304280.jpg",
+      "base": "an old picture of a church with a clock tower",
+      "ft": "the picture shows the church of the nativity of the virgin in the center of the picture"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010573053.jpg",
+      "base": "a close up of a card with a man sitting on a rock",
+      "ft": "this card is a very rare and highly signed card of a fisherman"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010562533.jpg",
+      "base": "a close up of a valentine card with a couple kissing",
+      "ft": "this postcard shows a young boy and girl embracing in a heart - shaped frame"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010575211.jpg",
+      "base": "arafed picture of a couple of people standing next to each other",
+      "ft": "the picture shows a postcard from the russian communist party"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010691060.jpg",
+      "base": "arafed view of a large building on a hill near a river",
+      "ft": "the picture shows the view of the fort on the river from the south bank of the river"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010564720.jpg",
+      "base": "arafed picture of a man and a woman feeding chickens",
+      "ft": "the picture shows a postcard from the early 20th century of the russian postcard"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_006642905.jpg",
+      "base": "arafed view of a bridge with a tower and a man walking on it",
+      "ft": "the picture shows a postcard from the early 20th century of the kremmlov monastery"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010556982.jpg",
+      "base": "arafed photo of a young boy in a clown costume",
+      "ft": "this postcard shows a young boy dressed in clown costume"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011074704.jpg",
+      "base": "an old photo of a church with a steeple and a tower",
+      "ft": "the picture shows the front of the church, with the tower of the church in the background"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_011294194.jpg",
+      "base": "arafed view of a town with a church and a body of water",
+      "ft": "the picture shows the view of the town of braga from the top of the hill"
+    },
+    {
+      "source": "neb_diverse",
+      "image_path": "data/neb_search_postcards/images/000199_000009_010567414.jpg",
+      "base": "an old photo of two girls in dresses standing next to an egg",
+      "ft": "the picture shows a postcard from the early 20th century of the russian empire"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086961.jpg",
+      "base": "drawing of a city street with a clock tower and a crowd of people",
+      "ft": "the picture shows a sketch of a rainy day in the city"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085883.jpg",
+      "base": "there is a drawing of a building with a clock tower",
+      "ft": "the drawing shows the scene of the battle of the alam alam, which was the last of the seven battles of the spanish war"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086615.jpg",
+      "base": "there is a black and white drawing of a train on the tracks",
+      "ft": "the picture shows a scene from the series the battle of therme"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087382.jpg",
+      "base": "there is a drawing of a woman holding a parasol",
+      "ft": "this drawing is a signed and dated, probably after the first half of the 20th century"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087039.jpg",
+      "base": "there is a painting of a man sitting on a bench",
+      "ft": "the picture shows a scene from the novel the railway"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086529.jpg",
+      "base": "painting of a lighthouse with a clock tower in the background",
+      "ft": "the painting depicts a view of the port of genoa from the port of genoa"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087082.jpg",
+      "base": "a close up of a computer screen with a keyboard and mouse",
+      "ft": "the image shows a simple, minimal, white icon with a rounded rectangle"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_BIBL_A_010436186.jpg",
+      "base": "there is a poster with a man riding a horse and a star",
+      "ft": "the picture shows a soviet propaganda for the victory of the soviet empire"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086366.jpg",
+      "base": "there is a painting of a building with a fountain in the middle",
+      "ft": "the painting depicts the arch of triumph in the background of the grand canal"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087261.jpg",
+      "base": "arafed picture of a man in a suit and tie with a red ribbon",
+      "ft": "the picture shows a portrait of a young man in a portrait frame"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087074.jpg",
+      "base": "painting of a view of a snowy town with a building",
+      "ft": "the painting depicts a view of the city of st petersburg from the balcony of the hotel"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087025.jpg",
+      "base": "there is a sheet music with a picture of a man and a woman",
+      "ft": "the page is from the book the story of the german soldier who fought the great war"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085587.jpg",
+      "base": "there is a drawing of a bridge over a river with a boat",
+      "ft": "the picture shows a bridge in the foreground with a boat in the foreground"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087057.jpg",
+      "base": "painting of soldiers in a field with a tank in the background",
+      "ft": "the painting depicts a group of soldiers in a field"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085975.jpg",
+      "base": "there are horses pulling a carriage down a snowy street",
+      "ft": "the picture shows a sketch of a horse drawn carriage in the foreground of a snowy landscape"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087239.jpg",
+      "base": "arafed photograph of a statue of a man in a coat and hat",
+      "ft": "the photograph shows a bronze figure of a man in a tusked headdress"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087176.jpg",
+      "base": "araful vintage advertisement for fireworks in the sky over a city",
+      "ft": "the cover of the book, the first edition, shows the fireworks of the imperial navy"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086110.jpg",
+      "base": "there is a man that is holding a stick in his hand",
+      "ft": "the picture shows a scene from the book the adventures of tom sawyer"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086890.jpg",
+      "base": "there is a painting of a ship in the water with smoke coming out of it",
+      "ft": "the painting depicts a battleship in the foreground of a city"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086834.jpg",
+      "base": "there is a picture of a propaganda with a man in a hat",
+      "ft": "the picture shows a soviet propaganda for the victory of the great patriotic war"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085926.jpg",
+      "base": "drawing of a horse drawn carriage in front of a building",
+      "ft": "the picture shows a scene in the snow in front of a house"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087036.jpg",
+      "base": "there is a picture of a woman and a child writing",
+      "ft": "the picture shows a stamp printed in the ussr with a woman and child"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086998.jpg",
+      "base": "there is a picture of a fire that is burning in the sky",
+      "ft": "the picture shows a scene from the film the tempest of the titans"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086255.jpg",
+      "base": "there is a picture of a russian propaganda about the war",
+      "ft": "the picture shows a russian propaganda for the war against the soviet army"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086811.jpg",
+      "base": "there is a sheet music with a picture of a man on a horse",
+      "ft": "the picture shows a page from the russian folk music book"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087035.jpg",
+      "base": "there are two children playing with a ball in a street",
+      "ft": "the painting depicts a street scene with a boy and a girl playing with a ball"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086098.jpg",
+      "base": "a close up of a drawing of a bear with a bunch of people",
+      "ft": "the picture shows a postcard depicting a bear with a bunch of flowers in its mouth"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086999.jpg",
+      "base": "painting of a man pulling a sled with a woman on it",
+      "ft": "the picture shows a scene from the novel the night before christmas"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087363.jpg",
+      "base": "arafed picture of a man in a helmet with a sword",
+      "ft": "the picture shows a portrait of alexander the great"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2085773.jpg",
+      "base": "there is a drawing of a statue in a courtyard with people around it",
+      "ft": "the picture shows a view of the courtyard of the royal palace in vienna"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086783.jpg",
+      "base": "a drawing of a man on a horse with a gun",
+      "ft": "this drawing depicts a car that was destroyed by a fire"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087245.jpg",
+      "base": "there is a poster of a man in a military uniform",
+      "ft": "the picture shows a propaganda for the russian army"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086154.jpg",
+      "base": "there is a drawing of a man standing in a park",
+      "ft": "the picture shows a sketch of a man in a park"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086784.jpg",
+      "base": "there is a picture of a boat that is sitting in the water",
+      "ft": "the picture shows a ship in the snow, with a boat in the background"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086902.jpg",
+      "base": "a close up of a picture of a plane flying over a city",
+      "ft": "the picture shows a drawing of a battleship in the foreground"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086530.jpg",
+      "base": "painting of a building with a clock tower and a kite flying in the sky",
+      "ft": "the painting depicts a view of the town of st petersburg, with the church of st petersburg in the background"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2086613.jpg",
+      "base": "there is a black and white photo of a cloud over a field",
+      "ft": "the picture shows a landscape with a river and a tree in the foreground"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087391.jpg",
+      "base": "arafed portrait of a man in a military uniform with a sword",
+      "ft": "this portrait depicts a young man in a fur collared jacket"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087362.jpg",
+      "base": "a close up of a picture of a woman in uniform",
+      "ft": "this poster depicts a young woman in a military uniform"
+    },
+    {
+      "source": "neb_wwii",
+      "image_path": "data/neb_leningrad_wwii/images/000200_000018_RU_NLR_bibl_2087458.jpg",
+      "base": "there is a picture of a postcard with two men holding guns",
+      "ft": "the picture shows a postcard from the ussr depicting the first world war"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/9416b2e0-c5c2-012f-fc0c-58d385a7bc34.jpg",
+      "base": "there are two horses that are standing next to each other",
+      "ft": "the two horses are wearing bridle heads and harnesses"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/4b4999e0-c55f-012f-0a4c-58d385a7bc34.jpg",
+      "base": "there are people standing in a garden with a pond in the background",
+      "ft": "the picture shows a postcard of the garden at the entrance to the botanical garden at the national botanical garden, new york"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/1655eb70-c55a-012f-e75f-58d385a7bc34.jpg",
+      "base": "arafed view of a hotel and a lake with a clock tower",
+      "ft": "the postcard shows the hotel and the hotel across the river from the hotel"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/4b557860-c5c5-012f-8e04-58d385a7bc34.jpg",
+      "base": "an angel with a bouquet of flowers in her hand",
+      "ft": "the painting depicts the angel of the annunciation"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/4872fe10-c5be-012f-fd2e-58d385a7bc34.jpg",
+      "base": "there are many columns in the middle of a stone building",
+      "ft": "the picture shows the ancient ruins of the acropolis of the acropolis of the acropolis of the acropolis of the acropolis of the acropolis"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/1b6c8230-c55a-012f-eaad-58d385a7bc34.jpg",
+      "base": "an old photo of a castle with a flag on top of it",
+      "ft": "the picture shows the old postcard of the castle"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/e0605140-c5bf-012f-8d34-58d385a7bc34.jpg",
+      "base": "arafed view of a ruined building with a man laying on the ground",
+      "ft": "the drawing shows the ruins of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths of the baths"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/2acefc00-c5d2-012f-4b57-58d385a7bc34.jpg",
+      "base": "there are many boats that are in the water near a building",
+      "ft": "the picture shows a view of the port of the port of the city of new york, with a steam plant in the background"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/ef9993c0-c55f-012f-e0a0-58d385a7bc34.jpg",
+      "base": "nighttime view of a lit up building with a clock tower",
+      "ft": "the picture shows the postcard for the metropolitan life building, new york"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/ed2cdf40-c55d-012f-56ca-58d385a7bc34.jpg",
+      "base": "arafly lit building with a clock tower and a clock on the top",
+      "ft": "the building is the hotel that was the first hotel in the world to be built"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/996bec30-c5c6-012f-7050-58d385a7bc34.jpg",
+      "base": "a drawing of a man in uniform riding a horse with a gun",
+      "ft": "the drawing depicts a mounted officer on horseback"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/0ac45f70-c5c5-012f-615a-58d385a7bc34.jpg",
+      "base": "a close up of four different types of flowers on a paper",
+      "ft": "the illustrations are from the book the flowers of the world, and the illustrations of the flowers of the world, by the french artist pierre de la tour"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/8a6f4140-c5bf-012f-3af1-58d385a7bc34.jpg",
+      "base": "araffes and a man on a horse near the pyramids",
+      "ft": "the pyramids of giza are the backdrop of the pyramids of the nile"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/ff82a1e0-79cb-0133-8a01-00505686d14e.jpg",
+      "base": "there is a painting of a woman and a man standing in a park",
+      "ft": "the painting depicts a scene from a series of ten - room paintings"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/18661cd0-c55a-012f-3e6b-58d385a7bc34.jpg",
+      "base": "arafed fountain in central park, new york, ny",
+      "ft": "the postcard shows the fountain of peace in central park, new york"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/64059c00-c55e-012f-424e-58d385a7bc34.jpg",
+      "base": "a vintage photo of a building with a man standing outside of it",
+      "ft": "the building was built in the early 19th century and is now the museum of the city of new york"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/1d2efb60-c55a-012f-652c-58d385a7bc34.jpg",
+      "base": "a vintage photo of a view of a park with a fountain and a building",
+      "ft": "the picture shows the view of the ampule from the south"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/ff706760-c359-0135-6910-632819de3c1c.jpg",
+      "base": "there are a lot of children dressed up in christmas clothes",
+      "ft": "the children are dressed in period costumes and holding presents"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/510d47db-cc9c-a3d9-e040-e00a18064a99.jpg",
+      "base": "a close up of a card with a horseshoe and flowers",
+      "ft": "this card is a good luck card with roses and horseshoes"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/4d03c930-c560-012f-1d0c-58d385a7bc34.jpg",
+      "base": "arafed view of a train station with a train on the tracks",
+      "ft": "the picture shows a view of the station from the platform"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/2b767660-c5d1-012f-ceb4-58d385a7bc34.jpg",
+      "base": "there is a picture of a large tower in the middle of a lake",
+      "ft": "the picture shows the view of the temple from the river"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/978b97e0-c55b-012f-6d94-58d385a7bc34.jpg",
+      "base": "there are people walking down the street in this old photo",
+      "ft": "the picture shows a view of the old town of york from the north end of the high street"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/eeac7170-c55a-012f-9219-58d385a7bc34.jpg",
+      "base": "arafed view of a building with a horse drawn carriage in front of it",
+      "ft": "the building is the first of the two buildings in the building on the left"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/72a20810-c5ee-012f-965b-58d385a7bc34.jpg",
+      "base": "there is a red house with white shutters on the windows",
+      "ft": "the house is located in the center of the town, and is located on the corner of the street"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/1bfb3c90-c55f-012f-71b2-58d385a7bc34.jpg",
+      "base": "araffled view of a tall building with a clock on top",
+      "ft": "the postcard shows the building of the national bank of canada, located in the city of toronto"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/3cbcbd20-c5d2-012f-b1d4-58d385a7bc34.jpg",
+      "base": "there are many boats that are floating in the water",
+      "ft": "the picture shows a view of the river and the town of suzhou, china"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/06ea0d60-c5c5-012f-6aa2-58d385a7bc34.jpg",
+      "base": "there are two pictures of a cross and a bird in the sky",
+      "ft": "the painting is signed and dated by the artist"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/1c5cc690-c55a-012f-bfd5-58d385a7bc34.jpg",
+      "base": "arafed photograph of a couple of people walking in front of a building",
+      "ft": "the picture shows a postcard from the early 20th century of the university of central florida"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/04ee7910-c55b-012f-e357-58d385a7bc34.jpg",
+      "base": "arafed view of a monument with a clock tower on top",
+      "ft": "the picture shows the view of the great monument and town, new york"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/3ba85d20-c5d2-012f-6e68-58d385a7bc34.jpg",
+      "base": "there are many boats docked in a harbor with a building in the background",
+      "ft": "the picture shows a view of the port of the city of yokohama, japan"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/4f4924c0-c5c4-012f-6662-58d385a7bc34.jpg",
+      "base": "there are three children sitting on a mushroom with hats on",
+      "ft": "the picture shows a group of children sitting on a mushroom"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/fd0444f0-c55b-012f-9d07-58d385a7bc34.jpg",
+      "base": "arafed view of a bridge with a group of people walking on it",
+      "ft": "the picture shows the bridge over the river and the riverboat parade"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/0a67ba70-c5d2-012f-6894-58d385a7bc34.jpg",
+      "base": "there is a picture of a postcard of a harbor with boats",
+      "ft": "the postcard shows the port of the port of the port of the port of san francisco"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/1bae6b40-394d-013c-0ba0-0242ac110003.jpg",
+      "base": "there is a black and white photo of a man in a tuxedo",
+      "ft": "the photograph shows a portrait of the young man in a tuxedo"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/7424c130-c5d1-012f-fce6-58d385a7bc34.jpg",
+      "base": "there is a postcard of a street scene with people walking",
+      "ft": "the postcard shows the main street of the town of river island"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/e0495340-fbec-0131-11d0-58d385a7bbd0.jpg",
+      "base": "arafed photo of a woman in a dress and a necklace",
+      "ft": "this photograph shows a young woman in a corset dress"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/9b742a70-c5c2-012f-29b5-58d385a7bc34.jpg",
+      "base": "there are a bunch of daisies that are on a card",
+      "ft": "the picture shows a postcard with a bouquet of daisies"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/58c6a0e0-c5ee-012f-1d25-58d385a7bc34.jpg",
+      "base": "there are many people sitting on the beach near the water",
+      "ft": "the picture shows a postcard of the pier at the seaside"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/4ed48410-c560-012f-fa85-58d385a7bc34.jpg",
+      "base": "arafed image of a train station with people standing in the station",
+      "ft": "the picture shows a postcard depicting the interior of the station"
+    },
+    {
+      "source": "nypl_curated",
+      "image_path": "data/eval/images NYPL based/510d47db-cbbe-a3d9-e040-e00a18064a99.jpg",
+      "base": "a close up of a painting of a woman with a shawl",
+      "ft": "the painting depicts a young woman in a white dress with a shawl draped over her shoulders"
+    }
+  ],
+  "corpus": [
+    "A Seaport at Sunrise",
+    "View of the south wall",
+    "Angels Playing Music",
+    "The Rocks of Belle Ile (Rough Sea)",
+    "Genoveva in the Forest Seclusion",
+    "View of Saint Peter's, Rome",
+    "Madonna with Child, St Sebastian and St Catherine of Alexandria",
+    "Virgin and Child",
+    "Madonna and Sleeping Christ Child with the Infant St John the Baptist",
+    "Odalisque",
+    "Reliquary with scenes from the legend of St Fina",
+    "Triptych with the Virgin and Child in an Enclosed garden",
+    "Earth",
+    "Portrait of an Old Woman",
+    "St Dominic in Prayer",
+    "The Island and Fort of Ten Pound, Gloucester",
+    "The Last Moments of Doge Marin Faliero",
+    "Visitation (Meeting of Mary and Elisabeth)",
+    "Jupiter and Semele",
+    "Shell Gathering on the Beach",
+    "Pallas and the Centaur",
+    "Saint Anne with the Virgin and the Child",
+    "The Excommunication of Robert the Pious",
+    "The Grand Canal with San Simeone Piccolo and Santa Lucia",
+    "Love as Folly",
+    "The Annunciation",
+    "Assumption of the Virgin",
+    "The Mother of God of Passion",
+    "Blond Odalisque (L'Odalisque Blonde)",
+    "Bacchanalia",
+    "Martin Luther and Katharina von Bora",
+    "The Ford",
+    "A Pair of Shoes",
+    "Beach at Scheveningen",
+    "The Flea",
+    "View of the Haarlemmerhout, Haarlem",
+    "Processional Cross",
+    "Banks of the Oise",
+    "The Angel of the Annunciation",
+    "The City of God and the Waters of Life",
+    "Guillaume Budé",
+    "The Sculptor François Girardon",
+    "Tuscan Village",
+    "At the Vicarage",
+    "The Crucifixion of St Andrew",
+    "Four Cut Sunflowers",
+    "Feast of Herod",
+    "St Dominic and the Albigenses",
+    "The Adoration of the Magi",
+    "Diana and Endymion",
+    "Old Man Spinning His Reel",
+    "Man of Sorrow",
+    "St Barbara",
+    "Scenes from the Life of St Francis: Francis Preaching to the Birds",
+    "Sophonisba Receiving the Goblet",
+    "Portrait of a Young Man",
+    "Eleonora of Toledo with her son Giovanni de' Medici",
+    "Conquest of Zara",
+    "Madonna and Child with the Infant St John the Baptist and St Catherine of Siena",
+    "Deposition from the Cross",
+    "Ceiling painting",
+    "Madonna and Child",
+    "The Last Judgment and Hell",
+    "Portrait of a Man Rising from his Chair",
+    "The Crucifixion of St Peter",
+    "A Capriccio Landscape with a Domed Church",
+    "Last Supper",
+    "San Pier Maggiore Altarpiece: Adoring Saints",
+    "Still-Life with Oysters",
+    "Drifting Clouds",
+    "Massacre of the Innocents",
+    "Virgin with Child Enthroned",
+    "Still-Life",
+    "The Seven Works of Mercy",
+    "Decorative band",
+    "Virgin and Child",
+    "Hercules",
+    "Sleeping Eros with a Putto and Doves in a Starry Landscape",
+    "Legend of Sts Cecilia and Valerian, Scene 5",
+    "Parable of the Wise and Foolish Virgins",
+    "Temptation on the Mountain (scene 3)",
+    "St John the Baptist in the Wilderness",
+    "Bouquet of Flowers",
+    "Portrait of a Man",
+    "Landscape",
+    "Crucifixion",
+    "Portrait of Ginevra de' Benci",
+    "The Stefaneschi Triptych (verso)",
+    "Lamentation Altarpiece",
+    "Astronomer",
+    "Man with Delusions of Military Command",
+    "Venus Playing the Harp (Allegory of Music)",
+    "Triptych",
+    "Archduke Leopold Wilhelm in his Gallery",
+    "Virgin and Child in a Landscape",
+    "Fragment from the Manetti Chapel (7)",
+    "Adoration of the Christ Child",
+    "Putti in a Landscape",
+    "Mercury and Paris",
+    "Two Daughters in the Garden",
+    "The Annunciation",
+    "The Happy Family",
+    "The Miracle of the Sickle",
+    "Nave vault",
+    "The Chapel viewed towards the entrance",
+    "Flowers in a Stone Vase",
+    "Duck Hunters on the Lagoon",
+    "Portrait of a Venetian Woman",
+    "Hercules at Rest",
+    "Charles II as Grandmaster of the Golden Fleece",
+    "Madonna and Child with two Votaries",
+    "Abraham - Isaac - Jacob - Judah",
+    "Self-Portrait",
+    "Ceiling decoration",
+    "Domine quo vadis?",
+    "Bagpipe Player",
+    "The Outing of the Russian Emperor to the Opera Gala in Paris",
+    "Ferdinando I de' Medici Dressed as Gran Maestro of the Order of St Stephen",
+    "Peasants at Rest",
+    "Hunting Scene"
+  ]
+}

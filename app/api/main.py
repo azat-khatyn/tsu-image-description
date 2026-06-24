@@ -1,9 +1,17 @@
+import json
+from datetime import datetime
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import HTMLResponse
 
-from app.api.schemas import HealthResponse, InferenceResponse, PipelineConfig
+from app.api.schemas import (
+    HealthResponse,
+    InferenceResponse,
+    PipelineConfig,
+    SaveDescriptionRequest,
+    SaveDescriptionResponse,
+)
 from app.core.config import settings
 from app.services.image_io import (
     cleanup_file,
@@ -95,3 +103,23 @@ async def inference(
     finally:
         if saved_path is not None:
             cleanup_file(saved_path)
+
+
+@app.post("/save_description", response_model=SaveDescriptionResponse)
+def save_description(req: SaveDescriptionRequest) -> SaveDescriptionResponse:
+    """Сохранить исправленное сотрудником описание в журнал правок (JSONL)."""
+    path = settings.corrections_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    saved_at = datetime.now().isoformat(timespec="seconds")
+    record = {
+        "saved_at": saved_at,
+        "filename": req.filename,
+        "verdict": req.verdict,
+        "description": req.description.strip(),
+        "description_original": (req.description_original or "").strip() or None,
+        "ocr_text": (req.ocr_text or "").strip() or None,
+        "ocr_text_original": (req.ocr_text_original or "").strip() or None,
+    }
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return SaveDescriptionResponse(saved=True, path=str(path), saved_at=saved_at)

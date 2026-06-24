@@ -18,6 +18,9 @@ services:
       # 12B-модели нецелесообразен по латентности и требует ~32 ГБ RAM.
       # Включить можно так: USE_LLM_REWRITER=true docker compose up
       USE_LLM_REWRITER: "false"
+      # OCR отключён в Docker: paddleocr нет в requirements.docker.txt (CPU-образ).
+      # Чтобы включить — добавить paddleocr в образ и USE_OCR=true.
+      USE_OCR: "false"
     volumes:
       - ./mounted_data:/mounted_data
       - hf_cache:/models/huggingface
