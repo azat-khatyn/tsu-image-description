@@ -24,7 +24,9 @@
                      0 1px 2px rgba(15, 23, 42, 0.04);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
@@ -321,20 +323,6 @@
       cursor: default;
     }
 
-    .wrong-btn {
-      color: #b91c1c;
-      border-color: #fecaca;
-    }
-
-    .wrong-btn:hover {
-      background: #fef2f2;
-    }
-
-    .wrong-btn:disabled {
-      opacity: 0.6;
-      cursor: default;
-    }
-
     .ocr-conf {
       float: right;
       font-size: 12px;
@@ -537,6 +525,7 @@
       <div class="result-card primary">
         <div class="card-label">
           Семантическое описание
+
           <button
             type="button"
             id="copyDescBtn"
@@ -647,11 +636,6 @@
     const ocrConfEl = document.getElementById("ocrConf");
     const ocrHintEl = document.getElementById("ocrHint");
 
-    let currentFilename = null;
-    let originalDescription = null;
-    let ocrOriginal = null;
-    let currentFormat = null;
-
     const tagsContainerEl = document.getElementById("tagsContainer");
     const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
@@ -660,6 +644,10 @@
 
     const archLinesEl = document.getElementById("archLines");
     const archMetricsEl = document.getElementById("archMetrics");
+    const modelStatusEl = document.getElementById("modelStatus");
+
+    let currentFilename = null;
+    let currentFormat = null;
 
     const orientationRu = {
       horizontal: "горизонтальная",
@@ -668,15 +656,21 @@
       unknown: "не определена",
     };
 
+    function getOrientationLabel(imageInfo) {
+      if (!imageInfo?.orientation) {
+        return null;
+      }
+
+      return orientationRu[imageInfo.orientation] ?? imageInfo.orientation;
+    }
+
     function formatImageInfo(imageInfo) {
-      if (!imageInfo || !imageInfo.orientation) {
+      if (!imageInfo?.orientation) {
         return "";
       }
 
       const orientation =
-        orientationRu[imageInfo.orientation] ??
-        imageInfo.orientation ??
-        "не определена";
+        getOrientationLabel(imageInfo) ?? "не определена";
 
       const ratioLabel =
         imageInfo.aspect_ratio_label ??
@@ -820,8 +814,6 @@
 
     loadArchInfo();
 
-    const modelStatusEl = document.getElementById("modelStatus");
-
     async function pollModelReady() {
       try {
         const response = await fetch("/health");
@@ -889,8 +881,6 @@
       saveStatusEl.hidden = true;
 
       currentFilename = null;
-      originalDescription = null;
-      ocrOriginal = null;
       currentFormat = null;
 
       formatInfoEl.textContent = "";
@@ -938,9 +928,6 @@
         imageInfo.filename ||
         null;
 
-      originalDescription =
-        data.archive_description || null;
-
       currentFormat = imageInfo;
 
       formatInfoEl.textContent = formatImageInfo(imageInfo);
@@ -967,8 +954,6 @@
       ocrTextEl.contentEditable = "true";
       ocrHintEl.hidden = false;
 
-      ocrOriginal = ocrValue;
-
       if (ocr.confidence != null) {
         ocrConfEl.textContent =
           `уверенность ${Math.round(Number(ocr.confidence) * 100)}%` +
@@ -986,8 +971,14 @@
 
       const tags =
         data.tags_ru && data.tags_ru.length > 0
-          ? data.tags_ru
-          : (data.metadata?.tags || []);
+          ? [...data.tags_ru]
+          : [...(data.metadata?.tags || [])];
+
+      const orientationLabel = getOrientationLabel(imageInfo);
+
+      if (orientationLabel) {
+        tags.push(`ориентация: ${orientationLabel}`);
+      }
 
       if (tags.length === 0) {
         tagsContainerEl.innerHTML =
@@ -1014,6 +1005,31 @@
       };
 
       const items = [];
+
+      if (orientationLabel) {
+        const ratioLabel =
+          imageInfo.aspect_ratio_label ??
+          imageInfo.aspect ??
+          "—";
+
+        const hasDimensions =
+          Number.isFinite(Number(imageInfo.width)) &&
+          Number.isFinite(Number(imageInfo.height));
+
+        const dimensions = hasDimensions
+          ? `${imageInfo.width} × ${imageInfo.height} px`
+          : "—";
+
+        items.push(`
+          <div class="meta-item">
+            <div class="meta-axis">Ориентация изображения</div>
+            <div class="meta-label">${orientationLabel}</div>
+            <div class="meta-score">
+              Соотношение: ${ratioLabel} · Размер: ${dimensions}
+            </div>
+          </div>
+        `);
+      }
 
       for (const axis of [
         "image_type",
