@@ -35,6 +35,37 @@ def image_format(image_path: str) -> dict:
     return {"orientation": orientation, "aspect": aspect, "width": w, "height": h}
 
 
+def _init_ocr_with_timeout(ocr_kwargs, timeout=180):
+    """Инициализация OCR с таймаутом и мягкой деградацией.
+
+    PaddleOCR требует нативный amd64. Под эмуляцией (amd64-образ на Apple
+    Silicon) инициализация зависает молча, без исключения, — обычного
+    try/except мало. Запускаем сборку в отдельном потоке; если не уложилась в
+    timeout (или упала) — отключаем OCR и продолжаем без него.
+    """
+    import threading
+    box = {}
+
+    def _build():
+        try:
+            box["ocr"] = OCRExtractor(**ocr_kwargs)
+        except Exception as e:  # любая ошибка инициализации не должна валить пайплайн
+            box["err"] = e
+
+    t = threading.Thread(target=_build, daemon=True)
+    t.start()
+    t.join(timeout)
+    if t.is_alive():
+        logging.warning(
+            "OCR отключён: инициализация не завершилась за %s c "
+            "(похоже на paddle под эмуляцией; нужен нативный amd64).", timeout)
+        return None
+    if "err" in box:
+        logging.warning("OCR отключён: %s", box["err"])
+        return None
+    return box.get("ocr")
+
+
 class ArchiveDescriptionPipeline:
     def __init__(
         self,
@@ -64,14 +95,10 @@ class ArchiveDescriptionPipeline:
         self.caption_cleaner = CaptionCleaner()
         self.description_builder = DescriptionBuilder(**(builder_kwargs or {}))
 
-        # Опциональная стадия OCR. paddleocr — тяжёлая опциональная зависимость;
-        # при её отсутствии стадия мягко деградирует к пустому OCR-блоку.
-        self.ocr = None
-        if use_ocr:
-            try:
-                self.ocr = OCRExtractor(**(ocr_kwargs or {}))
-            except ImportError as e:
-                logging.warning("OCR отключён: %s", e)
+        # Опциональная стадия OCR. paddleocr — тяжёлая платформозависимая
+        # зависимость; при отсутствии/зависании/ошибке — мягкая деградация
+        # к пустому OCR-блоку (инициализация под таймаутом, см. helper).
+        self.ocr = _init_ocr_with_timeout(ocr_kwargs or {}) if use_ocr else None
 
         # Опциональный reference-free CLIPScore описания (тот же код, что в
         # офлайн-оценке). Тяжёлый: грузит CLIP + M-CLIP. По умолчанию выключен.

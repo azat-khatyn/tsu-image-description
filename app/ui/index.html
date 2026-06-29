@@ -377,8 +377,9 @@
       />
     </div>
 
-    <button id="submitBtn">Запустить инференс</button>
+    <button id="submitBtn" disabled>Запустить инференс</button>
   </section>
+  <p id="modelStatus" class="muted"></p>
   <p id="status" class="muted"></p>
 
   <section class="results-grid">
@@ -396,14 +397,13 @@
         <div class="card-label">
           Семантическое описание
           <button type="button" id="copyDescBtn" class="copy-btn" hidden>Копировать</button>
-          <button type="button" id="markWrongBtn" class="copy-btn wrong-btn" hidden>✗ Неверно</button>
-          <button type="button" id="markRightBtn" class="copy-btn save-btn" hidden>✓ Верно</button>
+          <button type="button" id="saveDescBtn" class="copy-btn save-btn" hidden>Сохранить</button>
         </div>
         <div id="archiveDescription" class="archive-text muted">
           Здесь появится финальное описание, сгенерированное предложенным пайплайном.
         </div>
         <div id="editHint" class="edit-hint" hidden>
-          Описание и надпись редактируемые. «Верно/Неверно» сохраняет их с вашей оценкой в журнал.
+          Описание и надпись редактируемые. «Сохранить» записывает исправленный текст в descriptions.json.
         </div>
         <div id="saveStatus" class="edit-hint" hidden></div>
       </div>
@@ -473,8 +473,7 @@
     const ocrTextEl = document.getElementById("ocrText");
     const formatInfoEl = document.getElementById("formatInfo");
     const copyDescBtn = document.getElementById("copyDescBtn");
-    const markRightBtn = document.getElementById("markRightBtn");
-    const markWrongBtn = document.getElementById("markWrongBtn");
+    const saveDescBtn = document.getElementById("saveDescBtn");
     const editHintEl = document.getElementById("editHint");
     const saveStatusEl = document.getElementById("saveStatus");
     const ocrConfEl = document.getElementById("ocrConf");
@@ -482,6 +481,7 @@
     let currentFilename = null;
     let originalDescription = null;
     let ocrOriginal = null;
+    let currentFormat = null;
     const tagsContainerEl = document.getElementById("tagsContainer");
     const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
@@ -501,38 +501,32 @@
       } catch (e) { /* буфер обмена недоступен */ }
     });
 
-    // Сохранение результата (описание + надпись) с оценкой верно/неверно в журнал.
-    async function saveReview(verdict) {
-      markRightBtn.disabled = true;
-      markWrongBtn.disabled = true;
+    // Сохранение исправленного описания в descriptions.json (по имени файла).
+    async function saveDescription() {
+      saveDescBtn.disabled = true;
       try {
         const resp = await fetch("/save_description", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             filename: currentFilename || "—",
-            verdict: verdict,
             description: archiveDescriptionEl.textContent.trim(),
-            description_original: originalDescription,
             ocr_text: ocrTextEl.textContent.trim(),
-            ocr_text_original: ocrOriginal,
+            format: currentFormat,
           }),
         });
         const data = await resp.json();
         if (!data.saved) throw new Error("not saved");
         saveStatusEl.hidden = false;
-        const label = verdict === "correct" ? "верно" : "неверно";
-        saveStatusEl.textContent = `Сохранено как «${label}» в ${data.path} (${data.saved_at})`;
+        saveStatusEl.textContent = `Сохранено в ${data.path} (${data.saved_at})`;
       } catch (e) {
         saveStatusEl.hidden = false;
         saveStatusEl.textContent = "Ошибка сохранения.";
       } finally {
-        markRightBtn.disabled = false;
-        markWrongBtn.disabled = false;
+        saveDescBtn.disabled = false;
       }
     }
-    markRightBtn.addEventListener("click", () => saveReview("correct"));
-    markWrongBtn.addEventListener("click", () => saveReview("incorrect"));
+    saveDescBtn.addEventListener("click", saveDescription);
 
     // === Подгружаем конфигурацию пайплайна для шапки ===
     async function loadArchInfo() {
@@ -572,6 +566,25 @@
     }
     loadArchInfo();
 
+    // === Готовность моделей: блокируем инференс, пока идёт прогрев ===
+    const modelStatusEl = document.getElementById("modelStatus");
+    async function pollModelReady() {
+      try {
+        const resp = await fetch("/health");
+        const data = await resp.json();
+        if (data.model_loaded) {
+          modelStatusEl.hidden = true;
+          submitBtn.disabled = false;
+          return;
+        }
+      } catch (e) { /* сервис ещё стартует */ }
+      modelStatusEl.textContent =
+        "⏳ Модели загружаются — разовая операция при первом запуске. Подождите…";
+      submitBtn.disabled = true;
+      setTimeout(pollModelReady, 3000);
+    }
+    pollModelReady();
+
     // === Превью ===
     fileInput.addEventListener("change", () => {
       const file = fileInput.files[0];
@@ -604,13 +617,13 @@
       archiveDescriptionEl.classList.add("muted");
       archiveDescriptionEl.contentEditable = "false";
       copyDescBtn.hidden = true;
-      markRightBtn.hidden = true;
-      markWrongBtn.hidden = true;
+      saveDescBtn.hidden = true;
       editHintEl.hidden = true;
       saveStatusEl.hidden = true;
       currentFilename = null;
       originalDescription = null;
       ocrOriginal = null;
+      currentFormat = null;
       formatInfoEl.textContent = "";
       ocrTextEl.textContent = "Здесь появится распознанная надпись (если есть).";
       ocrTextEl.classList.add("muted");
@@ -632,12 +645,12 @@
       archiveDescriptionEl.classList.remove("muted");
       archiveDescriptionEl.contentEditable = "true";
       copyDescBtn.hidden = false;
-      markRightBtn.hidden = false;
-      markWrongBtn.hidden = false;
+      saveDescBtn.hidden = false;
       editHintEl.hidden = false;
       saveStatusEl.hidden = true;
       currentFilename = data.filename || null;
       originalDescription = data.archive_description || null;
+      currentFormat = data.format || null;
 
       // Ориентация и формат открытки (из размеров изображения)
       const fmt = data.format;
@@ -751,6 +764,15 @@
           method: "POST",
           body: formData,
         });
+        // Не-JSON ответ — обычно страница ошибки nginx (504/502) во время прогрева моделей.
+        const ct = response.headers.get("content-type") || "";
+        if (!ct.includes("application/json")) {
+          statusEl.textContent = response.status === 504
+            ? "Сервер загружает модели — первый запуск может занять несколько минут. Подождите и повторите."
+            : `Сервис недоступен (HTTP ${response.status}). Возможно, ещё запускается.`;
+          statusEl.className = "error";
+          return;
+        }
         const data = await response.json();
         if (!response.ok) {
           statusEl.textContent = "Ошибка инференса.";

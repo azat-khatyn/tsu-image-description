@@ -1,11 +1,16 @@
 services:
-  archive-description-mvp:
+  # Бэкенд: FastAPI + вся ML-логика. Наружу не публикуется —
+  # доступен только frontend-у по внутренней docker-сети (backend:8000).
+  backend:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: archive-description-mvp
-    ports:
-      - "8000:8000"
+    container_name: archive-description-api
+    # paddlepaddle публикует колёса только под linux/amd64 (aarch64 нет).
+    # На amd64-сервере это нативно; на Apple Silicon — через эмуляцию (медленнее).
+    platform: linux/amd64
+    expose:
+      - "8000"
     environment:
       APP_NAME: Archive Description MVP
       APP_VERSION: 0.1.0
@@ -14,17 +19,35 @@ services:
       TRANSFORMERS_CACHE: /models/huggingface
       TOKENIZERS_PARALLELISM: "false"
       MAX_UPLOAD_SIZE_MB: "10"
+      # Итоговые описания (ручная правка) — на смонтированный том, чтобы переживали пересоздание контейнера.
+      DESCRIPTIONS_PATH: /descriptions/descriptions.json
       # Языковой редактор (Vikhr-Nemo-12B) отключён по умолчанию: CPU-инференс
       # 12B-модели нецелесообразен по латентности и требует ~32 ГБ RAM.
-      # Включить можно так: USE_LLM_REWRITER=true docker compose up
       USE_LLM_REWRITER: "false"
-      # OCR отключён в Docker: paddleocr нет в requirements.docker.txt (CPU-образ).
-      # Чтобы включить — добавить paddleocr в образ и USE_OCR=true.
-      USE_OCR: "false"
+      # OCR включён по умолчанию (нативный amd64-сервер заказчика).
+      # На Apple Silicon paddle идёт через эмуляцию и зависает — для локального теста:
+      #   USE_OCR=false docker compose up -d --build --force-recreate backend
+      USE_OCR: "${USE_OCR:-true}"
     volumes:
       - ./mounted_data:/mounted_data
+      - ./descriptions:/descriptions
       - hf_cache:/models/huggingface
+      - paddlex_cache:/root/.paddlex
+    restart: unless-stopped
+
+  # Веб-UI: nginx отдаёт index.html и проксирует API в backend.
+  # Единственный публичный вход — http://localhost:8080
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: archive-description-ui
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
     restart: unless-stopped
 
 volumes:
   hf_cache:
+  paddlex_cache:

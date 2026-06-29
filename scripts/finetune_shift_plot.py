@@ -18,6 +18,10 @@ from collections import Counter
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+# Весь текст — Times New Roman (с serif-фолбэком, если шрифта нет).
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman", "DejaVu Serif"]
+
 import numpy as np
 
 STOP = set("a an the of in on at to with and or for from by is are was were be this "

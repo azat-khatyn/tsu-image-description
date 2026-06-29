@@ -19,6 +19,10 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+# Весь текст — Times New Roman (с serif-фолбэком, если шрифта нет).
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman", "DejaVu Serif"]
+
 import numpy as np
 
 
@@ -41,7 +45,7 @@ def fig_taxonomy(out):
     b = a2.bar(cfgs, rank, color=["#fdae6b", "#e6550d"], width=0.6)
     _label(a2, b, "{:.2f}"); a2.set_ylim(1.7, 2.0); a2.set_ylabel("средняя позиция в выдаче")
     a2.set_title("Средняя позиция целевого изображения (ниже — лучше)")
-    fig.suptitle("Две таксономии: каталожная снижает CLIPScore, но улучшает retrieval", fontsize=12)
+    fig.suptitle("CLIPScore и средняя позиция целевого изображения для двух типов таксономии", fontsize=12)
     for a in (a1, a2): a.grid(axis="y", alpha=0.25)
     fig.tight_layout(); fig.savefig(out / "fig_taxonomy_clipscore_rank.png", dpi=200, bbox_inches="tight"); plt.close()
     print("->", out / "fig_taxonomy_clipscore_rank.png")
@@ -75,8 +79,7 @@ def fig_zeroshot_vs_supervised(out):
     b = ax.bar(cfgs, acc, color=["#9ecae1", "#08519c"], width=0.55)
     _label(ax, b)
     ax.set_ylim(0, 1.0); ax.set_ylabel("top-1 accuracy")
-    ax.set_title("Accuracy zero-shot vs supervised (классификация техники, SemArt)\n"
-                 "узкое место zero-shot — текстовые запросы, а не сами признаки SigLIP", fontsize=11)
+    ax.set_title("Accuracy для zero-shot и supervised-классификации", fontsize=11)
     ax.grid(axis="y", alpha=0.25)
     fig.tight_layout(); fig.savefig(out / "fig_zeroshot_vs_supervised.png", dpi=200, bbox_inches="tight"); plt.close()
     print("->", out / "fig_zeroshot_vs_supervised.png")

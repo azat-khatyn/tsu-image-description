@@ -94,18 +94,19 @@ class PipelineConfig(BaseModel):
 class HealthResponse(BaseModel):
     status: str
     model_loaded: bool
+    # OCR реально инициализирован? None — пайплайн ещё не загружен; False —
+    # запрошен, но не поднялся (например, paddle под эмуляцией / нет нативного amd64).
+    ocr_available: bool | None = None
     device: str
     pipeline_config: PipelineConfig | None = None
 
 
 class SaveDescriptionRequest(BaseModel):
-    # Ручная правка/валидация результата сотрудником (полуавтоматическая обработка).
+    # Ручная правка сотрудником: итоговое описание, надпись и формат по имени файла.
     filename: str
     description: str
-    description_original: str | None = None
-    verdict: str | None = None            # "correct" | "incorrect"
-    ocr_text: str | None = None           # надпись (возможно, исправленная вручную)
-    ocr_text_original: str | None = None  # исходная надпись от OCR
+    ocr_text: str | None = None
+    format: FormatBlock | None = None
 
 
 class SaveDescriptionResponse(BaseModel):

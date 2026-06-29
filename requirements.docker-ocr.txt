@@ -1,0 +1,6 @@
+# OCR-стадия для Docker-образа (paddleocr). Ставится поверх requirements.docker.txt.
+# Версии совпадают с requirements-ocr.txt (проверены локально).
+# Только linux/amd64: у paddlepaddle нет колёс под linux aarch64 — образ закреплён
+# за platform: linux/amd64 (см. docker-compose.yml).
+paddleocr==3.6.0
+paddlepaddle==3.3.1

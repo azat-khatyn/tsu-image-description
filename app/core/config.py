@@ -18,9 +18,10 @@ class Settings:
     app_name: str = os.getenv("APP_NAME", "Archive Description MVP")
     app_version: str = os.getenv("APP_VERSION", "0.1.0")
     upload_dir: Path = Path(os.getenv("UPLOAD_DIR", BASE_DIR / "tmp" / "uploads"))
-    # Журнал ручных правок описаний (полуавтоматическая обработка сотрудником).
-    corrections_path: Path = Path(
-        os.getenv("CORRECTIONS_PATH", str(BASE_DIR / "data" / "corrections" / "corrections.jsonl"))
+    # Файл с итоговыми описаниями (ручная правка сотрудником). Один JSON-объект,
+    # ключ — имя файла изображения; сохранение перезаписывает запись по ключу.
+    descriptions_path: Path = Path(
+        os.getenv("DESCRIPTIONS_PATH", str(BASE_DIR / "data" / "descriptions" / "descriptions.json"))
     )
     max_upload_size_mb: int = int(os.getenv("MAX_UPLOAD_SIZE_MB", "10"))
     allowed_extensions: tuple[str, ...] = (".jpg", ".jpeg", ".png")

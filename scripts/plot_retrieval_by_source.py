@@ -17,13 +17,17 @@ from collections import defaultdict
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+# Весь текст — Times New Roman (с serif-фолбэком, если шрифта нет).
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman", "DejaVu Serif"]
+
 import numpy as np
 
 ORDER = [
-    ("neb_wwii", "НЭБ, ВОВ\n(224)"),
-    ("neb_diverse", "НЭБ, общий\n(220)"),
-    ("nypl_curated", "NYPL\n(200)"),
-    ("semantic_demo", "Демо\n(12)"),
+    ("neb_wwii", "НЭБ, ВОВ\n(224 примера)"),
+    ("neb_diverse", "НЭБ, общий\n(220 примеров)"),
+    ("nypl_curated", "NYPL\n(200 примеров)"),
+    ("semantic_demo", "Демо\n(12 примеров)"),
 ]
 
 
@@ -61,9 +65,7 @@ def main():
     ax.set_xticks(x); ax.set_xticklabels(labels)
     ax.set_ylabel("доля попаданий (t2i: описание → изображение)")
     ax.set_ylim(0, 1.0)
-    ax.set_title("Recall@1 и Recall@5 по выборкам (единый пул-656)\n"
-                 "ниже на однородной коллекции НЭБ-ВОВ (похожие сюжеты труднее различимы)",
-                 fontsize=11)
+    ax.set_title("Recall@1 и Recall@5 по выборкам", fontsize=11)
     ax.legend(loc="upper left", fontsize=9)
     ax.grid(axis="y", alpha=0.25)
     fig.tight_layout()

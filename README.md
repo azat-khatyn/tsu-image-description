@@ -143,49 +143,36 @@ CLIPScore по семантическому описанию устойчив п
 
 ## Технический контекст
 
-### Установка
+### Запуск через Docker
+
+Решение разворачивается двумя контейнерами (клиент-серверная архитектура):
+
+- **frontend** — веб-интерфейс на nginx, единственный публичный вход;
+- **backend** — FastAPI и вся ML-логика; доступен только frontend-у по внутренней docker-сети.
 
 ```bash
 git clone https://github.com/azat-khatyn/tsu-image-description.git
 cd tsu-image-description
-pip install --upgrade pip
-pip install -r requirements.txt
+docker compose up --build -d
 ```
 
-### Локальный запуск API
+После старта интерфейс доступен на **`http://localhost:8080`**. При первом запуске backend в фоне докачивает веса моделей с HuggingFace (нужен интернет) и кэширует их в volume `hf_cache`; пока модели грузятся, интерфейс показывает «Модели загружаются…», затем кнопка инференса активируется.
+
+**Тома** (данные переживают пересборку): `./mounted_data` — входные изображения; `./descriptions` — итоговые описания с ручными правками (`descriptions.json`); `hf_cache` и `paddlex_cache` — кэш весов моделей и моделей OCR.
+
+**OCR (PaddleOCR)** включён по умолчанию и требует нативной платформы **amd64** (типичный Linux-сервер). PaddlePaddle не собирается под ARM/Apple Silicon — там образ работает через эмуляцию, поэтому OCR инициализируется с таймаутом и при невозможности подняться мягко отключается (приложение продолжает работать без распознавания надписей). Фактическую доступность видно в `GET /health` (поле `ocr_available`). Для локального запуска на Apple Silicon OCR лучше отключить:
 
 ```bash
-uvicorn app.api.main:app --reload
+USE_OCR=false docker compose up --build -d
 ```
 
-Сервис доступен по адресу `http://127.0.0.1:8000`. Endpoints:
-
-- `GET /health` — проверка состояния
-- `POST /inference` — инференс на одном изображении (файл или путь)
-
-Пример:
+**Языковой редактор** (Vikhr-Nemo-12B) отключён по умолчанию (`USE_LLM_REWRITER=false`): CPU-инференс 12B нецелесообразен по latency и требует ~32 ГБ RAM. Включить:
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/inference" -F "file=@/path/to/image.jpg"
+USE_LLM_REWRITER=true docker compose up -d
 ```
 
-### Контейнеризация
-
-Полный пайплайн упакован в Docker-образ. Конфигурация включает `Dockerfile` и `docker-compose.yml`. Запуск одной командой:
-
-```bash
-docker compose up --build
-```
-
-После старта UI доступен на `http://localhost:8000`. Локальные изображения монтируются из `./mounted_data/` (хост) в `/mounted_data/` (контейнер). Веса моделей кэшируются в именованном volume `hf_cache` и сохраняются между пересборками образа.
-
-**Состав образа:** Python 3.12-slim; PyTorch CPU-сборка для переносимости (на машинах с GPU локальный запуск ускоряет инференс в 5–10 раз); набор библиотек зафиксирован в `requirements.docker.txt`. Healthcheck опрашивает endpoint `/health`; `start_period=120` сек даёт пайплайну прогрузить веса при первом старте.
-
-Языковой редактор в Docker-конфигурации отключён по умолчанию (`USE_LLM_REWRITER=false` в `docker-compose.yml`): CPU-инференс Vikhr-Nemo-12B нецелесообразен по latency и требует ~32 ГБ RAM, тогда как остальная часть пайплайна укладывается в 8 ГБ. Включить редактор можно явным переопределением переменной:
-
-```bash
-USE_LLM_REWRITER=true docker compose up
-```
+**Состав образов:** backend — Python 3.12-slim + PyTorch CPU-сборка, библиотеки зафиксированы в `requirements.docker.txt` / `requirements.docker-ocr.txt`; frontend — nginx. Healthcheck backend опрашивает `/health`.
 
 ### Запуск из командной строки
 

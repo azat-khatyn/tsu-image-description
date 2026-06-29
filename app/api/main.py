@@ -1,4 +1,6 @@
 import json
+import threading
+from contextlib import asynccontextmanager
 from datetime import datetime
 from pathlib import Path
 
@@ -21,9 +23,18 @@ from app.services.image_io import (
 from app.services.inference_service import InferenceService, get_inference_service
 
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Фоновый прогрев моделей при старте: первый /inference не качает веса «на лету»,
+    # а /health сразу отвечает (model_loaded=false, пока поток грузит пайплайн).
+    threading.Thread(target=get_inference_service().warmup, daemon=True).start()
+    yield
+
+
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
+    lifespan=lifespan,
 )
 
 
@@ -40,6 +51,7 @@ def health(
     return HealthResponse(
         status="ok",
         model_loaded=service.model_loaded,
+        ocr_available=service.ocr_available,
         device=service.device,
         pipeline_config=PipelineConfig(**service.pipeline_config),
     )
@@ -107,19 +119,24 @@ async def inference(
 
 @app.post("/save_description", response_model=SaveDescriptionResponse)
 def save_description(req: SaveDescriptionRequest) -> SaveDescriptionResponse:
-    """Сохранить исправленное сотрудником описание в журнал правок (JSONL)."""
-    path = settings.corrections_path
+    """Сохранить исправленное описание в общий JSON (upsert по имени файла)."""
+    path = settings.descriptions_path
     path.parent.mkdir(parents=True, exist_ok=True)
     saved_at = datetime.now().isoformat(timespec="seconds")
-    record = {
-        "saved_at": saved_at,
+
+    data: dict = {}
+    if path.exists():
+        try:
+            data = json.loads(path.read_text(encoding="utf-8")) or {}
+        except json.JSONDecodeError:
+            data = {}  # битый файл не должен ронять сохранение
+
+    data[req.filename] = {
         "filename": req.filename,
-        "verdict": req.verdict,
         "description": req.description.strip(),
-        "description_original": (req.description_original or "").strip() or None,
         "ocr_text": (req.ocr_text or "").strip() or None,
-        "ocr_text_original": (req.ocr_text_original or "").strip() or None,
+        "format": req.format.model_dump() if req.format else None,
+        "saved_at": saved_at,
     }
-    with open(path, "a", encoding="utf-8") as f:
-        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     return SaveDescriptionResponse(saved=True, path=str(path), saved_at=saved_at)

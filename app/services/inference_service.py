@@ -41,6 +41,13 @@ class InferenceService:
     def model_loaded(self) -> bool:
         return self._pipeline is not None
 
+    @property
+    def ocr_available(self) -> bool | None:
+        """OCR реально поднялся? None — пайплайн ещё не загружен."""
+        if self._pipeline is None:
+            return None
+        return self._pipeline.ocr is not None
+
     def _ensure_pipeline(self) -> None:
         if self._pipeline is None:
             with self._lock:
@@ -74,6 +81,15 @@ class InferenceService:
         res = self._pipeline.run(image_path)
         logging.info("Returning result %s", res)
         return res
+
+    def warmup(self) -> None:
+        """Загрузить пайплайн заранее (вызывается в фоне при старте приложения)."""
+        try:
+            logging.info("Warmup: loading pipeline...")
+            self._ensure_pipeline()
+            logging.info("Warmup: pipeline ready.")
+        except Exception:
+            logging.exception("Warmup failed; модели загрузятся при первом запросе.")
 
 
 @lru_cache(maxsize=1)

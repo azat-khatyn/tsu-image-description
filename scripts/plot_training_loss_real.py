@@ -18,6 +18,10 @@ import re
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+# Весь текст — Times New Roman (с serif-фолбэком, если шрифта нет).
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman", "DejaVu Serif"]
+
 import numpy as np
 
 PAT = re.compile(r"Epoch (\d+) train:[^\[]*?(\d+)/1000 \[[^\]]*?loss=[0-9.]+, avg=([0-9.]+)")

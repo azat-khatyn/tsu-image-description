@@ -53,6 +53,8 @@ data/eval/results/embeddings_*
 # Runtime / docker mounts
 mounted_data/
 tmp/
+descriptions/*.json
+data/descriptions/*.json
 
 # C extensions
 *.so

@@ -25,6 +25,10 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+# Весь текст — Times New Roman (с serif-фолбэком, если шрифта нет).
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman", "DejaVu Serif"]
+
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
@@ -79,8 +83,7 @@ def fig_domain_shift(emb, meta, out):
         label = _SRC_LABEL.get(s, s)
         plt.scatter(Y[m, 0], Y[m, 1], s=12, alpha=0.6,
                     c=_SRC_COLOR.get(s), label=f"{label} (n={int(m.sum())})")
-    plt.legend(); plt.title("Доменный сдвиг (SigLIP, t-SNE)\n"
-                            "открытки (зелёный) — живопись (фиолетовый)")
+    plt.legend(); plt.title("Доменный сдвиг (SigLIP, t-SNE)")
     _save(out / "fig_domain_shift.png")
 
 

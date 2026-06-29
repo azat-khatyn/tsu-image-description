@@ -15,6 +15,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+# Весь текст — Times New Roman (с serif-фолбэком, если шрифта нет).
+plt.rcParams["font.family"] = "serif"
+plt.rcParams["font.serif"] = ["Times New Roman", "DejaVu Serif"]
+
 # из logs/train_semart_val.log (эпохи 0-4 -> отображаем 1-5)
 EPOCHS = [1, 2, 3, 4, 5]
 TRAIN = [6.4646, 6.0773, 6.0081, 5.9493, 5.8963]
@@ -44,8 +48,8 @@ def main():
     ax.set_xlabel("эпоха")
     ax.set_ylabel("функция потерь (cross-entropy)")
     ax.set_ylim(5.85, 6.55)
-    ax.set_title("Динамика train- и validation-loss при дообучении BLIP-LoRA (SemArt)\n"
-                 "val монотонно убывает — признаков переобучения нет", fontsize=11)
+    ax.set_title("А) Динамика train- и validation-loss при дообучении BLIP-LoRA (SemArt)",
+                 fontsize=11, fontfamily="serif")
     ax.legend(loc="upper right", fontsize=10)
     ax.grid(alpha=0.25)
 

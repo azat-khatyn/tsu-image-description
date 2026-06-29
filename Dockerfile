@@ -11,15 +11,19 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
+# libgl1/libglib2.0-0 нужны opencv внутри paddleocr (иначе ImportError libGL.so.1).
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     libgomp1 \
+    libgl1 \
+    libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.docker.txt .
+COPY requirements.docker.txt requirements.docker-ocr.txt ./
 RUN pip install --upgrade pip \
     && pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision \
-    && pip install -r requirements.docker.txt
+    && pip install -r requirements.docker.txt \
+    && pip install -r requirements.docker-ocr.txt
 
 COPY . .
 

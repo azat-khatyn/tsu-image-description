@@ -18,3 +18,19 @@ env/
 
 tmp/
 mounted_data/
+
+# Тяжёлые/ненужные в образе данные и артефакты
+data/
+models/
+hf_cache/
+paddlex_cache/
+logs/
+docs/
+notebooks/
+demo/
+descriptions/
+corrections/
+tests/
+*.egg-info/
+.idea/
+.claude/
