@@ -10,6 +10,7 @@ from .ocr_extractor import OCRExtractor
 from .tesseract_ocr_extractor import TesseractOCRExtractor
 from .clip_scorer import CLIPScorer
 from . import reliability
+from .image_metadata import extract_image_metadata
 
 
 # Стандартные соотношения сторон (ширина/высота) для бакетирования формата.
@@ -153,11 +154,14 @@ class ArchiveDescriptionPipeline:
         metadata = self.metadata_extractor.extract(image_path)
         inference = MetadataExtractor.infer_theme_mood(metadata)
 
+        image_metadata = extract_image_metadata(image_path)
+
         # OCR-блок присутствует всегда (пустой при выключенной стадии),
         # чтобы форма ответа была стабильной.
         ocr = self.ocr.extract(image_path) if self.ocr else OCRExtractor.empty_result()
 
         base_result = {
+            "image": image_metadata,
             "caption": {
                 "en": caption_en,
                 "ru": caption_ru,

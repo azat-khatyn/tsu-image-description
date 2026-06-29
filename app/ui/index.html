@@ -41,12 +41,14 @@
       text-align: center;
       margin-bottom: 24px;
     }
+
     header h1 {
       font-size: 28px;
       margin: 0 0 10px;
       font-weight: 700;
       letter-spacing: -0.01em;
     }
+
     header .subtitle {
       color: var(--muted);
       font-size: 15px;
@@ -63,6 +65,7 @@
       font-size: 13px;
       box-shadow: var(--card-shadow);
     }
+
     .arch-card .arch-title {
       font-weight: 600;
       font-size: 12px;
@@ -71,13 +74,19 @@
       color: var(--muted);
       margin-bottom: 8px;
     }
-    .arch-line { margin: 3px 0; color: var(--text); }
+
+    .arch-line {
+      margin: 3px 0;
+      color: var(--text);
+    }
+
     .arch-line code {
       background: var(--tag-bg);
       padding: 1px 6px;
       border-radius: 4px;
       font-size: 12px;
     }
+
     .arch-metrics {
       margin-top: 10px;
       padding-top: 10px;
@@ -85,7 +94,10 @@
       font-size: 12px;
       color: var(--muted);
     }
-    .arch-metrics span { margin-right: 12px; }
+
+    .arch-metrics span {
+      margin-right: 12px;
+    }
 
     .input-card {
       background: var(--surface);
@@ -98,7 +110,12 @@
       align-items: end;
       box-shadow: var(--card-shadow);
     }
-    .input-card .input-field { display: flex; flex-direction: column; }
+
+    .input-card .input-field {
+      display: flex;
+      flex-direction: column;
+    }
+
     .input-card label {
       font-size: 12px;
       font-weight: 600;
@@ -107,6 +124,7 @@
       letter-spacing: 0.04em;
       margin-bottom: 6px;
     }
+
     .input-card input[type="file"],
     .input-card input[type="text"] {
       padding: 9px 11px;
@@ -115,6 +133,7 @@
       font-size: 14px;
       background: var(--bg);
     }
+
     .input-card .or-divider {
       align-self: center;
       color: var(--muted);
@@ -122,6 +141,7 @@
       text-align: center;
       padding-bottom: 9px;
     }
+
     button {
       padding: 10px 18px;
       border: none;
@@ -133,29 +153,55 @@
       font-weight: 500;
       transition: background 0.15s;
     }
-    button:hover:not(:disabled) { background: var(--primary-hover); }
-    button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    button:hover:not(:disabled) {
+      background: var(--primary-hover);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
 
     #status {
       margin: 14px 0 0;
       font-size: 13px;
       min-height: 18px;
     }
-    .muted { color: var(--muted); }
-    .error { color: var(--error); font-weight: 500; }
-    .success { color: var(--success); font-weight: 500; }
 
-    /* === Двухколоночная раскладка результата === */
+    .muted {
+      color: var(--muted);
+    }
+
+    .error {
+      color: var(--error);
+      font-weight: 500;
+    }
+
+    .success {
+      color: var(--success);
+      font-weight: 500;
+    }
+
     .results-grid {
       display: grid;
       grid-template-columns: 360px 1fr;
       gap: 24px;
       margin-top: 22px;
     }
+
     @media (max-width: 800px) {
-      .input-card { grid-template-columns: 1fr; }
-      .input-card .or-divider { padding-bottom: 0; }
-      .results-grid { grid-template-columns: 1fr; }
+      .input-card {
+        grid-template-columns: 1fr;
+      }
+
+      .input-card .or-divider {
+        padding-bottom: 0;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .preview-card {
@@ -168,11 +214,13 @@
       top: 24px;
       box-shadow: var(--card-shadow);
     }
+
     .preview-card img {
       width: 100%;
       border-radius: 8px;
       display: block;
     }
+
     .preview-card .placeholder {
       aspect-ratio: 4 / 5;
       background: var(--border-soft);
@@ -183,6 +231,7 @@
       color: var(--muted);
       font-size: 13px;
     }
+
     .preview-card .filename {
       margin-top: 10px;
       font-size: 12px;
@@ -190,7 +239,11 @@
       word-break: break-all;
     }
 
-    .content-stack { display: flex; flex-direction: column; gap: 18px; }
+    .content-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
 
     .result-card {
       background: var(--surface);
@@ -199,6 +252,7 @@
       padding: 18px 20px;
       box-shadow: var(--card-shadow);
     }
+
     .result-card .card-label {
       font-size: 11px;
       font-weight: 700;
@@ -207,18 +261,23 @@
       color: var(--muted);
       margin-bottom: 8px;
     }
+
     .result-card.primary {
       background: var(--accent-soft);
       border-color: #bfdbfe;
     }
-    .result-card.primary .card-label { color: var(--accent); }
+
+    .result-card.primary .card-label {
+      color: var(--accent);
+    }
+
     .result-card .archive-text {
       font-size: 17px;
       line-height: 1.55;
       color: var(--text);
       font-weight: 500;
     }
-    /* Редактируемое описание: подсветка границы в режиме правки. */
+
     .archive-text[contenteditable="true"] {
       outline: none;
       border: 1px dashed var(--border);
@@ -226,7 +285,11 @@
       padding: 8px 10px;
       background: #fff;
     }
-    .archive-text[contenteditable="true"]:focus { border-color: var(--accent); }
+
+    .archive-text[contenteditable="true"]:focus {
+      border-color: var(--accent);
+    }
+
     .copy-btn {
       float: right;
       font-size: 12px;
@@ -238,17 +301,59 @@
       padding: 2px 9px;
       cursor: pointer;
     }
-    .copy-btn:hover { background: var(--accent-soft); }
-    .save-btn { color: #fff; background: var(--accent); border-color: var(--accent); }
-    .save-btn:hover { background: #1e40af; }
-    .save-btn:disabled { opacity: 0.6; cursor: default; }
-    .wrong-btn { color: #b91c1c; border-color: #fecaca; }
-    .wrong-btn:hover { background: #fef2f2; }
-    .wrong-btn:disabled { opacity: 0.6; cursor: default; }
-    .ocr-conf { float: right; font-size: 12px; font-weight: 500; color: var(--muted); }
-    .edit-hint { margin-top: 8px; font-size: 12px; color: var(--muted); }
 
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .copy-btn:hover {
+      background: var(--accent-soft);
+    }
+
+    .save-btn {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .save-btn:hover {
+      background: #1e40af;
+    }
+
+    .save-btn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .wrong-btn {
+      color: #b91c1c;
+      border-color: #fecaca;
+    }
+
+    .wrong-btn:hover {
+      background: #fef2f2;
+    }
+
+    .wrong-btn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .ocr-conf {
+      float: right;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .edit-hint {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
     .tag {
       background: var(--tag-bg);
       color: var(--tag-fg);
@@ -263,12 +368,14 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 10px;
     }
+
     .meta-item {
       background: var(--bg);
       border: 1px solid var(--border-soft);
       border-radius: 8px;
       padding: 10px 12px;
     }
+
     .meta-item .meta-axis {
       font-size: 11px;
       text-transform: uppercase;
@@ -276,17 +383,23 @@
       letter-spacing: 0.04em;
       margin-bottom: 3px;
     }
+
     .meta-item .meta-label {
       font-size: 14px;
       font-weight: 500;
       color: var(--text);
     }
+
     .meta-item .meta-score {
       font-size: 12px;
       color: var(--muted);
       margin-top: 2px;
     }
-    .meta-item.not-confident .meta-label { color: var(--muted); font-style: italic; }
+
+    .meta-item.not-confident .meta-label {
+      color: var(--muted);
+      font-style: italic;
+    }
 
     details {
       background: var(--surface);
@@ -295,6 +408,7 @@
       padding: 0;
       box-shadow: var(--card-shadow);
     }
+
     details summary {
       cursor: pointer;
       padding: 14px 20px;
@@ -303,12 +417,27 @@
       color: var(--muted);
       letter-spacing: 0.03em;
     }
+
     details[open] summary {
       border-bottom: 1px solid var(--border-soft);
     }
-    details .details-body { padding: 16px 20px; }
-    .raw-pair { display: flex; flex-direction: column; gap: 10px; }
-    .raw-pair .raw-row { display: flex; gap: 10px; align-items: baseline; }
+
+    details .details-body {
+      padding: 16px 20px;
+    }
+
+    .raw-pair {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .raw-pair .raw-row {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+
     .raw-pair .raw-row .raw-tag {
       flex-shrink: 0;
       width: 80px;
@@ -317,6 +446,7 @@
       color: var(--muted);
       letter-spacing: 0.04em;
     }
+
     .raw-pair .raw-row .raw-val {
       flex: 1;
       font-size: 14px;
@@ -335,9 +465,12 @@
       margin: 0;
     }
 
-    .hidden { display: none !important; }
+    .hidden {
+      display: none !important;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Генерация семантического описания изображения</h1>
@@ -349,11 +482,15 @@
 
   <div class="arch-card" id="archCard">
     <div class="arch-title">Текущая архитектура</div>
-    <div id="archLines"><div class="muted">Загрузка конфигурации…</div></div>
+    <div id="archLines">
+      <div class="muted">Загрузка конфигурации…</div>
+    </div>
+
     <div class="arch-metrics" id="archMetrics" style="display:none;">
       <div style="margin-bottom: 4px; font-weight: 600; color: var(--text);">
         Ожидаемые метрики
       </div>
+
       <span>CLIPScore ≈ <strong id="metricClip">0.331</strong></span>
       <span>R@1 ≈ <strong id="metricR1">1.00</strong></span>
       <span>Latency ≈ <strong id="metricLat">12 с</strong></span>
@@ -379,15 +516,19 @@
 
     <button id="submitBtn" disabled>Запустить инференс</button>
   </section>
+
   <p id="modelStatus" class="muted"></p>
   <p id="status" class="muted"></p>
 
   <section class="results-grid">
     <aside class="preview-card">
       <div id="previewWrap">
-        <div class="placeholder" id="previewPlaceholder">Превью изображения</div>
+        <div class="placeholder" id="previewPlaceholder">
+          Превью изображения
+        </div>
         <img id="preview" class="hidden" alt="preview" />
       </div>
+
       <div id="filename" class="filename"></div>
       <div id="formatInfo" class="filename"></div>
     </aside>
@@ -396,15 +537,34 @@
       <div class="result-card primary">
         <div class="card-label">
           Семантическое описание
-          <button type="button" id="copyDescBtn" class="copy-btn" hidden>Копировать</button>
-          <button type="button" id="saveDescBtn" class="copy-btn save-btn" hidden>Сохранить</button>
+          <button
+            type="button"
+            id="copyDescBtn"
+            class="copy-btn"
+            hidden
+          >
+            Копировать
+          </button>
+
+          <button
+            type="button"
+            id="saveDescBtn"
+            class="copy-btn save-btn"
+            hidden
+          >
+            Сохранить
+          </button>
         </div>
+
         <div id="archiveDescription" class="archive-text muted">
           Здесь появится финальное описание, сгенерированное предложенным пайплайном.
         </div>
+
         <div id="editHint" class="edit-hint" hidden>
-          Описание и надпись редактируемые. «Сохранить» записывает исправленный текст в descriptions.json.
+          Описание и надпись редактируемые. «Сохранить» записывает исправленный
+          текст в descriptions.json.
         </div>
+
         <div id="saveStatus" class="edit-hint" hidden></div>
       </div>
 
@@ -413,9 +573,11 @@
           Надпись на изображении (OCR)
           <span id="ocrConf" class="ocr-conf" hidden></span>
         </div>
+
         <div id="ocrText" class="archive-text muted">
           Здесь появится распознанная надпись (если есть).
         </div>
+
         <div id="ocrHint" class="edit-hint" hidden>
           Поле редактируемое — надпись можно поправить или ввести вручную.
         </div>
@@ -429,7 +591,10 @@
       </div>
 
       <div class="result-card">
-        <div class="card-label">Метаданные (SigLIP, каталожная таксономия)</div>
+        <div class="card-label">
+          Метаданные (SigLIP, каталожная таксономия)
+        </div>
+
         <div id="metadataGrid" class="meta-grid">
           <span class="muted">Появятся после инференса.</span>
         </div>
@@ -443,6 +608,7 @@
               <div class="raw-tag">EN caption</div>
               <div class="raw-val muted" id="captionEn">—</div>
             </div>
+
             <div class="raw-row">
               <div class="raw-tag">RU перевод</div>
               <div class="raw-val muted" id="captionRu">—</div>
@@ -469,7 +635,9 @@
     const previewPlaceholderEl = document.getElementById("previewPlaceholder");
     const filenameEl = document.getElementById("filename");
 
-    const archiveDescriptionEl = document.getElementById("archiveDescription");
+    const archiveDescriptionEl =
+      document.getElementById("archiveDescription");
+
     const ocrTextEl = document.getElementById("ocrText");
     const formatInfoEl = document.getElementById("formatInfo");
     const copyDescBtn = document.getElementById("copyDescBtn");
@@ -478,10 +646,12 @@
     const saveStatusEl = document.getElementById("saveStatus");
     const ocrConfEl = document.getElementById("ocrConf");
     const ocrHintEl = document.getElementById("ocrHint");
+
     let currentFilename = null;
     let originalDescription = null;
     let ocrOriginal = null;
     let currentFormat = null;
+
     const tagsContainerEl = document.getElementById("tagsContainer");
     const metadataGridEl = document.getElementById("metadataGrid");
     const captionEnEl = document.getElementById("captionEn");
@@ -491,23 +661,69 @@
     const archLinesEl = document.getElementById("archLines");
     const archMetricsEl = document.getElementById("archMetrics");
 
-    // Копирование (возможно, отредактированного) описания в буфер обмена.
+    const orientationRu = {
+      horizontal: "горизонтальная",
+      vertical: "вертикальная",
+      square: "квадратная",
+      unknown: "не определена",
+    };
+
+    function formatImageInfo(imageInfo) {
+      if (!imageInfo || !imageInfo.orientation) {
+        return "";
+      }
+
+      const orientation =
+        orientationRu[imageInfo.orientation] ??
+        imageInfo.orientation ??
+        "не определена";
+
+      const ratioLabel =
+        imageInfo.aspect_ratio_label ??
+        imageInfo.aspect ??
+        "—";
+
+      const hasDimensions =
+        Number.isFinite(Number(imageInfo.width)) &&
+        Number.isFinite(Number(imageInfo.height));
+
+      const dimensions = hasDimensions
+        ? `${imageInfo.width} × ${imageInfo.height} px`
+        : "—";
+
+      return (
+        `Ориентация: ${orientation}; ` +
+        `соотношение сторон: ${ratioLabel}; ` +
+        `размер: ${dimensions}`
+      );
+    }
+
     copyDescBtn.addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText(archiveDescriptionEl.textContent.trim());
-        const prev = copyDescBtn.textContent;
+        await navigator.clipboard.writeText(
+          archiveDescriptionEl.textContent.trim()
+        );
+
+        const previousText = copyDescBtn.textContent;
         copyDescBtn.textContent = "Скопировано";
-        setTimeout(() => { copyDescBtn.textContent = prev; }, 1200);
-      } catch (e) { /* буфер обмена недоступен */ }
+
+        setTimeout(() => {
+          copyDescBtn.textContent = previousText;
+        }, 1200);
+      } catch (error) {
+        /* Буфер обмена может быть недоступен. */
+      }
     });
 
-    // Сохранение исправленного описания в descriptions.json (по имени файла).
     async function saveDescription() {
       saveDescBtn.disabled = true;
+
       try {
-        const resp = await fetch("/save_description", {
+        const response = await fetch("/save_description", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({
             filename: currentFilename || "—",
             description: archiveDescriptionEl.textContent.trim(),
@@ -515,88 +731,136 @@
             format: currentFormat,
           }),
         });
-        const data = await resp.json();
-        if (!data.saved) throw new Error("not saved");
+
+        const data = await response.json();
+
+        if (!data.saved) {
+          throw new Error("not saved");
+        }
+
         saveStatusEl.hidden = false;
-        saveStatusEl.textContent = `Сохранено в ${data.path} (${data.saved_at})`;
-      } catch (e) {
+        saveStatusEl.textContent =
+          `Сохранено в ${data.path} (${data.saved_at})`;
+      } catch (error) {
         saveStatusEl.hidden = false;
         saveStatusEl.textContent = "Ошибка сохранения.";
       } finally {
         saveDescBtn.disabled = false;
       }
     }
+
     saveDescBtn.addEventListener("click", saveDescription);
 
-    // === Подгружаем конфигурацию пайплайна для шапки ===
     async function loadArchInfo() {
       try {
-        const resp = await fetch("/health");
-        const data = await resp.json();
-        const cfg = data.pipeline_config;
-        if (!cfg) {
-          archLinesEl.innerHTML = '<div class="muted">Конфигурация недоступна.</div>';
+        const response = await fetch("/health");
+        const data = await response.json();
+        const config = data.pipeline_config;
+
+        if (!config) {
+          archLinesEl.innerHTML =
+            '<div class="muted">Конфигурация недоступна.</div>';
           return;
         }
+
         const lines = [];
-        const captionName = cfg.caption_model.split("/").pop();
+
+        const captionName = config.caption_model
+          .split("/")
+          .pop();
+
         lines.push(`Подпись: <code>${captionName}</code>`);
-        lines.push(`Классификатор: SigLIP, таксономия <code>${cfg.taxonomy_version}</code>`);
-        if (cfg.use_llm_rewriter) {
-          const llmName = cfg.llm_model
-            ? cfg.llm_model.split("/").pop()
+
+        lines.push(
+          `Классификатор: SigLIP, таксономия ` +
+          `<code>${config.taxonomy_version}</code>`
+        );
+
+        if (config.use_llm_rewriter) {
+          const llmName = config.llm_model
+            ? config.llm_model.split("/").pop()
             : "—";
+
           lines.push(
-            `Языковой редактор: <code>${llmName}</code>, prompt <code>${cfg.llm_prompt_style}</code>`
+            `Языковой редактор: <code>${llmName}</code>, ` +
+            `prompt <code>${config.llm_prompt_style}</code>`
           );
         } else {
-          lines.push("Языковой редактор: отключён (template-режим)");
+          lines.push(
+            "Языковой редактор: отключён (template-режим)"
+          );
         }
-        lines.push(
-          cfg.use_ocr
-            ? "Распознавание надписей (OCR): включено"
-            : "Распознавание надписей (OCR): отключено"
-        );
+
+        if (config.use_ocr) {
+          const ocrBackend = config.ocr_backend
+            ? `, backend <code>${config.ocr_backend}</code>`
+            : "";
+
+          lines.push(
+            `Распознавание надписей (OCR): включено${ocrBackend}`
+          );
+        } else {
+          lines.push(
+            "Распознавание надписей (OCR): отключено"
+          );
+        }
+
         lines.push(`Устройство: <code>${data.device}</code>`);
-        archLinesEl.innerHTML = lines.map(l => `<div class="arch-line">${l}</div>`).join("");
+
+        archLinesEl.innerHTML = lines
+          .map((line) => `<div class="arch-line">${line}</div>`)
+          .join("");
+
         archMetricsEl.style.display = "block";
-      } catch (e) {
-        archLinesEl.innerHTML = '<div class="error">Сервис недоступен.</div>';
+      } catch (error) {
+        archLinesEl.innerHTML =
+          '<div class="error">Сервис недоступен.</div>';
       }
     }
+
     loadArchInfo();
 
-    // === Готовность моделей: блокируем инференс, пока идёт прогрев ===
     const modelStatusEl = document.getElementById("modelStatus");
+
     async function pollModelReady() {
       try {
-        const resp = await fetch("/health");
-        const data = await resp.json();
+        const response = await fetch("/health");
+        const data = await response.json();
+
         if (data.model_loaded) {
           modelStatusEl.hidden = true;
           submitBtn.disabled = false;
           return;
         }
-      } catch (e) { /* сервис ещё стартует */ }
+      } catch (error) {
+        /* Сервис ещё запускается. */
+      }
+
       modelStatusEl.textContent =
         "⏳ Модели загружаются — разовая операция при первом запуске. Подождите…";
+
       submitBtn.disabled = true;
+
       setTimeout(pollModelReady, 3000);
     }
+
     pollModelReady();
 
-    // === Превью ===
     fileInput.addEventListener("change", () => {
       const file = fileInput.files[0];
+
       if (file) {
         imagePathInput.value = "";
+
         previewEl.src = URL.createObjectURL(file);
         previewEl.classList.remove("hidden");
         previewPlaceholderEl.classList.add("hidden");
+
         filenameEl.textContent = file.name;
       } else {
         previewEl.classList.add("hidden");
         previewPlaceholderEl.classList.remove("hidden");
+
         filenameEl.textContent = "";
       }
     });
@@ -604,187 +868,275 @@
     imagePathInput.addEventListener("input", () => {
       if (imagePathInput.value.trim()) {
         fileInput.value = "";
+
         previewEl.classList.add("hidden");
         previewPlaceholderEl.classList.remove("hidden");
+
         filenameEl.textContent = imagePathInput.value.trim();
       }
     });
 
-    // === Сброс результата ===
     function resetResult() {
       archiveDescriptionEl.textContent =
         "Здесь появится финальное описание, сгенерированное предложенным пайплайном.";
+
       archiveDescriptionEl.classList.add("muted");
       archiveDescriptionEl.contentEditable = "false";
+
       copyDescBtn.hidden = true;
       saveDescBtn.hidden = true;
       editHintEl.hidden = true;
       saveStatusEl.hidden = true;
+
       currentFilename = null;
       originalDescription = null;
       ocrOriginal = null;
       currentFormat = null;
+
       formatInfoEl.textContent = "";
-      ocrTextEl.textContent = "Здесь появится распознанная надпись (если есть).";
+
+      ocrTextEl.textContent =
+        "Здесь появится распознанная надпись (если есть).";
+
       ocrTextEl.classList.add("muted");
       ocrTextEl.contentEditable = "false";
+
       ocrConfEl.hidden = true;
       ocrHintEl.hidden = true;
-      tagsContainerEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
-      metadataGridEl.innerHTML = '<span class="muted">Появятся после инференса.</span>';
+
+      tagsContainerEl.innerHTML =
+        '<span class="muted">Появятся после инференса.</span>';
+
+      metadataGridEl.innerHTML =
+        '<span class="muted">Появятся после инференса.</span>';
+
       captionEnEl.textContent = "—";
       captionEnEl.classList.add("muted");
+
       captionRuEl.textContent = "—";
       captionRuEl.classList.add("muted");
+
       rawJsonEl.textContent = "Здесь появится сырой ответ API.";
     }
 
-    // === Отрисовка результата ===
     function renderResult(data) {
-      archiveDescriptionEl.textContent = data.archive_description || "—";
+      archiveDescriptionEl.textContent =
+        data.archive_description || "—";
+
       archiveDescriptionEl.classList.remove("muted");
       archiveDescriptionEl.contentEditable = "true";
+
       copyDescBtn.hidden = false;
       saveDescBtn.hidden = false;
       editHintEl.hidden = false;
       saveStatusEl.hidden = true;
-      currentFilename = data.filename || null;
-      originalDescription = data.archive_description || null;
-      currentFormat = data.format || null;
 
-      // Ориентация и формат открытки (из размеров изображения)
-      const fmt = data.format;
-      if (fmt && fmt.orientation) {
-        const dims = (fmt.width && fmt.height) ? `, ${fmt.width}×${fmt.height}` : "";
-        formatInfoEl.textContent =
-          `Формат: ${fmt.orientation}, ${fmt.aspect || "—"}${dims}`;
+      const imageInfo = data.image || data.format || {};
+
+      currentFilename =
+        data.filename ||
+        imageInfo.filename ||
+        null;
+
+      originalDescription =
+        data.archive_description || null;
+
+      currentFormat = imageInfo;
+
+      formatInfoEl.textContent = formatImageInfo(imageInfo);
+
+      const ocr = data.ocr || {};
+      const ocrValue = ocr.text || "";
+
+      const ocrBackend = ocr.backend
+        ? ` · ${ocr.backend}`
+        : "";
+
+      const ocrStatus = ocr.confident
+        ? "надёжно"
+        : "требует проверки";
+
+      if (ocrValue) {
+        ocrTextEl.textContent = ocrValue;
+        ocrTextEl.classList.remove("muted");
       } else {
-        formatInfoEl.textContent = "";
+        ocrTextEl.textContent = "Надпись не распознана.";
+        ocrTextEl.classList.add("muted");
       }
 
-      // OCR: распознанная надпись — редактируемая; уверенность отдельным бейджем.
-      const ocr = data.ocr;
-      const ocrVal = (ocr && ocr.text) ? ocr.text : "";
-      ocrTextEl.textContent = ocrVal;
-      ocrTextEl.classList.remove("muted");
       ocrTextEl.contentEditable = "true";
       ocrHintEl.hidden = false;
-      ocrOriginal = ocrVal;
-      if (ocr && ocr.confident && ocr.confidence != null) {
-        ocrConfEl.textContent = `уверенность ${Math.round(ocr.confidence * 100)}%`;
+
+      ocrOriginal = ocrValue;
+
+      if (ocr.confidence != null) {
+        ocrConfEl.textContent =
+          `уверенность ${Math.round(Number(ocr.confidence) * 100)}%` +
+          ` · ${ocrStatus}${ocrBackend}`;
+
+        ocrConfEl.hidden = false;
+      } else if (ocr.backend) {
+        ocrConfEl.textContent =
+          `OCR: ${ocr.backend} · текст не распознан`;
+
         ocrConfEl.hidden = false;
       } else {
         ocrConfEl.hidden = true;
       }
 
-      // Теги: предпочитаем русифицированные tags_ru от DescriptionBuilder;
-      // если их нет (backward-compat), показываем сырые metadata.tags.
-      const tags = (data.tags_ru && data.tags_ru.length > 0)
-        ? data.tags_ru
-        : (data.metadata?.tags || []);
+      const tags =
+        data.tags_ru && data.tags_ru.length > 0
+          ? data.tags_ru
+          : (data.metadata?.tags || []);
+
       if (tags.length === 0) {
-        tagsContainerEl.innerHTML = '<span class="muted">Теги не получены.</span>';
+        tagsContainerEl.innerHTML =
+          '<span class="muted">Теги не получены.</span>';
       } else {
         tagsContainerEl.innerHTML = "";
-        tags.forEach(t => {
-          const span = document.createElement("span");
-          span.className = "tag";
-          span.textContent = t;
-          tagsContainerEl.appendChild(span);
+
+        tags.forEach((tag) => {
+          const element = document.createElement("span");
+          element.className = "tag";
+          element.textContent = tag;
+
+          tagsContainerEl.appendChild(element);
         });
       }
 
-      // Метаданные
-      const meta = data.metadata || {};
+      const metadata = data.metadata || {};
+
       const axisLabels = {
         image_type: "Тип материала",
         style: "Техника",
         theme: "Сюжет",
         mood: "Настроение",
       };
+
       const items = [];
-      for (const axis of ["image_type", "style", "theme", "mood"]) {
-        const field = meta[axis];
-        if (!field) continue;
+
+      for (const axis of [
+        "image_type",
+        "style",
+        "theme",
+        "mood",
+      ]) {
+        const field = metadata[axis];
+
+        if (!field) {
+          continue;
+        }
+
         const isConfident = field.confident;
         const label = field.label || "—";
+
         const score =
-          field.score !== undefined && field.score !== null
+          field.score !== undefined &&
+          field.score !== null
             ? field.score.toFixed(3)
             : "—";
+
         items.push(`
           <div class="meta-item ${isConfident ? "" : "not-confident"}">
             <div class="meta-axis">${axisLabels[axis]}</div>
             <div class="meta-label">${label}</div>
-            <div class="meta-score">score = ${score} · ${isConfident ? "уверенно" : "не уверенно"}</div>
+            <div class="meta-score">
+              score = ${score} · ${isConfident ? "уверенно" : "не уверенно"}
+            </div>
           </div>
         `);
       }
-      metadataGridEl.innerHTML = items.join("") ||
+
+      metadataGridEl.innerHTML =
+        items.join("") ||
         '<span class="muted">Метаданные не получены.</span>';
 
-      // Промежуточные результаты пайплайна
       captionEnEl.textContent = data.caption?.en || "—";
       captionEnEl.classList.remove("muted");
+
       captionRuEl.textContent = data.caption?.ru || "—";
       captionRuEl.classList.remove("muted");
 
-      rawJsonEl.textContent = JSON.stringify(data, null, 2);
+      rawJsonEl.textContent =
+        JSON.stringify(data, null, 2);
     }
 
-    // === Submit ===
     submitBtn.addEventListener("click", async () => {
       const file = fileInput.files[0];
       const imagePath = imagePathInput.value.trim();
 
       if (!file && !imagePath) {
-        statusEl.textContent = "Сначала загрузи файл или укажи путь.";
+        statusEl.textContent =
+          "Сначала загрузи файл или укажи путь.";
+
         statusEl.className = "error";
         return;
       }
+
       if (file && imagePath) {
         statusEl.textContent =
           "Нужно использовать только один способ: либо файл, либо путь.";
+
         statusEl.className = "error";
         return;
       }
 
       submitBtn.disabled = true;
+
       statusEl.textContent =
         "Идёт обработка. Первый запуск может занять до минуты — загружаются модели.";
+
       statusEl.className = "muted";
+
       resetResult();
 
       const formData = new FormData();
-      if (file) formData.append("file", file);
-      else formData.append("image_path", imagePath);
+
+      if (file) {
+        formData.append("file", file);
+      } else {
+        formData.append("image_path", imagePath);
+      }
 
       try {
         const response = await fetch("/inference", {
           method: "POST",
           body: formData,
         });
-        // Не-JSON ответ — обычно страница ошибки nginx (504/502) во время прогрева моделей.
-        const ct = response.headers.get("content-type") || "";
-        if (!ct.includes("application/json")) {
-          statusEl.textContent = response.status === 504
-            ? "Сервер загружает модели — первый запуск может занять несколько минут. Подождите и повторите."
-            : `Сервис недоступен (HTTP ${response.status}). Возможно, ещё запускается.`;
+
+        const contentType =
+          response.headers.get("content-type") || "";
+
+        if (!contentType.includes("application/json")) {
+          statusEl.textContent =
+            response.status === 504
+              ? "Сервер загружает модели — первый запуск может занять несколько минут. Подождите и повторите."
+              : `Сервис недоступен (HTTP ${response.status}). Возможно, ещё запускается.`;
+
           statusEl.className = "error";
           return;
         }
+
         const data = await response.json();
+
         if (!response.ok) {
           statusEl.textContent = "Ошибка инференса.";
           statusEl.className = "error";
-          rawJsonEl.textContent = JSON.stringify(data, null, 2);
+
+          rawJsonEl.textContent =
+            JSON.stringify(data, null, 2);
+
           return;
         }
+
         statusEl.textContent = "Готово.";
         statusEl.className = "success";
+
         renderResult(data);
-      } catch (e) {
-        statusEl.textContent = "Ошибка запроса к API: " + e;
+      } catch (error) {
+        statusEl.textContent =
+          "Ошибка запроса к API: " + error;
+
         statusEl.className = "error";
       } finally {
         submitBtn.disabled = false;

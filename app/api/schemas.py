@@ -45,6 +45,15 @@ class OCRBlock(BaseModel):
     backend: str | None = None
 
 
+class ImageInfo(BaseModel):
+    filename: str
+    width: int
+    height: int
+    orientation: str
+    aspect_ratio: float
+    aspect_ratio_label: str
+
+
 class FormatBlock(BaseModel):
     # Ориентация и формат открытки из размеров изображения (без ML).
     orientation: str | None = None   # вертикальная / горизонтальная / квадратная
@@ -71,6 +80,7 @@ class InferenceResponse(BaseModel):
     caption: CaptionBlock
     metadata: MetadataBlock
     inference: InferenceBlock
+    image: ImageInfo
     ocr: OCRBlock = Field(default_factory=OCRBlock)
     format: FormatBlock = Field(default_factory=FormatBlock)
     reliability: ReliabilityBlock = Field(default_factory=ReliabilityBlock)
