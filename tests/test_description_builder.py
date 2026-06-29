@@ -115,3 +115,51 @@ def test_non_confident_fields_give_generic_intro():
     builder = DescriptionBuilder()
     out = builder.build(make_result(caption_ru="нечто"))
     assert out["archive_description"].startswith("Изображение. ")
+
+
+def test_full_mode_includes_confident_ocr_text():
+    builder = DescriptionBuilder()
+
+    result = make_result(caption_ru="вид на реку")
+    result["ocr"] = {
+        "text": "Крюков канал",
+        "confidence": 0.91,
+        "confident": True,
+    }
+
+    out = builder.build(result)
+
+    assert (
+        "На изображении присутствует надпись: «Крюков канал»."
+        in out["archive_description"]
+    )
+
+
+def test_full_mode_excludes_unconfident_ocr_text():
+    builder = DescriptionBuilder()
+
+    result = make_result(caption_ru="вид на реку")
+    result["ocr"] = {
+        "text": "случайный шум",
+        "confidence": 0.42,
+        "confident": False,
+    }
+
+    out = builder.build(result)
+
+    assert "На изображении присутствует надпись:" not in out["archive_description"]
+
+
+def test_caption_only_mode_does_not_include_ocr():
+    builder = DescriptionBuilder(template_mode="caption_only")
+
+    result = make_result(caption_ru="вид на реку")
+    result["ocr"] = {
+        "text": "Крюков канал",
+        "confidence": 0.91,
+        "confident": True,
+    }
+
+    out = builder.build(result)
+
+    assert out["archive_description"] == "Вид на реку."

@@ -4,3 +4,4 @@
 # за platform: linux/amd64 (см. docker-compose.yml).
 paddleocr==3.6.0
 paddlepaddle==3.3.1
+pytesseract>=0.3.10

@@ -28,6 +28,10 @@ services:
       # На Apple Silicon paddle идёт через эмуляцию и зависает — для локального теста:
       #   USE_OCR=false docker compose up -d --build --force-recreate backend
       USE_OCR: "${USE_OCR:-true}"
+      # auto: PaddleOCR, при обычной ошибке инициализации — Tesseract.
+      # На Apple Silicon при зависании PaddleOCR лучше явно задать tesseract:
+      # OCR_BACKEND=tesseract docker compose up -d --build
+      OCR_BACKEND: "${OCR_BACKEND:-auto}"
     volumes:
       - ./mounted_data:/mounted_data
       - ./descriptions:/descriptions

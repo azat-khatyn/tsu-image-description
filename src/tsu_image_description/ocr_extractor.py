@@ -71,6 +71,7 @@ class OCRExtractor:
             "raw_text": raw_text,
             "confidence": confidence,
             "confident": confident,
+            "backend": "paddle",
         }
 
     def _run_ocr(self, image_path: str):
@@ -88,7 +89,7 @@ class OCRExtractor:
     @staticmethod
     def empty_result() -> dict:
         """Пустой блок OCR (стадия выключена или библиотека недоступна)."""
-        return {"text": "", "raw_text": "", "confidence": None, "confident": False}
+        return {"text": "", "raw_text": "", "confidence": None, "confident": False, "backend": None,}
 
     @staticmethod
     def _normalize(text: str) -> str:

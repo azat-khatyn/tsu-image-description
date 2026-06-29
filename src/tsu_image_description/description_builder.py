@@ -1,16 +1,22 @@
 from typing import Dict
+
 from . import taxonomy
 
 
 class DescriptionBuilder:
-    """Собирает русское архивное описание из подписи и метаданных.
+    """Собирает русское архивное описание из подписи, метаданных и OCR.
+
+    В шаблонных режимах уверенно распознанная надпись добавляется отдельным
+    нейтральным предложением: «На изображении присутствует надпись: …».
+    Это фиксирует видимый текст, но не приписывает ему внешний контекст
+    (место, дату, автора и т. п.).
 
     template_mode:
-      - "full"         : вводная фраза + "На изображении: <caption>." + опц. тема/настроение
-      - "minimal"      : "На изображении: <caption>."
+      - "full"         : вводная фраза + подпись + опц. тема/настроение + OCR
+      - "minimal"      : подпись + OCR
       - "caption_only" : только очищенная caption_ru
 
-    Русские строки (именительный/родительный) берутся из taxonomy.py по id метки.
+    Русские строки берутся из taxonomy.py по id метки.
     """
 
     VALID_MODES = {"full", "minimal", "caption_only"}
@@ -27,6 +33,7 @@ class DescriptionBuilder:
             raise ValueError(
                 f"template_mode must be one of {self.VALID_MODES}, got {template_mode!r}"
             )
+
         self.template_mode = template_mode
         self.include_theme = include_theme
         self.include_mood = include_mood
@@ -40,12 +47,25 @@ class DescriptionBuilder:
         if self.template_mode == "caption_only":
             archive = self._sentence(caption_ru, capitalize=True)
             tags_ru = self._tags_ru(metadata, inference)
-            return {"archive_description": archive, "tags_ru": tags_ru}
+            return {
+                "archive_description": archive,
+                "tags_ru": tags_ru,
+            }
 
         if self.template_mode == "minimal":
-            archive = f"На изображении: {self._inline(caption_ru)}."
+            parts = [f"На изображении: {self._inline(caption_ru)}."]
+
+            ocr_sentence = self._ocr_sentence(result)
+            if ocr_sentence:
+                parts.append(ocr_sentence)
+
+            archive = " ".join(parts)
             tags_ru = self._tags_ru(metadata, inference)
-            return {"archive_description": archive, "tags_ru": tags_ru}
+
+            return {
+                "archive_description": archive,
+                "tags_ru": tags_ru,
+            }
 
         image_type_field = metadata.get("image_type", {})
         style_field = metadata.get("style", {})
@@ -53,8 +73,8 @@ class DescriptionBuilder:
         theme = inference.get("theme")
         mood = inference.get("mood")
 
-        # Русские строки из единого источника — по taxonomy_version из метаданных.
         version = metadata.get("taxonomy_version", taxonomy.DEFAULT_VERSION)
+
         image_type_map = taxonomy.ru_map(version, "image_type")
         style_map_gen = taxonomy.ru_gen_map(version, "style")
         theme_map = taxonomy.ru_map(version, "theme")
@@ -79,6 +99,7 @@ class DescriptionBuilder:
             style_label=style_label,
             generic_styles=taxonomy.generic_styles(version),
         )
+
         if intro:
             parts.append(intro)
 
@@ -86,8 +107,15 @@ class DescriptionBuilder:
 
         if self.include_theme and theme_ru:
             parts.append(f"Тематика изображения: {theme_ru}.")
+
         if self.include_mood and mood_ru:
-            parts.append(f"Общее настроение изображения можно охарактеризовать как {mood_ru}.")
+            parts.append(
+                f"Общее настроение изображения можно охарактеризовать как {mood_ru}."
+            )
+
+        ocr_sentence = self._ocr_sentence(result)
+        if ocr_sentence:
+            parts.append(ocr_sentence)
 
         archive_description = " ".join(parts)
         tags_ru = self._tags_ru(metadata, inference)
@@ -111,15 +139,10 @@ class DescriptionBuilder:
         image_conf = image_type_field.get("confident", False)
         style_conf = style_field.get("confident", False)
 
-        # Полностью убираем generic-стиль из вводной фразы: слова
-        # «vintage / decorative / retro» не различают открытки и дают
-        # повторяющиеся неинформативные зачины. Тип материала остаётся;
-        # стиль при уверенности сохраняется в tags_ru.
         if self.drop_generic_style and style_label in generic_styles:
             style_conf = False
             style_ru_gen = None
 
-        # отдельные безопасные случаи для фотографий
         if image_conf and image_type_label == "a photograph":
             if style_label == "black and white photo":
                 return "Черно-белая фотография."
@@ -139,6 +162,21 @@ class DescriptionBuilder:
         return "Изображение."
 
     @staticmethod
+    def _ocr_sentence(result: Dict) -> str | None:
+        """Возвращает OCR-предложение только для уверенно распознанной надписи."""
+        ocr = result.get("ocr") or {}
+
+        if not ocr.get("confident", False):
+            return None
+
+        text = " ".join(str(ocr.get("text") or "").split())
+
+        if not text:
+            return None
+
+        return f"На изображении присутствует надпись: «{text}»."
+
+    @staticmethod
     def _normalize_caption(text: str) -> str:
         text = (text or "").strip()
         text = text.rstrip(" .,:;!-")
@@ -147,28 +185,29 @@ class DescriptionBuilder:
     @staticmethod
     def _inline(text: str) -> str:
         text = text.strip()
+
         if not text:
             return "изображение"
+
         return text[0].lower() + text[1:] if len(text) > 1 else text.lower()
 
     @staticmethod
     def _sentence(text: str, capitalize: bool = True) -> str:
         text = (text or "").strip().rstrip(" .,:;!-")
+
         if not text:
             text = "изображение"
+
         if capitalize:
             text = text[0].upper() + text[1:] if len(text) > 1 else text.upper()
+
         return f"{text}."
 
     @classmethod
     def _tags_ru(cls, metadata: Dict, inference: Dict) -> list[str]:
-        """Возвращает русские теги по уверенным предсказаниям классификатора.
-
-        В отличие от сырого metadata.tags (англоязычные исходные метки SigLIP),
-        этот список содержит локализованные термины из каталожной таксономии
-        и пригоден для отображения в UI без дополнительной обработки.
-        """
+        """Возвращает русские теги по уверенным предсказаниям классификатора."""
         version = metadata.get("taxonomy_version", taxonomy.DEFAULT_VERSION)
+
         image_type_map = taxonomy.ru_map(version, "image_type")
         style_map = taxonomy.ru_map(version, "style")
         theme_map = taxonomy.ru_map(version, "theme")
@@ -178,18 +217,23 @@ class DescriptionBuilder:
         style_field = metadata.get("style", {})
 
         out: list[str] = []
+
         if image_type_field.get("confident"):
             ru = image_type_map.get(image_type_field.get("label"))
             if ru:
                 out.append(ru)
+
         if style_field.get("confident"):
             ru = style_map.get(style_field.get("label"))
             if ru:
                 out.append(ru)
+
         theme = inference.get("theme")
         if theme:
             out.append(theme_map.get(theme, theme))
+
         mood = inference.get("mood")
         if mood:
             out.append(mood_map.get(mood, mood))
+
         return out

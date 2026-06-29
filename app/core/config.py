@@ -40,10 +40,12 @@ class Settings:
     llm_model: str = os.getenv(
         "LLM_MODEL", "Vikhrmodels/Vikhr-Nemo-12B-Instruct-R-21-09-24"
     )
-    # OCR — стадия распознавания надписей (paddleocr); включена по умолчанию,
-    # чтобы пользователь сразу получал и описание, и текст надписи. Отключается
-    # переменной USE_OCR=0 (напр. в Docker без paddleocr).
+    # OCR включён по умолчанию. Backend:
+    # auto — PaddleOCR с fallback на Tesseract при ошибке инициализации;
+    # paddle — только PaddleOCR;
+    # tesseract — только Tesseract.
     use_ocr: bool = _env_bool("USE_OCR", True)
+    ocr_backend: str = os.getenv("OCR_BACKEND", "auto").strip().lower()
     # CLIPScore — опциональный reference-free сигнал надёжности (грузит CLIP+M-CLIP).
     use_clipscore: bool = _env_bool("USE_CLIPSCORE", False)
 

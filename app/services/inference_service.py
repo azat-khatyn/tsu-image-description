@@ -34,6 +34,7 @@ class InferenceService:
             ),
             "llm_model": settings.llm_model if settings.use_llm_rewriter else None,
             "use_ocr": settings.use_ocr,
+            "ocr_backend": settings.ocr_backend,
             "use_clipscore": settings.use_clipscore,
         }
 
@@ -72,6 +73,7 @@ class InferenceService:
                         use_llm_rewriter=settings.use_llm_rewriter,
                         llm_rewriter_kwargs=llm_kwargs,
                         use_ocr=settings.use_ocr,
+                        ocr_backend=settings.ocr_backend,
                         use_clipscore=settings.use_clipscore,
                     )
 

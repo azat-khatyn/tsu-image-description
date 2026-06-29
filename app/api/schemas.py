@@ -37,11 +37,12 @@ class InferenceBlock(BaseModel):
 
 
 class OCRBlock(BaseModel):
-    # Распознанная надпись (text) и гейт уверенности (confident).
-    # В подсказку LLM попадает только text при confident=True.
+    # Распознанная надпись и гейт уверенности OCR.
+    # В шаблонное описание и в подсказку LLM text включается только при confident=True.
     text: str = ""
     confidence: float | None = None
     confident: bool = False
+    backend: str | None = None
 
 
 class FormatBlock(BaseModel):
@@ -87,15 +88,16 @@ class PipelineConfig(BaseModel):
     use_llm_rewriter: bool
     llm_prompt_style: str | None = None
     llm_model: str | None = None
-    use_ocr: bool = False
+    use_ocr: bool = True
     use_clipscore: bool = False
+    ocr_backend: str = "auto"
 
 
 class HealthResponse(BaseModel):
     status: str
     model_loaded: bool
-    # OCR реально инициализирован? None — пайплайн ещё не загружен; False —
-    # запрошен, но не поднялся (например, paddle под эмуляцией / нет нативного amd64).
+    # OCR реально инициализирован? None — пайплайн ещё не загружен;
+    # False — OCR не поднялся ни через основной, ни через резервный backend.
     ocr_available: bool | None = None
     device: str
     pipeline_config: PipelineConfig | None = None

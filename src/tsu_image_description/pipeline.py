@@ -7,6 +7,7 @@ from .metadata_extractor import MetadataExtractor
 from .description_builder import DescriptionBuilder
 from .caption_cleaner import CaptionCleaner
 from .ocr_extractor import OCRExtractor
+from .tesseract_ocr_extractor import TesseractOCRExtractor
 from .clip_scorer import CLIPScorer
 from . import reliability
 
@@ -35,35 +36,53 @@ def image_format(image_path: str) -> dict:
     return {"orientation": orientation, "aspect": aspect, "width": w, "height": h}
 
 
-def _init_ocr_with_timeout(ocr_kwargs, timeout=180):
-    """Инициализация OCR с таймаутом и мягкой деградацией.
+def _init_ocr_backend(
+    ocr_kwargs: dict,
+    *,
+    backend: str = "auto",
+):
+    """Создаёт OCR backend.
 
-    PaddleOCR требует нативный amd64. Под эмуляцией (amd64-образ на Apple
-    Silicon) инициализация зависает молча, без исключения, — обычного
-    try/except мало. Запускаем сборку в отдельном потоке; если не уложилась в
-    timeout (или упала) — отключаем OCR и продолжаем без него.
+    Режимы:
+      - paddle: только PaddleOCR;
+      - tesseract: только Tesseract;
+      - auto: PaddleOCR, при ошибке — Tesseract.
+
+    Важно: жёсткий таймаут для зависшего PaddleOCR в рамках одного Python-
+    процесса ненадёжен, поэтому для Apple Silicon в Docker рекомендуется
+    явно использовать OCR_BACKEND=tesseract.
     """
-    import threading
-    box = {}
+    backend = (backend or "auto").strip().lower()
 
-    def _build():
-        try:
-            box["ocr"] = OCRExtractor(**ocr_kwargs)
-        except Exception as e:  # любая ошибка инициализации не должна валить пайплайн
-            box["err"] = e
+    if backend not in {"auto", "paddle", "tesseract"}:
+        raise ValueError(
+            "ocr_backend must be one of: 'auto', 'paddle', 'tesseract'"
+        )
 
-    t = threading.Thread(target=_build, daemon=True)
-    t.start()
-    t.join(timeout)
-    if t.is_alive():
+    if backend == "tesseract":
+        logging.info("OCR backend: Tesseract")
+        return TesseractOCRExtractor(**ocr_kwargs)
+
+    try:
+        logging.info("OCR backend: PaddleOCR")
+        return OCRExtractor(**ocr_kwargs)
+    except Exception as exc:
+        if backend == "paddle":
+            raise
+
         logging.warning(
-            "OCR отключён: инициализация не завершилась за %s c "
-            "(похоже на paddle под эмуляцией; нужен нативный amd64).", timeout)
-        return None
-    if "err" in box:
-        logging.warning("OCR отключён: %s", box["err"])
-        return None
-    return box.get("ocr")
+            "PaddleOCR недоступен (%s). Используется fallback Tesseract.",
+            exc,
+        )
+
+        try:
+            return TesseractOCRExtractor(**ocr_kwargs)
+        except Exception as fallback_exc:
+            logging.warning(
+                "Tesseract также недоступен: %s",
+                fallback_exc,
+            )
+            return None
 
 
 class ArchiveDescriptionPipeline:
@@ -77,8 +96,9 @@ class ArchiveDescriptionPipeline:
         use_llm_rewriter: bool = False,
         llm_rewriter_kwargs=None,
         taxonomy_version: str = "archival_v2",
-        use_ocr: bool = False,
+        use_ocr: bool = True,
         ocr_kwargs=None,
+        ocr_backend: str = "auto",
         use_clipscore: bool = False,
         clipscore_kwargs=None,
     ):
@@ -95,10 +115,17 @@ class ArchiveDescriptionPipeline:
         self.caption_cleaner = CaptionCleaner()
         self.description_builder = DescriptionBuilder(**(builder_kwargs or {}))
 
-        # Опциональная стадия OCR. paddleocr — тяжёлая платформозависимая
-        # зависимость; при отсутствии/зависании/ошибке — мягкая деградация
-        # к пустому OCR-блоку (инициализация под таймаутом, см. helper).
-        self.ocr = _init_ocr_with_timeout(ocr_kwargs or {}) if use_ocr else None
+        # OCR включён в основной конвейер по умолчанию.
+        # Техническое отключение сохраняется только для отладки или сред,
+        # в которых PaddleOCR временно недоступен.
+        self.ocr = (
+            _init_ocr_backend(
+                ocr_kwargs or {},
+                backend=ocr_backend,
+            )
+            if use_ocr
+            else None
+        )
 
         # Опциональный reference-free CLIPScore описания (тот же код, что в
         # офлайн-оценке). Тяжёлый: грузит CLIP + M-CLIP. По умолчанию выключен.
